@@ -1,0 +1,15 @@
+{
+  "name": "ai-tools-dashboard",
+  "version": "1.0.0",
+  "description": "AI Tools Intelligence Hub with 200+ tools",
+  "scripts": {
+    "test": "python -m http.server 8000 & sleep 2 && open http://localhost:8000/test/test-runner.html",
+    "test:headless": "node test/run-headless.js",
+    "build:data": "node data/build-tools-data.js",
+    "serve": "python -m http.server 8000",
+    "validate": "node test/validate-data.js"
+  },
+  "devDependencies": {
+    "puppeteer": "^21.0.0"
+  }
+}

@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Intelligence Hub | Media & Communications Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            /* Strategic Pulse Color Scheme */
+            --primary: #3B82F6;
+            --secondary: #1E40AF;
+            --accent: #10B981;
+            --warning: #F59E0B;
+            --danger: #EF4444;
+            --success: #10B981;
+            
+            /* Background Colors */
+            --bg-main: #0F172A;
+            --bg-card: #1E293B;
+            --bg-hover: #334155;
+            --bg-accent: rgba(59, 130, 246, 0.1);
+            
+            /* Text Colors */
+            --text-primary: #F1F5F9;
+            --text-secondary: #94A3B8;
+            --text-muted: #64748B;
+            
+            /* Borders & Shadows */
+            --border: #334155;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+            
+            /* Spacing */
+            --spacing-xs: 0.25rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            
+            /* Border Radius */
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        .header {
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            padding: var(--spacing-lg) var(--spacing-xl);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(30, 41, 59, 0.95);
+        }
+        
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-lg);
+        }
+        
+        .view-toggle {
+            display: flex;
+            background: var(--bg-hover);
+            border-radius: var(--radius-md);
+            padding: 4px;
+        }
+        
+        .view-btn {
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            cursor: pointer;
+            border-radius: var(--radius-sm);
+            transition: all 0.3s ease;
+        }
+        
+        .view-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Main Layout */
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: var(--spacing-xl);
+        }
+        
+        /* Stats Bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .stat-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        
+        .stat-icon.total { background: rgba(59, 130, 246, 0.2); color: var(--primary); }
+        .stat-icon.media { background: rgba(16, 185, 129, 0.2); color: var(--accent); }
+        .stat-icon.ai { background: rgba(245, 158, 11, 0.2); color: var(--warning); }
+        .stat-icon.google { background: rgba(239, 68, 68, 0.2); color: var(--danger); }
+        
+        .stat-content h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .stat-content p {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+        
+        /* Filters Section */
+        .filters-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .search-bar {
+            position: relative;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: var(--spacing-md) var(--spacing-lg);
+            padding-left: 48px;
+            background: var(--bg-hover);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+        
+        .filter-groups {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+        }
+        
+        .filter-group h4 {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-sm);
+            font-weight: 600;
+        }
+        
+        .filter-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+        }
+        
+        .filter-chip {
+            padding: var(--spacing-xs) var(--spacing-md);
+            background: var(--bg-hover);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+        
+        .filter-chip:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        
+        .filter-chip.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        .filter-chip .count {
+            font-size: 0.75rem;
+            opacity: 0.7;
+        }
+        
+        /* Tools Grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .tool-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+        
+        .tool-card:hover::before {
+            transform: translateX(0);
+        }
+        
+        .tool-header {
+            display: flex;
+            align-items: start;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .tool-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .tool-icon.ai-assistant { background: rgba(59, 130, 246, 0.2); color: var(--primary); }
+        .tool-icon.media { background: rgba(16, 185, 129, 0.2); color: var(--accent); }
+        .tool-icon.video { background: rgba(245, 158, 11, 0.2); color: var(--warning); }
+        .tool-icon.analytics { background: rgba(139, 92, 246, 0.2); color: #8B5CF6; }
+        .tool-icon.transcription { background: rgba(236, 72, 153, 0.2); color: #EC4899; }
+        
+        .tool-info h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+            color: var(--text-primary);
+        }
+        
+        .tool-url {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+        
+        .tool-url:hover {
+            color: var(--primary);
+        }
+        
+        .tool-description {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin-bottom: var(--spacing-md);
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .tool-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .tool-tag {
+            padding: 2px 8px;
+            background: var(--bg-hover);
+            border-radius: var(--radius-sm);
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        
+        .tool-actions {
+            display: flex;
+            gap: var(--spacing-sm);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid var(--border);
+        }
+        
+        .tool-btn {
+            flex: 1;
+            padding: var(--spacing-sm);
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-xs);
+        }
+        
+        .tool-btn:hover {
+            background: var(--bg-hover);
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .tool-btn.primary {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        .tool-btn.primary:hover {
+            background: var(--secondary);
+            border-color: var(--secondary);
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-xl);
+        }
+        
+        .modal-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .modal-header {
+            padding: var(--spacing-xl);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            position: sticky;
+            top: 0;
+            background: var(--bg-card);
+            z-index: 10;
+        }
+        
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        
+        .modal-close {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: var(--bg-hover);
+            border-radius: var(--radius-md);
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .modal-close:hover {
+            background: var(--danger);
+            color: white;
+        }
+        
+        .modal-body {
+            padding: var(--spacing-xl);
+        }
+        
+        .detail-section {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .detail-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .detail-section h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: var(--spacing-md);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+        
+        .detail-section p,
+        .detail-section li {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .detail-section ul {
+            list-style: none;
+            padding-left: var(--spacing-lg);
+        }
+        
+        .detail-section li::before {
+            content: "▸";
+            color: var(--primary);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+        }
+        
+        .pros, .cons {
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+        }
+        
+        .pros {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        
+        .cons {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+        
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: var(--spacing-xl);
+            color: var(--text-secondary);
+        }
+        
+        .loading-spinner {
+            width: 48px;
+            height: 48px;
+            border: 3px solid var(--border);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto var(--spacing-md);
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: var(--spacing-md);
+            }
+            
+            .stats-bar {
+                grid-template-columns: 1fr;
+            }
+            
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                margin: var(--spacing-md);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h1 class="logo-text">AI Tools Intelligence Hub</h1>
+            </div>
+            <div class="header-actions">
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th"></i> Grid
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <i class="fas fa-list"></i> List
+                    </button>
+                </div>
+                <button class="export-btn tool-btn primary">
+                    <i class="fas fa-download"></i> Export
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-card">
+                <div class="stat-icon total">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="total-tools">182</h3>
+                    <p>Total AI Tools</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon media">
+                    <i class="fas fa-newspaper"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="media-tools">45</h3>
+                    <p>Media Intelligence</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon ai">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="ai-assistants">38</h3>
+                    <p>AI Assistants</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon google">
+                    <i class="fab fa-google"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="google-tools">22</h3>
+                    <p>Google Tools</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="filters-section">
+            <div class="search-bar">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search tools by name, feature, or use case..." id="searchInput">
+            </div>
+            
+            <div class="filter-groups">
+                <div class="filter-group">
+                    <h4>Categories</h4>
+                    <div class="filter-chips" id="categoryFilters">
+                        <div class="filter-chip active" data-category="all">
+                            All <span class="count">182</span>
+                        </div>
+                        <div class="filter-chip" data-category="media-intelligence">
+                            <i class="fas fa-newspaper"></i> Media Intelligence <span class="count">45</span>
+                        </div>
+                        <div class="filter-chip" data-category="ai-assistant">
+                            <i class="fas fa-robot"></i> AI Assistants <span class="count">38</span>
+                        </div>
+                        <div class="filter-chip" data-category="video-audio">
+                            <i class="fas fa-video"></i> Video/Audio <span class="count">32</span>
+                        </div>
+                        <div class="filter-chip" data-category="analytics">
+                            <i class="fas fa-chart-line"></i> Analytics <span class="count">28</span>
+                        </div>
+                        <div class="filter-chip" data-category="transcription">
+                            <i class="fas fa-microphone"></i> Transcription <span class="count">24</span>
+                        </div>
+                        <div class="filter-chip" data-category="content-creation">
+                            <i class="fas fa-pen"></i> Content Creation <span class="count">15</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Source</h4>
+                    <div class="filter-chips" id="sourceFilters">
+                        <div class="filter-chip active" data-source="all">
+                            All Sources
+                        </div>
+                        <div class="filter-chip" data-source="ai-list">
+                            AI Tools List <span class="count">160</span>
+                        </div>
+                        <div class="filter-chip" data-source="google">
+                            Google Tools <span class="count">22</span>
+                        </div>
+                        <div class="filter-chip" data-source="pdf">
+                            Featured Tools <span class="count">2</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Features</h4>
+                    <div class="filter-chips" id="featureFilters">
+                        <div class="filter-chip" data-feature="api">
+                            <i class="fas fa-code"></i> API Available
+                        </div>
+                        <div class="filter-chip" data-feature="free">
+                            <i class="fas fa-gift"></i> Free Tier
+                        </div>
+                        <div class="filter-chip" data-feature="enterprise">
+                            <i class="fas fa-building"></i> Enterprise
+                        </div>
+                        <div class="filter-chip" data-feature="integration">
+                            <i class="fas fa-plug"></i> Easy Integration
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools Grid -->
+        <div class="tools-grid" id="toolsGrid">
+            <!-- Tools will be dynamically loaded here -->
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading AI tools database...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tool Detail Modal -->
+    <div class="modal" id="toolModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Tool Details</h2>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample data structure - in production, this would be loaded from your data files
+        const toolsData = [
+            {
+                id: 1,
+                name: "Claude (Anthropic)",
+                url: "claude.ai",
+                category: "ai-assistant",
+                source: "pdf",
+                description: "Large language model assistant developed by Anthropic, designed to handle complex questions, generate content, write and debug code, and analyze documents.",
+                icon: "ai-assistant",
+                tags: ["LLM", "Coding", "Analysis", "Chat"],
+                features: {
+                    extensive: "Claude can chat on web or mobile and perform a wide array of tasks: writes and edits content, generates and debugs code, analyzes images and charts for data extraction. Very large context window (100k+ tokens).",
+                    pricing: "Free tier (limited), Pro ~$20/month, Team ~$25/user/month, Enterprise custom",
+                    pros: "Very large context memory, less hallucination-prone, smooth multi-turn conversation, coding capabilities",
+                    cons: "Reasoning on specialized queries can falter, fewer third-party plugins than competitors, rate limits on free version",
+                    integration: "High - API available, works with Slack, Notion, cloud platforms",
+                    useCases: ["Customer support chatbots", "Data analysis", "Content creation", "Code generation"]
+                }
+            },
+            {
+                id: 2,
+                name: "RecCloud",
+                url: "reccloud.com",
+                category: "video-audio",
+                source: "pdf",
+                description: "All-in-one AI-powered platform for video and audio editing in the cloud with automated transcription, subtitles, translation, and clip generation.",
+                icon: "video",
+                tags: ["Video Editing", "Transcription", "Translation", "Cloud"],
+                features: {
+                    extensive: "AI Clip Maker, Speech-to-Text, AI Subtitle Generator, Audio & Video Summarizer, AI Video Translator, AI voice generation (TTS), AI Voice Remover",
+                    pricing: "Freemium model - Free trial, Creator ~$19/month, API credits system",
+                    pros: "Comprehensive suite, high accuracy transcription (95%), GDPR compliant, multilingual support",
+                    cons: "Jack-of-all-trades (less specialized), processing limits on plans, requires internet",
+                    integration: "Strong - Documented API, SDKs available, batch processing",
+                    useCases: ["Media monitoring", "Content repurposing", "Automated transcription", "Multi-language content"]
+                }
+            },
+            {
+                id: 3,
+                name: "Signal AI",
+                url: "signal-ai.com",
+                category: "media-intelligence",
+                source: "ai-list",
+                description: "Media intelligence and monitoring platform using AI to track media presence and extract actionable insights from news and social media.",
+                icon: "media",
+                tags: ["Media Monitoring", "Sentiment Analysis", "PR", "Analytics"],
+                features: {
+                    pricing: "Enterprise pricing",
+                    integration: "API available for enterprise customers",
+                    useCases: ["Brand monitoring", "Crisis detection", "Competitor analysis", "Media measurement"]
+                }
+            },
+            {
+                id: 4,
+                name: "NotebookLM",
+                url: "notebooklm.google.com",
+                category: "analytics",
+                source: "google",
+                description: "AI-first notebook grounded in user-provided documents for insights, summarization, Q&A, and idea generation with citations.",
+                icon: "analytics",
+                tags: ["Google", "Research", "Citations", "Audio"],
+                features: {
+                    extensive: "Source-grounded Q&A, Audio Overviews (podcast-style), multiformat support (PDFs, Docs, YouTube)",
+                    pricing: "Free experimental tier, NotebookLM Plus in One AI Premium $19.99/mo",
+                    pros: "Reduces hallucinations with citations, intuitive UI, multimodal uploads",
+                    cons: "Limited availability (US-only initially), usage caps, experimental",
+                    integration: "Seamless with Google Workspace",
+                    useCases: ["Research synthesis", "Report generation", "Audio briefings", "Document analysis"]
+                }
+            },
+            {
+                id: 5,
+                name: "Perplexity AI",
+                url: "perplexity.ai",
+                category: "ai-assistant",
+                source: "ai-list",
+                description: "AI-powered answer engine combining LLMs with web search, delivering concise answers with cited sources.",
+                icon: "ai-assistant",
+                tags: ["Search", "Research", "Citations", "Q&A"],
+                features: {
+                    pricing: "Free tier, Pro subscription available",
+                    integration: "API available",
+                    useCases: ["Fact-checking", "Research", "Source verification", "Quick answers with citations"]
+                }
+            }
+        ];
+
+        // Initialize the dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simulate loading delay
+            setTimeout(() => {
+                renderTools(toolsData);
+                initializeFilters();
+                initializeSearch();
+            }, 1000);
+        });
+
+        // Render tools in grid
+        function renderTools(tools) {
+            const grid = document.getElementById('toolsGrid');
+            grid.innerHTML = '';
+            
+            tools.forEach(tool => {
+                const card = createToolCard(tool);
+                grid.appendChild(card);
+            });
+        }
+
+        // Create tool card element
+        function createToolCard(tool) {
+            const card = document.createElement('div');
+            card.className = 'tool-card';
+            card.setAttribute('data-category', tool.category);
+            card.setAttribute('data-source', tool.source);
+            
+            card.innerHTML = `
+                <div class="tool-header">
+                    <div class="tool-icon ${tool.icon}">
+                        <i class="fas ${getIconClass(tool.icon)}"></i>
+                    </div>
+                    <div class="tool-info">
+                        <h3>${tool.name}</h3>
+                        <a href="https://${tool.url}" target="_blank" class="tool-url">
+                            ${tool.url} <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="tool-description">${tool.description}</p>
+                <div class="tool-tags">
+                    ${tool.tags.map(tag => `<span class="tool-tag">${tag}</span>`).join('')}
+                </div>
+                <div class="tool-actions">
+                    <button class="tool-btn" onclick="showDetails(${tool.id})">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                    <button class="tool-btn primary" onclick="window.open('https://${tool.url}', '_blank')">
+                        <i class="fas fa-external-link-alt"></i> Visit
+                    </button>
+                </div>
+            `;
+            
+            return card;
+        }
+
+        // Get icon class based on category
+        function getIconClass(icon) {
+            const iconMap = {
+                'ai-assistant': 'fa-robot',
+                'media': 'fa-newspaper',
+                'video': 'fa-video',
+                'analytics': 'fa-chart-line',
+                'transcription': 'fa-microphone'
+            };
+            return iconMap[icon] || 'fa-cube';
+        }
+
+        // Show tool details in modal
+        function showDetails(toolId) {
+            const tool = toolsData.find(t => t.id === toolId);
+            if (!tool) return;
+            
+            const modal = document.getElementById('toolModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalBody = document.getElementById('modalBody');
+            
+            modalTitle.textContent = tool.name;
+            
+            modalBody.innerHTML = `
+                <div class="detail-section">
+                    <h4><i class="fas fa-info-circle"></i> Overview</h4>
+                    <p>${tool.description}</p>
+                    <p><strong>Website:</strong> <a href="https://${tool.url}" target="_blank">${tool.url}</a></p>
+                </div>
+                
+                ${tool.features.extensive ? `
+                <div class="detail-section">
+                    <h4><i class="fas fa-cogs"></i> Features</h4>
+                    <p>${tool.features.extensive}</p>
+                </div>
+                ` : ''}
+                
+                ${tool.features.pricing ? `
+                <div class="detail-section">
+                    <h4><i class="fas fa-dollar-sign"></i> Pricing</h4>
+                    <p>${tool.features.pricing}</p>
+                </div>
+                ` : ''}
+                
+                ${(tool.features.pros || tool.features.cons) ? `
+                <div class="detail-section">
+                    <h4><i class="fas fa-balance-scale"></i> Pros & Cons</h4>
+                    <div class="pros-cons">
+                        ${tool.features.pros ? `
+                        <div class="pros">
+                            <h5 style="color: var(--success); margin-bottom: var(--spacing-sm);">
+                                <i class="fas fa-check-circle"></i> Pros
+                            </h5>
+                            <p>${tool.features.pros}</p>
+                        </div>
+                        ` : ''}
+                        ${tool.features.cons ? `
+                        <div class="cons">
+                            <h5 style="color: var(--danger); margin-bottom: var(--spacing-sm);">
+                                <i class="fas fa-times-circle"></i> Cons
+                            </h5>
+                            <p>${tool.features.cons}</p>
+                        </div>
+                        ` : ''}
+                    </div>
+                </div>
+                ` : ''}
+                
+                ${tool.features.integration ? `
+                <div class="detail-section">
+                    <h4><i class="fas fa-plug"></i> Integration Potential</h4>
+                    <p>${tool.features.integration}</p>
+                </div>
+                ` : ''}
+                
+                ${tool.features.useCases ? `
+                <div class="detail-section">
+                    <h4><i class="fas fa-lightbulb"></i> Use Cases</h4>
+                    <ul>
+                        ${tool.features.useCases.map(useCase => `<li>${useCase}</li>`).join('')}
+                    </ul>
+                </div>
+                ` : ''}
+            `;
+            
+            modal.classList.add('active');
+        }
+
+        // Close modal
+        function closeModal() {
+            document.getElementById('toolModal').classList.remove('active');
+        }
+
+        // Close modal on background click
+        document.getElementById('toolModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Initialize filters
+        function initializeFilters() {
+            // Category filters
+            document.querySelectorAll('#categoryFilters .filter-chip').forEach(chip => {
+                chip.addEventListener('click', function() {
+                    // Remove active from all category chips
+                    document.querySelectorAll('#categoryFilters .filter-chip').forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                    filterTools();
+                });
+            });
+            
+            // Source filters
+            document.querySelectorAll('#sourceFilters .filter-chip').forEach(chip => {
+                chip.addEventListener('click', function() {
+                    // Remove active from all source chips
+                    document.querySelectorAll('#sourceFilters .filter-chip').forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                    filterTools();
+                });
+            });
+            
+            // Feature filters (can be multiple)
+            document.querySelectorAll('#featureFilters .filter-chip').forEach(chip => {
+                chip.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    filterTools();
+                });
+            });
+        }
+
+        // Filter tools based on active filters
+        function filterTools() {
+            const activeCategory = document.querySelector('#categoryFilters .filter-chip.active')?.dataset.category || 'all';
+            const activeSource = document.querySelector('#sourceFilters .filter-chip.active')?.dataset.source || 'all';
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            
+            const cards = document.querySelectorAll('.tool-card');
+            cards.forEach(card => {
+                const category = card.dataset.category;
+                const source = card.dataset.source;
+                const text = card.textContent.toLowerCase();
+                
+                const categoryMatch = activeCategory === 'all' || category === activeCategory;
+                const sourceMatch = activeSource === 'all' || source === activeSource;
+                const searchMatch = searchTerm === '' || text.includes(searchTerm);
+                
+                if (categoryMatch && sourceMatch && searchMatch) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Initialize search
+        function initializeSearch() {
+            document.getElementById('searchInput').addEventListener('input', filterTools);
+        }
+
+        // View toggle
+        document.querySelectorAll('.view-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const view = this.dataset.view;
+                const grid = document.getElementById('toolsGrid');
+                
+                if (view === 'list') {
+                    grid.style.gridTemplateColumns = '1fr';
+                } else {
+                    grid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(320px, 1fr))';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+Missing Data Integration Report
+Generated: 2025-07-04T09:58:51.090Z
+===============================================
+
+SUMMARY
+-------
+Tools in missing data file: 136
+Tools successfully matched: 59
+Total fields updated: 234
+Tools not matched: 77
+
+UNMATCHED TOOLS
+---------------
+ACE MediCom
+Anania
+Apollo.io
+DataSelfie
+DataRobot Automated ML
+DataSunrise Firewall
+Dash Hudson
+Dataminr Pulse
+Arize AI
+AskYourPDF
+Avochato AI Chat
+Awr
+Bard (Google)
+Brain.fm
+Celtra Ad Creation
+CheckMyAds
+Compstak
+Critica
+Crostini for Google Slides
+CurieAI
+Cloudinary
+Chaser
+Data Visualization wth Plotly
+Disney Hyperion Gray
+Ellora.ai
+Continual Learning AI (CLIFF)
+Copilot Chat (Azure)
+DALL-E 2
+Creature
+Databricks SQL Analytics
+Docugami
+Driverless AI
+EdgeImpulse
+EleutherAI
+EarlyString
+Futurepedia
+GenAI IT Automation by Electric
+Graphsense
+GRANDstack
+GrayMeta
+Groq
+Groq
+Infogram
+Illuminate AI Media Kit Generator
+Imagendry
+Kissflow
+Luuma
+Magisto
+Narrative Science Quill
+Neuroflash Copywriting
+Oneforma
+Phrasee
+Plotly
+RebelMouse
+Redocly
+BEEFree.io
+Flair AI
+Framer AI
+FutureTools
+GapScout (Formerly Signal AI)
+Ghostwriter
+Legal Monster
+Lilt
+LegalMind
+LunarAI
+Material AI
+Metis Finance AI Toolkit
+Narrative Science Quill
+Neuroflash Copywriting
+Oneforma
+Phrasee
+Plotly
+RebelMouse
+Redocly
+Rendezvous Social
+ROI Hunter
+Trello
+
+OVERALL BUILD STATISTICS
+------------------------
+Total tools: 243
+Original count: 273
+Duplicates removed: 30
+Categories: undefined
+Sources: undefined
+

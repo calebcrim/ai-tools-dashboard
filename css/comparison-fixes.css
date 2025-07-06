@@ -1,0 +1,97 @@
+/* Additional fixes for comparison view */
+
+/* Fix for section content scrolling */
+.comparison-section.expanded .section-content {
+    animation: expandSection 0.3s ease forwards;
+}
+
+@keyframes expandSection {
+    from {
+        max-height: 0;
+        opacity: 0;
+    }
+    to {
+        max-height: 5000px; /* Large enough for any content */
+        opacity: 1;
+    }
+}
+
+/* Improve text contrast throughout */
+.use-case-column h4,
+.pros-cons-column h4 {
+    color: #1a202c; /* Very dark text for headers */
+    font-weight: 600;
+}
+
+/* Better spacing for sections */
+.use-cases-grid,
+.pros-cons-grid {
+    margin-top: 1rem;
+}
+
+/* Ensure modal scrollbar is visible */
+#comparisonViewContainer::-webkit-scrollbar {
+    width: 8px;
+}
+
+#comparisonViewContainer::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+#comparisonViewContainer::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 4px;
+}
+
+#comparisonViewContainer::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+/* Fix table text colors */
+.comparison-table td {
+    color: #2d3748;
+}
+
+/* Ensure all text in comparison view has good contrast */
+.tool-comparison-view p,
+.tool-comparison-view li,
+.tool-comparison-view td,
+.tool-comparison-view span {
+    color: #2d3748;
+}
+
+/* Fix specific light text issues */
+.tier-users {
+    color: #4a5568; /* Slightly darker than before */
+}
+
+.rating-value {
+    color: #4a5568;
+}
+
+/* Add bottom margin to last section for scroll padding */
+.comparison-section:last-child {
+    margin-bottom: 3rem;
+}
+
+/* Ensure pros/cons sections don't get cut off */
+.pros-cons-column {
+    padding-bottom: 1rem;
+}
+
+/* Mobile improvements */
+@media (max-width: 768px) {
+    .tool-comparison-view {
+        padding: 1rem 0.5rem;
+    }
+    
+    .section-content {
+        padding: 0 1rem 1rem;
+    }
+    
+    /* Better mobile scrolling */
+    #comparisonViewContainer {
+        -webkit-overflow-scrolling: touch;
+    }
+}

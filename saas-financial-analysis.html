@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Analysis | CrimIntelligence: AI Tools Suite</title>
+    <meta name="description" content="Comprehensive financial analysis and ROI assessment for AI tools implementation across your organization.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Page Specific Styles -->
+    <style>
+        /* Financial Analysis Specific Styles */
+        .financial-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: var(--spacing-2xl) var(--spacing-xl);
+        }
+        
+        .page-header {
+            margin-bottom: var(--spacing-2xl);
+        }
+        
+        .page-title {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-sm);
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            color: var(--color-text-secondary);
+            margin-bottom: var(--spacing-2xl);
+            font-size: 1.1rem;
+        }
+        
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .summary-card {
+            background: var(--color-bg-secondary);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .summary-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .card-label {
+            color: var(--color-text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: var(--spacing-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .card-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-text-primary);
+        }
+        
+        .card-change {
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+        
+        .positive {
+            color: var(--color-accent);
+        }
+        
+        .negative {
+            color: #f87171;
+        }
+        
+        .warning {
+            color: #fbbf24;
+        }
+        
+        .table-section {
+            background: var(--color-bg-secondary);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-2xl);
+            margin-bottom: var(--spacing-2xl);
+            overflow-x: auto;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-lg);
+            color: var(--color-text-primary);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th {
+            background: var(--color-bg-primary);
+            padding: var(--spacing-md);
+            text-align: left;
+            font-weight: 600;
+            color: var(--color-text-secondary);
+            border-bottom: 2px solid var(--color-border);
+        }
+        
+        td {
+            padding: var(--spacing-md);
+            border-bottom: 1px solid var(--color-border);
+        }
+        
+        tr:hover {
+            background: var(--color-bg-hover);
+        }
+        
+        .tool-name {
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+        
+        .category-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-left: 0.5rem;
+        }
+        
+        .ai-assistant { background: var(--color-primary); }
+        .content-creation { background: #2563eb; }
+        .analytics { background: #0891b2; }
+        .productivity { background: var(--color-accent); }
+        .security { background: #dc2626; }
+        .finance { background: #ca8a04; }
+        
+        .cost-cell {
+            font-weight: 600;
+        }
+        
+        .roi-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .roi-high {
+            background: rgba(74, 222, 128, 0.1);
+            color: #4ade80;
+            border: 1px solid rgba(74, 222, 128, 0.3);
+        }
+        
+        .roi-medium {
+            background: rgba(251, 191, 36, 0.1);
+            color: #fbbf24;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+        
+        .roi-low {
+            background: rgba(248, 113, 113, 0.1);
+            color: #f87171;
+            border: 1px solid rgba(248, 113, 113, 0.3);
+        }
+        
+        .risk-section {
+            background: var(--color-bg-secondary);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-2xl);
+            margin-bottom: var(--spacing-2xl);
+        }
+        
+        .risk-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .risk-item {
+            background: var(--color-bg-primary);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-lg);
+        }
+        
+        .risk-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .risk-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-size: 1.25rem;
+        }
+        
+        .risk-high .risk-icon {
+            background: rgba(248, 113, 113, 0.2);
+            color: #f87171;
+        }
+        
+        .risk-medium .risk-icon {
+            background: rgba(251, 191, 36, 0.2);
+            color: #fbbf24;
+        }
+        
+        .risk-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .risk-description {
+            color: var(--color-text-secondary);
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+        
+        .recommendations {
+            background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg-hover) 100%);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-2xl);
+            margin-top: var(--spacing-2xl);
+        }
+        
+        .recommendation-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .recommendation-list li {
+            padding: var(--spacing-md) 0;
+            padding-left: var(--spacing-2xl);
+            position: relative;
+            color: var(--color-text-secondary);
+        }
+        
+        .recommendation-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .financial-container {
+                padding: var(--spacing-md);
+            }
+            
+            .table-section {
+                padding: var(--spacing-md);
+            }
+            
+            table {
+                font-size: 0.875rem;
+            }
+            
+            th, td {
+                padding: var(--spacing-sm);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h1 class="logo-text">CrimIntelligence: AI Tools Suite</h1>
+            </div>
+            <div class="header-actions">
+                <nav class="header-nav">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                    <a href="saas-financial-analysis.html" class="nav-link active">
+                        <i class="fas fa-chart-line"></i> Financial Analysis
+                    </a>
+                </nav>
+                <button class="export-btn" onclick="exportFinancialReport()">
+                    <i class="fas fa-download"></i> Export Report
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="financial-container">
+        <div class="page-header">
+            <h1 class="page-title">SaaS & AI Tooling Financial Analysis</h1>
+        <p class="subtitle">50-Person Team Cost Breakdown & ROI Assessment</p>
+        
+        <!-- Summary Cards -->
+        <div class="summary-cards">
+            <div class="summary-card">
+                <div class="card-label">Total Annual TCO</div>
+                <div class="card-value">$487,200</div>
+                <div class="card-change negative">↑ 35% vs current stack</div>
+            </div>
+            <div class="summary-card">
+                <div class="card-label">Monthly Per-User Cost</div>
+                <div class="card-value">$812</div>
+                <div class="card-change">Includes all enterprise tiers</div>
+            </div>
+            <div class="summary-card">
+                <div class="card-label">Estimated Annual ROI</div>
+                <div class="card-value positive">287%</div>
+                <div class="card-change positive">↑ $1.4M productivity gains</div>
+            </div>
+            <div class="summary-card">
+                <div class="card-label">Payback Period</div>
+                <div class="card-value">4.2 months</div>
+                <div class="card-change positive">Based on labor savings</div>
+            </div>
+        </div>
+        
+        <!-- Detailed Cost Breakdown Table -->
+        <div class="table-section">
+            <h2 class="section-title">Detailed Cost Breakdown</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tool</th>
+                        <th>Category</th>
+                        <th>Pricing Tier</th>
+                        <th>Monthly Cost</th>
+                        <th>Annual TCO</th>
+                        <th>Est. ROI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="tool-name">ChatGPT</span>
+                            <span class="category-badge ai-assistant">AI</span>
+                        </td>
+                        <td>AI Assistant</td>
+                        <td>Team (50 users)</td>
+                        <td class="cost-cell">$1,250</td>
+                        <td class="cost-cell">$15,000</td>
+                        <td><span class="roi-indicator roi-high">High (450%)</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="tool-name">Notion</span>
+                            <span class="category-badge productivity">Productivity</span>
+                        </td>
+                        <td>Workspace</td>
+                        <td>Business + AI</td>
+                        <td class="cost-cell">$1,000</td>
+                        <td class="cost-cell">$12,000</td>
+                        <td><span class="roi-indicator roi-high">High (380%)</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="tool-name">Synthesia</span>
+                            <span class="category-badge content-creation">Video</span>
+                        </td>
+                        <td>Video Generation</td>
+                        <td>Enterprise</td>
+                        <td class="cost-cell">$3,500</td>
+                        <td class="cost-cell">$42,000</td>
+                        <td><span class="roi-indicator roi-high">High (320%)</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="tool-name">Perplexity</span>
+                            <span class="category-badge ai-assistant">Research</span>
+                        </td>
+                        <td>AI Search</td>
+                        <td>Enterprise Pro</td>
+                        <td class="cost-cell">$2,000</td>
+                        <td class="cost-cell">$24,000</td>
+                        <td><span class="roi-indicator roi-high">High (290%)</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="tool-name">Fiscal AI</span>
+                            <span class="category-badge finance">Finance</span>
+                        </td>
+                        <td>Financial Analysis</td>
+                        <td>Pro (10 licenses)</td>
+                        <td class="cost-cell">$640</td>
+                        <td class="cost-cell">$7,680</td>
+                        <td><span class="roi-indicator roi-medium">Medium (180%)</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="tool-name">RunwayML</span>
+                            <span class="category-badge content-creation">Creative</span>
+                        </td>
+                        <td>AI Creative Suite</td>
+                        <td>Pro (5 licenses)</td>
+                        <td class="cost-cell">$495</td>
+                        <td class="cost-cell">$5,940</td>
+                        <td><span class="roi-indicator roi-medium">Medium (210%)</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="tool-name">Abnormal Security</span>
+                            <span class="category-badge security">Security</span>
+                        </td>
+                        <td>Email Security</td>
+                        <td>Enterprise</td>
+                        <td class="cost-cell">$8,000</td>
+                        <td class="cost-cell">$96,000</td>
+                        <td><span class="roi-indicator roi-high">High (Risk Mitigation)</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="tool-name">OpusClip</span>
+                            <span class="category-badge content-creation">Video</span>
+                        </td>
+                        <td>Video Editing</td>
+                        <td>Business</td>
+                        <td class="cost-cell">$1,500</td>
+                        <td class="cost-cell">$18,000</td>
+                        <td><span class="roi-indicator roi-medium">Medium (240%)</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="tool-name">AdCreative.ai</span>
+                            <span class="category-badge content-creation">Marketing</span>
+                        </td>
+                        <td>Ad Generation</td>
+                        <td>Agency</td>
+                        <td class="cost-cell">$499</td>
+                        <td class="cost-cell">$5,988</td>
+                        <td><span class="roi-indicator roi-high">High (350%)</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="tool-name">Google Vertex AI</span>
+                            <span class="category-badge ai-assistant">ML Platform</span>
+                        </td>
+                        <td>AI/ML Infrastructure</td>
+                        <td>Pay-per-use</td>
+                        <td class="cost-cell">$15,000</td>
+                        <td class="cost-cell">$180,000</td>
+                        <td><span class="roi-indicator roi-medium">Medium (Project-based)</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="tool-name">Other Tools</span>
+                            <span class="category-badge analytics">Various</span>
+                        </td>
+                        <td>Analytics/Support</td>
+                        <td>Mixed</td>
+                        <td class="cost-cell">$6,716</td>
+                        <td class="cost-cell">$80,592</td>
+                        <td><span class="roi-indicator roi-medium">Medium (150%)</span></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr style="border-top: 2px solid #475569; font-weight: bold;">
+                        <td colspan="3">TOTAL</td>
+                        <td class="cost-cell">$40,600</td>
+                        <td class="cost-cell">$487,200</td>
+                        <td><span class="roi-indicator roi-high">Weighted Avg: 287%</span></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        
+        <!-- Comparison with Existing Stack -->
+        <div class="table-section">
+            <h2 class="section-title">Comparison with Existing Tools</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Function</th>
+                        <th>Current Tool</th>
+                        <th>Current Cost</th>
+                        <th>Proposed Tool</th>
+                        <th>New Cost</th>
+                        <th>Difference</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AI Assistant</td>
+                        <td>None/Ad-hoc</td>
+                        <td>$0</td>
+                        <td>ChatGPT Team</td>
+                        <td>$15,000</td>
+                        <td class="negative">+$15,000</td>
+                    </tr>
+                    <tr>
+                        <td>Workspace/Wiki</td>
+                        <td>Confluence</td>
+                        <td>$6,000</td>
+                        <td>Notion Business</td>
+                        <td>$12,000</td>
+                        <td class="negative">+$6,000</td>
+                    </tr>
+                    <tr>
+                        <td>Video Creation</td>
+                        <td>External Agency</td>
+                        <td>$120,000</td>
+                        <td>Synthesia + RunwayML</td>
+                        <td>$47,940</td>
+                        <td class="positive">-$72,060</td>
+                    </tr>
+                    <tr>
+                        <td>Research</td>
+                        <td>Manual/Google</td>
+                        <td>$0</td>
+                        <td>Perplexity Enterprise</td>
+                        <td>$24,000</td>
+                        <td class="negative">+$24,000</td>
+                    </tr>
+                    <tr>
+                        <td>Email Security</td>
+                        <td>Basic Filters</td>
+                        <td>$12,000</td>
+                        <td>Abnormal Security</td>
+                        <td>$96,000</td>
+                        <td class="negative">+$84,000</td>
+                    </tr>
+                    <tr>
+                        <td>Ad Creation</td>
+                        <td>Design Team</td>
+                        <td>$60,000</td>
+                        <td>AdCreative.ai</td>
+                        <td>$5,988</td>
+                        <td class="positive">-$54,012</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr style="border-top: 2px solid #475569; font-weight: bold;">
+                        <td colspan="2">Current Stack Total</td>
+                        <td>$360,000</td>
+                        <td>New Stack Total</td>
+                        <td>$487,200</td>
+                        <td class="negative">+$127,200 (35%)</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        
+        <!-- ROI Calculation Details -->
+        <div class="table-section">
+            <h2 class="section-title">ROI Calculation Details</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Benefit Category</th>
+                        <th>Time Saved/Week</th>
+                        <th>Annual Hours</th>
+                        <th>Labor Value ($75/hr)</th>
+                        <th>Revenue Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AI-Assisted Research & Writing</td>
+                        <td>10 hrs/person</td>
+                        <td>26,000 hrs</td>
+                        <td>$1,950,000</td>
+                        <td>15% faster project delivery</td>
+                    </tr>
+                    <tr>
+                        <td>Video Content Creation</td>
+                        <td>8 hrs/week</td>
+                        <td>416 hrs</td>
+                        <td>$31,200</td>
+                        <td>10x content output</td>
+                    </tr>
+                    <tr>
+                        <td>Ad Campaign Creation</td>
+                        <td>15 hrs/week</td>
+                        <td>780 hrs</td>
+                        <td>$58,500</td>
+                        <td>3x campaign velocity</td>
+                    </tr>
+                    <tr>
+                        <td>Security Incident Prevention</td>
+                        <td>5 hrs/week</td>
+                        <td>260 hrs</td>
+                        <td>$19,500</td>
+                        <td>Risk mitigation: $500K+</td>
+                    </tr>
+                    <tr>
+                        <td>Financial Analysis</td>
+                        <td>12 hrs/week</td>
+                        <td>624 hrs</td>
+                        <td>$46,800</td>
+                        <td>Better investment decisions</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr style="border-top: 2px solid #475569; font-weight: bold;">
+                        <td>Total Annual Benefits</td>
+                        <td>-</td>
+                        <td>28,080 hrs</td>
+                        <td>$2,106,000</td>
+                        <td>Plus revenue upside</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        
+        <!-- Risk Assessment -->
+        <div class="risk-section">
+            <h2 class="section-title">Risk Assessment & Overspend Alerts</h2>
+            <div class="risk-grid">
+                <div class="risk-item risk-high">
+                    <div class="risk-header">
+                        <div class="risk-icon">⚠️</div>
+                        <h3 class="risk-title">Google Vertex AI</h3>
+                    </div>
+                    <p class="risk-description">
+                        Pay-per-use model creates budget uncertainty. Current $15K/month estimate could spike 3-5x with heavy ML workloads. Recommend strict usage monitoring and budget alerts.
+                    </p>
+                </div>
+                <div class="risk-item risk-medium">
+                    <div class="risk-header">
+                        <div class="risk-icon">⚡</div>
+                        <h3 class="risk-title">Duplicate Functionality</h3>
+                    </div>
+                    <p class="risk-description">
+                        Several tools have overlapping features (ChatGPT vs Perplexity for research, multiple video tools). Risk of paying for unused capabilities. Consider consolidation.
+                    </p>
+                </div>
+                <div class="risk-item risk-medium">
+                    <div class="risk-header">
+                        <div class="risk-icon">📈</div>
+                        <h3 class="risk-title">Adoption Risk</h3>
+                    </div>
+                    <p class="risk-description">
+                        High monthly per-user cost ($812) requires strong adoption to achieve ROI. Low usage rates could turn these investments into costly overhead.
+                    </p>
+                </div>
+                <div class="risk-item risk-high">
+                    <div class="risk-header">
+                        <div class="risk-icon">💰</div>
+                        <h3 class="risk-title">Enterprise Pricing Creep</h3>
+                    </div>
+                    <p class="risk-description">
+                        Many tools show "custom pricing" for enterprise. Actual costs often 2-3x higher than listed prices. Budget should include 20% contingency.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Strategic Recommendations -->
+        <div class="recommendations">
+            <h2 class="section-title">Strategic Recommendations</h2>
+            <ul class="recommendation-list">
+                <li><strong>Phase rollout:</strong> Start with high-ROI tools (ChatGPT, Notion, AdCreative.ai) to prove value before full deployment</li>
+                <li><strong>Negotiate enterprise deals:</strong> Bundle purchases for 15-25% discounts, especially for Synthesia and Abnormal Security</li>
+                <li><strong>Implement usage tracking:</strong> Deploy monitoring for all pay-per-use services with automatic alerts at 80% of budget</li>
+                <li><strong>Create adoption programs:</strong> Invest 10% of tool budget in training to ensure full utilization and ROI achievement</li>
+                <li><strong>Review quarterly:</strong> Audit actual usage vs. licenses to eliminate shelfware and optimize tier selection</li>
+                <li><strong>Consider alternatives:</strong> Evaluate open-source options for ML workloads to reduce Vertex AI dependency</li>
+                <li><strong>Establish tool governance:</strong> Create approval process for new tools to prevent shadow IT and redundancy</li>
+            </ul>
+        </div>
+        </div>
+    </div>
+
+    <script>
+        // Export financial report functionality
+        function exportFinancialReport() {
+            window.print();
+        }
+
+        // Add active class to current page nav
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                if (link.getAttribute('href').includes(currentPath.split('/').pop())) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

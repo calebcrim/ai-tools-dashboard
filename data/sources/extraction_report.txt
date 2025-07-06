@@ -1,0 +1,41 @@
+PDF EXTRACTION SUMMARY
+==================================================
+Total tools extracted: 10
+
+Tools by category:
+
+CONTENT-CREATION (2 tools):
+  - Quillbot (quillbot.com)
+  - Wordtune (www.wordtune.com)
+
+IMAGE-GENERATION (2 tools):
+  - MidJourney (www.midjourney.com)
+  - DALL-E 3 (openai.com/dall-e-3)
+
+MEDIA-INTELLIGENCE (1 tools):
+  - Signal AI (www.signal-ai.com)
+
+RESEARCH (2 tools):
+  - Perplexity AI (www.perplexity.ai)
+  - Perplexity AI Pro (www.perplexity.ai)
+
+VIDEO-AUDIO (3 tools):
+  - Murf AI (murf.ai)
+  - ElevenLabs (elevenlabs.io)
+  - Krisp (krisp.ai)
+
+==================================================
+EXTRACTED FIELDS STRUCTURE:
+- id: int
+- name: str
+- url: str
+- category: str
+- description: str
+- tags: list
+- features: dict
+
+  Features sub-fields:
+    - extensive: str
+    - pricing: str
+    - integration: str
+    - useCases: list

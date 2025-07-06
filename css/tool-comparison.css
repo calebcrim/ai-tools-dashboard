@@ -1,0 +1,490 @@
+/* Tool Comparison View Styles */
+
+.tool-comparison-view {
+    padding: 2rem;
+    background: #f5f7fa;
+    min-height: 100vh;
+}
+
+/* Ensure smooth scrolling */
+* {
+    scroll-behavior: smooth;
+}
+
+.comparison-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.comparison-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.comparison-header h2 {
+    font-size: 2rem;
+    color: #1a202c;
+    margin: 0;
+}
+
+.comparison-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-export,
+.btn-print {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+}
+
+.btn-export {
+    background: #3182ce;
+    color: white;
+}
+
+.btn-export:hover {
+    background: #2c5282;
+}
+
+.btn-print {
+    background: white;
+    color: #4a5568;
+    border: 1px solid #e2e8f0;
+}
+
+.btn-print:hover {
+    background: #f7fafc;
+}
+
+/* Comparison Sections */
+.comparison-section {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.section-header {
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s;
+}
+
+.section-header:hover {
+    background: #f7fafc;
+}
+
+.section-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #2d3748;
+}
+
+.section-content {
+    padding: 0 1.5rem 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.comparison-section.expanded .section-content {
+    max-height: none; /* Remove height restriction */
+    opacity: 1;
+    overflow: visible; /* Ensure content is not clipped */
+}
+
+/* Comparison Tables */
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.comparison-table th {
+    background: #f7fafc;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.attribute-col {
+    width: 200px;
+    font-weight: 600;
+}
+
+.tool-col {
+    width: calc((100% - 200px) / 3);
+}
+
+.attribute-name {
+    color: #4a5568;
+    font-weight: 500;
+}
+
+/* Rating Display */
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stars {
+    color: #f6ad55;
+}
+
+.rating-value {
+    color: #718096;
+    font-size: 0.875rem;
+}
+
+/* Pricing Styles */
+.pricing-model {
+    background: #e6fffa;
+    color: #065f46;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.starting-price {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.starting-price.free {
+    color: #059669;
+}
+
+.pricing-tier {
+    line-height: 1.5;
+}
+
+.tier-price {
+    color: #3182ce;
+    font-weight: 600;
+}
+
+.tier-users {
+    color: #718096;
+    font-size: 0.75rem;
+}
+
+/* Features Table */
+.features-table .text-center {
+    text-align: center;
+}
+
+.feature-yes {
+    color: #059669;
+    font-size: 1.25rem;
+}
+
+.feature-no {
+    color: #dc2626;
+    font-size: 1.25rem;
+}
+
+.feature-unknown {
+    color: #9ca3af;
+    font-size: 1.25rem;
+}
+
+.feature-icon {
+    margin-left: 0.5rem;
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+
+.standard-feature {
+    background: #f9fafb;
+}
+
+.feature-legend {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+    font-size: 0.875rem;
+    color: #4a5568;
+}
+
+.feature-legend span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Use Cases Grid */
+.use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.use-case-column h4 {
+    color: #2d3748;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+}
+
+.use-case-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.use-case-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+    color: #2d3748; /* Darker text color for better readability */
+}
+
+.use-case-list i {
+    color: #3182ce;
+    margin-top: 0.125rem;
+    flex-shrink: 0;
+}
+
+/* Pros and Cons Grid */
+.pros-cons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.pros-cons-column h4 {
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.pros-section,
+.cons-section {
+    margin-bottom: 1.5rem;
+}
+
+.pros-header,
+.cons-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.pros-header {
+    color: #059669;
+}
+
+.cons-header {
+    color: #dc2626;
+}
+
+.pros-list,
+.cons-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pros-list li,
+.cons-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: #2d3748; /* Darker color for better readability */
+    font-size: 0.9375rem; /* Slightly larger font */
+}
+
+.pros-list li:before {
+    content: '+';
+    position: absolute;
+    left: 0;
+    color: #059669;
+    font-weight: bold;
+}
+
+.cons-list li:before {
+    content: '-';
+    position: absolute;
+    left: 0;
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* Empty State */
+.comparison-empty {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #718096;
+}
+
+.comparison-empty i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.comparison-empty p {
+    font-size: 1.125rem;
+}
+
+/* Tool Link */
+.tool-link {
+    color: #3182ce;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: color 0.2s;
+}
+
+.tool-link:hover {
+    color: #2c5282;
+    text-decoration: underline;
+}
+
+.tool-link i {
+    font-size: 0.75rem;
+}
+
+/* Not Available */
+.not-available {
+    color: #cbd5e0;
+    font-style: italic;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .tool-comparison-view {
+        padding: 1rem;
+    }
+    
+    .comparison-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    .comparison-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .use-cases-grid,
+    .pros-cons-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .attribute-col {
+        width: 150px;
+    }
+    
+    .tool-col {
+        min-width: 200px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .tool-comparison-view {
+        background: white;
+        padding: 0;
+    }
+    
+    .comparison-actions {
+        display: none;
+    }
+    
+    .section-header {
+        cursor: default;
+        background: white !important;
+    }
+    
+    .section-header i {
+        display: none;
+    }
+    
+    .comparison-section {
+        box-shadow: none;
+        border: 1px solid #e2e8f0;
+        page-break-inside: avoid;
+    }
+    
+    .comparison-section.expanded .section-content {
+        max-height: none !important;
+    }
+    
+    .feature-legend {
+        page-break-before: avoid;
+    }
+}
+
+/* Export Menu */
+.export-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    min-width: 150px;
+    z-index: 100;
+}
+
+.export-menu button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.export-menu button:hover {
+    background: #f7fafc;
+}
+
+.export-menu button:first-child {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.export-menu button:last-child {
+    border-radius: 0 0 0.5rem 0.5rem;
+}

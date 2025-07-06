@@ -1,0 +1,122 @@
+module.exports = [
+    {
+        "tool_name": "ContentStudio",
+        "url": "https://contentstudio.io",
+        "category": "content-creation",
+        "source": "hr",
+        "pricing_model": "Monthly subscription with Starter, Pro, and Agency plans.",
+        "pros_cons_limitations": "Pros: Strong social scheduling + content curation. Cons: UI can feel dated and analytics limited.",
+        "integration_potential": "Integrates with major social platforms (Facebook, Twitter, LinkedIn), WordPress, Medium, and more.",
+        "learning_curve": "Moderate – requires setup of channels, queues, and approval flows.",
+        "geo_regulatory_limitations": "No major geographic restrictions; GDPR compliant.",
+        "case_studies": "Used by digital agencies to manage and schedule multi-channel content calendars across clients."
+    },
+    {
+        "tool_name": "Copy.ai",
+        "url": "https://copy.ai",
+        "category": "content-creation",
+        "source": "hr",
+        "pricing_model": "Freemium with limited generations; Pro plans starting at $49/month.",
+        "pros_cons_limitations": "Pros: Fast idea generation and templates. Cons: Repetitive outputs and limited long-form coherence.",
+        "integration_potential": "Offers API and integrates with Chrome extension, Zapier.",
+        "learning_curve": "Low – guided templates and prompt suggestions.",
+        "geo_regulatory_limitations": "Global availability; GDPR-compliant.",
+        "case_studies": "Marketing teams use Copy.ai to brainstorm ad headlines and automate social content writing."
+    },
+    {
+        "tool_name": "Copymatic",
+        "url": "https://copymatic.ai",
+        "category": "content-creation",
+        "source": "hr",
+        "pricing_model": "Pay-as-you-go and subscription plans based on word count.",
+        "pros_cons_limitations": "Pros: Multi-language support and good SEO tools. Cons: Less refined UI and some generic content.",
+        "integration_potential": "Exports to WordPress; API access for automation.",
+        "learning_curve": "Low – user-friendly interface and presets.",
+        "geo_regulatory_limitations": "Operates globally with no stated restrictions.",
+        "case_studies": "Used by e-commerce brands to localize product descriptions and create multilingual blogs."
+    },
+    {
+        "tool_name": "Copysmith",
+        "url": "https://copysmith.ai",
+        "category": "content-creation",
+        "source": "hr",
+        "pricing_model": "Subscription pricing based on usage (Starter, Pro, Enterprise).",
+        "pros_cons_limitations": "Pros: Built for e-commerce and scale. Cons: Less creative than some peers.",
+        "integration_potential": "Supports Shopify, WooCommerce, Google Ads, Zapier, API.",
+        "learning_curve": "Moderate – geared toward teams and templates.",
+        "geo_regulatory_limitations": "Complies with GDPR; no geographic blocks.",
+        "case_studies": "Used by agencies to generate thousands of product descriptions in bulk."
+    },
+    {
+        "tool_name": "Cuppa",
+        "url": "https://cuppa.sh",
+        "category": "content-creation",
+        "source": "hr",
+        "pricing_model": "Free plan with paid tiers based on word count and output formats.",
+        "pros_cons_limitations": "Pros: Fast content generator with unique tone options. Cons: Still developing features and integrations.",
+        "integration_potential": "Basic download options; no public API yet.",
+        "learning_curve": "Low – designed for beginners and solopreneurs.",
+        "geo_regulatory_limitations": "No geo-specific restrictions mentioned.",
+        "case_studies": "Used by small content creators to generate ideas and short blog drafts quickly."
+    },
+    {
+        "tool_name": "Dashword",
+        "url": "https://dashword.com",
+        "category": "content-creation",
+        "source": "hr",
+        "pricing_model": "Flat monthly rate; no free tier.",
+        "pros_cons_limitations": "Pros: Clean UI and strong focus on SEO writing. Cons: Lacks robust competitive keyword analysis.",
+        "integration_potential": "Exports to Google Docs; Chrome extension.",
+        "learning_curve": "Low – simple scoring and guidance system.",
+        "geo_regulatory_limitations": "No restrictions mentioned; operates globally.",
+        "case_studies": "Freelance writers use Dashword to optimize content briefs and meet client SEO expectations."
+    },
+    {
+        "tool_name": "Frase",
+        "url": "https://frase.io",
+        "category": "content-creation",
+        "source": "hr",
+        "pricing_model": "Subscription-based; Solo, Basic, and Team plans.",
+        "pros_cons_limitations": "Pros: Excellent research and SERP analysis. Cons: Higher tiers needed for full AI generation.",
+        "integration_potential": "Integrates with Google Docs, WordPress; API available.",
+        "learning_curve": "Moderate – more features = more onboarding time.",
+        "geo_regulatory_limitations": "No geographic limitations; GDPR compliant.",
+        "case_studies": "Used by SEO agencies to generate content briefs and optimize blog posts based on real-time SERP data."
+    },
+    {
+        "tool_name": "GrowthBar",
+        "url": "https://growthbarseo.com",
+        "category": "content-creation",
+        "source": "hr",
+        "pricing_model": "Subscription model starting around $29/month.",
+        "pros_cons_limitations": "Pros: Easy blog outline and keyword tool. Cons: Limited customization and tone options.",
+        "integration_potential": "Chrome extension, WordPress integration.",
+        "learning_curve": "Low – minimal setup, keyword-first workflow.",
+        "geo_regulatory_limitations": "No stated limitations.",
+        "case_studies": "Startups and small businesses use GrowthBar to quickly draft SEO blog posts."
+    },
+    {
+        "tool_name": "Hypotenuse AI",
+        "url": "https://hypotenuse.ai",
+        "category": "content-creation",
+        "source": "hr",
+        "pricing_model": "Free trial with paid tiers starting at $29/month.",
+        "pros_cons_limitations": "Pros: High-quality long-form writing and e-commerce focus. Cons: Occasional generic tone.",
+        "integration_potential": "API access and Shopify plugin.",
+        "learning_curve": "Low – guided onboarding and templates.",
+        "geo_regulatory_limitations": "No specific restrictions; GDPR compliant.",
+        "case_studies": "E-commerce brands use Hypotenuse AI to generate product descriptions and blog content at scale."
+    },
+    {
+        "tool_name": "Journalist AI",
+        "url": "https://journalist.ai",
+        "category": "content-creation",
+        "source": "hr",
+        "pricing_model": "Monthly and annual plans; free trial available.",
+        "pros_cons_limitations": "Pros: Tailored to newsroom workflows. Cons: Less flexible than generic content tools.",
+        "integration_potential": "Integrates with news CMSs and Google Sheets via API.",
+        "learning_curve": "Moderate – requires understanding of editorial process.",
+        "geo_regulatory_limitations": "No regulatory restrictions listed.",
+        "case_studies": "Used by digital publications to auto-generate article drafts and repurpose press releases."
+    }
+];

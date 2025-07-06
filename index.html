@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrimIntelligence: AI Tools Suite | Media & Communications Platform</title>
+    <meta name="description" content="Comprehensive database of 200+ AI tools for media, PR, and communications professionals. Search, filter, and discover the right AI tools for your workflow.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/tool-comparison.css">
+    <link rel="stylesheet" href="css/comparison-fixes.css">
+    <link rel="stylesheet" href="css/advanced-filters.css">
+    <link rel="stylesheet" href="css/compressed-filter-bar.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h1 class="logo-text">CrimIntelligence: AI Tools Suite</h1>
+            </div>
+            <div class="header-actions">
+                <nav class="header-nav">
+                    <a href="index.html" class="nav-link active">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                    <a href="index.new.html" class="nav-link">
+                        <i class="fas fa-exchange-alt"></i> Dual View
+                    </a>
+                    <a href="enterprise-dashboard.html" class="nav-link">
+                        <i class="fas fa-building"></i> Enterprise Report
+                    </a>
+                    <a href="saas-financial-analysis.html" class="nav-link">
+                        <i class="fas fa-chart-line"></i> Financial Analysis
+                    </a>
+                </nav>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th"></i> Grid
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <i class="fas fa-list"></i> List
+                    </button>
+                </div>
+                <button class="export-btn">
+                    <i class="fas fa-download"></i> Export
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Content Wrapper -->
+        <div class="content-wrapper">
+            <!-- Stats Bar -->
+            <div class="stats-bar">
+            <div class="stat-card">
+                <div class="stat-icon total">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="total-tools">0</h3>
+                    <p>Total AI Tools</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon media">
+                    <i class="fas fa-newspaper"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="media-tools">0</h3>
+                    <p>Media Intelligence</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon ai">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="ai-assistants">0</h3>
+                    <p>AI Assistants</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon google">
+                    <i class="fab fa-google"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="google-tools">0</h3>
+                    <p>Google Tools</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- View and Sort Controls -->
+        <div class="view-controls">
+            <div class="sort-controls">
+                <label>Sort by:</label>
+                <select id="sortCriteria" onchange="applySorting()">
+                    <option value="name">Name</option>
+                    <option value="category">Category</option>
+                    <option value="rating">User Rating</option>
+                    <option value="completeness">Data Completeness</option>
+                </select>
+                <button class="sort-direction" id="sortDirection" onclick="toggleSortDirection()">
+                    <i class="fas fa-sort-alpha-down"></i>
+                </button>
+            </div>
+            
+            <div class="view-options">
+                <button class="btn-secondary filter-toggle" onclick="toggleAdvancedFilters()">
+                    <i class="fas fa-filter"></i> Advanced Filters
+                    <span class="filter-count" id="filterCount" style="display: none;">0</span>
+                </button>
+                <button class="btn-secondary clear-filters-btn" onclick="clearAllFilters()" style="display: none;">
+                    <i class="fas fa-times-circle"></i> Clear Filters
+                </button>
+                <button class="btn-secondary" onclick="toggleComparison()">
+                    <i class="fas fa-balance-scale"></i> Compare (<span id="comparisonCountBtn">0</span>)
+                </button>
+            </div>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="filters-section">
+            <div class="search-bar">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" 
+                       class="search-input" 
+                       placeholder="Search tools by name, feature, or use case..." 
+                       id="searchInput"
+                       autocomplete="off">
+            </div>
+            
+            
+            <div class="filter-groups">
+                <!-- Category Filters -->
+                <div class="filter-group">
+                    <h4>Categories</h4>
+                    <div class="filter-chips" id="categoryFilters">
+                        <div class="filter-chip active" data-category="all">
+                            All <span class="count">0</span>
+                        </div>
+                        <div class="filter-chip" data-category="ai-assistant">
+                            <i class="fas fa-robot"></i> AI Assistants <span class="count">0</span>
+                        </div>
+                        <div class="filter-chip" data-category="media-intelligence">
+                            <i class="fas fa-newspaper"></i> Media Intelligence <span class="count">0</span>
+                        </div>
+                        <div class="filter-chip" data-category="video-audio">
+                            <i class="fas fa-video"></i> Video/Audio <span class="count">0</span>
+                        </div>
+                        <div class="filter-chip" data-category="analytics">
+                            <i class="fas fa-chart-line"></i> Analytics <span class="count">0</span>
+                        </div>
+                        <div class="filter-chip" data-category="transcription">
+                            <i class="fas fa-microphone"></i> Transcription <span class="count">0</span>
+                        </div>
+                        <div class="filter-chip" data-category="content-creation">
+                            <i class="fas fa-pen"></i> Content Creation <span class="count">0</span>
+                        </div>
+                        <div class="filter-chip" data-category="image-generation">
+                            <i class="fas fa-image"></i> Image Generation <span class="count">0</span>
+                        </div>
+                        <div class="filter-chip" data-category="productivity">
+                            <i class="fas fa-tasks"></i> Productivity <span class="count">0</span>
+                        </div>
+                        <div class="filter-chip" data-category="research">
+                            <i class="fas fa-search"></i> Research <span class="count">0</span>
+                        </div>
+                        <div class="filter-chip" data-category="translation">
+                            <i class="fas fa-language"></i> Translation <span class="count">0</span>
+                        </div>
+                        <div class="filter-chip" data-category="customer-service">
+                            <i class="fas fa-headset"></i> Customer Service <span class="count">0</span>
+                        </div>
+                        <div class="filter-chip" data-category="finance">
+                            <i class="fas fa-dollar-sign"></i> Finance <span class="count">0</span>
+                        </div>
+                        <div class="filter-chip" data-category="cybersecurity">
+                            <i class="fas fa-shield-alt"></i> Cybersecurity <span class="count">0</span>
+                        </div>
+                        <div class="filter-chip" data-category="legal-compliance">
+                            <i class="fas fa-gavel"></i> Legal & Compliance <span class="count">0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Source Filters -->
+                <div class="filter-group">
+                    <h4>Source</h4>
+                    <div class="filter-chips" id="sourceFilters">
+                        <div class="filter-chip active" data-source="all">
+                            All Sources
+                        </div>
+                        <div class="filter-chip" data-source="ai-list">
+                            AI Tools List <span class="count">0</span>
+                        </div>
+                        <div class="filter-chip" data-source="google">
+                            Google Tools <span class="count">0</span>
+                        </div>
+                        <div class="filter-chip" data-source="pdf">
+                            Featured Tools <span class="count">0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature Filters -->
+                <div class="filter-group">
+                    <h4>Features</h4>
+                    <div class="filter-chips" id="featureFilters">
+                        <div class="filter-chip" data-feature="api">
+                            <i class="fas fa-code"></i> API Available
+                        </div>
+                        <div class="filter-chip" data-feature="free">
+                            <i class="fas fa-gift"></i> Free Tier
+                        </div>
+                        <div class="filter-chip" data-feature="enterprise">
+                            <i class="fas fa-building"></i> Enterprise
+                        </div>
+                        <div class="filter-chip" data-feature="integration">
+                            <i class="fas fa-plug"></i> Easy Integration
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools Container (Virtual Scrolling) -->
+        <div class="tools-container" id="toolsContainer">
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading AI tools database...</p>
+            </div>
+        </div>
+        </div><!-- End content-wrapper -->
+    </div>
+
+    <!-- Tool Detail Modal -->
+    <div class="modal" id="toolModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Tool Details</h2>
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Export Modal -->
+    <div class="modal" id="exportModal" style="display: none;">
+        <div class="modal-content" style="max-width: 500px;">
+            <div class="modal-header">
+                <h2>Export Tools Data</h2>
+                <button class="modal-close" onclick="closeExportModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="export-options">
+                    <h4>Export Format</h4>
+                    <div class="format-selector">
+                        <label class="format-option">
+                            <input type="radio" name="exportFormat" value="json" checked>
+                            <div class="format-card">
+                                <i class="fas fa-code"></i>
+                                <span>JSON</span>
+                                <small>Structured data with metadata</small>
+                            </div>
+                        </label>
+                        <label class="format-option">
+                            <input type="radio" name="exportFormat" value="csv">
+                            <div class="format-card">
+                                <i class="fas fa-table"></i>
+                                <span>CSV</span>
+                                <small>Spreadsheet compatible</small>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <h4>Export Scope</h4>
+                    <div class="scope-options">
+                        <label>
+                            <input type="radio" name="exportScope" value="filtered" checked>
+                            Currently filtered tools (<span id="filteredCount">0</span>)
+                        </label>
+                        <label>
+                            <input type="radio" name="exportScope" value="all">
+                            All tools (<span id="totalCount">0</span>)
+                        </label>
+                    </div>
+                    
+                    <div class="export-actions">
+                        <button class="btn-secondary" onclick="closeExportModal()">Cancel</button>
+                        <button class="btn-primary" onclick="executeExport()">
+                            <i class="fas fa-download"></i> Export
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Advanced Filters Panel -->
+    <div class="advanced-filters" id="advancedFilters">
+        <div class="filters-header">
+            <h3>Advanced Filters</h3>
+            <button class="close-filters" onclick="toggleAdvancedFilters()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="filters-content">
+            <!-- Price Range Filter -->
+            <div class="filter-section">
+                <h4>Price Range</h4>
+                <div class="filter-options">
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="price" value="free" onchange="applyFilters()">
+                        <span>Free</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="price" value="0-20" onchange="applyFilters()">
+                        <span>Under $20/mo</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="price" value="20-50" onchange="applyFilters()">
+                        <span>$20-50/mo</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="price" value="50-100" onchange="applyFilters()">
+                        <span>$50-100/mo</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="price" value="100+" onchange="applyFilters()">
+                        <span>$100+/mo</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="price" value="enterprise" onchange="applyFilters()">
+                        <span>Enterprise</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="price" value="unknown" onchange="applyFilters()">
+                        <span>Price Unknown</span>
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Learning Curve Filter -->
+            <div class="filter-section">
+                <h4>Learning Curve</h4>
+                <div class="filter-options">
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="learning" value="easy" onchange="applyFilters()">
+                        <span>Easy</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="learning" value="moderate" onchange="applyFilters()">
+                        <span>Moderate</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="learning" value="steep" onchange="applyFilters()">
+                        <span>Steep</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="learning" value="unknown" onchange="applyFilters()">
+                        <span>Not Specified</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Integration Filter -->
+            <div class="filter-section">
+                <h4>Integration Capabilities</h4>
+                <div class="filter-options">
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="integration" value="api" onchange="applyFilters()">
+                        <span>API Available</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="integration" value="zapier" onchange="applyFilters()">
+                        <span>Zapier</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="integration" value="slack" onchange="applyFilters()">
+                        <span>Slack</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="integration" value="google" onchange="applyFilters()">
+                        <span>Google Workspace</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="integration" value="microsoft" onchange="applyFilters()">
+                        <span>Microsoft</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Feature Tags Filter -->
+            <div class="filter-section">
+                <h4>Features & Capabilities</h4>
+                <div class="filter-tags" id="featureTags">
+                    <!-- Dynamically populated -->
+                </div>
+            </div>
+            
+            <!-- Rating Filter -->
+            <div class="filter-section">
+                <h4>User Rating</h4>
+                <div class="rating-filter">
+                    <label>Minimum Rating:</label>
+                    <select id="minRating" data-filter="rating">
+                        <option value="0">All Ratings</option>
+                        <option value="1">1+ Stars</option>
+                        <option value="2">2+ Stars</option>
+                        <option value="3">3+ Stars</option>
+                        <option value="4">4+ Stars</option>
+                        <option value="5">5 Stars Only</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Data Completeness Filter -->
+            <div class="filter-section">
+                <h4>Data Completeness</h4>
+                <div class="completeness-filter">
+                    <label>Minimum Completeness:</label>
+                    <input type="range" id="completenessSlider" min="0" max="100" value="0" data-filter="completeness">
+                    <span id="completenessValue">0%</span>
+                </div>
+            </div>
+            
+            <div class="filter-actions">
+                <button class="btn-secondary" onclick="clearAllFilters()">Clear All</button>
+                <button class="btn-primary" onclick="applyFilters()">Apply Filters</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparison Panel -->
+    <div class="comparison-panel" id="comparisonPanel">
+        <div class="comparison-header">
+            <h3>Tool Comparison (<span id="comparisonCount">0</span>/3)</h3>
+            <button class="close-comparison" onclick="toggleComparison()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="comparison-content">
+            <div class="comparison-tools" id="comparisonTools">
+                <!-- Comparison cards will be inserted here -->
+            </div>
+            
+            <div class="comparison-actions">
+                <button class="btn-secondary" onclick="clearComparison()">Clear All</button>
+                <button class="btn-primary" onclick="exportComparison()">Export Comparison</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data/unified-tools-data.js"></script>
+    <script src="components/enhanced-export-system.js"></script>
+    <script src="components/compressed-filter-bar.js"></script>
+    <script src="scripts.js"></script>
+    <script src="js/tool-comparison-adapter.js"></script>
+    <script src="js/tool-comparison-view.js"></script>
+    <script src="js/comparison-integration.js"></script>
+    <script src="js/advanced-filters.js"></script>
+</body>
+</html>

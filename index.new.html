@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Dashboard - Dual View</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dual-view.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with View Toggle -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h1 class="logo-text">CrimIntelligence: AI Tools Suite</h1>
+            </div>
+            <div class="header-actions">
+                <nav class="header-nav">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                    <a href="index.new.html" class="nav-link active">
+                        <i class="fas fa-exchange-alt"></i> Dual View
+                    </a>
+                    <a href="saas-financial-analysis.html" class="nav-link">
+                        <i class="fas fa-chart-line"></i> Financial Analysis
+                    </a>
+                </nav>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="executive">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Executive View</span>
+                    </button>
+                    <button class="view-btn" data-view="technical">
+                        <i class="fas fa-cog"></i>
+                        <span>Technical View</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <!-- Search Bar -->
+        <div class="search-container" style="margin-bottom: 1.5rem;">
+            <div class="search-bar" style="max-width: 800px; margin: 0 auto;">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" 
+                       class="search-input" 
+                       placeholder="Search tools by name or description..." 
+                       id="dualViewSearch"
+                       autocomplete="off"
+                       style="min-width: 400px;">
+            </div>
+        </div>
+        
+        <!-- Stats Bar (Shared between views) -->
+        <section class="stats-bar">
+            <div class="stat-card">
+                <div class="stat-icon total">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="totalTools">243</h3>
+                    <p>Total AI Tools</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon media">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="evaluatedTools">185</h3>
+                    <p>Fully Evaluated</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon ai">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="highImpactTools">42</h3>
+                    <p>High Impact</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon google">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="enterpriseReady">68</h3>
+                    <p>Enterprise Ready</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Grid Container -->
+        <section class="tools-section">
+            <!-- Executive View -->
+            <div class="view-content" data-view="executive">
+                <div class="tools-grid executive-grid" id="executiveGrid">
+                    <!-- Tool cards will be dynamically inserted here -->
+                </div>
+            </div>
+
+            <!-- Technical View -->
+            <div class="view-content" data-view="technical" style="display: none;">
+                <div class="tools-grid technical-grid" id="technicalGrid">
+                    <!-- Tool cards will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Tool Detail Modal -->
+    <div class="modal" id="toolModal" style="display: none;">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <script src="data/unified-tools-data.js"></script>
+    <script src="js/data-adapter.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dual-view.js"></script>
+</body>
+</html>

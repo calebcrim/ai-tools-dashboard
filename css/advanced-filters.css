@@ -1,0 +1,179 @@
+/* Advanced Filters Enhancement Styles */
+/* These styles enhance the existing advanced filters panel with new filter options */
+
+/* Enhance existing btn-secondary when it has filter-toggle class */
+.btn-secondary.filter-toggle {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary.filter-toggle.active {
+    background: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+}
+
+.btn-secondary.filter-toggle.active:hover {
+    background: #2563eb;
+    border-color: #2563eb;
+}
+
+.filter-count {
+    background: #ef4444;
+    color: white;
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Style for filter sections in the existing advanced panel */
+.filter-section {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.filter-section:last-child {
+    border-bottom: none;
+}
+
+.filter-section h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #e2e8f0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Make filters content scrollable */
+.filters-content {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 60px; /* Space for filter actions */
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.filter-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+    background: rgba(148, 163, 184, 0.1);
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.filter-checkbox:hover {
+    background: rgba(148, 163, 184, 0.2);
+    border-color: rgba(148, 163, 184, 0.3);
+}
+
+.filter-checkbox input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    accent-color: #3b82f6;
+}
+
+.filter-checkbox input[type="checkbox"]:checked + span {
+    color: #3b82f6;
+    font-weight: 500;
+}
+
+.filter-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.filter-tag {
+    padding: 0.375rem 0.75rem;
+    border-radius: 9999px;
+    background: rgba(241, 245, 249, 0.9);  /* Light grey background */
+    border: 1px solid rgba(203, 213, 225, 0.8);
+    color: #1e293b;  /* Dark text */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.filter-tag:hover {
+    background: rgba(248, 250, 252, 1);  /* Even lighter on hover */
+    border-color: rgba(148, 163, 184, 0.5);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-tag.active {
+    background: rgba(20, 184, 166, 0.9);  /* Teal background when active */
+    border-color: #14b8a6;
+    color: #ffffff;  /* White text when active */
+    box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.2);
+}
+
+.filter-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background: rgba(15, 23, 42, 0.5);
+    border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.btn-clear-filters {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-clear-filters:hover {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: #ef4444;
+}
+
+/* Clear filters button in top bar */
+.clear-filters-btn {
+    background: rgba(239, 68, 68, 0.1) !important;
+    border: 1px solid rgba(239, 68, 68, 0.3) !important;
+    color: #ef4444 !important;
+}
+
+.clear-filters-btn:hover {
+    background: rgba(239, 68, 68, 0.2) !important;
+    border-color: #ef4444 !important;
+    transform: translateY(-1px);
+}
+
+.filter-results {
+    color: #94a3b8;
+    font-size: 0.875rem;
+}
+
+#filteredCount {
+    font-weight: 600;
+    color: #3b82f6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filter-options {
+        flex-direction: column;
+    }
+    
+    .filter-checkbox {
+        width: 100%;
+    }
+}

@@ -1,0 +1,147 @@
+/* Print Styles for Enterprise Dashboard */
+
+@media print {
+    /* Hide non-essential elements */
+    .header,
+    .toc-sidebar,
+    .filter-controls,
+    .print-btn,
+    .export-btn,
+    .toc-toggle {
+        display: none !important;
+    }
+    
+    /* Reset background colors for print */
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .dashboard-container {
+        padding: 0;
+        max-width: 100%;
+    }
+    
+    .dashboard-content {
+        max-width: 100%;
+    }
+    
+    /* Page layout */
+    .content-section {
+        background: white;
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+    
+    /* Typography for print */
+    .page-title {
+        font-size: 24pt;
+        color: black;
+        background: none;
+        -webkit-text-fill-color: black;
+    }
+    
+    .section-title {
+        font-size: 18pt;
+        color: black;
+        page-break-after: avoid;
+    }
+    
+    /* Tables */
+    .data-table {
+        border: 1px solid #ddd;
+        font-size: 10pt;
+    }
+    
+    .data-table th {
+        background: #f5f5f5;
+        color: black;
+        border-bottom: 2px solid #333;
+    }
+    
+    .data-table td {
+        border-bottom: 1px solid #ddd;
+        color: black;
+    }
+    
+    .data-table tr:nth-child(even) {
+        background: #f9f9f9;
+    }
+    
+    /* Tool names and badges */
+    .tool-name {
+        color: black;
+        font-weight: bold;
+    }
+    
+    .category-badge,
+    .feature-badge,
+    .badge {
+        background: #f0f0f0;
+        color: black;
+        border: 1px solid #ddd;
+    }
+    
+    /* Metrics */
+    .metric-card {
+        border: 1px solid #ddd;
+        background: white;
+    }
+    
+    .metric-icon {
+        display: none;
+    }
+    
+    /* Recommendations */
+    .recommendation-card {
+        border: 1px solid #ddd;
+        background: white;
+        page-break-inside: avoid;
+    }
+    
+    /* Complexity indicators */
+    .complexity-dot {
+        border: 1px solid #333;
+    }
+    
+    .complexity-dot.filled {
+        background: #333;
+    }
+    
+    /* Links */
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+    
+    /* Page breaks */
+    .page-header {
+        page-break-after: avoid;
+    }
+    
+    #executive-summary {
+        page-break-after: always;
+    }
+    
+    #high-impact-tools {
+        page-break-before: always;
+    }
+    
+    /* Ensure tables don't break */
+    table {
+        page-break-inside: avoid;
+    }
+    
+    /* Footer for print */
+    @page {
+        margin: 1in;
+        
+        @bottom-center {
+            content: "AI Tools Enterprise Readiness Dashboard - Page " counter(page);
+            font-size: 10pt;
+            color: #666;
+        }
+    }
+}
