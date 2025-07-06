@@ -8,8 +8,5 @@
     "build:data": "node data/build-tools-data.js",
     "serve": "python -m http.server 8000",
     "validate": "node test/validate-data.js"
-  },
-  "devDependencies": {
-    "puppeteer": "^21.0.0"
   }
 }
