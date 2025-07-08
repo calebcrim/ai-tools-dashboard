@@ -1,0 +1,82 @@
+/**
+ * Autocomplete Stacking Context Fix
+ * Ensures autocomplete appears above all elements including native dropdowns
+ */
+
+/* Force highest z-index for autocomplete with important flag */
+.search-autocomplete,
+.search-autocomplete.visible {
+    z-index: 9999 !important;
+    position: absolute !important;
+}
+
+/* Ensure the search container has proper stacking */
+.enhanced-search-bar,
+.search-container,
+.filter-search {
+    position: relative !important;
+    z-index: 9998 !important;
+}
+
+/* Force the entire filters section above view controls */
+.filters-section {
+    position: relative;
+    z-index: 200 !important;
+}
+
+/* Lower the view controls */
+.view-controls {
+    z-index: 50 !important;
+}
+
+/* Fix for compressed filter bar if it's interfering */
+.compressed-filter-bar {
+    z-index: 89 !important; /* Below its original 90 */
+}
+
+/* Nuclear option: Force autocomplete to be on top of everything */
+.search-autocomplete.visible {
+    position: fixed !important;
+    z-index: 99999 !important;
+    /* Recalculate position */
+    top: auto !important;
+    margin-top: 44px; /* Adjust based on input height */
+}
+
+/* Alternative approach: Use isolation to create new stacking context */
+.filters-section {
+    isolation: isolate;
+}
+
+/* Ensure autocomplete is not clipped by overflow */
+.filter-bar-content,
+.filters-section,
+.compressed-filter-bar {
+    overflow: visible !important;
+}
+
+/* Debug helper - add red border to autocomplete */
+.search-autocomplete.visible {
+    border: 3px solid red !important; /* Remove this in production */
+}
+
+/* Force sort select to behave */
+#sortCriteria {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* Last resort: Use transform to force new stacking context */
+.search-autocomplete.visible {
+    transform: translateZ(999px);
+}
+
+/* Ensure no parent has overflow hidden that might clip autocomplete */
+body * {
+    overflow-x: visible !important;
+}
+
+.main-container,
+.content-wrapper {
+    overflow: visible !important;
+}

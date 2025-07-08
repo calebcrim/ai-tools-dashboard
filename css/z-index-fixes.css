@@ -1,0 +1,97 @@
+/**
+ * Z-Index Fixes and Scale Documentation
+ * Fixes autocomplete visibility issues and establishes z-index hierarchy
+ */
+
+/* Z-Index Scale Reference:
+ * 1-10: Base elements (badges, icons)
+ * 50-90: Sticky elements (filter bar)
+ * 100: Dropdowns and overlays
+ * 1000: Active autocomplete and modals
+ * 10000: Critical overlays (notifications, alerts)
+ */
+
+/* Primary Fix: Ensure autocomplete appears above all dropdowns */
+.search-autocomplete {
+    z-index: 1000 !important; /* Higher than sort dropdown */
+}
+
+/* Ensure the search container creates proper stacking context */
+.enhanced-search-bar,
+.search-container {
+    position: relative;
+    z-index: 101; /* Slightly above other controls */
+}
+
+/* Fix potential stacking context issues */
+.compressed-filter-bar {
+    /* Ensure filter bar doesn't create problematic stacking */
+    transform: translateZ(0); /* Create stacking context */
+}
+
+/* Sort controls should be below autocomplete */
+.view-controls {
+    z-index: 99; /* Just below base dropdown level */
+}
+
+/* Category dropdown in filter bar */
+.filter-dropdown-menu {
+    z-index: 99; /* Below autocomplete but above page content */
+}
+
+/* Additional safety: When autocomplete is visible, ensure it's on top */
+.search-autocomplete.visible {
+    z-index: 1001 !important;
+}
+
+/* Fix for mobile: Ensure autocomplete works on small screens */
+@media (max-width: 768px) {
+    .search-autocomplete {
+        position: fixed; /* Use fixed positioning on mobile */
+        z-index: 1002;
+        max-width: calc(100vw - 2rem);
+        left: 1rem !important;
+        right: 1rem !important;
+    }
+}
+
+/* Optional: Add backdrop when autocomplete is active */
+.autocomplete-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    display: none;
+}
+
+.autocomplete-active .autocomplete-backdrop {
+    display: block;
+}
+
+/* Ensure modals stay on top of everything */
+.modal-overlay {
+    z-index: 10000 !important;
+}
+
+/* Fix transform/opacity stacking context issues */
+.enhanced-search-bar {
+    /* Avoid opacity animations that might affect stacking */
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+/* Debug helper class (remove in production) */
+.debug-z-index::after {
+    content: attr(data-z-index);
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: red;
+    color: white;
+    padding: 2px 6px;
+    font-size: 10px;
+    pointer-events: none;
+}
