@@ -13,13 +13,17 @@ class EnhancedSearchBar {
         this.selectedIndex = -1;
         this.isAutocompleteOpen = false;
         this.debounceTimer = null;
+        this.isClickingAutocomplete = false;
         
         this.init();
     }
     
     init() {
         this.render();
-        this.attachEventListeners();
+        // Ensure DOM is updated before attaching listeners
+        setTimeout(() => {
+            this.attachEventListeners();
+        }, 0);
     }
     
     render() {
@@ -78,7 +82,6 @@ class EnhancedSearchBar {
     attachEventListeners() {
         const input = document.getElementById('enhancedSearchInput');
         const clearBtn = document.getElementById('searchClearBtn');
-        const autocomplete = document.getElementById('search-autocomplete');
         
         if (!input) return;
         
@@ -103,34 +106,48 @@ class EnhancedSearchBar {
         });
         
         // Blur event
-        input.addEventListener('blur', (e) => {
+        input.addEventListener('blur', () => {
             // Delay hiding to allow click on autocomplete items
             setTimeout(() => {
-                if (!e.relatedTarget || !e.relatedTarget.closest('.search-autocomplete')) {
+                // Check if we clicked on an autocomplete item
+                const activeElement = document.activeElement;
+                const autocompleteContainer = document.getElementById('search-autocomplete');
+                if (!autocompleteContainer?.contains(activeElement) && !this.isClickingAutocomplete) {
                     this.hideAutocomplete();
                 }
-            }, 200);
+            }, 250);
         });
         
         // Keyboard navigation
         input.addEventListener('keydown', (e) => {
-            if (!this.isAutocompleteOpen) return;
-            
             switch(e.key) {
                 case 'ArrowDown':
-                    e.preventDefault();
-                    this.navigateAutocomplete(1);
+                    if (this.isAutocompleteOpen) {
+                        e.preventDefault();
+                        this.navigateAutocomplete(1);
+                    }
                     break;
                 case 'ArrowUp':
-                    e.preventDefault();
-                    this.navigateAutocomplete(-1);
+                    if (this.isAutocompleteOpen) {
+                        e.preventDefault();
+                        this.navigateAutocomplete(-1);
+                    }
                     break;
                 case 'Enter':
                     e.preventDefault();
-                    this.selectAutocompleteItem();
+                    console.log('Enter key pressed, autocomplete open:', this.isAutocompleteOpen, 'selectedIndex:', this.selectedIndex);
+                    if (this.isAutocompleteOpen && this.selectedIndex !== -1) {
+                        this.selectAutocompleteItem();
+                    } else {
+                        // Perform search even if autocomplete is not open
+                        this.performSearch();
+                        this.hideAutocomplete();
+                    }
                     break;
                 case 'Escape':
-                    this.hideAutocomplete();
+                    if (this.isAutocompleteOpen) {
+                        this.hideAutocomplete();
+                    }
                     break;
             }
         });
@@ -151,9 +168,57 @@ class EnhancedSearchBar {
                 this.performSearch();
             });
         }
+        
+        // Event delegation for autocomplete clicks
+        const autocompleteEl = document.getElementById('search-autocomplete');
+        if (autocompleteEl) {
+            console.log('Attaching mousedown listener to autocomplete');
+            autocompleteEl.addEventListener('mousedown', (e) => {
+                // Use mousedown instead of click to fire before blur
+                const item = e.target.closest('.autocomplete-item');
+                if (item) {
+                    e.preventDefault(); // Prevent blur
+                    this.isClickingAutocomplete = true;
+                    const index = parseInt(item.dataset.index);
+                    this.selectedIndex = index;
+                    console.log('Autocomplete item clicked, index:', index);
+                    this.selectAutocompleteItem();
+                    // Reset flag after a delay
+                    setTimeout(() => {
+                        this.isClickingAutocomplete = false;
+                    }, 300);
+                }
+            });
+        } else {
+            console.warn('Autocomplete element not found when attaching listeners');
+            // Try again after a delay
+            setTimeout(() => {
+                const retryAutocomplete = document.getElementById('search-autocomplete');
+                if (retryAutocomplete && !retryAutocomplete.hasAttribute('data-listeners-attached')) {
+                    retryAutocomplete.setAttribute('data-listeners-attached', 'true');
+                    console.log('Attaching mousedown listener to autocomplete (retry)');
+                    retryAutocomplete.addEventListener('mousedown', (e) => {
+                        const item = e.target.closest('.autocomplete-item');
+                        if (item) {
+                            e.preventDefault();
+                            this.isClickingAutocomplete = true;
+                            const index = parseInt(item.dataset.index);
+                            this.selectedIndex = index;
+                            console.log('Autocomplete item clicked (retry), index:', index);
+                            this.selectAutocompleteItem();
+                            setTimeout(() => {
+                                this.isClickingAutocomplete = false;
+                            }, 300);
+                        }
+                    });
+                }
+            }, 100);
+        }
     }
     
     performSearch() {
+        console.log('performSearch called with term:', this.searchTerm);
+        
         // Save to history if not empty
         if (this.searchTerm.trim()) {
             this.addToSearchHistory(this.searchTerm.trim());
@@ -164,21 +229,32 @@ class EnhancedSearchBar {
         
         if (this.searchTerm) {
             const searchLower = this.searchTerm.toLowerCase();
-            const searchWords = searchLower.split(/\s+/);
             
-            filtered = filtered.filter(tool => {
-                const searchableText = [
-                    tool.tool_name || '',
-                    tool.brief_purpose_summary || '',
-                    tool.feature_breakdown || '',
-                    tool.category || '',
-                    ...(tool.use_cases_in_pr || []),
-                    ...(tool.tags || [])
-                ].join(' ').toLowerCase();
+            // Check if this is a category search
+            if (searchLower.startsWith('category:')) {
+                const categorySearch = searchLower.substring(9).trim(); // Remove 'category:' prefix
+                filtered = filtered.filter(tool => {
+                    const toolCategory = (tool.category || '').toLowerCase();
+                    return toolCategory.includes(categorySearch);
+                });
+            } else {
+                // Regular search
+                const searchWords = searchLower.split(/\s+/);
                 
-                // All words must match (AND logic)
-                return searchWords.every(word => searchableText.includes(word));
-            });
+                filtered = filtered.filter(tool => {
+                    const searchableText = [
+                        tool.tool_name || '',
+                        tool.brief_purpose_summary || '',
+                        tool.feature_breakdown || '',
+                        tool.category || '',
+                        ...(tool.use_cases_in_pr || []),
+                        ...(tool.tags || [])
+                    ].join(' ').toLowerCase();
+                    
+                    // All words must match (AND logic)
+                    return searchWords.every(word => searchableText.includes(word));
+                });
+            }
             
             // Sort by relevance
             filtered.sort((a, b) => {
@@ -192,9 +268,14 @@ class EnhancedSearchBar {
             });
         }
         
+        console.log('Filtered results:', filtered.length, 'items');
+        
         // Call the callback with filtered results
         if (this.onSearchChange) {
+            console.log('Calling onSearchChange callback');
             this.onSearchChange(filtered);
+        } else {
+            console.error('onSearchChange callback is not set!');
         }
     }
     
@@ -280,14 +361,6 @@ class EnhancedSearchBar {
             </div>
         `).join('');
         
-        // Add click handlers
-        autocomplete.querySelectorAll('.autocomplete-item').forEach((item, index) => {
-            item.addEventListener('click', () => {
-                this.selectedIndex = index;
-                this.selectAutocompleteItem();
-            });
-        });
-        
         this.showAutocomplete();
     }
     
@@ -316,15 +389,27 @@ class EnhancedSearchBar {
     }
     
     selectAutocompleteItem() {
+        console.log('selectAutocompleteItem called, selectedIndex:', this.selectedIndex);
+        
         if (this.selectedIndex === -1 || !this.autocompleteResults[this.selectedIndex]) {
+            // If no item is selected but we have a search term, perform search
+            if (this.searchTerm.trim()) {
+                console.log('No item selected, performing search with current term');
+                this.performSearch();
+                this.hideAutocomplete();
+            }
             return;
         }
         
         const selected = this.autocompleteResults[this.selectedIndex];
+        console.log('Selected item:', selected);
+        
         const input = document.getElementById('enhancedSearchInput');
         
         this.searchTerm = selected.value;
         input.value = selected.value;
+        
+        console.log('Updated search term to:', this.searchTerm);
         
         this.hideAutocomplete();
         this.performSearch();
@@ -343,16 +428,11 @@ class EnhancedSearchBar {
             // Force z-index to ensure visibility
             autocomplete.style.zIndex = '99999';
             
-            // Check if we need to adjust position
-            const inputRect = input.getBoundingClientRect();
-            const viewportHeight = window.innerHeight;
-            
-            // If close to bottom, show above instead
-            if (inputRect.bottom + 300 > viewportHeight) {
-                autocomplete.style.bottom = '100%';
-                autocomplete.style.top = 'auto';
-                autocomplete.style.marginBottom = '4px';
-            }
+            // Always position below the input
+            autocomplete.style.top = '100%';
+            autocomplete.style.bottom = 'auto';
+            autocomplete.style.marginTop = '4px';
+            autocomplete.style.marginBottom = '0';
             
             // Ensure parent containers don't clip
             let parent = autocomplete.parentElement;
