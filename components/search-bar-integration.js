@@ -30,33 +30,54 @@ function integrateEnhancedSearchBar() {
             window.virtualScroll.scrollToTop();
         }
         
-        // Direct DOM update for search results
-        const container = document.querySelector('.tools-grid') || 
-                         document.querySelector('.virtual-scroll-content') ||
-                         document.querySelector('.tools-container') ||
-                         document.querySelector('[class*="tool"]');
-        
-        if (container) {
-            if (filteredTools.length === 0) {
-                container.innerHTML = '<div class="no-results">No tools found</div>';
-            } else if (filteredTools.length <= 100) {
-                // Direct render for manageable result sets
-                container.innerHTML = filteredTools.map(tool => `
-                    <div class="tool-card" data-tool="${tool.tool_name}">
-                        <h3>${tool.tool_name}</h3>
-                        <p class="category">${tool.category || 'Uncategorized'}</p>
-                        <p>${tool.brief_purpose_summary || ''}</p>
-                    </div>
-                `).join('');
-            } else {
-                // For large sets, render first 100
-                container.innerHTML = filteredTools.slice(0, 100).map(tool => `
-                    <div class="tool-card" data-tool="${tool.tool_name}">
-                        <h3>${tool.tool_name}</h3>
-                        <p class="category">${tool.category || 'Uncategorized'}</p>
-                        <p>${tool.brief_purpose_summary || ''}</p>
-                    </div>
-                `).join('') + '<div class="more-results">Showing first 100 of ' + filteredTools.length + ' results...</div>';
+        // Use the proper rendering function if available
+        if (typeof renderEnhancedToolCard === 'function') {
+            const container = document.querySelector('.tools-grid') || 
+                             document.querySelector('.virtual-scroll-content') ||
+                             document.querySelector('#toolsContainer');
+            
+            if (container) {
+                if (filteredTools.length === 0) {
+                    container.innerHTML = '<div class="no-results">No tools found</div>';
+                } else if (filteredTools.length <= 100) {
+                    // Clear container and render tool cards properly
+                    container.innerHTML = '';
+                    filteredTools.forEach(tool => {
+                        const card = renderEnhancedToolCard(tool);
+                        container.appendChild(card);
+                    });
+                } else {
+                    // For large sets, render first 100
+                    container.innerHTML = '';
+                    filteredTools.slice(0, 100).forEach(tool => {
+                        const card = renderEnhancedToolCard(tool);
+                        container.appendChild(card);
+                    });
+                    const moreDiv = document.createElement('div');
+                    moreDiv.className = 'more-results';
+                    moreDiv.textContent = `Showing first 100 of ${filteredTools.length} results...`;
+                    container.appendChild(moreDiv);
+                }
+            }
+        } else {
+            // Fallback to simple rendering if renderEnhancedToolCard is not available
+            console.warn('renderEnhancedToolCard not found, using simple rendering');
+            const container = document.querySelector('.tools-grid') || 
+                             document.querySelector('.virtual-scroll-content') ||
+                             document.querySelector('.tools-container');
+            
+            if (container) {
+                if (filteredTools.length === 0) {
+                    container.innerHTML = '<div class="no-results">No tools found</div>';
+                } else {
+                    container.innerHTML = filteredTools.slice(0, 100).map(tool => `
+                        <div class="tool-card" data-tool="${tool.tool_name}">
+                            <h3>${tool.tool_name}</h3>
+                            <p class="category">${tool.category || 'Uncategorized'}</p>
+                            <p>${tool.brief_purpose_summary || ''}</p>
+                        </div>
+                    `).join('');
+                }
             }
         }
         
