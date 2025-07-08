@@ -25,9 +25,39 @@ function integrateEnhancedSearchBar() {
         }
         
         // Update virtual scroll if available
-        if (window.virtualScroll) {
+        if (window.virtualScroll && window.virtualScroll.updateItems) {
             window.virtualScroll.updateItems(filteredTools);
             window.virtualScroll.scrollToTop();
+        }
+        
+        // Direct DOM update for search results
+        const container = document.querySelector('.tools-grid') || 
+                         document.querySelector('.virtual-scroll-content') ||
+                         document.querySelector('.tools-container') ||
+                         document.querySelector('[class*="tool"]');
+        
+        if (container) {
+            if (filteredTools.length === 0) {
+                container.innerHTML = '<div class="no-results">No tools found</div>';
+            } else if (filteredTools.length <= 100) {
+                // Direct render for manageable result sets
+                container.innerHTML = filteredTools.map(tool => `
+                    <div class="tool-card" data-tool="${tool.tool_name}">
+                        <h3>${tool.tool_name}</h3>
+                        <p class="category">${tool.category || 'Uncategorized'}</p>
+                        <p>${tool.brief_purpose_summary || ''}</p>
+                    </div>
+                `).join('');
+            } else {
+                // For large sets, render first 100
+                container.innerHTML = filteredTools.slice(0, 100).map(tool => `
+                    <div class="tool-card" data-tool="${tool.tool_name}">
+                        <h3>${tool.tool_name}</h3>
+                        <p class="category">${tool.category || 'Uncategorized'}</p>
+                        <p>${tool.brief_purpose_summary || ''}</p>
+                    </div>
+                `).join('') + '<div class="more-results">Showing first 100 of ' + filteredTools.length + ' results...</div>';
+            }
         }
         
         // Update compressed filter bar if it exists

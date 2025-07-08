@@ -227,6 +227,15 @@ class EnhancedSearchBar {
         // Filter tools
         let filtered = [...this.tools];
         
+        // If search term is empty, show all tools
+        if (!this.searchTerm || this.searchTerm.trim() === '') {
+            // Call the callback with all tools
+            if (this.onSearchChange) {
+                this.onSearchChange(filtered);
+            }
+            return;
+        }
+        
         if (this.searchTerm) {
             const searchLower = this.searchTerm.toLowerCase();
             
