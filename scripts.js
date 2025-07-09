@@ -119,7 +119,7 @@ function initializeEnhancedApp() {
  */
 function setupEnhancedEventListeners() {
     // Enhanced search
-    const searchInput = document.getElementById('searchInput');
+    const searchInput = document.getElementById('headerSearchInput');
     if (searchInput) {
         searchInput.addEventListener('input', debounce(handleEnhancedSearch, 300));
     }
@@ -546,7 +546,7 @@ window.clearAllFilters = function() {
     if (minRating) minRating.value = '0';
     
     // Clear search
-    const searchInput = document.getElementById('searchInput');
+    const searchInput = document.getElementById('headerSearchInput');
     if (searchInput) searchInput.value = '';
     
     // Reset to all tools
@@ -914,7 +914,7 @@ function updateStatistics() {
 
 // Filter management functions (keep existing ones)
 function filterTools() {
-    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const searchTerm = document.getElementById('headerSearchInput').value.toLowerCase();
     const activeCategory = document.querySelector('#categoryFilters .filter-chip.active')?.dataset.category || 'all';
     const activeSource = document.querySelector('#sourceFilters .filter-chip.active')?.dataset.source || 'all';
     const activeFeatures = Array.from(document.querySelectorAll('#featureFilters .filter-chip.active'))
@@ -1034,7 +1034,7 @@ function initializeFilters() {
     });
     
     // Search input
-    document.getElementById('searchInput').addEventListener('input', filterTools);
+    document.getElementById('headerSearchInput').addEventListener('input', filterTools);
 }
 
 // Categories configuration (keep existing)

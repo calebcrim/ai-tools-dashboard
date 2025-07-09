@@ -134,7 +134,7 @@ function integrateEnhancedSearchBar() {
     }
     
     // Override the original search handlers
-    const originalSearchInput = document.getElementById('searchInput');
+    const originalSearchInput = document.getElementById('headerSearchInput');
     if (originalSearchInput) {
         // Remove old event listeners by cloning
         const newSearchInput = originalSearchInput.cloneNode(true);
