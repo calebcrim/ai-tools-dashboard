@@ -27,56 +27,8 @@ class EnhancedSearchBar {
     }
     
     render() {
-        // Check if search bar already exists to prevent re-rendering
-        let searchBar = document.querySelector('.enhanced-search-bar');
-        if (!searchBar) {
-            searchBar = document.createElement('div');
-            searchBar.className = 'enhanced-search-bar';
-            
-            // Find the compressed filter bar or create a container
-            const filterBar = document.querySelector('.compressed-filter-bar');
-            if (filterBar) {
-                const searchContainer = filterBar.querySelector('.filter-search');
-                if (searchContainer) {
-                    searchContainer.replaceWith(searchBar);
-                } else {
-                    filterBar.querySelector('.filter-bar-content').prepend(searchBar);
-                }
-            } else {
-                // Fallback: Add to the main search area
-                const originalSearchBar = document.querySelector('.search-bar');
-                if (originalSearchBar) {
-                    originalSearchBar.replaceWith(searchBar);
-                }
-            }
-        }
-        
-        searchBar.innerHTML = `
-            <div class="search-container">
-                <i class="fas fa-search search-icon"></i>
-                <input type="text" 
-                       class="search-input enhanced" 
-                       placeholder="Search tools by name, feature, or use case..." 
-                       id="enhancedSearchInput"
-                       value="${this.searchTerm}"
-                       autocomplete="off"
-                       role="combobox"
-                       aria-expanded="false"
-                       aria-autocomplete="list"
-                       aria-controls="search-autocomplete"
-                       aria-haspopup="listbox">
-                <button class="search-clear-btn ${this.searchTerm ? 'visible' : ''}" 
-                        id="searchClearBtn"
-                        aria-label="Clear search">
-                    <i class="fas fa-times"></i>
-                </button>
-                <div class="search-autocomplete" 
-                     id="search-autocomplete"
-                     role="listbox"
-                     aria-label="Search suggestions">
-                </div>
-            </div>
-        `;
+        // DISABLED: We're using the header search bar instead
+        return;
     }
     
     attachEventListeners() {

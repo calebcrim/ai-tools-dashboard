@@ -1,0 +1,3681 @@
+TOOL DATABASE MISSING DATA AUDIT
+Generated: 2025-07-08T14:18:44.748Z
+Total Tools Analyzed: 317
+
+SUMMARY
+=======
+Tools with missing data: 279
+Tools with complete data: 38
+Overall completeness: 12.0%
+
+Most commonly missing fields:
+1. pricing_model - missing in 199 tools (62.8%)
+2. learning_curve - missing in 162 tools (51.1%)
+3. geo_regulatory_limitations - missing in 159 tools (50.2%)
+4. case_studies - missing in 144 tools (45.4%)
+5. feature_breakdown - missing in 126 tools (39.7%)
+6. integration_potential - missing in 116 tools (36.6%)
+7. pros_cons_limitations - missing in 100 tools (31.5%)
+8. use_cases_in_pr - missing in 6 tools (1.9%)
+9. brief_purpose_summary - missing in 0 tools (0.0%)
+
+DETAILED FINDINGS
+================
+
+HIGH PRIORITY (Missing 5+ fields)
+---------------------------------
+Total: 100 tools
+
+Tool: Continual Learning AI (CLIFF)
+URL: cliff.ai
+Category: ai agent
+Missing fields (8):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+- use_cases_in_pr
+
+Tool: Imagendry
+URL: imagendry.com
+Category: image ai
+Missing fields (8):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+- use_cases_in_pr
+
+Tool: Legal Monster
+URL: legalmonster.ai
+Category: legal ai
+Missing fields (8):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+- use_cases_in_pr
+
+Tool: LegalMind
+URL: legalmind.ai
+Category: legal
+Missing fields (8):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+- use_cases_in_pr
+
+Tool: LunarAI
+URL: lunariai.com
+Category: ai models
+Missing fields (8):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+- use_cases_in_pr
+
+Tool: Adobe Firefly
+URL: www.adobe.com/products/firefly.html
+Category: image-generation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: AI Writer
+URL: ai-writer.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Also Asked
+URL: alsoasked.com
+Category: research
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Article Forge
+URL: www.articleforge.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Assembly AI
+URL: www.assemblyai.com
+Category: transcription
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Autoblogging.ai
+URL: autoblogging.ai
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Beautiful.ai
+URL: www.beautiful.ai
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Beehiiv
+URL: www.beehiiv.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Boomy
+URL: boomy.com
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Buffer AI Assistant
+URL: buffer.com/ai-assistant
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Byword
+URL: byword.ai
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: CapCut
+URL: www.capcut.com
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Captions
+URL: www.captions.ai
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Civitai
+URL: civitai.com
+Category: image-generation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Coda AI
+URL: coda.io/product/ai
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Colossyan
+URL: www.colossyan.com
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Consensus
+URL: consensus.app
+Category: research
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Content at Scale
+URL: contentatscale.ai
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Coqui
+URL: coqui.ai
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Coveo
+URL: www.coveo.com
+Category: customer-service
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Craiyon
+URL: www.craiyon.com
+Category: image-generation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Crayon
+URL: www.crayon.co
+Category: analytics
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: DeepL
+URL: www.deepl.com
+Category: translation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Fathom
+URL: fathom.video
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: FeedHive
+URL: feedhive.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Fireflies.ai
+URL: fireflies.ai
+Category: transcription
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Forethought
+URL: forethought.ai
+Category: customer-service
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Freshdesk (Freddy AI)
+URL: www.freshworks.com/freshdesk
+Category: customer-service
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Gamma
+URL: gamma.app
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Genmo
+URL: www.genmo.ai
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Grain
+URL: grain.com
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Hypefury
+URL: hypefury.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Intercom (Fin)
+URL: www.intercom.com
+Category: customer-service
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: InVideo
+URL: invideo.io
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Jenni AI
+URL: jenni.ai
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Kafkai
+URL: kafkai.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Kapwing
+URL: www.kapwing.com
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Koala AI
+URL: koala.sh
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Krisp
+URL: krisp.ai
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Kustomer (Kustomer IQ)
+URL: www.kustomer.com
+Category: customer-service
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Lately AI
+URL: www.lately.ai
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Letterdrop
+URL: letterdrop.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Lex
+URL: lex.page
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: LongShot AI
+URL: longshot.ai
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Looka
+URL: looka.com
+Category: image-generation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Loom AI
+URL: www.loom.com
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Lumen5
+URL: lumen5.com
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Machined
+URL: machined.ai
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Moonbeam
+URL: www.gomoonbeam.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Mubert
+URL: mubert.com
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Murf AI
+URL: murf.ai
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: NeuralText
+URL: www.neuraltext.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: NovelAI
+URL: novelai.net
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Ocoya
+URL: www.ocoya.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Outranking
+URL: www.outranking.io
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Peppertype.ai
+URL: www.peppertype.ai
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Perplexity AI Pro
+URL: www.perplexity.ai
+Category: research
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Pika
+URL: pika.art
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Planable
+URL: planable.io
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Podcastle
+URL: podcastle.ai
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Quillbot
+URL: quillbot.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Repurpose.io
+URL: repurpose.io
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Resemble AI
+URL: www.resemble.ai
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Rev AI
+URL: www.rev.ai
+Category: transcription
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Riverside.fm
+URL: riverside.fm
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Scribe
+URL: scribehow.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Sembly AI
+URL: www.sembly.ai
+Category: transcription
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Sendible
+URL: www.sendible.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Simplified
+URL: simplified.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: SocialBee
+URL: socialbee.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: SparkToro
+URL: sparktoro.com
+Category: analytics
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Speechify
+URL: speechify.com
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Sprinklr
+URL: www.sprinklr.com
+Category: media-intelligence
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Stable Diffusion
+URL: stability.ai
+Category: image-generation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Sudowrite
+URL: www.sudowrite.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Suno AI
+URL: www.suno.ai
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Supercreator.ai
+URL: www.supercreator.ai
+Category: video-audio
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Surfer SEO
+URL: surferseo.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Talkwalker
+URL: www.talkwalker.com
+Category: media-intelligence
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Taskade
+URL: www.taskade.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Topic
+URL: www.topic.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Treendly
+URL: treendly.com
+Category: analytics
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Typefully
+URL: typefully.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Undetectable AI
+URL: undetectable.ai
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Wappalyzer
+URL: www.wappalyzer.com
+Category: analytics
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Wordtune
+URL: www.wordtune.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Writesonic
+URL: writesonic.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Zendesk AI
+URL: www.zendesk.com
+Category: customer-service
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Zignal Labs
+URL: zignallabs.com
+Category: media-intelligence
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Zimmwriter
+URL: zimmwriter.com
+Category: content-creation
+Missing fields (7):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Snyk Cloud Security
+URL: snyk.io
+Category: cybersecurity
+Missing fields (6):
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Spellbook by Rally
+URL: www.spellbook.legal
+Category: legal-compliance
+Missing fields (6):
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Thomson Reuters CoCounsel
+URL: legal.thomsonreuters.com/cocounsel
+Category: legal-compliance
+Missing fields (6):
+- pricing_model
+- pros_cons_limitations
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Disney Hyperion Gray
+URL: disneyhyperiongray.com
+Category: lifestyle
+Missing fields (5):
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+- use_cases_in_pr
+
+Tool: FutureTools
+URL: futuretools.io
+Category: directory
+Missing fields (5):
+- pricing_model
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+- case_studies
+Insufficient data:
+- feature_breakdown (26 chars): "List of tools, categories."
+
+MEDIUM PRIORITY (Missing 2-4 fields)
+------------------------------------
+Total: 93 tools
+
+Tool: BEEFree.io
+URL: beefree.io
+Category: email marketing
+Missing fields (4):
+- pricing_model
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+Insufficient data:
+- case_studies (37 chars): "Marketing teams quickly draft emails."
+
+Tool: InvokeAPI
+URL: https://invokeapi.dev
+Category: productivity
+Missing fields (4):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+- case_studies
+
+Tool: Bard (now Gemini)
+URL: gemini.google.com
+Category: ai-assistant
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: CB Insights
+URL: www.cbinsights.com
+Category: analytics
+Missing fields (3):
+- feature_breakdown
+- pricing_model
+- case_studies
+
+Tool: Claude (Anthropic)
+URL: claude.ai
+Category: ai-assistant
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Composer
+URL: composer.trade
+Category: finance
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Critica
+URL: aecritica.com
+Category: ai tools hub
+Missing fields (3):
+- pricing_model
+- integration_potential
+- learning_curve
+Insufficient data:
+- geo_regulatory_limitations (15 chars): "Brazil-focused."
+- case_studies (39 chars): "Used by Brazilians to discover AI apps."
+
+Tool: Crostini for Google Slides
+URL: crostini.app
+Category: productivity
+Missing fields (3):
+- pricing_model
+- learning_curve
+- geo_regulatory_limitations
+Insufficient data:
+- integration_potential (21 chars): "Native Google Slides."
+
+Tool: Fintool
+URL: fintool.com
+Category: finance
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Firebase
+URL: firebase.google.com
+Category: analytics
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Fiscal AI
+URL: fiscal.ai
+Category: finance
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Flair AI
+URL: flair.ai
+Category: text-to-video
+Missing fields (3):
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+Insufficient data:
+- feature_breakdown (39 chars): "Storyboarding, AI text-to-video scenes."
+- case_studies (28 chars): "Used for quick promo videos."
+
+Tool: Ghostwriter
+URL: ghostwriter.gitkraken.com
+Category: development
+Missing fields (3):
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+Insufficient data:
+- feature_breakdown (38 chars): "Code completion, documentation lookup."
+- case_studies (29 chars): "Developers write code faster."
+
+Tool: GlamAI
+URL: https://glam.ai
+Category: content-creation
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Google Ads
+URL: ads.google.com
+Category: analytics
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Google Alerts
+URL: google.com/alerts
+Category: media-intelligence
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Google Analytics
+URL: analytics.google.com
+Category: analytics
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Google Cloud Natural Language
+URL: cloud.google.com/natural-language
+Category: analytics
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Google News
+URL: news.google.com
+Category: media-intelligence
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Google Public Data Explorer
+URL: google.com/publicdata
+Category: research
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Google Scholar
+URL: scholar.google.com
+Category: research
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Google Search Console
+URL: search.google.com/search-console
+Category: analytics
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Google Tag Manager
+URL: tagmanager.google.com
+Category: analytics
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Google Trends
+URL: trends.google.com
+Category: analytics
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Grammarly
+URL: grammarly.com
+Category: writing assistant
+Missing fields (3):
+- pricing_model
+- learning_curve
+- geo_regulatory_limitations
+
+Tool: Graphsense
+URL: graphsense.info
+Category: blockchain analytics
+Missing fields (3):
+- pricing_model
+- integration_potential
+- learning_curve
+
+Tool: Illuminate AI Media Kit Generator
+URL: illuminate-ai.com
+Category: pr tools
+Missing fields (3):
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+
+Tool: Infogram
+URL: infogram.com
+Category: data visualization
+Missing fields (3):
+- pricing_model
+- learning_curve
+- geo_regulatory_limitations
+Insufficient data:
+- integration_potential (21 chars): "Embeds, social share."
+- case_studies (33 chars): "Used by PR to make quick visuals."
+
+Tool: Looker Studio
+URL: lookerstudio.google.com
+Category: analytics
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Magisto
+URL: magisto.com
+Category: video editing
+Missing fields (3):
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+
+Tool: Narrative Science Quill
+URL: narrativescience.com/quill
+Category: nlg
+Missing fields (3):
+- integration_potential
+- learning_curve
+- geo_regulatory_limitations
+Insufficient data:
+- case_studies (31 chars): "Financial reports auto-written."
+
+Tool: NotebookLM
+URL: notebooklm.google.com
+Category: research
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: PicPost
+URL: picpost.social
+Category: content-creation
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Pinpoint
+URL: journaliststudio.google.com/pinpoint
+Category: media-intelligence
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: ReelKite
+URL: reelkite.com
+Category: video-audio
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: SlidesAI
+URL: https://www.slidesai.io
+Category: uncategorized
+Missing fields (3):
+- feature_breakdown
+- pricing_model
+- pros_cons_limitations
+
+Tool: Vertex AI
+URL: cloud.google.com/vertex-ai
+Category: ai-assistant
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Will
+URL: heywill.ai
+Category: content-creation
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: YouTube Studio
+URL: studio.youtube.com
+Category: video-audio
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Zynous
+URL: zynous.com
+Category: content-creation
+Missing fields (3):
+- pricing_model
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Ahrefs
+URL: ahrefs.com
+Category: analytics
+Missing fields (2):
+- feature_breakdown
+- pricing_model
+
+Tool: AlphaSense
+URL: www.alpha-sense.com
+Category: analytics
+Missing fields (2):
+- feature_breakdown
+- pricing_model
+
+Tool: Arcads
+URL: https://arcads.ai
+Category: video-audio
+Missing fields (2):
+- geo_regulatory_limitations
+- case_studies
+
+Tool: AskYourPDF
+URL: askyourpdf.com
+Category: productivity
+Missing fields (2):
+- pricing_model
+- learning_curve
+Insufficient data:
+- integration_potential (20 chars): "Standalone web tool."
+
+Tool: BuiltWith
+URL: builtwith.com
+Category: web analysis
+Missing fields (2):
+- pricing_model
+- learning_curve
+Insufficient data:
+- integration_potential (33 chars): "CSV exports, API for integration."
+- geo_regulatory_limitations (16 chars): "No restrictions."
+
+Tool: Chronicle
+URL: chronicle.security
+Category: analytics
+Missing fields (2):
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Clearscope
+URL: clearscope.io
+Category: seo content
+Missing fields (2):
+- integration_potential
+- learning_curve
+Insufficient data:
+- geo_regulatory_limitations (12 chars): "Global data."
+- case_studies (38 chars): "Content teams improve search rankings."
+
+Tool: Compstak
+URL: compstak.com
+Category: commercial real estate
+Missing fields (2):
+- integration_potential
+- learning_curve
+Insufficient data:
+- geo_regulatory_limitations (18 chars): "US/Canada markets."
+
+Tool: Copy.ai
+URL: https://copy.ai
+Category: content-creation
+Missing fields (2):
+- feature_breakdown
+- pricing_model
+
+Tool: Cuppa
+URL: https://cuppa.sh
+Category: content-creation
+Missing fields (2):
+- feature_breakdown
+- pricing_model
+
+Tool: CurieAI
+URL: curie.ai
+Category: ai development
+Missing fields (2):
+- integration_potential
+- geo_regulatory_limitations
+Insufficient data:
+- case_studies (36 chars): "Startups use it to build prototypes."
+
+Tool: Danelfin
+URL: danelfin.com
+Category: finance
+Missing fields (2):
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Dashword
+URL: https://dashword.com
+Category: content-creation
+Missing fields (2):
+- feature_breakdown
+- pricing_model
+
+Tool: DataSelfie
+URL: dataselfie.it
+Category: privacy / profiling
+Missing fields (2):
+- pricing_model
+- learning_curve
+Insufficient data:
+- integration_potential (22 chars): "Chrome extension only."
+
+Tool: EleutherAI
+URL: eleuther.ai
+Category: ai research
+Missing fields (2):
+- pricing_model
+- geo_regulatory_limitations
+Insufficient data:
+- feature_breakdown (33 chars): "LLMs open source, research tools."
+- integration_potential (35 chars): "Models via API or local deployment."
+- case_studies (39 chars): "Researchers use models for experiments."
+
+Tool: Exploding Topics
+URL: explodingtopics.com
+Category: analytics
+Missing fields (2):
+- feature_breakdown
+- pricing_model
+
+Tool: Framer AI
+URL: framer.com/ai
+Category: web design
+Missing fields (2):
+- learning_curve
+- geo_regulatory_limitations
+Insufficient data:
+- feature_breakdown (36 chars): "Text-to-UI generation within Framer."
+- integration_potential (25 chars): "Integrated in Framer app."
+
+Tool: Futurepedia
+URL: https://futurepedia.io
+Category: research
+Missing fields (2):
+- pricing_model
+- case_studies
+
+Tool: GapScout (Formerly Signal AI)
+URL: signalpharm.ai
+Category: media monitoring
+Missing fields (2):
+- learning_curve
+- geo_regulatory_limitations
+Insufficient data:
+- integration_potential (21 chars): "APIs for data export."
+
+Tool: Google Workspace (AI Features)
+URL: workspace.google.com
+Category: ai-assistant
+Missing fields (2):
+- geo_regulatory_limitations
+- case_studies
+
+Tool: GRANDstack
+URL: grandstack.io
+Category: development
+Missing fields (2):
+- pricing_model
+- geo_regulatory_limitations
+Insufficient data:
+- case_studies (34 chars): "Used for knowledge graph projects."
+
+Tool: GrayMeta
+URL: graymeta.com
+Category: media intelligence
+Missing fields (2):
+- learning_curve
+- geo_regulatory_limitations
+Insufficient data:
+- integration_potential (32 chars): "APIs for media asset management."
+- case_studies (37 chars): "Media companies index large archives."
+
+Tool: Groq
+URL: groq.com
+Category: hardware
+Missing fields (2):
+- learning_curve
+- geo_regulatory_limitations
+
+Tool: Gumloop
+URL: https://gumloop.com
+Category: analytics
+Missing fields (2):
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Hypotenuse AI
+URL: https://hypotenuse.ai
+Category: content-creation
+Missing fields (2):
+- feature_breakdown
+- pricing_model
+Insufficient data:
+- integration_potential (30 chars): "API access and Shopify plugin."
+
+Tool: Imagen
+URL: imagen.research.google
+Category: image-generation
+Missing fields (2):
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Ipsos PersonaBot
+URL: https://www.ipsos.com/en/launch-ipsos-personabot
+Category: analytics
+Missing fields (2):
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Journalist AI
+URL: https://journalist.ai
+Category: content-creation
+Missing fields (2):
+- feature_breakdown
+- pricing_model
+
+Tool: Lilt
+URL: lilt.com
+Category: translation
+Missing fields (2):
+- integration_potential
+- learning_curve
+Insufficient data:
+- geo_regulatory_limitations (15 chars): "GDPR compliant."
+
+Tool: MarketMuse
+URL: marketmuse.com
+Category: seo content
+Missing fields (2):
+- integration_potential
+- learning_curve
+Insufficient data:
+- case_studies (37 chars): "Content teams increase organic reach."
+
+Tool: Material AI
+URL: material.ai
+Category: supply chain
+Missing fields (2):
+- integration_potential
+- learning_curve
+Insufficient data:
+- feature_breakdown (39 chars): "Demand forecasting, order optimization."
+- geo_regulatory_limitations (16 chars): "No known issues."
+- case_studies (27 chars): "Manufacturers reduce waste."
+
+Tool: Mem
+URL: mem.ai
+Category: productivity
+Missing fields (2):
+- pricing_model
+- learning_curve
+Insufficient data:
+- integration_potential (27 chars): "Syncs with calendar, email."
+- geo_regulatory_limitations (16 chars): "GDPR compliance."
+- case_studies (29 chars): "Productivity for individuals."
+
+Tool: Mention
+URL: mention.com
+Category: media-intelligence
+Missing fields (2):
+- feature_breakdown
+- pricing_model
+Insufficient data:
+- integration_potential (32 chars): "Zapier, Slack, HubSpot, and API."
+
+Tool: Missinglettr
+URL: missinglettr.com
+Category: social media
+Missing fields (2):
+- learning_curve
+- geo_regulatory_limitations
+Insufficient data:
+- integration_potential (37 chars): "Connects to CMS and Twitter/Facebook."
+
+Tool: Neuroflash Copywriting
+URL: neuroflash.com
+Category: content creation
+Missing fields (2):
+- integration_potential
+- learning_curve
+Insufficient data:
+- feature_breakdown (38 chars): "AI text generation, content templates."
+- geo_regulatory_limitations (15 chars): "EU data center."
+- case_studies (27 chars): "Marketers write ads faster."
+
+Tool: Notis AI
+URL: https://notis.ai
+Category: transcription
+Missing fields (2):
+- pricing_model
+- case_studies
+
+Tool: Oneforma
+URL: oneforma.com
+Category: crowdsourcing
+Missing fields (2):
+- integration_potential
+- learning_curve
+Insufficient data:
+- geo_regulatory_limitations (15 chars): "GDPR compliant."
+
+Tool: Rankscale AI Visibility Tracker
+URL: https://rankscale.ai
+Category: analytics
+Missing fields (2):
+- geo_regulatory_limitations
+- case_studies
+
+Tool: RebelMouse
+URL: rebelmouse.com
+Category: content publishing
+Missing fields (2):
+- learning_curve
+- geo_regulatory_limitations
+Insufficient data:
+- integration_potential (21 chars): "API, social networks."
+
+Tool: Redocly
+URL: redoc.ly
+Category: api docs
+Missing fields (2):
+- learning_curve
+- geo_regulatory_limitations
+Insufficient data:
+- feature_breakdown (32 chars): "Doc generation, hosting, guides."
+- integration_potential (32 chars): "Supports any OpenAPI definition."
+- case_studies (28 chars): "Tech companies publish APIs."
+
+Tool: Reword
+URL: reword.co
+Category: content-creation
+Missing fields (2):
+- feature_breakdown
+- pricing_model
+
+Tool: ROI Hunter
+URL: roihunter.com
+Category: digital marketing
+Missing fields (2):
+- learning_curve
+- geo_regulatory_limitations
+Insufficient data:
+- feature_breakdown (39 chars): "AI-driven bidding, campaign automation."
+- integration_potential (28 chars): "Ad platforms (Meta, Google)."
+- case_studies (32 chars): "Retailers double ad performance."
+
+Tool: Search Atlas
+URL: https://searchatlas.com
+Category: analytics
+Missing fields (2):
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Semrush
+URL: www.semrush.com
+Category: analytics
+Missing fields (2):
+- feature_breakdown
+- pricing_model
+
+Tool: Sensay
+URL: https://sensay.io
+Category: ai-assistant
+Missing fields (2):
+- pricing_model
+- case_studies
+
+Tool: SEO.ai
+URL: seo.ai
+Category: content-creation
+Missing fields (2):
+- feature_breakdown
+- pricing_model
+
+Tool: SimilarWeb
+URL: www.similarweb.com
+Category: analytics
+Missing fields (2):
+- feature_breakdown
+- pricing_model
+
+Tool: Social Flow
+URL: estoreera.gumroad.com/l/SocialMediaAutomation
+Category: content-creation
+Missing fields (2):
+- geo_regulatory_limitations
+- case_studies
+
+Tool: Supermoon
+URL: https://getsupermoon.com
+Category: content-creation
+Missing fields (2):
+- pricing_model
+- case_studies
+Insufficient data:
+- geo_regulatory_limitations (14 chars): "None specific."
+
+Tool: Text Cortex
+URL: textcortex.com
+Category: content-creation
+Missing fields (2):
+- feature_breakdown
+- pricing_model
+
+Tool: Tome
+URL: https://tome.app/
+Category: uncategorized
+Missing fields (2):
+- pricing_model
+- learning_curve
+
+Tool: Trello
+URL: trello.com
+Category: project management
+Missing fields (2):
+- pricing_model
+- learning_curve
+Insufficient data:
+- geo_regulatory_limitations (13 chars): "Global usage."
+- case_studies (34 chars): "Teams from all domains use Trello."
+
+Tool: Warren AI
+URL: warren.ai
+Category: finance
+Missing fields (2):
+- geo_regulatory_limitations
+- case_studies
+
+LOW PRIORITY (Missing 1 field)
+------------------------------
+Total: 86 tools
+
+Tool: Ada
+URL: ada.cx
+Category: customer-service
+Missing field:
+- pricing_model
+
+Tool: Agorapulse
+URL: www.agorapulse.com
+Category: media-intelligence
+Missing field:
+- feature_breakdown
+
+Tool: AInvest
+URL: ainvest.com
+Category: finance
+Missing field:
+- pricing_model
+
+Tool: Aisera
+URL: aisera.com
+Category: customer-service
+Missing field:
+- pricing_model
+
+Tool: Anania
+URL: anania.ai
+Category: data analysis
+Missing field:
+- pricing_model
+
+Tool: AnswerThePublic
+URL: answerthepublic.com
+Category: seo / content research
+Missing field:
+- pricing_model
+Insufficient data:
+- integration_potential (37 chars): "Standalone tool; exports data to CSV."
+- learning_curve (12 chars): "Easy to use."
+
+Tool: Apollo.io
+URL: apollo.io
+Category: sales / crm
+Missing field:
+- learning_curve
+
+Tool: Arize AI
+URL: arize.com
+Category: machine learning
+Missing field:
+- learning_curve
+Insufficient data:
+- geo_regulatory_limitations (11 chars): "None known."
+
+Tool: Avochato AI Chat
+URL: avochato.com
+Category: communications
+Missing field:
+- learning_curve
+Insufficient data:
+- integration_potential (38 chars): "Integrates with CRM (Salesforce, etc.)"
+
+Tool: Bard (Google)
+URL: bard.google.com
+Category: ai assistant
+Missing field:
+- pricing_model
+Insufficient data:
+- integration_potential (35 chars): "Interfaces with Google Search data."
+
+Tool: BigID
+URL: bigid.com
+Category: data security
+Missing field:
+- learning_curve
+
+Tool: Brain.fm
+URL: brain.fm
+Category: productivity
+Missing field:
+- learning_curve
+
+Tool: Brand24
+URL: brand24.com
+Category: media-intelligence
+Missing field:
+- feature_breakdown
+
+Tool: Brandwatch
+URL: www.brandwatch.com
+Category: media-intelligence
+Missing field:
+- pricing_model
+
+Tool: Canva
+URL: https://www.canva.com/
+Category: uncategorized
+Missing field:
+- pricing_model
+
+Tool: Celtra Ad Creation
+URL: celtra.com
+Category: advertising
+Missing field:
+- learning_curve
+Insufficient data:
+- geo_regulatory_limitations (16 chars): "No restrictions."
+
+Tool: Chaser
+URL: chaser.io
+Category: finance
+Missing field:
+- learning_curve
+Insufficient data:
+- geo_regulatory_limitations (12 chars): "UK/EU focus."
+
+Tool: ChatGPT
+URL: https://chatgpt.com
+Category: uncategorized
+Missing field:
+- pricing_model
+
+Tool: Chattermill
+URL: chattermill.com
+Category: analytics
+Missing field:
+- feature_breakdown
+
+Tool: CheckMyAds
+URL: checkmyads.com
+Category: advertising verification
+Missing field:
+- pricing_model
+Insufficient data:
+- integration_potential (36 chars): "Browser extension; API for advanced."
+- learning_curve (12 chars): "Easy to use."
+
+Tool: Clarifai
+URL: clarifai.com
+Category: computer vision
+Missing field:
+- learning_curve
+Insufficient data:
+- integration_potential (25 chars): "API; SDKs for web/mobile."
+- geo_regulatory_limitations (15 chars): "None specified."
+
+Tool: Cloudinary
+URL: cloudinary.com
+Category: media management
+Missing field:
+- learning_curve
+Insufficient data:
+- integration_potential (32 chars): "APIs, plugins for CMS platforms."
+- geo_regulatory_limitations (15 chars): "GDPR compliant."
+
+Tool: Cohesive.so
+URL: https://cohesive.so/
+Category: uncategorized
+Missing field:
+- pricing_model
+
+Tool: ComplyAdvantage
+URL: complyadvantage.com
+Category: compliance
+Missing field:
+- learning_curve
+
+Tool: Conversion.ai
+URL: https://www.jasper.ai/
+Category: content creation
+Missing field:
+- pricing_model
+
+Tool: Copymatic
+URL: https://copymatic.ai
+Category: content-creation
+Missing field:
+- feature_breakdown
+
+Tool: Copysmith
+URL: https://copysmith.ai
+Category: content-creation
+Missing field:
+- feature_breakdown
+
+Tool: D-ID Creative Reality
+URL: d-id.com
+Category: media generation
+Missing field:
+- learning_curve
+Insufficient data:
+- integration_potential (20 chars): "API; Collaborations."
+
+Tool: Data Visualization wth Plotly
+URL: plotly.com
+Category: data visualization
+Missing field:
+- geo_regulatory_limitations
+
+Tool: Databricks SQL Analytics
+URL: databricks.com
+Category: data analytics
+Missing field:
+- learning_curve
+Insufficient data:
+- integration_potential (37 chars): "Connects to BI tools (Tableau, etc.)."
+
+Tool: Descript
+URL: https://www.descript.com/
+Category: media editing
+Missing field:
+- pricing_model
+
+Tool: Docugami
+URL: docugami.com
+Category: document ai
+Missing field:
+- learning_curve
+Insufficient data:
+- integration_potential (21 chars): "APIs; Office plugins."
+
+Tool: Driverless AI
+URL: h2o.ai
+Category: machine learning
+Missing field:
+- learning_curve
+Insufficient data:
+- integration_potential (34 chars): "API, integrates with Hadoop/Spark."
+- geo_regulatory_limitations (16 chars): "No restrictions."
+
+Tool: Durable
+URL: https://durable.co
+Category: uncategorized
+Missing field:
+- pricing_model
+
+Tool: EarlyString
+URL: earlystring.com
+Category: employee advocacy
+Missing field:
+- learning_curve
+Insufficient data:
+- integration_potential (34 chars): "Integrates with LinkedIn, Twitter."
+- geo_regulatory_limitations (15 chars): "GDPR compliant."
+
+Tool: EdgeImpulse
+URL: edgeimpulse.com
+Category: iot ai
+Missing field:
+- pricing_model
+Insufficient data:
+- integration_potential (36 chars): "Supports Arduino, Raspberry Pi, etc."
+- geo_regulatory_limitations (15 chars): "No limitations."
+
+Tool: Elai.io
+URL: www.elai.io
+Category: video
+Missing field:
+- learning_curve
+Insufficient data:
+- integration_potential (38 chars): "Video editor integration, LMS plugins."
+
+Tool: ElevenLabs
+URL: https://elevenlabs.io/
+Category: uncategorized
+Missing field:
+- pricing_model
+
+Tool: Ellora.ai
+URL: ellora.ai
+Category: speech analytics
+Missing field:
+- learning_curve
+Insufficient data:
+- geo_regulatory_limitations (16 chars): "GDPR compliance."
+
+Tool: Everlaw (Everlaw AI Assistant)
+URL: www.everlaw.com
+Category: legaltech
+Missing field:
+- learning_curve
+Insufficient data:
+- geo_regulatory_limitations (13 chars): "US law focus."
+
+Tool: Fliki
+URL: https://fliki.ai
+Category: uncategorized
+Missing field:
+- pricing_model
+
+Tool: GenAI IT Automation by Electric
+URL: electric.ai
+Category: it support
+Missing field:
+- learning_curve
+Insufficient data:
+- geo_regulatory_limitations (16 chars): "No restrictions."
+
+Tool: GrowthBar
+URL: https://growthbarseo.com
+Category: content-creation
+Missing field:
+- feature_breakdown
+
+Tool: Harvey AI
+URL: www.harvey.ai
+Category: legal ai
+Missing field:
+- learning_curve
+
+Tool: HeyGen
+URL: https://www.heygen.com
+Category: uncategorized
+Missing field:
+- pricing_model
+
+Tool: IRONSCALES Email Security
+URL: ironscales.com
+Category: security (email)
+Missing field:
+- learning_curve
+
+Tool: Keepnet Phishing Simulator
+URL: keepnetlabs.com/products/phishing-simulator
+Category: security awareness
+Missing field:
+- learning_curve
+
+Tool: Kira Systems
+URL: kirasystems.com
+Category: legaltech
+Missing field:
+- learning_curve
+
+Tool: Klue
+URL: klue.com
+Category: analytics
+Missing field:
+- feature_breakdown
+
+Tool: Kompyte
+URL: www.kompyte.com
+Category: analytics
+Missing field:
+- feature_breakdown
+
+Tool: LawGeex
+URL: www.lawgeex.com
+Category: legaltech
+Missing field:
+- learning_curve
+
+Tool: LegalOn
+URL: www.legalontech.com
+Category: legaltech
+Missing field:
+- learning_curve
+
+Tool: Legora
+URL: legora.com
+Category: legaltech
+Missing field:
+- learning_curve
+
+Tool: Leonardo.ai
+URL: https://leonardo.ai/
+Category: uncategorized
+Missing field:
+- pricing_model
+
+Tool: Lexis+ AI
+URL: www.lexisnexis.com/lexis-plus-ai
+Category: legalresearch
+Missing field:
+- learning_curve
+Insufficient data:
+- geo_regulatory_limitations (15 chars): "Global content."
+
+Tool: Luuma
+URL: luuma.com
+Category: customer engagement
+Missing field:
+- learning_curve
+Insufficient data:
+- geo_regulatory_limitations (11 chars): "None noted."
+- case_studies (35 chars): "Fintechs improve transaction flows."
+
+Tool: Meltwater
+URL: www.meltwater.com
+Category: media-intelligence
+Missing field:
+- pricing_model
+
+Tool: Memo
+URL: memo.co
+Category: analytics
+Missing field:
+- feature_breakdown
+
+Tool: Metis Finance AI Toolkit
+URL: metisfinance.com
+Category: finance
+Missing field:
+- learning_curve
+Insufficient data:
+- feature_breakdown (39 chars): "Credit risk modeling, NLP on documents."
+- integration_potential (22 chars): "Bank data integration."
+- case_studies (27 chars): "Banks use it to score risk."
+
+Tool: Microsoft Security Copilot
+URL: microsoft.com/security/blog
+Category: cybersecurity
+Missing field:
+- pricing_model
+
+Tool: MidJourney
+URL: https://www.midjourney.com
+Category: uncategorized
+Missing field:
+- pricing_model
+
+Tool: Netbase Quid
+URL: netbasequid.com
+Category: analytics
+Missing field:
+- feature_breakdown
+
+Tool: NewsWhip
+URL: www.newswhip.com
+Category: media-intelligence
+Missing field:
+- feature_breakdown
+
+Tool: Notion
+URL: https://www.notion.com/
+Category: uncategorized
+Missing field:
+- pricing_model
+
+Tool: Observe.ai
+URL: www.observe.ai
+Category: analytics
+Missing field:
+- feature_breakdown
+
+Tool: OpusClip
+URL: https://www.opus.pro
+Category: uncategorized
+Missing field:
+- pricing_model
+
+Tool: Otter.ai
+URL: https://otter.ai/
+Category: uncategorized
+Missing field:
+- pricing_model
+
+Tool: Perplexity Max
+URL: https://perplexity.ai
+Category: research
+Missing field:
+- pricing_model
+
+Tool: Phrasee
+URL: phrasee.co
+Category: ai marketing
+Missing field:
+- learning_curve
+Insufficient data:
+- integration_potential (20 chars): "Email/SMS platforms."
+- case_studies (36 chars): "Retailers increase email open rates."
+
+Tool: Pictory
+URL: https://pictory.ai
+Category: uncategorized
+Missing field:
+- pricing_model
+
+Tool: PicWish
+URL: https://picwish.com
+Category: uncategorized
+Missing field:
+- pricing_model
+
+Tool: Prezly
+URL: www.prezly.com
+Category: media-intelligence
+Missing field:
+- pricing_model
+
+Tool: Propel
+URL: www.propelmypr.com
+Category: media-intelligence
+Missing field:
+- pricing_model
+
+Tool: Prowly
+URL: prowly.com
+Category: media-intelligence
+Missing field:
+- pricing_model
+
+Tool: RecCloud
+URL: https://reccloud.com
+Category: uncategorized
+Missing field:
+- pricing_model
+
+Tool: Relume
+URL: https://www.relume.io
+Category: uncategorized
+Missing field:
+- pricing_model
+
+Tool: Rendezvous Social
+URL: rendezvous.social
+Category: social analytics
+Missing field:
+- geo_regulatory_limitations
+Insufficient data:
+- feature_breakdown (34 chars): "Post scheduling, social analytics."
+- integration_potential (28 chars): "Social networks integration."
+- learning_curve (15 chars): "Easy to medium."
+
+Tool: Replit
+URL: https://replit.com
+Category: uncategorized
+Missing field:
+- pricing_model
+
+Tool: RunwayML
+URL: https://runwayml.com/
+Category: uncategorized
+Missing field:
+- pricing_model
+
+Tool: Scalenut
+URL: www.scalenut.com
+Category: content-creation
+Missing field:
+- feature_breakdown
+
+Tool: SEOwind
+URL: seowind.io
+Category: content-creation
+Missing field:
+- feature_breakdown
+
+Tool: Signal AI
+URL: www.signal-ai.com
+Category: media-intelligence
+Missing field:
+- pricing_model
+
+Tool: Soundraw
+URL: https://soundraw.io
+Category: uncategorized
+Missing field:
+- pricing_model
+
+Tool: StarryAI
+URL: https://starryai.com
+Category: uncategorized
+Missing field:
+- pricing_model
+
+Tool: Synthesia
+URL: https://www.synthesia.io
+Category: uncategorized
+Missing field:
+- pricing_model
+
+Tool: VentureMind AI
+URL: https://venturemind.ai
+Category: productivity
+Missing field:
+- case_studies
+
+FIELD-BY-FIELD BREAKDOWN
+========================
+
+Tools missing 'brief_purpose_summary' (0 tools):
+----------------------------------------
+None - all tools have this field!
+
+Tools missing 'feature_breakdown' (126 tools):
+----------------------------------------
+- Continual Learning AI (CLIFF) (cliff.ai)
+- Imagendry (imagendry.com)
+- Legal Monster (legalmonster.ai)
+- LegalMind (legalmind.ai)
+- LunarAI (lunariai.com)
+- Adobe Firefly (www.adobe.com/products/firefly.html)
+- AI Writer (ai-writer.com)
+- Also Asked (alsoasked.com)
+- Article Forge (www.articleforge.com)
+- Assembly AI (www.assemblyai.com)
+- Autoblogging.ai (autoblogging.ai)
+- Beautiful.ai (www.beautiful.ai)
+- Beehiiv (www.beehiiv.com)
+- Boomy (boomy.com)
+- Buffer AI Assistant (buffer.com/ai-assistant)
+- Byword (byword.ai)
+- CapCut (www.capcut.com)
+- Captions (www.captions.ai)
+- Civitai (civitai.com)
+- Coda AI (coda.io/product/ai)
+- Colossyan (www.colossyan.com)
+- Consensus (consensus.app)
+- Content at Scale (contentatscale.ai)
+- Coqui (coqui.ai)
+- Coveo (www.coveo.com)
+- Craiyon (www.craiyon.com)
+- Crayon (www.crayon.co)
+- DeepL (www.deepl.com)
+- Fathom (fathom.video)
+- FeedHive (feedhive.com)
+- Fireflies.ai (fireflies.ai)
+- Forethought (forethought.ai)
+- Freshdesk (Freddy AI) (www.freshworks.com/freshdesk)
+- Gamma (gamma.app)
+- Genmo (www.genmo.ai)
+- Grain (grain.com)
+- Hypefury (hypefury.com)
+- Intercom (Fin) (www.intercom.com)
+- InVideo (invideo.io)
+- Jenni AI (jenni.ai)
+- Kafkai (kafkai.com)
+- Kapwing (www.kapwing.com)
+- Koala AI (koala.sh)
+- Krisp (krisp.ai)
+- Kustomer (Kustomer IQ) (www.kustomer.com)
+- Lately AI (www.lately.ai)
+- Letterdrop (letterdrop.com)
+- Lex (lex.page)
+- LongShot AI (longshot.ai)
+- Looka (looka.com)
+- Loom AI (www.loom.com)
+- Lumen5 (lumen5.com)
+- Machined (machined.ai)
+- Moonbeam (www.gomoonbeam.com)
+- Mubert (mubert.com)
+- Murf AI (murf.ai)
+- NeuralText (www.neuraltext.com)
+- NovelAI (novelai.net)
+- Ocoya (www.ocoya.com)
+- Outranking (www.outranking.io)
+- Peppertype.ai (www.peppertype.ai)
+- Perplexity AI Pro (www.perplexity.ai)
+- Pika (pika.art)
+- Planable (planable.io)
+- Podcastle (podcastle.ai)
+- Quillbot (quillbot.com)
+- Repurpose.io (repurpose.io)
+- Resemble AI (www.resemble.ai)
+- Rev AI (www.rev.ai)
+- Riverside.fm (riverside.fm)
+- Scribe (scribehow.com)
+- Sembly AI (www.sembly.ai)
+- Sendible (www.sendible.com)
+- Simplified (simplified.com)
+- SocialBee (socialbee.com)
+- SparkToro (sparktoro.com)
+- Speechify (speechify.com)
+- Sprinklr (www.sprinklr.com)
+- Stable Diffusion (stability.ai)
+- Sudowrite (www.sudowrite.com)
+- Suno AI (www.suno.ai)
+- Supercreator.ai (www.supercreator.ai)
+- Surfer SEO (surferseo.com)
+- Talkwalker (www.talkwalker.com)
+- Taskade (www.taskade.com)
+- Topic (www.topic.com)
+- Treendly (treendly.com)
+- Typefully (typefully.com)
+- Undetectable AI (undetectable.ai)
+- Wappalyzer (www.wappalyzer.com)
+- Wordtune (www.wordtune.com)
+- Writesonic (writesonic.com)
+- Zendesk AI (www.zendesk.com)
+- Zignal Labs (zignallabs.com)
+- Zimmwriter (zimmwriter.com)
+- InvokeAPI (https://invokeapi.dev)
+- CB Insights (www.cbinsights.com)
+- SlidesAI (https://www.slidesai.io)
+- Ahrefs (ahrefs.com)
+- AlphaSense (www.alpha-sense.com)
+- Copy.ai (https://copy.ai)
+- Cuppa (https://cuppa.sh)
+- Dashword (https://dashword.com)
+- Exploding Topics (explodingtopics.com)
+- Hypotenuse AI (https://hypotenuse.ai)
+- Journalist AI (https://journalist.ai)
+- Mention (mention.com)
+- Reword (reword.co)
+- Semrush (www.semrush.com)
+- SEO.ai (seo.ai)
+- SimilarWeb (www.similarweb.com)
+- Text Cortex (textcortex.com)
+- Agorapulse (www.agorapulse.com)
+- Brand24 (brand24.com)
+- Chattermill (chattermill.com)
+- Copymatic (https://copymatic.ai)
+- Copysmith (https://copysmith.ai)
+- GrowthBar (https://growthbarseo.com)
+- Klue (klue.com)
+- Kompyte (www.kompyte.com)
+- Memo (memo.co)
+- Netbase Quid (netbasequid.com)
+- NewsWhip (www.newswhip.com)
+- Observe.ai (www.observe.ai)
+- Scalenut (www.scalenut.com)
+- SEOwind (seowind.io)
+
+Tools missing 'pricing_model' (199 tools):
+----------------------------------------
+- Continual Learning AI (CLIFF) (cliff.ai)
+- Imagendry (imagendry.com)
+- Legal Monster (legalmonster.ai)
+- LegalMind (legalmind.ai)
+- LunarAI (lunariai.com)
+- Adobe Firefly (www.adobe.com/products/firefly.html)
+- AI Writer (ai-writer.com)
+- Also Asked (alsoasked.com)
+- Article Forge (www.articleforge.com)
+- Assembly AI (www.assemblyai.com)
+- Autoblogging.ai (autoblogging.ai)
+- Beautiful.ai (www.beautiful.ai)
+- Beehiiv (www.beehiiv.com)
+- Boomy (boomy.com)
+- Buffer AI Assistant (buffer.com/ai-assistant)
+- Byword (byword.ai)
+- CapCut (www.capcut.com)
+- Captions (www.captions.ai)
+- Civitai (civitai.com)
+- Coda AI (coda.io/product/ai)
+- Colossyan (www.colossyan.com)
+- Consensus (consensus.app)
+- Content at Scale (contentatscale.ai)
+- Coqui (coqui.ai)
+- Coveo (www.coveo.com)
+- Craiyon (www.craiyon.com)
+- Crayon (www.crayon.co)
+- DeepL (www.deepl.com)
+- Fathom (fathom.video)
+- FeedHive (feedhive.com)
+- Fireflies.ai (fireflies.ai)
+- Forethought (forethought.ai)
+- Freshdesk (Freddy AI) (www.freshworks.com/freshdesk)
+- Gamma (gamma.app)
+- Genmo (www.genmo.ai)
+- Grain (grain.com)
+- Hypefury (hypefury.com)
+- Intercom (Fin) (www.intercom.com)
+- InVideo (invideo.io)
+- Jenni AI (jenni.ai)
+- Kafkai (kafkai.com)
+- Kapwing (www.kapwing.com)
+- Koala AI (koala.sh)
+- Krisp (krisp.ai)
+- Kustomer (Kustomer IQ) (www.kustomer.com)
+- Lately AI (www.lately.ai)
+- Letterdrop (letterdrop.com)
+- Lex (lex.page)
+- LongShot AI (longshot.ai)
+- Looka (looka.com)
+- Loom AI (www.loom.com)
+- Lumen5 (lumen5.com)
+- Machined (machined.ai)
+- Moonbeam (www.gomoonbeam.com)
+- Mubert (mubert.com)
+- Murf AI (murf.ai)
+- NeuralText (www.neuraltext.com)
+- NovelAI (novelai.net)
+- Ocoya (www.ocoya.com)
+- Outranking (www.outranking.io)
+- Peppertype.ai (www.peppertype.ai)
+- Perplexity AI Pro (www.perplexity.ai)
+- Pika (pika.art)
+- Planable (planable.io)
+- Podcastle (podcastle.ai)
+- Quillbot (quillbot.com)
+- Repurpose.io (repurpose.io)
+- Resemble AI (www.resemble.ai)
+- Rev AI (www.rev.ai)
+- Riverside.fm (riverside.fm)
+- Scribe (scribehow.com)
+- Sembly AI (www.sembly.ai)
+- Sendible (www.sendible.com)
+- Simplified (simplified.com)
+- SocialBee (socialbee.com)
+- SparkToro (sparktoro.com)
+- Speechify (speechify.com)
+- Sprinklr (www.sprinklr.com)
+- Stable Diffusion (stability.ai)
+- Sudowrite (www.sudowrite.com)
+- Suno AI (www.suno.ai)
+- Supercreator.ai (www.supercreator.ai)
+- Surfer SEO (surferseo.com)
+- Talkwalker (www.talkwalker.com)
+- Taskade (www.taskade.com)
+- Topic (www.topic.com)
+- Treendly (treendly.com)
+- Typefully (typefully.com)
+- Undetectable AI (undetectable.ai)
+- Wappalyzer (www.wappalyzer.com)
+- Wordtune (www.wordtune.com)
+- Writesonic (writesonic.com)
+- Zendesk AI (www.zendesk.com)
+- Zignal Labs (zignallabs.com)
+- Zimmwriter (zimmwriter.com)
+- Snyk Cloud Security (snyk.io)
+- Spellbook by Rally (www.spellbook.legal)
+- Thomson Reuters CoCounsel (legal.thomsonreuters.com/cocounsel)
+- FutureTools (futuretools.io)
+- BEEFree.io (beefree.io)
+- InvokeAPI (https://invokeapi.dev)
+- Bard (now Gemini) (gemini.google.com)
+- CB Insights (www.cbinsights.com)
+- Claude (Anthropic) (claude.ai)
+- Composer (composer.trade)
+- Critica (aecritica.com)
+- Crostini for Google Slides (crostini.app)
+- Fintool (fintool.com)
+- Firebase (firebase.google.com)
+- Fiscal AI (fiscal.ai)
+- GlamAI (https://glam.ai)
+- Google Ads (ads.google.com)
+- Google Alerts (google.com/alerts)
+- Google Analytics (analytics.google.com)
+- Google Cloud Natural Language (cloud.google.com/natural-language)
+- Google News (news.google.com)
+- Google Public Data Explorer (google.com/publicdata)
+- Google Scholar (scholar.google.com)
+- Google Search Console (search.google.com/search-console)
+- Google Tag Manager (tagmanager.google.com)
+- Google Trends (trends.google.com)
+- Grammarly (grammarly.com)
+- Graphsense (graphsense.info)
+- Infogram (infogram.com)
+- Looker Studio (lookerstudio.google.com)
+- NotebookLM (notebooklm.google.com)
+- PicPost (picpost.social)
+- Pinpoint (journaliststudio.google.com/pinpoint)
+- ReelKite (reelkite.com)
+- SlidesAI (https://www.slidesai.io)
+- Vertex AI (cloud.google.com/vertex-ai)
+- Will (heywill.ai)
+- YouTube Studio (studio.youtube.com)
+- Zynous (zynous.com)
+- Ahrefs (ahrefs.com)
+- AlphaSense (www.alpha-sense.com)
+- AskYourPDF (askyourpdf.com)
+- BuiltWith (builtwith.com)
+- Copy.ai (https://copy.ai)
+- Cuppa (https://cuppa.sh)
+- Dashword (https://dashword.com)
+- DataSelfie (dataselfie.it)
+- EleutherAI (eleuther.ai)
+- Exploding Topics (explodingtopics.com)
+- Futurepedia (https://futurepedia.io)
+- GRANDstack (grandstack.io)
+- Hypotenuse AI (https://hypotenuse.ai)
+- Journalist AI (https://journalist.ai)
+- Mem (mem.ai)
+- Mention (mention.com)
+- Notis AI (https://notis.ai)
+- Reword (reword.co)
+- Semrush (www.semrush.com)
+- Sensay (https://sensay.io)
+- SEO.ai (seo.ai)
+- SimilarWeb (www.similarweb.com)
+- Supermoon (https://getsupermoon.com)
+- Text Cortex (textcortex.com)
+- Tome (https://tome.app/)
+- Trello (trello.com)
+- Ada (ada.cx)
+- AInvest (ainvest.com)
+- Aisera (aisera.com)
+- Anania (anania.ai)
+- AnswerThePublic (answerthepublic.com)
+- Bard (Google) (bard.google.com)
+- Brandwatch (www.brandwatch.com)
+- Canva (https://www.canva.com/)
+- ChatGPT (https://chatgpt.com)
+- CheckMyAds (checkmyads.com)
+- Cohesive.so (https://cohesive.so/)
+- Conversion.ai (https://www.jasper.ai/)
+- Descript (https://www.descript.com/)
+- Durable (https://durable.co)
+- EdgeImpulse (edgeimpulse.com)
+- ElevenLabs (https://elevenlabs.io/)
+- Fliki (https://fliki.ai)
+- HeyGen (https://www.heygen.com)
+- Leonardo.ai (https://leonardo.ai/)
+- Meltwater (www.meltwater.com)
+- Microsoft Security Copilot (microsoft.com/security/blog)
+- MidJourney (https://www.midjourney.com)
+- Notion (https://www.notion.com/)
+- OpusClip (https://www.opus.pro)
+- Otter.ai (https://otter.ai/)
+- Perplexity Max (https://perplexity.ai)
+- Pictory (https://pictory.ai)
+- PicWish (https://picwish.com)
+- Prezly (www.prezly.com)
+- Propel (www.propelmypr.com)
+- Prowly (prowly.com)
+- RecCloud (https://reccloud.com)
+- Relume (https://www.relume.io)
+- Replit (https://replit.com)
+- RunwayML (https://runwayml.com/)
+- Signal AI (www.signal-ai.com)
+- Soundraw (https://soundraw.io)
+- StarryAI (https://starryai.com)
+- Synthesia (https://www.synthesia.io)
+
+Tools missing 'pros_cons_limitations' (100 tools):
+----------------------------------------
+- Continual Learning AI (CLIFF) (cliff.ai)
+- Imagendry (imagendry.com)
+- Legal Monster (legalmonster.ai)
+- LegalMind (legalmind.ai)
+- LunarAI (lunariai.com)
+- Adobe Firefly (www.adobe.com/products/firefly.html)
+- AI Writer (ai-writer.com)
+- Also Asked (alsoasked.com)
+- Article Forge (www.articleforge.com)
+- Assembly AI (www.assemblyai.com)
+- Autoblogging.ai (autoblogging.ai)
+- Beautiful.ai (www.beautiful.ai)
+- Beehiiv (www.beehiiv.com)
+- Boomy (boomy.com)
+- Buffer AI Assistant (buffer.com/ai-assistant)
+- Byword (byword.ai)
+- CapCut (www.capcut.com)
+- Captions (www.captions.ai)
+- Civitai (civitai.com)
+- Coda AI (coda.io/product/ai)
+- Colossyan (www.colossyan.com)
+- Consensus (consensus.app)
+- Content at Scale (contentatscale.ai)
+- Coqui (coqui.ai)
+- Coveo (www.coveo.com)
+- Craiyon (www.craiyon.com)
+- Crayon (www.crayon.co)
+- DeepL (www.deepl.com)
+- Fathom (fathom.video)
+- FeedHive (feedhive.com)
+- Fireflies.ai (fireflies.ai)
+- Forethought (forethought.ai)
+- Freshdesk (Freddy AI) (www.freshworks.com/freshdesk)
+- Gamma (gamma.app)
+- Genmo (www.genmo.ai)
+- Grain (grain.com)
+- Hypefury (hypefury.com)
+- Intercom (Fin) (www.intercom.com)
+- InVideo (invideo.io)
+- Jenni AI (jenni.ai)
+- Kafkai (kafkai.com)
+- Kapwing (www.kapwing.com)
+- Koala AI (koala.sh)
+- Krisp (krisp.ai)
+- Kustomer (Kustomer IQ) (www.kustomer.com)
+- Lately AI (www.lately.ai)
+- Letterdrop (letterdrop.com)
+- Lex (lex.page)
+- LongShot AI (longshot.ai)
+- Looka (looka.com)
+- Loom AI (www.loom.com)
+- Lumen5 (lumen5.com)
+- Machined (machined.ai)
+- Moonbeam (www.gomoonbeam.com)
+- Mubert (mubert.com)
+- Murf AI (murf.ai)
+- NeuralText (www.neuraltext.com)
+- NovelAI (novelai.net)
+- Ocoya (www.ocoya.com)
+- Outranking (www.outranking.io)
+- Peppertype.ai (www.peppertype.ai)
+- Perplexity AI Pro (www.perplexity.ai)
+- Pika (pika.art)
+- Planable (planable.io)
+- Podcastle (podcastle.ai)
+- Quillbot (quillbot.com)
+- Repurpose.io (repurpose.io)
+- Resemble AI (www.resemble.ai)
+- Rev AI (www.rev.ai)
+- Riverside.fm (riverside.fm)
+- Scribe (scribehow.com)
+- Sembly AI (www.sembly.ai)
+- Sendible (www.sendible.com)
+- Simplified (simplified.com)
+- SocialBee (socialbee.com)
+- SparkToro (sparktoro.com)
+- Speechify (speechify.com)
+- Sprinklr (www.sprinklr.com)
+- Stable Diffusion (stability.ai)
+- Sudowrite (www.sudowrite.com)
+- Suno AI (www.suno.ai)
+- Supercreator.ai (www.supercreator.ai)
+- Surfer SEO (surferseo.com)
+- Talkwalker (www.talkwalker.com)
+- Taskade (www.taskade.com)
+- Topic (www.topic.com)
+- Treendly (treendly.com)
+- Typefully (typefully.com)
+- Undetectable AI (undetectable.ai)
+- Wappalyzer (www.wappalyzer.com)
+- Wordtune (www.wordtune.com)
+- Writesonic (writesonic.com)
+- Zendesk AI (www.zendesk.com)
+- Zignal Labs (zignallabs.com)
+- Zimmwriter (zimmwriter.com)
+- Snyk Cloud Security (snyk.io)
+- Spellbook by Rally (www.spellbook.legal)
+- Thomson Reuters CoCounsel (legal.thomsonreuters.com/cocounsel)
+- InvokeAPI (https://invokeapi.dev)
+- SlidesAI (https://www.slidesai.io)
+
+Tools missing 'integration_potential' (116 tools):
+----------------------------------------
+- Continual Learning AI (CLIFF) (cliff.ai)
+- Imagendry (imagendry.com)
+- Legal Monster (legalmonster.ai)
+- LegalMind (legalmind.ai)
+- LunarAI (lunariai.com)
+- Adobe Firefly (www.adobe.com/products/firefly.html)
+- AI Writer (ai-writer.com)
+- Also Asked (alsoasked.com)
+- Article Forge (www.articleforge.com)
+- Assembly AI (www.assemblyai.com)
+- Autoblogging.ai (autoblogging.ai)
+- Beautiful.ai (www.beautiful.ai)
+- Beehiiv (www.beehiiv.com)
+- Boomy (boomy.com)
+- Buffer AI Assistant (buffer.com/ai-assistant)
+- Byword (byword.ai)
+- CapCut (www.capcut.com)
+- Captions (www.captions.ai)
+- Civitai (civitai.com)
+- Coda AI (coda.io/product/ai)
+- Colossyan (www.colossyan.com)
+- Consensus (consensus.app)
+- Content at Scale (contentatscale.ai)
+- Coqui (coqui.ai)
+- Coveo (www.coveo.com)
+- Craiyon (www.craiyon.com)
+- Crayon (www.crayon.co)
+- DeepL (www.deepl.com)
+- Fathom (fathom.video)
+- FeedHive (feedhive.com)
+- Fireflies.ai (fireflies.ai)
+- Forethought (forethought.ai)
+- Freshdesk (Freddy AI) (www.freshworks.com/freshdesk)
+- Gamma (gamma.app)
+- Genmo (www.genmo.ai)
+- Grain (grain.com)
+- Hypefury (hypefury.com)
+- Intercom (Fin) (www.intercom.com)
+- InVideo (invideo.io)
+- Jenni AI (jenni.ai)
+- Kafkai (kafkai.com)
+- Kapwing (www.kapwing.com)
+- Koala AI (koala.sh)
+- Krisp (krisp.ai)
+- Kustomer (Kustomer IQ) (www.kustomer.com)
+- Lately AI (www.lately.ai)
+- Letterdrop (letterdrop.com)
+- Lex (lex.page)
+- LongShot AI (longshot.ai)
+- Looka (looka.com)
+- Loom AI (www.loom.com)
+- Lumen5 (lumen5.com)
+- Machined (machined.ai)
+- Moonbeam (www.gomoonbeam.com)
+- Mubert (mubert.com)
+- Murf AI (murf.ai)
+- NeuralText (www.neuraltext.com)
+- NovelAI (novelai.net)
+- Ocoya (www.ocoya.com)
+- Outranking (www.outranking.io)
+- Peppertype.ai (www.peppertype.ai)
+- Perplexity AI Pro (www.perplexity.ai)
+- Pika (pika.art)
+- Planable (planable.io)
+- Podcastle (podcastle.ai)
+- Quillbot (quillbot.com)
+- Repurpose.io (repurpose.io)
+- Resemble AI (www.resemble.ai)
+- Rev AI (www.rev.ai)
+- Riverside.fm (riverside.fm)
+- Scribe (scribehow.com)
+- Sembly AI (www.sembly.ai)
+- Sendible (www.sendible.com)
+- Simplified (simplified.com)
+- SocialBee (socialbee.com)
+- SparkToro (sparktoro.com)
+- Speechify (speechify.com)
+- Sprinklr (www.sprinklr.com)
+- Stable Diffusion (stability.ai)
+- Sudowrite (www.sudowrite.com)
+- Suno AI (www.suno.ai)
+- Supercreator.ai (www.supercreator.ai)
+- Surfer SEO (surferseo.com)
+- Talkwalker (www.talkwalker.com)
+- Taskade (www.taskade.com)
+- Topic (www.topic.com)
+- Treendly (treendly.com)
+- Typefully (typefully.com)
+- Undetectable AI (undetectable.ai)
+- Wappalyzer (www.wappalyzer.com)
+- Wordtune (www.wordtune.com)
+- Writesonic (writesonic.com)
+- Zendesk AI (www.zendesk.com)
+- Zignal Labs (zignallabs.com)
+- Zimmwriter (zimmwriter.com)
+- Snyk Cloud Security (snyk.io)
+- Spellbook by Rally (www.spellbook.legal)
+- Thomson Reuters CoCounsel (legal.thomsonreuters.com/cocounsel)
+- Disney Hyperion Gray (disneyhyperiongray.com)
+- FutureTools (futuretools.io)
+- BEEFree.io (beefree.io)
+- Critica (aecritica.com)
+- Flair AI (flair.ai)
+- Ghostwriter (ghostwriter.gitkraken.com)
+- Graphsense (graphsense.info)
+- Illuminate AI Media Kit Generator (illuminate-ai.com)
+- Magisto (magisto.com)
+- Narrative Science Quill (narrativescience.com/quill)
+- Clearscope (clearscope.io)
+- Compstak (compstak.com)
+- CurieAI (curie.ai)
+- Lilt (lilt.com)
+- MarketMuse (marketmuse.com)
+- Material AI (material.ai)
+- Neuroflash Copywriting (neuroflash.com)
+- Oneforma (oneforma.com)
+
+Tools missing 'learning_curve' (162 tools):
+----------------------------------------
+- Continual Learning AI (CLIFF) (cliff.ai)
+- Imagendry (imagendry.com)
+- Legal Monster (legalmonster.ai)
+- LegalMind (legalmind.ai)
+- LunarAI (lunariai.com)
+- Adobe Firefly (www.adobe.com/products/firefly.html)
+- AI Writer (ai-writer.com)
+- Also Asked (alsoasked.com)
+- Article Forge (www.articleforge.com)
+- Assembly AI (www.assemblyai.com)
+- Autoblogging.ai (autoblogging.ai)
+- Beautiful.ai (www.beautiful.ai)
+- Beehiiv (www.beehiiv.com)
+- Boomy (boomy.com)
+- Buffer AI Assistant (buffer.com/ai-assistant)
+- Byword (byword.ai)
+- CapCut (www.capcut.com)
+- Captions (www.captions.ai)
+- Civitai (civitai.com)
+- Coda AI (coda.io/product/ai)
+- Colossyan (www.colossyan.com)
+- Consensus (consensus.app)
+- Content at Scale (contentatscale.ai)
+- Coqui (coqui.ai)
+- Coveo (www.coveo.com)
+- Craiyon (www.craiyon.com)
+- Crayon (www.crayon.co)
+- DeepL (www.deepl.com)
+- Fathom (fathom.video)
+- FeedHive (feedhive.com)
+- Fireflies.ai (fireflies.ai)
+- Forethought (forethought.ai)
+- Freshdesk (Freddy AI) (www.freshworks.com/freshdesk)
+- Gamma (gamma.app)
+- Genmo (www.genmo.ai)
+- Grain (grain.com)
+- Hypefury (hypefury.com)
+- Intercom (Fin) (www.intercom.com)
+- InVideo (invideo.io)
+- Jenni AI (jenni.ai)
+- Kafkai (kafkai.com)
+- Kapwing (www.kapwing.com)
+- Koala AI (koala.sh)
+- Krisp (krisp.ai)
+- Kustomer (Kustomer IQ) (www.kustomer.com)
+- Lately AI (www.lately.ai)
+- Letterdrop (letterdrop.com)
+- Lex (lex.page)
+- LongShot AI (longshot.ai)
+- Looka (looka.com)
+- Loom AI (www.loom.com)
+- Lumen5 (lumen5.com)
+- Machined (machined.ai)
+- Moonbeam (www.gomoonbeam.com)
+- Mubert (mubert.com)
+- Murf AI (murf.ai)
+- NeuralText (www.neuraltext.com)
+- NovelAI (novelai.net)
+- Ocoya (www.ocoya.com)
+- Outranking (www.outranking.io)
+- Peppertype.ai (www.peppertype.ai)
+- Perplexity AI Pro (www.perplexity.ai)
+- Pika (pika.art)
+- Planable (planable.io)
+- Podcastle (podcastle.ai)
+- Quillbot (quillbot.com)
+- Repurpose.io (repurpose.io)
+- Resemble AI (www.resemble.ai)
+- Rev AI (www.rev.ai)
+- Riverside.fm (riverside.fm)
+- Scribe (scribehow.com)
+- Sembly AI (www.sembly.ai)
+- Sendible (www.sendible.com)
+- Simplified (simplified.com)
+- SocialBee (socialbee.com)
+- SparkToro (sparktoro.com)
+- Speechify (speechify.com)
+- Sprinklr (www.sprinklr.com)
+- Stable Diffusion (stability.ai)
+- Sudowrite (www.sudowrite.com)
+- Suno AI (www.suno.ai)
+- Supercreator.ai (www.supercreator.ai)
+- Surfer SEO (surferseo.com)
+- Talkwalker (www.talkwalker.com)
+- Taskade (www.taskade.com)
+- Topic (www.topic.com)
+- Treendly (treendly.com)
+- Typefully (typefully.com)
+- Undetectable AI (undetectable.ai)
+- Wappalyzer (www.wappalyzer.com)
+- Wordtune (www.wordtune.com)
+- Writesonic (writesonic.com)
+- Zendesk AI (www.zendesk.com)
+- Zignal Labs (zignallabs.com)
+- Zimmwriter (zimmwriter.com)
+- Snyk Cloud Security (snyk.io)
+- Spellbook by Rally (www.spellbook.legal)
+- Thomson Reuters CoCounsel (legal.thomsonreuters.com/cocounsel)
+- Disney Hyperion Gray (disneyhyperiongray.com)
+- FutureTools (futuretools.io)
+- BEEFree.io (beefree.io)
+- Critica (aecritica.com)
+- Crostini for Google Slides (crostini.app)
+- Flair AI (flair.ai)
+- Ghostwriter (ghostwriter.gitkraken.com)
+- Grammarly (grammarly.com)
+- Graphsense (graphsense.info)
+- Illuminate AI Media Kit Generator (illuminate-ai.com)
+- Infogram (infogram.com)
+- Magisto (magisto.com)
+- Narrative Science Quill (narrativescience.com/quill)
+- AskYourPDF (askyourpdf.com)
+- BuiltWith (builtwith.com)
+- Clearscope (clearscope.io)
+- Compstak (compstak.com)
+- DataSelfie (dataselfie.it)
+- Framer AI (framer.com/ai)
+- GapScout (Formerly Signal AI) (signalpharm.ai)
+- GrayMeta (graymeta.com)
+- Groq (groq.com)
+- Lilt (lilt.com)
+- MarketMuse (marketmuse.com)
+- Material AI (material.ai)
+- Mem (mem.ai)
+- Missinglettr (missinglettr.com)
+- Neuroflash Copywriting (neuroflash.com)
+- Oneforma (oneforma.com)
+- RebelMouse (rebelmouse.com)
+- Redocly (redoc.ly)
+- ROI Hunter (roihunter.com)
+- Tome (https://tome.app/)
+- Trello (trello.com)
+- Apollo.io (apollo.io)
+- Arize AI (arize.com)
+- Avochato AI Chat (avochato.com)
+- BigID (bigid.com)
+- Brain.fm (brain.fm)
+- Celtra Ad Creation (celtra.com)
+- Chaser (chaser.io)
+- Clarifai (clarifai.com)
+- Cloudinary (cloudinary.com)
+- ComplyAdvantage (complyadvantage.com)
+- D-ID Creative Reality (d-id.com)
+- Databricks SQL Analytics (databricks.com)
+- Docugami (docugami.com)
+- Driverless AI (h2o.ai)
+- EarlyString (earlystring.com)
+- Elai.io (www.elai.io)
+- Ellora.ai (ellora.ai)
+- Everlaw (Everlaw AI Assistant) (www.everlaw.com)
+- GenAI IT Automation by Electric (electric.ai)
+- Harvey AI (www.harvey.ai)
+- IRONSCALES Email Security (ironscales.com)
+- Keepnet Phishing Simulator (keepnetlabs.com/products/phishing-simulator)
+- Kira Systems (kirasystems.com)
+- LawGeex (www.lawgeex.com)
+- LegalOn (www.legalontech.com)
+- Legora (legora.com)
+- Lexis+ AI (www.lexisnexis.com/lexis-plus-ai)
+- Luuma (luuma.com)
+- Metis Finance AI Toolkit (metisfinance.com)
+- Phrasee (phrasee.co)
+
+Tools missing 'geo_regulatory_limitations' (159 tools):
+----------------------------------------
+- Continual Learning AI (CLIFF) (cliff.ai)
+- Imagendry (imagendry.com)
+- Legal Monster (legalmonster.ai)
+- LegalMind (legalmind.ai)
+- LunarAI (lunariai.com)
+- Adobe Firefly (www.adobe.com/products/firefly.html)
+- AI Writer (ai-writer.com)
+- Also Asked (alsoasked.com)
+- Article Forge (www.articleforge.com)
+- Assembly AI (www.assemblyai.com)
+- Autoblogging.ai (autoblogging.ai)
+- Beautiful.ai (www.beautiful.ai)
+- Beehiiv (www.beehiiv.com)
+- Boomy (boomy.com)
+- Buffer AI Assistant (buffer.com/ai-assistant)
+- Byword (byword.ai)
+- CapCut (www.capcut.com)
+- Captions (www.captions.ai)
+- Civitai (civitai.com)
+- Coda AI (coda.io/product/ai)
+- Colossyan (www.colossyan.com)
+- Consensus (consensus.app)
+- Content at Scale (contentatscale.ai)
+- Coqui (coqui.ai)
+- Coveo (www.coveo.com)
+- Craiyon (www.craiyon.com)
+- Crayon (www.crayon.co)
+- DeepL (www.deepl.com)
+- Fathom (fathom.video)
+- FeedHive (feedhive.com)
+- Fireflies.ai (fireflies.ai)
+- Forethought (forethought.ai)
+- Freshdesk (Freddy AI) (www.freshworks.com/freshdesk)
+- Gamma (gamma.app)
+- Genmo (www.genmo.ai)
+- Grain (grain.com)
+- Hypefury (hypefury.com)
+- Intercom (Fin) (www.intercom.com)
+- InVideo (invideo.io)
+- Jenni AI (jenni.ai)
+- Kafkai (kafkai.com)
+- Kapwing (www.kapwing.com)
+- Koala AI (koala.sh)
+- Krisp (krisp.ai)
+- Kustomer (Kustomer IQ) (www.kustomer.com)
+- Lately AI (www.lately.ai)
+- Letterdrop (letterdrop.com)
+- Lex (lex.page)
+- LongShot AI (longshot.ai)
+- Looka (looka.com)
+- Loom AI (www.loom.com)
+- Lumen5 (lumen5.com)
+- Machined (machined.ai)
+- Moonbeam (www.gomoonbeam.com)
+- Mubert (mubert.com)
+- Murf AI (murf.ai)
+- NeuralText (www.neuraltext.com)
+- NovelAI (novelai.net)
+- Ocoya (www.ocoya.com)
+- Outranking (www.outranking.io)
+- Peppertype.ai (www.peppertype.ai)
+- Perplexity AI Pro (www.perplexity.ai)
+- Pika (pika.art)
+- Planable (planable.io)
+- Podcastle (podcastle.ai)
+- Quillbot (quillbot.com)
+- Repurpose.io (repurpose.io)
+- Resemble AI (www.resemble.ai)
+- Rev AI (www.rev.ai)
+- Riverside.fm (riverside.fm)
+- Scribe (scribehow.com)
+- Sembly AI (www.sembly.ai)
+- Sendible (www.sendible.com)
+- Simplified (simplified.com)
+- SocialBee (socialbee.com)
+- SparkToro (sparktoro.com)
+- Speechify (speechify.com)
+- Sprinklr (www.sprinklr.com)
+- Stable Diffusion (stability.ai)
+- Sudowrite (www.sudowrite.com)
+- Suno AI (www.suno.ai)
+- Supercreator.ai (www.supercreator.ai)
+- Surfer SEO (surferseo.com)
+- Talkwalker (www.talkwalker.com)
+- Taskade (www.taskade.com)
+- Topic (www.topic.com)
+- Treendly (treendly.com)
+- Typefully (typefully.com)
+- Undetectable AI (undetectable.ai)
+- Wappalyzer (www.wappalyzer.com)
+- Wordtune (www.wordtune.com)
+- Writesonic (writesonic.com)
+- Zendesk AI (www.zendesk.com)
+- Zignal Labs (zignallabs.com)
+- Zimmwriter (zimmwriter.com)
+- Snyk Cloud Security (snyk.io)
+- Spellbook by Rally (www.spellbook.legal)
+- Thomson Reuters CoCounsel (legal.thomsonreuters.com/cocounsel)
+- Disney Hyperion Gray (disneyhyperiongray.com)
+- FutureTools (futuretools.io)
+- BEEFree.io (beefree.io)
+- Bard (now Gemini) (gemini.google.com)
+- Claude (Anthropic) (claude.ai)
+- Composer (composer.trade)
+- Crostini for Google Slides (crostini.app)
+- Fintool (fintool.com)
+- Firebase (firebase.google.com)
+- Fiscal AI (fiscal.ai)
+- Flair AI (flair.ai)
+- Ghostwriter (ghostwriter.gitkraken.com)
+- GlamAI (https://glam.ai)
+- Google Ads (ads.google.com)
+- Google Alerts (google.com/alerts)
+- Google Analytics (analytics.google.com)
+- Google Cloud Natural Language (cloud.google.com/natural-language)
+- Google News (news.google.com)
+- Google Public Data Explorer (google.com/publicdata)
+- Google Scholar (scholar.google.com)
+- Google Search Console (search.google.com/search-console)
+- Google Tag Manager (tagmanager.google.com)
+- Google Trends (trends.google.com)
+- Grammarly (grammarly.com)
+- Illuminate AI Media Kit Generator (illuminate-ai.com)
+- Infogram (infogram.com)
+- Looker Studio (lookerstudio.google.com)
+- Magisto (magisto.com)
+- Narrative Science Quill (narrativescience.com/quill)
+- NotebookLM (notebooklm.google.com)
+- PicPost (picpost.social)
+- Pinpoint (journaliststudio.google.com/pinpoint)
+- ReelKite (reelkite.com)
+- Vertex AI (cloud.google.com/vertex-ai)
+- Will (heywill.ai)
+- YouTube Studio (studio.youtube.com)
+- Zynous (zynous.com)
+- Arcads (https://arcads.ai)
+- Chronicle (chronicle.security)
+- CurieAI (curie.ai)
+- Danelfin (danelfin.com)
+- EleutherAI (eleuther.ai)
+- Framer AI (framer.com/ai)
+- GapScout (Formerly Signal AI) (signalpharm.ai)
+- Google Workspace (AI Features) (workspace.google.com)
+- GRANDstack (grandstack.io)
+- GrayMeta (graymeta.com)
+- Groq (groq.com)
+- Gumloop (https://gumloop.com)
+- Imagen (imagen.research.google)
+- Ipsos PersonaBot (https://www.ipsos.com/en/launch-ipsos-personabot)
+- Missinglettr (missinglettr.com)
+- Rankscale AI Visibility Tracker (https://rankscale.ai)
+- RebelMouse (rebelmouse.com)
+- Redocly (redoc.ly)
+- ROI Hunter (roihunter.com)
+- Search Atlas (https://searchatlas.com)
+- Social Flow (estoreera.gumroad.com/l/SocialMediaAutomation)
+- Warren AI (warren.ai)
+- Data Visualization wth Plotly (plotly.com)
+- Rendezvous Social (rendezvous.social)
+
+Tools missing 'case_studies' (144 tools):
+----------------------------------------
+- Continual Learning AI (CLIFF) (cliff.ai)
+- Imagendry (imagendry.com)
+- Legal Monster (legalmonster.ai)
+- LegalMind (legalmind.ai)
+- LunarAI (lunariai.com)
+- Adobe Firefly (www.adobe.com/products/firefly.html)
+- AI Writer (ai-writer.com)
+- Also Asked (alsoasked.com)
+- Article Forge (www.articleforge.com)
+- Assembly AI (www.assemblyai.com)
+- Autoblogging.ai (autoblogging.ai)
+- Beautiful.ai (www.beautiful.ai)
+- Beehiiv (www.beehiiv.com)
+- Boomy (boomy.com)
+- Buffer AI Assistant (buffer.com/ai-assistant)
+- Byword (byword.ai)
+- CapCut (www.capcut.com)
+- Captions (www.captions.ai)
+- Civitai (civitai.com)
+- Coda AI (coda.io/product/ai)
+- Colossyan (www.colossyan.com)
+- Consensus (consensus.app)
+- Content at Scale (contentatscale.ai)
+- Coqui (coqui.ai)
+- Coveo (www.coveo.com)
+- Craiyon (www.craiyon.com)
+- Crayon (www.crayon.co)
+- DeepL (www.deepl.com)
+- Fathom (fathom.video)
+- FeedHive (feedhive.com)
+- Fireflies.ai (fireflies.ai)
+- Forethought (forethought.ai)
+- Freshdesk (Freddy AI) (www.freshworks.com/freshdesk)
+- Gamma (gamma.app)
+- Genmo (www.genmo.ai)
+- Grain (grain.com)
+- Hypefury (hypefury.com)
+- Intercom (Fin) (www.intercom.com)
+- InVideo (invideo.io)
+- Jenni AI (jenni.ai)
+- Kafkai (kafkai.com)
+- Kapwing (www.kapwing.com)
+- Koala AI (koala.sh)
+- Krisp (krisp.ai)
+- Kustomer (Kustomer IQ) (www.kustomer.com)
+- Lately AI (www.lately.ai)
+- Letterdrop (letterdrop.com)
+- Lex (lex.page)
+- LongShot AI (longshot.ai)
+- Looka (looka.com)
+- Loom AI (www.loom.com)
+- Lumen5 (lumen5.com)
+- Machined (machined.ai)
+- Moonbeam (www.gomoonbeam.com)
+- Mubert (mubert.com)
+- Murf AI (murf.ai)
+- NeuralText (www.neuraltext.com)
+- NovelAI (novelai.net)
+- Ocoya (www.ocoya.com)
+- Outranking (www.outranking.io)
+- Peppertype.ai (www.peppertype.ai)
+- Perplexity AI Pro (www.perplexity.ai)
+- Pika (pika.art)
+- Planable (planable.io)
+- Podcastle (podcastle.ai)
+- Quillbot (quillbot.com)
+- Repurpose.io (repurpose.io)
+- Resemble AI (www.resemble.ai)
+- Rev AI (www.rev.ai)
+- Riverside.fm (riverside.fm)
+- Scribe (scribehow.com)
+- Sembly AI (www.sembly.ai)
+- Sendible (www.sendible.com)
+- Simplified (simplified.com)
+- SocialBee (socialbee.com)
+- SparkToro (sparktoro.com)
+- Speechify (speechify.com)
+- Sprinklr (www.sprinklr.com)
+- Stable Diffusion (stability.ai)
+- Sudowrite (www.sudowrite.com)
+- Suno AI (www.suno.ai)
+- Supercreator.ai (www.supercreator.ai)
+- Surfer SEO (surferseo.com)
+- Talkwalker (www.talkwalker.com)
+- Taskade (www.taskade.com)
+- Topic (www.topic.com)
+- Treendly (treendly.com)
+- Typefully (typefully.com)
+- Undetectable AI (undetectable.ai)
+- Wappalyzer (www.wappalyzer.com)
+- Wordtune (www.wordtune.com)
+- Writesonic (writesonic.com)
+- Zendesk AI (www.zendesk.com)
+- Zignal Labs (zignallabs.com)
+- Zimmwriter (zimmwriter.com)
+- Snyk Cloud Security (snyk.io)
+- Spellbook by Rally (www.spellbook.legal)
+- Thomson Reuters CoCounsel (legal.thomsonreuters.com/cocounsel)
+- Disney Hyperion Gray (disneyhyperiongray.com)
+- FutureTools (futuretools.io)
+- InvokeAPI (https://invokeapi.dev)
+- Bard (now Gemini) (gemini.google.com)
+- CB Insights (www.cbinsights.com)
+- Claude (Anthropic) (claude.ai)
+- Composer (composer.trade)
+- Fintool (fintool.com)
+- Firebase (firebase.google.com)
+- Fiscal AI (fiscal.ai)
+- GlamAI (https://glam.ai)
+- Google Ads (ads.google.com)
+- Google Alerts (google.com/alerts)
+- Google Analytics (analytics.google.com)
+- Google Cloud Natural Language (cloud.google.com/natural-language)
+- Google News (news.google.com)
+- Google Public Data Explorer (google.com/publicdata)
+- Google Scholar (scholar.google.com)
+- Google Search Console (search.google.com/search-console)
+- Google Tag Manager (tagmanager.google.com)
+- Google Trends (trends.google.com)
+- Looker Studio (lookerstudio.google.com)
+- NotebookLM (notebooklm.google.com)
+- PicPost (picpost.social)
+- Pinpoint (journaliststudio.google.com/pinpoint)
+- ReelKite (reelkite.com)
+- Vertex AI (cloud.google.com/vertex-ai)
+- Will (heywill.ai)
+- YouTube Studio (studio.youtube.com)
+- Zynous (zynous.com)
+- Arcads (https://arcads.ai)
+- Chronicle (chronicle.security)
+- Danelfin (danelfin.com)
+- Futurepedia (https://futurepedia.io)
+- Google Workspace (AI Features) (workspace.google.com)
+- Gumloop (https://gumloop.com)
+- Imagen (imagen.research.google)
+- Ipsos PersonaBot (https://www.ipsos.com/en/launch-ipsos-personabot)
+- Notis AI (https://notis.ai)
+- Rankscale AI Visibility Tracker (https://rankscale.ai)
+- Search Atlas (https://searchatlas.com)
+- Sensay (https://sensay.io)
+- Social Flow (estoreera.gumroad.com/l/SocialMediaAutomation)
+- Supermoon (https://getsupermoon.com)
+- Warren AI (warren.ai)
+- VentureMind AI (https://venturemind.ai)
+
+Tools missing 'use_cases_in_pr' (6 tools):
+----------------------------------------
+- Continual Learning AI (CLIFF) (cliff.ai)
+- Imagendry (imagendry.com)
+- Legal Monster (legalmonster.ai)
+- LegalMind (legalmind.ai)
+- LunarAI (lunariai.com)
+- Disney Hyperion Gray (disneyhyperiongray.com)
+
+POTENTIAL DUPLICATES
+====================
+
+Possible duplicate:
+- Assembly AI (www.assemblyai.com)
+- Sembly AI (www.sembly.ai)
+
+Possible duplicate:
+- Critica (aecritica.com)
+- Critical Mention (criticalmention.com)
+
+Possible duplicate:
+- Critical Mention (criticalmention.com)
+- Mention (mention.com)
+
+Possible duplicate:
+- Exploding Topics (explodingtopics.com)
+- Topic (www.topic.com)
+
+Possible duplicate:
+- GapScout (Formerly Signal AI) (signalpharm.ai)
+- Signal AI (www.signal-ai.com)
+
+Possible duplicate:
+- Imagen (imagen.research.google)
+- Imagendry (imagendry.com)
+
+Possible duplicate:
+- Kustomer (Kustomer IQ) (www.kustomer.com)
+- Tome (https://tome.app/)
+
+Possible duplicate:
+- Lex (lex.page)
+- Lexis+ AI (www.lexisnexis.com/lexis-plus-ai)
+
+Possible duplicate:
+- Lex (lex.page)
+- Perplexity AI Pro (www.perplexity.ai)
+
+Possible duplicate:
+- Lex (lex.page)
+- Perplexity Max (https://perplexity.ai)
+
+Possible duplicate:
+- Mem (mem.ai)
+- Memo (memo.co)
+

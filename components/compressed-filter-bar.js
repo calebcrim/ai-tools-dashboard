@@ -70,14 +70,7 @@ class CompressedFilterBar {
         
         filterBar.innerHTML = `
             <div class="filter-bar-content">
-                <!-- Search Input -->
-                <div class="filter-search">
-                    <i class="fas fa-search filter-search-icon"></i>
-                    <input type="text" 
-                           class="filter-search-input" 
-                           placeholder="Search tools..."
-                           value="${this.searchTerm}">
-                </div>
+                <!-- Search Input Removed - Using Header Search Bar -->
                 
                 <!-- Category Dropdown -->
                 <div class="filter-dropdown">
@@ -136,14 +129,7 @@ class CompressedFilterBar {
     }
     
     attachEventListeners() {
-        // Search input
-        const searchInput = document.querySelector('.filter-search-input');
-        if (searchInput) {
-            searchInput.addEventListener('input', (e) => {
-                this.searchTerm = e.target.value;
-                this.applyFilters();
-            });
-        }
+        // Search input removed - using header search bar
         
         // Category dropdown
         const dropdownBtn = document.getElementById('categoryDropdownBtn');

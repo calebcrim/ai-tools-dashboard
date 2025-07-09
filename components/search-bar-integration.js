@@ -81,11 +81,7 @@ function integrateEnhancedSearchBar() {
             }
         }
         
-        // Update compressed filter bar if it exists
-        if (window.compressedFilterBar) {
-            // Sync the search term without triggering another search
-            window.compressedFilterBar.searchTerm = window.enhancedSearchBar.searchTerm;
-        }
+        // Compressed filter bar removed - no need to update badges
         
         // Trigger any other filter update callbacks
         if (window.onFilterChange) {
@@ -93,61 +89,64 @@ function integrateEnhancedSearchBar() {
         }
     };
     
-    // Create the enhanced search bar
-    window.enhancedSearchBar = new EnhancedSearchBar(tools, handleSearchChange);
-    
-    // Patch the compressed filter bar to prevent re-rendering
-    if (window.CompressedFilterBar) {
-        const originalRender = window.CompressedFilterBar.prototype.render;
-        window.CompressedFilterBar.prototype.render = function() {
-            // Only render if enhanced search bar doesn't exist
-            if (!document.querySelector('.enhanced-search-bar')) {
-                originalRender.call(this);
-            } else {
-                // Update other parts without touching the search
-                const existingBar = document.querySelector('.compressed-filter-bar');
-                if (existingBar) {
-                    // Update only the non-search elements
-                    this.updateBadges();
-                    this.updateDropdown();
-                }
+    // Don't create a new search bar - use the existing header search
+    // Connect the header search input to the search functionality
+    const headerSearchInput = document.getElementById('headerSearchInput');
+    if (headerSearchInput) {
+        // Store search functionality globally
+        window.performToolSearch = (searchTerm) => {
+            let filtered = [...tools];
+            
+            if (searchTerm && searchTerm.trim()) {
+                const searchLower = searchTerm.toLowerCase();
+                const searchWords = searchLower.split(/\s+/);
+                
+                filtered = filtered.filter(tool => {
+                    const searchableText = [
+                        tool.tool_name || '',
+                        tool.brief_purpose_summary || '',
+                        tool.feature_breakdown || '',
+                        tool.category || '',
+                        ...(tool.use_cases_in_pr || []),
+                        ...(tool.tags || [])
+                    ].join(' ').toLowerCase();
+                    
+                    // All words must match (AND logic)
+                    return searchWords.every(word => searchableText.includes(word));
+                });
+                
+                // Sort by relevance
+                filtered.sort((a, b) => {
+                    const aNameMatch = (a.tool_name || '').toLowerCase().includes(searchLower);
+                    const bNameMatch = (b.tool_name || '').toLowerCase().includes(searchLower);
+                    
+                    if (aNameMatch && !bNameMatch) return -1;
+                    if (!aNameMatch && bNameMatch) return 1;
+                    
+                    return 0;
+                });
             }
+            
+            handleSearchChange(filtered);
         };
         
-        // Add update methods that don't re-render everything
-        window.CompressedFilterBar.prototype.updateBadges = function() {
-            // Update badge counts without re-rendering
-            this.primaryFilters.forEach(filter => {
-                const badge = document.querySelector(`.filter-badge[data-filter="${filter.id}"] .badge-count`);
-                if (badge) {
-                    badge.textContent = this.filterCounts[filter.id];
-                }
-            });
-        };
+        // Remove existing listeners and add new one
+        const newInput = headerSearchInput.cloneNode(true);
+        headerSearchInput.parentNode.replaceChild(newInput, headerSearchInput);
         
-        window.CompressedFilterBar.prototype.updateDropdown = function() {
-            const dropdownLabel = document.querySelector('.dropdown-label');
-            if (dropdownLabel) {
-                dropdownLabel.textContent = `All ${this.getFilteredCount()}`;
-            }
-        };
-    }
-    
-    // Override the original search handlers
-    const originalSearchInput = document.getElementById('headerSearchInput');
-    if (originalSearchInput) {
-        // Remove old event listeners by cloning
-        const newSearchInput = originalSearchInput.cloneNode(true);
-        originalSearchInput.parentNode.replaceChild(newSearchInput, originalSearchInput);
-        
-        // Add redirect to enhanced search
-        newSearchInput.addEventListener('focus', () => {
-            const enhancedInput = document.getElementById('enhancedSearchInput');
-            if (enhancedInput) {
-                enhancedInput.focus();
-            }
+        newInput.addEventListener('input', (e) => {
+            window.performToolSearch(e.target.value);
         });
+        
+        // Perform initial search if there's a value
+        if (newInput.value) {
+            window.performToolSearch(newInput.value);
+        }
     }
+    
+    // Compressed filter bar removed - no patching needed
+    
+    // The header search is already connected above, no need for additional handlers
     
     console.log('✅ Enhanced search bar integrated successfully');
 }

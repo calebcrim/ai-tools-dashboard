@@ -10,10 +10,12 @@ let virtualScroll = null;
 let modalTabs = null;
 let exportSystem = null;
 let filterSystem = null;
+let unifiedFilterBar = null;
 let comparisonTools = [];
 let currentSortCriteria = 'name';
 let currentSortDirection = 'asc';
 let currentView = 'grid';
+let isInitializing = false;
 
 // Initialize enhanced systems
 document.addEventListener('DOMContentLoaded', function() {
@@ -61,15 +63,34 @@ async function loadToolsData() {
             filterSystem = new AdvancedFilterSystem(allTools);
         }
         
+        // Load search from URL if present
+        const params = new URLSearchParams(window.location.search);
+        const searchQuery = params.get('search');
+        if (searchQuery) {
+            const headerSearchInput = document.getElementById('headerSearchInput');
+            if (headerSearchInput) {
+                headerSearchInput.value = searchQuery;
+            }
+        }
+        
         // Initialize the app
         initializeEnhancedApp();
         
     } catch (error) {
-        console.error('Error loading tools data:', error);
-        showNotification('Error loading tools data. Using sample data.', 'error');
-        allTools = getSampleTools();
-        filteredTools = allTools;
-        initializeEnhancedApp();
+        console.error('Error in loadToolsData:', error);
+        console.error('Error stack:', error.stack);
+        
+        // Only use sample tools if we actually failed to load data
+        if (allTools.length === 0) {
+            showNotification('Error loading tools data. Using sample data.', 'error');
+            allTools = getSampleTools();
+            filteredTools = allTools;
+        }
+        
+        // Don't re-initialize if already initialized
+        if (!window.unifiedFilterBar) {
+            initializeEnhancedApp();
+        }
     }
 }
 
@@ -77,38 +98,62 @@ async function loadToolsData() {
  * Enhanced app initialization
  */
 function initializeEnhancedApp() {
+    if (isInitializing) {
+        console.log('Already initializing, skipping duplicate call');
+        return;
+    }
+    isInitializing = true;
+    
     updateStatistics();
     setupEnhancedEventListeners();
     
-    // Initialize compressed filter bar
-    if (window.CompressedFilterBar) {
-        window.compressedFilterBar = new CompressedFilterBar(allTools, (filtered) => {
+    // Initialize unified filter bar
+    if (typeof UnifiedFilterBar !== 'undefined' && !window.unifiedFilterBar) {
+        unifiedFilterBar = new UnifiedFilterBar(allTools, (filtered) => {
             filteredTools = filtered;
             updateStatistics();
             
-            // Update virtual scroll with filtered tools
-            if (virtualScroll) {
-                virtualScroll.updateData(filteredTools);
+            const container = document.getElementById('toolsContainer');
+            
+            // Initialize virtual scroll on first callback if not already initialized
+            if (!virtualScroll && container) {
+                container.innerHTML = '';
+                virtualScroll = new VirtualScroll(
+                    container,
+                    filteredTools,
+                    renderEnhancedToolCard,
+                    { itemHeight: 320, buffer: 5 }
+                );
+            } else if (virtualScroll) {
+                virtualScroll.updateItems(filteredTools);
+                virtualScroll.scrollToTop();
             }
         });
-    } else {
-        // Fallback to original filters if compressed filter bar not available
+    } else if (!window.unifiedFilterBar) {
+        // Fallback to old filters if unified filter bar not loaded
         initializeFilters();
     }
     
     const container = document.getElementById('toolsContainer');
-    container.innerHTML = '';
     
     // Initialize modal tabs
     modalTabs = new ModalTabs();
     
-    // Initialize virtual scroll
-    virtualScroll = new VirtualScroll(
-        container,
-        filteredTools,
-        renderEnhancedToolCard,
-        { itemHeight: 320, buffer: 5 }
-    );
+    // Don't initialize virtual scroll yet - wait for unified filter bar to trigger it
+    if (!window.unifiedFilterBar) {
+        // Only initialize virtual scroll if no unified filter bar (legacy mode)
+        container.innerHTML = '';
+        virtualScroll = new VirtualScroll(
+            container,
+            filteredTools,
+            renderEnhancedToolCard,
+            { itemHeight: 320, buffer: 5 }
+        );
+    } else {
+        // Clear loading message for unified filter bar mode
+        // Virtual scroll will be initialized when filter callback is triggered
+        container.innerHTML = '<div class="loading"><p>Applying filters...</p></div>';
+    }
     
     // Show loading completion
     showNotification('CrimIntelligence loaded successfully!', 'success');
@@ -118,10 +163,18 @@ function initializeEnhancedApp() {
  * Setup enhanced event listeners
  */
 function setupEnhancedEventListeners() {
-    // Enhanced search
+    // Enhanced search - connect to unified filter bar if available
     const searchInput = document.getElementById('headerSearchInput');
     if (searchInput) {
-        searchInput.addEventListener('input', debounce(handleEnhancedSearch, 300));
+        searchInput.addEventListener('input', debounce((event) => {
+            if (window.unifiedFilterBar) {
+                // Trigger unified filter bar filtering when search changes
+                window.unifiedFilterBar.applyFilters();
+            } else {
+                // Fallback to regular search
+                handleEnhancedSearch(event);
+            }
+        }, 300));
     }
     
     // Export button - update to use new modal
@@ -153,28 +206,14 @@ function setupEnhancedEventListeners() {
         sortSelect.addEventListener('change', applySorting);
     }
     
-    // Filter checkboxes
-    document.querySelectorAll('[data-filter]').forEach(checkbox => {
-        checkbox.addEventListener('change', applyAdvancedFilters);
-    });
-    
-    // Completeness slider
-    const completenessSlider = document.getElementById('completenessSlider');
-    if (completenessSlider) {
-        completenessSlider.addEventListener('input', function() {
-            document.getElementById('completenessValue').textContent = this.value + '%';
-        });
-        completenessSlider.addEventListener('change', applyAdvancedFilters);
-    }
+    // Advanced filters removed - now handled by unified filter bar
     
     // Close modals on escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             closeModal();
             closeExportModal();
-            if (document.getElementById('advancedFilters').classList.contains('active')) {
-                toggleAdvancedFilters();
-            }
+            // Advanced filters panel removed
             if (document.getElementById('comparisonPanel').classList.contains('active')) {
                 toggleComparison();
             }
@@ -188,6 +227,13 @@ function setupEnhancedEventListeners() {
 function handleEnhancedSearch(event) {
     const query = event.target.value.trim();
     
+    // If unified filter bar is active, let it handle the search
+    if (window.unifiedFilterBar) {
+        window.unifiedFilterBar.applyFilters();
+        return;
+    }
+    
+    // Legacy search handling
     if (query === '') {
         filteredTools = filterSystem ? filterSystem.filteredTools : allTools;
     } else {
@@ -903,57 +949,41 @@ function updateStatistics() {
         google: allTools.filter(t => t.source === 'google').length
     };
     
-    document.getElementById('total-tools').textContent = stats.total;
-    document.getElementById('media-tools').textContent = stats.media;
-    document.getElementById('ai-assistants').textContent = stats.ai;
-    document.getElementById('google-tools').textContent = stats.google;
+    // Update header badge count
+    const headerCount = document.getElementById('header-tools-count');
+    if (headerCount) {
+        headerCount.textContent = stats.total;
+    }
+    
+    // These elements were removed with the stats bar
+    // document.getElementById('total-tools').textContent = stats.total;
+    // document.getElementById('media-tools').textContent = stats.media;
+    // document.getElementById('ai-assistants').textContent = stats.ai;
+    // document.getElementById('google-tools').textContent = stats.google;
     
     // Update filter counts
     updateFilterCounts();
 }
 
-// Filter management functions (keep existing ones)
+// Filter management functions (legacy - now handled by UnifiedFilterBar)
 function filterTools() {
+    // Skip if unified filter bar is active
+    if (window.unifiedFilterBar) {
+        return;
+    }
+    
+    // Legacy filter logic for header search only
     const searchTerm = document.getElementById('headerSearchInput').value.toLowerCase();
-    const activeCategory = document.querySelector('#categoryFilters .filter-chip.active')?.dataset.category || 'all';
-    const activeSource = document.querySelector('#sourceFilters .filter-chip.active')?.dataset.source || 'all';
-    const activeFeatures = Array.from(document.querySelectorAll('#featureFilters .filter-chip.active'))
-        .map(chip => chip.dataset.feature);
     
     filteredTools = allTools.filter(tool => {
-        // Search filter
+        // Search filter only
         const searchMatch = searchTerm === '' || 
             (tool.tool_name || tool.name).toLowerCase().includes(searchTerm) ||
             (tool.brief_purpose_summary || tool.description).toLowerCase().includes(searchTerm) ||
             tool.url.toLowerCase().includes(searchTerm) ||
             (tool.tags || []).some(tag => tag.toLowerCase().includes(searchTerm));
         
-        // Category filter
-        const categoryMatch = activeCategory === 'all' || tool.category === activeCategory;
-        
-        // Source filter
-        const sourceMatch = activeSource === 'all' || tool.source === activeSource;
-        
-        // Feature filters
-        let featureMatch = true;
-        if (activeFeatures.length > 0) {
-            featureMatch = activeFeatures.every(feature => {
-                switch (feature) {
-                    case 'api':
-                        return (tool.integration_potential || tool.features?.integration || '').toLowerCase().includes('api');
-                    case 'free':
-                        return (tool.pricing_model || tool.features?.pricing || '').toLowerCase().includes('free');
-                    case 'enterprise':
-                        return (tool.pricing_model || tool.features?.pricing || '').toLowerCase().includes('enterprise');
-                    case 'integration':
-                        return tool.integration_potential || tool.features?.integration;
-                    default:
-                        return true;
-                }
-            });
-        }
-        
-        return searchMatch && categoryMatch && sourceMatch && featureMatch;
+        return searchMatch;
     });
     
     // Update virtual scroll with filtered tools
@@ -974,67 +1004,32 @@ function updateResultsCount() {
     }
 }
 
-// Update filter counts
+// Update filter counts (legacy - now handled by UnifiedFilterBar)
 function updateFilterCounts() {
-    const categoryCounts = {};
-    const sourceCounts = {};
+    // Skip if unified filter bar is active
+    if (window.unifiedFilterBar) {
+        return;
+    }
     
-    allTools.forEach(tool => {
-        categoryCounts[tool.category] = (categoryCounts[tool.category] || 0) + 1;
-        sourceCounts[tool.source] = (sourceCounts[tool.source] || 0) + 1;
-    });
-    
-    // Update category filter counts
-    document.querySelectorAll('#categoryFilters .filter-chip').forEach(chip => {
-        const category = chip.dataset.category;
-        const count = chip.querySelector('.count');
-        if (count && category !== 'all') {
-            count.textContent = categoryCounts[category] || 0;
-        } else if (count && category === 'all') {
-            count.textContent = allTools.length;
-        }
-    });
-    
-    // Update source filter counts
-    document.querySelectorAll('#sourceFilters .filter-chip').forEach(chip => {
-        const source = chip.dataset.source;
-        const count = chip.querySelector('.count');
-        if (count && source !== 'all') {
-            count.textContent = sourceCounts[source] || 0;
-        }
-    });
+    // Legacy filter count logic removed as those elements no longer exist
 }
 
-// Initialize filters
+// Initialize filters (legacy - now replaced by UnifiedFilterBar)
 function initializeFilters() {
-    // Category filters
-    document.querySelectorAll('#categoryFilters .filter-chip').forEach(chip => {
-        chip.addEventListener('click', function() {
-            document.querySelectorAll('#categoryFilters .filter-chip').forEach(c => c.classList.remove('active'));
-            this.classList.add('active');
-            filterTools();
-        });
-    });
+    // Skip if unified filter bar is active
+    if (window.unifiedFilterBar) {
+        console.log('Unified filter bar active, skipping legacy filters');
+        return;
+    }
     
-    // Source filters
-    document.querySelectorAll('#sourceFilters .filter-chip').forEach(chip => {
-        chip.addEventListener('click', function() {
-            document.querySelectorAll('#sourceFilters .filter-chip').forEach(c => c.classList.remove('active'));
-            this.classList.add('active');
-            filterTools();
-        });
-    });
+    // Legacy filter initialization
+    console.warn('Using legacy filters - unified filter bar not available');
     
-    // Feature filters (can be multiple)
-    document.querySelectorAll('#featureFilters .filter-chip').forEach(chip => {
-        chip.addEventListener('click', function() {
-            this.classList.toggle('active');
-            filterTools();
-        });
-    });
-    
-    // Search input
-    document.getElementById('headerSearchInput').addEventListener('input', filterTools);
+    // Search input - connect to header search
+    const headerSearchInput = document.getElementById('headerSearchInput');
+    if (headerSearchInput) {
+        headerSearchInput.addEventListener('input', filterTools);
+    }
 }
 
 // Categories configuration (keep existing)
@@ -1473,3 +1468,31 @@ function getSampleTools() {
 function createToolCard(tool) {
     return renderEnhancedToolCard(tool);
 }
+
+// Global functions for backwards compatibility
+window.showNotification = showNotification;
+
+// Advanced filter functions - redirect to unified filter bar
+window.toggleAdvancedFilters = function() {
+    if (window.unifiedFilterBar) {
+        window.unifiedFilterBar.toggleMoreFilters();
+    }
+};
+
+window.clearAllFilters = function() {
+    if (window.unifiedFilterBar) {
+        window.unifiedFilterBar.clearAllFilters();
+    }
+};
+
+window.applyFilters = function() {
+    if (window.unifiedFilterBar) {
+        window.unifiedFilterBar.applyFilters();
+    }
+};
+
+window.applyAdvancedFilters = function() {
+    if (window.unifiedFilterBar) {
+        window.unifiedFilterBar.applyFilters();
+    }
+};

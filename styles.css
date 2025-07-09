@@ -247,7 +247,7 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     padding: var(--spacing-xl);
-    padding-top: 140px; /* Account for fixed header height */
+    padding-top: 140px; /* Space for fixed header */
 }
 
 /* Stats Bar */
@@ -1766,6 +1766,21 @@ body {
         font-size: 1.25rem;
     }
     
+    .logo-section {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .tools-badge {
+        font-size: 13px;
+        padding: 5px 14px;
+        margin-left: 8px;
+    }
+    
+    .tools-badge .count {
+        font-size: 15px;
+    }
+    
     .header-nav-row {
         padding: var(--spacing-sm) 0;
     }
@@ -1824,4 +1839,64 @@ body {
     .header-search-bar .search-input::placeholder {
         font-size: 0.75rem;
     }
+}
+
+/* Header Search Autocomplete Styles */
+.header-search-autocomplete {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+}
+
+.header-search-autocomplete .autocomplete-item {
+    transition: background var(--transition-fast);
+}
+
+.header-search-autocomplete .autocomplete-item:hover {
+    background: var(--bg-hover) !important;
+}
+
+.header-search-autocomplete .autocomplete-item.selected {
+    background: var(--bg-hover);
+}
+
+.header-search-autocomplete strong {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Logo Section with Badge */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Tools Badge */
+.tools-badge {
+    background-color: rgba(59, 130, 246, 0.15);
+    color: var(--primary);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    margin-left: 12px;
+}
+
+.tools-badge:hover {
+    background-color: rgba(59, 130, 246, 0.25);
+    border-color: rgba(59, 130, 246, 0.5);
+    transform: translateY(-1px);
+}
+
+.tools-badge .count {
+    font-weight: 700;
+    font-size: 16px;
 }
