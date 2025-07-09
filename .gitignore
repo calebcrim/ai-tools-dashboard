@@ -1,0 +1,27 @@
+# Logs
+*.log
+server.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Node modules (if added later)
+node_modules/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Test files
+test-*.html
+quick-test.html
