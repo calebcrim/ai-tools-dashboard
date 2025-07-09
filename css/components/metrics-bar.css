@@ -1,0 +1,274 @@
+/* Executive Metrics Bar Component Styles */
+
+.executive-metrics-bar {
+    position: fixed;
+    top: var(--nav-height, 60px); /* Fallback value */
+    left: 0;
+    right: 0;
+    height: var(--metrics-bar-height, 80px); /* Fallback value */
+    background-color: var(--bg-elevated);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 900; /* Below header (1000) but above content */
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+    display: flex; /* Ensure it's displayed */
+    align-items: center;
+}
+
+/* Container for metrics */
+.metrics-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--gap);
+    background-color: var(--border-color);
+}
+
+/* Individual metric item */
+.metric-item {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-sm);
+    padding: var(--gap-sm) var(--gap);
+    background-color: var(--bg-elevated);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect */
+.metric-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: transparent;
+    transition: background-color var(--transition-fast);
+}
+
+.metric-item:hover {
+    background-color: var(--bg-hover);
+}
+
+.metric-item:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--color-primary);
+}
+
+/* Metric-specific accent colors */
+.metric-item.quick-wins:hover::before,
+.metric-item.quick-wins.active::before {
+    background-color: var(--color-primary);
+}
+
+.metric-item.strategic:hover::before,
+.metric-item.strategic.active::before {
+    background-color: var(--color-accent);
+}
+
+.metric-item.savings:hover::before,
+.metric-item.savings.active::before {
+    background-color: var(--color-success);
+}
+
+.metric-item.roi:hover::before,
+.metric-item.roi.active::before {
+    background-color: var(--color-secondary);
+}
+
+/* Metric icon */
+.metric-icon {
+    font-size: 2rem;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Metric content */
+.metric-content {
+    flex: 1;
+    min-width: 0; /* Enable text truncation */
+}
+
+/* Metric value */
+.metric-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+    transition: all var(--transition-base);
+}
+
+/* Loading state */
+.metric-value.loading {
+    color: var(--text-tertiary);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Metric label */
+.metric-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.125rem;
+}
+
+/* Metric sublabel */
+.metric-sublabel {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Value change animation */
+.metric-value.changing {
+    animation: valueChange 0.3s ease-out;
+}
+
+@keyframes valueChange {
+    0% {
+        transform: scale(1.1);
+        color: var(--color-primary);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Trend indicators */
+.metric-trend {
+    position: absolute;
+    top: var(--gap-xs);
+    right: var(--gap-xs);
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: var(--border-radius-sm);
+    font-weight: 600;
+}
+
+.metric-trend.up {
+    color: var(--color-success);
+    background-color: rgba(16, 185, 129, 0.1);
+}
+
+.metric-trend.down {
+    color: var(--color-danger);
+    background-color: rgba(239, 68, 68, 0.1);
+}
+
+/* Responsive: Tablet (2x2 grid) */
+@media (max-width: 1200px) {
+    .metrics-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    
+    .metric-value {
+        font-size: 1.5rem;
+    }
+}
+
+/* Responsive: Mobile (Compact view) */
+@media (max-width: 768px) {
+    .executive-metrics-bar {
+        height: auto;
+    }
+    
+    .metrics-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        padding: var(--gap-xs);
+    }
+    
+    .metric-item {
+        padding: var(--gap-xs);
+        gap: var(--gap-xs);
+    }
+    
+    .metric-icon {
+        font-size: 1.5rem;
+        width: 32px;
+        height: 32px;
+    }
+    
+    .metric-value {
+        font-size: 1.25rem;
+    }
+    
+    .metric-label {
+        font-size: 0.75rem;
+    }
+    
+    .metric-sublabel {
+        display: none;
+    }
+}
+
+/* Ultra compact mobile */
+@media (max-width: 480px) {
+    .metrics-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .metric-item {
+        flex: 0 0 calc(50% - var(--gap-xs));
+        flex-direction: column;
+        text-align: center;
+        padding: var(--gap-xs) 4px;
+    }
+    
+    .metric-icon {
+        font-size: 1.25rem;
+        width: auto;
+        height: auto;
+        margin-bottom: 4px;
+    }
+    
+    .metric-value {
+        font-size: 1rem;
+        margin-bottom: 2px;
+    }
+    
+    .metric-label {
+        font-size: 0.625rem;
+        font-weight: 500;
+    }
+}
+
+/* Print styles */
+@media print {
+    .executive-metrics-bar {
+        position: relative;
+        top: 0;
+        box-shadow: none;
+        border: 1px solid var(--border-color);
+        margin-bottom: var(--gap);
+    }
+    
+    .metric-item::before {
+        display: none;
+    }
+}

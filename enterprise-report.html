@@ -14,140 +14,129 @@
     
     <!-- Main Styles -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="css/enterprise-dashboard.css">
-    <link rel="stylesheet" href="css/enterprise-report-new.css">
+    <link rel="stylesheet" href="css/enterprise-report.css">
+    
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="css/components/metrics-bar.css">
+    <link rel="stylesheet" href="css/components/filter-panel.css">
+    <link rel="stylesheet" href="css/components/portfolio-grid.css">
+    <link rel="stylesheet" href="css/components/details-panel.css">
     
     <!-- Print Styles -->
     <link rel="stylesheet" href="css/print-dashboard.css" media="print">
     
+    <!-- Inline metrics styles -->
     <style>
-        /* Quick fixes for layout */
-        .tools-grid-layout {
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .filter-sidebar {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            height: fit-content;
-            position: sticky;
-            top: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        
-        .filter-sidebar h3 {
-            margin-bottom: 1.5rem;
-            color: #2c3e50;
-        }
-        
-        .filter-section {
-            margin-bottom: 1.5rem;
-        }
-        
-        .filter-section label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: #34495e;
-        }
-        
-        .filter-section input[type="text"] {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        
-        .checkbox-group {
+        /* Portfolio header with inline metrics */
+        .portfolio-header-top {
             display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 24px;
         }
         
-        .checkbox-group label {
-            font-weight: normal;
+        .portfolio-header h1 {
+            margin: 0;
+            flex-shrink: 0;
+        }
+        
+        /* Inline metrics container */
+        .executive-metrics-inline {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .metrics-container-inline {
+            display: flex;
+            gap: 16px;
+            background-color: #f8fafc;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        /* Compact metric items */
+        .metric-item-inline {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 8px;
+            padding: 0 12px;
+            border-right: 1px solid #e2e8f0;
             cursor: pointer;
+            transition: all 0.2s;
         }
         
-        .range-slider {
-            margin: 1rem 0;
+        .metric-item-inline:last-child {
+            border-right: none;
+            padding-right: 0;
         }
         
-        .range-slider input[type="range"] {
-            width: 100%;
-            margin: 0.5rem 0;
+        .metric-item-inline:hover {
+            transform: translateY(-1px);
         }
         
-        .range-values {
-            text-align: center;
-            font-weight: 600;
-            color: #667eea;
+        .metric-item-inline .metric-icon {
+            font-size: 1.5rem;
         }
         
-        select[multiple] {
-            width: 100%;
-            height: 120px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            padding: 0.5rem;
+        .metric-item-inline .metric-content {
+            display: flex;
+            flex-direction: column;
         }
         
-        .reset-filters-btn {
-            width: 100%;
-            padding: 0.75rem;
-            background: #e0e7ff;
-            color: #667eea;
-            border: none;
-            border-radius: 6px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
+        .metric-item-inline .metric-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e293b;
+            line-height: 1;
         }
         
-        .reset-filters-btn:hover {
-            background: #c7d2fe;
+        .metric-item-inline .metric-label {
+            font-size: 0.75rem;
+            color: #64748b;
+            font-weight: 500;
         }
         
-        .complexity-indicator {
-            display: inline-flex;
-            gap: 2px;
+        /* Metric value styles */
+        .metric-value {
+            transition: all 0.3s ease;
         }
         
-        .complexity-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #e0e0e0;
+        /* Hover effect on metrics */
+        .metric-item-inline:hover .metric-value {
+            transform: scale(1.1);
+            color: #4299e1;
         }
         
-        .complexity-dot.filled {
-            background: #667eea;
+        /* Ensure proper layout spacing */
+        .enterprise-content {
+            margin-top: 60px !important; /* Just nav height now */
         }
         
-        .phase-tools-preview {
-            font-size: 0.875rem;
-            color: #7f8c8d;
-            margin: 0.5rem 0;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        
-        @media (max-width: 1024px) {
-            .tools-grid-layout {
-                grid-template-columns: 1fr;
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .portfolio-header-top {
+                flex-direction: column;
+                align-items: flex-start;
             }
             
-            .filter-sidebar {
-                position: relative;
-                top: 0;
+            .executive-metrics-inline {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .metrics-container-inline {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            
+            .metric-item-inline {
+                border-right: none;
+                padding: 8px;
             }
         }
     </style>
@@ -194,30 +183,231 @@
         </div>
     </header>
 
-    <!-- Main Container -->
-    <div class="dashboard-container" style="margin-top: 80px;">
-        <!-- Executive Summary Section (Simplified) -->
-        <section id="executive-summary" class="executive-summary">
-            <!-- Key metrics cards only - will be inserted here -->
-        </section>
+    <!-- Three Column Layout Container -->
+    <div class="enterprise-content" role="main">
+        <!-- Left Column: Advanced Filters -->
+        <aside class="filter-panel" id="filterPanel" role="complementary" aria-label="Tool Filters">
+            <div class="filter-header">
+                <h3>Filters</h3>
+                <button class="reset-filters" aria-label="Reset all filters">Reset</button>
+            </div>
+            
+            <!-- Search Filter -->
+            <div class="filter-section">
+                <label for="toolSearch">Search</label>
+                <input type="text" id="toolSearch" class="search-input" placeholder="Search tools...">
+            </div>
+            
+            <!-- Business Impact Range Filter -->
+            <div class="filter-section">
+                <label>Business Impact</label>
+                <div class="range-slider" data-min="0" data-max="100">
+                    <div class="slider-track"></div>
+                    <div class="slider-fill"></div>
+                    <input type="range" class="range-min" min="0" max="100" value="0" aria-label="Minimum impact">
+                    <input type="range" class="range-max" min="0" max="100" value="100" aria-label="Maximum impact">
+                </div>
+                <div class="range-values">
+                    <span class="min-value">0</span> - <span class="max-value">100</span>
+                </div>
+            </div>
+            
+            <!-- Complexity Filter -->
+            <div class="filter-section">
+                <label>Complexity</label>
+                <div class="complexity-filters">
+                    <label class="checkbox-label">
+                        <input type="checkbox" value="1" checked>
+                        <span>Very Easy (1)</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" value="2" checked>
+                        <span>Easy (2)</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" value="3" checked>
+                        <span>Moderate (3)</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" value="4" checked>
+                        <span>Complex (4)</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" value="5" checked>
+                        <span>Very Complex (5)</span>
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Category Filter -->
+            <div class="filter-section">
+                <label>Categories</label>
+                <div class="category-filters" id="categoryFilters">
+                    <!-- Dynamically populated -->
+                </div>
+            </div>
+            
+            <!-- Quick Filter Buttons -->
+            <div class="filter-section quick-filters">
+                <label>Quick Filters</label>
+                <button class="quick-filter-btn" data-filter="quick-wins">
+                    🚀 Quick Wins Only
+                </button>
+                <button class="quick-filter-btn" data-filter="strategic">
+                    ♔ Strategic Tools
+                </button>
+                <button class="quick-filter-btn" data-filter="high-roi">
+                    📈 High ROI (>200%)
+                </button>
+            </div>
+        </aside>
 
-        <!-- Main Content Area with 3-column layout -->
-        <section id="main-content" class="main-content-area">
-            <!-- This container will hold the 3-column layout: Filters | Tools | Details -->
-        </section>
+        <!-- Center Column: AI Tools Portfolio (Main Content) -->
+        <main class="portfolio-section" role="main">
+            <div class="portfolio-header">
+                <div class="portfolio-header-top">
+                    <h1>AI Tools Portfolio</h1>
+                    
+                    <!-- Executive Metrics Bar (Inline with header) -->
+                    <div class="executive-metrics-inline" role="region" aria-label="Executive Metrics">
+                        <div class="metrics-container-inline">
+                            <div class="metric-item-inline quick-wins" data-metric="quickWins" tabindex="0" role="button">
+                                <div class="metric-icon" aria-hidden="true">🚀</div>
+                                <div class="metric-content">
+                                    <div class="metric-value">93</div>
+                                    <div class="metric-label">Quick Wins</div>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-item-inline strategic" data-metric="strategic" tabindex="0" role="button">
+                                <div class="metric-icon" aria-hidden="true">♔</div>
+                                <div class="metric-content">
+                                    <div class="metric-value">3</div>
+                                    <div class="metric-label">Strategic</div>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-item-inline savings" data-metric="savings" tabindex="0" role="button">
+                                <div class="metric-icon" aria-hidden="true">💰</div>
+                                <div class="metric-content">
+                                    <div class="metric-value">$901k</div>
+                                    <div class="metric-label">Savings</div>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-item-inline roi" data-metric="roi" tabindex="0" role="button">
+                                <div class="metric-icon" aria-hidden="true">📈</div>
+                                <div class="metric-content">
+                                    <div class="metric-value">113%</div>
+                                    <div class="metric-label">ROI</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-controls">
+                    <!-- View Mode Toggle -->
+                    <div class="view-toggle" role="tablist">
+                        <button class="view-btn active" data-view="grid" role="tab" aria-selected="true">
+                            <i class="fas fa-th"></i>
+                            <span>Grid</span>
+                        </button>
+                        <button class="view-btn" data-view="list" role="tab" aria-selected="false">
+                            <i class="fas fa-list"></i>
+                            <span>List</span>
+                        </button>
+                        <button class="view-btn" data-view="matrix" role="tab" aria-selected="false">
+                            <i class="fas fa-chart-scatter"></i>
+                            <span>Matrix</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Sort Control -->
+                    <div class="sort-control">
+                        <label for="sortSelect" class="visually-hidden">Sort by</label>
+                        <select id="sortSelect" class="sort-select">
+                            <option value="impact-desc">Impact: High to Low</option>
+                            <option value="impact-asc">Impact: Low to High</option>
+                            <option value="complexity-asc">Complexity: Low to High</option>
+                            <option value="complexity-desc">Complexity: High to Low</option>
+                            <option value="name-asc">Name: A to Z</option>
+                            <option value="name-desc">Name: Z to A</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Stats Bar -->
+            <div class="portfolio-stats">
+                <span>Showing <strong class="showing-count">0</strong> of <strong class="total-count">317</strong> tools</span>
+                <span class="stats-divider">|</span>
+                <span>Filtered by: <span class="active-filters">All tools</span></span>
+            </div>
+            
+            <!-- Portfolio Grid Container with Virtual Scrolling -->
+            <div class="portfolio-grid" id="portfolioContainer" role="region" aria-label="Tools Grid">
+                <!-- Virtual scroll spacer for maintaining scrollbar height -->
+                <div class="virtual-scroll-spacer" aria-hidden="true"></div>
+                
+                <!-- Actual tool cards container -->
+                <div class="tool-cards-container" id="toolCardsContainer">
+                    <!-- Tool cards will be dynamically rendered here -->
+                    <div class="loading-state">
+                        <div class="spinner"></div>
+                        <p>Loading AI tools portfolio...</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Column: Tool Details Panel (Slide-in) -->
+        <aside class="details-panel" id="detailsPanel" role="complementary" aria-label="Tool Details" aria-hidden="true">
+            <div class="details-header">
+                <button class="close-details" aria-label="Close details panel">&times;</button>
+                <h2 class="tool-name">Select a tool to view details</h2>
+            </div>
+            
+            <div class="details-content">
+                <!-- Tool details will be dynamically populated here -->
+                <div class="empty-state">
+                    <i class="fas fa-info-circle"></i>
+                    <p>Click on any tool card to view detailed information, metrics, and actions.</p>
+                </div>
+            </div>
+            
+            <div class="details-actions">
+                <button class="btn btn-primary" id="compareBtn" disabled>
+                    <i class="fas fa-balance-scale"></i> Compare
+                </button>
+                <button class="btn btn-secondary" id="exportBtn" disabled>
+                    <i class="fas fa-download"></i> Export
+                </button>
+            </div>
+        </aside>
     </div>
 
-    <!-- Load Data First -->
+    <!-- Mobile Filter Toggle (Hidden on Desktop) -->
+    <button class="mobile-filter-toggle" id="mobileFilterToggle" aria-label="Toggle filters">
+        <i class="fas fa-filter"></i>
+    </button>
+
+    <!-- Load Data -->
     <script src="data/unified-tools-data.js"></script>
     
-    <!-- Load Fixed Dashboard Script (Clean Version) -->
-    <script src="js/enterprise-dashboard-fixed-clean.js?v=20250109"></script>
+    <!-- Load Data Processors -->
+    <script src="financial-analysis/js/data-processor.js"></script>
+    <script src="js/data-processor.js"></script>
     
-    <!-- Additional Functions -->
-    <script>
-        function exportDashboard() {
-            alert('Export functionality will be implemented');
-        }
-    </script>
+    <!-- Load Components -->
+    <script src="js/components/executive-metrics-bar.js"></script>
+    <script src="js/components/filter-system.js"></script>
+    <script src="js/components/virtual-scroller.js"></script>
+    <script src="js/components/portfolio-renderer.js"></script>
+    <script src="js/components/details-panel.js"></script>
+    
+    <!-- Load Main Enterprise Report Script -->
+    <script src="js/enterprise-report.js"></script>
+    
 </body>
 </html>

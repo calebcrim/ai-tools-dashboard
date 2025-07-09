@@ -1,0 +1,440 @@
+/* Details Panel Component Styles */
+
+.details-panel {
+    background-color: var(--bg-elevated);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Details Header */
+.details-header {
+    padding: var(--gap);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-elevated);
+    z-index: 10;
+}
+
+.details-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    padding-right: var(--gap-lg);
+    word-wrap: break-word;
+}
+
+/* Details Content */
+.details-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--gap);
+}
+
+/* Empty State */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: var(--text-tertiary);
+}
+
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: var(--gap);
+}
+
+.empty-state p {
+    font-size: 0.875rem;
+    max-width: 250px;
+}
+
+/* Tool Overview Section */
+.tool-overview {
+    margin-bottom: var(--gap-lg);
+}
+
+.tool-meta {
+    display: flex;
+    gap: var(--gap-sm);
+    flex-wrap: wrap;
+    margin-bottom: var(--gap);
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-xs);
+    padding: 4px 12px;
+    background-color: var(--bg-hover);
+    border-radius: var(--border-radius-sm);
+    font-size: 0.875rem;
+}
+
+.meta-item i {
+    color: var(--text-secondary);
+}
+
+.meta-item a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.meta-item a:hover {
+    text-decoration: underline;
+}
+
+/* Metrics Grid */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+    margin-bottom: var(--gap-lg);
+}
+
+.metric-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--gap);
+}
+
+.metric-card-label {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    margin-bottom: 4px;
+}
+
+.metric-card-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.metric-card-value.positive {
+    color: var(--color-success);
+}
+
+.metric-card-value.negative {
+    color: var(--color-danger);
+}
+
+.metric-card-change {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+/* Detail Sections */
+.detail-section {
+    margin-bottom: var(--gap-lg);
+}
+
+.detail-section h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 var(--gap-sm) 0;
+    display: flex;
+    align-items: center;
+    gap: var(--gap-xs);
+}
+
+.detail-section h3 i {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+/* Features List */
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-list li {
+    padding: var(--gap-xs) 0;
+    padding-left: 24px;
+    position: relative;
+    font-size: 0.875rem;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+.features-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-success);
+    font-weight: bold;
+}
+
+/* Pricing Table */
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.pricing-table th {
+    text-align: left;
+    padding: var(--gap-xs);
+    border-bottom: 2px solid var(--border-color);
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.pricing-table td {
+    padding: var(--gap-xs);
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.pricing-table .price {
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+/* Integration Grid */
+.integration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: var(--gap-sm);
+}
+
+.integration-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--gap-sm);
+    background-color: var(--bg-hover);
+    border-radius: var(--border-radius);
+    font-size: 0.75rem;
+    text-align: center;
+    transition: all var(--transition-fast);
+}
+
+.integration-item:hover {
+    background-color: var(--bg-secondary);
+    transform: translateY(-2px);
+}
+
+.integration-item i {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+    color: var(--text-secondary);
+}
+
+/* Use Cases */
+.use-cases-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+}
+
+.use-case-item {
+    padding: var(--gap-sm);
+    background-color: var(--bg-hover);
+    border-radius: var(--border-radius-sm);
+    border-left: 3px solid var(--color-primary);
+}
+
+.use-case-title {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.use-case-description {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Case Studies */
+.case-study {
+    padding: var(--gap);
+    background-color: var(--bg-secondary);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--gap-sm);
+}
+
+.case-study-header {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-sm);
+    margin-bottom: var(--gap-sm);
+}
+
+.case-study-logo {
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-hover);
+    border-radius: var(--border-radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--text-secondary);
+}
+
+.case-study-company {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--text-primary);
+}
+
+.case-study-industry {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.case-study-results {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-sm);
+    margin-top: var(--gap-sm);
+}
+
+.result-item {
+    text-align: center;
+}
+
+.result-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-success);
+}
+
+.result-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+/* Details Actions */
+.details-actions {
+    padding: var(--gap);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    gap: var(--gap-sm);
+    background-color: var(--bg-elevated);
+}
+
+.details-actions .btn {
+    flex: 1;
+}
+
+/* Tabs */
+.details-tabs {
+    display: flex;
+    gap: 2px;
+    background-color: var(--bg-hover);
+    padding: 2px;
+    border-radius: var(--border-radius-sm);
+    margin-bottom: var(--gap);
+}
+
+.tab-button {
+    flex: 1;
+    padding: var(--gap-xs) var(--gap-sm);
+    background: none;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.tab-button:hover {
+    color: var(--text-primary);
+}
+
+.tab-button.active {
+    background-color: var(--bg-elevated);
+    color: var(--text-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Loading State */
+.details-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+.details-loading .spinner {
+    width: 40px;
+    height: 40px;
+}
+
+/* Scrollbar styling */
+.details-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.details-content::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+.details-content::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 3px;
+}
+
+.details-content::-webkit-scrollbar-thumb:hover {
+    background: var(--text-tertiary);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .details-panel {
+        width: 100vw;
+    }
+    
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .integration-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+    
+    .case-study-results {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Print styles */
+@media print {
+    .details-header {
+        position: static;
+    }
+    
+    .close-details,
+    .details-actions {
+        display: none;
+    }
+    
+    .details-content {
+        overflow: visible;
+    }
+}
