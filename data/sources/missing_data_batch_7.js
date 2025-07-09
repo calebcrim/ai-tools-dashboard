@@ -1,0 +1,99 @@
+const missingDataBatch7 = [
+  {
+    tool_name: "Fireflies.ai",
+    updates: {
+      feature_breakdown: "AI meeting assistant with 95%+ accurate real-time transcription in 100+ languages; Auto-join for Zoom, Teams, Google Meet; Speaker identification and tagging; 30-second AI-powered meeting summaries; Automated action item and task extraction; AskFred AI assistant for meeting Q&A; Advanced search across all meetings with timestamped results; AI Apps (200+ including BANT analysis, churn risk detection); Team collaboration features with comments and bookmarks; Mobile and Chrome extension; Video/audio file import and transcription; Export to multiple formats; CRM and productivity tool integrations",
+      pricing_model: "Free: Unlimited transcription, limited AI summaries, 800 mins storage/seat; Pro: $10/seat/month annually ($18 monthly), unlimited transcription & summaries, 8,000 mins storage, downloadable content, talk-time analytics, unlimited integrations; Business: $19/seat/month annually ($32 monthly), unlimited storage, video recording, conversation intelligence, team analytics, API access; Enterprise: $39/seat/month annually, custom data retention, SSO, HIPAA compliance, private storage, dedicated account manager. 14-day free trial available.",
+      pros_cons_limitations: "Pros: Highly accurate transcription (95%+), automatic meeting join eliminates setup friction, excellent integrations with major platforms, actionable AI summaries save time, robust search functionality, strong security compliance (SOC2, GDPR, HIPAA). Cons: Limited to 3 major video conferencing platforms, speaker identification requires training period, occasional accuracy issues with strong accents or background noise, UI can be confusing for new users, minutes don't roll over monthly. Limitations: Only supports English, French, and Spanish; advanced features require paid plans; processing time can vary during peak usage.",
+      integration_potential: "Excellent - Native integrations with Zoom, Microsoft Teams, Google Meet for automatic meeting capture; CRM integrations (Salesforce, HubSpot, Pipedrive); Collaboration tools (Slack, Microsoft Teams, Notion, Asana); Productivity platforms (Google Workspace, Microsoft 365); API available for custom integrations; Zapier and Make automation support; Chrome extension for web-based meetings; Mobile apps for iOS and Android",
+      learning_curve: "Low - Simple setup process with calendar integration, intuitive interface for basic transcription and playback, automatic features require minimal training. Medium for advanced features like custom AI Apps, team analytics, and workflow automation. Most users productive within first session for core functionality.",
+      geo_regulatory_limitations: "Available globally with data centers in US and EU for GDPR compliance. Enterprise plans offer data residency options and custom compliance controls. SOC 2 Type II certified, GDPR compliant, HIPAA available for Enterprise. No specific country restrictions but some advanced AI features may have regional limitations based on local privacy laws.",
+      case_studies: "PR Labs (CEO Matias Rodsevich): 'Fireflies brought more structure in our meetings and more transparency within our company'; Flock (CEO Ed Leon Klinger): Improved team conversation analytics and tracking; Clara (Co-founder Lee McMahon): Reduced additional customer calls by providing better meeting insights; Phyllo (Co-founder Achintya Gupta): Better understanding of customer needs through conversation analysis; Companies report 70% reduction in manual note-taking time and 50% improvement in action item completion rates.",
+      use_cases_in_pr: [
+        "Media interview transcription and searchable archive creation for press coverage analysis",
+        "Client meeting documentation with automatic action item tracking for campaign follow-ups",
+        "Crisis communication meeting capture for rapid response team coordination",
+        "Stakeholder presentation recording with shareable highlights and key message extraction",
+        "Competitive intelligence gathering from industry webinars and public calls with sentiment analysis"
+      ]
+    }
+  },
+  {
+    tool_name: "Forethought",
+    updates: {
+      feature_breakdown: "Multi-agent AI system for customer support automation; Solve - Agentic AI agent for end-to-end query resolution across chat, voice, email with intent detection and knowledge base integration; Triage - LLM-powered ticket routing and prioritization with sentiment analysis and auto-tagging; Assist - AI copilot providing contextual knowledge articles and response suggestions with Chrome extension; Discover - Generative AI for workflow optimization, ROI tracking, and performance analytics; Autoflows™ technology for business logic execution using natural language without coding",
+      pricing_model: "Custom pricing based on ticket volume and agent seats. Platform access fees plus committed usage costs based on deflection volume for inquiries and ticket volume for agent handoffs. Industry estimates suggest $10-100+ per user/month depending on scope and features. Vendr reports starting around mid-five to six-figure annual deals for enterprise contact centers. No public pricing - requires demo and custom quote. Optional advanced support add-ons available.",
+      pros_cons_limitations: "Pros: Advanced multi-agent AI architecture provides comprehensive coverage, high ROI (15x average return), 55% reduction in first response time, up to 98% resolution rate, seamless integration with existing helpdesk systems, patent-pending Autoflows technology eliminates need for decision trees, ready on day one with historical data training. Cons: High implementation cost suitable mainly for medium-large enterprises, requires initial setup and training for workflow integration, occasional AI recommendation accuracy issues, limited image support in tickets, can be time-consuming to configure for complex business requirements. Limitations: Primarily designed for enterprise-scale operations, learning curve for maximizing advanced features.",
+      integration_potential: "Excellent - Native integrations with major helpdesks (Zendesk, Salesforce Service Cloud, Freshdesk, ServiceNow, Intercom, Kustomer); Communication platforms (Dialpad, Talkdesk); CRM systems (HubSpot, Salesforce); API access for custom integrations; Chrome extension for agent assistance; Multi-channel support across web chat, email, voice, messaging platforms",
+      learning_curve: "Medium - Initial setup requires configuration of business logic and knowledge base integration. Platform designed for customer service teams with intuitive dashboards. Advanced features like Autoflows and Discover analytics require some training. Customer support and onboarding programs provided for Enterprise plans. Most agents productive within 2-4 weeks.",
+      geo_regulatory_limitations: "Available globally with enterprise-grade security and compliance features. SOC 2 compliant with data privacy controls for GDPR compliance. Custom data retention policies available for Enterprise plans. No specific geographic restrictions mentioned, but enterprise deployments can accommodate regional data residency requirements.",
+      case_studies: "G2 recognition as Best Estimated ROI and Leader in Mid-Market customer service AI. Customers report average 15x return on investment and 55% reduction in first response times. Used across e-commerce, SaaS, FinTech industries. Specific client case studies available through sales process but not publicly detailed. Platform recognized for high customer satisfaction and ease of business engagement.",
+      use_cases_in_pr: [
+        "Automated media inquiry routing and initial response based on journalist intent and topic classification",
+        "Crisis communication support with AI-powered sentiment analysis and priority escalation",
+        "Stakeholder query resolution for investor relations and corporate communications",
+        "Press release distribution support with automated follow-up and engagement tracking",
+        "Brand reputation management through intelligent social media mention triage and response"
+      ]
+    }
+  },
+  {
+    tool_name: "Freshdesk (Freddy AI)",
+    updates: {
+      feature_breakdown: "AI-powered customer service platform with Freddy AI Copilot for agent assistance; AI Agent for automated customer interactions across email, chat, voice; Intelligent ticket routing and prioritization; AI-generated response suggestions and ticket summaries; Multi-language translation support (60+ languages); Sentiment analysis and conversation intelligence; Knowledge base automation and self-service portal; Advanced analytics and reporting; Team collaboration tools with unified agent workspace",
+      pricing_model: "Freshdesk plans: Free (up to 10 agents), Growth $15/agent/month, Pro $49/agent/month, Enterprise $79/agent/month. Freddy AI add-ons: Freddy AI Copilot $29/agent/month annually (provides AI assistance, summaries, translations, response suggestions); Freddy Self-Service sessions: 1 pack = 1,000 sessions, pricing varies by plan; Auto-recharge available; 500 free sessions included with Pro/Enterprise plans for trial; 14-day free trial available",
+      pros_cons_limitations: "Pros: Comprehensive AI features integrated into established helpdesk platform, excellent multi-language support (60+ languages), unified omnichannel workspace, strong automation capabilities, flexible pricing with modular AI add-ons, robust integration ecosystem, enterprise-grade security. Cons: AI features require additional paid add-ons beyond base platform cost, can become expensive for smaller teams needing full AI capabilities, some users report slower processing during peak times, learning curve for advanced workflow automation. Limitations: Full AI capabilities only available on paid plans, session-based pricing for AI agents can add costs for high-volume usage.",
+      integration_potential: "Excellent - Native integrations with Salesforce, Microsoft Teams, Slack, Google Workspace, Shopify, Stripe; REST API for custom development; Marketplace with 100+ pre-built integrations; Workflow automation with Zapier; Mobile apps for iOS and Android; Single sign-on (SSO) support; Webhook support for real-time data sync",
+      learning_curve: "Low to Medium - Freshdesk interface is user-friendly with minimal training required for basic features. Freddy AI Copilot integrates seamlessly into existing workflows. Advanced automation and AI configuration requires moderate technical knowledge. Comprehensive onboarding, documentation, and support available. Most agents productive within 1-2 weeks.",
+      geo_regulatory_limitations: "Available globally with data centers in multiple regions (US, EU, India, Australia). GDPR compliant with data residency options. SOC 2 Type II certified, ISO 27001 compliant. Freddy AI Trust framework ensures content filtering and PII protection. HIPAA compliance available for healthcare organizations. No specific country restrictions.",
+      case_studies: "Jupiter Money achieved 86% CSAT using Freshdesk; Bridgestone Corp improved ticket management and agent productivity; Companies report significant time savings from AI automation; PhonePe uses Freddy for personalized self-service experiences with transaction context; Organizations typically see 23% ticket deflection rates and 60% cost reduction in IT support scenarios.",
+      use_cases_in_pr: [
+        "Media inquiry management with AI-powered routing to appropriate PR team members",
+        "Automated response generation for common press and analyst questions with brand voice consistency",
+        "Crisis communication coordination with intelligent priority routing and stakeholder notification",
+        "Investor relations query handling with sentiment analysis and executive escalation workflows",
+        "Social media monitoring integration with automated response suggestions for brand mentions"
+      ]
+    }
+  },
+  {
+    tool_name: "Gamma",
+    updates: {
+      feature_breakdown: "AI-powered presentation, document, and webpage creation platform; GPT-4 integration for content generation; Real-time collaboration features; One-click restyling without affecting content; Multimedia embedding (YouTube, TikTok, Spotify, GIPHY, Unsplash); Dark mode aesthetic with professional themes; Export to PowerPoint, PDF, Google Slides; Interactive elements and animations; Mobile-responsive design; Built-in analytics for engagement tracking; Template library for various use cases (pitch decks, webinars, marketing materials)",
+      pricing_model: "Free: 400 AI credits (no renewal), watermarked content, basic features; Plus: $10/month ($8/month annually), unlimited AI usage, unlimited presentations, advanced features, no watermarks; Pro: $20/month ($16/month annually), additional team features, priority support, advanced analytics. Credit-based system for AI generation with different actions consuming varying amounts. Free plan limited to initial credits with no monthly renewal.",
+      pros_cons_limitations: "Pros: Innovative storytelling approach with card-based design, strong AI integration for rapid content creation, professional-looking output with minimal effort, excellent multimedia integration, collaborative features, mobile-responsive results. Cons: Limited free plan with non-renewing credits, learning curve due to non-traditional interface, limited customization compared to PowerPoint, export compatibility issues with traditional slide formats, requires internet connection for all editing. Limitations: No offline editing capability, 8-slide default regardless of prompt complexity, reuses similar design templates across different presentations.",
+      integration_potential: "Moderate - Web-based platform with export capabilities to major formats (PowerPoint, PDF, Google Slides); API access for automation; Direct sharing via links; Embeddable content; Integration with media platforms (YouTube, Spotify, etc.); Chrome extension planned; Collaboration features with sharing and commenting",
+      learning_curve: "Medium - Unique card-based interface differs significantly from traditional presentation tools like PowerPoint. Notion-style slash commands and AI chatbot require familiarization. Drag-and-drop system is intuitive, but full feature utilization takes practice. Users typically productive within 1-2 weeks with regular use.",
+      geo_regulatory_limitations: "Available globally with standard web-based access. No specific geographic restrictions mentioned. Data privacy and security follow standard cloud service practices. Enterprise features may include additional compliance controls, but specific certifications not detailed in public documentation.",
+      case_studies: "Used by creative teams and marketers for storytelling-focused presentations; Michigan Virtual AI Strategist Aaron Baughman reports significant time savings and improved presentation quality; Startups use for pitch decks and investor presentations; Educational institutions leverage for interactive content creation; Limited detailed case studies available due to relatively newer platform positioning.",
+      use_cases_in_pr: [
+        "Rapid pitch deck creation for client presentations with consistent brand storytelling",
+        "Interactive campaign reports with embedded media and real-time collaboration",
+        "Stakeholder presentation development with dynamic visual elements and data integration",
+        "Crisis communication slide development with quick template customization",
+        "Media kit creation with multimedia integration and easy sharing capabilities"
+      ]
+    }
+  },
+  {
+    tool_name: "Genmo",
+    updates: {
+      feature_breakdown: "AI video generation platform powered by Mochi 1 model (10-billion-parameter diffusion system); Text-to-video creation with detailed prompt adherence; Image-to-video animation with dynamic motion effects; Asymmetric Diffusion Transformer (AsymmDiT) architecture for motion coherence; Realistic physics-based motion generation; Camera motion and FX capabilities; High-fidelity frame-by-frame video synthesis; Open-source model allowing developer customization; Community video sharing and inspiration gallery; Cloud-based processing with various output formats",
+      pricing_model: "Free: 2 fast video generations/day, 30 videos/month, includes Genmo watermark, standard queue priority; Lite Plan: $10/month, 4x more videos than free, commercial rights, no watermarks, enhanced queue priority; Standard Plan: $30/month, 32 fast generations/day, 180 monthly videos, stealth mode, priority access to new models, highest queue priority. Annual pricing: $96/year for Lite (equivalent to $8/month). Video length typically 15-30 seconds.",
+      pros_cons_limitations: "Pros: Cutting-edge AI video generation with superior motion quality, excellent prompt adherence and detailed control, realistic physics simulation, open-source model allows customization, professional-quality output, active community for inspiration and learning. Cons: Limited video length (15-30 seconds), requires detailed prompts for best results, can be slow during peak usage, image-to-video generation sometimes inconsistent, requires technical knowledge for model customization. Limitations: Not suitable for long-form content creation, requires stable internet connection, learning curve for optimal prompt engineering.",
+      integration_potential: "Limited - Primarily web-based platform with export capabilities; Open-source model allows integration into custom applications; API access for developers; Community Discord integration; Standard video format exports (MP4); No native integrations with major platforms but output can be used across social media and video platforms",
+      learning_curve: "Medium to High - Basic text-to-video generation is straightforward, but achieving optimal results requires prompt engineering skills. Understanding of video terminology and visual concepts helpful. Open-source nature means technical users can achieve more customization but requires development knowledge. Most users see improvement in output quality after 1-2 weeks of regular use.",
+      geo_regulatory_limitations: "Available globally with no specific geographic restrictions mentioned. Open-source model provides transparency for compliance review. Standard content filtering policies apply to prevent harmful or inappropriate content generation. No specific enterprise compliance certifications detailed, but open-source nature allows for custom compliance implementations.",
+      case_studies: "Used by content creators for social media short-form videos; Marketing teams for product demonstrations and promotional content; Educators for visual concept explanations; Filmmakers for concept visualization and storyboarding; G2 user reported successful creation of detailed product videos; Capterra users highlight effectiveness for professional promotional content creation with high visual quality output.",
+      use_cases_in_pr: [
+        "Product demonstration videos for press announcements with realistic motion and professional quality",
+        "Social media content creation for campaign promotion with eye-catching visual effects",
+        "Concept visualization for campaign ideas and creative pitches to stakeholders",
+        "Event highlight generation from static images with dynamic motion effects",
+        "Brand storytelling through short-form animated content for digital media distribution"
+      ]
+    }
+  }
+];
+
+module.exports = missingDataBatch7;
