@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Dashboard - Enhanced Dual View (317+ Tools)</title>
+    <link rel="stylesheet" href="css/dual-view-complete.css">
+    <link rel="stylesheet" href="css/dual-view-enhanced.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Enhanced Header with View Toggle -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h1 class="logo-text">AI Tools Intelligence Hub</h1>
+            </div>
+            <div class="header-actions">
+                <nav class="header-nav">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                    <a href="dual-view-enhanced.html" class="nav-link active">
+                        <i class="fas fa-exchange-alt"></i> Dual View
+                    </a>
+                    <a href="saas-financial-analysis.html" class="nav-link">
+                        <i class="fas fa-chart-line"></i> Financial
+                    </a>
+                    <a href="enterprise-report.html" class="nav-link">
+                        <i class="fas fa-building"></i> Enterprise
+                    </a>
+                </nav>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="executive">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Executive View</span>
+                    </button>
+                    <button class="view-btn" data-view="technical">
+                        <i class="fas fa-cog"></i>
+                        <span>Technical View</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container dual-view-container">
+        <!-- Enhanced Search Bar with Suggestions -->
+        <div class="search-container">
+            <div class="search-wrapper">
+                <div class="search-bar enhanced">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" 
+                           class="search-input" 
+                           placeholder="Search 317+ tools by name, category, features, or use cases..." 
+                           id="dualViewSearch"
+                           autocomplete="off">
+                    <div class="search-suggestions" id="searchSuggestions"></div>
+                </div>
+                <div class="search-info">
+                    <span id="resultsCount">Showing all 317 tools</span>
+                    <span class="search-time" id="searchTime"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-controls">
+            <div class="filter-group">
+                <label>Category</label>
+                <select id="categoryFilter" multiple size="1">
+                    <option value="">All Categories</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>Impact Score</label>
+                <input type="range" id="impactRange" min="0" max="100" value="0" step="10">
+                <span id="impactValue">0+</span>
+            </div>
+            
+            <div class="filter-group">
+                <label>Complexity</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" class="complexity-filter" value="1"> Low</label>
+                    <label><input type="checkbox" class="complexity-filter" value="2"> Medium-Low</label>
+                    <label><input type="checkbox" class="complexity-filter" value="3"> Medium</label>
+                    <label><input type="checkbox" class="complexity-filter" value="4"> Medium-High</label>
+                    <label><input type="checkbox" class="complexity-filter" value="5"> High</label>
+                </div>
+            </div>
+            
+            <div class="filter-group">
+                <button class="btn-secondary" onclick="window.enhancedDualView.clearFilters()">
+                    <i class="fas fa-times"></i> Clear Filters
+                </button>
+            </div>
+        </div>
+
+        <!-- Density Control -->
+        <div class="density-controls">
+            <span>View Density:</span>
+            <button class="density-btn" data-density="compact">
+                <i class="fas fa-th"></i> Compact
+            </button>
+            <button class="density-btn active" data-density="comfortable">
+                <i class="fas fa-th-large"></i> Comfortable
+            </button>
+            <button class="density-btn" data-density="spacious">
+                <i class="fas fa-square"></i> Spacious
+            </button>
+        </div>
+        
+        <!-- Enhanced Stats Bar -->
+        <section class="stats-bar enhanced">
+            <div class="stat-card">
+                <div class="stat-icon total">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="totalTools">0</h3>
+                    <p>Total AI Tools</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon media">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="evaluatedTools">0</h3>
+                    <p>Complete Data</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon ai">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="highImpactTools">0</h3>
+                    <p>High Impact</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon google">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="enterpriseReady">0</h3>
+                    <p>Enterprise Ready</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon new">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="totalCategories">0</h3>
+                    <p>Categories</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Executive View -->
+        <div class="view-content" data-view="executive">
+            <div class="view-header">
+                <h2>Executive View - Business Impact Focus</h2>
+                <p>Evaluate tools based on ROI, implementation time, and business value</p>
+            </div>
+            <div class="tools-grid executive-grid" id="executiveGrid">
+                <!-- Executive cards will be rendered here -->
+            </div>
+        </div>
+
+        <!-- Technical View -->
+        <div class="view-content" data-view="technical" style="display: none;">
+            <div class="view-header">
+                <h2>Technical View - Implementation Focus</h2>
+                <p>Explore integration capabilities, APIs, and technical requirements</p>
+            </div>
+            <div class="tools-grid technical-grid" id="technicalGrid">
+                <!-- Technical cards will be rendered here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Enhanced Tool Modal -->
+    <div id="toolModal" class="modal">
+        <div class="modal-content enhanced">
+            <span class="close" onclick="window.enhancedDualView.closeModal()">&times;</span>
+            <div id="modalBody">
+                <!-- Modal content will be dynamically inserted -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Performance Monitor (Development) -->
+    <div class="performance-monitor" style="display: none;">
+        <h4>Performance Metrics</h4>
+        <div id="performanceMetrics"></div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Load unified tools data first -->
+    <script src="data/unified-tools-data.js"></script>
+    
+    <!-- Core functionality -->
+    <script src="js/enhanced-data-processor.js"></script>
+    <script src="js/dual-view-enhanced.js"></script>
+    
+    <!-- Optional: Load Fuse.js for better search -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+    
+    <!-- Initialize performance monitoring in dev mode -->
+    <script>
+        // Show performance metrics in development
+        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            document.querySelector('.performance-monitor').style.display = 'block';
+            
+            setInterval(() => {
+                if (window.enhancedDualView) {
+                    const metrics = window.enhancedDualView.getPerformanceReport();
+                    document.getElementById('performanceMetrics').innerHTML = `
+                        <p>Load Time: ${metrics.loadTime?.toFixed(2)}ms</p>
+                        <p>Last Search: ${metrics.searchTime?.toFixed(2)}ms</p>
+                        <p>Last Render: ${metrics.renderTime?.toFixed(2)}ms</p>
+                        <p>Tools Loaded: ${metrics.toolsLoaded}</p>
+                        <p>Tools Displayed: ${metrics.toolsDisplayed}</p>
+                        <p>Cache Size: ${metrics.cacheSize}</p>
+                        <p>Avg Data Quality: ${metrics.dataQuality?.averageCompleteness}%</p>
+                    `;
+                }
+            }, 1000);
+        }
+    </script>
+
+    <style>
+        /* Quick inline styles for new elements */
+        .search-wrapper {
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .search-bar.enhanced {
+            position: relative;
+        }
+        
+        .search-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .filter-controls {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+        
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .filter-group label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: normal;
+        }
+        
+        .density-controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .density-btn {
+            padding: 6px 12px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.2s ease;
+        }
+        
+        .density-btn.active {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        
+        .view-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .view-header h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .view-header p {
+            color: #666;
+        }
+        
+        .performance-monitor {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 12px;
+            z-index: 1000;
+            max-width: 250px;
+        }
+        
+        .performance-monitor h4 {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+        }
+        
+        .performance-monitor p {
+            margin: 4px 0;
+        }
+        
+        /* Enhanced modal styles */
+        .modal-content.enhanced {
+            max-width: 900px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .filter-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .density-controls {
+                justify-content: center;
+            }
+            
+            .view-toggle {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</body>
+</html>

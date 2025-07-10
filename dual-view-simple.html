@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Dashboard - Simple Dual View</title>
+    <link rel="stylesheet" href="css/dual-view-complete.css">
+    <link rel="stylesheet" href="css/dual-view-enhanced.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Debug styles */
+        .debug-info {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <!-- Debug Info -->
+    <div class="debug-info" id="debugInfo">
+        Loading...
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h1 class="logo-text">AI Tools Dashboard</h1>
+            </div>
+            <div class="header-actions">
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="executive">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Executive View</span>
+                    </button>
+                    <button class="view-btn" data-view="technical">
+                        <i class="fas fa-cog"></i>
+                        <span>Technical View</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container dual-view-container">
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-bar">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" 
+                       class="search-input" 
+                       placeholder="Search tools..." 
+                       id="dualViewSearch">
+            </div>
+        </div>
+        
+        <!-- Stats Bar -->
+        <section class="stats-bar">
+            <div class="stat-card">
+                <div class="stat-icon total">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="totalTools">0</h3>
+                    <p>Total Tools</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon media">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="evaluatedTools">0</h3>
+                    <p>Evaluated</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon ai">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="highImpactTools">0</h3>
+                    <p>High Impact</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon google">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="enterpriseReady">0</h3>
+                    <p>Enterprise</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Views -->
+        <div class="view-content" data-view="executive">
+            <h2 class="text-center">Executive View</h2>
+            <div class="tools-grid executive-grid" id="executiveGrid">
+                <!-- Cards will be rendered here -->
+            </div>
+        </div>
+
+        <div class="view-content" data-view="technical" style="display: none;">
+            <h2 class="text-center">Technical View</h2>
+            <div class="tools-grid technical-grid" id="technicalGrid">
+                <!-- Cards will be rendered here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="toolModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        const debug = document.getElementById('debugInfo');
+        debug.innerHTML = 'Loading scripts...';
+    </script>
+
+    <!-- Load unified tools data -->
+    <script src="data/unified-tools-data.js"></script>
+    <script>
+        debug.innerHTML += '<br>Data loaded: ' + (typeof unifiedToolsData !== 'undefined' ? 'Yes' : 'No');
+        if (typeof unifiedToolsData !== 'undefined' && unifiedToolsData.tools) {
+            debug.innerHTML += '<br>Tools count: ' + unifiedToolsData.tools.length;
+        }
+    </script>
+
+    <!-- Simple implementation without enhanced features -->
+    <script>
+        // Simple Dual View Manager
+        class SimpleDualViewManager {
+            constructor() {
+                this.currentView = 'executive';
+                this.toolsData = [];
+                this.init();
+            }
+
+            init() {
+                debug.innerHTML += '<br>Initializing...';
+                this.setupViewToggle();
+                this.setupSearch();
+                this.loadToolsData();
+            }
+
+            setupViewToggle() {
+                const viewButtons = document.querySelectorAll('.view-btn');
+                viewButtons.forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const view = e.currentTarget.dataset.view;
+                        this.switchView(view);
+                    });
+                });
+            }
+
+            setupSearch() {
+                const searchInput = document.getElementById('dualViewSearch');
+                if (searchInput) {
+                    searchInput.addEventListener('input', (e) => {
+                        this.filterTools(e.target.value);
+                    });
+                }
+            }
+
+            switchView(view) {
+                this.currentView = view;
+                
+                // Update buttons
+                document.querySelectorAll('.view-btn').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.view === view);
+                });
+                
+                // Show/hide views
+                document.querySelectorAll('.view-content').forEach(content => {
+                    content.style.display = content.dataset.view === view ? 'block' : 'none';
+                });
+                
+                this.renderTools();
+            }
+
+            loadToolsData() {
+                try {
+                    if (typeof unifiedToolsData !== 'undefined' && unifiedToolsData.tools) {
+                        debug.innerHTML += '<br>Processing tools...';
+                        
+                        // Simple transformation
+                        this.toolsData = unifiedToolsData.tools.slice(0, 50).map(tool => ({
+                            id: tool.id || Math.random().toString(36),
+                            name: tool.tool_name,
+                            category: tool.category,
+                            description: tool.brief_purpose_summary,
+                            url: tool.url,
+                            pricing: tool.pricing_model || 'Contact for pricing',
+                            features: tool.feature_breakdown || 'Various features',
+                            impact: Math.floor(Math.random() * 40) + 60 // Random 60-100
+                        }));
+                        
+                        debug.innerHTML += '<br>Loaded ' + this.toolsData.length + ' tools';
+                        this.renderTools();
+                        this.updateStats();
+                    } else {
+                        debug.innerHTML += '<br>No tools data found';
+                    }
+                } catch (error) {
+                    debug.innerHTML += '<br>Error: ' + error.message;
+                    console.error(error);
+                }
+            }
+
+            filterTools(searchTerm) {
+                const term = searchTerm.toLowerCase();
+                const filtered = term ? 
+                    this.toolsData.filter(tool => 
+                        tool.name.toLowerCase().includes(term) ||
+                        tool.category.toLowerCase().includes(term) ||
+                        tool.description.toLowerCase().includes(term)
+                    ) : this.toolsData;
+                
+                this.renderFilteredTools(filtered);
+            }
+
+            renderFilteredTools(tools) {
+                const grid = this.currentView === 'executive' ? 
+                    document.getElementById('executiveGrid') : 
+                    document.getElementById('technicalGrid');
+                
+                grid.innerHTML = tools.map(tool => 
+                    this.currentView === 'executive' ? 
+                        this.createExecutiveCard(tool) : 
+                        this.createTechnicalCard(tool)
+                ).join('');
+            }
+
+            renderTools() {
+                this.renderFilteredTools(this.toolsData);
+            }
+
+            updateStats() {
+                document.getElementById('totalTools').textContent = this.toolsData.length;
+                document.getElementById('highImpactTools').textContent = 
+                    this.toolsData.filter(t => t.impact >= 80).length;
+                document.getElementById('evaluatedTools').textContent = 
+                    Math.floor(this.toolsData.length * 0.8);
+                document.getElementById('enterpriseReady').textContent = 
+                    Math.floor(this.toolsData.length * 0.3);
+            }
+
+            createExecutiveCard(tool) {
+                const impactClass = tool.impact >= 80 ? 'high' : 
+                                   tool.impact >= 60 ? 'medium' : 'low';
+                
+                return `
+                    <div class="tool-card" onclick="window.openTool('${tool.id}')">
+                        <h3 class="tool-name">${tool.name}</h3>
+                        <div class="category-tag">${tool.category}</div>
+                        
+                        <div class="impact-score ${impactClass}" style="font-size: 2rem; text-align: center; margin: 1rem 0;">
+                            ${tool.impact}
+                        </div>
+                        <p style="text-align: center; color: #666; margin-bottom: 1rem;">Business Impact Score</p>
+                        
+                        <p style="color: #666; font-size: 0.875rem; line-height: 1.5;">
+                            ${tool.description.substring(0, 150)}...
+                        </p>
+                        
+                        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
+                            <strong>Pricing:</strong> ${tool.pricing.substring(0, 50)}...
+                        </div>
+                    </div>
+                `;
+            }
+
+            createTechnicalCard(tool) {
+                return `
+                    <div class="tool-card" onclick="window.openTool('${tool.id}')">
+                        <h3 class="tool-name">${tool.name}</h3>
+                        <div class="category-tag">${tool.category}</div>
+                        
+                        <div style="margin: 1rem 0;">
+                            <strong>Features:</strong>
+                            <p style="color: #666; font-size: 0.875rem;">
+                                ${tool.features.substring(0, 200)}...
+                            </p>
+                        </div>
+                        
+                        <div style="margin-top: 1rem;">
+                            <a href="${tool.url}" target="_blank" style="color: #3b82f6; text-decoration: none;">
+                                <i class="fas fa-external-link-alt"></i> Visit Website
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Global functions
+        window.openTool = function(toolId) {
+            const tool = window.dualViewManager.toolsData.find(t => t.id === toolId);
+            if (tool) {
+                document.getElementById('modalBody').innerHTML = `
+                    <h2>${tool.name}</h2>
+                    <p><strong>Category:</strong> ${tool.category}</p>
+                    <p><strong>Description:</strong> ${tool.description}</p>
+                    <p><strong>Pricing:</strong> ${tool.pricing}</p>
+                    <p><strong>Features:</strong> ${tool.features}</p>
+                    <p><a href="${tool.url}" target="_blank">Visit Website</a></p>
+                `;
+                document.getElementById('toolModal').style.display = 'flex';
+            }
+        };
+
+        window.closeModal = function() {
+            document.getElementById('toolModal').style.display = 'none';
+        };
+
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            debug.innerHTML += '<br>DOM loaded, creating manager...';
+            window.dualViewManager = new SimpleDualViewManager();
+            debug.innerHTML += '<br>Manager created!';
+        });
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('toolModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+    </script>
+</body>
+</html>

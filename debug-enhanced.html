@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Enhanced Dual View</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .debug {
+            background: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .success { color: green; }
+        .error { color: red; }
+        #executiveGrid {
+            border: 2px solid blue;
+            min-height: 100px;
+            padding: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Debug Enhanced Dual View</h1>
+    
+    <div class="debug" id="status">Loading...</div>
+    
+    <div id="executiveGrid">
+        Executive Grid - Cards will appear here
+    </div>
+    
+    <div id="technicalGrid" style="display: none;">
+        Technical Grid
+    </div>
+
+    <!-- Scripts in correct order -->
+    <script src="data/unified-tools-data.js"></script>
+    <script src="js/enhanced-data-processor.js"></script>
+    
+    <script>
+        const status = document.getElementById('status');
+        let logs = [];
+        
+        function log(msg, isError = false) {
+            const entry = `<div class="${isError ? 'error' : 'success'}">${msg}</div>`;
+            logs.push(entry);
+            status.innerHTML = logs.join('');
+        }
+        
+        // Check data loaded
+        log('Checking unified tools data...');
+        if (typeof unifiedToolsData !== 'undefined') {
+            log('✓ Data loaded: ' + unifiedToolsData.tools.length + ' tools');
+        } else {
+            log('✗ Data not loaded', true);
+        }
+        
+        // Check processor
+        log('Checking enhanced data processor...');
+        if (typeof EnhancedDataProcessor !== 'undefined') {
+            log('✓ EnhancedDataProcessor available');
+        } else {
+            log('✗ EnhancedDataProcessor not found', true);
+        }
+        
+        // Check DOM elements
+        log('Checking DOM elements...');
+        const execGrid = document.getElementById('executiveGrid');
+        const techGrid = document.getElementById('technicalGrid');
+        log('Executive grid: ' + (execGrid ? '✓ Found' : '✗ Not found'));
+        log('Technical grid: ' + (techGrid ? '✓ Found' : '✗ Not found'));
+        
+        // Try to render manually
+        log('Attempting manual render...');
+        
+        async function testRender() {
+            try {
+                const processor = new EnhancedDataProcessor();
+                
+                // Set up simple callbacks
+                processor.callbacks = {
+                    onProgress: (p) => log('Progress: ' + p.percentage + '%'),
+                    onComplete: (stats) => {
+                        log('✓ Processing complete: ' + stats.toolsCount + ' tools in ' + stats.loadTime.toFixed(2) + 'ms');
+                        
+                        // Try to render
+                        const grid = document.getElementById('executiveGrid');
+                        if (grid && processor.tools.length > 0) {
+                            log('Rendering ' + processor.tools.length + ' tools...');
+                            
+                            // Simple render
+                            const cards = processor.tools.slice(0, 10).map(tool => `
+                                <div style="border: 1px solid #ccc; padding: 10px; margin: 5px; background: white;">
+                                    <h3>${tool.displayName || tool.tool_name}</h3>
+                                    <p>Category: ${tool.category}</p>
+                                    <p>Impact: ${tool.businessImpactScore || 'N/A'}</p>
+                                </div>
+                            `).join('');
+                            
+                            grid.innerHTML = cards;
+                            log('✓ Rendered successfully!');
+                        } else {
+                            log('✗ Cannot render: grid=' + !!grid + ', tools=' + processor.tools.length, true);
+                        }
+                    },
+                    onError: (e) => log('✗ Error: ' + e.message, true)
+                };
+                
+                // Load data
+                await processor.loadTools(unifiedToolsData.tools);
+                
+            } catch (error) {
+                log('✗ Test render failed: ' + error.message, true);
+                console.error(error);
+            }
+        }
+        
+        // Run test after a delay
+        setTimeout(testRender, 500);
+    </script>
+</body>
+</html>
