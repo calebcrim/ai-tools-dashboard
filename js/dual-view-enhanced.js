@@ -313,6 +313,19 @@ class EnhancedDualViewManager {
             : document.getElementById('technicalGrid');
             
         if (container) {
+            // Add click event delegation for tool cards
+            container.addEventListener('click', (e) => {
+                const toolCard = e.target.closest('.tool-card');
+                if (toolCard && !toolCard.classList.contains('lazy-card')) {
+                    const toolId = toolCard.dataset.toolId;
+                    if (toolId) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        this.openToolModal(toolId);
+                    }
+                }
+            });
+            
             // Intersection Observer for lazy loading
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -377,6 +390,8 @@ class EnhancedDualViewManager {
         // Log first tool structure for debugging
         if (this.displayedTools.length > 0) {
             console.log('First tool structure:', this.displayedTools[0]);
+            console.log('First tool id:', this.displayedTools[0].id);
+            console.log('Tool id type:', typeof this.displayedTools[0].id);
         }
         
         // Render first 30 tools immediately, lazy load the rest
@@ -423,7 +438,7 @@ class EnhancedDualViewManager {
             }
             
             return `
-                <div class="tool-card" onclick="window.enhancedDualView.openToolModal('${tool.id}')" data-tool-id="${tool.id}">
+                <div class="tool-card" data-tool-id="${tool.id}">
                     ${this.createExecutiveCardContent(tool)}
                 </div>
             `;
@@ -513,7 +528,7 @@ class EnhancedDualViewManager {
         }
         
         return `
-            <div class="tool-card" onclick="window.enhancedDualView.openToolModal('${tool.id}')" data-tool-id="${tool.id}">
+            <div class="tool-card" data-tool-id="${tool.id}">
                 ${this.createTechnicalCardContent(tool)}
             </div>
         `;
@@ -625,11 +640,27 @@ class EnhancedDualViewManager {
 
     // Modal functionality
     openToolModal(toolId) {
-        const tool = this.allTools.find(t => t.id === toolId);
-        if (!tool) return;
+        console.log('Opening modal for tool:', toolId);
+        // Try to find by exact match first, then by string/number conversion
+        let tool = this.allTools.find(t => t.id === toolId);
+        if (!tool) {
+            // Try converting to string or number
+            tool = this.allTools.find(t => 
+                t.id === String(toolId) || 
+                t.id === Number(toolId) ||
+                String(t.id) === String(toolId)
+            );
+        }
+        if (!tool) {
+            console.error('Tool not found:', toolId);
+            console.log('Available tool IDs:', this.allTools.slice(0, 5).map(t => ({ id: t.id, type: typeof t.id })));
+            return;
+        }
         
         const modal = document.getElementById('toolModal');
         const modalBody = document.getElementById('modalBody');
+        
+        console.log('Modal element:', modal, 'Modal body:', modalBody);
         
         if (modal && modalBody) {
             modalBody.innerHTML = this.currentView === 'executive' 
@@ -638,6 +669,8 @@ class EnhancedDualViewManager {
             
             modal.style.display = 'flex';
             modal.classList.add('fade-in');
+        } else {
+            console.error('Modal elements not found');
         }
     }
 
