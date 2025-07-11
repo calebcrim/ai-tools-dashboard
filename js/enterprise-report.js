@@ -107,31 +107,30 @@ class EnterpriseReportApp {
     
     async loadToolsData() {
         console.log('Loading tools data...');
+        console.log('window.unifiedToolsData:', typeof window.unifiedToolsData);
+        console.log('window.unifiedToolsData.tools:', window.unifiedToolsData?.tools?.length);
         
         // Check if data is already loaded globally
-        if (window.unifiedToolsData) {
-            this.toolsData = window.unifiedToolsData.tools || window.unifiedToolsData;
+        if (window.unifiedToolsData && window.unifiedToolsData.tools && Array.isArray(window.unifiedToolsData.tools)) {
+            this.toolsData = window.unifiedToolsData.tools;
             console.log('Tools data loaded from global:', this.toolsData.length, 'tools');
             return;
         }
         
-        // Try to load from file
-        try {
-            const response = await fetch('data/unified-tools-data.js');
-            const text = await response.text();
+        // If no data, wait a bit and try again (script might still be loading)
+        if (!window.unifiedToolsData) {
+            console.log('Waiting for unified tools data to load...');
+            await new Promise(resolve => setTimeout(resolve, 500));
             
-            // Execute the script to get the data
-            eval(text);
-            
-            if (window.unifiedToolsData) {
-                this.toolsData = window.unifiedToolsData.tools || window.unifiedToolsData;
-                console.log('Tools data loaded from file:', this.toolsData.length, 'tools');
+            if (window.unifiedToolsData && window.unifiedToolsData.tools) {
+                this.toolsData = window.unifiedToolsData.tools;
+                console.log('Tools data loaded after delay:', this.toolsData.length, 'tools');
+                return;
             }
-        } catch (error) {
-            console.error('Error loading tools data:', error);
-            // Use mock data as fallback
-            this.useMockData();
         }
+        
+        console.error('Failed to load unified tools data, using mock data');
+        this.useMockData();
     }
     
     useMockData() {
@@ -489,9 +488,29 @@ class EnterpriseReportApp {
 document.addEventListener('DOMContentLoaded', async () => {
     console.log('DOM loaded, initializing Enterprise Report App...');
     
-    // Create and initialize the app
+    // Create the app
     window.enterpriseApp = new EnterpriseReportApp();
-    await window.enterpriseApp.init();
+    
+    // Check if data is already loaded
+    if (window.unifiedToolsData && window.unifiedToolsData.tools) {
+        console.log('Data already loaded at DOMContentLoaded');
+        await window.enterpriseApp.init();
+    } else {
+        console.log('Waiting for unifiedToolsDataLoaded event...');
+        // Wait for data to load
+        window.addEventListener('unifiedToolsDataLoaded', async function() {
+            console.log('unifiedToolsDataLoaded event received');
+            await window.enterpriseApp.init();
+        });
+        
+        // Fallback timeout
+        setTimeout(async () => {
+            if (!window.enterpriseApp.toolsData) {
+                console.warn('Data load timeout, initializing with fallback');
+                await window.enterpriseApp.init();
+            }
+        }, 2000);
+    }
 });
 
 // Export for testing

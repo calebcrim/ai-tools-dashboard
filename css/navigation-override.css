@@ -1,5 +1,8 @@
 /* Navigation Override for pages with different header structures */
 
+/* Import design tokens */
+@import url('design-tokens.css');
+
 /* For dual-view-enhanced.html and similar pages */
 .header-actions {
     width: 100%;
@@ -49,9 +52,9 @@
 }
 
 .header-actions .header-nav .nav-link.active {
-    background: rgba(0, 123, 255, 0.1);
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
 }
 
 /* Adjust logo section */

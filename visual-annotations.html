@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System Visual Annotations</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0F172A;
+            color: #E2E8F0;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3 {
+            color: #F1F5F9;
+        }
+        
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .example {
+            background: #1E293B;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .example h3 {
+            margin-top: 0;
+            color: #F1F5F9;
+            font-size: 18px;
+        }
+        
+        .before {
+            border-color: #EF4444;
+        }
+        
+        .after {
+            border-color: #10B981;
+        }
+        
+        .annotation {
+            background: #F59E0B;
+            color: #000;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            position: absolute;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        /* Mock UI Elements */
+        .mock-card {
+            background: #0F172A;
+            border: 1px solid #475569;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 10px 0;
+        }
+        
+        .mock-card.improved {
+            padding: 24px;
+            border-radius: 12px;
+            border-color: #334155;
+            transition: all 0.2s ease;
+        }
+        
+        .mock-card.improved:hover {
+            border-color: #3B82F6;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .tool-name {
+            font-size: 14px;
+            color: #94A3B8;
+            margin: 0 0 8px 0;
+        }
+        
+        .tool-name.improved {
+            font-size: 20px;
+            color: #F1F5F9;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .tool-description {
+            font-size: 12px;
+            color: #64748B;
+            line-height: 1.4;
+        }
+        
+        .tool-description.improved {
+            font-size: 14px;
+            color: #94A3B8;
+            line-height: 1.75;
+        }
+        
+        .metrics {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        
+        .metrics.improved {
+            gap: 16px;
+            margin-top: 16px;
+        }
+        
+        .metric {
+            font-size: 11px;
+            color: #64748B;
+        }
+        
+        .metric.improved {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .metric.improved .label {
+            font-size: 12px;
+            color: #64748B;
+        }
+        
+        .metric.improved .value {
+            font-size: 16px;
+            color: #3B82F6;
+            font-weight: 600;
+        }
+        
+        .color-swatch {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: 4px;
+        }
+        
+        .swatch {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
+        
+        .design-notes {
+            background: #1E293B;
+            border-left: 4px solid #3B82F6;
+            padding: 16px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .spacing-demo {
+            display: flex;
+            gap: 8px;
+            align-items: flex-end;
+            margin: 20px 0;
+        }
+        
+        .spacing-block {
+            background: #3B82F6;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 AI Tools Hub - Design System Visual Guide</h1>
+        
+        <h2>Tool Card Transformation</h2>
+        <div class="comparison">
+            <div class="example before">
+                <h3>❌ Before - Current Issues</h3>
+                <div class="mock-card">
+                    <div class="annotation" style="top: 60px; right: -80px;">Too small! 14px →</div>
+                    <h4 class="tool-name">ChatGPT</h4>
+                    
+                    <div class="annotation" style="top: 90px; right: -120px;">Hard to read! 12px →</div>
+                    <p class="tool-description">AI-powered conversational assistant for various tasks including writing and coding.</p>
+                    
+                    <div class="annotation" style="bottom: 20px; right: -100px;">Cramped! 8px gap →</div>
+                    <div class="metrics">
+                        <div class="metric">Impact: 95</div>
+                        <div class="metric">Complexity: Low</div>
+                        <div class="metric">$20/mo</div>
+                    </div>
+                </div>
+                
+                <div class="design-notes">
+                    <strong>Problems:</strong>
+                    <ul style="margin: 8px 0; padding-left: 20px;">
+                        <li>Font sizes too small (11-14px)</li>
+                        <li>Insufficient padding (16px)</li>
+                        <li>Poor contrast (#64748B on #0F172A)</li>
+                        <li>No hover feedback</li>
+                        <li>Cramped spacing between elements</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="example after">
+                <h3>✅ After - Unified Design</h3>
+                <div class="mock-card improved">
+                    <div class="annotation" style="top: 60px; left: -80px;">← Readable! 20px</div>
+                    <h4 class="tool-name improved">ChatGPT</h4>
+                    
+                    <div class="annotation" style="top: 100px; left: -90px;">← Clear! 14px</div>
+                    <p class="tool-description improved">AI-powered conversational assistant for various tasks including writing and coding.</p>
+                    
+                    <div class="annotation" style="bottom: 20px; left: -100px;">← Spacious! 16px</div>
+                    <div class="metrics improved">
+                        <div class="metric improved">
+                            <span class="label">Impact</span>
+                            <span class="value">95</span>
+                        </div>
+                        <div class="metric improved">
+                            <span class="label">Complexity</span>
+                            <span class="value">Low</span>
+                        </div>
+                        <div class="metric improved">
+                            <span class="label">Price</span>
+                            <span class="value">$20/mo</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="design-notes">
+                    <strong>Improvements:</strong>
+                    <ul style="margin: 8px 0; padding-left: 20px;">
+                        <li>Readable font sizes (14-20px)</li>
+                        <li>Comfortable padding (24px)</li>
+                        <li>Better contrast (#F1F5F9 on #0F172A)</li>
+                        <li>Smooth hover effects</li>
+                        <li>Proper spacing hierarchy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <h2>Color Palette Unification</h2>
+        <div class="comparison">
+            <div class="example before">
+                <h3>❌ Before - Inconsistent Blues</h3>
+                <div style="margin: 20px 0;">
+                    <div class="color-swatch">
+                        <div class="swatch" style="background: #007bff;"></div>
+                        <span>#007bff - Best Practices</span>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch" style="background: #3B82F6;"></div>
+                        <span>#3B82F6 - Main Navigation</span>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch" style="background: #1e40af;"></div>
+                        <span>#1e40af - Secondary</span>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch" style="background: #2563eb;"></div>
+                        <span>#2563eb - Random Usage</span>
+                    </div>
+                </div>
+                <p style="color: #EF4444; margin-top: 20px;">⚠️ Multiple blues create visual chaos!</p>
+            </div>
+            
+            <div class="example after">
+                <h3>✅ After - Unified Palette</h3>
+                <div style="margin: 20px 0;">
+                    <div class="color-swatch">
+                        <div class="swatch" style="background: #3B82F6;"></div>
+                        <span>#3B82F6 - Primary (All CTAs)</span>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch" style="background: #2563EB;"></div>
+                        <span>#2563EB - Primary Dark (Hover)</span>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch" style="background: #60A5FA;"></div>
+                        <span>#60A5FA - Primary Light (Accents)</span>
+                    </div>
+                </div>
+                <p style="color: #10B981; margin-top: 20px;">✓ Consistent blue creates brand unity!</p>
+            </div>
+        </div>
+        
+        <h2>Spacing System (Base-8 Grid)</h2>
+        <div class="spacing-demo">
+            <div class="spacing-block" style="width: 4px; height: 40px;">4</div>
+            <div class="spacing-block" style="width: 8px; height: 60px;">8</div>
+            <div class="spacing-block" style="width: 12px; height: 80px;">12</div>
+            <div class="spacing-block" style="width: 16px; height: 100px;">16</div>
+            <div class="spacing-block" style="width: 20px; height: 120px;">20</div>
+            <div class="spacing-block" style="width: 24px; height: 140px;">24</div>
+            <div class="spacing-block" style="width: 32px; height: 160px;">32</div>
+            <div class="spacing-block" style="width: 40px; height: 180px;">40</div>
+            <div class="spacing-block" style="width: 48px; height: 200px;">48</div>
+            <div class="spacing-block" style="width: 64px; height: 220px;">64</div>
+        </div>
+        
+        <h2>Typography Scale (Major Third - 1.25x)</h2>
+        <div class="example" style="background: #1E293B; padding: 24px;">
+            <p style="font-size: 44px; margin: 8px 0; color: #F1F5F9;">Display (44px) - Page Titles</p>
+            <p style="font-size: 36px; margin: 8px 0; color: #F1F5F9;">Heading 1 (36px) - Major Sections</p>
+            <p style="font-size: 30px; margin: 8px 0; color: #F1F5F9;">Heading 2 (30px) - Subsections</p>
+            <p style="font-size: 24px; margin: 8px 0; color: #F1F5F9;">Heading 3 (24px) - Card Titles</p>
+            <p style="font-size: 20px; margin: 8px 0; color: #E2E8F0;">Large (20px) - Important Text</p>
+            <p style="font-size: 16px; margin: 8px 0; color: #CBD5E1;">Base (16px) - Body Text</p>
+            <p style="font-size: 14px; margin: 8px 0; color: #94A3B8;">Small (14px) - Secondary Text</p>
+            <p style="font-size: 12px; margin: 8px 0; color: #64748B;">Extra Small (12px) - Captions</p>
+        </div>
+        
+        <h2>Navigation Pattern</h2>
+        <div class="comparison">
+            <div class="example before">
+                <h3>❌ Before</h3>
+                <div style="display: flex; gap: 4px; background: #0F172A; padding: 8px; border-radius: 8px;">
+                    <a style="color: #94A3B8; padding: 6px 12px; font-size: 13px; text-decoration: none;">Dashboard</a>
+                    <a style="color: #007bff; padding: 6px 12px; font-size: 13px; text-decoration: none;">Dual View</a>
+                    <a style="color: #94A3B8; padding: 6px 12px; font-size: 13px; text-decoration: none;">Report</a>
+                </div>
+                <p style="margin-top: 12px; color: #EF4444;">Different blue, small text, tight spacing</p>
+            </div>
+            
+            <div class="example after">
+                <h3>✅ After</h3>
+                <div style="display: flex; gap: 8px; background: #0F172A; padding: 12px; border-radius: 8px;">
+                    <a style="color: #94A3B8; padding: 8px 16px; font-size: 14px; text-decoration: none; border-radius: 8px; transition: all 0.2s;">Dashboard</a>
+                    <a style="color: #3B82F6; padding: 8px 16px; font-size: 14px; text-decoration: none; border-radius: 8px; background: rgba(59, 130, 246, 0.1);">Dual View</a>
+                    <a style="color: #94A3B8; padding: 8px 16px; font-size: 14px; text-decoration: none; border-radius: 8px; transition: all 0.2s;">Report</a>
+                </div>
+                <p style="margin-top: 12px; color: #10B981;">Unified blue, readable text, comfortable spacing</p>
+            </div>
+        </div>
+        
+        <h2>Component States</h2>
+        <div class="example" style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+            <button style="background: #3B82F6; color: white; border: none; padding: 8px 16px; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer;">Primary Button</button>
+            <button style="background: transparent; color: #3B82F6; border: 1px solid #3B82F6; padding: 8px 16px; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer;">Secondary Button</button>
+            <button style="background: transparent; color: #94A3B8; border: none; padding: 8px 16px; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer;">Ghost Button</button>
+            
+            <span style="background: rgba(59, 130, 246, 0.2); color: #60A5FA; padding: 4px 8px; border-radius: 6px; font-size: 12px; font-weight: 500;">Primary Badge</span>
+            <span style="background: rgba(16, 185, 129, 0.2); color: #34D399; padding: 4px 8px; border-radius: 6px; font-size: 12px; font-weight: 500;">Success Badge</span>
+            <span style="background: rgba(245, 158, 11, 0.2); color: #FCD34D; padding: 4px 8px; border-radius: 6px; font-size: 12px; font-weight: 500;">Warning Badge</span>
+        </div>
+    </div>
+</body>
+</html>

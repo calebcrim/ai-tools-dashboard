@@ -1,5 +1,8 @@
 /* Enterprise Report - Main Layout Styles */
 
+/* Import design tokens */
+@import url('design-tokens.css');
+
 /* CSS Custom Properties for consistent theming */
 :root {
     /* Layout dimensions */
@@ -11,23 +14,23 @@
     --gap-sm: 16px;
     --gap-xs: 8px;
     
-    /* Colors */
-    --color-primary: #667eea;
-    --color-secondary: #10b981;
-    --color-accent: #f59e0b;
-    --color-danger: #ef4444;
-    --color-success: #10b981;
+    /* Colors - Override with design tokens */
+    --color-primary: var(--color-primary); /* #3B82F6 from design tokens */
+    --color-secondary: var(--color-success);
+    --color-accent: var(--color-warning);
+    --color-danger: var(--color-error);
+    --color-success: var(--color-success);
     
-    --bg-primary: #ffffff;
-    --bg-secondary: #f8fafc;
-    --bg-elevated: #ffffff;
-    --bg-hover: #f1f5f9;
+    --bg-primary: var(--color-bg-primary);
+    --bg-secondary: var(--color-bg-secondary);
+    --bg-elevated: var(--color-bg-secondary);
+    --bg-hover: var(--color-bg-hover);
     
-    --text-primary: #1e293b;
-    --text-secondary: #64748b;
-    --text-tertiary: #94a3b8;
+    --text-primary: var(--color-text-primary);
+    --text-secondary: var(--color-text-secondary);
+    --text-tertiary: var(--color-text-muted);
     
-    --border-color: #e2e8f0;
+    --border-color: var(--color-border-primary);
     --border-radius: 8px;
     --border-radius-sm: 6px;
     --border-radius-lg: 12px;
@@ -67,6 +70,8 @@ body {
     background-color: var(--bg-secondary);
     color: var(--text-primary);
     overflow-x: hidden;
+    /* Ensure body starts below fixed header */
+    padding-top: var(--nav-height);
 }
 
 /* Header adjustments */
@@ -76,20 +81,57 @@ body {
     left: 0;
     right: 0;
     height: var(--nav-height);
-    z-index: 1000;
+    z-index: 9999; /* Increased z-index to ensure header stays on top */
     background-color: var(--bg-primary);
     border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow for better separation */
+}
+
+/* Global Search in Header */
+.global-search {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+    margin: 0 var(--gap);
+}
+
+.global-search input {
+    width: 100%;
+    padding: 8px 12px 8px 36px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    color: var(--text-primary);
+    font-size: var(--text-sm); /* 14px minimum */
+    transition: all var(--transition-fast);
+}
+
+.global-search input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.global-search i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-tertiary);
+    pointer-events: none;
 }
 
 /* THREE-COLUMN LAYOUT - The Core Fix */
 .enterprise-content {
     display: grid;
     grid-template-columns: var(--filter-width) 1fr 0; /* Center takes all available space */
-    height: calc(100vh - var(--nav-height));
-    margin-top: var(--nav-height);
+    height: calc(100vh - var(--nav-height) - 20px); /* Adjust height to account for padding */
+    margin-top: 0; /* Remove margin-top since body has padding-top */
+    padding-top: 20px; /* Additional padding to ensure content doesn't overlap */
     overflow: hidden;
     transition: grid-template-columns var(--transition-slow);
     background-color: var(--bg-secondary);
+    position: relative; /* Ensure proper stacking context */
 }
 
 /* When details panel is open */

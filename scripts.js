@@ -24,8 +24,26 @@ document.addEventListener('DOMContentLoaded', function() {
         exportSystem = new EnhancedExportSystem();
     }
     
-    // Load tools data
-    loadToolsData();
+    // Check if data is already loaded
+    if (window.unifiedToolsData && window.unifiedToolsData.tools) {
+        console.log('Data already loaded at DOMContentLoaded');
+        loadToolsData();
+    } else {
+        console.log('Waiting for unifiedToolsDataLoaded event...');
+        // Wait for data to load
+        window.addEventListener('unifiedToolsDataLoaded', function() {
+            console.log('unifiedToolsDataLoaded event received');
+            loadToolsData();
+        });
+        
+        // Fallback timeout
+        setTimeout(() => {
+            if (allTools.length === 0) {
+                console.warn('Data load timeout, loading with fallback');
+                loadToolsData();
+            }
+        }, 2000);
+    }
 });
 
 /**
@@ -41,8 +59,12 @@ async function loadToolsData() {
             </div>
         `;
         
+        console.log('Loading tools data...');
+        console.log('window.unifiedToolsData:', typeof window.unifiedToolsData);
+        console.log('window.unifiedToolsData.tools:', window.unifiedToolsData?.tools?.length);
+        
         // Load unified data
-        if (typeof window.unifiedToolsData !== 'undefined' && window.unifiedToolsData.tools) {
+        if (typeof window.unifiedToolsData !== 'undefined' && window.unifiedToolsData.tools && window.unifiedToolsData.tools.length > 0) {
             allTools = window.unifiedToolsData.tools;
             console.log(`✅ Loaded ${allTools.length} tools from unified data`);
             
@@ -53,7 +75,8 @@ async function loadToolsData() {
                 showNotification(`Loaded ${allTools.length} unique tools (${metadata.duplicatesRemoved} duplicates removed)`, 'success');
             }
         } else {
-            console.warn('No unified data found, using sample tools');
+            console.warn('No unified data found or empty tools array, using sample tools');
+            console.warn('unifiedToolsData:', window.unifiedToolsData);
             allTools = getSampleTools();
         }
         

@@ -1,12 +1,15 @@
 /* Portfolio Grid Component Styles */
 
+/* Import design tokens */
+@import url('../design-tokens.css');
+
 /* Portfolio Stats Bar */
 .portfolio-stats {
     display: flex;
     align-items: center;
     gap: var(--gap-sm);
     padding: var(--gap-sm) 0;
-    font-size: 0.875rem;
+    font-size: var(--text-sm); /* 14px minimum */
     color: var(--text-secondary);
     border-bottom: 1px solid var(--border-color);
     margin-bottom: var(--gap);
@@ -30,8 +33,8 @@
 .tool-card {
     background-color: var(--bg-elevated);
     border: 1px solid var(--border-color);
-    border-radius: var(--border-radius-lg);
-    padding: var(--gap);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6); /* 24px for proper breathing room */
     cursor: pointer;
     transition: all var(--transition-base);
     position: relative;
@@ -63,7 +66,7 @@
 }
 
 .tool-name {
-    font-size: 1.125rem;
+    font-size: var(--text-xl); /* 20px for better readability */
     font-weight: 600;
     color: var(--text-primary);
     margin: 0 0 4px 0;
@@ -73,10 +76,10 @@
 }
 
 .tool-category {
-    font-size: 0.75rem;
+    font-size: var(--text-sm); /* 14px minimum */
     color: var(--text-secondary);
     background-color: var(--bg-hover);
-    padding: 2px 8px;
+    padding: var(--space-1) var(--space-3); /* Better padding */
     border-radius: var(--border-radius-sm);
     display: inline-block;
 }
@@ -95,7 +98,7 @@
 }
 
 .metric-label {
-    font-size: 0.75rem;
+    font-size: var(--text-sm); /* 14px minimum */
     color: var(--text-tertiary);
     margin-bottom: 2px;
 }
@@ -116,7 +119,7 @@
 
 /* Tool Description */
 .tool-description {
-    font-size: 0.875rem;
+    font-size: var(--text-sm); /* 14px minimum */
     color: var(--text-secondary);
     line-height: 1.5;
     margin-bottom: var(--gap-sm);
@@ -135,8 +138,8 @@
 }
 
 .tag {
-    font-size: 0.75rem;
-    padding: 2px 6px;
+    font-size: var(--text-sm); /* 14px minimum */
+    padding: var(--space-1) var(--space-2); /* Better padding */
     border-radius: var(--border-radius-sm);
     background-color: var(--bg-hover);
     color: var(--text-secondary);

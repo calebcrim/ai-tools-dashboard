@@ -1,8 +1,11 @@
 /* Guide Styles - Individual Guide Pages */
 
+/* Import design tokens */
+@import url('../../../css/design-tokens.css');
+
 :root {
     /* Inherit from hub styles */
-    --guide-primary: #007bff;
+    --guide-primary: var(--color-primary); /* #3B82F6 */
     --guide-success: #28a745;
     --guide-warning: #ffc107;
     --guide-danger: #dc3545;

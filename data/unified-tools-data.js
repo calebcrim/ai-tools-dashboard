@@ -10328,4 +10328,14 @@ const unifiedToolsData = {
   ]
 };
 
+// Export for Node.js environments
 if (typeof module !== 'undefined') module.exports = unifiedToolsData;
+
+// Ensure it's available globally in the browser
+if (typeof window !== 'undefined') {
+    window.unifiedToolsData = unifiedToolsData;
+    console.log('✅ Unified tools data loaded:', unifiedToolsData.tools.length, 'tools');
+    
+    // Dispatch event to signal data is ready
+    window.dispatchEvent(new CustomEvent('unifiedToolsDataLoaded', { detail: unifiedToolsData }));
+}

@@ -12,6 +12,10 @@
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Design System -->
+    <link rel="stylesheet" href="css/design-tokens.css">
+    <link rel="stylesheet" href="css/components.css">
+    
     <!-- Main Styles -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="css/enterprise-report.css">
@@ -116,7 +120,7 @@
         
         /* Ensure proper layout spacing */
         .enterprise-content {
-            margin-top: 60px !important; /* Just nav height now */
+            /* Margin-top handled by CSS file to avoid conflicts */
         }
         
         /* Responsive */
@@ -394,6 +398,7 @@
 
     <!-- Load Data -->
     <script src="data/unified-tools-data.js"></script>
+    <script src="fix-data-loading.js"></script>
     
     <!-- Load Data Processors -->
     <script src="financial-analysis/js/data-processor.js"></script>

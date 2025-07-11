@@ -1,5 +1,8 @@
 /* Navigation Redesign - Clean separation between pages and filters */
 
+/* Import design tokens */
+@import url('design-tokens.css');
+
 /* Override existing header styles */
 .header {
     background: #0a0a0a;
@@ -75,9 +78,9 @@
 
 /* Active state */
 .header-nav .nav-link.active {
-    background: rgba(0, 123, 255, 0.1);
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
+    background: rgba(59, 130, 246, 0.1); /* Using primary color with opacity */
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
 }
 
 /* Header search bar in nav row */
@@ -99,7 +102,7 @@
 }
 
 .header-search-bar .search-input:focus {
-    border-color: #007bff;
+    border-color: var(--color-primary);
     background: #1f1f1f;
     outline: none;
 }
