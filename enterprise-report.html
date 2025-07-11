@@ -150,23 +150,21 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header fixed">
+    <!-- Unified Header -->
+    <header class="header unified-header">
         <div class="header-content">
-            <div class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-robot"></i>
+            <div class="header-left">
+                <!-- Logo and title -->
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h1 class="logo-text">AI Tools</h1>
                 </div>
-                <h1 class="logo-text">AI Tools Enterprise Report</h1>
             </div>
             
-            <!-- Global Search -->
-            <div class="global-search">
-                <i class="fas fa-search"></i>
-                <input type="text" id="global-search" placeholder="Search 317 AI tools...">
-            </div>
-            
-            <div class="header-actions">
+            <div class="header-center">
+                <!-- Navigation tabs -->
                 <nav class="header-nav">
                     <a href="index.html" class="nav-link">Dashboard</a>
                     <a href="dual-view-enhanced.html" class="nav-link">Dual View</a>
@@ -174,15 +172,18 @@
                     <a href="financial-analysis/index.html" class="nav-link">Financial Analysis</a>
                     <a href="best-practices.html" class="nav-link">Best Practices</a>
                 </nav>
-                
-                <div class="header-buttons">
-                    <button class="icon-btn" onclick="window.print()" title="Print Report">
-                        <i class="fas fa-print"></i>
-                    </button>
-                    <button class="icon-btn" onclick="exportDashboard()" title="Export Data">
-                        <i class="fas fa-download"></i>
-                    </button>
-                </div>
+            </div>
+            
+            <div class="header-right">
+                <!-- Action buttons -->
+                <button class="icon-btn print-btn" onclick="window.print()" title="Print Report">
+                    <i class="fas fa-print"></i>
+                    <span>Print</span>
+                </button>
+                <button class="icon-btn export-btn" onclick="exportDashboard()" title="Export Data">
+                    <i class="fas fa-download"></i>
+                    <span>Export</span>
+                </button>
             </div>
         </div>
     </header>

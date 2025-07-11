@@ -466,3 +466,179 @@ body {
 .view-btn span {
     font-size: 0.875rem;
 }
+
+/* Unified header - single row layout */
+.unified-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #1a1a1a;
+    border-bottom: 1px solid #2a2a2a;
+    z-index: 1000;
+    height: 60px; /* Single row height */
+}
+
+.unified-header .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    gap: 2rem;
+}
+
+/* Left section - Logo and title */
+.header-left {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.unified-header .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.unified-header .logo-icon {
+    font-size: 1.5rem;
+    color: #3B82F6;
+}
+
+.unified-header .logo-text {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+    color: #fff;
+}
+
+/* Center section - Navigation */
+.header-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.unified-header .header-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.unified-header .nav-link {
+    padding: 0.5rem 1rem;
+    color: #94A3B8;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s;
+    white-space: nowrap;
+    font-size: 0.875rem;
+}
+
+.unified-header .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.unified-header .nav-link.active {
+    background: rgba(59, 130, 246, 0.2);
+    color: #3B82F6;
+}
+
+/* Right section - Actions */
+.header-right {
+    display: flex;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.unified-header .print-btn,
+.unified-header .export-btn {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.unified-header .print-btn:hover,
+.unified-header .export-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Override body padding for unified header */
+body {
+    padding-top: 60px !important; /* Just the height of the single header */
+}
+
+/* Remove any extra spacing from previous attempts */
+.dashboard-container,
+.enterprise-report-container,
+main,
+.enterprise-content,
+.portfolio-section,
+.portfolio-header {
+    margin-top: 0 !important;
+    padding-top: var(--gap) !important; /* Just normal padding */
+}
+
+/* Ensure metrics are visible */
+.portfolio-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 24px;
+}
+
+.metrics-container-inline {
+    display: flex !important;
+    gap: 16px;
+    background-color: #f8fafc;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .unified-header .logo-text {
+        font-size: 1rem;
+    }
+    
+    .unified-header .nav-link {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8125rem;
+    }
+}
+
+@media (max-width: 968px) {
+    /* Stack navigation below on mobile */
+    .unified-header .header-content {
+        flex-wrap: wrap;
+    }
+    
+    .header-center {
+        order: 3;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    
+    .unified-header {
+        height: auto;
+        padding: 0.75rem 0;
+    }
+    
+    body {
+        padding-top: 100px !important; /* Adjust for two rows */
+    }
+}
