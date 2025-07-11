@@ -1,0 +1,632 @@
+/**
+ * Mobile-First Responsive Styles
+ * Base styles for mobile, enhanced for larger screens
+ */
+
+/* Mobile-First Base Typography */
+html {
+    font-size: 14px; /* Base font size for mobile */
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1024px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Mobile-First Layout Containers */
+.main-container {
+    width: 100%;
+    padding: 1rem;
+    min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+    .main-container {
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+}
+
+/* Content Wrapper - Mobile First */
+.content-wrapper {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .content-wrapper {
+        padding: 0 1rem;
+    }
+}
+
+/* Mobile-First Tool Grid */
+.tools-container {
+    width: 100%;
+    padding: 0;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 1rem;
+    width: 100%;
+    padding: 0;
+}
+
+@media (min-width: 480px) {
+    .tools-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (min-width: 768px) {
+    .tools-grid {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 1.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .tools-grid {
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile-First Tool Cards */
+.tool-card {
+    width: 100%;
+    min-height: auto;
+    padding: 1rem;
+    margin-bottom: 0;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.tool-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.tool-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0;
+    flex: 1;
+}
+
+.tool-category {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    white-space: nowrap;
+}
+
+.tool-description {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.tool-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.tool-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.tool-actions button,
+.tool-actions a {
+    flex: 1;
+    padding: 0.625rem 0.875rem;
+    font-size: 0.875rem;
+    min-height: 44px; /* Touch target size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+}
+
+@media (min-width: 768px) {
+    .tool-card {
+        padding: 1.25rem;
+        min-height: 260px;
+    }
+    
+    .tool-name {
+        font-size: 1.25rem;
+    }
+    
+    .tool-description {
+        font-size: 0.9375rem;
+        margin-bottom: 1rem;
+    }
+    
+    .tool-actions {
+        gap: 0.75rem;
+    }
+}
+
+/* Mobile View Controls */
+.view-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.sort-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.sort-controls select {
+    flex: 1;
+    padding: 0.625rem;
+    font-size: 0.875rem;
+    min-height: 44px;
+}
+
+.view-options {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+    .view-controls {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background: var(--bg-card);
+        border-radius: 8px;
+    }
+}
+
+/* Mobile Search Bar */
+.search-container {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.search-input {
+    width: 100%;
+    min-width: unset;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    font-size: 1rem;
+    min-height: 44px;
+}
+
+.search-icon {
+    font-size: 1rem;
+    left: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .search-container {
+        max-width: 400px;
+    }
+}
+
+/* Mobile Modals */
+.modal {
+    padding: 1rem;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: calc(100vw - 2rem);
+    max-height: calc(100vh - 2rem);
+    margin: 1rem auto;
+    border-radius: 12px;
+}
+
+.modal-header {
+    padding: 1rem;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+}
+
+.modal-body {
+    padding: 1rem;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.modal-close {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .modal-content {
+        max-width: 600px;
+        margin: 2rem auto;
+    }
+    
+    .modal-header {
+        padding: 1.5rem;
+    }
+    
+    .modal-body {
+        padding: 1.5rem;
+    }
+}
+
+/* Mobile List View */
+.list-view .tool-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.875rem;
+    min-height: auto;
+}
+
+.list-view .tool-card-content {
+    flex: 1;
+}
+
+.list-view .tool-name {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.list-view .tool-description {
+    font-size: 0.8125rem;
+    -webkit-line-clamp: 2;
+    margin-bottom: 0.5rem;
+}
+
+.list-view .tool-actions {
+    margin-left: 1rem;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.list-view .tool-actions button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+}
+
+/* Mobile Filters */
+.advanced-filters {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-main);
+    z-index: 1100;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.advanced-filters.active {
+    transform: translateY(0);
+}
+
+.filters-header {
+    position: sticky;
+    top: 0;
+    background: var(--bg-card);
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.filters-content {
+    padding: 1rem;
+}
+
+.filter-section {
+    margin-bottom: 1.5rem;
+}
+
+.filter-section h4 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.filter-checkbox {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    min-height: 44px;
+}
+
+.filter-checkbox input {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.75rem;
+}
+
+.filter-actions {
+    position: sticky;
+    bottom: 0;
+    background: var(--bg-card);
+    padding: 1rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    gap: 0.75rem;
+}
+
+.filter-actions button {
+    flex: 1;
+    padding: 0.875rem;
+    min-height: 48px;
+}
+
+@media (min-width: 768px) {
+    .advanced-filters {
+        position: static;
+        transform: none;
+        width: 280px;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+    }
+}
+
+/* Mobile Stats Bar */
+.stats-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.75rem;
+    background: var(--bg-card);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .stats-bar {
+        padding: 1rem 1.5rem;
+        justify-content: space-between;
+    }
+}
+
+/* Mobile Comparison Panel */
+.comparison-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    border-top: 2px solid var(--border);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    max-height: 70vh;
+    z-index: 900;
+}
+
+.comparison-panel.active {
+    transform: translateY(0);
+}
+
+.comparison-header {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.comparison-content {
+    padding: 1rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.comparison-tools {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.comparison-actions {
+    padding: 1rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .comparison-panel {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: auto;
+        width: 400px;
+        transform: translateX(100%);
+        max-height: 100vh;
+        border-left: 2px solid var(--border);
+        border-top: none;
+    }
+    
+    .comparison-panel.active {
+        transform: translateX(0);
+    }
+}
+
+/* Touch-Friendly Buttons */
+button,
+.btn,
+a.btn {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem 1rem;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove hover effects on touch devices */
+@media (hover: none) {
+    .tool-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    button:hover,
+    .btn:hover {
+        transform: none;
+    }
+}
+
+/* Loading States for Mobile */
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+}
+
+/* Mobile Utilities */
+@media (max-width: 767px) {
+    /* Hide scrollbars but keep functionality */
+    ::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+    
+    /* Prevent horizontal scroll */
+    body,
+    html {
+        overflow-x: hidden;
+    }
+    
+    /* Full width elements */
+    .mobile-full-width {
+        width: 100vw;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    /* Stack elements */
+    .mobile-stack {
+        flex-direction: column !important;
+    }
+    
+    /* Hide desktop elements */
+    .desktop-only {
+        display: none !important;
+    }
+}
+
+/* Landscape Mobile Adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+    .tools-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    
+    .modal-content {
+        max-height: calc(100vh - 1rem);
+        margin: 0.5rem auto;
+    }
+    
+    .advanced-filters {
+        max-height: 100vh;
+    }
+}
+
+/* High DPI Screen Adjustments */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Sharper borders and shadows */
+    .tool-card,
+    .modal-content,
+    button {
+        border-width: 0.5px;
+    }
+}
+
+/* Performance Optimizations */
+@media (max-width: 768px) {
+    /* Reduce animations on mobile */
+    * {
+        animation-duration: 0.2s !important;
+        transition-duration: 0.2s !important;
+    }
+    
+    /* Optimize scroll performance */
+    .tools-container {
+        will-change: scroll-position;
+    }
+    
+    /* Reduce shadow complexity */
+    .tool-card {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Safe Area Insets for Modern Devices */
+@supports (padding: max(0px)) {
+    .main-container {
+        padding-left: max(1rem, env(safe-area-inset-left));
+        padding-right: max(1rem, env(safe-area-inset-right));
+    }
+    
+    .modal-content {
+        margin-bottom: max(1rem, env(safe-area-inset-bottom));
+    }
+}

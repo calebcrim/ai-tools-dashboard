@@ -23,6 +23,10 @@
     <link rel="stylesheet" href="css/autocomplete-stacking-fix.css">
     <link rel="stylesheet" href="css/unified-filter-bar.css">
     <link rel="stylesheet" href="css/navigation-redesign.css">
+    
+    <!-- Mobile Responsive Styles -->
+    <link rel="stylesheet" href="css/mobile-navigation.css">
+    <link rel="stylesheet" href="css/mobile-responsive.css">
 </head>
 <body>
     <!-- Header -->
@@ -103,15 +107,17 @@
         </div>
 
         <!-- Financial Analysis Callout -->
-        <div class="financial-callout" style="background: linear-gradient(135deg, #667eea 0%, #10b981 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);">
+        <div class="financial-callout mobile-stack" style="background: linear-gradient(135deg, #667eea 0%, #10b981 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);">
             <div style="flex: 1;">
-                <h3 style="margin: 0 0 0.5rem 0; font-size: 1.25rem; display: flex; align-items: center; gap: 0.5rem;">
-                    <i class="fas fa-chart-line"></i> New: AI Investment Command Center
+                <h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-chart-line"></i> <span>New: AI Investment Command Center</span>
                 </h3>
-                <p style="margin: 0; opacity: 0.95;">Get real-time TCO calculations, identify $2.4M+ in savings, and generate CFO-ready reports for all 317 AI tools.</p>
+                <p style="margin: 0; opacity: 0.95; font-size: 0.875rem;">Get real-time TCO calculations, identify $2.4M+ in savings, and generate CFO-ready reports for all 317 AI tools.</p>
             </div>
-            <a href="financial-analysis/index.html" class="btn" style="background: white; color: #667eea; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.2s; white-space: nowrap;">
-                Launch Financial Analysis <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
+            <a href="financial-analysis/index.html" class="btn" style="background: white; color: #667eea; padding: 0.75rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.2s; white-space: nowrap; font-size: 0.875rem;">
+                <span class="desktop-only">Launch Financial Analysis</span>
+                <span class="mobile-only" style="display: none;">Launch</span>
+                <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
             </a>
         </div>
 
@@ -367,5 +373,11 @@
     <!-- Removed advanced-filters.js - functionality integrated into unified filter bar -->
     <!-- <script src="js/advanced-filters.js"></script> -->
     <script src="js/autocomplete-diagnostic.js"></script>
+    
+    <!-- Mobile Navigation -->
+    <script src="js/mobile-navigation.js"></script>
+    
+    <!-- Mobile Performance Optimizations -->
+    <script src="js/mobile-performance.js"></script>
 </body>
 </html>

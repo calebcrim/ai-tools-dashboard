@@ -33,6 +33,11 @@
     <link rel="stylesheet" href="css/navigation-redesign.css">
     <link rel="stylesheet" href="css/navigation-override.css">
     
+    <!-- Mobile Responsive Styles -->
+    <link rel="stylesheet" href="css/mobile-navigation.css">
+    <link rel="stylesheet" href="css/mobile-responsive.css">
+    <link rel="stylesheet" href="css/enterprise-report-mobile.css">
+    
     <!-- Inline metrics styles -->
     <style>
         /* Portfolio header with inline metrics */
@@ -195,6 +200,9 @@
             <div class="filter-header">
                 <h3>Filters</h3>
                 <button class="reset-filters" aria-label="Reset all filters">Reset</button>
+                <button class="mobile-close desktop-only" style="display: none;" aria-label="Close filters" onclick="document.querySelector('.filter-panel').classList.remove('mobile-open'); document.querySelector('.mobile-filter-overlay')?.classList.remove('active');">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
             
             <!-- Search Filter -->
@@ -414,6 +422,9 @@
     
     <!-- Load Main Enterprise Report Script -->
     <script src="js/enterprise-report.js"></script>
+    
+    <!-- Mobile Navigation -->
+    <script src="js/mobile-navigation.js"></script>
     
 </body>
 </html>
