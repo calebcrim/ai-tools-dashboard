@@ -5,11 +5,12 @@ The dual-view toggle system has been successfully implemented in your workspace.
 
 ## Files Created
 
-### 1. **index.new.html** (New version of index.html)
-- Location: `/workspaces/TOOLS/index.new.html`
-- Contains the complete dual-view HTML structure
+### 1. **dual-view-enhanced.html** (Enhanced dual view page)
+- Location: `/workspaces/ai-tools-dashboard/dual-view-enhanced.html`
+- Contains the complete enhanced dual-view HTML structure
 - Includes header with view toggle buttons (Executive/Technical)
-- References the new CSS and JavaScript files
+- References the enhanced CSS and JavaScript files
+- Note: The old `index.new.html` now serves as a redirect page
 
 ### 2. **css/dual-view.css**
 - Location: `/workspaces/TOOLS/css/dual-view.css`
@@ -46,9 +47,10 @@ The dual-view toggle system has been successfully implemented in your workspace.
 ## Integration Steps
 
 ### Option 1: Use the New HTML (Recommended for Testing)
-1. Rename your current `index.html` to `index.backup.html`
-2. Rename `index.new.html` to `index.html`
-3. Start your web server and test
+1. The dual view is now accessible at `dual-view-enhanced.html`
+2. All navigation links have been updated to point to this new location
+3. The old `index.new.html` automatically redirects to the enhanced version
+4. Start your web server and test
 
 ### Option 2: Integrate with Existing HTML
 1. Add the view toggle to your existing header:
@@ -144,7 +146,7 @@ Modify CSS variables in `css/dual-view.css`
 
 ## Next Steps
 
-1. Test the implementation with index.new.html
+1. Test the implementation with dual-view-enhanced.html
 2. Integrate the view toggle into your existing header
 3. Use the data adapter to connect your unified-tools-data.js
 4. Customize the card layouts for your specific needs

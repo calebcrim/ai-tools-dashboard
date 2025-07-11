@@ -24,7 +24,7 @@ The following files were updated to include navigation links to the new Financia
 ### Navigation Structure
 ```
 Dashboard (index.html)
-├── Dual View (index.new.html)
+├── Dual View (dual-view-enhanced.html)
 ├── Enterprise Report (enterprise-report.html) ← NEW IMPLEMENTATION
 └── Financial Analysis (financial-analysis/index.html) ← NEW
 ```
@@ -84,7 +84,7 @@ When adding new pages or updating navigation, ensure all pages maintain consiste
 1. Dashboard link: `index.html`
 2. Enterprise Report: `enterprise-report.html` (NEW - with 3-column layout)
 3. Financial Analysis: `financial-analysis/index.html`
-4. Dual View: `index.new.html` (optional)
+4. Dual View: `dual-view-enhanced.html`
 
 Note: `enterprise-dashboard.html` is the legacy version and should no longer be linked in navigation.
 
