@@ -1,0 +1,406 @@
+/* Guide Styles - Individual Guide Pages */
+
+:root {
+    /* Inherit from hub styles */
+    --guide-primary: #007bff;
+    --guide-success: #28a745;
+    --guide-warning: #ffc107;
+    --guide-danger: #dc3545;
+    --guide-dark: #0a0a0a;
+    --guide-gray: #6c757d;
+    --guide-light: #1a1a1a;
+    --guide-white: #ffffff;
+    --guide-text-primary: #ffffff;
+    --guide-text-secondary: #b0b0b0;
+    --guide-border: #2a2a2a;
+    --guide-card-bg: #1a1a1a;
+    --guide-hover-bg: #2a2a2a;
+    --guide-code-bg: #0a0a0a;
+    --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'Monaco', 'Consolas', monospace;
+}
+
+/* Base */
+body {
+    background: var(--guide-dark);
+    color: var(--guide-text-primary);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Guide Container */
+.guide-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Guide Header */
+.guide-header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--guide-border);
+}
+
+.guide-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.difficulty-badge {
+    padding: 0.375rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.difficulty-badge.beginner {
+    background: rgba(59, 130, 246, 0.2);
+    color: #3b82f6;
+}
+
+.difficulty-badge.intermediate {
+    background: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+}
+
+.difficulty-badge.advanced {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+.read-time,
+.last-updated {
+    font-size: 0.875rem;
+    color: var(--guide-text-secondary);
+}
+
+.guide-header h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    line-height: 1.2;
+    color: var(--guide-text-primary);
+}
+
+.guide-summary {
+    font-size: 1.25rem;
+    color: var(--guide-text-secondary);
+    margin: 0;
+}
+
+/* Table of Contents */
+.guide-toc {
+    background: var(--guide-card-bg);
+    border: 1px solid var(--guide-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.guide-toc h3 {
+    margin: 0 0 1rem 0;
+    color: var(--guide-text-primary);
+}
+
+.guide-toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.guide-toc li {
+    margin-bottom: 0.5rem;
+}
+
+.guide-toc a {
+    color: var(--guide-text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.guide-toc a:hover {
+    color: var(--guide-primary);
+}
+
+/* Guide Content */
+.guide-content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.guide-content h2 {
+    font-size: 2rem;
+    margin: 3rem 0 1rem 0;
+    color: var(--guide-text-primary);
+}
+
+.guide-content h3 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem 0;
+    color: var(--guide-text-primary);
+}
+
+.guide-content p {
+    margin-bottom: 1.5rem;
+    color: var(--guide-text-secondary);
+}
+
+/* Learning Objectives */
+.learning-objectives {
+    background: var(--guide-card-bg);
+    border: 1px solid var(--guide-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.learning-objectives h3 {
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.learning-objectives ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.learning-objectives li {
+    margin-bottom: 0.5rem;
+    color: var(--guide-text-secondary);
+}
+
+/* Example Comparisons */
+.example-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.example {
+    background: var(--guide-card-bg);
+    border: 1px solid var(--guide-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.example.bad {
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.example.good {
+    border-color: rgba(40, 167, 69, 0.3);
+}
+
+.example h4 {
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.example.bad h4 {
+    color: #ef4444;
+}
+
+.example.good h4 {
+    color: #28a745;
+}
+
+/* Code Blocks */
+.code-block,
+.example code,
+.gem-example {
+    background: var(--guide-code-bg);
+    border: 1px solid var(--guide-border);
+    border-radius: 8px;
+    padding: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+code {
+    background: var(--guide-code-bg);
+    padding: 0.125rem 0.375rem;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+}
+
+/* Try It Sections */
+.try-it-section {
+    background: var(--guide-card-bg);
+    border: 1px solid var(--guide-border);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.try-it-section h3 {
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.prompt-input {
+    width: 100%;
+    min-height: 100px;
+    background: var(--guide-code-bg);
+    border: 1px solid var(--guide-border);
+    color: var(--guide-text-primary);
+    padding: 1rem;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    resize: vertical;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: var(--guide-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+.btn-secondary {
+    background: var(--guide-hover-bg);
+    color: var(--guide-text-primary);
+    border: 1px solid var(--guide-border);
+}
+
+.btn-secondary:hover {
+    background: var(--guide-border);
+}
+
+/* Key Takeaways */
+.key-takeaways {
+    background: rgba(40, 167, 69, 0.1);
+    border: 1px solid rgba(40, 167, 69, 0.3);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.key-takeaways h3 {
+    margin: 0 0 1rem 0;
+    color: #28a745;
+}
+
+.key-takeaways ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.key-takeaways li {
+    margin-bottom: 0.5rem;
+}
+
+/* Next Steps */
+.next-steps {
+    background: var(--guide-card-bg);
+    border: 1px solid var(--guide-border);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.next-steps h3 {
+    margin: 0 0 1rem 0;
+}
+
+.next-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.next-guide-link {
+    display: block;
+    padding: 1rem;
+    background: var(--guide-hover-bg);
+    border: 1px solid var(--guide-border);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--guide-text-primary);
+    transition: all 0.2s;
+}
+
+.next-guide-link:hover {
+    border-color: var(--guide-primary);
+    transform: translateY(-2px);
+}
+
+/* Navigation */
+.guide-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    margin: 3rem 0;
+    border-top: 1px solid var(--guide-border);
+}
+
+.guide-nav a {
+    color: var(--guide-primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.2s;
+}
+
+.guide-nav a:hover {
+    gap: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .guide-container {
+        padding: 1rem;
+    }
+    
+    .guide-header h1 {
+        font-size: 2rem;
+    }
+    
+    .example-comparison {
+        grid-template-columns: 1fr;
+    }
+    
+    .guide-meta {
+        font-size: 0.875rem;
+    }
+    
+    .next-steps-grid {
+        grid-template-columns: 1fr;
+    }
+}

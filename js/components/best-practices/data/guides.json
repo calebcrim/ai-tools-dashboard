@@ -1,0 +1,179 @@
+{
+  "categories": [
+    {
+      "id": "fundamentals",
+      "name": "AI Fundamentals",
+      "description": "Essential AI concepts and basic tool usage",
+      "icon": "🎯",
+      "difficulty": "beginner",
+      "totalGuides": 12,
+      "estimatedHours": 3
+    },
+    {
+      "id": "advanced",
+      "name": "Advanced Techniques",
+      "description": "Level up with advanced prompting, workflow automation, and integrations",
+      "icon": "🚀",
+      "difficulty": "intermediate",
+      "totalGuides": 18,
+      "estimatedHours": 5
+    },
+    {
+      "id": "industry",
+      "name": "Industry Specialization",
+      "description": "Master AI applications for specific industries and use cases",
+      "icon": "💡",
+      "difficulty": "advanced",
+      "totalGuides": 24,
+      "estimatedHours": 8
+    }
+  ],
+  "guides": [
+    {
+      "id": "prompt-engineering-basics",
+      "title": "Prompt Engineering Basics",
+      "slug": "prompt-engineering-basics",
+      "category": "fundamentals",
+      "difficulty": "beginner",
+      "readTime": 10,
+      "excerpt": "Learn the 5 core principles that will transform your AI interactions from frustrating to fantastic",
+      "tags": ["prompting", "basics", "getting-started"],
+      "author": "AI Tools Team",
+      "lastUpdated": "2024-11-01",
+      "featured": true,
+      "sections": [
+        "Be Specific",
+        "Provide Context",
+        "Use Examples",
+        "Define Format",
+        "Iterate & Refine"
+      ]
+    },
+    {
+      "id": "multi-tool-workflows",
+      "title": "Multi-Tool Workflows",
+      "slug": "multi-tool-workflows",
+      "category": "advanced",
+      "difficulty": "intermediate",
+      "readTime": 15,
+      "excerpt": "Combine multiple AI tools to create powerful automated workflows that save hours",
+      "tags": ["automation", "workflows", "integration"],
+      "author": "AI Tools Team",
+      "lastUpdated": "2024-11-01",
+      "featured": true,
+      "sections": [
+        "Understanding Tool Strengths",
+        "Creating Tool Chains",
+        "Data Handoffs",
+        "Error Handling",
+        "Real-World Examples"
+      ]
+    },
+    {
+      "id": "choosing-right-tool",
+      "title": "Choosing the Right AI Tool",
+      "slug": "choosing-right-tool",
+      "category": "fundamentals",
+      "difficulty": "beginner",
+      "readTime": 8,
+      "excerpt": "A practical framework for selecting the perfect AI tool for any task or project",
+      "tags": ["selection", "comparison", "decision-making"],
+      "author": "AI Tools Team",
+      "lastUpdated": "2024-11-01",
+      "featured": true,
+      "sections": [
+        "Define Your Needs",
+        "Evaluate Capabilities",
+        "Consider Constraints",
+        "Test & Compare",
+        "Make the Decision"
+      ]
+    },
+    {
+      "id": "custom-model-fine-tuning",
+      "title": "Custom Model Fine-Tuning",
+      "slug": "custom-model-fine-tuning",
+      "category": "industry",
+      "difficulty": "advanced",
+      "readTime": 20,
+      "excerpt": "Step-by-step guide to training AI models on your specific data and use cases",
+      "tags": ["fine-tuning", "custom-models", "advanced"],
+      "author": "AI Tools Team",
+      "lastUpdated": "2024-11-01",
+      "featured": true,
+      "sections": [
+        "When to Fine-Tune",
+        "Data Preparation",
+        "Training Process",
+        "Evaluation Metrics",
+        "Deployment Strategies"
+      ]
+    },
+    {
+      "id": "ai-content-creation",
+      "title": "AI for Content Creation",
+      "slug": "ai-content-creation",
+      "category": "advanced",
+      "difficulty": "intermediate",
+      "readTime": 12,
+      "excerpt": "Master techniques for generating high-quality content that maintains your brand voice",
+      "tags": ["content", "writing", "branding"],
+      "author": "AI Tools Team",
+      "lastUpdated": "2024-11-01",
+      "featured": true,
+      "sections": [
+        "Brand Voice Training",
+        "Content Templates",
+        "Quality Control",
+        "SEO Optimization",
+        "Scaling Strategies"
+      ]
+    },
+    {
+      "id": "avoiding-ai-pitfalls",
+      "title": "Avoiding Common AI Pitfalls",
+      "slug": "avoiding-ai-pitfalls",
+      "category": "fundamentals",
+      "difficulty": "beginner",
+      "readTime": 7,
+      "excerpt": "Learn from others' mistakes with this guide to the most common AI tool failures",
+      "tags": ["mistakes", "troubleshooting", "best-practices"],
+      "author": "AI Tools Team",
+      "lastUpdated": "2024-11-01",
+      "featured": true,
+      "sections": [
+        "Over-reliance Issues",
+        "Privacy Concerns",
+        "Quality Problems",
+        "Cost Management",
+        "Ethical Considerations"
+      ]
+    }
+  ],
+  "tips": [
+    {
+      "id": "context-windows",
+      "title": "Context Windows Matter",
+      "icon": "🔮",
+      "content": "Did you know? You can dramatically improve response quality by structuring your prompts to fit within optimal context windows.",
+      "example": "# Instead of one huge prompt:\n\"Write a complete marketing strategy...\"\n\n# Break it down:\n\"First, analyze the target audience...\"\n\"Based on that analysis, suggest channels...\"",
+      "category": "intermediate"
+    },
+    {
+      "id": "power-of-examples",
+      "title": "The Power of Examples",
+      "icon": "⚡",
+      "content": "Few-shot learning can transform your results. Always provide 2-3 examples of what you want.",
+      "example": "\"Format like this:\nTopic: [Subject]\nTone: [Professional/Casual]\nLength: [Word count]\n\nExample:\nTopic: AI Ethics\nTone: Professional\nLength: 200 words\"",
+      "category": "beginner"
+    },
+    {
+      "id": "role-based-prompting",
+      "title": "Role-Based Prompting",
+      "icon": "🎯",
+      "content": "Assign a specific role to the AI for more focused and expert responses.",
+      "example": "\"Act as a senior data scientist with \nexpertise in predictive analytics. \nAnalyze this dataset and provide \ninsights on customer churn patterns.\"",
+      "category": "intermediate"
+    }
+  ]
+}

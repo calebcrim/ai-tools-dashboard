@@ -1,0 +1,414 @@
+/* Best Practices Hub Styles - Adapted for AI Tools Dashboard Dark Theme */
+
+:root {
+    /* Override with dark theme colors to match existing site */
+    --bp-primary: #007bff;
+    --bp-secondary: #0056b3;
+    --bp-success: #28a745;
+    --bp-warning: #ffc107;
+    --bp-danger: #dc3545;
+    --bp-dark: #0a0a0a;
+    --bp-gray: #6c757d;
+    --bp-light: #1a1a1a;
+    --bp-white: #ffffff;
+    --bp-text-primary: #ffffff;
+    --bp-text-secondary: #b0b0b0;
+    --bp-border: #2a2a2a;
+    --bp-card-bg: #1a1a1a;
+    --bp-hover-bg: #2a2a2a;
+    --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'Monaco', 'Consolas', monospace;
+    --radius: 8px;
+    --shadow: 0 2px 4px rgba(0,0,0,0.3);
+    --shadow-lg: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* Base Styles */
+.best-practices-hub {
+    background: var(--bp-dark);
+    color: var(--bp-text-primary);
+    min-height: 100vh;
+}
+
+.bp-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header - Integrated with existing site header */
+.bp-header {
+    background: var(--bp-light);
+    border-bottom: 1px solid var(--bp-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.bp-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.bp-nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bp-nav-links a {
+    color: var(--bp-text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.bp-nav-links a:hover,
+.bp-nav-links a.active {
+    color: var(--bp-primary);
+}
+
+/* Hero Section */
+.bp-hero {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: var(--bp-white);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.bp-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.bp-hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.bp-search-box {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.bp-search-input {
+    width: 100%;
+    padding: 1rem 3rem 1rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    background: var(--bp-card-bg);
+    color: var(--bp-text-primary);
+}
+
+.bp-search-input::placeholder {
+    color: var(--bp-text-secondary);
+}
+
+.bp-search-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--bp-text-secondary);
+}
+
+/* Learning Paths */
+.bp-learning-paths {
+    padding: 4rem 0;
+}
+
+.bp-section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.bp-section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--bp-text-primary);
+}
+
+.bp-section-header p {
+    color: var(--bp-text-secondary);
+    font-size: 1.125rem;
+}
+
+.bp-paths-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.bp-path-card {
+    background: var(--bp-card-bg);
+    border: 1px solid var(--bp-border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    cursor: pointer;
+}
+
+.bp-path-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--bp-primary);
+}
+
+.bp-path-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.bp-path-card.beginner .bp-path-icon { 
+    background: rgba(59, 130, 246, 0.2); 
+    color: #3b82f6; 
+}
+
+.bp-path-card.intermediate .bp-path-icon { 
+    background: rgba(245, 158, 11, 0.2); 
+    color: #f59e0b; 
+}
+
+.bp-path-card.advanced .bp-path-icon { 
+    background: rgba(239, 68, 68, 0.2); 
+    color: #ef4444; 
+}
+
+.bp-path-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--bp-text-primary);
+}
+
+.bp-path-description {
+    color: var(--bp-text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.bp-path-stats {
+    display: flex;
+    gap: 2rem;
+    font-size: 0.875rem;
+    color: var(--bp-text-secondary);
+}
+
+/* Featured Guides */
+.bp-featured-guides {
+    background: var(--bp-light);
+    padding: 4rem 0;
+}
+
+.bp-guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.bp-guide-card {
+    background: var(--bp-card-bg);
+    border: 1px solid var(--bp-border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+}
+
+.bp-guide-card:hover {
+    border-color: var(--bp-primary);
+    box-shadow: var(--shadow);
+    background: var(--bp-hover-bg);
+}
+
+.bp-guide-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+}
+
+.bp-guide-badge {
+    padding: 0.25rem 0.5rem;
+    background: var(--bp-hover-bg);
+    border-radius: 4px;
+    font-weight: 500;
+    color: var(--bp-text-secondary);
+}
+
+.bp-guide-badge.beginner { color: #3b82f6; }
+.bp-guide-badge.intermediate { color: #f59e0b; }
+.bp-guide-badge.advanced { color: #ef4444; }
+
+.bp-guide-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--bp-text-primary);
+}
+
+.bp-guide-excerpt {
+    font-size: 0.875rem;
+    color: var(--bp-text-secondary);
+    line-height: 1.5;
+}
+
+/* Hidden Gems Section */
+.bp-hidden-gems {
+    background: var(--bp-dark);
+    padding: 4rem 0;
+}
+
+.bp-gems-carousel {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--bp-border) var(--bp-dark);
+}
+
+.bp-gems-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.bp-gems-carousel::-webkit-scrollbar-track {
+    background: var(--bp-dark);
+}
+
+.bp-gems-carousel::-webkit-scrollbar-thumb {
+    background: var(--bp-border);
+    border-radius: 4px;
+}
+
+.bp-gem-card {
+    flex: 0 0 350px;
+    background: var(--bp-card-bg);
+    border: 1px solid var(--bp-border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    scroll-snap-align: start;
+}
+
+.bp-gem-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bp-gem-icon {
+    font-size: 2rem;
+}
+
+.bp-gem-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--bp-text-primary);
+}
+
+.bp-gem-content {
+    margin-bottom: 1rem;
+    color: var(--bp-text-secondary);
+    line-height: 1.6;
+}
+
+.bp-gem-example {
+    background: var(--bp-dark);
+    border: 1px solid var(--bp-border);
+    padding: 1rem;
+    border-radius: var(--radius);
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    margin: 1rem 0;
+    overflow-x: auto;
+    color: var(--bp-text-primary);
+}
+
+.bp-try-button {
+    background: var(--bp-primary);
+    color: var(--bp-white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.bp-try-button:hover {
+    background: var(--bp-secondary);
+}
+
+/* Footer */
+.bp-footer {
+    background: var(--bp-light);
+    border-top: 1px solid var(--bp-border);
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.bp-footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bp-footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.bp-footer-links a {
+    color: var(--bp-text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.bp-footer-links a:hover {
+    color: var(--bp-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .bp-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .bp-paths-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .bp-guides-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .bp-gem-card {
+        flex: 0 0 280px;
+    }
+    
+    .bp-footer-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}

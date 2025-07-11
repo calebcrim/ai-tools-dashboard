@@ -1,0 +1,215 @@
+/* Navigation Redesign - Clean separation between pages and filters */
+
+/* Override existing header styles */
+.header {
+    background: #0a0a0a;
+    border-bottom: 1px solid #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Top row with logo */
+.header-top-row {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+/* Page Navigation Bar */
+.header-nav-row {
+    background: #0f0f0f;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 48px;
+}
+
+/* Clean horizontal navigation */
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    height: 100%;
+}
+
+.header-nav .nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 100%;
+    border-right: 1px solid #1a1a1a;
+}
+
+.header-nav .nav-link:first-child {
+    border-left: 1px solid #1a1a1a;
+}
+
+/* Hide icons for cleaner look */
+.header-nav .nav-link i {
+    display: none;
+}
+
+/* Subtle hover effect */
+.header-nav .nav-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+/* Active state */
+.header-nav .nav-link.active {
+    background: rgba(0, 123, 255, 0.1);
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+/* Header search bar in nav row */
+.header-search-bar {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 2rem;
+}
+
+.header-search-bar .search-input {
+    width: 100%;
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.header-search-bar .search-input:focus {
+    border-color: #007bff;
+    background: #1f1f1f;
+    outline: none;
+}
+
+.header-search-bar .search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    font-size: 0.875rem;
+}
+
+/* Right actions */
+.header-right-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.view-toggle {
+    display: flex;
+    background: #1a1a1a;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.view-btn {
+    padding: 0.375rem 0.75rem;
+    background: transparent;
+    border: none;
+    color: #6c757d;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 3px;
+}
+
+.view-btn.active {
+    background: #2a2a2a;
+    color: #ffffff;
+}
+
+.export-btn {
+    padding: 0.375rem 0.75rem;
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    color: #ffffff;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+}
+
+.export-btn:hover {
+    background: #2a2a2a;
+}
+
+/* Main container spacing */
+.main-container {
+    padding-top: 20px; /* Breathing room */
+}
+
+/* Filter bar styling */
+.view-controls {
+    margin-top: 20px; /* Clear separation from navigation */
+    padding: 1rem 2rem;
+    background: #1a1a1a;
+    border-radius: 8px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .header-nav .nav-link {
+        padding: 0.75rem 1rem;
+        font-size: 0.8125rem;
+    }
+    
+    .header-search-bar {
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-nav-row {
+        flex-wrap: wrap;
+        padding: 0.5rem 1rem;
+    }
+    
+    .header-nav {
+        order: 2;
+        width: 100%;
+        overflow-x: auto;
+        scrollbar-width: thin;
+    }
+    
+    .header-search-bar {
+        order: 1;
+        width: 100%;
+        max-width: none;
+        margin: 0 0 0.5rem 0;
+    }
+    
+    .header-right-actions {
+        order: 3;
+    }
+    
+    .header-nav .nav-link {
+        white-space: nowrap;
+    }
+}

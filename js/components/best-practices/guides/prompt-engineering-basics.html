@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Engineering Basics - AI Best Practices</title>
+    <link rel="stylesheet" href="../../../../css/styles.css">
+    <link rel="stylesheet" href="../css/guide-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Main Header - Integrated with existing site -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-top-row">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h1 class="logo-text">CrimIntelligence: AI Tools Suite</h1>
+                </div>
+                <div class="user-menu">
+                    <span class="user-name">
+                        <i class="fas fa-user-circle"></i>
+                        AI Researcher
+                    </span>
+                </div>
+            </div>
+            <div class="header-nav-row">
+                <nav class="header-nav">
+                    <a href="../../../../index.html" class="nav-link">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                    <a href="../../../../dual-view-enhanced.html" class="nav-link">
+                        <i class="fas fa-exchange-alt"></i> Dual View
+                    </a>
+                    <a href="../../../../enterprise-report.html" class="nav-link">
+                        <i class="fas fa-building"></i> Enterprise Report
+                    </a>
+                    <a href="../../../../financial-analysis/index.html" class="nav-link">
+                        <i class="fas fa-dollar-sign"></i> Financial Analysis
+                    </a>
+                    <a href="../index.html" class="nav-link active">
+                        <i class="fas fa-graduation-cap"></i> Best Practices
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <article class="guide-container">
+        <header class="guide-header">
+            <div class="guide-meta">
+                <span class="difficulty-badge beginner">Beginner</span>
+                <span class="read-time">10 min read</span>
+                <span class="last-updated">Updated: Nov 2024</span>
+            </div>
+            <h1>Mastering Prompt Engineering: The Foundation of AI Success</h1>
+            <p class="guide-summary">Learn the 5 core principles that will transform your AI interactions from frustrating to fantastic</p>
+        </header>
+
+        <nav class="guide-toc">
+            <h3>In this guide:</h3>
+            <ul>
+                <li><a href="#principle-1">Principle 1: Be Specific</a></li>
+                <li><a href="#principle-2">Principle 2: Provide Context</a></li>
+                <li><a href="#principle-3">Principle 3: Use Examples</a></li>
+                <li><a href="#principle-4">Principle 4: Define Format</a></li>
+                <li><a href="#principle-5">Principle 5: Iterate & Refine</a></li>
+                <li><a href="#practice">Practice Exercise</a></li>
+            </ul>
+        </nav>
+
+        <section class="guide-content">
+            <div class="learning-objectives">
+                <h3>🎯 What You'll Learn</h3>
+                <ul>
+                    <li>How to write prompts that get consistent, high-quality results</li>
+                    <li>Common mistakes that waste tokens and time</li>
+                    <li>The secret to making AI understand exactly what you want</li>
+                    <li>Real examples you can adapt for your own use</li>
+                </ul>
+            </div>
+
+            <h2 id="principle-1">Principle 1: Be Specific 🎯</h2>
+            
+            <p>The #1 mistake beginners make? Being too vague. AI models are powerful but they can't read your mind.</p>
+
+            <div class="example-comparison">
+                <div class="example bad">
+                    <h4>❌ Vague Prompt</h4>
+                    <code>"Write something about marketing"</code>
+                </div>
+                <div class="example good">
+                    <h4>✅ Specific Prompt</h4>
+                    <code>"Write a 200-word email to announce our new AI chatbot feature to existing customers, emphasizing time savings and ease of use"</code>
+                </div>
+            </div>
+
+            <p>Notice how the specific prompt includes:</p>
+            <ul>
+                <li><strong>Format:</strong> Email</li>
+                <li><strong>Length:</strong> 200 words</li>
+                <li><strong>Audience:</strong> Existing customers</li>
+                <li><strong>Key points:</strong> Time savings, ease of use</li>
+            </ul>
+
+            <h2 id="principle-2">Principle 2: Provide Context 📚</h2>
+            
+            <p>Context helps AI understand the situation, tone, and purpose. Think of it as briefing a new team member.</p>
+
+            <div class="try-it-section">
+                <h3>🔧 Try It Yourself</h3>
+                <p>Transform this vague prompt by adding context:</p>
+                <textarea class="prompt-input" placeholder="Original: 'Help me with my presentation'
+
+Enhanced: 'I'm giving a 15-minute presentation to senior executives about implementing AI tools in our customer service department. Help me create an outline that focuses on ROI and addresses common concerns about job displacement.'"></textarea>
+                <div class="action-buttons">
+                    <button class="btn btn-primary">Test with AI</button>
+                    <button class="btn btn-secondary">See Solution</button>
+                </div>
+            </div>
+
+            <h2 id="principle-3">Principle 3: Use Examples 💡</h2>
+            
+            <p>Examples are incredibly powerful. They show the AI exactly what you're looking for.</p>
+
+            <div class="code-block">
+"Generate product descriptions in this style:
+
+Example:
+Product: Wireless Earbuds
+Description: 'Experience freedom with our ultra-light wireless earbuds. 
+8-hour battery life meets crystal-clear sound in a package so comfortable, 
+you'll forget you're wearing them.'
+
+Now create similar descriptions for:
+1. Smart Watch
+2. Portable Charger"
+            </div>
+
+            <h2 id="principle-4">Principle 4: Define Format 📝</h2>
+            
+            <p>Explicitly state how you want the output formatted. This prevents unwanted variations.</p>
+
+            <div class="example-comparison">
+                <div class="example bad">
+                    <h4>❌ No Format Specified</h4>
+                    <code>"List the benefits of AI"</code>
+                </div>
+                <div class="example good">
+                    <h4>✅ Clear Format</h4>
+                    <code>"List 5 benefits of AI for small businesses. Format as:
+- Benefit (bold): Brief explanation (1-2 sentences)
+Order by impact level, highest first."</code>
+                </div>
+            </div>
+
+            <h2 id="principle-5">Principle 5: Iterate & Refine 🔄</h2>
+            
+            <p>Your first prompt rarely produces perfect results. That's normal! Use the response to improve your next prompt.</p>
+
+            <div class="key-takeaways">
+                <h3>🌟 Key Takeaways</h3>
+                <ul>
+                    <li>Start specific, then add details based on what's missing</li>
+                    <li>If the tone is wrong, add tone guidance ("professional but friendly")</li>
+                    <li>If the length is off, specify word or paragraph counts</li>
+                    <li>Save successful prompts as templates for future use</li>
+                </ul>
+            </div>
+
+            <h2 id="practice">Practice Exercise 🏋️</h2>
+            
+            <div class="try-it-section">
+                <h3>Your Challenge</h3>
+                <p>Write a prompt that generates a LinkedIn post about a professional achievement. Include all 5 principles we've covered.</p>
+                <textarea class="prompt-input" rows="8" placeholder="Start your prompt here..."></textarea>
+                <div class="action-buttons">
+                    <button class="btn btn-primary">Check My Prompt</button>
+                    <button class="btn btn-secondary">Show Example Solution</button>
+                </div>
+            </div>
+
+            <div class="next-steps">
+                <h3>🚀 Ready for More?</h3>
+                <p>Now that you've mastered the basics, explore these advanced topics:</p>
+                <div class="next-steps-grid">
+                    <a href="#" class="next-guide-link">
+                        <strong>Chain-of-Thought Prompting</strong>
+                        <span>Make AI show its work for better results</span>
+                    </a>
+                    <a href="#" class="next-guide-link">
+                        <strong>Multi-Step Workflows</strong>
+                        <span>Break complex tasks into manageable pieces</span>
+                    </a>
+                    <a href="#" class="next-guide-link">
+                        <strong>Prompt Templates Library</strong>
+                        <span>Ready-to-use prompts for common tasks</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <nav class="guide-nav">
+            <a href="../index.html">
+                <i class="fas fa-arrow-left"></i> Back to Hub
+            </a>
+            <a href="#">
+                Next Guide: Advanced Prompting <i class="fas fa-arrow-right"></i>
+            </a>
+        </nav>
+    </article>
+
+    <!-- Scripts -->
+    <script src="../js/guide-scripts.js"></script>
+</body>
+</html>
