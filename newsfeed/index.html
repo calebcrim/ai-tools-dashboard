@@ -238,31 +238,6 @@
             text-decoration: none;
         }
         
-        .back-button {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            background: white;
-            border: none;
-            border-radius: 12px;
-            padding: 12px 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            font-weight: 500;
-            color: #667eea;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.2s;
-            z-index: 1000;
-        }
-        
-        .back-button:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
         @media (max-width: 768px) {
             h1 {
                 font-size: 2em;
@@ -282,13 +257,6 @@
             .newsletter-meta {
                 text-align: left;
             }
-            
-            .back-button {
-                position: relative;
-                top: auto;
-                left: auto;
-                margin-bottom: 20px;
-            }
         }
         
         /* Dark mode support */
@@ -298,7 +266,7 @@
                 color: #e2e8f0;
             }
             
-            header, .newsletter-section, .filters, .back-button {
+            header, .newsletter-section, .filters {
                 background: #1e293b;
             }
             
@@ -336,25 +304,21 @@
     </style>
 </head>
 <body>
-    <a href="../index.html" class="back-button">
-        ← Back to Dashboard
-    </a>
-    
     <div class="container">
         <header>
             <h1>AI News Feed</h1>
-            <p class="update-info">Last updated: 7/14/2025, 10:08:18 AM</p>
+            <p class="update-info">Last updated: 7/14/2025, 12:01:48 PM</p>
             <div class="stats">
                 <div class="stat-item">
-                    <span class="stat-number">79</span>
+                    <span class="stat-number">83</span>
                     <span class="stat-label">Newsletters Monitored</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">3</span>
+                    <span class="stat-number">7</span>
                     <span class="stat-label">Active Sources</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">6</span>
+                    <span class="stat-number">42</span>
                     <span class="stat-label">Quality News Items</span>
                 </div>
             </div>
@@ -363,35 +327,71 @@
         <div class="filters">
             <div class="filter-chips">
                 <span class="filter-chip active" onclick="filterNewsletters('all')">All Sources</span>
-                <span class="filter-chip" onclick="filterNewsletters('Ben's Bites')">Ben's Bites</span><span class="filter-chip" onclick="filterNewsletters('The Rundown AI')">The Rundown AI</span><span class="filter-chip" onclick="filterNewsletters('TLDR AI')">TLDR AI</span>
+                <span class="filter-chip" onclick="filterNewsletters('Neatprompts - Aadit Sheth')">Neatprompts - Aadit Sheth</span><span class="filter-chip" onclick="filterNewsletters('The Rundown AI')">The Rundown AI</span><span class="filter-chip" onclick="filterNewsletters('AI Fire')">AI Fire</span><span class="filter-chip" onclick="filterNewsletters('ChinAI Newsletter')">ChinAI Newsletter</span><span class="filter-chip" onclick="filterNewsletters('AI Newsletter')">AI Newsletter</span><span class="filter-chip" onclick="filterNewsletters('The Neuron')">The Neuron</span><span class="filter-chip" onclick="filterNewsletters('Meng Li AI Disruption')">Meng Li AI Disruption</span>
             </div>
         </div>
         
         <main>
             
-                <section class="newsletter-section" data-source="Ben's Bites">
+                <section class="newsletter-section" data-source="Neatprompts - Aadit Sheth">
                     <div class="newsletter-header">
                         <div class="newsletter-title">
-                            <div class="source-indicator" style="background: #FF6B6B"></div>
-                            <h2>Ben's Bites</h2>
+                            <div class="source-indicator" style="background: #6C5CE7"></div>
+                            <h2>Neatprompts - Aadit Sheth</h2>
                         </div>
                         <div class="newsletter-meta">
                             <p class="date">7/14/2025</p>
-                            <p class="item-count">2 items</p>
+                            <p class="item-count">8 items</p>
                         </div>
                     </div>
                     <div class="news-items">
                         
                             <article class="news-item">
-                                <h3>GPT-5 Rumors Heat Up</h3>
-                                <p>Sources close to OpenAI suggest the next generation model could arrive sooner than expected, with capabilities that far exceed current expectations.</p>
-                                <a href="https://example.com/gpt5-rumors" target="_blank" rel="noopener">Read more →</a>
+                                <h3>cal, welcome back. Today’s updates:</h3>
+                                
+                                
                             </article>
                         
                             <article class="news-item">
-                                <h3>Anthropic Raises $2B in New Funding</h3>
-                                <p>The AI safety-focused company has secured massive funding to accelerate Claude's development and expand research efforts.</p>
-                                <a href="https://example.com/anthropic-funding" target="_blank" rel="noopener">Read more →</a>
+                                <h3>🚀 Revolutionize Learning with AI-Powered Video Guides</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>Amazon’s Anthropic Deal Adds Billions to AWS's Growth</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>Google DeepMind Releases GenAI Processors</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>Tesla Shareholders OK Elon Musk’s Plan to Fund xAI</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>Why does Google’s free GenAI Processors library matter most to enterprise AI teams?</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>💰 Funding</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>🐦 The Future of PM: A Breakdown</h3>
+                                
+                                
                             </article>
                         
                     </div>
@@ -405,49 +405,293 @@
                         </div>
                         <div class="newsletter-meta">
                             <p class="date">7/14/2025</p>
-                            <p class="item-count">2 items</p>
+                            <p class="item-count">9 items</p>
                         </div>
                     </div>
                     <div class="news-items">
                         
                             <article class="news-item">
-                                <h3>Microsoft Integrates AI Across Office Suite</h3>
-                                <p>Copilot features are now rolling out to all Office 365 users, bringing AI assistance to Word, Excel, and PowerPoint.</p>
-                                <a href="https://example.com/microsoft-copilot" target="_blank" rel="noopener">Read more →</a>
+                                <h3>🏄‍♂️ Google swoops in as OpenAI, Windsurf deal collapses</h3>
+                                
+                                
                             </article>
                         
                             <article class="news-item">
-                                <h3>New Open Source LLM Matches GPT-4 Performance</h3>
-                                <p>Mistral AI releases their latest model with impressive benchmarks, available for free download and commercial use.</p>
-                                <a href="https://example.com/mistral-release" target="_blank" rel="noopener">Read more →</a>
+                                <h3>💡 The easiest way to bring AI to your company</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>🚀 Moonshot AI’s K2 takes open-source crown</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>🤖 Auto-switch between models for different tasks in n8n</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>🤝 The AI community turning ideas into action</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>⚙️ AI coding tools slow down experienced devs</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>📰 Everything else in AI today</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>🎥 Watch our last live workshop</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>That's it for today!</h3>
+                                <p>Before you go we’d love to know what you thought of today's newsletter to help us improve The Rundown experience for you.</p>
+                                
                             </article>
                         
                     </div>
                 </section>
                 
-                <section class="newsletter-section" data-source="TLDR AI">
+                <section class="newsletter-section" data-source="AI Fire">
                     <div class="newsletter-header">
                         <div class="newsletter-title">
-                            <div class="source-indicator" style="background: #45B7D1"></div>
-                            <h2>TLDR AI</h2>
+                            <div class="source-indicator" style="background: #6C5CE7"></div>
+                            <h2>AI Fire</h2>
                         </div>
                         <div class="newsletter-meta">
                             <p class="date">7/14/2025</p>
-                            <p class="item-count">2 items</p>
+                            <p class="item-count">9 items</p>
                         </div>
                     </div>
                     <div class="news-items">
                         
                             <article class="news-item">
-                                <h3>Google DeepMind Announces Gemini 2.0</h3>
-                                <p>The next iteration of Google's multimodal AI model promises better reasoning and reduced hallucinations.</p>
-                                <a href="https://example.com/gemini-2" target="_blank" rel="noopener">Read more →</a>
+                                <h3>What are on FIRE 🔥</h3>
+                                
+                                
                             </article>
                         
                             <article class="news-item">
-                                <h3>AI Startup Secures $100M Series B</h3>
-                                <p>Vector database company raises significant funding to expand their AI infrastructure platform.</p>
-                                <a href="https://example.com/vector-funding" target="_blank" rel="noopener">Read more →</a>
+                                <h3>LEARNING PARTNER AIRCAMPUS</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>Build your own AI Agents 👨‍🏭👩‍🏭</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>🛑 OpenAI's $300B Summer Storm: Rivals Attacking, Deals Failing, Models Delayed…</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>PRESENTED BY HEAR.COM</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>AI SOURCES FROM AI FIRE</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>NEW EMPOWERED AI TOOLS</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>We read your emails, comments, and poll replies daily</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>How would you rate today’s newsletter?</h3>
+                                <p>Your feedback helps us create the best newsletter possible</p>
+                                
+                            </article>
+                        
+                    </div>
+                </section>
+                
+                <section class="newsletter-section" data-source="ChinAI Newsletter">
+                    <div class="newsletter-header">
+                        <div class="newsletter-title">
+                            <div class="source-indicator" style="background: #6C5CE7"></div>
+                            <h2>ChinAI Newsletter</h2>
+                        </div>
+                        <div class="newsletter-meta">
+                            <p class="date">7/14/2025</p>
+                            <p class="item-count">3 items</p>
+                        </div>
+                    </div>
+                    <div class="news-items">
+                        
+                            <article class="news-item">
+                                <h3>Feature Translation: Young people who love acting crazy, intensely act crazy toward AI</h3>
+                                <p>Context: Involution is sooooo 2020. Now, this generation of Chinese youth are transitioning from “lying flat” toward “acting crazy” [发疯]. Are you feeling too squeezed in on the bus? Loudly announce “I want to fart” and gain some space. Are you overwhelmed at work? Get into a big fight with your supe...</p>
+                                <a href="https://substack.com/redirect/768c5ccc-f545-4b94-b0cb-ebf004cd332f?j=eyJ1IjoiNjFsazc2In0.-ar1QfRciGli0r2BGpAVoebsIPoXcZD3qz6H4YMNnvU" target="_blank" rel="noopener">Read more →</a>
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>No ChinAI Links this week</h3>
+                                <p>This week’s translation was a bit of a lift (had to decipher references to Su Shi’s works and what game Hu Shi was addicted to), so I didn’t get a chance to catch up on my reading. For those wanting more, there are a lot of external links in the comments of the Google doc translation.</p>
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>Thank you for reading and engaging.</h3>
+                                <p>These are Jeff Ding's (sometimes) weekly translations of Chinese-language musings on AI and related topics. Jeff is an Assistant Professor of Political Science at George Washington University.</p>
+                                
+                            </article>
+                        
+                    </div>
+                </section>
+                
+                <section class="newsletter-section" data-source="AI Newsletter">
+                    <div class="newsletter-header">
+                        <div class="newsletter-title">
+                            <div class="source-indicator" style="background: #6C5CE7"></div>
+                            <h2>AI Newsletter</h2>
+                        </div>
+                        <div class="newsletter-meta">
+                            <p class="date">7/14/2025</p>
+                            <p class="item-count">6 items</p>
+                        </div>
+                    </div>
+                    <div class="news-items">
+                        
+                            <article class="news-item">
+                                <h3>Here's what we have for you today</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>Stay up-to-date with AI</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>Is this your AI Workout of the Week (WoW)? Cast your vote!</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>What'd you think of today's email?</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>🚀 Want your daily AI workout?</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>Premium members get::</h3>
+                                
+                                
+                            </article>
+                        
+                    </div>
+                </section>
+                
+                <section class="newsletter-section" data-source="The Neuron">
+                    <div class="newsletter-header">
+                        <div class="newsletter-title">
+                            <div class="source-indicator" style="background: #96CEB4"></div>
+                            <h2>The Neuron</h2>
+                        </div>
+                        <div class="newsletter-meta">
+                            <p class="date">7/14/2025</p>
+                            <p class="item-count">1 items</p>
+                        </div>
+                    </div>
+                    <div class="news-items">
+                        
+                            <article class="news-item">
+                                <h3>What'd you think of today's email?</h3>
+                                
+                                
+                            </article>
+                        
+                    </div>
+                </section>
+                
+                <section class="newsletter-section" data-source="Meng Li AI Disruption">
+                    <div class="newsletter-header">
+                        <div class="newsletter-title">
+                            <div class="source-indicator" style="background: #6C5CE7"></div>
+                            <h2>Meng Li AI Disruption</h2>
+                        </div>
+                        <div class="newsletter-meta">
+                            <p class="date">7/14/2025</p>
+                            <p class="item-count">6 items</p>
+                        </div>
+                    </div>
+                    <div class="news-items">
+                        
+                            <article class="news-item">
+                                <h3>Learn how to use free Kimi K2 API with Claude Code as a budget alternative to expensive $200/month subscriptions. Step-by-step setup guide included.</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>Claude Code: Rapid Development & Prompt Optimization Guide</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>Claude Code Guide: Advanced Tips and Cursor Integration</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>Claude Code Updates: Advanced Hooks Usage Techniques</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>Kimi Open-Sources Trillion-Parameter K2 Model, Pressuring OpenAI</h3>
+                                
+                                
+                            </article>
+                        
+                            <article class="news-item">
+                                <h3>Continue reading this post for free in the Substack app</h3>
+                                
+                                
                             </article>
                         
                     </div>
@@ -456,7 +700,7 @@
         </main>
         
         <footer>
-            <p>Aggregated from 79 AI newsletter sources</p>
+            <p>Aggregated from 83 AI newsletter sources</p>
             <p>Powered by Gmail integration with smart content filtering</p>
             <p><a href="https://github.com/calebcrim/ai-tools-dashboard" target="_blank">View on GitHub</a></p>
         </footer>

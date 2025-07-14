@@ -1,58 +1,302 @@
 [
   {
-    "source": "Ben's Bites",
-    "date": "2025-07-14T10:08:18.984Z",
-    "subject": "OpenAI's breakthrough model arrives",
+    "source": "Neatprompts - Aadit Sheth",
+    "date": "2025-07-14T10:06:10.000Z",
+    "subject": "🌐 AWS Scores Claude",
     "items": [
       {
-        "headline": "GPT-5 Rumors Heat Up",
-        "summary": "Sources close to OpenAI suggest the next generation model could arrive sooner than expected, with capabilities that far exceed current expectations.",
-        "link": "https://example.com/gpt5-rumors",
-        "timestamp": "2025-07-14T10:08:18.985Z"
+        "headline": "cal, welcome back. Today’s updates:",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:47.932Z"
       },
       {
-        "headline": "Anthropic Raises $2B in New Funding",
-        "summary": "The AI safety-focused company has secured massive funding to accelerate Claude's development and expand research efforts.",
-        "link": "https://example.com/anthropic-funding",
-        "timestamp": "2025-07-14T10:08:18.985Z"
+        "headline": "🚀 Revolutionize Learning with AI-Powered Video Guides",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:47.932Z"
+      },
+      {
+        "headline": "Amazon’s Anthropic Deal Adds Billions to AWS's Growth",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:47.933Z"
+      },
+      {
+        "headline": "Google DeepMind Releases GenAI Processors",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:47.933Z"
+      },
+      {
+        "headline": "Tesla Shareholders OK Elon Musk’s Plan to Fund xAI",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:47.933Z"
+      },
+      {
+        "headline": "Why does Google’s free GenAI Processors library matter most to enterprise AI teams?",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:47.933Z"
+      },
+      {
+        "headline": "💰 Funding",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:47.933Z"
+      },
+      {
+        "headline": "🐦 The Future of PM: A Breakdown",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:47.933Z"
       }
     ]
   },
   {
     "source": "The Rundown AI",
-    "date": "2025-07-14T10:08:18.985Z",
-    "subject": "AI Tools You Can't Miss This Week",
+    "date": "2025-07-14T10:07:28.000Z",
+    "subject": "🏄‍♂️ Google swoops on failed OpenAI deal",
     "items": [
       {
-        "headline": "Microsoft Integrates AI Across Office Suite",
-        "summary": "Copilot features are now rolling out to all Office 365 users, bringing AI assistance to Word, Excel, and PowerPoint.",
-        "link": "https://example.com/microsoft-copilot",
-        "timestamp": "2025-07-14T10:08:18.985Z"
+        "headline": "🏄‍♂️ Google swoops in as OpenAI, Windsurf deal collapses",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.007Z"
       },
       {
-        "headline": "New Open Source LLM Matches GPT-4 Performance",
-        "summary": "Mistral AI releases their latest model with impressive benchmarks, available for free download and commercial use.",
-        "link": "https://example.com/mistral-release",
-        "timestamp": "2025-07-14T10:08:18.985Z"
+        "headline": "💡 The easiest way to bring AI to your company",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.007Z"
+      },
+      {
+        "headline": "🚀 Moonshot AI’s K2 takes open-source crown",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.007Z"
+      },
+      {
+        "headline": "🤖 Auto-switch between models for different tasks in n8n",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.007Z"
+      },
+      {
+        "headline": "🤝 The AI community turning ideas into action",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.008Z"
+      },
+      {
+        "headline": "⚙️ AI coding tools slow down experienced devs",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.008Z"
+      },
+      {
+        "headline": "📰 Everything else in AI today",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.008Z"
+      },
+      {
+        "headline": "🎥 Watch our last live workshop",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.008Z"
+      },
+      {
+        "headline": "That's it for today!",
+        "summary": "Before you go we’d love to know what you thought of today's newsletter to help us improve The Rundown experience for you.",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.008Z"
       }
     ]
   },
   {
-    "source": "TLDR AI",
-    "date": "2025-07-14T10:08:18.985Z",
-    "subject": "Daily AI News Digest",
+    "source": "AI Fire",
+    "date": "2025-07-14T10:25:38.000Z",
+    "subject": "💀 Meta’s AI is Rotten From the Inside",
     "items": [
       {
-        "headline": "Google DeepMind Announces Gemini 2.0",
-        "summary": "The next iteration of Google's multimodal AI model promises better reasoning and reduced hallucinations.",
-        "link": "https://example.com/gemini-2",
-        "timestamp": "2025-07-14T10:08:18.985Z"
+        "headline": "What are on FIRE 🔥",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.060Z"
       },
       {
-        "headline": "AI Startup Secures $100M Series B",
-        "summary": "Vector database company raises significant funding to expand their AI infrastructure platform.",
-        "link": "https://example.com/vector-funding",
-        "timestamp": "2025-07-14T10:08:18.985Z"
+        "headline": "LEARNING PARTNER AIRCAMPUS",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.061Z"
+      },
+      {
+        "headline": "Build your own AI Agents 👨‍🏭👩‍🏭",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.061Z"
+      },
+      {
+        "headline": "🛑 OpenAI's $300B Summer Storm: Rivals Attacking, Deals Failing, Models Delayed…",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.061Z"
+      },
+      {
+        "headline": "PRESENTED BY HEAR.COM",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.061Z"
+      },
+      {
+        "headline": "AI SOURCES FROM AI FIRE",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.061Z"
+      },
+      {
+        "headline": "NEW EMPOWERED AI TOOLS",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.061Z"
+      },
+      {
+        "headline": "We read your emails, comments, and poll replies daily",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.061Z"
+      },
+      {
+        "headline": "How would you rate today’s newsletter?",
+        "summary": "Your feedback helps us create the best newsletter possible",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.061Z"
+      }
+    ]
+  },
+  {
+    "source": "ChinAI Newsletter",
+    "date": "2025-07-14T11:20:15.000Z",
+    "subject": "ChinAI #320: Acting Crazy — AI's most important use case for Chinese youth",
+    "items": [
+      {
+        "headline": "Feature Translation: Young people who love acting crazy, intensely act crazy toward AI",
+        "summary": "Context: Involution is sooooo 2020. Now, this generation of Chinese youth are transitioning from “lying flat” toward “acting crazy” [发疯]. Are you feeling too squeezed in on the bus? Loudly announce “I want to fart” and gain some space. Are you overwhelmed at work? Get into a big fight with your supe...",
+        "link": "https://substack.com/redirect/768c5ccc-f545-4b94-b0cb-ebf004cd332f?j=eyJ1IjoiNjFsazc2In0.-ar1QfRciGli0r2BGpAVoebsIPoXcZD3qz6H4YMNnvU",
+        "timestamp": "2025-07-14T12:01:48.123Z"
+      },
+      {
+        "headline": "No ChinAI Links this week",
+        "summary": "This week’s translation was a bit of a lift (had to decipher references to Su Shi’s works and what game Hu Shi was addicted to), so I didn’t get a chance to catch up on my reading. For those wanting more, there are a lot of external links in the comments of the Google doc translation.",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.123Z"
+      },
+      {
+        "headline": "Thank you for reading and engaging.",
+        "summary": "These are Jeff Ding's (sometimes) weekly translations of Chinese-language musings on AI and related topics. Jeff is an Assistant Professor of Political Science at George Washington University.",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.123Z"
+      }
+    ]
+  },
+  {
+    "source": "AI Newsletter",
+    "date": "2025-07-14T11:31:39.000Z",
+    "subject": "The dark side of AI Therapy",
+    "items": [
+      {
+        "headline": "Here's what we have for you today",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.166Z"
+      },
+      {
+        "headline": "Stay up-to-date with AI",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.166Z"
+      },
+      {
+        "headline": "Is this your AI Workout of the Week (WoW)? Cast your vote!",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.166Z"
+      },
+      {
+        "headline": "What'd you think of today's email?",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.166Z"
+      },
+      {
+        "headline": "🚀 Want your daily AI workout?",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.167Z"
+      },
+      {
+        "headline": "Premium members get::",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.167Z"
+      }
+    ]
+  },
+  {
+    "source": "The Neuron",
+    "date": "2025-07-14T11:35:44.000Z",
+    "subject": "😼 Ex-Uber CEO making robot burritos",
+    "items": [
+      {
+        "headline": "What'd you think of today's email?",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.213Z"
+      }
+    ]
+  },
+  {
+    "source": "Meng Li AI Disruption",
+    "date": "2025-07-14T11:37:28.000Z",
+    "subject": "Testing Free Kimi-K2 on Claude Code",
+    "items": [
+      {
+        "headline": "Learn how to use free Kimi K2 API with Claude Code as a budget alternative to expensive $200/month subscriptions. Step-by-step setup guide included.",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.285Z"
+      },
+      {
+        "headline": "Claude Code: Rapid Development & Prompt Optimization Guide",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.285Z"
+      },
+      {
+        "headline": "Claude Code Guide: Advanced Tips and Cursor Integration",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.285Z"
+      },
+      {
+        "headline": "Claude Code Updates: Advanced Hooks Usage Techniques",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.285Z"
+      },
+      {
+        "headline": "Kimi Open-Sources Trillion-Parameter K2 Model, Pressuring OpenAI",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.285Z"
+      },
+      {
+        "headline": "Continue reading this post for free in the Substack app",
+        "summary": "",
+        "link": "",
+        "timestamp": "2025-07-14T12:01:48.285Z"
       }
     ]
   }
