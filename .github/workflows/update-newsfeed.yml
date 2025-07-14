@@ -1,0 +1,49 @@
+# .github/workflows/update-newsfeed.yml
+name: Update AI Newsfeed
+
+on:
+  schedule:
+    # Run every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-newsfeed:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    
+    - name: Install dependencies
+      run: |
+        npm init -y
+        npm install imap mailparser cheerio
+    
+    - name: Process emails and generate newsfeed
+      env:
+        GMAIL_EMAIL: daviscal541@gmail.com
+        GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      run: |
+        node scripts/email-to-newsfeed-gmail.js
+    
+    - name: Check for changes
+      id: check_changes
+      run: |
+        git diff --quiet || echo "changes=true" >> $GITHUB_OUTPUT
+    
+    - name: Commit and push changes
+      if: steps.check_changes.outputs.changes == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add newsfeed/index.html newsfeed/data.json
+        git commit -m "Update AI newsfeed - $(date +'%Y-%m-%d %H:%M')"
+        git push
