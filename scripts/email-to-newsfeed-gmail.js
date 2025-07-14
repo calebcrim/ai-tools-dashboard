@@ -71,22 +71,17 @@ async function processEmails() {
           console.log(`Total messages in ${folderName}: ${box.messages.total}`);
           
           // Search for emails from the last 7 days
-          const oneWeekAgo = new Date();
-          oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+          const oneWeekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
           
-          // Format date for IMAP (e.g., "8-Jul-2025")
-          const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-          const imapDate = `${oneWeekAgo.getDate()}-${monthNames[oneWeekAgo.getMonth()]}-${oneWeekAgo.getFullYear()}`;
-          console.log(`Searching for emails since: ${imapDate}`);
+          console.log(`Searching for emails since: ${oneWeekAgo.toDateString()}`);
           
-          // First, try to find any recent emails to see what's in the mailbox
-          console.log('First, checking for any recent emails...');
-          const simpleCriteria = ['SINCE', imapDate];
+          // Note: We'll use a simple date search first, then filter for newsletters in processing
+          // This avoids complex nested search criteria that might fail
           
           console.log('Searching for newsletter emails from the last 7 days...');
           
-          // First search for any recent emails
-          imap.search(simpleCriteria, (err, results) => {
+          // Try a simpler search first to see what we get
+          imap.search([['SINCE', oneWeekAgo]], (err, results) => {
             if (err) {
               console.error('Error searching emails:', err);
               imap.end();
@@ -96,8 +91,19 @@ async function processEmails() {
 
             if (!results || !results.length) {
               console.log('No emails found in the last 7 days');
-              imap.end();
-              resolve(newsItems);
+              console.log('Trying to search without date restriction...');
+              
+              // Try searching just for newsletter keywords without date restriction
+              imap.search([['OR', ['FROM', 'newsletter'], ['SUBJECT', 'AI']]], (err2, results2) => {
+                if (!err2 && results2 && results2.length > 0) {
+                  console.log(`Found ${results2.length} newsletter emails (no date filter)`);
+                  processSearchResults(results2.slice(0, 20)); // Process first 20
+                } else {
+                  console.log('No newsletter emails found at all');
+                  imap.end();
+                  resolve(newsItems);
+                }
+              });
               return;
             }
 
