@@ -44,7 +44,8 @@ async function processEmails() {
       console.log('✅ Connected to Gmail successfully!');
       
       // Try different folder names for Gmail
-      const folderNames = ['AI-Newsletters', '[Gmail]/All Mail', 'INBOX'];
+      // Most Gmail accounts will have emails in INBOX or [Gmail]/All Mail
+      const folderNames = ['INBOX', '[Gmail]/All Mail', 'AI-Newsletters'];
       
       tryOpenFolder(0);
       
@@ -73,27 +74,19 @@ async function processEmails() {
           const oneWeekAgo = new Date();
           oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
           
-          // Build search criteria for newsletter emails
-          const searchCriteria = [
-            ['SINCE', oneWeekAgo],
-            ['OR',
-              ['FROM', 'bensbites'],
-              ['OR',
-                ['FROM', 'rundown'],
-                ['OR',
-                  ['FROM', 'tldr'],
-                  ['OR',
-                    ['FROM', 'neuron'],
-                    ['FROM', 'superhuman']
-                  ]
-                ]
-              ]
-            ]
-          ];
+          // Format date for IMAP (e.g., "8-Jul-2025")
+          const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+          const imapDate = `${oneWeekAgo.getDate()}-${monthNames[oneWeekAgo.getMonth()]}-${oneWeekAgo.getFullYear()}`;
+          console.log(`Searching for emails since: ${imapDate}`);
+          
+          // First, try to find any recent emails to see what's in the mailbox
+          console.log('First, checking for any recent emails...');
+          const simpleCriteria = ['SINCE', imapDate];
           
           console.log('Searching for newsletter emails from the last 7 days...');
           
-          imap.search(searchCriteria, (err, results) => {
+          // First search for any recent emails
+          imap.search(simpleCriteria, (err, results) => {
             if (err) {
               console.error('Error searching emails:', err);
               imap.end();
@@ -102,21 +95,16 @@ async function processEmails() {
             }
 
             if (!results || !results.length) {
-              console.log('No newsletter emails found in the last 7 days');
-              // Try just searching for any emails in the last 7 days
-              imap.search(['SINCE', oneWeekAgo], (err2, allResults) => {
-                if (!err2 && allResults && allResults.length > 0) {
-                  console.log(`Found ${allResults.length} total emails in the last 7 days`);
-                  processSearchResults(allResults.slice(0, 10)); // Process first 10
-                } else {
-                  imap.end();
-                  resolve(newsItems);
-                }
-              });
+              console.log('No emails found in the last 7 days');
+              imap.end();
+              resolve(newsItems);
               return;
             }
 
-            console.log(`Found ${results.length} newsletter emails`);
+            console.log(`Found ${results.length} emails in the last 7 days`);
+            
+            // Now let's check which ones are newsletters
+            console.log('Processing emails to find newsletters...');
             processSearchResults(results);
           });
           
@@ -199,22 +187,43 @@ async function extractNewsContent(email) {
   const html = email.html || email.textAsHtml || '';
   const text = email.text || '';
   
-  // Identify newsletter source
+  console.log(`\nAnalyzing email from: ${email.from?.text || 'Unknown'}`);
+  console.log(`Subject: ${subject}`);
+  
+  // Identify newsletter source - be more flexible with matching
   let source = 'Unknown';
-  for (const newsletter of config.newsletters) {
-    if (from.includes(newsletter)) {
-      source = newsletter.charAt(0).toUpperCase() + newsletter.slice(1);
+  const newsletterMap = {
+    'bensbites': "Ben's Bites",
+    'ben\'s bites': "Ben's Bites",
+    'therundown': 'The Rundown AI',
+    'rundown': 'The Rundown AI',
+    'tldr': 'TLDR AI',
+    'theneuron': 'The Neuron',
+    'neuron': 'The Neuron',
+    'superhuman': 'Superhuman AI'
+  };
+  
+  for (const [key, name] of Object.entries(newsletterMap)) {
+    if (from.includes(key) || subject.toLowerCase().includes(key)) {
+      source = name;
+      console.log(`Identified as: ${source}`);
       break;
     }
   }
 
-  // If not a known newsletter, check subject and content
+  // If not a known newsletter, check if it's AI-related
   if (source === 'Unknown') {
-    const content = (subject + ' ' + from).toLowerCase();
-    if (content.includes('ai') || content.includes('artificial intelligence') || 
-        content.includes('machine learning') || content.includes('gpt')) {
+    const content = (subject + ' ' + from + ' ' + text.substring(0, 500)).toLowerCase();
+    const aiKeywords = ['ai', 'artificial intelligence', 'machine learning', 'gpt', 'claude', 
+                       'openai', 'anthropic', 'llm', 'neural', 'deepmind', 'chatbot'];
+    
+    const hasAIContent = aiKeywords.some(keyword => content.includes(keyword));
+    
+    if (hasAIContent) {
       source = 'AI Newsletter';
+      console.log('Identified as generic AI Newsletter based on content');
     } else {
+      console.log('Not identified as AI-related, skipping');
       return null; // Skip non-AI emails
     }
   }
