@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Newsletter Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f7f9fc;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 3em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #6b7280;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        
+        .date-navigation {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .date-selector {
+            padding: 10px 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: inherit;
+            background: white;
+            color: #1a1a1a;
+            cursor: pointer;
+            min-width: 200px;
+        }
+        
+        .nav-btn {
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .nav-btn:hover {
+            background: #5a52d5;
+            transform: translateY(-1px);
+        }
+        
+        .nav-btn:disabled {
+            background: #e5e7eb;
+            color: #9ca3af;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .filters {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .filter-section h3 {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #4b5563;
+        }
+        
+        .filter-chips {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-chip {
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: #f3f4f6;
+            color: #4b5563;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+            font-size: 0.9em;
+        }
+        
+        .filter-chip:hover {
+            background: #e5e7eb;
+        }
+        
+        .filter-chip.active {
+            background: #667eea;
+            color: white;
+            border-color: #5a52d5;
+        }
+        
+        .newsletter-display {
+            display: grid;
+            gap: 30px;
+        }
+        
+        .newsletter-section {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .newsletter-section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .newsletter-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f3f4f6;
+        }
+        
+        .newsletter-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .source-indicator {
+            width: 6px;
+            height: 40px;
+            border-radius: 3px;
+        }
+        
+        .newsletter-section h3 {
+            font-size: 1.6em;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        
+        .newsletter-meta {
+            text-align: right;
+        }
+        
+        .date {
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+        
+        .item-count {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        
+        .news-items {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .news-item {
+            padding: 20px;
+            background: #f9fafb;
+            border-radius: 12px;
+            border-left: 4px solid #e5e7eb;
+            transition: all 0.2s;
+        }
+        
+        .news-item:hover {
+            background: #f3f4f6;
+            border-left-color: #667eea;
+            transform: translateX(4px);
+        }
+        
+        .news-item h4 {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        .item-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .category {
+            background: #eef2ff;
+            color: #4338ca;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+        
+        .tags {
+            color: #6b7280;
+            font-size: 0.85em;
+        }
+        
+        .news-item p {
+            color: #4b5563;
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+        
+        .news-item a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            transition: gap 0.2s;
+        }
+        
+        .news-item a:hover {
+            gap: 8px;
+            text-decoration: underline;
+        }
+        
+        .no-newsletters,
+        .select-date,
+        .error-message {
+            background: white;
+            border-radius: 16px;
+            padding: 60px;
+            text-align: center;
+            color: #6b7280;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .no-newsletters h2,
+        .error-message h2 {
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+        
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: white;
+            border: none;
+            border-radius: 12px;
+            padding: 12px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            font-weight: 500;
+            color: #667eea;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+            z-index: 1000;
+        }
+        
+        .back-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+        
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .date-navigation {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .date-selector {
+                width: 100%;
+            }
+            
+            .nav-btn {
+                width: 100%;
+            }
+            
+            .newsletter-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .newsletter-meta {
+                text-align: left;
+            }
+            
+            .back-button {
+                position: relative;
+                top: auto;
+                left: auto;
+                margin-bottom: 20px;
+            }
+        }
+        
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #0f172a;
+                color: #e2e8f0;
+            }
+            
+            header, .newsletter-section, .filters, .date-navigation, 
+            .back-button, .no-newsletters, .select-date, .error-message {
+                background: #1e293b;
+            }
+            
+            .news-item {
+                background: #334155;
+            }
+            
+            .news-item:hover {
+                background: #475569;
+            }
+            
+            h1 {
+                background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            
+            .newsletter-section h3, .news-item h4,
+            .no-newsletters h2, .error-message h2 {
+                color: #f1f5f9;
+            }
+            
+            .news-item p, .date, .subtitle, .item-meta {
+                color: #cbd5e1;
+            }
+            
+            .filter-chip, .date-selector {
+                background: #334155;
+                color: #e2e8f0;
+                border-color: #475569;
+            }
+            
+            .filter-chip:hover {
+                background: #475569;
+            }
+            
+            .category {
+                background: #312e81;
+                color: #a5b4fc;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-button">
+        ← Back to Dashboard
+    </a>
+    
+    <div class="container">
+        <header>
+            <h1>AI Newsletter Archive</h1>
+            <p class="subtitle">Curated AI news and developments from leading newsletters</p>
+        </header>
+        
+        <div id="newsletter-container">
+            <!-- Newsletter content will be loaded here by JavaScript -->
+            <div class="loading">Loading newsletters...</div>
+        </div>
+        
+        <footer>
+            <p>Manually curated from leading AI newsletters</p>
+            <p>Updated daily with the latest AI developments</p>
+            <p><a href="https://github.com/calebcrim/ai-tools-dashboard" target="_blank">View on GitHub</a></p>
+        </footer>
+    </div>
+    
+    <script src="newsletter.js"></script>
+</body>
+</html>

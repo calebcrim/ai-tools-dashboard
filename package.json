@@ -8,5 +8,10 @@
     "build:data": "node data/build-tools-data.js",
     "serve": "python -m http.server 8000",
     "validate": "node test/validate-data.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.1.0",
+    "imap": "^0.8.19",
+    "mailparser": "^3.7.4"
   }
 }

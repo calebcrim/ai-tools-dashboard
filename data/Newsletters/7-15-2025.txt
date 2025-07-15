@@ -1,0 +1,123 @@
+I'll help you analyze the emails in your AI-Newsletter folder and convert them into publish-ready summaries. Let me start by accessing your Gmail account to find those emails.Now let me search for emails in your AI-Newsletter folder:Let me try searching for AI-related emails in different ways:Let me examine the emails in your AI-Newsletter folder and extract the key AI developments. I'll read through each email to identify the most significant AI news.I'll analyze the AI newsletters in your folder and create organized summaries of the key developments. Let me continue reading through the emails.Based on the emails in your AI-Newsletter folder, here are the key AI developments organized in the requested format:
+
+### Unsupervised Learning NO. 489
+**Date:** July 14, 2025  
+**Source:** Daniel Miessler (unsupervised-learning@mail.beehiiv.com)  
+
+**AI Highlights:**
+
+- **Grok 4 Released by xAI**  
+  *Category:* Product / Tool  
+  *Tags:* [#LLM, #xAI, #ChatBot]  
+  The new Grok models are out with two variants: Grok 4 and Grok Heavy ($300/month). During the livestream launch, Elon Musk expressed that the model's power was "a little bit terrifying."  
+  [https://x.ai/news/grok-4](https://x.ai/news/grok-4)
+
+- **Anthropic Scores $200M Pentagon Deal**  
+  *Category:* Company News  
+  *Tags:* [#Anthropic, #Defense, #Claude]  
+  The Pentagon awarded Anthropic a massive $200 million contract to deploy Claude AI across critical national security operations.  
+  [https://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations](https://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations)
+
+- **Grok 4 Jailbroken in Two Days**  
+  *Category:* Research / Paper  
+  *Tags:* [#Security, #Jailbreak, #xAI]  
+  NeuralTrust researchers successfully jailbroke xAI's new Grok-4 model using Echo Chamber and Crescendo techniques, achieving up to 67% success rates for generating harmful content.  
+  [https://neuraltrust.ai/blog/grok-4-jailbreak-echo-chamber-and-crescendo](https://neuraltrust.ai/blog/grok-4-jailbreak-echo-chamber-and-crescendo)
+
+- **AWS Launches Kiro, AI Code Editor**  
+  *Category:* Product / Tool  
+  *Tags:* [#AWS, #CodingAI, #Developer]  
+  AWS launched Kiro, their version of Cursor - an AI-powered code editor that integrates with Amazon's Bedrock models.  
+  [https://kiro.dev/blog/introducing-kiro/](https://kiro.dev/blog/introducing-kiro/)
+
+- **AWS Launching AI Agent Marketplace**  
+  *Category:* Product / Tool  
+  *Tags:* [#AWS, #Anthropic, #AIAgents]  
+  AWS is launching an AI agent marketplace on July 15th with Anthropic as a key partner, creating a centralized hub for enterprises to browse and install AI agents.  
+  [https://techcrunch.com/2025/07/10/aws-is-launching-an-ai-agent-marketplace-next-week-with-anthropic-as-a-partner/](https://techcrunch.com/2025/07/10/aws-is-launching-an-ai-agent-marketplace-next-week-with-anthropic-as-a-partner/)
+
+- **Grok Gets NSFW AI Companions**  
+  *Category:* Product / Tool  
+  *Tags:* [#xAI, #AICompanions, #Controversial]  
+  xAI launched AI "companions" for Grok including an anime character named Ani with an NSFW lingerie mode.  
+  [https://www.theverge.com/news/706988/elon-musk-ai-bot-grok-supergrok-anime-companion-ani-rudy2025-07-14](https://www.theverge.com/news/706988/elon-musk-ai-bot-grok-supergrok-anime-companion-ani-rudy2025-07-14)
+
+- **Perplexity Launches Comet AI Browser**  
+  *Category:* Product / Tool  
+  *Tags:* [#Perplexity, #Browser, #AIAssistant]  
+  Perplexity launched Comet, an AI web browser with a sidebar assistant that can book meetings, send emails, and buy products.  
+  [https://comet.perplexity.ai](https://comet.perplexity.ai)
+
+---
+
+### MIT Technology Review - The Algorithm
+**Date:** July 14, 2025  
+**Source:** newsletters@technologyreview.com  
+
+**AI Highlights:**
+
+- **National Academy for AI Instruction Launched**  
+  *Category:* Policy / Ethics  
+  *Tags:* [#Education, #OpenAI, #Microsoft, #Anthropic]  
+  OpenAI, Microsoft, and Anthropic announced a $23 million partnership with teachers' unions to bring AI into K-12 classrooms, training teachers at a NYC headquarters starting this fall.  
+  [https://ter.li/gydxwm](https://ter.li/gydxwm)
+
+- **AI Moratorium Defeat Signals New Era**  
+  *Category:* Policy / Ethics  
+  *Tags:* [#Regulation, #AIPolicy, #StateRights]  
+  A 10-year moratorium preventing states from passing AI regulations was stripped from the "Big Beautiful Bill" after bipartisan pushback, revealing appetite for oversight.  
+  [https://ter.li/vbs5na](https://ter.li/vbs5na)
+
+- **Tool Strips Anti-AI Protections from Digital Art**  
+  *Category:* Research / Paper  
+  *Tags:* [#AIArt, #Security, #Copyright]  
+  New research shows how tools like Nightshade that "poison" AI training data can be easily subverted.  
+  [https://ter.li/3ot58v](https://ter.li/3ot58v)
+
+- **California Using AI for Power Grid Management**  
+  *Category:* Product / Tool  
+  *Tags:* [#Infrastructure, #Energy, #California]  
+  California becomes the first US state to build algorithms that help manage power outages with AI.  
+  [https://ter.li/b7am63](https://ter.li/b7am63)
+
+---
+
+### 8020AI Newsletter
+**Date:** July 14, 2025  
+**Source:** hello@8020ai.co  
+
+**AI Highlights:**
+
+- **xAI Mandates Employee Surveillance Software**  
+  *Category:* Company News  
+  *Tags:* [#xAI, #Privacy, #Workplace]  
+  xAI required employees training Grok to install Hubstaff monitoring software on personal laptops, tracking web activity, app usage, mouse movements, and taking screenshots.  
+  [https://www.businessinsider.com/xai-pressed-workers-install-surveillance-software-personal-laptops-2025-7](https://www.businessinsider.com/xai-pressed-workers-install-surveillance-software-personal-laptops-2025-7)
+
+- **NVIDIA CEO Uses Multiple AIs for Better Answers**  
+  *Category:* Company News  
+  *Tags:* [#NVIDIA, #AIStrategy, #BestPractices]  
+  Jensen Huang reveals he asks the same question to several AI models and compares responses, treating it like getting multiple medical opinions.  
+  [https://www.businessinsider.com/jensen-huang-uses-multiple-ais-get-best-response-2025-7](https://www.businessinsider.com/jensen-huang-uses-multiple-ais-get-best-response-2025-7)
+
+---
+
+### Mindstream Newsletter  
+**Date:** July 14, 2025  
+**Source:** hello@mindstream.news  
+
+**AI Highlights:**
+
+- **Australian Scientists Use AI to Design Superbug-Killing Proteins**  
+  *Category:* Research / Paper  
+  *Tags:* [#Medical, #OpenSource, #Biotech]  
+  Australian researchers built an AI tool that designs custom proteins in seconds to kill antibiotic-resistant bacteria like E. coli, using open-source AI tools.  
+  [https://www.sciencedaily.com/releases/2025/07/250710113152.htm](https://www.sciencedaily.com/releases/2025/07/250710113152.htm)
+
+- **Devin AI Launches as Autonomous Developer**  
+  *Category:* Product / Tool  
+  *Tags:* [#CodingAI, #Autonomous, #Developer]  
+  Devin AI launched as an autonomous software development tool that plans, writes, debugs, and searches online to build tools, websites, or apps.  
+  [https://app.devin.ai/](https://app.devin.ai/)
+
+---
