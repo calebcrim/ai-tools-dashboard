@@ -1,0 +1,1065 @@
+// Unified Dashboard JavaScript
+class UnifiedDashboard {
+    constructor() {
+        this.currentMode = 'browse';
+        this.currentView = 'grid';
+        this.toolsData = [];
+        this.filteredTools = [];
+        this.filters = {
+            search: '',
+            category: [],
+            pricing: [],
+            rating: 1,
+            impact: 0,
+            roi: '',
+            apis: [],
+            complexity: ''
+        };
+        this.selectedTool = null;
+        
+        this.init();
+    }
+
+    init() {
+        this.setupEventListeners();
+        this.loadToolsData();
+        this.updateModeDisplay();
+        this.initializeDarkMode();
+    }
+
+    setupEventListeners() {
+        // Mode switching
+        document.querySelectorAll('.mode-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const mode = e.currentTarget.dataset.mode;
+                this.switchMode(mode);
+            });
+        });
+
+        // View toggle (Browse mode)
+        document.querySelectorAll('.view-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const view = e.currentTarget.dataset.view;
+                this.switchView(view);
+            });
+        });
+
+        // Global search
+        const searchInput = document.getElementById('globalSearchInput');
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                this.handleSearch(e.target.value);
+            });
+        }
+
+        // Filter toggle (mobile)
+        const filterToggle = document.getElementById('filterToggle');
+        if (filterToggle) {
+            filterToggle.addEventListener('click', () => {
+                this.toggleFilters();
+            });
+        }
+
+        // Filter inputs
+        this.setupFilterListeners();
+
+        // Detail panel
+        const closeBtn = document.getElementById('closeDetailPanel');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Close button clicked');
+                this.closeDetailPanel();
+            });
+        }
+
+        // Sort controls
+        const sortBy = document.getElementById('sortBy');
+        if (sortBy) {
+            sortBy.addEventListener('change', (e) => {
+                this.handleSort(e.target.value);
+            });
+        }
+
+
+        // Clear filters button
+        const clearFiltersBtn = document.getElementById('clearFilters');
+        if (clearFiltersBtn) {
+            clearFiltersBtn.addEventListener('click', () => {
+                this.clearAllFilters();
+            });
+        }
+
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', () => {
+                this.toggleDarkMode();
+            });
+        }
+    }
+
+    setupFilterListeners() {
+        // Category filter
+        const categoryFilter = document.getElementById('categoryFilter');
+        if (categoryFilter) {
+            categoryFilter.addEventListener('change', (e) => {
+                this.filters.category = Array.from(e.target.selectedOptions).map(opt => opt.value);
+                this.applyFilters();
+            });
+        }
+
+        // Pricing filters
+        document.querySelectorAll('.pricing-filter').forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                this.filters.pricing = Array.from(document.querySelectorAll('.pricing-filter:checked')).map(cb => cb.value);
+                this.applyFilters();
+            });
+        });
+
+        // Range filters
+        const ratingRange = document.getElementById('ratingRange');
+        if (ratingRange) {
+            ratingRange.addEventListener('input', (e) => {
+                this.filters.rating = parseFloat(e.target.value);
+                document.getElementById('ratingValue').textContent = e.target.value + '+';
+                this.applyFilters();
+            });
+        }
+
+        const impactRange = document.getElementById('impactRange');
+        if (impactRange) {
+            impactRange.addEventListener('input', (e) => {
+                this.filters.impact = parseInt(e.target.value);
+                document.getElementById('impactValue').textContent = e.target.value + '+';
+                this.applyFilters();
+            });
+        }
+
+        // ROI filter
+        const roiFilter = document.getElementById('roiFilter');
+        if (roiFilter) {
+            roiFilter.addEventListener('change', (e) => {
+                this.filters.roi = e.target.value;
+                this.applyFilters();
+            });
+        }
+
+        // API filters
+        document.querySelectorAll('.api-filter').forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                this.filters.apis = Array.from(document.querySelectorAll('.api-filter:checked')).map(cb => cb.value);
+                this.applyFilters();
+            });
+        });
+
+        // Complexity filter
+        const complexityFilter = document.getElementById('complexityFilter');
+        if (complexityFilter) {
+            complexityFilter.addEventListener('change', (e) => {
+                this.filters.complexity = e.target.value;
+                this.applyFilters();
+            });
+        }
+    }
+
+    async loadToolsData() {
+        try {
+            // Wait for data to load
+            await new Promise(resolve => setTimeout(resolve, 100));
+            
+            const toolsData = window.unifiedToolsData || unifiedToolsData;
+            
+            if (toolsData && toolsData.tools) {
+                this.toolsData = this.transformToolsData(toolsData.tools);
+                this.populateFilters();
+                this.applyFilters();
+                this.updateStats();
+            } else {
+                console.error('No tools data found');
+                this.showEmptyState();
+            }
+        } catch (error) {
+            console.error('Error loading tools data:', error);
+            this.showEmptyState();
+        }
+    }
+
+    transformToolsData(rawData) {
+        return rawData.map(tool => ({
+            id: tool.id || tool.tool_name?.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || 'unknown-tool',
+            originalId: tool.id, // Keep original ID for lookup
+            name: tool.tool_name || 'Unknown Tool',
+            category: tool.category || 'Uncategorized',
+            description: tool.brief_purpose_summary || 'No description available',
+            url: tool.url || '#',
+            pricing: this.extractPricing(tool.pricing_model),
+            rating: this.generateRating(),
+            businessImpact: this.calculateBusinessImpact(tool),
+            timeToValue: this.estimateTimeToValue(tool),
+            complexity: this.assessComplexity(tool),
+            apiAvailable: this.hasAPI(tool),
+            sdkSupport: this.hasSDK(tool),
+            webhookSupport: this.hasWebhooks(tool),
+            features: this.extractFeatures(tool),
+            integrations: this.extractIntegrations(tool),
+            tags: tool.tags || [],
+            lastUpdated: new Date().toISOString(),
+            // Include all raw data fields
+            rawData: {
+                feature_breakdown: tool.feature_breakdown || 'No detailed features available',
+                pricing_model: tool.pricing_model || 'Pricing information not available',
+                pros_cons_limitations: tool.pros_cons_limitations || 'No pros/cons information available',
+                integration_potential: tool.integration_potential || 'No integration information available',
+                learning_curve: tool.learning_curve || 'Learning curve information not available',
+                geo_regulatory_limitations: tool.geo_regulatory_limitations || 'No geographic limitations information',
+                case_studies: tool.case_studies || 'No case studies available',
+                use_cases_in_pr: tool.use_cases_in_pr || [],
+                source: tool.source || 'Unknown',
+                icon: tool.icon || null,
+                cision_use_suggestions: tool.cision_use_suggestions || null
+            }
+        }));
+    }
+
+    extractPricing(pricingModel) {
+        if (!pricingModel) return 'unknown';
+        const pricing = pricingModel.toLowerCase();
+        
+        if (pricing.includes('free') && !pricing.includes('paid')) return 'free';
+        if (pricing.includes('free') && pricing.includes('paid')) return 'freemium';
+        if (pricing.includes('enterprise')) return 'enterprise';
+        if (pricing.includes('$') || pricing.includes('paid')) return 'paid';
+        
+        return 'unknown';
+    }
+
+    generateRating() {
+        return Math.round((Math.random() * 2 + 3) * 10) / 10; // 3.0 - 5.0
+    }
+
+    calculateBusinessImpact(tool) {
+        let score = 50;
+        
+        const highImpactCategories = ['ai assistant', 'analytics', 'automation', 'productivity'];
+        if (tool.category && highImpactCategories.some(cat => tool.category.toLowerCase().includes(cat))) {
+            score += 25;
+        }
+        
+        if (tool.feature_breakdown && tool.feature_breakdown.length > 200) score += 10;
+        if (tool.integration_potential && tool.integration_potential.toLowerCase().includes('api')) score += 10;
+        if (tool.case_studies && tool.case_studies.length > 100) score += 5;
+        
+        return Math.min(score, 95);
+    }
+
+    estimateTimeToValue(tool) {
+        if (!tool.learning_curve) return '1-2 weeks';
+        
+        const curve = tool.learning_curve.toLowerCase();
+        if (curve.includes('low') || curve.includes('easy')) return 'Immediate';
+        if (curve.includes('medium')) return '1 week';
+        if (curve.includes('high') || curve.includes('complex')) return '2-4 weeks';
+        
+        return '1-2 weeks';
+    }
+
+    assessComplexity(tool) {
+        if (!tool.learning_curve) return 'medium';
+        
+        const curve = tool.learning_curve.toLowerCase();
+        if (curve.includes('low') || curve.includes('easy')) return 'low';
+        if (curve.includes('high') || curve.includes('complex')) return 'high';
+        
+        return 'medium';
+    }
+
+    hasAPI(tool) {
+        const text = ((tool.integration_potential || '') + ' ' + (tool.feature_breakdown || '')).toLowerCase();
+        return text.includes('api') || text.includes('rest') || text.includes('endpoint');
+    }
+
+    hasSDK(tool) {
+        const text = ((tool.integration_potential || '') + ' ' + (tool.feature_breakdown || '')).toLowerCase();
+        return text.includes('sdk') || text.includes('library') || text.includes('python') || text.includes('javascript');
+    }
+
+    hasWebhooks(tool) {
+        const text = ((tool.integration_potential || '') + ' ' + (tool.feature_breakdown || '')).toLowerCase();
+        return text.includes('webhook') || text.includes('callback') || text.includes('notification');
+    }
+
+    extractFeatures(tool) {
+        if (!tool.feature_breakdown) return [];
+        
+        return tool.feature_breakdown
+            .split(/[.\n]/)
+            .filter(feature => feature.trim().length > 10)
+            .slice(0, 5)
+            .map(feature => feature.trim());
+    }
+
+    extractIntegrations(tool) {
+        if (!tool.integration_potential) return [];
+        
+        const integrations = [];
+        const text = tool.integration_potential.toLowerCase();
+        
+        if (text.includes('slack')) integrations.push('Slack');
+        if (text.includes('teams')) integrations.push('Microsoft Teams');
+        if (text.includes('salesforce')) integrations.push('Salesforce');
+        if (text.includes('zapier')) integrations.push('Zapier');
+        if (text.includes('api')) integrations.push('REST API');
+        
+        return integrations;
+    }
+
+    populateFilters() {
+        // Populate category filter
+        const categoryFilter = document.getElementById('categoryFilter');
+        if (categoryFilter) {
+            const categories = [...new Set(this.toolsData.map(tool => tool.category))].sort();
+            categoryFilter.innerHTML = '<option value="">All Categories</option>' +
+                categories.map(cat => `<option value="${cat}">${cat}</option>`).join('');
+        }
+    }
+
+    switchMode(mode) {
+        if (mode === this.currentMode) return;
+        
+        this.currentMode = mode;
+        
+        // Update button states
+        document.querySelectorAll('.mode-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.mode === mode);
+        });
+        
+        // Update mode display
+        this.updateModeDisplay();
+        
+        // Re-render tools
+        this.renderTools();
+    }
+
+    switchView(view) {
+        if (view === this.currentView) return;
+        
+        this.currentView = view;
+        
+        // Update button states
+        document.querySelectorAll('.view-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.view === view);
+        });
+        
+        // Update grid class
+        const grids = document.querySelectorAll('.tools-grid');
+        grids.forEach(grid => {
+            grid.classList.toggle('list-view', view === 'list');
+        });
+        
+        // Re-render tools
+        this.renderTools();
+    }
+
+    updateModeDisplay() {
+        // Show/hide mode content
+        document.querySelectorAll('.mode-content').forEach(content => {
+            content.style.display = content.dataset.mode === this.currentMode ? 'block' : 'none';
+        });
+        
+        // Show/hide mode-specific filters
+        document.querySelectorAll('.filter-mode').forEach(filter => {
+            filter.classList.toggle('active', filter.dataset.mode === this.currentMode);
+        });
+    }
+
+    handleSearch(searchTerm) {
+        this.filters.search = searchTerm.toLowerCase();
+        this.applyFilters();
+    }
+
+    handleSort(sortBy) {
+        this.filteredTools.sort((a, b) => {
+            switch (sortBy) {
+                case 'name':
+                    return a.name.localeCompare(b.name);
+                case 'category':
+                    return a.category.localeCompare(b.category);
+                case 'rating':
+                    return b.rating - a.rating;
+                case 'updated':
+                    return new Date(b.lastUpdated) - new Date(a.lastUpdated);
+                default:
+                    return 0;
+            }
+        });
+        
+        this.renderTools();
+    }
+
+    applyFilters() {
+        this.filteredTools = this.toolsData.filter(tool => {
+            // Search filter
+            if (this.filters.search) {
+                const searchFields = [tool.name, tool.category, tool.description].join(' ').toLowerCase();
+                if (!searchFields.includes(this.filters.search)) return false;
+            }
+            
+            // Category filter
+            if (this.filters.category.length > 0 && !this.filters.category.includes(tool.category)) {
+                return false;
+            }
+            
+            // Pricing filter
+            if (this.filters.pricing.length > 0 && !this.filters.pricing.includes(tool.pricing)) {
+                return false;
+            }
+            
+            // Rating filter
+            if (tool.rating < this.filters.rating) return false;
+            
+            // Business impact filter
+            if (tool.businessImpact < this.filters.impact) return false;
+            
+            // ROI filter
+            if (this.filters.roi && tool.timeToValue !== this.filters.roi) return false;
+            
+            // API filters
+            if (this.filters.apis.length > 0) {
+                if (this.filters.apis.includes('rest') && !tool.apiAvailable) return false;
+                if (this.filters.apis.includes('sdk') && !tool.sdkSupport) return false;
+                if (this.filters.apis.includes('webhook') && !tool.webhookSupport) return false;
+            }
+            
+            // Complexity filter
+            if (this.filters.complexity && tool.complexity !== this.filters.complexity) return false;
+            
+            return true;
+        });
+        
+        this.renderTools();
+        this.updateStats();
+    }
+
+    renderTools() {
+        const gridId = this.currentMode === 'browse' ? 'browseGrid' : 
+                      this.currentMode === 'executive' ? 'executiveGrid' : 
+                      'technicalGrid';
+        
+        const grid = document.getElementById(gridId);
+        if (!grid) return;
+        
+        if (this.filteredTools.length === 0) {
+            grid.innerHTML = this.getEmptyStateHTML();
+            return;
+        }
+        
+        const renderMethod = this.currentMode === 'browse' ? 'renderBrowseCard' :
+                            this.currentMode === 'executive' ? 'renderExecutiveCard' :
+                            'renderTechnicalCard';
+        
+        grid.innerHTML = this.filteredTools.map(tool => this[renderMethod](tool)).join('');
+        
+        // Add click event listeners to all tool cards
+        this.attachCardClickListeners();
+    }
+
+    attachCardClickListeners() {
+        const cards = document.querySelectorAll('.tool-card');
+        console.log(`Attaching click listeners to ${cards.length} cards`);
+        cards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent event bubbling
+                const toolId = card.dataset.toolId;
+                console.log('Card clicked, toolId:', toolId);
+                if (toolId) {
+                    this.openDetailPanel(toolId);
+                }
+            });
+        });
+    }
+
+    renderBrowseCard(tool) {
+        return `
+            <div class="tool-card" data-tool-id="${tool.originalId || tool.id}">
+                <h3>${tool.name}</h3>
+                <div class="category">${tool.category}</div>
+                <div class="description">${tool.description}</div>
+                <div class="tool-meta">
+                    <span class="rating">
+                        <i class="fas fa-star"></i> ${tool.rating}
+                    </span>
+                    <span class="pricing">${tool.pricing}</span>
+                </div>
+            </div>
+        `;
+    }
+
+    renderExecutiveCard(tool) {
+        const impactClass = tool.businessImpact >= 80 ? 'high' : 
+                           tool.businessImpact >= 50 ? 'medium' : 'low';
+        
+        return `
+            <div class="tool-card executive-card" data-tool-id="${tool.originalId || tool.id}">
+                <h3>${tool.name}</h3>
+                <div class="impact-score ${impactClass}">${tool.businessImpact}</div>
+                <div class="impact-label">Business Impact Score</div>
+                <div class="roi-timeline">
+                    <i class="fas fa-clock"></i>
+                    <span>ROI in ${tool.timeToValue}</span>
+                </div>
+                <div class="pricing">${tool.pricing}</div>
+                <div class="description">${tool.description}</div>
+            </div>
+        `;
+    }
+
+    renderTechnicalCard(tool) {
+        const apis = [];
+        if (tool.apiAvailable) apis.push('REST API');
+        if (tool.sdkSupport) apis.push('SDK');
+        if (tool.webhookSupport) apis.push('Webhooks');
+        
+        return `
+            <div class="tool-card technical-card" data-tool-id="${tool.originalId || tool.id}">
+                <h3>${tool.name}</h3>
+                <div class="api-badges">
+                    ${apis.map(api => `<span class="api-badge">${api}</span>`).join('')}
+                </div>
+                <div class="tech-specs">
+                    <div class="spec-item">
+                        <i class="fas fa-cogs"></i>
+                        <span>Complexity: ${tool.complexity}</span>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-plug"></i>
+                        <span>Integrations: ${tool.integrations.length}</span>
+                    </div>
+                </div>
+                <div class="description">${tool.description}</div>
+            </div>
+        `;
+    }
+
+    openDetailPanel(toolId) {
+        // Try to find tool by originalId first, then by transformed id
+        const tool = this.toolsData.find(t => 
+            t.originalId == toolId || 
+            t.id == toolId || 
+            String(t.originalId) === String(toolId)
+        );
+        
+        if (!tool) {
+            console.error('Tool not found for ID:', toolId);
+            return;
+        }
+        
+        this.selectedTool = tool;
+        const panel = document.getElementById('detailPanel');
+        const title = document.getElementById('detailPanelTitle');
+        const content = document.getElementById('detailPanelContent');
+        
+        if (!panel || !title || !content) {
+            console.error('Detail panel elements not found');
+            return;
+        }
+        
+        title.textContent = tool.name;
+        content.innerHTML = this.renderDetailContent(tool);
+        
+        // Add a small delay to ensure the panel opens after any potential close events
+        setTimeout(() => {
+            panel.classList.add('open');
+            console.log('Detail panel opened, classes:', panel.className);
+        }, 10);
+    }
+
+    closeDetailPanel() {
+        console.log('Closing detail panel');
+        const panel = document.getElementById('detailPanel');
+        panel.classList.remove('open');
+        this.selectedTool = null;
+        console.log('Detail panel closed');
+    }
+
+    renderDetailContent(tool) {
+        // Render content based on current mode
+        if (this.currentMode === 'executive') {
+            return this.renderExecutiveDetailContent(tool);
+        } else if (this.currentMode === 'technical') {
+            return this.renderTechnicalDetailContent(tool);
+        } else {
+            return this.renderBrowseDetailContent(tool);
+        }
+    }
+
+    renderBrowseDetailContent(tool) {
+        return `
+            <div class="detail-section">
+                <h3>Overview</h3>
+                <p>${tool.description}</p>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Category</h3>
+                <span class="category-badge">${tool.category}</span>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Detailed Features</h3>
+                <div class="feature-content">
+                    ${tool.rawData.feature_breakdown.split('\n').map(line => 
+                        line.trim() ? `<p>${line.trim()}</p>` : ''
+                    ).join('')}
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Pricing Model</h3>
+                <div class="pricing-content">
+                    <p>${tool.rawData.pricing_model}</p>
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Pros, Cons & Limitations</h3>
+                <div class="pros-cons-content">
+                    ${tool.rawData.pros_cons_limitations.split('\n').map(line => 
+                        line.trim() ? `<p>${line.trim()}</p>` : ''
+                    ).join('')}
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Learning Curve</h3>
+                <p>${tool.rawData.learning_curve}</p>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Use Cases in PR/Marketing</h3>
+                <div class="use-cases-list">
+                    ${Array.isArray(tool.rawData.use_cases_in_pr) && tool.rawData.use_cases_in_pr.length > 0 ? 
+                        tool.rawData.use_cases_in_pr.map(useCase => `<div class="use-case-item">${useCase}</div>`).join('') :
+                        '<p>No specific use cases documented</p>'
+                    }
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Geographic & Regulatory Limitations</h3>
+                <p>${tool.rawData.geo_regulatory_limitations}</p>
+            </div>
+            
+            ${tool.rawData.case_studies && tool.rawData.case_studies !== 'No case studies available' ? `
+                <div class="detail-section">
+                    <h3>Case Studies</h3>
+                    <div class="case-studies-content">
+                        ${tool.rawData.case_studies.split('\n').map(line => 
+                            line.trim() ? `<p>${line.trim()}</p>` : ''
+                        ).join('')}
+                    </div>
+                </div>
+            ` : ''}
+            
+            <div class="detail-section">
+                <h3>Tags</h3>
+                <div class="tags-list">
+                    ${tool.tags.map(tag => `<span class="tag-badge">${tag}</span>`).join('')}
+                </div>
+            </div>
+            
+            <div class="detail-actions">
+                <a href="${tool.url}" target="_blank" class="btn-primary">
+                    <i class="fas fa-external-link-alt"></i> Visit Website
+                </a>
+            </div>
+        `;
+    }
+
+    renderExecutiveDetailContent(tool) {
+        return `
+            <div class="executive-metrics">
+                <div class="metric-card">
+                    <div class="metric-value">${tool.businessImpact}</div>
+                    <div class="metric-label">Business Impact Score</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">${tool.timeToValue}</div>
+                    <div class="metric-label">Time to Value</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">${tool.complexity}</div>
+                    <div class="metric-label">Implementation Complexity</div>
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Business Value Proposition</h3>
+                <p>${tool.description}</p>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Detailed Investment Analysis</h3>
+                <div class="pricing-content">
+                    <p><strong>Pricing Model:</strong> ${tool.rawData.pricing_model}</p>
+                    <p><strong>Learning Curve:</strong> ${tool.rawData.learning_curve}</p>
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Strategic Benefits & Limitations</h3>
+                <div class="pros-cons-content">
+                    ${tool.rawData.pros_cons_limitations.split('\n').map(line => 
+                        line.trim() ? `<p>${line.trim()}</p>` : ''
+                    ).join('')}
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Integration & Implementation</h3>
+                <div class="integration-content">
+                    ${tool.rawData.integration_potential.split('\n').map(line => 
+                        line.trim() ? `<p>${line.trim()}</p>` : ''
+                    ).join('')}
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Business Use Cases</h3>
+                <div class="use-cases-list">
+                    ${Array.isArray(tool.rawData.use_cases_in_pr) && tool.rawData.use_cases_in_pr.length > 0 ? 
+                        tool.rawData.use_cases_in_pr.map(useCase => `<div class="use-case-item">${useCase}</div>`).join('') :
+                        '<p>No specific use cases documented</p>'
+                    }
+                </div>
+            </div>
+            
+            ${tool.rawData.case_studies && tool.rawData.case_studies !== 'No case studies available' ? `
+                <div class="detail-section">
+                    <h3>Case Studies & ROI Evidence</h3>
+                    <div class="case-studies-content">
+                        ${tool.rawData.case_studies.split('\n').map(line => 
+                            line.trim() ? `<p>${line.trim()}</p>` : ''
+                        ).join('')}
+                    </div>
+                </div>
+            ` : ''}
+            
+            <div class="detail-section">
+                <h3>Risk Assessment</h3>
+                <p><strong>Geographic/Regulatory Limitations:</strong> ${tool.rawData.geo_regulatory_limitations}</p>
+            </div>
+            
+            <div class="detail-actions">
+                <a href="${tool.url}" target="_blank" class="btn-primary">
+                    <i class="fas fa-external-link-alt"></i> Visit Website
+                </a>
+            </div>
+        `;
+    }
+
+    renderTechnicalDetailContent(tool) {
+        return `
+            <div class="technical-overview">
+                <div class="tech-metric">
+                    <i class="fas fa-code"></i>
+                    <span>API Available: ${tool.apiAvailable ? 'Yes' : 'No'}</span>
+                </div>
+                <div class="tech-metric">
+                    <i class="fas fa-cube"></i>
+                    <span>SDK Support: ${tool.sdkSupport ? 'Yes' : 'No'}</span>
+                </div>
+                <div class="tech-metric">
+                    <i class="fas fa-bolt"></i>
+                    <span>Webhooks: ${tool.webhookSupport ? 'Yes' : 'No'}</span>
+                </div>
+                <div class="tech-metric">
+                    <i class="fas fa-layer-group"></i>
+                    <span>Complexity: ${tool.complexity}</span>
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Technical Overview</h3>
+                <p>${tool.description}</p>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Feature Architecture</h3>
+                <div class="feature-content">
+                    ${tool.rawData.feature_breakdown.split('\n').map(line => 
+                        line.trim() ? `<p>${line.trim()}</p>` : ''
+                    ).join('')}
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Integration Capabilities</h3>
+                <div class="integration-content">
+                    ${tool.rawData.integration_potential.split('\n').map(line => 
+                        line.trim() ? `<p>${line.trim()}</p>` : ''
+                    ).join('')}
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Implementation Considerations</h3>
+                <div class="implementation-content">
+                    <p><strong>Learning Curve:</strong> ${tool.rawData.learning_curve}</p>
+                    <p><strong>Complexity Level:</strong> ${tool.complexity}</p>
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Technical Limitations</h3>
+                <div class="limitations-content">
+                    ${tool.rawData.pros_cons_limitations.split('\n').map(line => 
+                        line.trim() ? `<p>${line.trim()}</p>` : ''
+                    ).join('')}
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Deployment Use Cases</h3>
+                <div class="use-cases-list">
+                    ${Array.isArray(tool.rawData.use_cases_in_pr) && tool.rawData.use_cases_in_pr.length > 0 ? 
+                        tool.rawData.use_cases_in_pr.map(useCase => `<div class="use-case-item">${useCase}</div>`).join('') :
+                        '<p>No specific technical use cases documented</p>'
+                    }
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Geographic/Regulatory Constraints</h3>
+                <p>${tool.rawData.geo_regulatory_limitations}</p>
+            </div>
+            
+            <div class="detail-section">
+                <h3>Technical Tags</h3>
+                <div class="tags-list">
+                    ${tool.tags.map(tag => `<span class="tag-badge">${tag}</span>`).join('')}
+                </div>
+            </div>
+            
+            <div class="detail-actions">
+                <a href="${tool.url}" target="_blank" class="btn-primary">
+                    <i class="fas fa-external-link-alt"></i> Visit Website
+                </a>
+            </div>
+        `;
+    }
+
+    updateStats() {
+        // Update total tools count
+        document.getElementById('totalToolsCount').textContent = this.toolsData.length;
+        document.getElementById('activeToolsCount').textContent = this.toolsData.length;
+        document.getElementById('filteredCount').textContent = this.filteredTools.length;
+        
+        // Update category count
+        const uniqueCategories = new Set(this.toolsData.map(tool => tool.category));
+        document.getElementById('categoriesCount').textContent = uniqueCategories.size;
+        
+        // Update mode-specific metrics
+        if (this.currentMode === 'executive') {
+            const highImpact = this.filteredTools.filter(tool => tool.businessImpact >= 80).length;
+            const avgRoi = Math.round(this.filteredTools.reduce((sum, tool) => sum + tool.businessImpact, 0) / this.filteredTools.length);
+            const enterpriseReady = this.filteredTools.filter(tool => tool.pricing === 'enterprise').length;
+            
+            document.getElementById('highImpactCount').textContent = highImpact;
+            document.getElementById('avgRoi').textContent = avgRoi + '%';
+            document.getElementById('enterpriseReady').textContent = enterpriseReady;
+        } else if (this.currentMode === 'technical') {
+            const apiAvailable = this.filteredTools.filter(tool => tool.apiAvailable).length;
+            const sdkSupport = this.filteredTools.filter(tool => tool.sdkSupport).length;
+            const webhookSupport = this.filteredTools.filter(tool => tool.webhookSupport).length;
+            
+            document.getElementById('apiAvailable').textContent = apiAvailable;
+            document.getElementById('sdkSupport').textContent = sdkSupport;
+            document.getElementById('webhookSupport').textContent = webhookSupport;
+        }
+    }
+
+    toggleFilters() {
+        const filterContent = document.getElementById('filterContent');
+        filterContent.classList.toggle('open');
+    }
+
+    exportData() {
+        // Export functionality - can be accessed via console: window.unifiedDashboard.exportData()
+        const dataToExport = this.filteredTools.map(tool => ({
+            name: tool.name,
+            category: tool.category,
+            pricing: tool.pricing,
+            rating: tool.rating,
+            businessImpact: tool.businessImpact,
+            timeToValue: tool.timeToValue,
+            complexity: tool.complexity,
+            url: tool.url
+        }));
+        
+        const csv = this.convertToCSV(dataToExport);
+        this.downloadCSV(csv, 'ai-tools-export.csv');
+    }
+
+    convertToCSV(data) {
+        const headers = Object.keys(data[0]);
+        const csvContent = [
+            headers.join(','),
+            ...data.map(row => 
+                headers.map(header => {
+                    const value = row[header] || '';
+                    return typeof value === 'string' && value.includes(',') 
+                        ? `"${value}"` 
+                        : value;
+                }).join(',')
+            )
+        ].join('\n');
+        
+        return csvContent;
+    }
+
+    downloadCSV(content, filename) {
+        const blob = new Blob([content], { type: 'text/csv;charset=utf-8;' });
+        const link = document.createElement('a');
+        const url = URL.createObjectURL(blob);
+        
+        link.setAttribute('href', url);
+        link.setAttribute('download', filename);
+        link.style.visibility = 'hidden';
+        
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    getEmptyStateHTML() {
+        return `
+            <div class="empty-state">
+                <i class="fas fa-search"></i>
+                <h3>No tools found</h3>
+                <p>Try adjusting your search terms or filters</p>
+            </div>
+        `;
+    }
+
+    showEmptyState() {
+        const contentArea = document.getElementById('contentArea');
+        contentArea.innerHTML = `
+            <div class="empty-state">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>Unable to load tools data</h3>
+                <p>Please refresh the page or try again later</p>
+            </div>
+        `;
+    }
+
+    clearAllFilters() {
+        // Reset all filter values
+        this.filters = {
+            search: '',
+            category: [],
+            pricing: [],
+            rating: 1,
+            impact: 0,
+            roi: '',
+            apis: [],
+            complexity: ''
+        };
+
+        // Clear search input
+        const searchInput = document.getElementById('globalSearchInput');
+        if (searchInput) {
+            searchInput.value = '';
+        }
+
+        // Clear category filter
+        const categoryFilter = document.getElementById('categoryFilter');
+        if (categoryFilter) {
+            categoryFilter.selectedIndex = 0;
+        }
+
+        // Clear pricing checkboxes
+        document.querySelectorAll('.pricing-filter').forEach(checkbox => {
+            checkbox.checked = false;
+        });
+
+        // Reset rating range
+        const ratingRange = document.getElementById('ratingRange');
+        if (ratingRange) {
+            ratingRange.value = 1;
+            document.getElementById('ratingValue').textContent = '1.0+';
+        }
+
+        // Reset impact range
+        const impactRange = document.getElementById('impactRange');
+        if (impactRange) {
+            impactRange.value = 0;
+            document.getElementById('impactValue').textContent = '0+';
+        }
+
+        // Clear ROI filter
+        const roiFilter = document.getElementById('roiFilter');
+        if (roiFilter) {
+            roiFilter.selectedIndex = 0;
+        }
+
+        // Clear API checkboxes
+        document.querySelectorAll('.api-filter').forEach(checkbox => {
+            checkbox.checked = false;
+        });
+
+        // Clear complexity filter
+        const complexityFilter = document.getElementById('complexityFilter');
+        if (complexityFilter) {
+            complexityFilter.selectedIndex = 0;
+        }
+
+        // Reapply filters (which will show all tools)
+        this.applyFilters();
+    }
+
+    initializeDarkMode() {
+        // Check for saved theme preference or default to light mode
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        this.setTheme(savedTheme);
+    }
+
+    toggleDarkMode() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        this.setTheme(newTheme);
+    }
+
+    setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        
+        // Update toggle button icon
+        const toggleBtn = document.getElementById('darkModeToggle');
+        if (toggleBtn) {
+            const icon = toggleBtn.querySelector('i');
+            if (theme === 'dark') {
+                icon.className = 'fas fa-sun';
+            } else {
+                icon.className = 'fas fa-moon';
+            }
+        }
+    }
+}
+
+// Initialize the dashboard when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    window.unifiedDashboard = new UnifiedDashboard();
+});
+
+// Close detail panel on outside click
+document.addEventListener('click', (e) => {
+    const panel = document.getElementById('detailPanel');
+    if (panel && panel.classList.contains('open') && !panel.contains(e.target)) {
+        // Don't close if clicking on a tool card
+        if (!e.target.closest('.tool-card')) {
+            window.unifiedDashboard.closeDetailPanel();
+        }
+    }
+});
