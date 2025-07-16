@@ -7,6 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Navigation Styles -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../css/navigation-redesign.css">
+    <link rel="stylesheet" href="../css/navigation-override.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -413,9 +419,27 @@
     </style>
 </head>
 <body>
-    <a href="../index.html" class="back-button">
-        ← Back to Dashboard
-    </a>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-top-row">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h1 class="logo-text">CrimIntelligence: AI Tools Suite</h1>
+                </div>
+            </div>
+            <div class="header-nav-row">
+                <nav class="header-nav">
+                    <a href="../unified-dashboard.html" class="nav-link">Unified Dashboard</a>
+                    <a href="../financial-analysis/index.html" class="nav-link">Financial Analysis</a>
+                    <a href="../best-practices.html" class="nav-link">Best Practices</a>
+                    <a href="newsletter.html" class="nav-link active">AI News</a>
+                </nav>
+            </div>
+        </div>
+    </header>
     
     <div class="container">
         <header>
