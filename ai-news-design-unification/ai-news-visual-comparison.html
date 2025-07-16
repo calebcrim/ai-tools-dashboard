@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI News Design Alignment Comparison</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0F172A;
+            color: #ffffff;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #3B82F6;
+        }
+        
+        .transformation-summary {
+            background: #1E293B;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            margin-bottom: 40px;
+        }
+        
+        .transformation-summary h2 {
+            color: #3B82F6;
+            margin-bottom: 20px;
+            font-size: 1.75rem;
+        }
+        
+        .change-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .change-card {
+            background: #0F172A;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
+        
+        .change-card h3 {
+            color: #60A5FA;
+            font-size: 1.125rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .change-card p {
+            color: #94A3B8;
+            font-size: 0.875rem;
+        }
+        
+        .icon {
+            font-size: 1.5rem;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .column {
+            background: #1E293B;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+        
+        .column h2 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .before h2 {
+            color: #F87171;
+        }
+        
+        .after h2 {
+            color: #10B981;
+        }
+        
+        /* Mock Newsletter Section */
+        .mock-section {
+            margin-bottom: 30px;
+        }
+        
+        .mock-section h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: #94A3B8;
+        }
+        
+        /* Before styles (Light theme) */
+        .before-newsletter {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .before-newsletter h4 {
+            color: #1a1a1a;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .before-news-item {
+            background: #f9fafb;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #e5e7eb;
+        }
+        
+        .before-news-item h5 {
+            color: #1a1a1a;
+            font-size: 1.125rem;
+            margin-bottom: 8px;
+        }
+        
+        .before-news-item p {
+            color: #4b5563;
+            font-size: 0.875rem;
+        }
+        
+        .before-category {
+            background: #eef2ff;
+            color: #4338ca;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            display: inline-block;
+            margin-top: 8px;
+        }
+        
+        /* After styles (Dark theme) */
+        .after-newsletter {
+            background: #1E293B;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .source-bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #3B82F6;
+            border-radius: 12px 0 0 12px;
+        }
+        
+        .after-newsletter h4 {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            padding-left: 16px;
+        }
+        
+        .after-news-item {
+            background: #0F172A;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 15px;
+            transition: all 0.2s ease;
+        }
+        
+        .after-news-item:hover {
+            transform: translateY(-2px);
+            border-color: #3B82F6;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .after-news-item h5 {
+            color: #ffffff;
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+        
+        .after-news-item p {
+            color: #94A3B8;
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+        
+        .after-category {
+            background: rgba(59, 130, 246, 0.1);
+            color: #60A5FA;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
+            display: inline-block;
+            margin-top: 8px;
+        }
+        
+        /* Color swatches */
+        .color-comparison {
+            margin-bottom: 30px;
+        }
+        
+        .color-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            gap: 15px;
+        }
+        
+        .color-box {
+            width: 60px;
+            height: 40px;
+            border-radius: 6px;
+            border: 1px solid #475569;
+        }
+        
+        .color-info {
+            flex: 1;
+        }
+        
+        .color-label {
+            font-size: 0.875rem;
+            color: #CBD5E1;
+        }
+        
+        .color-value {
+            font-family: 'Monaco', monospace;
+            font-size: 0.875rem;
+            color: #64748B;
+        }
+        
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .change-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI News Page Design Alignment</h1>
+        
+        <div class="transformation-summary">
+            <h2>🎯 Major Transformation: Light to Dark Theme</h2>
+            <div class="change-grid">
+                <div class="change-card">
+                    <h3><span class="icon">🌙</span> Complete Theme Switch</h3>
+                    <p>From light gray (#f7f9fc) to dark navy (#0F172A) background</p>
+                </div>
+                <div class="change-card">
+                    <h3><span class="icon">🎨</span> Color Alignment</h3>
+                    <p>Sky blue (#4a90e2) to Electric blue (#3B82F6)</p>
+                </div>
+                <div class="change-card">
+                    <h3><span class="icon">📐</span> Consistent Spacing</h3>
+                    <p>16px → 12px border radius, base-8 grid system</p>
+                </div>
+                <div class="change-card">
+                    <h3><span class="icon">✨</span> Unified Interactions</h3>
+                    <p>Matching hover effects and transitions</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="comparison-grid">
+            <div class="column before">
+                <h2>❌ Before (Light Theme)</h2>
+                
+                <div class="mock-section">
+                    <h3>Color Palette</h3>
+                    <div class="color-comparison">
+                        <div class="color-row">
+                            <div class="color-box" style="background: #f7f9fc;"></div>
+                            <div class="color-info">
+                                <div class="color-label">Background</div>
+                                <div class="color-value">#f7f9fc (Light Gray)</div>
+                            </div>
+                        </div>
+                        <div class="color-row">
+                            <div class="color-box" style="background: #4a90e2;"></div>
+                            <div class="color-info">
+                                <div class="color-label">Primary</div>
+                                <div class="color-value">#4a90e2 (Sky Blue)</div>
+                            </div>
+                        </div>
+                        <div class="color-row">
+                            <div class="color-box" style="background: white;"></div>
+                            <div class="color-info">
+                                <div class="color-label">Cards</div>
+                                <div class="color-value">white</div>
+                            </div>
+                        </div>
+                        <div class="color-row">
+                            <div class="color-box" style="background: #1a1a1a;"></div>
+                            <div class="color-info">
+                                <div class="color-label">Text</div>
+                                <div class="color-value">#1a1a1a (Near Black)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mock-section">
+                    <h3>Newsletter Card</h3>
+                    <div style="background: #f7f9fc; padding: 20px; border-radius: 8px;">
+                        <div class="before-newsletter">
+                            <h4>Towards AI Newsletter</h4>
+                            <div class="before-news-item">
+                                <h5>Meta's Massive AI Infrastructure Plans</h5>
+                                <p>Meta announced two gigawatt-scale AI data centers...</p>
+                                <span class="before-category">Company News</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="column after">
+                <h2>✅ After (Dark Theme)</h2>
+                
+                <div class="mock-section">
+                    <h3>Color Palette</h3>
+                    <div class="color-comparison">
+                        <div class="color-row">
+                            <div class="color-box" style="background: #0F172A;"></div>
+                            <div class="color-info">
+                                <div class="color-label">Background</div>
+                                <div class="color-value">#0F172A (Dark Navy)</div>
+                            </div>
+                        </div>
+                        <div class="color-row">
+                            <div class="color-box" style="background: #3B82F6;"></div>
+                            <div class="color-info">
+                                <div class="color-label">Primary</div>
+                                <div class="color-value">#3B82F6 (Electric Blue)</div>
+                            </div>
+                        </div>
+                        <div class="color-row">
+                            <div class="color-box" style="background: #1E293B;"></div>
+                            <div class="color-info">
+                                <div class="color-label">Cards</div>
+                                <div class="color-value">#1E293B (Dark Gray)</div>
+                            </div>
+                        </div>
+                        <div class="color-row">
+                            <div class="color-box" style="background: #ffffff;"></div>
+                            <div class="color-info">
+                                <div class="color-label">Text</div>
+                                <div class="color-value">#ffffff (White)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mock-section">
+                    <h3>Newsletter Card</h3>
+                    <div class="after-newsletter">
+                        <div class="source-bar"></div>
+                        <h4>Towards AI Newsletter</h4>
+                        <div class="after-news-item">
+                            <h5>Meta's Massive AI Infrastructure Plans</h5>
+                            <p>Meta announced two gigawatt-scale AI data centers...</p>
+                            <span class="after-category">Company News</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="transformation-summary">
+            <h2>📊 Key Design Changes</h2>
+            <div class="change-grid">
+                <div class="change-card">
+                    <h3>Typography</h3>
+                    <p>• Gradient text → Solid color<br>
+                       • Min 14px font size maintained<br>
+                       • Consistent weight hierarchy</p>
+                </div>
+                <div class="change-card">
+                    <h3>Cards & Containers</h3>
+                    <p>• 16px → 12px border radius<br>
+                       • Light shadows → Dark subtle shadows<br>
+                       • Added hover elevation effects</p>
+                </div>
+                <div class="change-card">
+                    <h3>Category Badges</h3>
+                    <p>• Bright colors → Muted with transparency<br>
+                       • Uppercase with letter spacing<br>
+                       • Consistent 6px radius</p>
+                </div>
+                <div class="change-card">
+                    <h3>Source Indicators</h3>
+                    <p>• Maintained unique colors<br>
+                       • Added left border accent<br>
+                       • Adjusted for dark theme</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

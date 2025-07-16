@@ -1,29 +1,63 @@
 /* Best Practices Hub Styles - Adapted for AI Tools Dashboard Dark Theme */
 
 :root {
-    /* Override with dark theme colors to match existing site */
-    --bp-primary: #007bff;
-    --bp-secondary: #0056b3;
-    --bp-success: #28a745;
-    --bp-warning: #ffc107;
-    --bp-danger: #dc3545;
-    --bp-dark: #0a0a0a;
-    --bp-gray: #6c757d;
-    --bp-light: #1a1a1a;
+    /* Override main design tokens for this page */
+    --color-bg-primary: #0F172A !important;
+    --color-bg-secondary: #1E293B !important;
+    --color-bg-tertiary: #334155 !important;
+    --color-text-primary: #ffffff !important;
+    --color-text-secondary: #94A3B8 !important;
+    --color-border-primary: #334155 !important;
+    --color-primary: #3B82F6 !important;
+    
+    /* Also override any generic variables that might be used */
+    --bg-primary: #0F172A !important;
+    --bg-card: #1E293B !important;
+    --bg-secondary: #1E293B !important;
+    --text-primary: #ffffff !important;
+    --text-secondary: #94A3B8 !important;
+    --border: #334155 !important;
+    --primary: #3B82F6 !important;
+    
+    /* Primary Brand Colors - Matching Unified Dashboard */
+    --bp-primary: #3B82F6;          /* Electric Blue (was #007bff) */
+    --bp-primary-dark: #2563EB;     /* Darker blue for hover states */
+    --bp-primary-light: #60A5FA;    /* Lighter blue for accents */
+    
+    /* Semantic Colors - Aligned with Dashboard */
+    --bp-success: #10B981;          /* Emerald */
+    --bp-warning: #F59E0B;          /* Amber */
+    --bp-danger: #EF4444;           /* Red */
+    --bp-info: #3B82F6;             /* Blue */
+    
+    /* Neutral Palette - Matching Dashboard Grays */
+    --bp-dark: #0F172A;             /* Main background (was #0a0a0a) */
+    --bp-card-bg: #1E293B;          /* Card backgrounds (was #1a1a1a) */
+    --bp-border: #334155;           /* Borders/dividers (was #2a2a2a) */
+    --bp-hover-bg: #2a3f5f;         /* Hover state background */
+    --bp-gray: #64748B;             /* Medium gray */
+    --bp-text-primary: #ffffff;     /* Primary text */
+    --bp-text-secondary: #94A3B8;   /* Secondary text (was #b0b0b0) */
     --bp-white: #ffffff;
-    --bp-text-primary: #ffffff;
-    --bp-text-secondary: #b0b0b0;
-    --bp-border: #2a2a2a;
-    --bp-card-bg: #1a1a1a;
-    --bp-hover-bg: #2a2a2a;
+    
+    /* Legacy variables for compatibility */
+    --bp-secondary: #2563EB;        /* Using primary-dark */
+    --bp-light: #1E293B;            /* Using card-bg */
+    
+    /* Typography and Styling */
     --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-mono: 'Monaco', 'Consolas', monospace;
-    --radius: 8px;
-    --shadow: 0 2px 4px rgba(0,0,0,0.3);
-    --shadow-lg: 0 10px 25px rgba(0,0,0,0.5);
+    --radius: 12px;                 /* Updated from 8px to match dashboard */
+    --shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 /* Base Styles */
+body {
+    background: var(--bp-dark) !important;
+    color: var(--bp-text-primary) !important;
+}
+
 .best-practices-hub {
     background: var(--bp-dark);
     color: var(--bp-text-primary);
@@ -74,7 +108,7 @@
 
 /* Hero Section */
 .bp-hero {
-    background: linear-gradient(135deg, #007bff, #0056b3);
+    background: linear-gradient(135deg, var(--bp-primary), var(--bp-primary-dark));
     color: var(--bp-white);
     padding: 4rem 0;
     text-align: center;
@@ -103,11 +137,17 @@
     width: 100%;
     padding: 1rem 3rem 1rem 1rem;
     font-size: 1rem;
-    border: none;
+    border: 1px solid rgba(51, 65, 85, 0.5);
     border-radius: var(--radius);
-    box-shadow: var(--shadow-lg);
-    background: var(--bp-card-bg);
+    background: rgba(30, 41, 59, 0.95);
     color: var(--bp-text-primary);
+    transition: all 0.2s;
+}
+
+.bp-search-input:focus {
+    outline: none;
+    border-color: #60A5FA;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 .bp-search-input::placeholder {
@@ -153,41 +193,49 @@
     background: var(--bp-card-bg);
     border: 1px solid var(--bp-border);
     border-radius: var(--radius);
-    padding: 2rem;
+    padding: 24px;
     transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
 .bp-path-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
     border-color: var(--bp-primary);
+    background: rgba(59, 130, 246, 0.02);
 }
 
 .bp-path-icon {
-    width: 60px;
-    height: 60px;
+    width: 64px;
+    height: 64px;
     border-radius: var(--radius);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
     margin-bottom: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.bp-path-card:hover .bp-path-icon {
+    transform: scale(1.05);
 }
 
 .bp-path-card.beginner .bp-path-icon { 
-    background: rgba(59, 130, 246, 0.2); 
-    color: #3b82f6; 
+    background: rgba(59, 130, 246, 0.15); 
+    color: var(--bp-primary); 
 }
 
 .bp-path-card.intermediate .bp-path-icon { 
-    background: rgba(245, 158, 11, 0.2); 
-    color: #f59e0b; 
+    background: rgba(245, 158, 11, 0.15); 
+    color: var(--bp-warning); 
 }
 
 .bp-path-card.advanced .bp-path-icon { 
-    background: rgba(239, 68, 68, 0.2); 
-    color: #ef4444; 
+    background: rgba(239, 68, 68, 0.15); 
+    color: var(--bp-danger); 
 }
 
 .bp-path-title {
@@ -211,7 +259,7 @@
 
 /* Featured Guides */
 .bp-featured-guides {
-    background: var(--bp-light);
+    background: var(--bp-dark);
     padding: 4rem 0;
 }
 
@@ -225,7 +273,7 @@
     background: var(--bp-card-bg);
     border: 1px solid var(--bp-border);
     border-radius: var(--radius);
-    padding: 1.5rem;
+    padding: 24px;
     transition: all 0.2s;
     cursor: pointer;
     text-decoration: none;
@@ -233,9 +281,10 @@
 }
 
 .bp-guide-card:hover {
+    transform: translateY(-2px);  /* Add elevation */
     border-color: var(--bp-primary);
-    box-shadow: var(--shadow);
-    background: var(--bp-hover-bg);
+    box-shadow: var(--shadow-lg);
+    background: rgba(59, 130, 246, 0.02);  /* Subtle highlight */
 }
 
 .bp-guide-meta {
@@ -248,15 +297,27 @@
 
 .bp-guide-badge {
     padding: 0.25rem 0.5rem;
-    background: var(--bp-hover-bg);
-    border-radius: 4px;
-    font-weight: 500;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 6px;
+    font-weight: 600;
     color: var(--bp-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    font-size: 0.75rem;
 }
 
-.bp-guide-badge.beginner { color: #3b82f6; }
-.bp-guide-badge.intermediate { color: #f59e0b; }
-.bp-guide-badge.advanced { color: #ef4444; }
+.bp-guide-badge.beginner { 
+    background: rgba(59, 130, 246, 0.15);
+    color: #60A5FA; 
+}
+.bp-guide-badge.intermediate { 
+    background: rgba(245, 158, 11, 0.15);
+    color: #FCD34D; 
+}
+.bp-guide-badge.advanced { 
+    background: rgba(239, 68, 68, 0.15);
+    color: #F87171; 
+}
 
 .bp-guide-title {
     font-size: 1.125rem;
@@ -273,8 +334,9 @@
 
 /* Hidden Gems Section */
 .bp-hidden-gems {
-    background: var(--bp-dark);
+    background: var(--bp-card-bg);
     padding: 4rem 0;
+    border-top: 1px solid var(--bp-border);
 }
 
 .bp-gems-carousel {
@@ -301,12 +363,18 @@
 }
 
 .bp-gem-card {
-    flex: 0 0 350px;
-    background: var(--bp-card-bg);
+    flex: 0 0 320px;
+    background: var(--bp-dark);
     border: 1px solid var(--bp-border);
     border-radius: var(--radius);
-    padding: 2rem;
+    padding: 24px;
     scroll-snap-align: start;
+    transition: all 0.2s;
+}
+
+.bp-gem-card:hover {
+    border-color: var(--bp-primary);
+    box-shadow: var(--shadow-md);
 }
 
 .bp-gem-header {
@@ -317,7 +385,15 @@
 }
 
 .bp-gem-icon {
-    font-size: 2rem;
+    width: 48px;
+    height: 48px;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--bp-primary);
 }
 
 .bp-gem-title {
@@ -356,7 +432,9 @@
 }
 
 .bp-try-button:hover {
-    background: var(--bp-secondary);
+    background: var(--bp-primary-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
 }
 
 /* Footer */

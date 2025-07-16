@@ -4,20 +4,22 @@
 @import url('../../../css/design-tokens.css');
 
 :root {
-    /* Inherit from hub styles */
+    /* Inherit from hub styles - Unified Dashboard Theme */
     --guide-primary: var(--color-primary); /* #3B82F6 */
-    --guide-success: #28a745;
-    --guide-warning: #ffc107;
-    --guide-danger: #dc3545;
-    --guide-dark: #0a0a0a;
-    --guide-gray: #6c757d;
-    --guide-light: #1a1a1a;
+    --guide-primary-dark: #2563EB;      /* Darker blue for hover */
+    --guide-primary-light: #60A5FA;     /* Lighter blue for accents */
+    --guide-success: #10B981;           /* Emerald */
+    --guide-warning: #F59E0B;           /* Amber */
+    --guide-danger: #EF4444;            /* Red */
+    --guide-dark: #0F172A;              /* Main background */
+    --guide-gray: #64748B;              /* Medium gray */
+    --guide-light: #1E293B;             /* Card background */
     --guide-white: #ffffff;
     --guide-text-primary: #ffffff;
-    --guide-text-secondary: #b0b0b0;
-    --guide-border: #2a2a2a;
-    --guide-card-bg: #1a1a1a;
-    --guide-hover-bg: #2a2a2a;
+    --guide-text-secondary: #94A3B8;    /* Secondary text */
+    --guide-border: #334155;            /* Borders */
+    --guide-card-bg: #1E293B;           /* Card backgrounds */
+    --guide-hover-bg: #2a3f5f;          /* Hover state */
     --guide-code-bg: #0a0a0a;
     --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-mono: 'Monaco', 'Consolas', monospace;
@@ -64,18 +66,18 @@ body {
 }
 
 .difficulty-badge.beginner {
-    background: rgba(59, 130, 246, 0.2);
-    color: #3b82f6;
+    background: rgba(59, 130, 246, 0.15);
+    color: var(--guide-primary);
 }
 
 .difficulty-badge.intermediate {
-    background: rgba(245, 158, 11, 0.2);
-    color: #f59e0b;
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--guide-warning);
 }
 
 .difficulty-badge.advanced {
-    background: rgba(239, 68, 68, 0.2);
-    color: #ef4444;
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--guide-danger);
 }
 
 .read-time,
@@ -197,10 +199,12 @@ body {
 
 .example.bad {
     border-color: rgba(239, 68, 68, 0.3);
+    background: rgba(239, 68, 68, 0.02);
 }
 
 .example.good {
-    border-color: rgba(40, 167, 69, 0.3);
+    border-color: rgba(16, 185, 129, 0.3);
+    background: rgba(16, 185, 129, 0.02);
 }
 
 .example h4 {
@@ -215,7 +219,7 @@ body {
 }
 
 .example.good h4 {
-    color: #28a745;
+    color: var(--guide-success);
 }
 
 /* Code Blocks */
@@ -289,7 +293,9 @@ code {
 }
 
 .btn-primary:hover {
-    background: #0056b3;
+    background: var(--guide-primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .btn-secondary {
@@ -304,8 +310,8 @@ code {
 
 /* Key Takeaways */
 .key-takeaways {
-    background: rgba(40, 167, 69, 0.1);
-    border: 1px solid rgba(40, 167, 69, 0.3);
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
     border-radius: 8px;
     padding: 1.5rem;
     margin: 2rem 0;
@@ -313,7 +319,7 @@ code {
 
 .key-takeaways h3 {
     margin: 0 0 1rem 0;
-    color: #28a745;
+    color: var(--guide-success);
 }
 
 .key-takeaways ul {
@@ -383,6 +389,7 @@ code {
 
 .guide-nav a:hover {
     gap: 0.75rem;
+    color: var(--guide-primary-light);
 }
 
 /* Responsive */
