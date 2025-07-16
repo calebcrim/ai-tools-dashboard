@@ -1,5 +1,11 @@
 /* Best Practices Hub Styles - Adapted for AI Tools Dashboard Dark Theme */
 
+/* Base Styles - More specific selector to override main styles.css */
+html body {
+    background: var(--bp-dark) !important;
+    color: var(--bp-text-primary) !important;
+}
+
 :root {
     /* Override main design tokens for this page */
     --color-bg-primary: #0F172A !important;
@@ -108,21 +114,45 @@ body {
 
 /* Hero Section */
 .bp-hero {
-    background: linear-gradient(135deg, var(--bp-primary), var(--bp-primary-dark));
+    /* Dark subtle gradient instead of bright blue */
+    background: linear-gradient(135deg, #1a2744 0%, #0F172A 100%);
     color: var(--bp-white);
     padding: 4rem 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+/* Add subtle background pattern */
+.bp-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+    z-index: 1;
+}
+
+.bp-hero > * {
+    position: relative;
+    z-index: 2;
 }
 
 .bp-hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
+    color: #ffffff;
 }
 
 .bp-hero p {
-    font-size: 1.25rem;
-    opacity: 0.9;
+    font-size: 1.125rem;
+    color: #94A3B8;
     max-width: 600px;
     margin: 0 auto 2rem;
 }
@@ -137,21 +167,23 @@ body {
     width: 100%;
     padding: 1rem 3rem 1rem 1rem;
     font-size: 1rem;
-    border: 1px solid rgba(51, 65, 85, 0.5);
-    border-radius: var(--radius);
-    background: rgba(30, 41, 59, 0.95);
+    border: 1px solid #334155;
+    border-radius: 12px;
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(10px);
     color: var(--bp-text-primary);
-    transition: all 0.2s;
+    transition: all 0.2s ease;
 }
 
 .bp-search-input:focus {
     outline: none;
-    border-color: #60A5FA;
+    border-color: #3B82F6;
+    background: rgba(30, 41, 59, 0.8);
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 .bp-search-input::placeholder {
-    color: var(--bp-text-secondary);
+    color: #64748B;
 }
 
 .bp-search-icon {
