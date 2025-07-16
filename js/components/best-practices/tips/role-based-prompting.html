@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role-Based Prompting - AI Pro Tips</title>
+    <link rel="stylesheet" href="../../../../css/styles.css">
+    <link rel="stylesheet" href="../css/guide-styles.css">
+    <link rel="stylesheet" href="../css/tips-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Main Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-top-row">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h1 class="logo-text">CrimIntelligence: AI Tools Suite</h1>
+                </div>
+                <div class="user-menu">
+                    <span class="user-name">
+                        <i class="fas fa-user-circle"></i>
+                        AI Researcher
+                    </span>
+                </div>
+            </div>
+            <div class="header-nav-row">
+                <nav class="header-nav">
+                    <a href="../../../../index.html" class="nav-link">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                    <a href="../../../../dual-view-enhanced.html" class="nav-link">
+                        <i class="fas fa-exchange-alt"></i> Dual View
+                    </a>
+                    <a href="../../../../enterprise-report.html" class="nav-link">
+                        <i class="fas fa-building"></i> Enterprise Report
+                    </a>
+                    <a href="../../../../financial-analysis/index.html" class="nav-link">
+                        <i class="fas fa-dollar-sign"></i> Financial Analysis
+                    </a>
+                    <a href="../index.html" class="nav-link active">
+                        <i class="fas fa-graduation-cap"></i> Best Practices
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="tip-container">
+        <!-- Pro Tip Header -->
+        <header class="tip-header">
+            <div class="tip-badge">🎭 Pro Tip</div>
+            <h1>Role-Based Prompting: Your Secret Weapon</h1>
+            <p class="tip-summary">Assign a specific role to the AI for more focused and expert responses. Watch how a simple role assignment transforms generic answers into expert insights.</p>
+        </header>
+
+        <!-- Impact Stats -->
+        <div class="tip-stats">
+            <div class="stat-card">
+                <span class="stat-number">3x</span>
+                <span class="stat-label">More Detailed</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">85%</span>
+                <span class="stat-label">More Accurate</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">10x</span>
+                <span class="stat-label">More Useful</span>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <section class="tip-content">
+            <h2>The Power of Role Assignment 🎯</h2>
+            <p>When you assign AI a specific role, you activate specialized knowledge patterns and communication styles. It's like the difference between asking a random person vs. consulting an expert.</p>
+
+            <div class="role-comparison">
+                <div class="comparison-item without-role">
+                    <h4>❌ Without Role</h4>
+                    <div class="prompt-example">
+                        <p class="prompt">"How do I improve my website's performance?"</p>
+                        <p class="response">Generic tips about images, caching, and hosting...</p>
+                    </div>
+                </div>
+                <div class="comparison-item with-role">
+                    <h4>✅ With Role</h4>
+                    <div class="prompt-example">
+                        <p class="prompt">"Act as a senior web performance engineer with expertise in Core Web Vitals. How do I improve my website's performance?"</p>
+                        <p class="response">Detailed technical analysis with metrics, tools, and prioritized action items...</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Interactive Role Selector 🎨</h2>
+            <p>Try different roles to see how they transform responses:</p>
+            
+            <div class="role-selector">
+                <div class="selector-controls">
+                    <label>Choose a scenario:</label>
+                    <select id="scenarioSelect">
+                        <option value="business">Business Strategy</option>
+                        <option value="writing">Content Writing</option>
+                        <option value="technical">Technical Problem</option>
+                        <option value="creative">Creative Project</option>
+                    </select>
+                </div>
+                
+                <div class="role-examples" id="roleExamples">
+                    <h4>Select roles to compare:</h4>
+                    <div class="role-options" id="roleOptions">
+                        <!-- Dynamically populated -->
+                    </div>
+                    
+                    <div class="example-outputs" id="exampleOutputs">
+                        <!-- Dynamically populated -->
+                    </div>
+                </div>
+            </div>
+
+            <h2>Role Engineering Framework 🏗️</h2>
+            <div class="framework-grid">
+                <div class="framework-component">
+                    <h4>1. Core Identity</h4>
+                    <p>Define the primary expertise</p>
+                    <div class="example-text">
+                        "You are a [specific role] with [years] of experience in [domain]"
+                    </div>
+                </div>
+                <div class="framework-component">
+                    <h4>2. Specializations</h4>
+                    <p>Add specific areas of expertise</p>
+                    <div class="example-text">
+                        "specializing in [area 1], [area 2], and [area 3]"
+                    </div>
+                </div>
+                <div class="framework-component">
+                    <h4>3. Experience Context</h4>
+                    <p>Include relevant background</p>
+                    <div class="example-text">
+                        "who has worked with [type of clients/projects]"
+                    </div>
+                </div>
+                <div class="framework-component">
+                    <h4>4. Communication Style</h4>
+                    <p>Specify how they should respond</p>
+                    <div class="example-text">
+                        "Explain in a [style] manner, focusing on [priorities]"
+                    </div>
+                </div>
+            </div>
+
+            <h2>Power Roles Library 📚</h2>
+            <p>Copy and customize these battle-tested role prompts:</p>
+            
+            <div class="role-library">
+                <div class="role-card">
+                    <div class="role-header">
+                        <span class="role-icon">💼</span>
+                        <h4>Strategic Business Advisor</h4>
+                    </div>
+                    <div class="role-prompt">
+                        <code>Act as a senior business strategist with 20+ years experience advising Fortune 500 companies. You specialize in digital transformation, market analysis, and competitive positioning. Provide insights that are data-driven, actionable, and consider both short-term wins and long-term sustainability.</code>
+                    </div>
+                    <button class="copy-btn" onclick="copyRole(this)">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-header">
+                        <span class="role-icon">🔬</span>
+                        <h4>Research Scientist</h4>
+                    </div>
+                    <div class="role-prompt">
+                        <code>You are a principal research scientist with a PhD and 15 years of experience in [field]. You've published 50+ peer-reviewed papers and are known for your rigorous methodology and ability to explain complex concepts clearly. Approach questions with scientific rigor, cite relevant research, and acknowledge limitations.</code>
+                    </div>
+                    <button class="copy-btn" onclick="copyRole(this)">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-header">
+                        <span class="role-icon">✍️</span>
+                        <h4>Award-Winning Copywriter</h4>
+                    </div>
+                    <div class="role-prompt">
+                        <code>Act as an award-winning copywriter who has created campaigns for major brands like Apple, Nike, and Coca-Cola. You understand consumer psychology, brand voice, and how to craft messages that connect emotionally while driving action. Your writing is concise, powerful, and memorable.</code>
+                    </div>
+                    <button class="copy-btn" onclick="copyRole(this)">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-header">
+                        <span class="role-icon">👨‍💻</span>
+                        <h4>Senior Software Architect</h4>
+                    </div>
+                    <div class="role-prompt">
+                        <code>You are a senior software architect with 15+ years of experience building scalable systems. You've worked at both startups and FAANG companies, specializing in microservices, cloud architecture, and performance optimization. Provide technical guidance that balances ideal solutions with practical constraints.</code>
+                    </div>
+                    <button class="copy-btn" onclick="copyRole(this)">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-header">
+                        <span class="role-icon">🎓</span>
+                        <h4>Master Educator</h4>
+                    </div>
+                    <div class="role-prompt">
+                        <code>Act as an experienced educator with advanced degrees in education and cognitive science. You've taught at all levels from K-12 to university and specialize in making complex topics accessible. Use analogies, examples, and scaffold information from basic to advanced concepts.</code>
+                    </div>
+                    <button class="copy-btn" onclick="copyRole(this)">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-header">
+                        <span class="role-icon">🎨</span>
+                        <h4>Creative Director</h4>
+                    </div>
+                    <div class="role-prompt">
+                        <code>You are an award-winning creative director with 20 years in advertising and design. You've led campaigns that have won Cannes Lions and transformed brand perceptions. Think visually, push creative boundaries, and always connect ideas back to human emotions and experiences.</code>
+                    </div>
+                    <button class="copy-btn" onclick="copyRole(this)">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                </div>
+            </div>
+
+            <h2>Advanced Role Techniques 🚀</h2>
+            
+            <div class="advanced-techniques">
+                <div class="technique">
+                    <h4>1. Multi-Role Perspectives</h4>
+                    <p>Get diverse viewpoints by asking AI to consider multiple roles:</p>
+                    <div class="code-example">
+                        <code>Analyze this business idea from three perspectives:
+1. As a venture capitalist focused on ROI
+2. As a customer experience designer
+3. As a risk management consultant
+
+Provide insights from each role.</code>
+                    </div>
+                </div>
+
+                <div class="technique">
+                    <h4>2. Role + Personality Traits</h4>
+                    <p>Combine expertise with communication style:</p>
+                    <div class="code-example">
+                        <code>Act as a data scientist who is also an excellent storyteller. You make complex statistics accessible through vivid analogies and real-world examples.</code>
+                    </div>
+                </div>
+
+                <div class="technique">
+                    <h4>3. Adversarial Roles</h4>
+                    <p>Use opposing roles to stress-test ideas:</p>
+                    <div class="code-example">
+                        <code>First, act as an enthusiastic startup founder pitching this idea. Then, act as a skeptical investor pointing out every possible flaw. Finally, synthesize both perspectives.</code>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Try It Yourself 🛠️</h2>
+            <div class="practice-section">
+                <h3>Role Prompt Builder</h3>
+                <div class="prompt-builder">
+                    <div class="builder-section">
+                        <label>Primary Role:</label>
+                        <input type="text" id="primaryRole" placeholder="e.g., Senior Marketing Manager">
+                    </div>
+                    <div class="builder-section">
+                        <label>Years of Experience:</label>
+                        <input type="number" id="experience" placeholder="e.g., 15" min="1" max="50">
+                    </div>
+                    <div class="builder-section">
+                        <label>Specializations (comma-separated):</label>
+                        <input type="text" id="specializations" placeholder="e.g., B2B SaaS, Content Marketing, Analytics">
+                    </div>
+                    <div class="builder-section">
+                        <label>Notable Achievements:</label>
+                        <input type="text" id="achievements" placeholder="e.g., Led campaigns for Fortune 500 companies">
+                    </div>
+                    <div class="builder-section">
+                        <label>Communication Style:</label>
+                        <select id="commStyle">
+                            <option value="professional">Professional & Data-Driven</option>
+                            <option value="friendly">Friendly & Approachable</option>
+                            <option value="academic">Academic & Thorough</option>
+                            <option value="creative">Creative & Inspiring</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" onclick="generateRolePrompt()">Generate Role Prompt</button>
+                    
+                    <div class="generated-prompt" id="generatedPrompt" style="display: none;">
+                        <h4>Your Custom Role Prompt:</h4>
+                        <code id="promptOutput"></code>
+                        <button class="copy-btn" onclick="copyGenerated()">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="best-practices">
+                <h3>🌟 Best Practices</h3>
+                <ul>
+                    <li><strong>Be Specific:</strong> "Senior DevOps Engineer" beats "IT Professional"</li>
+                    <li><strong>Add Context:</strong> Include industry, company size, or specific challenges</li>
+                    <li><strong>Set Expectations:</strong> Specify the type of response you want</li>
+                    <li><strong>Combine Roles:</strong> Mix technical expertise with soft skills</li>
+                    <li><strong>Iterate:</strong> Refine roles based on the responses you get</li>
+                </ul>
+            </div>
+
+            <div class="common-mistakes">
+                <h3>⚠️ Common Mistakes to Avoid</h3>
+                <ul>
+                    <li><strong>Too Vague:</strong> "Act as an expert" - Expert in what?</li>
+                    <li><strong>Contradictory:</strong> "Be a detail-oriented big-picture thinker"</li>
+                    <li><strong>Overloaded:</strong> Adding too many roles confuses the AI</li>
+                    <li><strong>No Context:</strong> Forgetting to specify the task after the role</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Related Resources -->
+        <section class="related-resources">
+            <h3>Master More Techniques</h3>
+            <div class="resource-links">
+                <a href="../guides/prompt-engineering-basics.html" class="resource-link">
+                    <i class="fas fa-book"></i>
+                    <span>Prompt Engineering Basics</span>
+                </a>
+                <a href="power-of-examples.html" class="resource-link">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>The Power of Examples</span>
+                </a>
+                <a href="#" class="resource-link">
+                    <i class="fas fa-brain"></i>
+                    <span>Advanced Prompting Guide</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <nav class="tip-nav">
+            <a href="../index.html">
+                <i class="fas fa-arrow-left"></i> Back to Best Practices
+            </a>
+            <a href="#" class="next-tip">
+                Explore More Tips <i class="fas fa-arrow-right"></i>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Role selector functionality
+        const scenarios = {
+            business: {
+                question: "How should I expand my business internationally?",
+                roles: [
+                    { name: "Generic Advisor", response: "Research markets, understand regulations, and build partnerships..." },
+                    { name: "International Business Consultant", response: "Based on my experience helping 50+ companies expand globally, start with market validation in one English-speaking country..." },
+                    { name: "Former CEO of Multinational", response: "Having scaled three companies internationally, the key is establishing product-market fit locally before expanding..." }
+                ]
+            },
+            writing: {
+                question: "How do I write compelling headlines?",
+                roles: [
+                    { name: "Generic Writer", response: "Use strong words and keep it short..." },
+                    { name: "Newspaper Editor", response: "In my 20 years at The Times, the best headlines tell a story in 6-8 words..." },
+                    { name: "Viral Content Specialist", response: "After analyzing 10,000+ viral posts, headlines that combine curiosity gaps with emotional triggers..." }
+                ]
+            },
+            technical: {
+                question: "How do I optimize database performance?",
+                roles: [
+                    { name: "Generic Developer", response: "Add indexes and optimize queries..." },
+                    { name: "Database Architect", response: "First, profile your queries using EXPLAIN ANALYZE. In my experience with petabyte-scale systems..." },
+                    { name: "Performance Engineer at Tech Giant", response: "At scale, it's rarely about indexes. Start with connection pooling, then query patterns..." }
+                ]
+            },
+            creative: {
+                question: "How do I develop a unique brand identity?",
+                roles: [
+                    { name: "Generic Designer", response: "Choose colors and fonts that represent your brand..." },
+                    { name: "Brand Strategist", response: "Start with brand archetypes. In my work with Fortune 500 brands, we map emotional territories..." },
+                    { name: "Creative Director at Top Agency", response: "Forget what you think you know about branding. Start with the contradiction at the heart of your brand..." }
+                ]
+            }
+        };
+
+        function updateRoleExamples() {
+            const scenario = document.getElementById('scenarioSelect').value;
+            const data = scenarios[scenario];
+            
+            let rolesHTML = '<h4>' + data.question + '</h4><div class="role-comparison-grid">';
+            
+            data.roles.forEach((role, index) => {
+                rolesHTML += `
+                    <div class="role-example-card">
+                        <h5>${role.name}</h5>
+                        <p class="example-response">"${role.response}"</p>
+                    </div>
+                `;
+            });
+            
+            rolesHTML += '</div>';
+            document.getElementById('roleExamples').innerHTML = rolesHTML;
+        }
+
+        // Copy functionality
+        function copyRole(button) {
+            const code = button.parentElement.querySelector('code').textContent;
+            navigator.clipboard.writeText(code);
+            button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            setTimeout(() => {
+                button.innerHTML = '<i class="fas fa-copy"></i> Copy';
+            }, 2000);
+        }
+
+        function generateRolePrompt() {
+            const role = document.getElementById('primaryRole').value;
+            const exp = document.getElementById('experience').value;
+            const specs = document.getElementById('specializations').value;
+            const achieve = document.getElementById('achievements').value;
+            const style = document.getElementById('commStyle').value;
+            
+            const styleMap = {
+                professional: "Provide insights that are data-driven, actionable, and professional",
+                friendly: "Explain in a friendly, approachable manner while maintaining expertise",
+                academic: "Provide thorough, well-researched responses with proper context",
+                creative: "Think outside the box and provide innovative, inspiring solutions"
+            };
+            
+            const prompt = `Act as a ${role} with ${exp}+ years of experience${specs ? ', specializing in ' + specs : ''}. ${achieve ? 'You have ' + achieve + '.' : ''} ${styleMap[style]}.`;
+            
+            document.getElementById('promptOutput').textContent = prompt;
+            document.getElementById('generatedPrompt').style.display = 'block';
+        }
+
+        function copyGenerated() {
+            const prompt = document.getElementById('promptOutput').textContent;
+            navigator.clipboard.writeText(prompt);
+            alert('Copied to clipboard!');
+        }
+
+        // Initialize
+        document.getElementById('scenarioSelect').addEventListener('change', updateRoleExamples);
+        updateRoleExamples();
+    </script>
+</body>
+</html>

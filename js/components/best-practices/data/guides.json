@@ -175,5 +175,55 @@
       "example": "\"Act as a senior data scientist with \nexpertise in predictive analytics. \nAnalyze this dataset and provide \ninsights on customer churn patterns.\"",
       "category": "intermediate"
     }
+  ],
+  "learningPaths": [
+    {
+      "id": "ai-fundamentals",
+      "title": "AI Fundamentals",
+      "description": "Start your journey with essential AI concepts and basic tool usage",
+      "icon": "🎯",
+      "estimatedTime": "3 hours",
+      "totalGuides": 12,
+      "guides": ["prompt-engineering-basics", "choosing-right-tool", "avoiding-ai-pitfalls"],
+      "prerequisites": "None - perfect for beginners!",
+      "objectives": [
+        "Understand core AI concepts",
+        "Master basic prompting",
+        "Choose the right tools",
+        "Avoid common mistakes"
+      ]
+    },
+    {
+      "id": "advanced-techniques",
+      "title": "Advanced Techniques",
+      "description": "Level up with advanced prompting, workflow automation, and integrations",
+      "icon": "🚀",
+      "estimatedTime": "5 hours",
+      "totalGuides": 18,
+      "guides": ["multi-tool-workflows", "ai-content-creation"],
+      "prerequisites": "Completion of AI Fundamentals recommended",
+      "objectives": [
+        "Create multi-tool workflows",
+        "Automate complex tasks",
+        "Integrate AI into existing systems",
+        "Optimize for scale"
+      ]
+    },
+    {
+      "id": "industry-specialization",
+      "title": "Industry Specialization",
+      "description": "Master AI applications for specific industries and use cases",
+      "icon": "💡",
+      "estimatedTime": "8 hours",
+      "totalGuides": 24,
+      "guides": ["custom-model-fine-tuning"],
+      "prerequisites": "Strong foundation in AI fundamentals and basic workflows",
+      "objectives": [
+        "Apply AI to industry-specific challenges",
+        "Build custom solutions",
+        "Measure ROI effectively",
+        "Stay compliant with regulations"
+      ]
+    }
   ]
 }
