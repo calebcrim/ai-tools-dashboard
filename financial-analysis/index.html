@@ -582,6 +582,215 @@
                 font-size: var(--text-sm); /* 14px minimum */
             }
         }
+        
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: var(--spacing-md);
+        }
+        
+        .modal-content {
+            background: var(--color-bg-primary);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            max-width: 500px;
+            width: 100%;
+            max-height: 90vh;
+            overflow: auto;
+        }
+        
+        .modal-header {
+            padding: var(--spacing-lg);
+            border-bottom: 1px solid var(--color-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-body {
+            padding: var(--spacing-lg);
+        }
+        
+        .modal-footer {
+            padding: var(--spacing-lg);
+            border-top: 1px solid var(--color-border);
+            display: flex;
+            justify-content: flex-end;
+            gap: var(--spacing-md);
+        }
+        
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--color-text-secondary);
+            cursor: pointer;
+            padding: var(--spacing-sm);
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+        }
+        
+        .modal-close:hover {
+            background-color: var(--color-bg-hover);
+            color: var(--color-text-primary);
+        }
+        
+        /* Notification Styles */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--color-bg-primary);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md) var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+            z-index: 10000;
+            max-width: 350px;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        .notification-success {
+            border-left: 4px solid var(--color-success);
+        }
+        
+        .notification-success i {
+            color: var(--color-success);
+        }
+        
+        .notification-info {
+            border-left: 4px solid var(--color-primary);
+        }
+        
+        .notification-info i {
+            color: var(--color-primary);
+        }
+        
+        /* Mobile Touch Enhancements */
+        @media (max-width: 768px) {
+            /* Ensure all interactive elements have minimum touch target size */
+            button, .btn, .nav-link, .mobile-nav-link, 
+            input[type="range"], select, .dropdown-trigger {
+                min-height: 44px;
+                min-width: 44px;
+            }
+            
+            /* Better touch targets for sliders */
+            input[type="range"] {
+                height: 44px;
+                -webkit-appearance: none;
+            }
+            
+            input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                background: var(--color-primary);
+                cursor: pointer;
+                margin-top: -14px;
+            }
+            
+            input[type="range"]::-webkit-slider-runnable-track {
+                width: 100%;
+                height: 4px;
+                background: var(--color-border);
+                border-radius: 2px;
+            }
+            
+            /* Improve select dropdowns on mobile */
+            select {
+                font-size: 16px; /* Prevents zoom on iOS */
+                padding: var(--spacing-md);
+            }
+            
+            /* Modal adjustments for mobile */
+            .modal-overlay {
+                padding: 0;
+            }
+            
+            .modal-content {
+                margin: var(--spacing-md);
+                max-height: calc(100vh - 2 * var(--spacing-md));
+            }
+            
+            /* Notification adjustments for mobile */
+            .notification {
+                left: 20px;
+                right: 20px;
+                max-width: none;
+            }
+            
+            /* Charts scrollable on mobile */
+            .chart-container {
+                position: relative;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            /* Mobile menu button visible */
+            .mobile-menu-toggle {
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                background: none;
+                border: 1px solid var(--color-border);
+                color: var(--color-text-primary);
+                font-size: 1.25rem;
+                width: 44px;
+                height: 44px;
+                border-radius: var(--radius-sm);
+                cursor: pointer;
+                transition: all 0.2s ease;
+            }
+            
+            .mobile-menu-toggle:hover {
+                background-color: var(--color-bg-hover);
+            }
+            
+            /* Hide desktop nav on mobile */
+            .header-nav {
+                display: none;
+            }
+            
+            /* Header adjustments for mobile */
+            .header-content {
+                gap: var(--spacing-md);
+            }
+            
+            .logo-text {
+                font-size: 1.1rem;
+            }
+        }
+        
+        /* Hide mobile menu button on desktop */
+        @media (min-width: 769px) {
+            .mobile-menu-toggle {
+                display: none;
+            }
+            
+            .mobile-navigation,
+            .mobile-navigation-overlay {
+                display: none !important;
+            }
+        }
     </style>
     
     <!-- Navigation Redesign -->
@@ -592,6 +801,9 @@
     <!-- Header -->
     <header class="header">
         <div class="header-content">
+            <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
             <div class="logo">
                 <div class="logo-icon">
                     <i class="fas fa-chart-line"></i>
@@ -606,6 +818,37 @@
             </nav>
         </div>
     </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-navigation-overlay"></div>
+    
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-navigation" aria-hidden="true">
+        <div class="mobile-nav-header">
+            <h2>Menu</h2>
+            <button class="mobile-menu-close" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="../unified-dashboard.html" class="mobile-nav-link">
+                <i class="fas fa-th-large"></i>
+                <span>Unified Dashboard</span>
+            </a>
+            <a href="index.html" class="mobile-nav-link active">
+                <i class="fas fa-chart-line"></i>
+                <span>Financial Analysis</span>
+            </a>
+            <a href="../best-practices.html" class="mobile-nav-link">
+                <i class="fas fa-lightbulb"></i>
+                <span>Best Practices</span>
+            </a>
+            <a href="../newsfeed/newsletter.html" class="mobile-nav-link">
+                <i class="fas fa-newspaper"></i>
+                <span>AI News</span>
+            </a>
+        </div>
+    </nav>
 
     <div class="financial-dashboard">
         <!-- Executive Summary Section -->
@@ -828,9 +1071,22 @@
         }
 
         function initializeCharts() {
-            // Category spend chart
-            const categoryCtx = document.getElementById('category-spend-chart').getContext('2d');
-            const categoryData = dataProcessor.getCategorySpendBreakdown();
+            try {
+                // Check if Chart.js is loaded
+                if (typeof Chart === 'undefined') {
+                    console.error('Chart.js not loaded');
+                    return;
+                }
+                
+                // Category spend chart
+                const categoryCanvas = document.getElementById('category-spend-chart');
+                if (!categoryCanvas) {
+                    console.error('Category spend chart canvas not found');
+                    return;
+                }
+                
+                const categoryCtx = categoryCanvas.getContext('2d');
+                const categoryData = dataProcessor.getCategorySpendBreakdown();
             
             charts.categorySpend = new Chart(categoryCtx, {
                 type: 'doughnut',
@@ -863,7 +1119,13 @@
             });
 
             // ROI vs Cost scatter chart
-            const roiCtx = document.getElementById('roi-cost-chart').getContext('2d');
+            const roiCanvas = document.getElementById('roi-cost-chart');
+            if (!roiCanvas) {
+                console.error('ROI cost chart canvas not found');
+                return;
+            }
+            
+            const roiCtx = roiCanvas.getContext('2d');
             const topROI = dataProcessor.getTopROITools(20);
             
             charts.roiCost = new Chart(roiCtx, {
@@ -909,11 +1171,29 @@
                     }
                 }
             });
+            
+            } catch (error) {
+                console.error('Chart initialization error:', error);
+                showError('Unable to load charts. Please refresh the page.');
+            }
         }
 
         function updateTopCostsTable() {
             const tbody = document.getElementById('top-costs-tbody');
-            const topCosts = dataProcessor.getTopExpensiveTools(10);
+            
+            // Show loading state
+            tbody.innerHTML = `
+                <tr>
+                    <td colspan="6" class="loading">
+                        <div class="spinner"></div>
+                        <p>Loading data...</p>
+                    </td>
+                </tr>
+            `;
+            
+            // Simulate async data loading
+            setTimeout(() => {
+                const topCosts = dataProcessor.getTopExpensiveTools(10);
             
             tbody.innerHTML = topCosts.map(tool => {
                 const tco = costCalculator.calculateToolTCO(tool.toolName, {
@@ -944,11 +1224,23 @@
                     </tr>
                 `;
             }).join('');
+            }, 100); // Short delay to show loading state
         }
 
         function updateSavingsOpportunities() {
             const grid = document.getElementById('savings-grid');
-            const opportunities = dataProcessor.savingsOpportunities.slice(0, 6);
+            
+            // Show loading state
+            grid.innerHTML = `
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Finding savings opportunities...</p>
+                </div>
+            `;
+            
+            // Simulate async data processing
+            setTimeout(() => {
+                const opportunities = dataProcessor.savingsOpportunities.slice(0, 6);
             
             grid.innerHTML = opportunities.map(opp => `
                 <div class="opportunity-card">
@@ -963,6 +1255,7 @@
                     </div>
                 </div>
             `).join('');
+            }, 100); // Short delay to show loading state
         }
 
         function attachEventListeners() {
@@ -970,37 +1263,75 @@
             const teamSizeSlider = document.getElementById('team-size');
             const teamSizeValue = document.getElementById('team-size-value');
             
-            teamSizeSlider.addEventListener('input', function() {
-                currentTeamSize = parseInt(this.value);
-                teamSizeValue.textContent = currentTeamSize;
-                updateCalculations();
-            });
+            if (teamSizeSlider && teamSizeValue) {
+                teamSizeSlider.addEventListener('input', function() {
+                    currentTeamSize = parseInt(this.value);
+                    teamSizeValue.textContent = currentTeamSize;
+                    updateCalculations();
+                });
+            }
 
             // Growth rate slider
             const growthRateSlider = document.getElementById('growth-rate');
             const growthRateValue = document.getElementById('growth-rate-value');
             
-            growthRateSlider.addEventListener('input', function() {
-                currentGrowthRate = parseInt(this.value) / 100;
-                growthRateValue.textContent = `${parseInt(this.value)}%`;
-                updateCalculations();
-            });
+            if (growthRateSlider && growthRateValue) {
+                growthRateSlider.addEventListener('input', function() {
+                    currentGrowthRate = parseInt(this.value) / 100;
+                    growthRateValue.textContent = `${parseInt(this.value)}%`;
+                    updateCalculations();
+                });
+            }
 
             // Time horizon select
             const timeHorizonSelect = document.getElementById('time-horizon');
-            timeHorizonSelect.addEventListener('change', function() {
-                currentTimeHorizon = parseInt(this.value);
-                updateCalculations();
-            });
+            if (timeHorizonSelect) {
+                timeHorizonSelect.addEventListener('change', function() {
+                    currentTimeHorizon = parseInt(this.value);
+                    updateCalculations();
+                });
+            }
         }
 
         function updateCalculations() {
             // Debounce the updates to avoid excessive calculations
             clearTimeout(window.calculationTimeout);
             window.calculationTimeout = setTimeout(() => {
+                // Update key metrics
+                updateKeyMetrics();
+                
+                // Update tables
                 updateTopCostsTable();
-                // Could update other elements that depend on these parameters
+                updateSavingsOpportunities();
+                
+                // Update charts with new data
+                updateCharts();
             }, 300);
+        }
+        
+        function updateCharts() {
+            try {
+                // Update category spend chart
+                if (charts.categorySpend) {
+                    const categoryData = dataProcessor.getCategorySpendBreakdown();
+                    charts.categorySpend.data.labels = categoryData.map(c => c.category);
+                    charts.categorySpend.data.datasets[0].data = categoryData.map(c => c.annualSpend);
+                    charts.categorySpend.update();
+                }
+                
+                // Update ROI vs Cost chart
+                if (charts.roiCost) {
+                    const topROI = dataProcessor.getTopROITools(20);
+                    charts.roiCost.data.datasets[0].data = topROI.map(tool => ({
+                        x: tool.monthlyPrice * 12,
+                        y: tool.roi,
+                        toolName: tool.toolName
+                    }));
+                    charts.roiCost.update();
+                }
+            } catch (error) {
+                console.error('Error updating charts:', error);
+            }
         }
 
         // Utility functions
@@ -1036,19 +1367,74 @@
             });
             
             console.log('Board report generated:', report);
-            alert('Board report generated! Check console for details.');
+            showSuccessMessage('Board report generated! Check console for details.');
         }
 
         function exportToExcel() {
-            alert('Excel export functionality would be implemented here');
+            showInfoMessage('Excel export functionality coming soon!');
         }
 
         function createPresentation() {
-            alert('Presentation creation functionality would be implemented here');
+            showInfoMessage('Presentation creation functionality coming soon!');
         }
 
         function showSavingsModal() {
-            alert('Savings opportunities modal would be implemented here');
+            const modal = document.createElement('div');
+            modal.className = 'modal-overlay';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Savings Opportunities</h3>
+                        <button class="modal-close" onclick="this.closest('.modal-overlay').remove()">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Total potential savings: ${formatCurrency(dataProcessor.getPortfolioSummary().totalSavingsOpportunity)}</p>
+                        <p>Quick wins identified: ${dataProcessor.getPortfolioSummary().quickWinsCount}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" onclick="this.closest('.modal-overlay').remove()">Close</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            
+            // Add click outside to close
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+        }
+        
+        // Notification functions
+        function showSuccessMessage(message) {
+            showNotification(message, 'success');
+        }
+        
+        function showInfoMessage(message) {
+            showNotification(message, 'info');
+        }
+        
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}"></i>
+                <span>${message}</span>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => notification.classList.add('show'), 10);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
         }
 
         // Make global for debugging
@@ -1059,7 +1445,74 @@
         };
     </script>
     
-    <!-- Mobile Navigation -->
-    <script src="../js/mobile-navigation.js"></script>
+    <!-- Mobile Navigation Script -->
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
+            const mobileNav = document.querySelector('.mobile-navigation');
+            const mobileOverlay = document.querySelector('.mobile-navigation-overlay');
+            const mobileMenuClose = document.querySelector('.mobile-menu-close');
+            
+            function openMobileMenu() {
+                mobileNav.classList.add('active');
+                mobileOverlay.classList.add('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'true');
+                mobileNav.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeMobileMenu() {
+                mobileNav.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileNav.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+            
+            // Toggle menu on button click
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const isOpen = mobileNav.classList.contains('active');
+                    if (isOpen) {
+                        closeMobileMenu();
+                    } else {
+                        openMobileMenu();
+                    }
+                });
+            }
+            
+            // Close menu on close button click
+            if (mobileMenuClose) {
+                mobileMenuClose.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    closeMobileMenu();
+                });
+            }
+            
+            // Close menu on overlay click
+            if (mobileOverlay) {
+                mobileOverlay.addEventListener('click', function(e) {
+                    closeMobileMenu();
+                });
+            }
+            
+            // Close menu when clicking on a link
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    closeMobileMenu();
+                });
+            });
+            
+            // Close menu on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+                    closeMobileMenu();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
