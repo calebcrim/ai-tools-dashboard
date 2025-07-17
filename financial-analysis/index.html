@@ -30,38 +30,73 @@
     <!-- Financial Dashboard Styles -->
     <style>
         :root {
-            /* Dark theme colors with WCAG AA compliance */
+            /* Import design tokens - these override any defaults */
+            /* Colors */
             --color-primary: #3B82F6;
-            --color-primary-hover: #60A5FA;
-            --color-accent: var(--color-success);
-            --color-danger: var(--color-error);
-            --color-warning: var(--color-warning);
-            --color-success: var(--color-success);
-            --color-bg-primary: #0A0A0A;
-            --color-bg-secondary: #141414;
-            --color-bg-tertiary: #1F1F1F;
-            --color-bg-hover: #2A2A2A;
+            --color-primary-dark: #2563EB;
+            --color-primary-light: #60A5FA;
+            --color-success: #10B981;
+            --color-warning: #F59E0B;
+            --color-danger: #EF4444;
+            
+            /* Background colors - Dark theme */
+            --color-bg-primary: #1E293B;     /* Cards */
+            --color-bg-secondary: #0F172A;   /* Page background */
+            --color-bg-tertiary: #334155;    /* Elevated surfaces */
+            --color-bg-hover: #334155;       /* Hover states */
+            
+            /* Text colors */
             --color-text-primary: #F1F5F9;
             --color-text-secondary: #94A3B8;
             --color-text-muted: #64748B;
-            --color-border: #2A2A2A;
-            --color-border-secondary: #404040;
+            
+            /* Border colors */
+            --color-border: #334155;
+            --color-border-secondary: #475569;
             
             /* Focus indicators */
-            --focus-ring: #60A5FA;
+            --focus-ring: var(--color-primary-light);
             --focus-ring-offset: 2px;
-            --spacing-xs: 0.25rem;
-            --spacing-sm: 0.5rem;
-            --spacing-md: 1rem;
-            --spacing-lg: 1.5rem;
-            --spacing-xl: 2rem;
-            --spacing-2xl: 3rem;
-            --radius-sm: 0.375rem;
-            --radius-md: 0.5rem;
-            --radius-lg: 0.75rem;
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            
+            /* Spacing (4px base grid) */
+            --spacing-xs: 4px;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --spacing-xl: 32px;
+            --spacing-2xl: 48px;
+            --spacing-3xl: 64px;
+            
+            /* Border radius */
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --radius-full: 9999px;
+            
+            /* Shadows for dark theme */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+            
+            /* Typography scale */
+            --text-xs: 0.75rem;   /* 12px */
+            --text-sm: 0.875rem;  /* 14px */
+            --text-base: 1rem;    /* 16px */
+            --text-lg: 1.25rem;   /* 20px */
+            --text-xl: 1.5rem;    /* 24px */
+            --text-2xl: 2rem;     /* 32px */
+            --text-3xl: 2.5rem;   /* 40px */
+            
+            /* Line heights */
+            --leading-tight: 1.25;
+            --leading-normal: 1.5;
+            --leading-relaxed: 1.75;
+            
+            /* Transitions */
+            --transition-base: all 0.2s ease;
+            --transition-fast: all 0.15s ease;
+            --transition-slow: all 0.3s ease;
         }
 
         * {
@@ -72,9 +107,9 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: var(--color-bg-primary);
+            background-color: var(--color-bg-secondary);
             color: var(--color-text-primary);
-            line-height: 1.5;
+            line-height: var(--leading-normal);
             margin: 0;
             overflow-x: hidden;
         }
@@ -109,21 +144,21 @@
         }
 
         .logo-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            width: var(--spacing-2xl);
+            height: var(--spacing-2xl);
+            background: linear-gradient(135deg, var(--color-primary), var(--color-success));
             border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.25rem;
+            font-size: var(--text-lg);
         }
 
         .logo-text {
-            font-size: 1.5rem;
+            font-size: var(--text-xl);
             font-weight: 700;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            background: linear-gradient(135deg, var(--color-primary), var(--color-success));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -154,17 +189,19 @@
         }
 
         .page-title {
-            font-size: 2.5rem;
+            font-size: var(--text-3xl);
             font-weight: 700;
+            line-height: var(--leading-tight);
             margin-bottom: var(--spacing-sm);
-            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            background: linear-gradient(135deg, var(--color-primary), var(--color-success));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .subtitle {
             color: var(--color-text-secondary);
-            font-size: 1.1rem;
+            font-size: var(--text-lg);
+            line-height: var(--leading-normal);
             margin-bottom: var(--spacing-2xl);
         }
 
@@ -184,13 +221,13 @@
         }
 
         .metric-card:hover {
-            transform: translateY(-2px);
+            transform: translateY(calc(-1 * var(--spacing-xs) / 2));
             box-shadow: var(--shadow-lg);
         }
 
         .metric-card h3 {
             color: var(--color-text-secondary);
-            font-size: 0.875rem;
+            font-size: var(--text-sm);
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.05em;
@@ -198,14 +235,14 @@
         }
 
         .metric-value {
-            font-size: 2.5rem;
+            font-size: var(--text-3xl);
             font-weight: 700;
             color: var(--color-text-primary);
             margin-bottom: var(--spacing-xs);
         }
 
         .metric-trend {
-            font-size: 0.875rem;
+            font-size: var(--text-sm);
             display: flex;
             align-items: center;
             gap: var(--spacing-xs);
@@ -234,7 +271,7 @@
             font-weight: 500;
             cursor: pointer;
             transition: all 0.2s;
-            font-size: 0.875rem;
+            font-size: var(--text-sm);
         }
 
         .btn-primary {
@@ -243,7 +280,9 @@
         }
 
         .btn-primary:hover {
-            background: #5a6fd8;
+            background: var(--color-primary-dark);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
         }
 
         .btn-secondary {
@@ -266,7 +305,7 @@
         }
 
         .section-title {
-            font-size: 1.5rem;
+            font-size: var(--text-xl);
             font-weight: 600;
             margin-bottom: var(--spacing-lg);
             color: var(--color-text-primary);
@@ -288,7 +327,7 @@
         .control-group label {
             font-weight: 500;
             color: var(--color-text-secondary);
-            font-size: 0.875rem;
+            font-size: var(--text-sm);
         }
 
         .slider-container {
@@ -301,23 +340,23 @@
             width: 200px;
             height: 6px;
             background: var(--color-bg-hover);
-            border-radius: 3px;
+            border-radius: var(--radius-sm);
             outline: none;
             -webkit-appearance: none;
         }
 
         .slider::-webkit-slider-thumb {
             appearance: none;
-            width: 20px;
-            height: 20px;
+            width: var(--spacing-lg);
+            height: var(--spacing-lg);
             background: var(--color-primary);
             border-radius: 50%;
             cursor: pointer;
         }
 
         .slider::-moz-range-thumb {
-            width: 20px;
-            height: 20px;
+            width: var(--spacing-lg);
+            height: var(--spacing-lg);
             background: var(--color-primary);
             border-radius: 50%;
             cursor: pointer;
@@ -336,7 +375,7 @@
             border-radius: var(--radius-sm);
             background: var(--color-bg-primary);
             color: var(--color-text-primary);
-            font-size: 0.875rem;
+            font-size: var(--text-sm);
         }
 
         /* Charts */
@@ -355,7 +394,7 @@
         }
 
         .chart-title {
-            font-size: 1.1rem;
+            font-size: var(--text-lg);
             font-weight: 600;
             margin-bottom: var(--spacing-md);
             color: var(--color-text-primary);
@@ -377,7 +416,7 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.875rem;
+            font-size: var(--text-sm);
         }
 
         th {
@@ -453,7 +492,7 @@
         }
 
         .opportunity-card:hover {
-            transform: translateY(-2px);
+            transform: translateY(calc(-1 * var(--spacing-xs) / 2));
             box-shadow: var(--shadow-md);
         }
 
@@ -490,7 +529,7 @@
         .opportunity-savings {
             font-weight: 700;
             color: var(--color-success);
-            font-size: 1.25rem;
+            font-size: var(--text-lg);
         }
 
         .opportunity-description {
@@ -502,7 +541,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 0.875rem;
+            font-size: var(--text-sm);
         }
 
         .effort-badge {
@@ -641,7 +680,7 @@
         .modal-close {
             background: none;
             border: none;
-            font-size: 1.5rem;
+            font-size: var(--text-xl);
             color: var(--color-text-secondary);
             cursor: pointer;
             padding: var(--spacing-sm);
@@ -657,8 +696,8 @@
         /* Notification Styles */
         .notification {
             position: fixed;
-            top: 20px;
-            right: 20px;
+            top: var(--spacing-lg);
+            right: var(--spacing-lg);
             background: var(--color-bg-primary);
             border: 1px solid var(--color-border);
             border-radius: var(--radius-md);
@@ -670,7 +709,7 @@
             transform: translateX(400px);
             transition: transform 0.3s ease;
             z-index: 10000;
-            max-width: 350px;
+            max-width: 360px; /* 15 * 24px grid */
         }
         
         .notification.show {
@@ -712,13 +751,13 @@
         
         /* Link styles for accessibility */
         a {
-            color: #60A5FA; /* 5.1:1 contrast ratio */
+            color: var(--color-primary-light);
             text-decoration: none;
-            transition: color 0.2s ease;
+            transition: var(--transition-fast);
         }
         
         a:hover {
-            color: #93BBFC; /* 7.8:1 contrast ratio */
+            color: var(--color-primary);
             text-decoration: underline;
         }
         
@@ -834,7 +873,7 @@
                 background: none;
                 border: 1px solid var(--color-border);
                 color: var(--color-text-primary);
-                font-size: 1.25rem;
+                font-size: var(--text-lg);
                 width: 44px;
                 height: 44px;
                 border-radius: var(--radius-sm);
@@ -857,7 +896,7 @@
             }
             
             .logo-text {
-                font-size: 1.1rem;
+                font-size: var(--text-lg);
             }
         }
         
@@ -1229,10 +1268,16 @@
                     datasets: [{
                         data: categoryData.map(c => c.annualSpend),
                         backgroundColor: [
-                            '#60A5FA', '#34D399', '#F59E0B', '#F87171',
-                            '#A78BFA', '#FBBF24', '#60A5FA', '#34D399'
+                            'rgba(59, 130, 246, 0.8)',   /* Primary */
+                            'rgba(16, 185, 129, 0.8)',   /* Success */
+                            'rgba(245, 158, 11, 0.8)',   /* Warning */
+                            'rgba(239, 68, 68, 0.8)',    /* Danger */
+                            'rgba(139, 92, 246, 0.8)',   /* Purple */
+                            'rgba(251, 191, 36, 0.8)',   /* Yellow */
+                            'rgba(96, 165, 250, 0.8)',   /* Primary light */
+                            'rgba(52, 211, 153, 0.8)'    /* Success light */
                         ],
-                        borderColor: '#141414',
+                        borderColor: var(--color-bg-secondary),
                         borderWidth: 2
                     }]
                 },
@@ -1243,7 +1288,7 @@
                         legend: {
                             position: 'bottom',
                             labels: {
-                                color: '#94A3B8',
+                                color: var(--color-text-secondary),
                                 font: {
                                     size: 14,
                                     family: 'Inter, sans-serif'
@@ -1261,9 +1306,9 @@
                         },
                         tooltip: {
                             backgroundColor: 'rgba(30, 41, 59, 0.95)',
-                            titleColor: '#F1F5F9',
-                            bodyColor: '#94A3B8',
-                            borderColor: '#334155',
+                            titleColor: var(--color-text-primary),
+                            bodyColor: var(--color-text-secondary),
+                            borderColor: var(--color-border),
                             borderWidth: 1,
                             titleFont: { size: 14, weight: '600' },
                             bodyFont: { size: 14 },
@@ -1315,11 +1360,11 @@
                             title: {
                                 display: true,
                                 text: 'Annual Cost ($)',
-                                color: '#94A3B8',
+                                color: var(--color-text-secondary),
                                 font: { size: 14 }
                             },
                             ticks: {
-                                color: '#94A3B8',
+                                color: var(--color-text-secondary),
                                 font: { size: 12 },
                                 callback: function(value) {
                                     return '$' + value.toLocaleString();
@@ -1334,11 +1379,11 @@
                             title: {
                                 display: true,
                                 text: 'ROI (%)',
-                                color: '#94A3B8',
+                                color: var(--color-text-secondary),
                                 font: { size: 14 }
                             },
                             ticks: {
-                                color: '#94A3B8',
+                                color: var(--color-text-secondary),
                                 font: { size: 12 },
                                 callback: function(value) {
                                     return value + '%';
@@ -1353,9 +1398,9 @@
                     plugins: {
                         tooltip: {
                             backgroundColor: 'rgba(30, 41, 59, 0.95)',
-                            titleColor: '#F1F5F9',
-                            bodyColor: '#94A3B8',
-                            borderColor: '#334155',
+                            titleColor: var(--color-text-primary),
+                            bodyColor: var(--color-text-secondary),
+                            borderColor: var(--color-border),
                             borderWidth: 1,
                             titleFont: { size: 14, weight: '600' },
                             bodyFont: { size: 14 },
