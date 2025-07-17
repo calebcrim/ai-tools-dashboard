@@ -1217,27 +1217,38 @@
         function updateKeyMetrics() {
             const summary = dataProcessor.getPortfolioSummary();
             
+            // Calculate total spend with team size scaling
+            const scaledAnnualSpend = (summary.totalMonthlySpend * 12) * (currentTeamSize / 50);
+            
             // Total spend
             document.getElementById('total-spend').textContent = 
-                formatCurrency(summary.totalAnnualSpend);
+                formatCurrency(scaledAnnualSpend);
             
-            // Update trend
+            // Update trend with team size info
             const trendElement = document.getElementById('spend-trend');
             trendElement.innerHTML = `
                 <i class="fas fa-tools"></i>
-                <span>${summary.toolCount} tools analyzed</span>
+                <span>${summary.toolCount} tools for ${currentTeamSize} users</span>
             `;
             trendElement.className = 'metric-trend neutral';
             
+            // Calculate dynamic savings based on team size
+            const dynamicSavings = summary.totalSavingsOpportunity * (currentTeamSize / 50);
+            
             // Savings identified
             document.getElementById('savings-identified').textContent = 
-                formatCurrency(summary.totalSavingsOpportunity);
+                formatCurrency(dynamicSavings);
             
             // Quick wins
             document.getElementById('quick-wins').textContent = summary.quickWinsCount;
             
+            // Calculate dynamic ROI based on team size and growth
+            const roiMultiplier = 1 + (currentGrowthRate * 2); // Growth increases ROI potential
+            const baseROI = summary.averageROI || 150; // Default 150% if no ROI data
+            const dynamicROI = Math.round(baseROI * roiMultiplier);
+            
             // ROI potential
-            document.getElementById('roi-potential').textContent = `${summary.averageROI}%`;
+            document.getElementById('roi-potential').textContent = `${dynamicROI}%`;
         }
 
         function initializeCharts() {
@@ -1277,7 +1288,7 @@
                             'rgba(96, 165, 250, 0.8)',   /* Primary light */
                             'rgba(52, 211, 153, 0.8)'    /* Success light */
                         ],
-                        borderColor: var(--color-bg-secondary),
+                        borderColor: '#0F172A',
                         borderWidth: 2
                     }]
                 },
@@ -1288,7 +1299,7 @@
                         legend: {
                             position: 'bottom',
                             labels: {
-                                color: var(--color-text-secondary),
+                                color: '#94A3B8',
                                 font: {
                                     size: 14,
                                     family: 'Inter, sans-serif'
@@ -1306,9 +1317,9 @@
                         },
                         tooltip: {
                             backgroundColor: 'rgba(30, 41, 59, 0.95)',
-                            titleColor: var(--color-text-primary),
-                            bodyColor: var(--color-text-secondary),
-                            borderColor: var(--color-border),
+                            titleColor: '#F1F5F9',
+                            bodyColor: '#94A3B8',
+                            borderColor: '#334155',
                             borderWidth: 1,
                             titleFont: { size: 14, weight: '600' },
                             bodyFont: { size: 14 },
@@ -1360,11 +1371,11 @@
                             title: {
                                 display: true,
                                 text: 'Annual Cost ($)',
-                                color: var(--color-text-secondary),
+                                color: '#94A3B8',
                                 font: { size: 14 }
                             },
                             ticks: {
-                                color: var(--color-text-secondary),
+                                color: '#94A3B8',
                                 font: { size: 12 },
                                 callback: function(value) {
                                     return '$' + value.toLocaleString();
@@ -1379,11 +1390,11 @@
                             title: {
                                 display: true,
                                 text: 'ROI (%)',
-                                color: var(--color-text-secondary),
+                                color: '#94A3B8',
                                 font: { size: 14 }
                             },
                             ticks: {
-                                color: var(--color-text-secondary),
+                                color: '#94A3B8',
                                 font: { size: 12 },
                                 callback: function(value) {
                                     return value + '%';
@@ -1398,9 +1409,9 @@
                     plugins: {
                         tooltip: {
                             backgroundColor: 'rgba(30, 41, 59, 0.95)',
-                            titleColor: var(--color-text-primary),
-                            bodyColor: var(--color-text-secondary),
-                            borderColor: var(--color-border),
+                            titleColor: '#F1F5F9',
+                            bodyColor: '#94A3B8',
+                            borderColor: '#334155',
                             borderWidth: 1,
                             titleFont: { size: 14, weight: '600' },
                             bodyFont: { size: 14 },
@@ -1484,12 +1495,17 @@
             // Simulate async data processing
             setTimeout(() => {
                 const opportunities = dataProcessor.savingsOpportunities.slice(0, 6);
+                const teamScaleFactor = currentTeamSize / 50;
             
-            grid.innerHTML = opportunities.map(opp => `
+            grid.innerHTML = opportunities.map(opp => {
+                // Scale savings based on team size
+                const scaledSavings = opp.annualSavings * teamScaleFactor;
+                
+                return `
                 <div class="opportunity-card">
                     <div class="opportunity-header">
                         <span class="opportunity-type ${opp.type}">${opp.type}</span>
-                        <span class="opportunity-savings">${formatCurrency(opp.annualSavings)}</span>
+                        <span class="opportunity-savings">${formatCurrency(scaledSavings)}</span>
                     </div>
                     <p class="opportunity-description">${opp.description}</p>
                     <div class="opportunity-footer">
@@ -1497,7 +1513,8 @@
                         <span class="confidence">${Math.round(opp.confidence * 100)}% confidence</span>
                     </div>
                 </div>
-            `).join('');
+            `;
+            }).join('');
             }, 100); // Short delay to show loading state
         }
 
@@ -1554,20 +1571,27 @@
         
         function updateCharts() {
             try {
-                // Update category spend chart
+                // Update category spend chart with team size scaling
                 if (charts.categorySpend) {
                     const categoryData = dataProcessor.getCategorySpendBreakdown();
+                    const teamScaleFactor = currentTeamSize / 50;
+                    
                     charts.categorySpend.data.labels = categoryData.map(c => c.category);
-                    charts.categorySpend.data.datasets[0].data = categoryData.map(c => c.annualSpend);
+                    charts.categorySpend.data.datasets[0].data = categoryData.map(c => 
+                        c.annualSpend * teamScaleFactor
+                    );
                     charts.categorySpend.update();
                 }
                 
-                // Update ROI vs Cost chart
+                // Update ROI vs Cost chart with dynamic calculations
                 if (charts.roiCost) {
                     const topROI = dataProcessor.getTopROITools(20);
+                    const roiMultiplier = 1 + (currentGrowthRate * 2);
+                    const teamScaleFactor = currentTeamSize / 50;
+                    
                     charts.roiCost.data.datasets[0].data = topROI.map(tool => ({
-                        x: tool.monthlyPrice * 12,
-                        y: tool.roi,
+                        x: tool.monthlyPrice * 12 * teamScaleFactor,
+                        y: (tool.roi || 150) * roiMultiplier,
                         toolName: tool.toolName
                     }));
                     charts.roiCost.update();
