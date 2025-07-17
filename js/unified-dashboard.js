@@ -670,7 +670,7 @@ class UnifiedDashboard {
             </div>
             
             <div class="detail-actions">
-                <a href="${tool.url}" target="_blank" class="btn-primary">
+                <a href="${tool.url.startsWith('http') ? tool.url : 'https://' + tool.url}" target="_blank" class="btn-primary">
                     <i class="fas fa-external-link-alt"></i> Visit Website
                 </a>
             </div>
@@ -752,7 +752,7 @@ class UnifiedDashboard {
             </div>
             
             <div class="detail-actions">
-                <a href="${tool.url}" target="_blank" class="btn-primary">
+                <a href="${tool.url.startsWith('http') ? tool.url : 'https://' + tool.url}" target="_blank" class="btn-primary">
                     <i class="fas fa-external-link-alt"></i> Visit Website
                 </a>
             </div>
@@ -843,7 +843,7 @@ class UnifiedDashboard {
             </div>
             
             <div class="detail-actions">
-                <a href="${tool.url}" target="_blank" class="btn-primary">
+                <a href="${tool.url.startsWith('http') ? tool.url : 'https://' + tool.url}" target="_blank" class="btn-primary">
                     <i class="fas fa-external-link-alt"></i> Visit Website
                 </a>
             </div>
