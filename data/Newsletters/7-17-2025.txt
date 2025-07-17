@@ -1,0 +1,124 @@
+### Superpower Daily
+Date: July 17, 2025
+Source: the-superpower@mail.beehiiv.com
+**AI Highlights:**
+
+- **OpenAI to take cut of ChatGPT shopping sales in hunt for revenues**
+  *Category:* Company News
+  *Tags:* [#OpenAI, #ChatGPT, #E-commerce, #Monetization]
+  OpenAI plans to monetize free ChatGPT users by taking commissions from in-app ecommerce sales through an integrated checkout system. The company is showing early prototypes to brands with Shopify already integrated, positioning ChatGPT as a challenger to Google in product discovery.
+  [https://archive.is/3Xx2o]
+
+- **Mira Murati's Thinking Machines Lab is worth $12B in seed round**
+  *Category:* Company News
+  *Tags:* [#Funding, #AIStartup, #OpenAI]
+  Former OpenAI CTO Mira Murati's AI startup has raised $2B at a $12B valuation in seed funding, despite being under a year old and still in stealth mode. The round was led by Andreessen Horowitz with backing from Nvidia, AMD, and others.
+  [https://techcrunch.com/2025/07/15/mira-muratis-thinking-machines-lab-is-worth-12b-in-seed-round/]
+
+- **Grok's AI companions want to have sex and burn down schools**
+  *Category:* Policy / Ethics
+  *Tags:* [#xAI, #Safety, #Ethics, #Grok]
+  xAI's new Grok AI companions feature dangerously unfiltered personalities, including hyper-sexualized and violent characters with minimal guardrails. This follows recent controversies including Grok's antisemitic outbursts, raising serious questions about xAI's content moderation.
+  [https://techcrunch.com/2025/07/15/of-course-groks-ai-companions-want-to-have-sex-and-burn-down-schools/]
+
+- **Meta will build data center the size of Manhattan**
+  *Category:* Company News
+  *Tags:* [#Meta, #Infrastructure, #DataCenter]
+  Mark Zuckerberg announced Meta is building a 5-gigawatt AI data center as large as Manhattan, pushing the company's AI infrastructure investments.
+  [https://www.theguardian.com/technology/2025/jul/16/zuckerberg-meta-data-center-ai-manhattan]
+
+- **Google rolls out AI-powered business-calling feature**
+  *Category:* Product / Tool
+  *Tags:* [#Google, #Gemini, #ProductUpdate]
+  Google has launched an AI-powered business-calling feature and brought Gemini 2.5 Pro to AI Mode, expanding its AI assistant capabilities.
+  [https://techcrunch.com/2025/07/16/google-rolls-out-ai-powered-business-calling-feature-brings-gemini-2-5-pro-to-ai-mode/]
+
+### FutureTools
+Date: July 16, 2025
+Source: futuretools@mail.beehiiv.com
+**AI Highlights:**
+
+- **Windsurf Acquisition Drama**
+  *Category:* Company News
+  *Tags:* [#Acquisition, #OpenAI, #Google, #Cognition]
+  OpenAI's $3B acquisition of AI coding startup Windsurf fell through. Google hired Windsurf's CEO and top researchers for $2.4B, while Cognition acquired the remaining product, IP, and 250-person team, positioning itself as a full-stack coding competitor.
+  [https://techcrunch.com/2025/07/14/cognition-maker-of-the-ai-coding-agent-devin-acquires-windsurf/]
+
+- **Meta acquires voice AI startup Play AI**
+  *Category:* Company News
+  *Tags:* [#Meta, #Acquisition, #VoiceAI]
+  Meta acquired Play AI to bring voice generation in-house for AI Characters, Meta AI, wearables, and audio creation, competing directly with ElevenLabs.
+  [https://techcrunch.com/2025/07/13/meta-acquires-voice-startup-play-ai/]
+
+- **Trump announces $70B AI infrastructure investment**
+  *Category:* Company News
+  *Tags:* [#Infrastructure, #Investment, #DataCenter]
+  The Trump administration announced $70B in AI and energy investments for Pennsylvania, including $25B from Blackstone for data centers and power infrastructure, creating 9,000 jobs.
+  [https://www.axios.com/2025/07/14/trump-mccormick-ai-energy-summit-pittsburgh]
+
+- **Mythic Text**
+  *Category:* Product / Tool
+  *Tags:* [#ContentGeneration, #Automation, #DocumentProcessing]
+  Transforms markdown or unformatted writing into structured blog posts, newsletters, and marketing assets. Can process hundreds of files in minutes for enterprise document pipelines.
+  [https://www.mythictext.com/]
+
+- **BrowserAct**
+  *Category:* Product / Tool
+  *Tags:* [#Automation, #WebScraping, #AIAgent]
+  AI browser automation tool that lets users automate scraping, clicking, and data extraction on any website using plain English, adapting to changing page layouts.
+  [https://www.browseract.com/]
+
+### Decoding ML
+Date: July 17, 2025
+Source: decodingml@substack.com
+**AI Highlights:**
+
+- **Why Most AI Agents Fail in Production**
+  *Category:* Research / Paper
+  *Tags:* [#AIAgents, #Production, #BestPractices]
+  A comprehensive 5-step roadmap for building production-ready AI agents, covering Python foundations, stability/reliability, RAG implementation, robust architecture, and continuous monitoring. Emphasizes the importance of proper system design over flashy demos.
+  [https://decodingml.substack.com/p/why-most-ai-agents-fail-in-production]
+
+### Turing Post
+Date: July 16, 2025
+Source: turingpost@mail.beehiiv.com
+**AI Highlights:**
+
+- **7 AI Concepts You Should Know**
+  *Category:* Research / Paper
+  *Tags:* [#Education, #AI101, #TestTimeCompute, #Inference]
+  Educational guide covering essential AI concepts including test-time compute, LLM inference, RLHF variations (DPO, RRHF, RLAIF), meta-learning, causal AI, and defense AI applications.
+  [https://www.turingpost.com/p/concepts-ai101-recap]
+
+### AI Adopters
+Date: July 16, 2025
+Source: aiadopters@substack.com
+**AI Highlights:**
+
+- **How to turn a Selfie Into Professional Headshots**
+  *Category:* Product / Tool
+  *Tags:* [#ImageGeneration, #ChatGPT, #PracticalAI]
+  Tutorial on using ChatGPT Plus to generate platform-specific professional headshots from a single selfie, with detailed prompts for LinkedIn, Facebook, X.com, and TikTok profiles.
+  [https://aiadopters.club/p/how-to-turn-a-selfie-into-a-professional]
+
+### Towards AI
+Date: July 16, 2025
+Source: towardsai@substack.com
+**AI Highlights:**
+
+- **LLM Stack Cheat Sheet: What to Use, When**
+  *Category:* Research / Paper
+  *Tags:* [#LLM, #RAG, #FineTuning, #ProductionAI]
+  Comprehensive guide on building production LLM systems, covering prompting, RAG implementation, structured outputs, and fine-tuning approaches. Includes practical tool recommendations and infrastructure essentials.
+  [https://newsletter.towardsai.net/p/cheat-sheet-what-most-teams-miss]
+
+### AI Disruptor
+Date: July 16, 2025
+Source: alexmcfarland@substack.com
+**AI Highlights:**
+
+- **This one change made my AI outputs 10x better**
+  *Category:* Research / Paper
+  *Tags:* [#Prompting, #BestPractices, #AIWorkflow]
+  Article discussing the importance of separating prompt logic from context inputs in AI workflows, arguing that input architecture is more important than complex prompt templates.
+  [https://aidisruptor.ai/p/this-one-change-made-my-ai-outputs]
