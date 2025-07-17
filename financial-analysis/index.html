@@ -963,6 +963,120 @@
     <!-- Navigation Redesign -->
     <link rel="stylesheet" href="../css/navigation-redesign.css">
     <link rel="stylesheet" href="../css/navigation-override.css">
+    
+    <!-- Tippy.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css">
+    
+    <!-- Tooltip Custom Styles -->
+    <style>
+        /* Dark theme for tooltips */
+        .tippy-box[data-theme~='dark-custom'] {
+            background-color: var(--color-bg-primary);
+            color: var(--color-text-primary);
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-lg);
+            font-size: var(--text-sm);
+            line-height: 1.5;
+        }
+
+        .tippy-box[data-theme~='dark-custom'][data-placement^='top'] > .tippy-arrow::before {
+            border-top-color: var(--color-bg-primary);
+        }
+
+        .tippy-box[data-theme~='dark-custom'][data-placement^='bottom'] > .tippy-arrow::before {
+            border-bottom-color: var(--color-bg-primary);
+        }
+
+        .tippy-box[data-theme~='dark-custom'][data-placement^='left'] > .tippy-arrow::before {
+            border-left-color: var(--color-bg-primary);
+        }
+
+        .tippy-box[data-theme~='dark-custom'][data-placement^='right'] > .tippy-arrow::before {
+            border-right-color: var(--color-bg-primary);
+        }
+
+        /* Tooltip content styling */
+        .tooltip-content {
+            padding: var(--spacing-sm);
+        }
+
+        .tooltip-title {
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+            color: var(--color-primary);
+        }
+
+        .tooltip-description {
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .tooltip-formula {
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.8rem;
+            background: var(--color-bg-secondary);
+            padding: var(--spacing-xs);
+            border-radius: var(--radius-sm);
+            margin-top: var(--spacing-xs);
+        }
+
+        .tooltip-note {
+            font-size: 0.8rem;
+            color: var(--color-text-secondary);
+            margin-top: var(--spacing-xs);
+            font-style: italic;
+        }
+
+        /* Info icon styling */
+        .info-icon {
+            margin-left: var(--spacing-xs);
+            font-size: 0.8em;
+            color: var(--color-text-secondary);
+            cursor: help;
+            transition: color 0.2s ease;
+        }
+
+        .info-icon:hover {
+            color: var(--color-primary);
+        }
+
+        /* CSS fallback tooltips */
+        [data-tooltip] {
+            position: relative;
+            cursor: help;
+        }
+
+        [data-tooltip]:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--color-bg-primary);
+            color: var(--color-text-primary);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--radius-sm);
+            font-size: var(--text-sm);
+            white-space: nowrap;
+            z-index: 1000;
+            pointer-events: none;
+            margin-bottom: var(--spacing-xs);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--color-border);
+        }
+
+        [data-tooltip]:hover::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top-color: var(--color-bg-primary);
+            margin-bottom: -4px;
+            z-index: 1001;
+        }
+    </style>
 </head>
 <body>
     <!-- Skip to main content link for accessibility -->
@@ -1027,8 +1141,13 @@
             <p class="subtitle">Real-time financial analysis and ROI assessment for 317 AI tools</p>
             
             <div class="key-metrics">
-                <div class="metric-card">
-                    <h3>Total AI Spend</h3>
+                <div class="metric-card" 
+                     data-tooltip-title="Total AI Spend"
+                     data-tooltip-desc="Current annual run rate for all AI tools based on your team size"
+                     data-tooltip-formula="Σ(Tool Cost × Team Size × 12 months)"
+                     data-tooltip-note="Updates in real-time as you adjust team size"
+                     data-tooltip="Total AI Spend: Annual cost of all AI tools based on your team size">
+                    <h3>Total AI Spend <i class="fas fa-info-circle info-icon" data-tooltip="Click for detailed explanation"></i></h3>
                     <div class="metric-value" id="total-spend">$0</div>
                     <div class="metric-trend neutral" id="spend-trend">
                         <i class="fas fa-calculator"></i>
@@ -1036,8 +1155,13 @@
                     </div>
                 </div>
                 
-                <div class="metric-card">
-                    <h3>Savings Identified</h3>
+                <div class="metric-card"
+                     data-tooltip-title="Savings Identified"
+                     data-tooltip-desc="Potential cost reductions through consolidation, elimination, and negotiation"
+                     data-tooltip-formula="Consolidation + Elimination + Negotiation Savings"
+                     data-tooltip-note="Based on AI analysis of tool overlap and usage patterns"
+                     data-tooltip="Savings Identified: Potential cost reductions through tool optimization">
+                    <h3>Savings Identified <i class="fas fa-info-circle info-icon" data-tooltip="Click for detailed explanation"></i></h3>
                     <div class="metric-value" id="savings-identified">$0</div>
                     <div class="metric-actions">
                         <button class="btn btn-primary" onclick="showSavingsModal()">
@@ -1046,16 +1170,26 @@
                     </div>
                 </div>
                 
-                <div class="metric-card">
-                    <h3>Quick Wins</h3>
+                <div class="metric-card"
+                     data-tooltip-title="Quick Wins"
+                     data-tooltip-desc="Number of savings opportunities that can be implemented within 30 days"
+                     data-tooltip-formula="Count of opportunities with 'low' effort rating"
+                     data-tooltip-note="Focus on these for immediate impact"
+                     data-tooltip="Quick Wins: Savings opportunities that can be implemented within 30 days">
+                    <h3>Quick Wins <i class="fas fa-info-circle info-icon" data-tooltip="Click for detailed explanation"></i></h3>
                     <div class="metric-value" id="quick-wins">0</div>
                     <div class="metric-trend neutral">
                         <span>Deploy &lt; 30 days</span>
                     </div>
                 </div>
                 
-                <div class="metric-card">
-                    <h3>ROI Potential</h3>
+                <div class="metric-card"
+                     data-tooltip-title="ROI Potential"
+                     data-tooltip-desc="Average return on investment across your AI tool portfolio"
+                     data-tooltip-formula="(Total Benefits - Total Costs) / Total Costs × 100"
+                     data-tooltip-note="Higher with larger teams due to economies of scale"
+                     data-tooltip="ROI Potential: Average return on investment across your AI tool portfolio">
+                    <h3>ROI Potential <i class="fas fa-info-circle info-icon" data-tooltip="Click for detailed explanation"></i></h3>
                     <div class="metric-value" id="roi-potential">0%</div>
                     <div class="metric-trend neutral">
                         <span>12-month average</span>
@@ -1066,20 +1200,20 @@
 
         <!-- Cost Analysis Section -->
         <section class="dashboard-section">
-            <h2 class="section-title">Total Cost of Ownership Analysis</h2>
+            <h2 class="section-title">Total Cost of Ownership Analysis <i class="fas fa-info-circle info-icon"></i></h2>
             
             <div class="section-controls">
                 <div class="control-group">
                     <label for="team-size">Team Size:</label>
                     <div class="slider-container">
-                        <input type="range" id="team-size" class="slider" min="10" max="500" value="50">
+                        <input type="range" id="team-size" class="slider" min="10" max="500" value="50" data-tooltip="Team Size: Adjusts costs for per-user pricing models">
                         <span class="slider-value" id="team-size-value">50</span>
                     </div>
                 </div>
                 
                 <div class="control-group">
                     <label for="time-horizon">Time Horizon:</label>
-                    <select id="time-horizon">
+                    <select id="time-horizon" data-tooltip="Time Horizon: Longer horizons show greater ROI">
                         <option value="1">1 Year</option>
                         <option value="3" selected>3 Years</option>
                         <option value="5">5 Years</option>
@@ -1089,7 +1223,7 @@
                 <div class="control-group">
                     <label for="growth-rate">Growth Rate:</label>
                     <div class="slider-container">
-                        <input type="range" id="growth-rate" class="slider" min="0" max="50" value="20">
+                        <input type="range" id="growth-rate" class="slider" min="0" max="50" value="20" data-tooltip="Growth Rate: Projects how costs compound over time">
                         <span class="slider-value" id="growth-rate-value">20%</span>
                     </div>
                 </div>
@@ -1138,7 +1272,7 @@
 
         <!-- Savings Opportunities Section -->
         <section class="dashboard-section">
-            <h2 class="section-title">Savings Opportunities</h2>
+            <h2 class="section-title">Savings Opportunities <i class="fas fa-info-circle info-icon"></i></h2>
             <div class="savings-grid" id="savings-grid">
                 <div class="loading">
                     <div class="spinner"></div>
@@ -1149,7 +1283,7 @@
 
         <!-- Reports Section -->
         <section class="dashboard-section">
-            <h2 class="section-title">Executive Reports</h2>
+            <h2 class="section-title">Executive Reports <i class="fas fa-info-circle info-icon"></i></h2>
             <div class="section-controls">
                 <button class="btn btn-primary" onclick="generateBoardReport()">
                     <i class="fas fa-file-powerpoint"></i> Generate Board Report
@@ -1168,6 +1302,10 @@
     <script src="../data/unified-tools-data.js"></script>
     <script src="js/data-processor.js"></script>
     <script src="js/cost-calculator.js"></script>
+    
+    <!-- Tippy.js JavaScript -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
     
     <script>
         // Global variables
@@ -1767,6 +1905,304 @@
             costCalculator,
             charts
         };
+        
+        // Initialize tooltips
+        function initializeTooltips() {
+            // Initialize metric card tooltips
+            initializeMetricTooltips();
+            
+            // Initialize control tooltips
+            initializeControlTooltips();
+            
+            // Initialize section tooltips
+            initializeSectionTooltips();
+        }
+
+        function initializeMetricTooltips() {
+            // Create rich HTML content for metric card tooltips
+            const metricCards = document.querySelectorAll('.metric-card');
+            console.log('Found metric cards:', metricCards.length);
+            
+            metricCards.forEach(card => {
+                try {
+                    const title = card.getAttribute('data-tooltip-title');
+                    const desc = card.getAttribute('data-tooltip-desc');
+                    const formula = card.getAttribute('data-tooltip-formula');
+                    const note = card.getAttribute('data-tooltip-note');
+                    
+                    if (title && desc) {
+                        tippy(card, {
+                            content: `
+                                <div class="tooltip-content">
+                                    <div class="tooltip-title">${title}</div>
+                                    <div class="tooltip-description">${desc}</div>
+                                    ${formula ? `<div class="tooltip-formula">${formula}</div>` : ''}
+                                    ${note ? `<div class="tooltip-note">${note}</div>` : ''}
+                                </div>
+                            `,
+                            allowHTML: true,
+                            theme: 'dark-custom',
+                            placement: 'top',
+                            animation: 'shift-away',
+                            interactive: true,
+                            maxWidth: 300,
+                            delay: [200, 0], // Show after 200ms, hide immediately
+                            touch: ['hold', 500], // Mobile: hold for 500ms
+                        });
+                        console.log('Tooltip added to:', title);
+                    }
+                } catch (error) {
+                    console.error('Error adding tooltip to metric card:', error);
+                }
+            });
+        }
+
+        function initializeControlTooltips() {
+            // Team Size Slider
+            const teamSizeSlider = document.querySelector('#team-size');
+            console.log('Team size slider found:', !!teamSizeSlider);
+            if (teamSizeSlider) {
+                tippy(teamSizeSlider, {
+                    content: `
+                        <div class="tooltip-content">
+                            <div class="tooltip-title">Team Size Impact</div>
+                            <div class="tooltip-description">
+                                Adjusts costs for per-user pricing models and scales implementation complexity
+                            </div>
+                            <div class="tooltip-note">
+                                Larger teams often qualify for volume discounts
+                            </div>
+                        </div>
+                    `,
+                    allowHTML: true,
+                    theme: 'dark-custom',
+                    placement: 'bottom',
+                    animation: 'shift-away',
+                    touch: ['hold', 500],
+                });
+            }
+            
+            // Growth Rate Slider
+            const growthRateSlider = document.querySelector('#growth-rate');
+            console.log('Growth rate slider found:', !!growthRateSlider);
+            if (growthRateSlider) {
+                tippy(growthRateSlider, {
+                    content: `
+                        <div class="tooltip-content">
+                            <div class="tooltip-title">Annual Growth Rate</div>
+                            <div class="tooltip-description">
+                                Projects how costs compound over time as your organization grows
+                            </div>
+                            <div class="tooltip-formula">
+                                Year N Cost = Year 1 Cost × (1 + Growth Rate)^N
+                            </div>
+                            <div class="tooltip-note">
+                                Higher growth makes early optimization more valuable
+                            </div>
+                        </div>
+                    `,
+                    allowHTML: true,
+                    theme: 'dark-custom',
+                    placement: 'bottom',
+                    animation: 'shift-away',
+                    touch: ['hold', 500],
+                });
+            }
+            
+            // Time Horizon Selector
+            const timeHorizonSelect = document.querySelector('#time-horizon');
+            console.log('Time horizon select found:', !!timeHorizonSelect);
+            if (timeHorizonSelect) {
+                tippy(timeHorizonSelect, {
+                    content: `
+                        <div class="tooltip-content">
+                            <div class="tooltip-title">Analysis Time Frame</div>
+                            <div class="tooltip-description">
+                                Longer horizons show greater ROI as benefits compound
+                            </div>
+                            <div class="tooltip-note">
+                                3-year view recommended for strategic planning
+                            </div>
+                        </div>
+                    `,
+                    allowHTML: true,
+                    theme: 'dark-custom',
+                    placement: 'bottom',
+                    animation: 'shift-away',
+                    touch: ['hold', 500],
+                });
+            }
+        }
+
+        function initializeSectionTooltips() {
+            // Section title tooltips
+            const sectionTooltips = {
+                'Total Cost of Ownership Analysis': {
+                    title: 'TCO Analysis',
+                    desc: 'Projects total costs including licenses, implementation, training, and growth',
+                    note: 'Includes hidden costs like training time and opportunity costs'
+                },
+                'Savings Opportunities': {
+                    title: 'Cost Optimization',
+                    desc: 'AI-identified ways to reduce costs without sacrificing capabilities',
+                    note: 'Prioritized by impact and ease of implementation'
+                },
+                'Executive Reports': {
+                    title: 'Strategic Reporting',
+                    desc: 'Generate comprehensive reports for board and executive presentations',
+                    note: 'Includes ROI projections and strategic recommendations'
+                }
+            };
+            
+            document.querySelectorAll('.section-title .info-icon').forEach(icon => {
+                const sectionTitle = icon.parentElement.textContent.trim().replace(/\s+/g, ' ').replace(' ', '');
+                console.log('Section title:', sectionTitle);
+                const tooltipData = sectionTooltips[sectionTitle] || sectionTooltips['Total Cost of Ownership Analysis'] || {
+                    title: 'Information',
+                    desc: 'Click for more details about this section',
+                    note: ''
+                };
+                
+                tippy(icon, {
+                    content: `
+                        <div class="tooltip-content">
+                            <div class="tooltip-title">${tooltipData.title}</div>
+                            <div class="tooltip-description">${tooltipData.desc}</div>
+                            ${tooltipData.note ? `<div class="tooltip-note">${tooltipData.note}</div>` : ''}
+                        </div>
+                    `,
+                    allowHTML: true,
+                    theme: 'dark-custom',
+                    placement: 'right',
+                    animation: 'shift-away',
+                    trigger: 'click',
+                    interactive: true,
+                    maxWidth: 280,
+                    touch: ['hold', 300],
+                });
+            });
+        }
+
+        function initializeSavingsTooltips() {
+            // Add tooltips to savings opportunity cards
+            document.querySelectorAll('.opportunity-card').forEach(card => {
+                const typeElement = card.querySelector('.opportunity-type');
+                if (!typeElement) return;
+                
+                const type = typeElement.textContent.toLowerCase();
+                let content = '';
+                
+                switch(type) {
+                    case 'consolidation':
+                        content = `
+                            <div class="tooltip-content">
+                                <div class="tooltip-title">Tool Consolidation</div>
+                                <div class="tooltip-description">
+                                    Multiple tools in the same category can often be replaced 
+                                    with a single, more comprehensive solution
+                                </div>
+                                <div class="tooltip-note">
+                                    Reduces complexity and improves integration
+                                </div>
+                            </div>
+                        `;
+                        break;
+                    case 'negotiation':
+                        content = `
+                            <div class="tooltip-content">
+                                <div class="tooltip-title">Volume Negotiation</div>
+                                <div class="tooltip-description">
+                                    Your spend level qualifies for enterprise discounts.
+                                    Typical savings: 15-30%
+                                </div>
+                                <div class="tooltip-note">
+                                    We'll help prepare the business case
+                                </div>
+                            </div>
+                        `;
+                        break;
+                    case 'elimination':
+                        content = `
+                            <div class="tooltip-content">
+                                <div class="tooltip-title">Low Usage Removal</div>
+                                <div class="tooltip-description">
+                                    Tools with &lt;30% utilization are candidates for removal
+                                    or license reduction
+                                </div>
+                                <div class="tooltip-note">
+                                    Verify with teams before removing
+                                </div>
+                            </div>
+                        `;
+                        break;
+                }
+                
+                if (content) {
+                    tippy(card, {
+                        content: content,
+                        allowHTML: true,
+                        theme: 'dark-custom',
+                        placement: 'top',
+                        animation: 'shift-away',
+                        interactive: true,
+                        maxWidth: 280,
+                        touch: ['hold', 500],
+                    });
+                }
+            });
+        }
+
+        // Debug function to test tooltips
+        function debugTooltips() {
+            console.log('Debugging tooltips...');
+            console.log('Tippy available:', typeof tippy);
+            console.log('Metric cards found:', document.querySelectorAll('.metric-card').length);
+            console.log('Team size slider:', document.querySelector('#team-size'));
+            console.log('Info icons found:', document.querySelectorAll('.info-icon').length);
+            
+            // Create a simple test tooltip
+            const testButton = document.createElement('button');
+            testButton.textContent = 'Test Tooltip';
+            testButton.style.cssText = 'position: fixed; top: 10px; right: 10px; z-index: 9999; background: #3B82F6; color: white; padding: 8px; border: none; border-radius: 4px;';
+            document.body.appendChild(testButton);
+            
+            if (typeof tippy !== 'undefined') {
+                tippy(testButton, {
+                    content: 'If you see this, Tippy is working!',
+                    theme: 'dark-custom',
+                    placement: 'bottom',
+                    showOnCreate: true
+                });
+            }
+        }
+        
+        // Initialize tooltips when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing tooltips...');
+            
+            // Check if Tippy is loaded
+            if (typeof tippy === 'undefined') {
+                console.error('Tippy.js not loaded!');
+                return;
+            }
+            
+            // Wait for all elements to be rendered
+            setTimeout(() => {
+                console.log('Initializing tooltips...');
+                initializeTooltips();
+                
+                // Add debug button
+                setTimeout(debugTooltips, 500);
+            }, 500);
+            
+            // Re-initialize savings tooltips when opportunities are updated
+            const originalUpdateSavingsOpportunities = updateSavingsOpportunities;
+            updateSavingsOpportunities = function() {
+                originalUpdateSavingsOpportunities();
+                // Re-initialize tooltips for new savings cards
+                setTimeout(initializeSavingsTooltips, 200);
+            };
+        });
     </script>
     
     <!-- Mobile Navigation Script -->
