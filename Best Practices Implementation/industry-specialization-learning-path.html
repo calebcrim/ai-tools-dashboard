@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industry Specialization Learning Path - AI Best Practices</title>
+    <link rel="stylesheet" href="../../../../css/styles.css">
+    <link rel="stylesheet" href="../css/guide-styles.css">
+    <link rel="stylesheet" href="../css/learning-path-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Main Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-top-row">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h1 class="logo-text">CrimIntelligence: AI Tools Suite</h1>
+                </div>
+                <div class="user-menu">
+                    <span class="user-name">
+                        <i class="fas fa-user-circle"></i>
+                        AI Researcher
+                    </span>
+                </div>
+            </div>
+            <div class="header-nav-row">
+                <nav class="header-nav">
+                    <a href="../../../../index.html" class="nav-link">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                    <a href="../../../../dual-view-enhanced.html" class="nav-link">
+                        <i class="fas fa-exchange-alt"></i> Dual View
+                    </a>
+                    <a href="../../../../enterprise-report.html" class="nav-link">
+                        <i class="fas fa-building"></i> Enterprise Report
+                    </a>
+                    <a href="../../../../financial-analysis/index.html" class="nav-link">
+                        <i class="fas fa-dollar-sign"></i> Financial Analysis
+                    </a>
+                    <a href="../index.html" class="nav-link active">
+                        <i class="fas fa-graduation-cap"></i> Best Practices
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="learning-path-container industry-path">
+        <!-- Learning Path Header -->
+        <header class="learning-path-header industry">
+            <div class="path-icon">💡</div>
+            <h1>Industry Specialization Learning Path</h1>
+            <p class="path-description">Master AI applications tailored to your specific industry. Learn best practices, compliance requirements, and proven strategies from real-world implementations.</p>
+            
+            <div class="path-stats">
+                <div class="stat">
+                    <i class="fas fa-book"></i>
+                    <span>24 Guides</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-clock"></i>
+                    <span>8 Hours Total</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-certificate"></i>
+                    <span>Advanced Level</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Industry Selector -->
+        <section class="industry-selector">
+            <h2>Choose Your Industry Focus 🎯</h2>
+            <p>Select your primary industry to see customized learning paths:</p>
+            
+            <div class="industry-grid">
+                <div class="industry-card active" data-industry="marketing">
+                    <div class="industry-icon">📢</div>
+                    <h3>Marketing & Sales</h3>
+                    <p>Content creation, lead generation, analytics</p>
+                    <div class="industry-stats">
+                        <span>6 modules</span>
+                        <span>•</span>
+                        <span>2.5 hours</span>
+                    </div>
+                </div>
+                
+                <div class="industry-card" data-industry="tech">
+                    <div class="industry-icon">💻</div>
+                    <h3>Software Development</h3>
+                    <p>Code generation, testing, documentation</p>
+                    <div class="industry-stats">
+                        <span>5 modules</span>
+                        <span>•</span>
+                        <span>2 hours</span>
+                    </div>
+                </div>
+                
+                <div class="industry-card" data-industry="finance">
+                    <div class="industry-icon">💰</div>
+                    <h3>Finance & Banking</h3>
+                    <p>Risk analysis, compliance, reporting</p>
+                    <div class="industry-stats">
+                        <span>4 modules</span>
+                        <span>•</span>
+                        <span>1.5 hours</span>
+                    </div>
+                </div>
+                
+                <div class="industry-card" data-industry="healthcare">
+                    <div class="industry-icon">🏥</div>
+                    <h3>Healthcare</h3>
+                    <p>Patient care, diagnostics, research</p>
+                    <div class="industry-stats">
+                        <span>5 modules</span>
+                        <span>•</span>
+                        <span>2 hours</span>
+                    </div>
+                </div>
+                
+                <div class="industry-card" data-industry="education">
+                    <div class="industry-icon">🎓</div>
+                    <h3>Education</h3>
+                    <p>Personalized learning, assessment, content</p>
+                    <div class="industry-stats">
+                        <span>4 modules</span>
+                        <span>•</span>
+                        <span>1.5 hours</span>
+                    </div>
+                </div>
+                
+                <div class="industry-card" data-industry="retail">
+                    <div class="industry-icon">🛍️</div>
+                    <h3>Retail & E-commerce</h3>
+                    <p>Product descriptions, customer service, inventory</p>
+                    <div class="industry-stats">
+                        <span>5 modules</span>
+                        <span>•</span>
+                        <span>2 hours</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industry-Specific Curriculum -->
+        <section class="curriculum-section" id="industryCurriculum">
+            <h2>Marketing & Sales Specialization 📢</h2>
+            
+            <div class="learning-objectives industry-specific">
+                <h3>What You'll Master</h3>
+                <div class="objectives-grid">
+                    <div class="objective">
+                        <i class="fas fa-bullhorn"></i>
+                        <h4>Campaign Automation</h4>
+                        <p>AI-powered marketing campaigns that convert</p>
+                    </div>
+                    <div class="objective">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Predictive Analytics</h4>
+                        <p>Forecast trends and customer behavior</p>
+                    </div>
+                    <div class="objective">
+                        <i class="fas fa-users"></i>
+                        <h4>Personalization at Scale</h4>
+                        <p>1:1 marketing for millions of customers</p>
+                    </div>
+                    <div class="objective">
+                        <i class="fas fa-robot"></i>
+                        <h4>Chatbot Development</h4>
+                        <p>AI assistants that drive conversions</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module industry">
+                <div class="module-header">
+                    <h3>Module 1: AI-Powered Content Marketing</h3>
+                    <span class="module-duration">30 minutes</span>
+                </div>
+                <div class="guide-list">
+                    <a href="../guides/ai-content-creation.html" class="guide-item">
+                        <div class="guide-status">
+                            <i class="far fa-circle"></i>
+                        </div>
+                        <div class="guide-info">
+                            <h4>AI Content Creation Mastery</h4>
+                            <p>Scale content production while maintaining quality</p>
+                            <span class="guide-time">15 min</span>
+                        </div>
+                        <div class="guide-tag">Essential</div>
+                    </a>
+                    
+                    <a href="#" class="guide-item">
+                        <div class="guide-status">
+                            <i class="far fa-circle"></i>
+                        </div>
+                        <div class="guide-info">
+                            <h4>SEO Optimization with AI</h4>
+                            <p>Dominate search rankings with AI-powered SEO</p>
+                            <span class="guide-time">15 min</span>
+                        </div>
+                        <div class="guide-tag">High Impact</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="module industry">
+                <div class="module-header">
+                    <h3>Module 2: Lead Generation & Nurturing</h3>
+                    <span class="module-duration">45 minutes</span>
+                </div>
+                <div class="guide-list">
+                    <a href="#" class="guide-item">
+                        <div class="guide-status">
+                            <i class="far fa-circle"></i>
+                        </div>
+                        <div class="guide-info">
+                            <h4>AI Lead Scoring Models</h4>
+                            <p>Identify high-value prospects automatically</p>
+                            <span class="guide-time">20 min</span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="guide-item">
+                        <div class="guide-status">
+                            <i class="far fa-circle"></i>
+                        </div>
+                        <div class="guide-info">
+                            <h4>Automated Email Sequences</h4>
+                            <p>Personalized nurture campaigns that convert</p>
+                            <span class="guide-time">25 min</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="module industry">
+                <div class="module-header">
+                    <h3>Module 3: Customer Intelligence</h3>
+                    <span class="module-duration">40 minutes</span>
+                </div>
+                <div class="guide-list">
+                    <a href="#" class="guide-item locked">
+                        <div class="guide-status">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="guide-info">
+                            <h4>Sentiment Analysis at Scale</h4>
+                            <p>Monitor brand perception across channels</p>
+                            <span class="guide-time">20 min</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industry Case Studies -->
+        <section class="case-studies-section">
+            <h2>Success Stories from Your Industry 📊</h2>
+            
+            <div class="industry-cases">
+                <div class="industry-case">
+                    <div class="case-company">
+                        <img src="/api/placeholder/60/60" alt="Company Logo">
+                        <div class="company-info">
+                            <h4>TechStartup Inc.</h4>
+                            <span class="company-type">B2B SaaS</span>
+                        </div>
+                    </div>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <span class="metric-value">312%</span>
+                            <span class="metric-label">Lead increase</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">$2.4M</span>
+                            <span class="metric-label">Revenue impact</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">67%</span>
+                            <span class="metric-label">Cost reduction</span>
+                        </div>
+                    </div>
+                    <p class="case-summary">Implemented AI content strategy and predictive lead scoring</p>
+                    <a href="#" class="case-link">Read Full Case Study →</a>
+                </div>
+
+                <div class="industry-case">
+                    <div class="case-company">
+                        <img src="/api/placeholder/60/60" alt="Company Logo">
+                        <div class="company-info">
+                            <h4>Global Retail Co.</h4>
+                            <span class="company-type">E-commerce</span>
+                        </div>
+                    </div>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <span class="metric-value">89%</span>
+                            <span class="metric-label">Personalization</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">45%</span>
+                            <span class="metric-label">Cart recovery</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">5x</span>
+                            <span class="metric-label">Email ROI</span>
+                        </div>
+                    </div>
+                    <p class="case-summary">AI-powered personalization across 50M+ customers</p>
+                    <a href="#" class="case-link">Read Full Case Study →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compliance & Ethics -->
+        <section class="compliance-section">
+            <h2>Industry Compliance & Ethics 🛡️</h2>
+            <div class="compliance-grid">
+                <div class="compliance-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Data Privacy</h4>
+                    <p>GDPR, CCPA compliance for AI marketing</p>
+                    <a href="#">View Guidelines</a>
+                </div>
+                <div class="compliance-card">
+                    <i class="fas fa-balance-scale"></i>
+                    <h4>Ethical AI Use</h4>
+                    <p>Avoiding bias in customer targeting</p>
+                    <a href="#">Best Practices</a>
+                </div>
+                <div class="compliance-card">
+                    <i class="fas fa-file-contract"></i>
+                    <h4>Industry Standards</h4>
+                    <p>FTC guidelines for AI in advertising</p>
+                    <a href="#">Download PDF</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools & Resources -->
+        <section class="industry-tools">
+            <h2>Industry-Specific AI Tools 🛠️</h2>
+            <div class="tools-categories">
+                <div class="tool-category">
+                    <h3>Content & Copy</h3>
+                    <div class="tool-list">
+                        <div class="tool-item">
+                            <span class="tool-name">Jasper AI</span>
+                            <span class="tool-use">Marketing copy</span>
+                            <span class="tool-price">$49/mo</span>
+                        </div>
+                        <div class="tool-item">
+                            <span class="tool-name">Copy.ai</span>
+                            <span class="tool-use">Ad creative</span>
+                            <span class="tool-price">$36/mo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tool-category">
+                    <h3>Analytics & Insights</h3>
+                    <div class="tool-list">
+                        <div class="tool-item">
+                            <span class="tool-name">Crayon</span>
+                            <span class="tool-use">Competitive intel</span>
+                            <span class="tool-price">Custom</span>
+                        </div>
+                        <div class="tool-item">
+                            <span class="tool-name">Brandwatch</span>
+                            <span class="tool-use">Social listening</span>
+                            <span class="tool-price">$800/mo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tool-category">
+                    <h3>Automation</h3>
+                    <div class="tool-list">
+                        <div class="tool-item">
+                            <span class="tool-name">HubSpot AI</span>
+                            <span class="tool-use">CRM automation</span>
+                            <span class="tool-price">$45/mo</span>
+                        </div>
+                        <div class="tool-item">
+                            <span class="tool-name">Drift</span>
+                            <span class="tool-use">Conversational AI</span>
+                            <span class="tool-price">$400/mo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certification Requirements -->
+        <section class="certification-section industry">
+            <h2>Industry Specialization Certificate 🏆</h2>
+            <div class="cert-requirements">
+                <h3>Earn Your Marketing AI Specialist Certificate</h3>
+                <div class="requirement-progress">
+                    <div class="req-item">
+                        <i class="far fa-square"></i>
+                        <span>Complete all 6 marketing modules</span>
+                        <span class="progress">0/6</span>
+                    </div>
+                    <div class="req-item">
+                        <i class="far fa-square"></i>
+                        <span>Submit 3 real campaign case studies</span>
+                        <span class="progress">0/3</span>
+                    </div>
+                    <div class="req-item">
+                        <i class="far fa-square"></i>
+                        <span>Pass industry assessment (85%+)</span>
+                        <span class="progress">Not started</span>
+                    </div>
+                    <div class="req-item">
+                        <i class="far fa-square"></i>
+                        <span>Complete ethics & compliance training</span>
+                        <span class="progress">Not started</span>
+                    </div>
+                </div>
+                <div class="cert-benefits">
+                    <h4>Certificate Benefits:</h4>
+                    <ul>
+                        <li>LinkedIn verification badge</li>
+                        <li>Access to exclusive industry community</li>
+                        <li>Monthly trend reports and insights</li>
+                        <li>Priority support from AI experts</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Steps -->
+        <section class="next-steps-section">
+            <h2>Continue Your Specialization Journey 🚀</h2>
+            <div class="specialization-paths">
+                <div class="spec-path current">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>Marketing & Sales</h4>
+                    <p>Currently enrolled</p>
+                </div>
+                <div class="spec-path available">
+                    <i class="far fa-circle"></i>
+                    <h4>Add Second Specialization</h4>
+                    <p>Unlock after completing first</p>
+                </div>
+                <div class="spec-path locked">
+                    <i class="fas fa-lock"></i>
+                    <h4>Master Practitioner</h4>
+                    <p>Complete 3 specializations</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <nav class="path-nav">
+            <a href="../index.html">
+                <i class="fas fa-arrow-left"></i> Back to Best Practices Hub
+            </a>
+            <a href="#" class="btn btn-primary">
+                Start Marketing Module <i class="fas fa-arrow-right"></i>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Industry Selector
+        document.querySelectorAll('.industry-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // Remove active class from all cards
+                document.querySelectorAll('.industry-card').forEach(c => c.classList.remove('active'));
+                // Add active class to clicked card
+                this.classList.add('active');
+                
+                // Update curriculum based on selected industry
+                const industry = this.dataset.industry;
+                updateCurriculum(industry);
+            });
+        });
+
+        function updateCurriculum(industry) {
+            const curriculumSection = document.getElementById('industryCurriculum');
+            const industryData = {
+                marketing: { icon: '📢', name: 'Marketing & Sales' },
+                tech: { icon: '💻', name: 'Software Development' },
+                finance: { icon: '💰', name: 'Finance & Banking' },
+                healthcare: { icon: '🏥', name: 'Healthcare' },
+                education: { icon: '🎓', name: 'Education' },
+                retail: { icon: '🛍️', name: 'Retail & E-commerce' }
+            };
+            
+            const data = industryData[industry];
+            curriculumSection.querySelector('h2').innerHTML = `${data.name} Specialization ${data.icon}`;
+            // In a real implementation, this would load different modules
+        }
+    </script>
+</body>
+</html>

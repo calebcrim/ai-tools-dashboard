@@ -1,45 +1,125 @@
 /**
  * Financial Dashboard Mobile Responsive Styles
- * Stack dashboard sections vertically with collapsible cards
+ * Mobile-first approach with progressive enhancement
  */
 
-/* Mobile Layout Reset */
-@media (max-width: 768px) {
+/* Design Token Breakpoints */
+:root {
+    --breakpoint-mobile: 480px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+    --breakpoint-wide: 1400px;
+}
+
+/* Base Mobile Styles (Mobile First) */
+.financial-dashboard {
+    padding: var(--spacing-md); /* 16px */
+    gap: var(--spacing-md);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Prevent horizontal scroll */
+body {
+    overflow-x: hidden;
+}
+
+/* Base grid - single column on mobile */
+.dashboard-grid,
+.key-metrics,
+.charts-grid,
+.savings-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    width: 100%;
+}
+    
+/* Text overflow prevention */
+.card-title,
+.metric-label,
+.tool-name,
+.page-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Scrollable tables on mobile */
+.table-container,
+.tool-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    margin: 0 calc(-1 * var(--spacing-md));
+    padding: 0 var(--spacing-md);
+}
+
+.data-table,
+.tools-table {
+    min-width: 600px; /* Maintain readability */
+    width: 100%;
+}
+
+/* Chart containers scrollable */
+.chart-container {
+    position: relative;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+}
+
+/* Tablet Breakpoint - 768px */
+@media (min-width: 768px) {
     .financial-dashboard {
-        padding: 1rem;
-        gap: 1rem;
+        padding: var(--spacing-lg); /* 24px */
+        gap: var(--spacing-lg);
     }
     
-    /* Header adjustments */
-    .dashboard-header {
-        padding: 1rem;
-        text-align: center;
+    /* 2 column grids on tablet */
+    .dashboard-grid,
+    .charts-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
     }
     
-    .dashboard-header h1 {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
+    .key-metrics {
+        grid-template-columns: repeat(2, 1fr);
     }
     
-    .header-subtitle {
-        font-size: 0.875rem;
-    }
-    
-    .header-actions {
-        flex-direction: column;
-        gap: 0.75rem;
-        margin-top: 1rem;
-    }
-    
-    .header-actions button {
-        width: 100%;
-        padding: 0.875rem;
-        font-size: 0.875rem;
-        justify-content: center;
+    .savings-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Mobile Summary Cards */
+/* Desktop Breakpoint - 1024px */
+@media (min-width: 1024px) {
+    .financial-dashboard {
+        padding: var(--spacing-xl); /* 32px */
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    /* Multi-column grids on desktop */
+    .dashboard-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .key-metrics {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .charts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .savings-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile-specific overrides (max-width approach for specific mobile features) */
 @media (max-width: 768px) {
     .summary-cards {
         grid-template-columns: 1fr;

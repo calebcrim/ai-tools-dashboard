@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context Windows Matter - AI Pro Tips</title>
+    <link rel="stylesheet" href="../../../../css/styles.css">
+    <link rel="stylesheet" href="../css/guide-styles.css">
+    <link rel="stylesheet" href="../css/tips-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Main Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-top-row">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h1 class="logo-text">CrimIntelligence: AI Tools Suite</h1>
+                </div>
+                <div class="user-menu">
+                    <span class="user-name">
+                        <i class="fas fa-user-circle"></i>
+                        AI Researcher
+                    </span>
+                </div>
+            </div>
+            <div class="header-nav-row">
+                <nav class="header-nav">
+                    <a href="../../../../index.html" class="nav-link">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                    <a href="../../../../dual-view-enhanced.html" class="nav-link">
+                        <i class="fas fa-exchange-alt"></i> Dual View
+                    </a>
+                    <a href="../../../../enterprise-report.html" class="nav-link">
+                        <i class="fas fa-building"></i> Enterprise Report
+                    </a>
+                    <a href="../../../../financial-analysis/index.html" class="nav-link">
+                        <i class="fas fa-dollar-sign"></i> Financial Analysis
+                    </a>
+                    <a href="../index.html" class="nav-link active">
+                        <i class="fas fa-graduation-cap"></i> Best Practices
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="tip-container">
+        <!-- Pro Tip Header -->
+        <header class="tip-header">
+            <div class="tip-badge">💡 Pro Tip</div>
+            <h1>Context Windows: The Hidden Key to AI Performance</h1>
+            <p class="tip-summary">Did you know? You can dramatically improve response quality by structuring your prompts to fit within optimal context windows.</p>
+        </header>
+
+        <!-- Quick Stats -->
+        <div class="tip-stats">
+            <div class="stat-card">
+                <span class="stat-number">40%</span>
+                <span class="stat-label">Better Accuracy</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">2x</span>
+                <span class="stat-label">Faster Response</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">50%</span>
+                <span class="stat-label">Cost Reduction</span>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <section class="tip-content">
+            <h2>What Are Context Windows? 🪟</h2>
+            <p>Think of a context window as the AI's "working memory." It's the maximum amount of text the AI can process at once - including both your prompt and its response.</p>
+
+            <div class="visual-explainer">
+                <div class="context-window-demo">
+                    <div class="window-section input">
+                        <h4>Your Input</h4>
+                        <div class="token-blocks">
+                            <span class="token">Your</span>
+                            <span class="token">prompt</span>
+                            <span class="token">text</span>
+                            <span class="token">here</span>
+                        </div>
+                    </div>
+                    <div class="window-section output">
+                        <h4>AI Response</h4>
+                        <div class="token-blocks">
+                            <span class="token">AI's</span>
+                            <span class="token">generated</span>
+                            <span class="token">response</span>
+                        </div>
+                    </div>
+                    <div class="window-limit">
+                        <span>Total Context Window: 4,096 tokens</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Common Context Window Sizes 📏</h2>
+            <div class="comparison-chart">
+                <div class="model-comparison">
+                    <div class="model">
+                        <h4>GPT-3.5</h4>
+                        <div class="context-bar" style="width: 25%">4K</div>
+                    </div>
+                    <div class="model">
+                        <h4>GPT-4</h4>
+                        <div class="context-bar" style="width: 50%">8K</div>
+                    </div>
+                    <div class="model">
+                        <h4>GPT-4-32K</h4>
+                        <div class="context-bar" style="width: 80%">32K</div>
+                    </div>
+                    <div class="model">
+                        <h4>Claude 2</h4>
+                        <div class="context-bar" style="width: 100%">100K</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>The Optimization Technique 🎯</h2>
+            <div class="technique-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Count Your Tokens</h4>
+                    <p>Use the token counter below to check your prompt length</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>Front-Load Important Info</h4>
+                    <p>Put crucial context at the beginning of your prompt</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>Trim the Fat</h4>
+                    <p>Remove redundant information and examples</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h4>Leave Room for Response</h4>
+                    <p>Use only 25-50% of the window for your prompt</p>
+                </div>
+            </div>
+
+            <h2>Try This Technique 🛠️</h2>
+            <div class="interactive-demo">
+                <h3>Token Counter Tool</h3>
+                <textarea id="tokenCounter" class="token-input" placeholder="Paste your prompt here to see how many tokens it uses..."></textarea>
+                <div class="token-stats">
+                    <div class="token-count">
+                        <span id="tokenCount">0</span> tokens
+                    </div>
+                    <div class="token-percentage">
+                        <span id="tokenPercentage">0%</span> of GPT-4 context
+                    </div>
+                </div>
+                <div class="optimization-tips" id="optimizationTips"></div>
+            </div>
+
+            <h2>Real-World Example 🌟</h2>
+            <div class="example-comparison">
+                <div class="example bad">
+                    <h4>❌ Poor Context Management</h4>
+                    <pre class="code-block">
+Write a comprehensive report about artificial intelligence including its history starting from the 1950s with Alan Turing and going through all the major developments including expert systems in the 1980s and the deep learning revolution of the 2010s, and make sure to cover all the technical details about how neural networks work including backpropagation and gradient descent, and also discuss all the different types of AI including narrow AI and AGI and superintelligence, and don't forget to mention all the major companies working on AI like Google and OpenAI and Anthropic and Meta, and also cover all the ethical implications including bias and job displacement and existential risk...
+[Continues for 2000+ tokens]</pre>
+                </div>
+                <div class="example good">
+                    <h4>✅ Optimized Prompt</h4>
+                    <pre class="code-block">
+Write a 5-section report on AI covering:
+1. Brief history (Turing to present)
+2. How neural networks work (key concepts only)
+3. Types of AI (narrow vs general)
+4. Major players (top 5 companies)
+5. Ethics (3 main concerns)
+
+Keep each section to 200 words. Focus on practical insights over theory.</pre>
+                </div>
+            </div>
+
+            <h2>Pro Tips for Different Use Cases 💼</h2>
+            <div class="use-case-grid">
+                <div class="use-case">
+                    <h4>📝 Long Documents</h4>
+                    <ul>
+                        <li>Break into chunks</li>
+                        <li>Process section by section</li>
+                        <li>Maintain summary between chunks</li>
+                    </ul>
+                </div>
+                <div class="use-case">
+                    <h4>💬 Conversations</h4>
+                    <ul>
+                        <li>Periodically summarize context</li>
+                        <li>Drop old irrelevant messages</li>
+                        <li>Keep only key decisions</li>
+                    </ul>
+                </div>
+                <div class="use-case">
+                    <h4>🔧 Code Generation</h4>
+                    <ul>
+                        <li>Include only relevant functions</li>
+                        <li>Use comments over documentation</li>
+                        <li>Reference files instead of pasting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="key-takeaway">
+                <h3>🔑 Key Takeaway</h3>
+                <p>The secret to better AI responses isn't always better prompts - it's <strong>smarter use of context windows</strong>. By optimizing how you structure information within the available space, you can achieve dramatically better results with the same AI model.</p>
+            </div>
+        </section>
+
+        <!-- Related Resources -->
+        <section class="related-resources">
+            <h3>Learn More</h3>
+            <div class="resource-links">
+                <a href="../guides/prompt-engineering-basics.html" class="resource-link">
+                    <i class="fas fa-book"></i>
+                    <span>Prompt Engineering Basics</span>
+                </a>
+                <a href="../guides/multi-tool-workflows.html" class="resource-link">
+                    <i class="fas fa-tools"></i>
+                    <span>Multi-Tool Workflows</span>
+                </a>
+                <a href="#" class="resource-link">
+                    <i class="fas fa-calculator"></i>
+                    <span>Token Calculator Tools</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <nav class="tip-nav">
+            <a href="../index.html">
+                <i class="fas fa-arrow-left"></i> Back to Best Practices
+            </a>
+            <a href="power-of-examples.html" class="next-tip">
+                Next Tip: The Power of Examples <i class="fas fa-arrow-right"></i>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Simple token counter (approximation)
+        const tokenCounter = document.getElementById('tokenCounter');
+        const tokenCount = document.getElementById('tokenCount');
+        const tokenPercentage = document.getElementById('tokenPercentage');
+        const optimizationTips = document.getElementById('optimizationTips');
+
+        tokenCounter.addEventListener('input', function() {
+            // Rough approximation: 1 token ≈ 4 characters
+            const text = this.value;
+            const tokens = Math.ceil(text.length / 4);
+            const percentage = Math.round((tokens / 8192) * 100);
+
+            tokenCount.textContent = tokens.toLocaleString();
+            tokenPercentage.textContent = percentage + '%';
+
+            // Show optimization tips based on token count
+            if (tokens < 100) {
+                optimizationTips.innerHTML = '<i class="fas fa-check-circle"></i> Great! Very efficient prompt.';
+                optimizationTips.className = 'optimization-tips good';
+            } else if (tokens < 1000) {
+                optimizationTips.innerHTML = '<i class="fas fa-info-circle"></i> Good length. Room for detailed responses.';
+                optimizationTips.className = 'optimization-tips okay';
+            } else if (tokens < 2000) {
+                optimizationTips.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Consider trimming if you need long responses.';
+                optimizationTips.className = 'optimization-tips warning';
+            } else {
+                optimizationTips.innerHTML = '<i class="fas fa-times-circle"></i> Too long! AI response space is limited.';
+                optimizationTips.className = 'optimization-tips bad';
+            }
+        });
+    </script>
+</body>
+</html>
