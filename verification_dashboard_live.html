@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Verification Dashboard - Live Data</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: #1e293b;
+            --border: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .timestamp {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .metric-card {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        .metric-card.success .metric-value {
+            color: var(--success);
+        }
+
+        .metric-card.warning .metric-value {
+            color: var(--warning);
+        }
+
+        .metric-card.danger .metric-value {
+            color: var(--danger);
+        }
+
+        .section {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border);
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .issues-list {
+            list-style: none;
+        }
+
+        .issues-list li {
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .issues-list li:last-child {
+            border-bottom: none;
+        }
+
+        .tool-name {
+            font-weight: 500;
+        }
+
+        .tool-url {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .status-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .status-not-found {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--danger);
+        }
+
+        .status-error {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--warning);
+        }
+
+        .status-forbidden {
+            background: rgba(148, 163, 184, 0.2);
+            color: var(--text-secondary);
+        }
+
+        .chart-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .chart-section {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+        }
+
+        .chart-section h3 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+
+        .bar {
+            background: var(--bg-primary);
+            border-radius: 0.25rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            background: var(--primary);
+            padding: 0.5rem;
+            color: white;
+            font-size: 0.875rem;
+            white-space: nowrap;
+        }
+
+        .recommendation {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid var(--primary);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .recommendation h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .recommendation p {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+        }
+
+        .error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid var(--danger);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            color: var(--danger);
+            text-align: center;
+        }
+
+        .report-selector {
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .report-selector select {
+            padding: 0.5rem 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            border-radius: 0.25rem;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .chart-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-clipboard-check"></i> AI Tools Verification Dashboard</h1>
+        <p class="timestamp" id="timestamp">Loading...</p>
+
+        <!-- Report Selector -->
+        <div class="report-selector">
+            <label>Select Report:</label>
+            <select id="reportSelector">
+                <option value="">Loading reports...</option>
+            </select>
+        </div>
+
+        <!-- Main Content -->
+        <div id="dashboardContent">
+            <div class="loading">
+                <i class="fas fa-spinner fa-spin"></i> Loading verification data...
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Find all verification reports
+        async function findReports() {
+            try {
+                // In a real implementation, this would scan the directory
+                // For now, we'll check for known report patterns
+                const reports = [];
+                const patterns = [
+                    'verification_report_20250718_080727.json',
+                    'verification_report_20250718_085402.json'
+                ];
+                
+                for (const pattern of patterns) {
+                    try {
+                        const response = await fetch(pattern);
+                        if (response.ok) {
+                            reports.push(pattern);
+                        }
+                    } catch (e) {
+                        // File doesn't exist
+                    }
+                }
+                
+                return reports.sort().reverse(); // Most recent first
+            } catch (error) {
+                console.error('Error finding reports:', error);
+                return [];
+            }
+        }
+
+        // Load and display verification data
+        async function loadVerificationData(reportFile) {
+            try {
+                const response = await fetch(reportFile);
+                if (!response.ok) {
+                    throw new Error('Failed to load verification data');
+                }
+                
+                const data = await response.json();
+                displayDashboard(data);
+            } catch (error) {
+                document.getElementById('dashboardContent').innerHTML = `
+                    <div class="error">
+                        <i class="fas fa-exclamation-triangle"></i> 
+                        <p>Unable to load verification data</p>
+                        <p style="font-size: 0.875rem; margin-top: 0.5rem;">${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Display the dashboard with data
+        function displayDashboard(data) {
+            const summary = data.summary.tools;
+            const timestamp = new Date(data.metadata.report_date).toLocaleString();
+            
+            // Calculate percentages
+            const accessiblePercent = ((summary.accessible / summary.total_tools) * 100).toFixed(1);
+            const notFoundPercent = ((summary.not_found / summary.total_tools) * 100).toFixed(1);
+            const errorPercent = ((summary.errors / summary.total_tools) * 100).toFixed(1);
+            
+            // Get critical issues
+            const notFoundTools = data.tools.filter(t => t.status === 'not_found');
+            const forbiddenTools = data.tools.filter(t => t.status === 'access_forbidden').slice(0, 10);
+            
+            // Count issues by category
+            const issuesByCategory = {};
+            data.tools.forEach(tool => {
+                if (tool.status !== 'accessible') {
+                    issuesByCategory[tool.category] = (issuesByCategory[tool.category] || 0) + 1;
+                }
+            });
+            
+            const topCategories = Object.entries(issuesByCategory)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 5);
+            
+            document.getElementById('timestamp').textContent = `Report generated: ${timestamp}`;
+            
+            document.getElementById('dashboardContent').innerHTML = `
+                <!-- Summary Metrics -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">${summary.total_tools}</div>
+                        <div class="metric-label">Total Tools</div>
+                    </div>
+                    <div class="metric-card success">
+                        <div class="metric-value">${summary.accessible}</div>
+                        <div class="metric-label">Accessible (${accessiblePercent}%)</div>
+                    </div>
+                    <div class="metric-card warning">
+                        <div class="metric-value">${summary.requires_manual_check}</div>
+                        <div class="metric-label">Need Manual Check</div>
+                    </div>
+                    <div class="metric-card danger">
+                        <div class="metric-value">${summary.not_found}</div>
+                        <div class="metric-label">Not Found (404)</div>
+                    </div>
+                </div>
+
+                <!-- Critical Issues -->
+                ${notFoundTools.length > 0 ? `
+                <div class="section">
+                    <h2><i class="fas fa-exclamation-triangle"></i> Critical Issues - Tools Not Found</h2>
+                    <ul class="issues-list">
+                        ${notFoundTools.map(tool => `
+                            <li>
+                                <div>
+                                    <div class="tool-name">${tool.tool_name}</div>
+                                    <div class="tool-url">${tool.url}</div>
+                                </div>
+                                <span class="status-badge status-not-found">404 Not Found</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+                ` : ''}
+
+                <!-- Charts -->
+                <div class="chart-container">
+                    <div class="chart-section">
+                        <h3>Issues by Category</h3>
+                        ${topCategories.map(([cat, count], i) => {
+                            const maxCount = topCategories[0][1];
+                            const width = (count / maxCount * 100);
+                            return `
+                                <div class="bar">
+                                    <div class="bar-fill" style="width: ${width}%;">${cat} - ${count} issues</div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+
+                    <div class="chart-section">
+                        <h3>Status Breakdown</h3>
+                        <div class="bar">
+                            <div class="bar-fill" style="width: ${accessiblePercent}%; background: var(--success);">
+                                Accessible - ${summary.accessible} (${accessiblePercent}%)
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-fill" style="width: ${errorPercent}%; background: var(--warning);">
+                                Errors/Issues - ${summary.errors} (${errorPercent}%)
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-fill" style="width: ${notFoundPercent}%; background: var(--danger);">
+                                Not Found - ${summary.not_found} (${notFoundPercent}%)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model Analysis -->
+                <div class="section">
+                    <h2><i class="fas fa-robot"></i> AI Model Analysis</h2>
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-value">${data.summary.models.total_mentions}</div>
+                            <div class="metric-label">Total Model Mentions</div>
+                        </div>
+                        <div class="metric-card success">
+                            <div class="metric-value">${data.summary.models.deprecated_models}</div>
+                            <div class="metric-label">Deprecated Models</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">${data.summary.models.current_models}</div>
+                            <div class="metric-label">Current Models</div>
+                        </div>
+                        <div class="metric-card warning">
+                            <div class="metric-value">${data.summary.models.unknown_models}</div>
+                            <div class="metric-label">Unknown Models</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Access Forbidden Tools -->
+                ${forbiddenTools.length > 0 ? `
+                <div class="section">
+                    <h2><i class="fas fa-lock"></i> Authentication Required (403 Forbidden)</h2>
+                    <ul class="issues-list">
+                        ${forbiddenTools.map(tool => `
+                            <li>
+                                <div>
+                                    <div class="tool-name">${tool.tool_name}</div>
+                                    <div class="tool-url">${tool.url}</div>
+                                </div>
+                                <span class="status-badge status-forbidden">403 Forbidden</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+                ` : ''}
+
+                <!-- Recommendations -->
+                <div class="section">
+                    <h2><i class="fas fa-tasks"></i> Recommended Actions</h2>
+                    
+                    <div class="recommendation">
+                        <h4>Immediate (Within 24 hours)</h4>
+                        <p>• ${summary.not_found > 0 ? `Mark the ${summary.not_found} tools returning 404 as deprecated<br>` : ''}
+                           • Fix URL formatting issues<br>
+                           • Update any redirected URLs</p>
+                    </div>
+                    
+                    <div class="recommendation">
+                        <h4>Short-term (Within 1 week)</h4>
+                        <p>• Manually verify ${summary.requires_manual_check} tools requiring checks<br>
+                           • Investigate ${summary.errors} connection errors<br>
+                           • Check tools with authentication requirements</p>
+                    </div>
+                    
+                    <div class="recommendation">
+                        <h4>Long-term (Within 1 month)</h4>
+                        <p>• Set up automated monthly verification<br>
+                           • Create real-time monitoring for critical tools<br>
+                           • Establish deprecation handling process</p>
+                    </div>
+                </div>
+
+                <!-- Effort Estimation -->
+                <div class="section">
+                    <h2><i class="fas fa-clock"></i> Effort Estimation</h2>
+                    <p><strong>Total issues to address:</strong> ${summary.not_found + summary.errors + summary.redirected} tools</p>
+                    <p><strong>Estimated time per issue:</strong> 5-10 minutes</p>
+                    <p><strong>Total estimated effort:</strong> ${Math.round((summary.not_found + summary.errors + summary.redirected) * 5 / 60 * 10) / 10} - ${Math.round((summary.not_found + summary.errors + summary.redirected) * 10 / 60 * 10) / 10} hours</p>
+                </div>
+            `;
+        }
+
+        // Initialize dashboard
+        async function init() {
+            const reports = await findReports();
+            const selector = document.getElementById('reportSelector');
+            
+            if (reports.length === 0) {
+                selector.innerHTML = '<option value="">No reports found</option>';
+                document.getElementById('dashboardContent').innerHTML = `
+                    <div class="error">
+                        <i class="fas fa-exclamation-triangle"></i> 
+                        <p>No verification reports found</p>
+                        <p style="font-size: 0.875rem; margin-top: 0.5rem;">Run the verification script first to generate reports</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Populate selector
+            selector.innerHTML = reports.map((report, i) => {
+                const date = report.match(/(\d{8}_\d{6})/)[1];
+                const formatted = date.replace(/(\d{4})(\d{2})(\d{2})_(\d{2})(\d{2})(\d{2})/, '$1-$2-$3 $4:$5:$6');
+                return `<option value="${report}" ${i === 0 ? 'selected' : ''}>${formatted}</option>`;
+            }).join('');
+            
+            // Load initial report
+            await loadVerificationData(reports[0]);
+            
+            // Handle report selection
+            selector.addEventListener('change', (e) => {
+                if (e.target.value) {
+                    loadVerificationData(e.target.value);
+                }
+            });
+        }
+
+        // Start the dashboard
+        init();
+    </script>
+</body>
+</html>
