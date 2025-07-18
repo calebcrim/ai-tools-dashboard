@@ -1,0 +1,136 @@
+I'll help you analyze the AI newsletter emails from the past 24 hours and convert them into publish-ready summaries. Let me start by checking the project knowledge to understand your newsletter sources, then access your Gmail account.Now let me access your Gmail account to find the AI newsletter emails from the past 24 hours in your AI-Newsletter folder.Let me search more broadly for AI newsletter emails from the past 24 hours:Based on the emails in your AI-Newsletter folder from the past 24 hours, here are the organized AI highlights:
+
+### The Neuron
+**Date:** July 17, 2025  
+**Source:** theneuron@newsletter.theneurondaily.com  
+
+**AI Highlights:**
+
+- **MIT Study Shows AI Writing Hurts Learning**  
+  *Category:* Research / Paper  
+  *Tags:* [#Education, #CognitiveDebt, #MIT]  
+  MIT research proved that students using AI to write essays don't actually learn from them. Students relying on ChatGPT showed weaker neural connectivity and performed 17% worse without it.  
+  [https://www.media.mit.edu/publications/your-brain-on-chatgpt-accumulation-of-cognitive-debt/](https://www.media.mit.edu/publications/your-brain-on-chatgpt-accumulation-of-cognitive-debt/)
+
+- **Alpha School's AI-Powered 2-Hour Learning Day**  
+  *Category:* Product / Tool  
+  *Tags:* [#Education, #AITutors, #Innovation]  
+  Austin's Alpha School uses AI tutors to teach entire curriculum in just 2 hours daily, with students spending afternoons on wilderness camps and entrepreneurship. Claims 2x to 6.5x faster learning than traditional schools.  
+  [https://2hourlearning.com/](https://2hourlearning.com/)
+
+- **OpenAI's Codex Built in Just Seven Weeks**  
+  *Category:* Company News  
+  *Tags:* [#OpenAI, #Codex, #Development]  
+  Former OpenAI insider Calvin French-Owen reveals the entire Codex product, which has generated 630,000 pull requests in 53 days, was built in just seven weeks. OpenAI "runs on Twitter vibes" for feedback.  
+  [https://calv.info/openai-reflections](https://calv.info/openai-reflections)
+
+- **Google Launches Gemini 2.5 Pro in AI Mode**  
+  *Category:* Product / Tool  
+  *Tags:* [#Google, #Gemini, #Search]  
+  Google rolled out Gemini 2.5 Pro and Deep Search capabilities to AI Mode in Search for Google AI Pro and AI Ultra subscribers, plus AI-calling feature for local businesses.  
+  [https://search.google/ways-to-search/ai-mode/](https://search.google/ways-to-search/ai-mode/)
+
+- **Meta Poaches OpenAI's Jason Wei**  
+  *Category:* Company News  
+  *Tags:* [#Meta, #OpenAI, #TalentWar]  
+  Meta hired Jason Wei from OpenAI, who worked on o3 and Deep Research, along with another teammate, bringing total OpenAI defections to at least 9.  
+  [https://www.wired.com/story/jason-wei-open-ai-meta/](https://www.wired.com/story/jason-wei-open-ai-meta/)
+
+- **OpenAI Vulnerability Exposes Private Chats**  
+  *Category:* Research / Paper  
+  *Tags:* [#Security, #OpenAI, #Privacy]  
+  Cybersecurity researcher disclosed OpenAI vulnerability that exposes other users' private conversations after reporting it unpatched for over 45 days.  
+  [https://requilence.any.org/open-ai-vulnerability-responsible-disclosure](https://requilence.any.org/open-ai-vulnerability-responsible-disclosure)
+
+---
+
+### 8020AI Newsletter  
+**Date:** July 17, 2025  
+**Source:** hello@8020ai.co  
+
+**AI Highlights:**
+
+- **Lightricks LTXV Real-Time Video AI Model**  
+  *Category:* Product / Tool  
+  *Tags:* [#Video, #OpenSource, #RealTime]  
+  Lightricks upgraded its open-source LTXV model for real-time image-to-video content lasting over 60 seconds with live editing controls. Available in 13B and 2B versions, works on consumer GPUs.  
+  [https://github.com/Lightricks/LTX-Video](https://github.com/Lightricks/LTX-Video)
+
+- **Google's $3B Clean Energy Deal for AI Data Centers**  
+  *Category:* Company News  
+  *Tags:* [#Google, #CleanEnergy, #Infrastructure]  
+  Google finalized $3 billion agreement with Brookfield Renewable for hydropower from Pennsylvania plants, providing 670 megawatts with potential to expand to 3 gigawatts.  
+  [https://www.theguardian.com/technology/2025/jul/16/google-hydropower-deal-clean-energy](https://www.theguardian.com/technology/2025/jul/16/google-hydropower-deal-clean-energy)
+
+---
+
+### Mindstream Newsletter  
+**Date:** July 17, 2025  
+**Source:** hello@mindstream.news  
+
+**AI Highlights:**
+
+- **Nvidia CEO Praises Chinese AI Models, Resumes Chip Shipments**  
+  *Category:* Company News  
+  *Tags:* [#Nvidia, #China, #Chips]  
+  Jensen Huang described China's AI models (DeepSeek, Alibaba, Tencent) as "world-class," crediting open-source approach. Nvidia plans to restart H20 chip shipments to China after export pause.  
+  [https://www.cnbc.com/2025/07/16/jensen-huang-china-ai-models-nvidia-gears-up-to-resume-chip-exports-.html](https://www.cnbc.com/2025/07/16/jensen-huang-china-ai-models-nvidia-gears-up-to-resume-chip-exports-.html)
+
+- **WeTransfer Clarifies: No AI Training on User Files**  
+  *Category:* Policy / Ethics  
+  *Tags:* [#Privacy, #DataProtection, #ToS]  
+  WeTransfer confirmed it doesn't use files shared on platform to train AI after backlash over terms of service update. Updated wording to clarify AI only used for moderation tools.  
+  [https://www.bbc.co.uk/news/articles/cp8mp79gyz1o](https://www.bbc.co.uk/news/articles/cp8mp79gyz1o)
+
+---
+
+### MIT Technology Review - The Download  
+**Date:** July 17, 2025  
+**Source:** newsletters@technologyreview.com  
+
+**AI Highlights:**
+
+- **Brookings Maps AI Readiness Across US Regions**  
+  *Category:* Research / Paper  
+  *Tags:* [#Policy, #AIAdoption, #US]  
+  New interactive report from Brookings Institution maps how embedded AI companies and jobs are in different US regions to help prescribe policy treatments for struggling areas.  
+  [https://www.technologyreview.com/2025/07/16/1120233/these-four-charts-show-where-ai-companies-could-go-next-in-the-us/](https://www.technologyreview.com/2025/07/16/1120233/these-four-charts-show-where-ai-companies-could-go-next-in-the-us/)
+
+- **Nexus Supercomputer to Search for Disease Cures**  
+  *Category:* Product / Tool  
+  *Tags:* [#Supercomputing, #Medical, #Research]  
+  US National Science Foundation to finance $20M Nexus supercomputer designed to search for new cures for diseases.  
+  [https://www.semafor.com/article/07/17/2025/us-national-science-foundation-to-finance-20m-supercomputer](https://www.semafor.com/article/07/17/2025/us-national-science-foundation-to-finance-20m-supercomputer)
+
+- **Elon Musk Teases Twilight-Inspired Grok AI Companion**  
+  *Category:* Product / Tool  
+  *Tags:* [#xAI, #Grok, #AICompanions]  
+  xAI is hiring engineers to develop anime and fictional character companions for X users, including one based on Edward Cullen from Twilight.  
+  [https://www.theverge.com/ai-artificial-intelligence/708536/elon-musk-grok-xai-ai-boyfriend](https://www.theverge.com/ai-artificial-intelligence/708536/elon-musk-grok-xai-ai-boyfriend)
+
+---
+
+### Additional Updates from Multiple Sources:
+
+- **MiniMax Files for Hong Kong IPO**  
+  *Category:* Company News  
+  *Tags:* [#MiniMax, #IPO, #China]  
+  Chinese startup behind Hailuo video models and M1 open-source agent filed for Hong Kong IPO at $4B valuation for end of 2025.  
+  [https://www.reuters.com/world/asia-pacific/chinese-ai-firm-minimax-files-confidentially-hong-kong-ipo-sources-say-2025-07-16/](https://www.reuters.com/world/asia-pacific/chinese-ai-firm-minimax-files-confidentially-hong-kong-ipo-sources-say-2025-07-16/)
+
+- **7% of Steam Games Now Use AI**  
+  *Category:* Research / Paper  
+  *Tags:* [#Gaming, #AIAdoption, #Steam]  
+  Of the 114K titles on Steam, 7% now disclose the use of AI (up from 1K games a year ago to nearly 8K now).  
+  [https://www.totallyhuman.io/blog/the-surprising-new-number-of-genai-games-on-steam](https://www.totallyhuman.io/blog/the-surprising-new-number-of-genai-games-on-steam)
+
+- **Latin America Building Regional ChatGPT Alternative**  
+  *Category:* Product / Tool  
+  *Tags:* [#LatamGPT, #Regional, #OpenSource]  
+  Latin America developing Latam-GPT trained on 8 TB of regional text only (20% of the original size of GPT-3.5).  
+  [https://restofworld.org/2025/chatgpt-latin-america-alternative-latamgpt/](https://restofworld.org/2025/chatgpt-latin-america-alternative-latamgpt/)
+
+---
+
+### Emails Not Used for Content
+None - all newsletters contained relevant AI news content.
