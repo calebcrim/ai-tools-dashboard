@@ -2,6 +2,7 @@
   "name": "ai-tools-dashboard",
   "version": "1.0.0",
   "description": "AI Tools Intelligence Hub with 200+ tools",
+  "type": "module",
   "scripts": {
     "test": "python -m http.server 8000 & sleep 2 && open http://localhost:8000/test/test-runner.html",
     "test:headless": "node test/run-headless.js",

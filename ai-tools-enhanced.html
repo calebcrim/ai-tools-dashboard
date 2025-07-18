@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Dashboard - Enhanced</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/enhanced-dashboard.css">
+    <style>
+        /* Additional styles for tool cards */
+        .tool-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-color: #3b82f6;
+        }
+        
+        .tool-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #f1f5f9;
+        }
+        
+        .tool-category {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(59, 130, 246, 0.2);
+            color: #3b82f6;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .tool-summary {
+            color: #94a3b8;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin-bottom: 0.75rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .tool-pricing {
+            font-size: 0.875rem;
+            color: #10b981;
+            font-weight: 500;
+        }
+        
+        .tool-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #334155;
+        }
+        
+        .tool-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+        
+        .tool-tag {
+            padding: 0.125rem 0.5rem;
+            background: rgba(148, 163, 184, 0.1);
+            color: #94a3b8;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+        
+        .tool-url {
+            color: #64748b;
+            font-size: 0.75rem;
+            text-decoration: none;
+        }
+        
+        .tool-url:hover {
+            color: #3b82f6;
+        }
+        
+        /* List view styles */
+        .tools-list .tool-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+        }
+        
+        .tools-list .tool-info {
+            flex: 1;
+        }
+        
+        .tools-list .tool-name {
+            margin: 0;
+            font-size: 1rem;
+        }
+        
+        .tools-list .tool-summary {
+            margin: 0.25rem 0;
+            -webkit-line-clamp: 2;
+        }
+        
+        .tools-list .tool-category {
+            margin: 0;
+        }
+        
+        .tools-list .tool-footer {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: #64748b;
+            font-size: 1.125rem;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: #94a3b8;
+        }
+        
+        .loading i {
+            font-size: 2rem;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Tools Dashboard - Enhanced Filtering</h1>
+        <div id="enhanced-filters"></div>
+    </div>
+    
+    <!-- Load the unified tools data -->
+    <script src="data/unified-tools-data.js"></script>
+    
+    <script type="module">
+        import { EnhancedFilters } from './components/enhanced-filters.js';
+        
+        // Function to render tools
+        function renderTools(tools) {
+            const container = document.getElementById('toolsContainer');
+            
+            if (tools.length === 0) {
+                container.innerHTML = '<div class="no-results"><i class="fas fa-search"></i><br>No tools match your filters</div>';
+                return;
+            }
+            
+            const isGridView = container.classList.contains('tools-grid');
+            
+            if (isGridView) {
+                container.innerHTML = tools.map(tool => `
+                    <div class="tool-card">
+                        <div class="tool-name">${tool.tool_name}</div>
+                        <div class="tool-category">${tool.category || 'Uncategorized'}</div>
+                        <div class="tool-summary">${tool.brief_purpose_summary || 'No description available'}</div>
+                        <div class="tool-footer">
+                            <div class="tool-pricing">${formatPricing(tool.pricing_model)}</div>
+                            <a href="${tool.url}" target="_blank" class="tool-url">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        ${tool.tags && tool.tags.length > 0 ? `
+                            <div class="tool-tags">
+                                ${tool.tags.slice(0, 3).map(tag => `<span class="tool-tag">${tag}</span>`).join('')}
+                            </div>
+                        ` : ''}
+                    </div>
+                `).join('');
+            } else {
+                container.innerHTML = tools.map(tool => `
+                    <div class="tool-card">
+                        <div class="tool-info">
+                            <div class="tool-name">${tool.tool_name}</div>
+                            <div class="tool-summary">${tool.brief_purpose_summary || 'No description available'}</div>
+                            <div style="display: flex; gap: 1rem; align-items: center;">
+                                <div class="tool-category">${tool.category || 'Uncategorized'}</div>
+                                <div class="tool-pricing">${formatPricing(tool.pricing_model)}</div>
+                                <a href="${tool.url}" target="_blank" class="tool-url">
+                                    Visit site <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        }
+        
+        // Format pricing display
+        function formatPricing(pricing) {
+            if (!pricing) return 'Pricing not specified';
+            
+            const lower = pricing.toLowerCase();
+            if (lower.includes('free') && !lower.includes('freemium')) {
+                return '<i class="fas fa-gift"></i> Free';
+            } else if (lower.includes('freemium')) {
+                return '<i class="fas fa-coins"></i> Freemium';
+            } else if (lower.includes('contact') || lower.includes('enterprise')) {
+                return '<i class="fas fa-building"></i> Enterprise';
+            } else if (lower.includes('$') || lower.includes('paid') || lower.includes('subscription')) {
+                return '<i class="fas fa-credit-card"></i> Paid';
+            }
+            
+            return pricing.length > 50 ? pricing.substring(0, 50) + '...' : pricing;
+        }
+        
+        // Initialize with loaded data
+        async function initialize() {
+            const container = document.getElementById('enhanced-filters');
+            
+            // Show loading state
+            container.innerHTML = '<div class="loading"><i class="fas fa-spinner"></i><br>Loading tools...</div>';
+            
+            try {
+                // unifiedToolsData is already loaded from the script tag above
+                const tools = window.unifiedToolsData.tools;
+                
+                console.log(`Loaded ${tools.length} tools`);
+                
+                const enhancedFilters = new EnhancedFilters({
+                    container: container,
+                    tools: tools,
+                    categoryGroups: {}, // We'll use the logical groups defined in the component
+                    onFilterChange: (filteredTools) => {
+                        console.log(`Filtered to ${filteredTools.length} tools`);
+                        renderTools(filteredTools);
+                    }
+                });
+                
+                // Initial render
+                renderTools(tools);
+            } catch (error) {
+                console.error('Error initializing dashboard:', error);
+                container.innerHTML = '<div class="no-results">Error loading tools data</div>';
+            }
+        }
+        
+        // Wait for DOM and data to load
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initialize);
+        } else {
+            initialize();
+        }
+    </script>
+</body>
+</html>
