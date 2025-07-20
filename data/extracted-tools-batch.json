@@ -1,0 +1,98 @@
+{
+  "newTools": [
+    {
+      "name": "ChatGPT Agent",
+      "action": "feature",
+      "context": "OpenAI Releases ChatGPT Agent ChatGPT Agent operates in a virtual machine, autonomously selecting tools to complete tasks including web browsing, code execution, and creating outputs like spreadsheets",
+      "category": "customer-service",
+      "url": "https://www.generativeaipub.com/p/openai-releases-agent-in-chatgpt",
+      "confidence": 0.9,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "#OpenAI #ChatGPT #AIAgent #Automation",
+        "url": "https://www.generativeaipub.com/p/openai-releases-agent-in-chatgpt"
+      }
+    },
+    {
+      "name": "Voxtral Voice Model",
+      "action": "feature",
+      "context": "Mistral AI Launches Voxtral Voice Model Mistral AI released Voxtral, claimed as the \"world's best\" open-source voice model, alongside multimodal models and Le Chat upgrades to compete with ChatGPT. --",
+      "category": "customer-service",
+      "url": "https://aidisruption.ai/p/le-chat-unveils-voxtral-worlds-top",
+      "confidence": 0.9,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "#MistralAI #OpenSource #VoiceAI #Europe",
+        "url": "https://aidisruption.ai/p/le-chat-unveils-voxtral-worlds-top"
+      }
+    },
+    {
+      "name": "Voxtral Voice",
+      "action": "launch",
+      "context": "Mistral AI Launches Voxtral Voice Model Mistral AI released Voxtral, claimed as the \"world's best\" open-source voice model, alongside multimodal models and Le Chat upgrades to compete with ChatGPT. --- ### TAAFT",
+      "category": "customer-service",
+      "url": "https://aidisruption.ai/p/le-chat-unveils-voxtral-worlds-top",
+      "confidence": 0.9999999999999999,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "#MistralAI #OpenSource #VoiceAI #Europe",
+        "url": "https://aidisruption.ai/p/le-chat-unveils-voxtral-worlds-top"
+      }
+    },
+    {
+      "name": "China's Delivery Robots Ride Subway",
+      "action": "feature",
+      "context": "China's Delivery Robots Ride Subway World-first deployment of robots that autonomously ride Shenzhen's subway system to restock 7-Eleven stores, navigating trains and elevators independently.",
+      "category": "ai-tools",
+      "url": "https://www.instagram.com/reel/DMHSdiJOfyT/",
+      "confidence": 0.9,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "#Robotics #China #Automation #DeliveryTech",
+        "url": "https://www.instagram.com/reel/DMHSdiJOfyT/"
+      }
+    },
+    {
+      "name": "MIT's Universal Robot Training Tool",
+      "action": "feature",
+      "context": "MIT's Universal Robot Training Tool New handheld device enables anyone to train robots without coding through remote control, physical guidance, or demonstration learning. --- ### The Moonshots",
+      "category": "developer-tools",
+      "url": "https://news.mit.edu/2025/new-tool-gives-anyone-ability-to-train-robot-0717",
+      "confidence": 0.9,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "#MIT #Robotics #NoCode #Training",
+        "url": "https://news.mit.edu/2025/new-tool-gives-anyone-ability-to-train-robot-0717"
+      }
+    },
+    {
+      "name": "Digital Doubles for Video Calls",
+      "action": "feature",
+      "context": "Pickle AI Creates Digital Doubles for Video Calls MacOS app creates AI avatars that lip-sync in real-time for Zoom calls, requiring only 5-minute setup video and 24-hour processing. --- ### MIT Techno",
+      "category": "ai-tools",
+      "url": "https://www.pickle.com/",
+      "confidence": 0.9,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "#VideoAI #Deepfake #RemoteWork #MacOS",
+        "url": "https://www.pickle.com/"
+      }
+    },
+    {
+      "name": "Decart AI Warps Live Video in Real Time",
+      "action": "feature",
+      "context": "Decart AI Warps Live Video in Real Time New AI technology from Decart can warp and manipulate live video streams in real-time. ---",
+      "category": "ai-tools",
+      "url": "https://www.wired.com/story/decart-artificial-intelligence-model-live-stream/",
+      "confidence": 0.9,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "#VideoAI #RealTime #Decart #ComputerVision",
+        "url": "https://www.wired.com/story/decart-artificial-intelligence-model-live-stream/"
+      }
+    }
+  ],
+  "updates": [],
+  "timestamp": "2025-07-20T09:48:34.546Z",
+  "source": "7-20-2025.txt"
+}

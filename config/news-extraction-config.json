@@ -1,0 +1,158 @@
+{
+  "extraction": {
+    "confidence_threshold": 0.7,
+    "exclude_patterns": [
+      "how to",
+      "guide to", 
+      "tutorial",
+      "why most",
+      "ai concepts",
+      "executive order",
+      "first time",
+      "beats ai"
+    ],
+    "patterns": {
+      "launch": [
+        "launches?",
+        "unveiled?",
+        "introduces?",
+        "announced?",
+        "released?",
+        "debuts?",
+        "rolls? out"
+      ],
+      "update": [
+        "adds?",
+        "updates?",
+        "upgrades?",
+        "enhances?",
+        "improves?",
+        "expands?",
+        "new features?"
+      ],
+      "acquisition": [
+        "acquires?",
+        "acquired by",
+        "buys?",
+        "purchased?",
+        "merger"
+      ],
+      "funding": [
+        "raises?",
+        "raised",
+        "secures?",
+        "secured",
+        "funding",
+        "investment",
+        "Series [A-Z]"
+      ],
+      "partnership": [
+        "partners?",
+        "partnership",
+        "collaborates?",
+        "collaboration",
+        "integrates?",
+        "integration with"
+      ]
+    },
+    "ai_keywords": [
+      "AI",
+      "artificial intelligence",
+      "machine learning",
+      "ML",
+      "deep learning",
+      "neural network",
+      "NLP",
+      "natural language processing",
+      "computer vision",
+      "LLM",
+      "large language model",
+      "generative AI",
+      "chatbot",
+      "automation",
+      "predictive",
+      "analytics",
+      "algorithm",
+      "model",
+      "training",
+      "inference",
+      "transformer",
+      "GPT",
+      "diffusion"
+    ]
+  },
+  "categories": {
+    "mapping": {
+      "customer": "customer-service",
+      "support": "customer-service",
+      "chat": "customer-service",
+      "content": "content-creation",
+      "writing": "content-creation",
+      "generation": "content-creation",
+      "creative": "content-creation",
+      "analytics": "analytics",
+      "analysis": "analytics",
+      "insights": "analytics",
+      "data": "analytics",
+      "security": "cybersecurity",
+      "threat": "cybersecurity",
+      "protection": "cybersecurity",
+      "productivity": "productivity",
+      "workflow": "productivity",
+      "automation": "productivity",
+      "research": "research",
+      "search": "research",
+      "developer": "developer-tools",
+      "coding": "developer-tools",
+      "programming": "developer-tools",
+      "marketing": "marketing",
+      "advertising": "marketing",
+      "seo": "marketing"
+    },
+    "default": "ai-tools"
+  },
+  "known_tools": [
+    "ChatGPT", "Claude", "Gemini", "Perplexity", "Copilot",
+    "Midjourney", "DALL-E", "Stable Diffusion", "Flux",
+    "RunwayML", "Pika", "ElevenLabs", "Suno", "Udio",
+    "Cursor", "Windsurf", "Replit", "GitHub Copilot",
+    "Jasper", "Copy.ai", "Writesonic", "Synthesia",
+    "HeyGen", "D-ID", "Descript", "Notion AI",
+    "Grammarly", "DeepL", "Otter.ai", "Fireflies",
+    "Beautiful.ai", "Tome", "Gamma", "Canva AI",
+    "Zapier AI", "Make.com", "Bardeen", "Langchain",
+    "Pinecone", "Weaviate", "ChromaDB", "Milvus",
+    "Hugging Face", "Replicate", "Together AI", "Anyscale",
+    "Weights & Biases", "Neptune.ai", "Comet ML", "MLflow"
+  ],
+  "integration": {
+    "auto_approve_confidence": 0.85,
+    "require_url_for_new_tools": false,
+    "update_existing_only_with_high_confidence": true,
+    "backup_before_integration": true,
+    "max_tools_per_batch": 50
+  },
+  "workflow": {
+    "watch_interval_seconds": 5,
+    "process_on_startup": true,
+    "generate_reports": true,
+    "notify_on_completion": false
+  },
+  "research_prompts": {
+    "new_tool_research": [
+      "Visit the tool's website to gather:",
+      "- Detailed feature breakdown",
+      "- Current pricing model and tiers",
+      "- Integration capabilities and API availability",
+      "- User reviews and case studies",
+      "- Geographic availability and compliance certifications"
+    ],
+    "update_research": [
+      "Verify the reported changes:",
+      "- Check official announcements or press releases",
+      "- Confirm pricing changes on the pricing page",
+      "- Test new features if possible",
+      "- Look for user feedback on the updates"
+    ]
+  }
+}

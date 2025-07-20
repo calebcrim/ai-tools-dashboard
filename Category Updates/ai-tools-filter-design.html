@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Enhanced Filter Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --secondary: #10b981;
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: #1e293b;
+            --border: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent: #22d3ee;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        h1 {
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: var(--text-primary);
+        }
+        
+        .filter-system {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        /* Enhanced Sidebar Filters */
+        .sidebar-filters {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            height: fit-content;
+            position: sticky;
+            top: 2rem;
+        }
+        
+        .filter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .filter-header h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+        
+        .clear-filters {
+            font-size: 0.875rem;
+            color: var(--primary);
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        
+        .clear-filters:hover {
+            color: var(--primary-dark);
+        }
+        
+        .filter-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .filter-section h4 {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Grouped Categories */
+        .category-group {
+            margin-bottom: 1rem;
+        }
+        
+        .category-group-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            border-radius: var(--radius-md);
+            transition: background 0.2s;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        .category-group-header:hover {
+            background: rgba(59, 130, 246, 0.1);
+        }
+        
+        .category-group-header i {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            transition: transform 0.2s;
+        }
+        
+        .category-group.expanded .category-group-header i {
+            transform: rotate(90deg);
+        }
+        
+        .category-items {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+            display: none;
+        }
+        
+        .category-group.expanded .category-items {
+            display: block;
+        }
+        
+        .filter-option {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            border-radius: var(--radius-sm);
+            transition: background 0.2s;
+        }
+        
+        .filter-option:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .filter-option input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--primary);
+        }
+        
+        .filter-option label {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-size: 0.875rem;
+        }
+        
+        .filter-count {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.125rem 0.5rem;
+            border-radius: 10px;
+        }
+        
+        /* Main Content Area */
+        .main-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+        }
+        
+        /* Enhanced Search Bar */
+        .search-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .search-container {
+            position: relative;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .search-wrapper {
+            flex: 1;
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 3rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+        
+        /* Quick Filters (Pills) */
+        .quick-filters {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .quick-filter {
+            padding: 0.5rem 1rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .quick-filter:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        
+        .quick-filter.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        .quick-filter i {
+            font-size: 0.875rem;
+        }
+        
+        /* Active Filters Bar */
+        .active-filters {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .active-filter-label {
+            font-size: 0.875rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+        
+        .active-filter-chip {
+            padding: 0.25rem 0.75rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 16px;
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .active-filter-chip i {
+            font-size: 0.75rem;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+        
+        .active-filter-chip i:hover {
+            opacity: 1;
+        }
+        
+        /* Results Summary */
+        .results-summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .results-count {
+            font-size: 1.125rem;
+            font-weight: 500;
+        }
+        
+        .results-count strong {
+            color: var(--primary);
+        }
+        
+        .view-options {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .view-btn {
+            padding: 0.5rem 0.75rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .view-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        
+        .view-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        /* Tools Grid Preview */
+        .tools-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        
+        .tool-card-preview {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1rem;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enhanced AI Tools Filter System</h1>
+        
+        <div class="filter-system">
+            <!-- Enhanced Sidebar -->
+            <aside class="sidebar-filters">
+                <div class="filter-header">
+                    <h3>Filters</h3>
+                    <span class="clear-filters">
+                        <i class="fas fa-times"></i> Clear all
+                    </span>
+                </div>
+                
+                <!-- Category Groups -->
+                <div class="filter-section">
+                    <h4>Categories</h4>
+                    
+                    <div class="category-group expanded">
+                        <div class="category-group-header" onclick="toggleGroup(this)">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>AI & Development</span>
+                        </div>
+                        <div class="category-items">
+                            <div class="filter-option">
+                                <input type="checkbox" id="ai-dev">
+                                <label for="ai-dev">
+                                    AI Development
+                                    <span class="filter-count">45</span>
+                                </label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="ai-assist">
+                                <label for="ai-assist">
+                                    AI Assistants
+                                    <span class="filter-count">38</span>
+                                </label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="ml-tools">
+                                <label for="ml-tools">
+                                    Machine Learning
+                                    <span class="filter-count">27</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-group">
+                        <div class="category-group-header" onclick="toggleGroup(this)">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Content & Media</span>
+                        </div>
+                        <div class="category-items">
+                            <div class="filter-option">
+                                <input type="checkbox" id="content-create">
+                                <label for="content-create">
+                                    Content Creation
+                                    <span class="filter-count">32</span>
+                                </label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="media-prod">
+                                <label for="media-prod">
+                                    Media Production
+                                    <span class="filter-count">28</span>
+                                </label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="video-audio">
+                                <label for="video-audio">
+                                    Audio/Video Tools
+                                    <span class="filter-count">24</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-group">
+                        <div class="category-group-header" onclick="toggleGroup(this)">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Business & Analytics</span>
+                        </div>
+                        <div class="category-items">
+                            <div class="filter-option">
+                                <input type="checkbox" id="data-analytics">
+                                <label for="data-analytics">
+                                    Data Analytics
+                                    <span class="filter-count">35</span>
+                                </label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="bus-intel">
+                                <label for="bus-intel">
+                                    Business Intelligence
+                                    <span class="filter-count">22</span>
+                                </label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="media-intel">
+                                <label for="media-intel">
+                                    Media Intelligence
+                                    <span class="filter-count">18</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-group">
+                        <div class="category-group-header" onclick="toggleGroup(this)">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Marketing & Sales</span>
+                        </div>
+                        <div class="category-items">
+                            <div class="filter-option">
+                                <input type="checkbox" id="marketing">
+                                <label for="marketing">
+                                    Marketing Automation
+                                    <span class="filter-count">26</span>
+                                </label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="social-media">
+                                <label for="social-media">
+                                    Social Media Management
+                                    <span class="filter-count">19</span>
+                                </label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="crm-sales">
+                                <label for="crm-sales">
+                                    CRM & Sales
+                                    <span class="filter-count">15</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other Filters -->
+                <div class="filter-section">
+                    <h4>Pricing Model</h4>
+                    <div class="filter-option">
+                        <input type="checkbox" id="free">
+                        <label for="free">Free</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="freemium">
+                        <label for="freemium">Freemium</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="paid">
+                        <label for="paid">Paid</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="enterprise">
+                        <label for="enterprise">Enterprise</label>
+                    </div>
+                </div>
+                
+                <div class="filter-section">
+                    <h4>Features</h4>
+                    <div class="filter-option">
+                        <input type="checkbox" id="api">
+                        <label for="api">API Available</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="webhooks">
+                        <label for="webhooks">Webhooks</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="sdk">
+                        <label for="sdk">SDK Support</label>
+                    </div>
+                </div>
+            </aside>
+            
+            <!-- Main Content -->
+            <main class="main-content">
+                <!-- Enhanced Search -->
+                <div class="search-section">
+                    <div class="search-container">
+                        <div class="search-wrapper">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" class="search-input" placeholder="Search by tool name, feature, use case, or category...">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Filters -->
+                <div class="quick-filters">
+                    <button class="quick-filter active">
+                        <i class="fas fa-border-all"></i> All Tools
+                    </button>
+                    <button class="quick-filter">
+                        <i class="fas fa-star"></i> Popular
+                    </button>
+                    <button class="quick-filter">
+                        <i class="fas fa-clock"></i> Recently Added
+                    </button>
+                    <button class="quick-filter">
+                        <i class="fas fa-fire"></i> Trending
+                    </button>
+                    <button class="quick-filter">
+                        <i class="fas fa-certificate"></i> Verified
+                    </button>
+                </div>
+                
+                <!-- Active Filters Display -->
+                <div class="active-filters" style="display: none;">
+                    <span class="active-filter-label">Active filters:</span>
+                    <div class="active-filter-chip">
+                        AI Development
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="active-filter-chip">
+                        Free
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                
+                <!-- Results Summary -->
+                <div class="results-summary">
+                    <div class="results-count">
+                        Showing <strong>317</strong> of 317 tools
+                    </div>
+                    <div class="view-options">
+                        <button class="view-btn active">
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button class="view-btn">
+                            <i class="fas fa-list"></i>
+                        </button>
+                        <button class="view-btn">
+                            <i class="fas fa-table"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Tools Grid Preview -->
+                <div class="tools-preview">
+                    <div class="tool-card-preview">Tool Card 1</div>
+                    <div class="tool-card-preview">Tool Card 2</div>
+                    <div class="tool-card-preview">Tool Card 3</div>
+                    <div class="tool-card-preview">Tool Card 4</div>
+                    <div class="tool-card-preview">Tool Card 5</div>
+                    <div class="tool-card-preview">Tool Card 6</div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <script>
+        function toggleGroup(header) {
+            const group = header.parentElement;
+            group.classList.toggle('expanded');
+        }
+    </script>
+</body>
+</html>
