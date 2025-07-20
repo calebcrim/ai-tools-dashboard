@@ -1,9 +1,14 @@
 #!/usr/bin/env node
 
-const fs = require('fs').promises;
-const path = require('path');
-const { exec } = require('child_process');
-const { promisify } = require('util');
+import { promises as fs } from 'fs';
+import path from 'path';
+import { exec } from 'child_process';
+import { promisify } from 'util';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 const execAsync = promisify(exec);
 
 class NewsToToolsWorkflow {
@@ -344,8 +349,9 @@ async function main() {
     }
 }
 
-if (require.main === module) {
+// Run if executed directly
+if (import.meta.url === `file://${process.argv[1]}`) {
     main().catch(console.error);
 }
 
-module.exports = NewsToToolsWorkflow;
+export default NewsToToolsWorkflow;

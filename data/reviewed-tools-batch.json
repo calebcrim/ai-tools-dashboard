@@ -1,0 +1,125 @@
+{
+  "newTools": [
+    {
+      "name": "Grok 4 Released by xAI",
+      "action": "feature",
+      "context": "Grok 4 Released by xAI The new Grok models are out with two variants: Grok 4 and Grok Heavy ($300/month). During the livestream launch, Elon Musk expressed that the model's power was \"a little bit ter",
+      "category": "ai-tools",
+      "url": "https://x.ai/news/grok-4",
+      "confidence": 0.9,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "[#LLM, #xAI, #ChatBot]",
+        "url": "https://x.ai/news/grok-4"
+      }
+    },
+    {
+      "name": "Kiro, AI Code Editor",
+      "action": "feature",
+      "context": "AWS Launches Kiro, AI Code Editor AWS launched Kiro, their version of Cursor - an AI-powered code editor that integrates with Amazon's Bedrock models.",
+      "category": "ai-tools",
+      "url": "https://kiro.dev/blog/introducing-kiro/",
+      "confidence": 0.9,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "[#AWS, #CodingAI, #Developer]",
+        "url": "https://kiro.dev/blog/introducing-kiro/"
+      }
+    },
+    {
+      "name": "AWS Launching AI Agent Marketplace",
+      "action": "feature",
+      "context": "AWS Launching AI Agent Marketplace AWS is launching an AI agent marketplace on July 15th with Anthropic as a key partner, creating a centralized hub for enterprises to browse and install AI agents.",
+      "category": "ai-tools",
+      "url": "https://techcrunch.com/2025/07/10/aws-is-launching-an-ai-agent-marketplace-next-week-with-anthropic-as-a-partner/",
+      "confidence": 0.9,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "[#AWS, #Anthropic, #AIAgents]",
+        "url": "https://techcrunch.com/2025/07/10/aws-is-launching-an-ai-agent-marketplace-next-week-with-anthropic-as-a-partner/"
+      }
+    },
+    {
+      "name": "Grok Gets NSFW AI Companions",
+      "action": "feature",
+      "context": "Grok Gets NSFW AI Companions xAI launched AI \"companions\" for Grok including an anime character named Ani with an NSFW lingerie mode.",
+      "category": "ai-assistant",
+      "url": "https://www.theverge.com/news/706988/elon-musk-ai-bot-grok-supergrok-anime-companion-ani-rudy2025-07-14",
+      "confidence": 0.9,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "[#xAI, #AICompanions, #Controversial]",
+        "url": "https://www.theverge.com/news/706988/elon-musk-ai-bot-grok-supergrok-anime-companion-ani-rudy2025-07-14"
+      }
+    },
+    {
+      "name": "Comet AI Browser",
+      "action": "feature",
+      "context": "Perplexity Launches Comet AI Browser Perplexity launched Comet, an AI web browser with a sidebar assistant that can book meetings, send emails, and buy products. --- ### MIT Technology Review - The Al",
+      "category": "ai-assistant",
+      "url": "https://comet.perplexity.ai",
+      "confidence": 0.9,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "[#Perplexity, #Browser, #AIAssistant]",
+        "url": "https://comet.perplexity.ai"
+      }
+    },
+    {
+      "name": "Comet",
+      "action": "launch",
+      "context": "Perplexity Launches Comet AI Browser Perplexity launched Comet, an AI web browser with a sidebar assistant that can book meetings, send emails, and buy products. --- ### MIT Technology Review - The Algorithm",
+      "category": "ai-assistant",
+      "url": "https://comet.perplexity.ai",
+      "confidence": 0.9999999999999999,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "[#Perplexity, #Browser, #AIAssistant]",
+        "url": "https://comet.perplexity.ai"
+      }
+    },
+    {
+      "name": "California Using AI for Power Grid Management",
+      "action": "feature",
+      "context": "California Using AI for Power Grid Management California becomes the first US state to build algorithms that help manage power outages with AI. --- ### 8020AI Newsletter",
+      "category": "ai-tools",
+      "url": "https://ter.li/b7am63",
+      "confidence": 0.9,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "[#Infrastructure, #Energy, #California]",
+        "url": "https://ter.li/b7am63"
+      }
+    },
+    {
+      "name": "as Autonomous Developer",
+      "action": "feature",
+      "context": "Devin AI Launches as Autonomous Developer Devin AI launched as an autonomous software development tool that plans, writes, debugs, and searches online to build tools, websites, or apps. ---",
+      "category": "research",
+      "url": "https://app.devin.ai/",
+      "confidence": 0.9,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "[#CodingAI, #Autonomous, #Developer]",
+        "url": "https://app.devin.ai/"
+      }
+    },
+    {
+      "name": "as Autonomous Developer Devin",
+      "action": "launch",
+      "context": "Devin AI Launches as Autonomous Developer Devin AI launched as an autonomous software development tool that plans, writes, debugs, and searches online to build tools, websites, or apps. ---",
+      "category": "research",
+      "url": "https://app.devin.ai/",
+      "confidence": 0.7999999999999999,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "[#CodingAI, #Autonomous, #Developer]",
+        "url": "https://app.devin.ai/"
+      }
+    }
+  ],
+  "updates": [],
+  "rejected": [],
+  "timestamp": "2025-07-20T12:01:16.954Z",
+  "source": "7-15-2025.txt"
+}

@@ -24,12 +24,15 @@ class AutoToolIntegrator {
     
     async loadDatabase() {
         const content = await fs.readFile(this.dbPath, 'utf8');
-        const wrappedCode = `
-            ${content}
-            return unifiedToolsData;
-        `;
-        const getData = new Function(wrappedCode);
-        return getData();
+        
+        // Create a safe evaluation context
+        const moduleObj = { exports: {} };
+        
+        // Use eval in a controlled way to execute the file content
+        const func = new Function('module', 'exports', content + '\nreturn typeof unifiedToolsData !== "undefined" ? unifiedToolsData : module.exports;');
+        const data = func(moduleObj, moduleObj.exports);
+        
+        return data;
     }
     
     async backupDatabase() {
@@ -116,7 +119,7 @@ class AutoToolIntegrator {
     }
     
     async createToolEntry(extractedTool) {
-        const AIToolExtractor = require('./news-tool-extractor');
+        const { default: AIToolExtractor } = await import('./news-tool-extractor.js');
         const extractor = new AIToolExtractor();
         
         const toolEntry = await extractor.generateToolEntry(extractedTool);
