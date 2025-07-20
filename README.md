@@ -11,25 +11,72 @@ A comprehensive database of 200+ AI tools with advanced search, filtering, and d
 
 3. Open index.html in a web browser or serve with any static server
 
-File Structure
+## File Structure
 
-index.html - Main application file
-styles.css - All styling
-scripts.js - Core functionality
-data/ - Tool data management
+- `index.html` - Main application file
+- `styles.css` - All styling
+- `scripts.js` - Core functionality
+- `data/` - Tool data management
+  - `sources/` - Original data files by group
+  - `build-tools-data.js` - Combines all sources
+  - `unified-tools-data.js` - Generated combined data
+- `components/` - Reusable UI components
+- `scripts/` - Automation and processing scripts
+  - `news-tool-extractor.js` - Extracts tools from newsletters
+  - `auto-integrate-tools.js` - Integrates extracted tools
+  - `news-to-tools-workflow.js` - Orchestrates the pipeline
 
-sources/ - Original data files by group
-build-tools-data.js - Combines all sources
-unified-tools-data.js - Generated combined data
+## Adding New Tools
 
+### Manual Method
+1. Add tools to the appropriate file in `data/sources/`
+2. Run `node data/build-tools-data.js`
+3. Refresh the application
 
-components/ - Reusable UI components
+### Automated News-to-Tools Pipeline
+The dashboard includes an automated pipeline for extracting and integrating AI tools from newsletters.
 
-Adding New Tools
+#### Processing Newsletters
+1. Add newsletter text files to `data/Newsletters/` (format: `M-D-YYYY.txt`)
+2. Run the pipeline:
+   ```bash
+   # Process all newsletters
+   ./update-tools-from-news.sh process-all
+   
+   # Process a specific newsletter
+   ./update-tools-from-news.sh process data/Newsletters/7-20-2025.txt
+   
+   # Process the latest newsletter
+   ./update-tools-from-news.sh latest
+   
+   # Watch for new newsletters (auto-process)
+   ./update-tools-from-news.sh watch
+   ```
 
-Add tools to the appropriate file in data/sources/
-Run node data/build-tools-data.js
-Refresh the application
+#### Pipeline Features
+- **Automatic Extraction**: AI-powered tool identification from newsletter content
+- **Smart Integration**: Prevents duplicates and updates existing tools
+- **Quality Control**: Validates extracted data before integration
+- **Backup System**: Creates backups before modifying the database
+- **Detailed Reports**: Generates reports in `data/reports/`
+
+#### Pipeline Output
+When running the pipeline, it will:
+1. Extract potential new tools and updates from newsletters
+2. Validate the extracted data
+3. Add new tools to the database
+4. Update existing tools with new information
+5. Generate a summary report showing:
+   - Number of new tools added
+   - Number of tools updated
+   - Total tools in database
+   - List of all new and updated tools (when run via Claude Code)
+
+#### Best Practices
+- Review the generated reports in `data/reports/` after each run
+- Check `data/backups/` for database backups if rollback is needed
+- Newsletter files should follow the `M-D-YYYY.txt` naming convention
+- The pipeline will automatically update the newsfeed page
 
 Data Format
 Tools should follow this structure:
