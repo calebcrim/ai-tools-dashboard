@@ -1,7 +1,14 @@
 {
-  "generated": "2025-07-18T06:40:10.241Z",
-  "count": 4,
+  "generated": "2025-07-20T07:38:00.041Z",
+  "count": 5,
   "newsletters": [
+    {
+      "filename": "7-20-2025.txt",
+      "date": "2025-07-20T00:00:00.000Z",
+      "displayDate": "July 20, 2025",
+      "size": 9486,
+      "lastModified": "2025-07-20T07:33:38.751Z"
+    },
     {
       "filename": "7-18-2025.txt",
       "date": "2025-07-18T00:00:00.000Z",

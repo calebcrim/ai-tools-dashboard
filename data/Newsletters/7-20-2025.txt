@@ -1,0 +1,201 @@
+Machine Learning Pills
+Date: July 20, 2025
+Source: mlpills@substack.com
+AI Highlights:
+
+SMOTE's Limitations in Modern ML
+Category: Research / Paper
+Tags: #MachineLearning #DataScience #ML #ImbalancedData
+Modern ML engineers increasingly view SMOTE (Synthetic Minority Over-sampling Technique) as outdated and potentially harmful for handling imbalanced datasets, as it can amplify noise, encourage overfitting, and create unrealistic samples.
+https://mlpills.substack.com/p/issue-101-smotes-limitations-in-modern
+
+DeepSeek in Production Summit
+Category: Event / Conference
+Tags: #LLM #OpenSource #DeepSeek #Workshop
+August 16 summit focused on deploying open-source LLMs with workshops on LoRA fine-tuning, FP8, and MoE techniques for Gen AI developers and ML engineers.
+Register with code DAV50 for 50% off
+
+
+Exponential View
+Date: July 20, 2025
+Source: exponentialview@substack.com
+AI Highlights:
+
+OpenAI Model Achieves Gold Medal at International Math Olympiad
+Category: Research / Paper
+Tags: #OpenAI #AGI #Mathematics #Reasoning
+OpenAI's new reasoning LLM achieved gold-medal performance at the IMO under human time constraints, with the model "thinking for hours" according to researcher Noam Brown.
+https://www.exponentialview.co/p/ev-533
+Six Pathways to AI-Triggered War
+Category: Policy / Ethics
+Tags: #AGI #Geopolitics #AIRisk #Safety
+New paper identifies dangerous scenarios where the AGI race between nations could lead to preventive military action, sabotage, or cyberattacks.
+Research paper link [https://substack.com/redirect/c4e9902a-e4d1-47da-ace8-bd59eb936628]
+
+Reinforcement Learning Hits Limitations
+Category: Research / Paper
+Tags: #ReinforcementLearning #ChatGPT #Grok #ML
+Despite recent gains in ChatGPT Agent and Grok 4, experts like Andrej Karpathy note RL faces diminishing returns on complex tasks and needs new paradigms.
+Analysis link [https://substack.com/redirect/9779d566-08c9-4506-acb8-18dda81f39b7]
+
+
+Generative AI Publication
+Date: July 20, 2025
+Source: generativeaipub@substack.com
+AI Highlights:
+
+OpenAI Releases ChatGPT Agent
+Category: Product / Tool
+Tags: #OpenAI #ChatGPT #AIAgent #Automation
+ChatGPT Agent operates in a virtual machine, autonomously selecting tools to complete tasks including web browsing, code execution, and creating outputs like spreadsheets.
+https://www.generativeaipub.com/p/openai-releases-agent-in-chatgpt
+
+
+AI Disruption
+Date: July 19, 2025
+Source: aidisruption@substack.com
+AI Highlights:
+
+Mistral AI Launches Voxtral Voice Model
+Category: Product / Tool
+Tags: #MistralAI #OpenSource #VoiceAI #Europe
+Mistral AI released Voxtral, claimed as the "world's best" open-source voice model, alongside multimodal models and Le Chat upgrades to compete with ChatGPT.
+https://aidisruption.ai/p/le-chat-unveils-voxtral-worlds-top
+
+
+TAAFT (There's An AI For That)
+Date: July 19, 2025
+Source: hi@mail.theresanaiforthat.com
+AI Highlights:
+
+Meta Refuses EU AI Code of Practice
+Category: Policy / Ethics
+Tags: #Meta #Regulation #EU #AIPolicy
+Meta declined to sign Europe's AI guidelines, calling them unnecessary regulatory overreach ahead of EU AI Act enforcement in August 2025.
+https://techcrunch.com/2025/07/18/meta-refuses-to-sign-eus-ai-code-of-practice/
+
+UK Powers Up Isambard-AI Supercomputer
+Category: Company News
+Tags: #UK #Supercomputer #Infrastructure #NVIDIA
+Britain launched Isambard-AI with 21 exaflops of AI computing power, making it the UK's fastest and greenest digital brain.
+https://blogs.nvidia.com/blog/isambard-ai/
+
+Human Beats AI in 10-Hour Coding Marathon
+Category: Research / Paper
+Tags: #Coding #Competition #OpenAI #Human-vs-AI
+A Polish programmer narrowly defeated OpenAI's top model in an exhausting coding championship, showing humans retain an edge in complex programming.
+https://arstechnica.com/ai/2025/07/exhausted-man-defeats-ai-model-in-world-coding-championship/
+
+
+Superhuman (Robotics Special)
+Date: July 19, 2025
+Source: superhuman@mail.joinsuperhuman.ai
+AI Highlights:
+
+China's Delivery Robots Ride Subway
+Category: Product / Tool
+Tags: #Robotics #China #Automation #DeliveryTech
+World-first deployment of robots that autonomously ride Shenzhen's subway system to restock 7-Eleven stores, navigating trains and elevators independently.
+Watch video [https://www.instagram.com/reel/DMHSdiJOfyT/]
+
+MIT's Universal Robot Training Tool
+Category: Product / Tool
+Tags: #MIT #Robotics #NoCode #Training
+New handheld device enables anyone to train robots without coding through remote control, physical guidance, or demonstration learning.
+https://news.mit.edu/2025/new-tool-gives-anyone-ability-to-train-robot-0717
+
+
+The Moonshots
+Date: July 19, 2025
+Source: zoheb@themoonshots.io
+AI Highlights:
+
+Pickle AI Creates Digital Doubles for Video Calls
+Category: Product / Tool
+Tags: #VideoAI #Deepfake #RemoteWork #MacOS
+MacOS app creates AI avatars that lip-sync in real-time for Zoom calls, requiring only 5-minute setup video and 24-hour processing.
+https://www.pickle.com/
+
+
+MIT Technology Review - The Download
+Date: July 18, 2025
+Source: newsletters@technologyreview.com
+AI Highlights:
+
+How to Run an LLM on Your Laptop
+Category: Product / Tool
+Tags: #LLM #Privacy #LocalAI #OpenSource
+Researchers have shrunk models enough that anyone with a laptop or smartphone can now run useful LLMs locally, offering a privacy-focused alternative to ChatGPT and web-based models.
+https://www.technologyreview.com/2025/07/17/1120391/how-to-run-an-llm-on-your-laptop/
+
+White House Prepares Executive Order Targeting "Woke AI"
+Category: Policy / Ethics
+Tags: #AIPolicy #Government #Ethics #Regulation
+The administration is drafting an order to prevent companies with "liberal bias" in their AI models from landing federal contracts, mandating only "neutral" technology for government use.
+https://www.wsj.com/tech/ai/white-house-prepares-executive-order-targeting-woke-ai-e68e8e24
+
+Netflix Uses Generative AI in Show for First Time
+Category: Company News
+Tags: #GenerativeAI #Netflix #Entertainment #CostCutting
+Netflix has implemented generative AI in production for the first time, reportedly to reduce costs in content creation.
+https://www.bbc.co.uk/news/articles/c9vr4rymlw9o
+
+ICE's Facial Recognition App Scans 200 Million Images
+Category: Product / Tool
+Tags: #FacialRecognition #Privacy #Government #Surveillance
+Mobile Fortify, ICE's supercharged facial recognition app, can check faces against a database of 200 million images with unprecedented Medicaid data access.
+https://www.404media.co/inside-ices-supercharged-facial-recognition-app-of-200-million-images/
+
+
+The Deep View
+Date: July 18, 2025
+Source: newsletter@thedeepview.co
+AI Highlights:
+
+IBM and Moderna Achieve Quantum Computing Breakthrough for Drug Discovery
+Category: Research / Paper
+Tags: #QuantumComputing #DrugDiscovery #IBM #Moderna
+Researchers achieved record-setting results using quantum computers to predict mRNA molecule folding, testing sequences up to 60 building blocks using 80 quantum bits - no one had previously simulated even 42 blocks.
+https://www.ibm.com/case-studies/moderna
+
+Robots That Grow by Consuming Other Robot Parts
+Category: Research / Paper
+Tags: #Robotics #ModularRobots #MIT #SelfAssembly
+MIT and Harvard scientists developed robots using "Truss Links" that can physically grow, repair and evolve by consuming other robot parts, with damaged structures reforming by reconnecting scattered parts.
+https://www.science.org/doi/10.1126/sciadv.adu6897
+
+Uber Invests $300M in Robotaxis with Lucid Partnership
+Category: Company News
+Tags: #Robotaxi #Uber #AutonomousVehicles #Investment
+Uber is betting big on autonomous vehicles with a Lucid partnership and $300M electric vehicle push for robotaxi deployment.
+https://www.cnbc.com/2025/07/17/uber-lucid-robotaxi-partnership-300-million-20000-nuro.html
+
+AI Funders Pledge $1B for Frontline Workers
+Category: Company News
+Tags: #Investment #WorkforceAI #Funding #SocialImpact
+Major AI funders have committed $1 billion toward developing AI tools specifically designed to support and enhance frontline workers' capabilities.
+https://www.usnews.com/news/best-states/washington/articles/2025-07-17/funders-commit-1b-toward-developing-ai-tools-for-frontline-workers
+
+Perplexity Valuation Tops $18B
+Category: Company News
+Tags: #Perplexity #Funding #AISearch #Valuation
+AI search startup Perplexity's valuation has topped $18 billion just months after its latest funding round.
+https://www.ft.com/content/4e05a5c5-84ad-4f8a-991a-d7f3842de76d
+
+Lovable Hits Unicorn Status with $200M Series A
+Category: Company News
+Tags: #Unicorn #Funding #AIStartup #Lovable
+Lovable achieved unicorn status with a $200M Series A funding round just 8 months after launch.
+https://techcrunch.com/2025/07/17/lovable-becomes-a-unicorn-with-200m-series-a-just-8-months-after-launch/
+
+Delta Airlines Implements AI-Powered Personalized Pricing
+Category: Product / Tool
+Tags: #AIpricing #Airlines #Delta #Personalization
+Delta is eliminating set prices in favor of AI that determines personalized ticket pricing based on individual customer data and behavior.
+https://fortune.com/2025/07/16/delta-moves-toward-eliminating-set-prices-in-favor-of-ai-that-determines-how-much-you-personally-will-pay-for-a-ticket/
+
+Decart AI Warps Live Video in Real Time
+Category: Product / Tool
+Tags: #VideoAI #RealTime #Decart #ComputerVision
+New AI technology from Decart can warp and manipulate live video streams in real-time.
+https://www.wired.com/story/decart-artificial-intelligence-model-live-stream/

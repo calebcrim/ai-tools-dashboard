@@ -8,8 +8,12 @@
  * are available without needing server-side directory access.
  */
 
-const fs = require('fs').promises;
-const path = require('path');
+import { promises as fs } from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 async function generateNewsletterList() {
     const newsletterDir = path.join(__dirname, '..', 'data', 'Newsletters');
@@ -81,10 +85,8 @@ async function generateNewsletterList() {
 }
 
 // Run if called directly
-if (require.main === module) {
-    console.log('📰 Newsletter List Generator');
-    console.log('===========================\n');
-    generateNewsletterList();
-}
+console.log('📰 Newsletter List Generator');
+console.log('===========================\n');
+generateNewsletterList();
 
-module.exports = generateNewsletterList;
+export default generateNewsletterList;
