@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generation Basics - AI Best Practices</title>
+    <link rel="stylesheet" href="../../../../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/guide-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional styles for image generation guide */
+        .prompt-structure {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .style-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .style-item {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 3px solid #007bff;
+        }
+        
+        .platform-comparison {
+            margin: 30px 0;
+        }
+        
+        .platform-card {
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .platform-card h4 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Header - Integrated with existing site -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-top-row">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h1 class="logo-text">CrimIntelligence: AI Tools Suite</h1>
+                </div>
+                <div class="user-menu">
+                    <span class="user-name">
+                        <i class="fas fa-user-circle"></i>
+                        AI Researcher
+                    </span>
+                </div>
+            </div>
+            <div class="header-nav-row">
+                <nav class="header-nav">
+                    <a href="../../../../../../index.html" class="nav-link">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                    <a href="../../../../../../dual-view-enhanced.html" class="nav-link">
+                        <i class="fas fa-exchange-alt"></i> Dual View
+                    </a>
+                    <a href="../../../../../../enterprise-report.html" class="nav-link">
+                        <i class="fas fa-building"></i> Enterprise Report
+                    </a>
+                    <a href="../../../../../../financial-analysis/index.html" class="nav-link">
+                        <i class="fas fa-dollar-sign"></i> Financial Analysis
+                    </a>
+                    <a href="../../../index.html" class="nav-link active">
+                        <i class="fas fa-graduation-cap"></i> Best Practices
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <article class="guide-container">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb">
+            <a href="../../../index.html">Best Practices</a>
+            <span>›</span>
+            <a href="../../ai-fundamentals.html">AI Fundamentals</a>
+            <span>›</span>
+            <span>Image Generation Basics</span>
+        </nav>
+
+        <header class="guide-header">
+            <div class="guide-meta">
+                <span class="difficulty-badge beginner">Beginner</span>
+                <span class="read-time">18 min read</span>
+                <span class="module-info">Module 2: Practical AI Applications</span>
+            </div>
+            <h1>Image Generation Basics</h1>
+            <p class="guide-summary">Create stunning visuals without design skills</p>
+        </header>
+
+        <nav class="guide-toc">
+            <h3>In this guide:</h3>
+            <ul>
+                <li><a href="#learning-objectives">Learning Objectives</a></li>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#understanding-ai">Understanding AI Image Generation</a></li>
+                <li><a href="#perfect-prompt">The Anatomy of a Perfect Prompt</a></li>
+                <li><a href="#prompt-components">Essential Prompt Components</a></li>
+                <li><a href="#prompt-templates">Practical Prompt Templates</a></li>
+                <li><a href="#advanced-techniques">Advanced Techniques</a></li>
+                <li><a href="#hands-on-projects">Hands-On Projects</a></li>
+                <li><a href="#style-consistency">Style Consistency Guide</a></li>
+                <li><a href="#ethical-considerations">Ethical Considerations</a></li>
+                <li><a href="#troubleshooting">Troubleshooting</a></li>
+                <li><a href="#platform-comparison">Platform Comparison</a></li>
+                <li><a href="#key-takeaways">Key Takeaways</a></li>
+            </ul>
+        </nav>
+
+        <section class="guide-content">
+            <div class="learning-objectives" id="learning-objectives">
+                <h3>🎯 Learning Objectives</h3>
+                <ul>
+                    <li>Understand AI image generation fundamentals</li>
+                    <li>Master prompt writing for visual content</li>
+                    <li>Learn style modifiers and technical parameters</li>
+                    <li>Create consistent visual brands with AI</li>
+                    <li>Navigate copyright and ethical considerations</li>
+                </ul>
+            </div>
+
+            <h2 id="introduction">Introduction</h2>
+            <p>AI image generation has democratized visual content creation. This comprehensive guide will teach you to create professional-quality images for any purpose, regardless of your artistic background.</p>
+
+            <h2 id="understanding-ai">Understanding AI Image Generation</h2>
+            
+            <h3>How It Works</h3>
+            
+            <div class="process-flow">
+                <h4>1. Text-to-Image Process</h4>
+                <ul>
+                    <li>Natural language interpretation</li>
+                    <li>Concept synthesis</li>
+                    <li>Style application</li>
+                    <li>Detail refinement</li>
+                </ul>
+                
+                <h4>2. Key Technologies</h4>
+                <ul>
+                    <li>Diffusion models</li>
+                    <li>GANs (Generative Adversarial Networks)</li>
+                    <li>Neural style transfer</li>
+                    <li>Latent space manipulation</li>
+                </ul>
+            </div>
+
+            <h2 id="perfect-prompt">The Anatomy of a Perfect Prompt</h2>
+            
+            <div class="prompt-structure">
+                <h4>Basic Structure:</h4>
+                <code>[Subject] + [Action/Pose] + [Environment] + [Style] + [Lighting] + [Technical specs]</code>
+            </div>
+
+            <div class="prompt-example">
+                <h4>Example Breakdown:</h4>
+                <pre><code>"Professional woman + presenting to board + modern conference room + 
+corporate photography style + natural window lighting + 
+shot on Canon 5D, 85mm lens"</code></pre>
+            </div>
+
+            <h2 id="prompt-components">Essential Prompt Components</h2>
+            
+            <h3>1. Subject Description</h3>
+            <ul>
+                <li><strong>Specific details:</strong> Age, clothing, expression</li>
+                <li><strong>Avoid:</strong> Vague terms like "nice" or "good"</li>
+                <li><strong>Include:</strong> Concrete descriptors</li>
+            </ul>
+
+            <div class="example-comparison">
+                <div class="example bad">
+                    <h4>❌ Vague</h4>
+                    <code>"A nice person"</code>
+                </div>
+                <div class="example good">
+                    <h4>✅ Specific</h4>
+                    <code>"A confident 35-year-old executive in a navy suit"</code>
+                </div>
+            </div>
+
+            <h3>2. Style Modifiers</h3>
+            
+            <div class="style-grid">
+                <div class="style-item">
+                    <h5>Artistic Styles:</h5>
+                    <ul>
+                        <li>Photorealistic</li>
+                        <li>Watercolor</li>
+                        <li>Oil painting</li>
+                        <li>Pencil sketch</li>
+                        <li>Digital art</li>
+                        <li>Vector illustration</li>
+                        <li>3D render</li>
+                    </ul>
+                </div>
+                <div class="style-item">
+                    <h5>Photography Styles:</h5>
+                    <ul>
+                        <li>Portrait photography</li>
+                        <li>Product photography</li>
+                        <li>Architectural photography</li>
+                        <li>Street photography</li>
+                        <li>Macro photography</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>3. Lighting Techniques</h3>
+            <ul class="lighting-list">
+                <li>Golden hour</li>
+                <li>Studio lighting</li>
+                <li>Dramatic shadows</li>
+                <li>Soft diffused light</li>
+                <li>Backlit/silhouette</li>
+                <li>Neon/cyberpunk</li>
+                <li>Natural daylight</li>
+            </ul>
+
+            <h3>4. Composition Elements</h3>
+            <ul>
+                <li>Rule of thirds</li>
+                <li>Leading lines</li>
+                <li>Symmetrical</li>
+                <li>Minimalist</li>
+                <li>Close-up/wide angle</li>
+                <li>Bird's eye view</li>
+                <li>Dutch angle</li>
+            </ul>
+
+            <h2 id="prompt-templates">Practical Prompt Templates</h2>
+            
+            <h3>Business & Marketing</h3>
+            
+            <div class="prompt-example">
+                <h4>Product Photography:</h4>
+                <pre><code>[Product] on [surface], [lighting type], professional product photography,
+clean background, high resolution, commercial quality</code></pre>
+            </div>
+
+            <div class="prompt-example">
+                <h4>Team Headshots:</h4>
+                <pre><code>Professional headshot of [description], business casual attire,
+confident smile, clean corporate background, soft studio lighting,
+shot with 85mm lens</code></pre>
+            </div>
+
+            <div class="prompt-example">
+                <h4>Marketing Graphics:</h4>
+                <pre><code>Modern infographic showing [topic], clean design, brand colors: [colors],
+minimalist style, vector illustration, white background</code></pre>
+            </div>
+
+            <h3>Social Media Content</h3>
+            
+            <div class="prompt-example">
+                <h4>Instagram Posts:</h4>
+                <pre><code>[Scene description], Instagram-worthy, vibrant colors, lifestyle photography,
+natural lighting, shallow depth of field, mobile photography style</code></pre>
+            </div>
+
+            <div class="prompt-example">
+                <h4>LinkedIn Headers:</h4>
+                <pre><code>Professional banner showing [concept], 1584x396 pixels, corporate blue tones,
+modern abstract design, subtle gradient, space for text overlay</code></pre>
+            </div>
+
+            <h3>Creative Projects</h3>
+            
+            <div class="prompt-example">
+                <h4>Book Covers:</h4>
+                <pre><code>[Genre] book cover featuring [main element], mysterious atmosphere,
+professional book design, typography-friendly composition,
+print-ready quality</code></pre>
+            </div>
+
+            <div class="prompt-example">
+                <h4>Blog Headers:</h4>
+                <pre><code>[Topic] themed header image, 1200x630 pixels, engaging visual metaphor,
+modern web design style, optimized for readability with text overlay</code></pre>
+            </div>
+
+            <h2 id="advanced-techniques">Advanced Techniques</h2>
+            
+            <h3>1. Negative Prompts</h3>
+            <p>Tell AI what to avoid:</p>
+            <div class="prompt-example">
+                <pre><code>"NOT: blurry, low quality, distorted, extra limbs, watermark"</code></pre>
+            </div>
+
+            <h3>2. Weight Modifiers</h3>
+            <p>Emphasize important elements:</p>
+            <div class="prompt-example">
+                <pre><code>"(beautiful sunset:1.5), mountain landscape, (crystal clear lake:1.3)"</code></pre>
+            </div>
+
+            <h3>3. Aspect Ratios</h3>
+            <ul>
+                <li><strong>1:1</strong> - Instagram posts</li>
+                <li><strong>16:9</strong> - YouTube thumbnails</li>
+                <li><strong>3:2</strong> - Standard photos</li>
+                <li><strong>9:16</strong> - Stories/Reels</li>
+            </ul>
+
+            <h3>4. Seed Control</h3>
+            <p>For consistent variations:</p>
+            <div class="prompt-example">
+                <pre><code>"--seed 12345" (maintains style across generations)</code></pre>
+            </div>
+
+            <h2 id="hands-on-projects">Hands-On Projects 💪</h2>
+            
+            <div class="exercise-box">
+                <h3>Project 1: Brand Identity Package</h3>
+                <p>Create cohesive set:</p>
+                <ol>
+                    <li>Logo concept</li>
+                    <li>Business card design</li>
+                    <li>Social media avatar</li>
+                    <li>Email signature graphic</li>
+                </ol>
+            </div>
+
+            <div class="exercise-box">
+                <h3>Project 2: Content Calendar Visuals</h3>
+                <p>Generate month of images:</p>
+                <ul>
+                    <li>Motivational Monday quotes</li>
+                    <li>Tutorial Tuesday graphics</li>
+                    <li>Feature Friday products</li>
+                    <li>Social Saturday lifestyle shots</li>
+                </ul>
+            </div>
+
+            <div class="exercise-box">
+                <h3>Project 3: Presentation Graphics</h3>
+                <p>Complete slide deck visuals:</p>
+                <ul>
+                    <li>Title slide hero image</li>
+                    <li>Section dividers</li>
+                    <li>Data visualization backgrounds</li>
+                    <li>Conclusion call-to-action</li>
+                </ul>
+            </div>
+
+            <h2 id="style-consistency">Style Consistency Guide</h2>
+            
+            <h3>Creating Brand Guidelines</h3>
+            
+            <ol>
+                <li><strong>Define Core Elements</strong>
+                    <ul>
+                        <li>Color palette</li>
+                        <li>Visual style</li>
+                        <li>Mood/atmosphere</li>
+                        <li>Recurring elements</li>
+                    </ul>
+                </li>
+                
+                <li><strong>Build Style String</strong>
+                    <div class="prompt-example">
+                        <pre><code>"[Brand name] style: clean minimal design, colors: #HEX1 #HEX2,
+modern professional, consistent lighting"</code></pre>
+                    </div>
+                </li>
+                
+                <li><strong>Template Library</strong>
+                    <ul>
+                        <li>Save successful prompts</li>
+                        <li>Document modifications</li>
+                        <li>Track what works</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h2 id="ethical-considerations">Ethical Considerations</h2>
+            
+            <h3>Copyright and Usage Rights</h3>
+            
+            <div class="warning-box">
+                <h4>1. Understand Platform Terms</h4>
+                <ul>
+                    <li>Commercial usage rights</li>
+                    <li>Attribution requirements</li>
+                    <li>Modification allowances</li>
+                </ul>
+                
+                <h4>2. Avoid Protected Content</h4>
+                <ul>
+                    <li>No celebrity likenesses</li>
+                    <li>No branded logos</li>
+                    <li>No copyrighted characters</li>
+                </ul>
+                
+                <h4>3. Best Practices</h4>
+                <ul>
+                    <li>Create original concepts</li>
+                    <li>Use for inspiration, not replication</li>
+                    <li>Always verify usage rights</li>
+                </ul>
+            </div>
+
+            <h3>Disclosure Guidelines</h3>
+            <ul>
+                <li>Label AI-generated content when required</li>
+                <li>Be transparent about tools used</li>
+                <li>Respect platform policies</li>
+            </ul>
+
+            <h2 id="troubleshooting">Troubleshooting Common Issues</h2>
+            
+            <table class="mistakes-table">
+                <thead>
+                    <tr>
+                        <th>Problem</th>
+                        <th>Solution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Distorted faces</td>
+                        <td>Add "symmetrical features, well-proportioned"</td>
+                    </tr>
+                    <tr>
+                        <td>Wrong style</td>
+                        <td>Reference specific artist/photographer styles</td>
+                    </tr>
+                    <tr>
+                        <td>Blurry results</td>
+                        <td>Include "sharp focus, high detail, 4K"</td>
+                    </tr>
+                    <tr>
+                        <td>Incorrect colors</td>
+                        <td>Use specific hex codes or Pantone references</td>
+                    </tr>
+                    <tr>
+                        <td>Extra elements</td>
+                        <td>Use negative prompts to exclude</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 id="platform-comparison">Platform Comparison</h2>
+            
+            <div class="platform-comparison">
+                <div class="platform-card">
+                    <h4>Midjourney</h4>
+                    <p>Artistic, stylized results</p>
+                </div>
+                <div class="platform-card">
+                    <h4>DALL-E</h4>
+                    <p>Versatile, good with concepts</p>
+                </div>
+                <div class="platform-card">
+                    <h4>Stable Diffusion</h4>
+                    <p>Open-source, customizable</p>
+                </div>
+                <div class="platform-card">
+                    <h4>Adobe Firefly</h4>
+                    <p>Commercial-safe, integrated</p>
+                </div>
+            </div>
+
+            <h3>Building Your Visual Library</h3>
+            
+            <h4>Organization System:</h4>
+            <ol>
+                <li><strong>By Project Type</strong>
+                    <ul>
+                        <li>Marketing materials</li>
+                        <li>Social media</li>
+                        <li>Presentations</li>
+                        <li>Web graphics</li>
+                    </ul>
+                </li>
+                <li><strong>By Style</strong>
+                    <ul>
+                        <li>Photography</li>
+                        <li>Illustration</li>
+                        <li>Abstract</li>
+                        <li>Technical</li>
+                    </ul>
+                </li>
+                <li><strong>By Success Rate</strong>
+                    <ul>
+                        <li>Proven prompts</li>
+                        <li>Experimental</li>
+                        <li>Need refinement</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h2 id="key-takeaways">Key Takeaways 🔑</h2>
+            
+            <div class="takeaways-box">
+                <ul>
+                    <li>Specific prompts yield better results</li>
+                    <li>Style consistency requires documentation</li>
+                    <li>Ethical use builds trust</li>
+                    <li>Practice improves prompt crafting</li>
+                    <li>Community sharing accelerates learning</li>
+                </ul>
+            </div>
+
+            <div class="next-steps">
+                <h3>Action Steps</h3>
+                <ol>
+                    <li>Generate 10 images using templates provided</li>
+                    <li>Create your brand style guide</li>
+                    <li>Build prompt library with 5 categories</li>
+                    <li>Share best creation with community</li>
+                    <li>Document lessons learned</li>
+                </ol>
+            </div>
+
+            <div class="additional-resources">
+                <h3>Additional Resources</h3>
+                <ul>
+                    <li><a href="#">Prompt Engineering Visual Guide</a></li>
+                    <li><a href="#">Style Reference Gallery</a></li>
+                    <li><a href="../resources/ai-tools-comparison.html">Platform Comparison Chart</a></li>
+                    <li><a href="#">Legal Guidelines Checklist</a></li>
+                    <li><a href="../resources/community-forum.html">Community Showcase</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="guide-navigation">
+            <a href="./ai-writing-assistant.html" class="nav-button prev">
+                <i class="fas fa-arrow-left"></i>
+                Previous: AI Writing Assistant Mastery
+            </a>
+            <a href="../../ai-fundamentals.html" class="nav-button next">
+                Back to AI Fundamentals
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </footer>
+    </article>
+</body>
+</html>

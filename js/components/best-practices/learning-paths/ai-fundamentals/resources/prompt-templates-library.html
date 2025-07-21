@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Templates Library - AI Best Practices</title>
+    <link rel="stylesheet" href="../../../../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/guide-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional styles for prompt templates */
+        .template-card {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .template-card h3 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        
+        .template-code {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            overflow-x: auto;
+            margin: 15px 0;
+            position: relative;
+        }
+        
+        .copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        
+        .copy-button:hover {
+            background: #0056b3;
+        }
+        
+        .copy-button.copied {
+            background: #28a745;
+        }
+        
+        .template-meta {
+            display: flex;
+            gap: 20px;
+            margin: 10px 0;
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+        
+        .template-category {
+            margin: 40px 0;
+        }
+        
+        .category-header {
+            background: #e7f3ff;
+            padding: 15px;
+            border-left: 4px solid #007bff;
+            margin-bottom: 20px;
+        }
+        
+        .variable-list {
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .variable-list h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .variable-list ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .example-section {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .tips-section {
+            background: #cce5ff;
+            border: 1px solid #b8daff;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .template-nav {
+            position: sticky;
+            top: 20px;
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .template-nav h3 {
+            margin-bottom: 15px;
+        }
+        
+        .template-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .template-nav li {
+            margin: 5px 0;
+        }
+        
+        .template-nav a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .template-nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Header - Integrated with existing site -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-top-row">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h1 class="logo-text">CrimIntelligence: AI Tools Suite</h1>
+                </div>
+                <div class="user-menu">
+                    <span class="user-name">
+                        <i class="fas fa-user-circle"></i>
+                        AI Researcher
+                    </span>
+                </div>
+            </div>
+            <div class="header-nav-row">
+                <nav class="header-nav">
+                    <a href="../../../../../../index.html" class="nav-link">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                    <a href="../../../../../../dual-view-enhanced.html" class="nav-link">
+                        <i class="fas fa-exchange-alt"></i> Dual View
+                    </a>
+                    <a href="../../../../../../enterprise-report.html" class="nav-link">
+                        <i class="fas fa-building"></i> Enterprise Report
+                    </a>
+                    <a href="../../../../../../financial-analysis/index.html" class="nav-link">
+                        <i class="fas fa-dollar-sign"></i> Financial Analysis
+                    </a>
+                    <a href="../../../index.html" class="nav-link active">
+                        <i class="fas fa-graduation-cap"></i> Best Practices
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <article class="guide-container">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb">
+            <a href="../../../index.html">Best Practices</a>
+            <span>›</span>
+            <a href="../../ai-fundamentals.html">AI Fundamentals</a>
+            <span>›</span>
+            <span>Prompt Templates Library</span>
+        </nav>
+
+        <header class="guide-header">
+            <div class="guide-meta">
+                <span class="resource-type">Template Library</span>
+                <span class="version">Version 2.0</span>
+            </div>
+            <h1>Prompt Templates Library</h1>
+            <p class="guide-summary">100+ tested prompts for common tasks</p>
+        </header>
+
+        <nav class="guide-toc">
+            <h3>Template Categories:</h3>
+            <ul>
+                <li><a href="#content-creation">Content Creation Templates</a></li>
+                <li><a href="#business-communication">Business Communication</a></li>
+                <li><a href="#productivity">Productivity & Planning</a></li>
+                <li><a href="#analysis">Analysis & Research</a></li>
+                <li><a href="#creative">Creative & Design</a></li>
+                <li><a href="#technical">Technical & Development</a></li>
+                <li><a href="#specialized">Specialized Industries</a></li>
+            </ul>
+        </nav>
+
+        <section class="guide-content">
+            <div class="intro-section">
+                <h2>How to Use This Library</h2>
+                <p>Each template includes:</p>
+                <ul>
+                    <li><strong>Purpose:</strong> What the prompt accomplishes</li>
+                    <li><strong>Variables:</strong> [Bracketed] items to customize</li>
+                    <li><strong>Example:</strong> Real-world application</li>
+                    <li><strong>Tips:</strong> Optimization suggestions</li>
+                </ul>
+                <p>Click the "Copy" button to copy any template to your clipboard.</p>
+            </div>
+
+            <div class="template-category" id="content-creation">
+                <div class="category-header">
+                    <h2>Content Creation Templates</h2>
+                </div>
+
+                <div class="template-card">
+                    <h3>Blog Post Generator</h3>
+                    <div class="template-meta">
+                        <span><i class="fas fa-clock"></i> 5-10 min output</span>
+                        <span><i class="fas fa-star"></i> Most popular</span>
+                    </div>
+                    
+                    <h4>Comprehensive Blog Post</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Write a [word count]-word blog post about [topic] for [target audience].
+
+Structure:
+- Engaging hook opening
+- Clear thesis statement
+- [number] main sections with subheadings
+- Practical examples in each section
+- Actionable takeaways
+- Compelling conclusion with CTA
+
+Tone: [professional/conversational/authoritative]
+Include: Statistics, expert quotes, real-world applications
+SEO keywords to naturally incorporate: [keyword list]</pre>
+                    </div>
+
+                    <div class="variable-list">
+                        <h4>Variables to customize:</h4>
+                        <ul>
+                            <li><strong>[word count]</strong> - e.g., 1000, 1500, 2000</li>
+                            <li><strong>[topic]</strong> - Your specific subject matter</li>
+                            <li><strong>[target audience]</strong> - e.g., "small business owners", "tech professionals"</li>
+                            <li><strong>[number]</strong> - Number of main sections (typically 3-5)</li>
+                            <li><strong>[tone]</strong> - Choose one that fits your brand</li>
+                            <li><strong>[keyword list]</strong> - Comma-separated SEO keywords</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-section">
+                        <h4>Example Usage:</h4>
+                        <p>"Write a 1500-word blog post about 'AI tools for content marketing' for marketing professionals. Include 4 main sections with subheadings..."</p>
+                    </div>
+
+                    <div class="tips-section">
+                        <h4>💡 Pro Tips:</h4>
+                        <ul>
+                            <li>Specify your brand voice if you have guidelines</li>
+                            <li>Request specific formatting (H2, H3 tags) if needed</li>
+                            <li>Ask for meta description separately for SEO</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <h3>Listicle Creator</h3>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Create a listicle: "[Number] Ways to [Achieve Desired Outcome]"
+
+For each item include:
+- Catchy subheading
+- 2-3 paragraph explanation
+- Specific example or case study
+- Quick implementation tip
+- Expected result/benefit
+
+Target reader: [audience description]
+Total length: [word count]
+Style: [informative/entertaining/actionable]</pre>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <h3>Email Templates</h3>
+                    
+                    <h4>Cold Outreach Email</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Write a cold email to [recipient type] at [company type] companies.
+
+Context: I offer [your service/product] that helps [target benefit].
+
+Email structure:
+- Subject line (under 50 characters)
+- Personalized opening referencing [specific trigger/reason for outreach]
+- Problem agitation (2-3 sentences)
+- Solution teaser (1-2 sentences)
+- Social proof element
+- Soft CTA asking for [desired next step]
+
+Length: Under 150 words
+Tone: [Friendly professional/Executive brief/Casual expert]</pre>
+                    </div>
+
+                    <h4>Follow-Up Sequence</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Create a 3-email follow-up sequence for [scenario].
+
+Email 1 (Day 3): Gentle reminder
+- Reference original message
+- Add new value/insight
+- Repeat CTA
+
+Email 2 (Day 7): Value-add approach
+- Share relevant resource
+- Connect to their goals
+- Different angle CTA
+
+Email 3 (Day 14): Final outreach
+- Acknowledge busy schedule
+- One specific question
+- Permission to close loop
+
+Keep each under 100 words.</pre>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <h3>Social Media Content</h3>
+                    
+                    <h4>LinkedIn Post Framework</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Write a LinkedIn post about [topic/experience/insight].
+
+Structure:
+- Hook: [Counterintuitive statement/Question/Bold claim]
+- Story: Personal experience or observation (3-4 lines)
+- Lesson: Key takeaway (2-3 lines)
+- Application: How readers can use this (2-3 lines)
+- CTA: Question to encourage comments
+
+Formatting:
+- Short paragraphs (1-2 sentences)
+- Line breaks between ideas
+- Emoji usage: [minimal/moderate]
+Length: 1300 characters max</pre>
+                    </div>
+
+                    <h4>Twitter/X Thread Builder</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Create a Twitter thread about [topic].
+
+Tweet 1: Hook
+- Bold statement or surprising fact
+- Promise of value
+- (Use numbers if applicable)
+
+Tweets 2-[number]: Main content
+- One idea per tweet
+- Mix of explanation and examples
+- Use bullet points or numbering
+- Include relevant stats/quotes
+
+Final tweet: Recap
+- Summarize key points
+- Include CTA
+- Ask for retweets
+
+Add: Relevant hashtags, @ mentions if appropriate</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-category" id="business-communication">
+                <div class="category-header">
+                    <h2>Business Communication</h2>
+                </div>
+
+                <div class="template-card">
+                    <h3>Reports and Proposals</h3>
+                    
+                    <h4>Executive Summary Generator</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Write an executive summary for [project/proposal name].
+
+Include:
+1. Challenge/Opportunity (2-3 sentences)
+2. Proposed Solution (3-4 sentences)
+3. Key Benefits (3 bullet points)
+4. Investment Required (1-2 sentences)
+5. Expected ROI/Timeline (2-3 sentences)
+6. Next Steps (2-3 action items)
+
+Tone: Confident, data-driven
+Length: 250-300 words
+Focus: Bottom-line impact</pre>
+                    </div>
+
+                    <h4>Project Status Update</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Create a project status update for [project name].
+
+Sections:
+1. Overall Status: [On track/At risk/Behind schedule]
+2. Completed This Period:
+   - Achievement 1 (with metric)
+   - Achievement 2 (with metric)
+   - Achievement 3 (with metric)
+
+3. Upcoming Milestones:
+   - Milestone 1 (date)
+   - Milestone 2 (date)
+
+4. Risks & Mitigation:
+   - Risk 1: [Issue] | Mitigation: [Action]
+   - Risk 2: [Issue] | Mitigation: [Action]
+
+5. Support Needed:
+   - Specific ask 1
+   - Specific ask 2
+
+Format: Bullet points, scannable
+Tone: Factual, solutions-oriented</pre>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <h3>Meeting Communications</h3>
+                    
+                    <h4>Meeting Agenda Creator</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Create a meeting agenda for [meeting topic].
+
+Meeting details:
+- Duration: [time]
+- Attendees: [list roles/departments]
+- Objective: [specific outcome needed]
+
+Agenda format:
+1. Opening (2 min)
+   - Welcome & objective reminder
+
+2. [Topic 1] ([X] min)
+   - Key points to cover
+   - Decision needed: [Yes/No]
+   - Owner: [Name]
+
+3. [Topic 2] ([X] min)
+   - Discussion points
+   - Required input from: [Names]
+
+4. Action Items Review (5 min)
+5. Next Steps & Close (3 min)
+
+Include: Pre-read materials, success metrics</pre>
+                    </div>
+
+                    <h4>Meeting Minutes Template</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Convert these meeting notes into formatted minutes:
+
+[Paste raw notes here]
+
+Format as:
+1. Meeting Info
+   - Date, time, attendees
+   - Objective
+
+2. Key Discussions
+   - Topic: Summary of discussion
+   - Decision: What was decided
+   - Rationale: Why
+
+3. Action Items
+   - Task | Owner | Due Date | Priority
+
+4. Parking Lot Items
+   - Topics for future discussion
+
+5. Next Meeting
+   - Date/time and agenda items
+
+Style: Professional, concise, actionable</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-category" id="productivity">
+                <div class="category-header">
+                    <h2>Productivity & Planning</h2>
+                </div>
+
+                <div class="template-card">
+                    <h3>Task Management</h3>
+                    
+                    <h4>Daily Planning Assistant</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Here's my task list for today: [paste tasks]
+
+Please help me:
+1. Prioritize using Eisenhower Matrix (Urgent/Important)
+2. Estimate realistic time for each task
+3. Identify dependencies
+4. Suggest optimal order considering:
+   - Energy levels (complex tasks when fresh)
+   - Meeting schedule: [list fixed appointments]
+   - Deadlines: [list any deadlines]
+
+Output format:
+- Time-blocked schedule
+- Buffer time between tasks
+- Top 3 must-complete items highlighted</pre>
+                    </div>
+
+                    <h4>Weekly Review Template</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Conduct my weekly review based on this data:
+
+Completed tasks: [list]
+Incomplete tasks: [list]
+Unexpected challenges: [list]
+Wins/achievements: [list]
+
+Generate:
+1. Week Summary (3-4 sentences)
+2. Key Accomplishments (top 3-5)
+3. Lessons Learned
+4. Process Improvements Needed
+5. Next Week's Priorities
+6. Items to Delegate/Delete
+
+Format: Bullet points with brief explanations
+Focus: Actionable insights and continuous improvement</pre>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <h3>Goal Setting</h3>
+                    
+                    <h4>SMART Goals Generator</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Transform these objectives into SMART goals:
+
+Objectives: [list your objectives]
+Context: [your role/situation]
+Resources: [available resources]
+Constraints: [time/budget/other limits]
+
+For each objective create:
+1. Specific: Exact outcome defined
+2. Measurable: Quantifiable success metric
+3. Achievable: Realistic given constraints
+4. Relevant: Connection to bigger picture
+5. Time-bound: Clear deadline
+
+Also include:
+- Key milestones (3-5)
+- Potential obstacles
+- Success indicators
+- Tracking method</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-category" id="analysis">
+                <div class="category-header">
+                    <h2>Analysis & Research</h2>
+                </div>
+
+                <div class="template-card">
+                    <h3>Data Analysis</h3>
+                    
+                    <h4>Data Insights Generator</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Analyze this data and provide insights:
+
+[Paste data/metrics here]
+
+Analysis requested:
+1. Identify top 3 trends
+2. Find anomalies or outliers
+3. Calculate key ratios/percentages
+4. Compare to [benchmark/previous period]
+5. Correlation analysis between variables
+
+Output format:
+- Executive summary (2-3 sentences)
+- Key findings (bullet points)
+- Visual description (what charts would show)
+- Actionable recommendations (3-5)
+- Areas needing deeper investigation</pre>
+                    </div>
+
+                    <h4>SWOT Analysis Builder</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Conduct a SWOT analysis for [company/project/idea].
+
+Context: [Industry/market/situation]
+Perspective: [Internal/external/investor]
+Time horizon: [Short-term/long-term]
+
+For each quadrant provide:
+- 5-7 specific points
+- Evidence or examples
+- Impact rating (High/Medium/Low)
+
+Additional analysis:
+1. SO Strategies (use Strengths to capture Opportunities)
+2. WO Strategies (overcome Weaknesses to pursue Opportunities)
+3. ST Strategies (use Strengths to avoid Threats)
+4. WT Strategies (minimize Weaknesses and avoid Threats)
+
+Priority recommendations: Top 3 actions</pre>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <h3>Research Templates</h3>
+                    
+                    <h4>Literature Review Organizer</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Organize these research sources into a literature review:
+
+Sources: [list papers/articles]
+Research question: [your question]
+Scope: [specific aspects to focus on]
+
+Structure the review with:
+1. Introduction
+   - Research question context
+   - Scope and limitations
+
+2. Thematic Organization
+   - Theme 1: Key findings from relevant sources
+   - Theme 2: Conflicting viewpoints
+   - Theme 3: Gaps in current research
+
+3. Synthesis
+   - Common conclusions
+   - Contradictions
+   - Evolution of thinking
+
+4. Research Gaps
+   - What's missing
+   - Future research directions
+
+Include: In-text citations, critical analysis</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-category" id="creative">
+                <div class="category-header">
+                    <h2>Creative & Design</h2>
+                </div>
+
+                <div class="template-card">
+                    <h3>Creative Briefs</h3>
+                    
+                    <h4>Brand Story Generator</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Create a brand story for [company name].
+
+Company info:
+- Industry: [industry]
+- Target audience: [demographics/psychographics]
+- Unique value prop: [what makes you different]
+- Company values: [list 3-5]
+- Origin story: [brief history]
+
+Story elements to include:
+1. The Problem (what challenge customers face)
+2. The Revelation (your breakthrough moment)
+3. The Solution (how you solve it uniquely)
+4. The Transformation (customer success)
+5. The Vision (future you're building)
+
+Tone: [inspirational/professional/casual]
+Length: 300-500 words
+Format: Narrative with emotional connection</pre>
+                    </div>
+
+                    <h4>Product Description Writer</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Write compelling product descriptions for [product name].
+
+Product details:
+- Category: [type of product]
+- Key features: [list features]
+- Benefits: [list benefits]
+- Target customer: [description]
+- Price point: [premium/mid/budget]
+- Differentiators: [vs competitors]
+
+Create:
+1. Short description (50 words)
+   - Hook + key benefit + differentiator
+
+2. Long description (150-200 words)
+   - Problem/solution narrative
+   - Feature-benefit connections
+   - Social proof element
+   - Call to action
+
+3. Bullet points (5-7)
+   - Start with action verbs
+   - Focus on outcomes
+
+SEO keywords: [list keywords]</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-category" id="technical">
+                <div class="category-header">
+                    <h2>Technical & Development</h2>
+                </div>
+
+                <div class="template-card">
+                    <h3>Documentation</h3>
+                    
+                    <h4>API Documentation Template</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Create API documentation for [endpoint name].
+
+Endpoint details:
+- Method: [GET/POST/PUT/DELETE]
+- Path: [/api/endpoint]
+- Purpose: [what it does]
+- Authentication: [required/optional]
+
+Document:
+1. Overview
+   - Use case description
+   - Prerequisites
+
+2. Request
+   - Headers required
+   - Parameters (with types, required/optional)
+   - Request body example
+
+3. Response
+   - Success response (with example)
+   - Error responses (with codes)
+   - Response schema
+
+4. Examples
+   - cURL example
+   - JavaScript example
+   - Python example
+
+5. Rate limits and notes</pre>
+                    </div>
+
+                    <h4>Code Comment Generator</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Add comprehensive comments to this code:
+
+[Paste code here]
+
+Comment requirements:
+1. File/module level docstring
+   - Purpose
+   - Dependencies
+   - Usage example
+
+2. Function/method comments
+   - Parameters with types
+   - Return value
+   - Exceptions raised
+   - Example usage
+
+3. Inline comments
+   - Complex logic explanation
+   - Algorithm steps
+   - Performance considerations
+
+4. TODO/FIXME items
+   - Future improvements
+   - Known limitations
+
+Style: [JSDoc/Python docstring/etc.]</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-category" id="specialized">
+                <div class="category-header">
+                    <h2>Specialized Industries</h2>
+                </div>
+
+                <div class="template-card">
+                    <h3>Legal & Compliance</h3>
+                    
+                    <h4>Contract Summary Generator</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Summarize this contract for non-legal stakeholders:
+
+[Paste contract text]
+
+Include:
+1. Party Information
+   - Who's involved
+   - Their obligations
+
+2. Key Terms
+   - Duration
+   - Payment terms
+   - Deliverables
+
+3. Important Clauses
+   - Termination conditions
+   - Liability limitations
+   - IP ownership
+
+4. Risk Analysis
+   - Potential issues
+   - Missing protections
+
+5. Action Items
+   - Decisions needed
+   - Clarifications required
+
+Note: This is for internal review only, not legal advice</pre>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <h3>Sales & Marketing</h3>
+                    
+                    <h4>Sales Pitch Builder</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Create a sales pitch for [product/service].
+
+Prospect info:
+- Company: [name and industry]
+- Pain points: [identified challenges]
+- Decision maker: [role/priorities]
+- Budget range: [if known]
+
+Pitch structure:
+1. Attention grabber (industry insight/statistic)
+2. Problem agitation (specific to their situation)
+3. Solution introduction (your unique approach)
+4. Proof points (case study/ROI data)
+5. Differentiators (vs status quo/competitors)
+6. Implementation (how easy to get started)
+7. Call to action (specific next step)
+
+Time limit: [2-min elevator/10-min call/30-min meeting]
+Tone: [consultative/assertive/educational]</pre>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <h3>Healthcare & Medical</h3>
+                    
+                    <h4>Patient Education Material</h4>
+                    <div class="template-code">
+                        <button class="copy-button" onclick="copyTemplate(this)">Copy</button>
+                        <pre>Create patient education material about [condition/procedure].
+
+Target audience: [patient demographics]
+Reading level: [grade level, typically 6-8]
+Format: [handout/brochure/email]
+
+Include:
+1. What is [condition/procedure]?
+   - Simple explanation
+   - Common symptoms/reasons
+
+2. What to Expect
+   - Step-by-step process
+   - Timeline
+   - Sensations/experiences
+
+3. Preparation Instructions
+   - Before appointment
+   - Day of procedure
+   - What to bring
+
+4. Aftercare
+   - Do's and don'ts
+   - Warning signs
+   - Recovery timeline
+
+5. FAQs (5-7 common questions)
+
+6. Contact Information
+   - When to call
+   - Emergency vs routine
+
+Use: Simple language, avoid medical jargon
+Include: Visuals descriptions where helpful</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tips-section" style="margin-top: 40px;">
+                <h2>General Prompt Optimization Tips</h2>
+                <ol>
+                    <li><strong>Be Specific:</strong> The more context you provide, the better the output</li>
+                    <li><strong>Set Constraints:</strong> Word counts, formatting requirements, and tone help focus the AI</li>
+                    <li><strong>Iterate:</strong> Use follow-up prompts to refine the output</li>
+                    <li><strong>Provide Examples:</strong> Show the AI what good looks like</li>
+                    <li><strong>Request Structure:</strong> Ask for specific sections or formatting</li>
+                    <li><strong>Check and Edit:</strong> Always review and personalize AI output</li>
+                </ol>
+            </div>
+
+            <div class="additional-resources">
+                <h3>Want More Templates?</h3>
+                <p>Join our community to access:</p>
+                <ul>
+                    <li>Industry-specific template packs</li>
+                    <li>Advanced prompt engineering techniques</li>
+                    <li>Monthly template updates</li>
+                    <li>User-submitted templates</li>
+                </ul>
+                <a href="./community-forum.html" class="nav-button">Visit Community Forum →</a>
+            </div>
+        </section>
+
+        <footer class="guide-navigation">
+            <a href="./ai-tools-comparison.html" class="nav-button prev">
+                <i class="fas fa-arrow-left"></i>
+                Previous: AI Tools Comparison
+            </a>
+            <a href="./community-forum.html" class="nav-button next">
+                Next: Community Forum
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </footer>
+    </article>
+
+    <script>
+        function copyTemplate(button) {
+            const codeBlock = button.nextElementSibling;
+            const textToCopy = codeBlock.textContent;
+            
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                // Change button text temporarily
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.classList.add('copied');
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+    </script>
+</body>
+</html>

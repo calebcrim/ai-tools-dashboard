@@ -118,8 +118,9 @@
                     <div class="industry-stats">
                         <span>5 modules</span>
                         <span>•</span>
-                        <span>2 hours</span>
+                        <span>25 hours</span>
                     </div>
+                    <div class="available-badge">Full Course Available</div>
                 </div>
                 
                 <div class="industry-card" data-industry="education">
@@ -471,14 +472,30 @@
         // Industry Selector
         document.querySelectorAll('.industry-card').forEach(card => {
             card.addEventListener('click', function() {
-                // Remove active class from all cards
-                document.querySelectorAll('.industry-card').forEach(c => c.classList.remove('active'));
-                // Add active class to clicked card
-                this.classList.add('active');
-                
-                // Update curriculum based on selected industry
                 const industry = this.dataset.industry;
-                updateCurriculum(industry);
+                
+                // Navigation mapping for implemented pages
+                const industryPages = {
+                    healthcare: './industry-specialization/healthcare.html',
+                    // Add other industry pages as they're created:
+                    // finance: './industry-specialization/finance.html',
+                    // marketing: './industry-specialization/marketing.html',
+                    // education: './industry-specialization/education.html',
+                    // retail: './industry-specialization/retail.html',
+                };
+                
+                // If page exists, navigate to it
+                if (industryPages[industry]) {
+                    window.location.href = industryPages[industry];
+                } else {
+                    // Otherwise, show the preview curriculum
+                    // Remove active class from all cards
+                    document.querySelectorAll('.industry-card').forEach(c => c.classList.remove('active'));
+                    // Add active class to clicked card
+                    this.classList.add('active');
+                    // Update curriculum based on selected industry
+                    updateCurriculum(industry);
+                }
             });
         });
 
