@@ -1,9 +1,12 @@
-// Auto-generated unified tools data
-// Last updated: 2025-07-21T09:57:03.311Z
-// Total tools: 359
-// Last automated update: 2025-07-21T09:57:03.311Z
+// Unified Tools Data - All 317 AI tools
+// Last updated: 2025-07-18T08:52:22.981Z
+// Auto-generated file - do not edit directly
 
-const unifiedToolsData = {
+(function() {
+  'use strict';
+  
+  // The main data object
+  const unifiedToolsData = {
   "tools": [
     {
       "id": 1,
@@ -53,9 +56,9 @@ const unifiedToolsData = {
       "icon": "https://acemedicom.com/wp-content/uploads/2021/11/ACE-MediCom_V-logo-Symbol.png",
       "brief_purpose_summary": "Media relations platform focusing on corporate communications and investor relations (performs media monitoring, distribution, etc.).",
       "feature_breakdown": "Press release distribution, media monitoring across news and social, pitch management, analyst relations.",
-      "pricing_model": "Custom enterprise pricing (details not public)【some source†Lx】.",
+      "pricing_model": "Custom enterprise pricing (details not public)\u3010some source\u2020Lx\u3011.",
       "pros_cons_limitations": "Pros: Integrated IR and media management tools; Cons: May be complex for small teams.",
-      "integration_potential": "Integrates with social media and email platforms for pitch tracking【some source†Lx】.",
+      "integration_potential": "Integrates with social media and email platforms for pitch tracking\u3010some source\u2020Lx\u3011.",
       "learning_curve": "Moderate, due to broad feature set.",
       "geo_regulatory_limitations": "Global reach; no known specific limitations.",
       "case_studies": "Used by large public companies for integrated media/analyst engagement (clients include listed corporations).",
@@ -271,38 +274,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "AI Companions",
-      "url": "https://www.therundown.ai",
-      "category": "content-creation",
-      "source": "news-extraction",
-      "icon": "content-creation",
-      "brief_purpose_summary": "xAI Launches AI Companions Just days after apologizing for offensive outputs, xAI launched AI companions with animated 3D avatars including anime characters, featuring voice conversations and gamified",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "Content",
-        "Writing"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.789Z",
-        "source_article": "https://www.therundown.ai",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 9
-    },
-    {
-      "id": 10,
+      "id": 9,
       "tool_name": "AI Writer",
       "url": "ai-writer.com",
       "category": "Content Creation",
@@ -333,7 +305,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 11,
+      "id": 10,
       "tool_name": "AInvest",
       "url": "ainvest.com",
       "category": "Finance",
@@ -372,7 +344,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 12,
+      "id": 11,
       "tool_name": "Aisera",
       "url": "aisera.com",
       "category": "Customer Service",
@@ -402,7 +374,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 13,
+      "id": 12,
       "tool_name": "AlphaSense",
       "url": "www.alpha-sense.com",
       "category": "Data Analytics",
@@ -433,7 +405,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 14,
+      "id": 13,
       "tool_name": "Also Asked",
       "url": "alsoasked.com",
       "category": "Research Tools",
@@ -463,7 +435,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 15,
+      "id": 14,
       "tool_name": "Anania",
       "url": "anania.ai",
       "category": "Data Analytics",
@@ -493,7 +465,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 16,
+      "id": 15,
       "tool_name": "AnswerThePublic",
       "url": "answerthepublic.com",
       "category": "Content Research",
@@ -532,7 +504,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 17,
+      "id": 16,
       "tool_name": "Anyword",
       "url": "anyword.com",
       "category": "Content Creation",
@@ -569,7 +541,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 18,
+      "id": 17,
       "tool_name": "Apollo.io",
       "url": "apollo.io",
       "category": "CRM & Sales",
@@ -599,7 +571,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 19,
+      "id": 18,
       "tool_name": "Arcads",
       "url": "arcads.ai",
       "category": "Audio/Video Processing",
@@ -629,7 +601,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 20,
+      "id": 19,
       "tool_name": "Arctic Wolf Aurora Platform",
       "url": "arcticwolf.com",
       "category": "Cybersecurity",
@@ -667,7 +639,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 21,
+      "id": 20,
       "tool_name": "Arize AI",
       "url": "arize.com",
       "category": "AI Development",
@@ -697,7 +669,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 22,
+      "id": 21,
       "tool_name": "Article Forge",
       "url": "www.articleforge.com",
       "category": "Content Creation",
@@ -728,66 +700,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "as Autonomous Developer",
-      "url": "https://app.devin.ai/",
-      "category": "research",
-      "source": "news-extraction",
-      "icon": "research",
-      "brief_purpose_summary": "Devin AI Launches as Autonomous Developer Devin AI launched as an autonomous software development tool that plans, writes, debugs, and searches online to build tools, websites, or apps. ---",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:17.031Z",
-        "source_article": "https://app.devin.ai/",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 23
-    },
-    {
-      "tool_name": "as Autonomous Developer Devin",
-      "url": "https://app.devin.ai/",
-      "category": "research",
-      "source": "news-extraction",
-      "icon": "research",
-      "brief_purpose_summary": "Devin AI Launches as Autonomous Developer Devin AI launched as an autonomous software development tool that plans, writes, debugs, and searches online to build tools, websites, or apps. ---",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "New"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:17.032Z",
-        "source_article": "https://app.devin.ai/",
-        "confidence": 0.7999999999999999,
-        "action_type": "launch",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 24
-    },
-    {
-      "id": 25,
+      "id": 22,
       "tool_name": "AskYourPDF",
       "url": "askyourpdf.com",
       "category": "Productivity Tools",
@@ -817,7 +730,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 26,
+      "id": 23,
       "tool_name": "Assembly AI",
       "url": "www.assemblyai.com",
       "category": "Language Processing",
@@ -848,7 +761,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 27,
+      "id": 24,
       "tool_name": "Autoblogging.ai",
       "url": "autoblogging.ai",
       "category": "Content Creation",
@@ -856,12 +769,12 @@ const unifiedToolsData = {
       "icon": "ai-assistant",
       "brief_purpose_summary": "An AI tool that creates complete blog posts with one click, including SEO optimization, images, and internal linking.",
       "feature_breakdown": "1. AI-Powered SEO Article Generation - Creates high-quality, SEO-optimized articles using advanced AI models in seconds\n2. Multiple Generation Modes - Quick Mode for rapid generation, Godlike Mode for intense optimization with 2 credits per article\n3. Semantic SEO Analysis & Optimization - Built-in SEO analysis tool that costs 5 credits and optimizes content for search rankings\n4. Premium Writing Styles & Snippet Optimizer - Advanced writing style options and content optimization tools included free\n5. Multi-language Support & Custom Domains - Supports multiple languages and allows custom domain integration for branding",
-      "pricing_model": "Credit-based subscription model:\n• Starter: $39/month (20 credits monthly, valid 30 days)\n• Regular: $69/month (60 credits monthly, valid 30 days) \n• Standard: $149/month (150 credits monthly, valid 30 days)\n• Premium: $399/month (500 credits monthly, valid 30 days)\n\nAnnual Plans (significant discounts):\n• Regular Annual: $499/year (720 credits, valid 1 year + free 60min strategy call)\n• Standard Annual: $999/year (1800 credits, valid 1 year + free 60min strategy call)\n• Premium Annual: $2999/year (6000 credits, valid 1 year + free 60min strategy call)\n\nCredit Usage: Quick/News/Amazon Mode = 1 credit, Godlike Mode = 2 credits, AI Images = 1 credit, Human Proofreading = $5 fixed fee\nPay-as-you-go: $2 per credit (non-expiring)\nDone For You packages available starting at $1,500 for 1000 articles",
+      "pricing_model": "Credit-based subscription model:\n\u2022 Starter: $39/month (20 credits monthly, valid 30 days)\n\u2022 Regular: $69/month (60 credits monthly, valid 30 days) \n\u2022 Standard: $149/month (150 credits monthly, valid 30 days)\n\u2022 Premium: $399/month (500 credits monthly, valid 30 days)\n\nAnnual Plans (significant discounts):\n\u2022 Regular Annual: $499/year (720 credits, valid 1 year + free 60min strategy call)\n\u2022 Standard Annual: $999/year (1800 credits, valid 1 year + free 60min strategy call)\n\u2022 Premium Annual: $2999/year (6000 credits, valid 1 year + free 60min strategy call)\n\nCredit Usage: Quick/News/Amazon Mode = 1 credit, Godlike Mode = 2 credits, AI Images = 1 credit, Human Proofreading = $5 fixed fee\nPay-as-you-go: $2 per credit (non-expiring)\nDone For You packages available starting at $1,500 for 1000 articles",
       "pros_cons_limitations": "Pros: Excellent SEO optimization with built-in semantic analysis, fast generation speeds, strong user testimonials showing ranking success, multiple writing modes for different needs, human proofreading option available, good community support from founder\n\nCons: Credit-based pricing can be expensive for high-volume users, Godlike Mode uses 2 credits per article, human proofreading adds extra cost, limited customization compared to manual writing, potential for AI-generated content detection\n\nLimitations: Monthly credits expire after 30 days (annual credits after 365 days), semantic SEO analysis costs 5 credits per use, outreach prospects feature costs 15 credits, topical map builder costs 100 credits, requires understanding of SEO concepts for best results",
       "integration_potential": "Native Integrations: WordPress auto-posting and content management integration, custom API access for automated workflows\nAPI Availability: RESTful API available for custom integrations and automated content generation\nAutomation Support: Zapier integration possible through API, webhooks for automated publishing workflows\nContent Management: Direct integration with WordPress for seamless publishing, supports custom domains and branding\nThird-party Tools: Compatible with most content management systems through API, integrates with SEO tools and analytics platforms",
       "learning_curve": "Medium - While the basic Quick Mode is intuitive and can be used immediately, maximizing the platform's potential requires understanding of SEO concepts, content optimization strategies, and credit management. Users need to learn the differences between generation modes, when to use Godlike Mode vs Quick Mode, how to effectively use semantic SEO analysis, and how to manage credit allocation efficiently. The founder provides good support and strategy calls for annual users.",
       "geo_regulatory_limitations": "Geographic Availability: Globally available with no specific country restrictions mentioned\nCompliance: No specific compliance certifications mentioned (SOC2, GDPR, HIPAA details not publicly disclosed)\nContent Regulations: Users responsible for ensuring generated content complies with local content marketing and disclosure regulations\nSEO Compliance: Built-in features help avoid black-hat SEO practices, focuses on white-hat optimization techniques\nData Residency: Data processing locations not publicly disclosed, likely uses cloud infrastructure",
-      "case_studies": "User Testimonials Include:\n• Personal websites, parasite SEO, and affiliate articles ranking 'everywhere and for everything' according to beta testers\n• One user reported successful rankings across main sites, parasite SEO, and affiliate articles within weeks of usage\n• Multiple users report successful monetization through affiliate marketing and content sites\n• Marketing agencies using the platform for client content creation report significant time savings\n• Users mention successful rankings on competitive keywords and improved organic traffic\n• Specific mention of tool helping with 'Godlike mode' generating content that ranks quickly and effectively\nNote: Specific company names and detailed ROI metrics not publicly disclosed in testimonials",
+      "case_studies": "User Testimonials Include:\n\u2022 Personal websites, parasite SEO, and affiliate articles ranking 'everywhere and for everything' according to beta testers\n\u2022 One user reported successful rankings across main sites, parasite SEO, and affiliate articles within weeks of usage\n\u2022 Multiple users report successful monetization through affiliate marketing and content sites\n\u2022 Marketing agencies using the platform for client content creation report significant time savings\n\u2022 Users mention successful rankings on competitive keywords and improved organic traffic\n\u2022 Specific mention of tool helping with 'Godlike mode' generating content that ranks quickly and effectively\nNote: Specific company names and detailed ROI metrics not publicly disclosed in testimonials",
       "use_cases_in_pr": [
         "Press Release Content Generation - Create SEO-optimized press releases and news articles that rank in search results and drive organic traffic",
         "Content Marketing Campaigns - Generate large volumes of industry-relevant articles and blog posts for thought leadership and brand awareness",
@@ -879,7 +792,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 28,
+      "id": 25,
       "tool_name": "Avochato AI Chat",
       "url": "avochato.com",
       "category": "Communication Tools",
@@ -909,7 +822,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 29,
+      "id": 26,
       "tool_name": "Awario",
       "url": "awario.com",
       "category": "Social Media Management",
@@ -947,7 +860,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 30,
+      "id": 27,
       "tool_name": "Awr",
       "url": "awork.io",
       "category": "Project Management",
@@ -977,36 +890,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "AWS Launching AI Agent Marketplace",
-      "url": "https://techcrunch.com/2025/07/10/aws-is-launching-an-ai-agent-marketplace-next-week-with-anthropic-as-a-partner/",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "AWS Launching AI Agent Marketplace AWS is launching an AI agent marketplace on July 15th with Anthropic as a key partner, creating a centralized hub for enterprises to browse and install AI agents.",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:17.031Z",
-        "source_article": "https://techcrunch.com/2025/07/10/aws-is-launching-an-ai-agent-marketplace-next-week-with-anthropic-as-a-partner/",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 31
-    },
-    {
-      "id": 32,
+      "id": 28,
       "tool_name": "Bard (Google)",
       "url": "bard.google.com",
       "category": "AI Assistants",
@@ -1036,7 +920,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 33,
+      "id": 29,
       "tool_name": "Bard (now Gemini)",
       "url": "gemini.google.com",
       "category": "AI Assistants",
@@ -1067,7 +951,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 34,
+      "id": 30,
       "tool_name": "Beautiful.ai",
       "url": "www.beautiful.ai",
       "category": "Content Creation",
@@ -1075,12 +959,12 @@ const unifiedToolsData = {
       "icon": "ai-assistant",
       "brief_purpose_summary": "An AI-powered presentation software that automatically designs beautiful slides. It uses design AI to suggest layouts and ensure consistent, professional-looking presentations.",
       "feature_breakdown": "1. AI-Powered Smart Slides - Intelligent templates that automatically adapt to content in real-time, applying design rules automatically\n2. Real-time Design Automation - Slides automatically resize, reformat, and adjust layouts as content is added, eliminating manual formatting\n3. Brand Consistency Tools - Custom themes, fonts, colors, and logo integration with brand guidelines enforcement across team presentations\n4. Collaboration Features - Real-time team editing, shared folders, role-based permissions, and comment/feedback systems\n5. Advanced Analytics & Insights - Presentation engagement tracking, viewer analytics, slide performance metrics, and Salesforce integration",
-      "pricing_model": "Individual Plans:\n• Pro Plan: $12/month (or $15/month billed monthly) - Unlimited slides, AI content generation, custom branding, PPT export/import, viewer analytics, version history\n• Single Presentation: $45 one-time fee for individual presentations\n\nTeam Plans:\n• Team Plan: $50/month per user (or $60/month billed monthly) - All Pro features plus unlimited team members, advanced brand controls, priority support, shared themes and templates\n\nEnterprise:\n• Custom pricing for 50+ users - Includes SSO (Azure, Okta, OneLogin), advanced admin controls, user provisioning, activity logs, dedicated support\n\nFree Trial: 14-day free trial available (credit card required)\nEducation: Free annual plan for students with valid .edu email\nBilling: 20% discount for annual billing",
+      "pricing_model": "Individual Plans:\n\u2022 Pro Plan: $12/month (or $15/month billed monthly) - Unlimited slides, AI content generation, custom branding, PPT export/import, viewer analytics, version history\n\u2022 Single Presentation: $45 one-time fee for individual presentations\n\nTeam Plans:\n\u2022 Team Plan: $50/month per user (or $60/month billed monthly) - All Pro features plus unlimited team members, advanced brand controls, priority support, shared themes and templates\n\nEnterprise:\n\u2022 Custom pricing for 50+ users - Includes SSO (Azure, Okta, OneLogin), advanced admin controls, user provisioning, activity logs, dedicated support\n\nFree Trial: 14-day free trial available (credit card required)\nEducation: Free annual plan for students with valid .edu email\nBilling: 20% discount for annual billing",
       "pros_cons_limitations": "Pros: Eliminates manual slide formatting through smart automation, intuitive interface saves significant time vs traditional tools like PowerPoint, strong brand consistency features, excellent collaboration tools, good integration options, responsive customer support, beautiful design templates\n\nCons: Limited customization flexibility compared to traditional presentation tools, can be expensive for teams ($50 per user/month), some users report repetitive AI suggestions, learning curve for advanced features, limited template variety in certain industries, performance can be slow on desktop version\n\nLimitations: Requires internet connection for full functionality, limited offline capabilities, some advanced design control is restricted by smart slide automation, export limitations to certain formats, AI features still in development with room for improvement",
       "integration_potential": "Native Integrations: Salesforce CRM integration for presentation tracking, Google Drive and Dropbox for content import, Canva for design assets\nAPI Availability: Limited public API information, primarily focuses on native integrations\nCollaboration Tools: Built-in team collaboration features, real-time editing, shared workspaces\nExport/Import: PowerPoint import/export functionality, PDF export, various sharing formats\nAutomation: Limited automation features, primarily through integration partnerships\nSSO Integration: Enterprise-level single sign-on with Azure, Okta, and OneLogin for team security",
       "learning_curve": "Low to Medium - The basic interface is intuitive and most users can create presentations immediately. However, maximizing the platform's potential requires understanding smart slide features, brand customization options, and team collaboration workflows. New users benefit from the 14-day trial period to explore features. The automation features reduce complexity but require adjustment for users accustomed to manual design control.",
       "geo_regulatory_limitations": "Geographic Availability: Globally available with no specific country restrictions mentioned\nCompliance Certifications: Specific compliance details (SOC2, GDPR, HIPAA) not publicly disclosed in pricing materials\nData Security: Enterprise plans include advanced security features, dedicated IP addresses for large organizations\nPrivacy: Standard privacy protections mentioned but detailed privacy policy specifics not included in public pricing information\nExport Controls: No specific export control restrictions mentioned",
-      "case_studies": "SkySpecs Case Study:\n• Company: SkySpecs (leading wind energy technology company since 2014)\n• Challenge: Need to innovate presentation process while scaling business operations\n• Results: Improved communication quality and efficiency, enhanced visual presentation of wind energy data\n• Industry: Wind energy/renewable technology sector\n• Outcome: Better client presentations and internal communication processes\n\nGeneral User Feedback:\n• Users report 75% reduction in presentation design time compared to PowerPoint\n• Teams mention improved brand consistency across all company presentations\n• Marketing departments report faster campaign presentation development\n• Sales teams note better client engagement with professionally designed presentations",
+      "case_studies": "SkySpecs Case Study:\n\u2022 Company: SkySpecs (leading wind energy technology company since 2014)\n\u2022 Challenge: Need to innovate presentation process while scaling business operations\n\u2022 Results: Improved communication quality and efficiency, enhanced visual presentation of wind energy data\n\u2022 Industry: Wind energy/renewable technology sector\n\u2022 Outcome: Better client presentations and internal communication processes\n\nGeneral User Feedback:\n\u2022 Users report 75% reduction in presentation design time compared to PowerPoint\n\u2022 Teams mention improved brand consistency across all company presentations\n\u2022 Marketing departments report faster campaign presentation development\n\u2022 Sales teams note better client engagement with professionally designed presentations",
       "use_cases_in_pr": [
         "Media Pitch Decks - Create visually compelling presentation materials for media outreach and journalist briefings with consistent branding",
         "Crisis Communication Presentations - Rapidly develop professional crisis response presentations for stakeholder meetings and press conferences",
@@ -1097,7 +981,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 35,
+      "id": 31,
       "tool_name": "BEEFree.io",
       "url": "beefree.io",
       "category": "Marketing Automation",
@@ -1126,7 +1010,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 36,
+      "id": 32,
       "tool_name": "Beehiiv",
       "url": "www.beehiiv.com",
       "category": "Content Creation",
@@ -1134,12 +1018,12 @@ const unifiedToolsData = {
       "icon": "ai-assistant",
       "brief_purpose_summary": "A newsletter platform with built-in AI writing tools. It helps create, grow, and monetize newsletters with AI-powered content suggestions and optimization.",
       "feature_breakdown": "1. Newsletter Creation & Publishing Platform - Comprehensive email editor with advanced design tools, templates, and customization options\n2. Audience Growth & Referral System - Built-in referral programs, recommendation networks, subscriber management, and growth analytics\n3. Website & Landing Page Builder - Integrated website creation, custom domains, SEO optimization, and subscriber conversion tools\n4. Monetization Features - Premium subscriptions, advertising network integration, sponsorship management, and revenue tracking\n5. Advanced Analytics & Segmentation - Detailed subscriber analytics, audience segmentation, A/B testing, and performance insights",
-      "pricing_model": "Tier-based pricing by subscriber count:\n\nLaunch Plan (Free):\n• Up to 2,500 subscribers\n• 1 publication\n• Basic features, custom domains, API access\n• Unlimited audience segmentation\n\nScale Plan (starts at $39/month when paid annually):\n• 1,000+ subscribers: $39/month annually ($49 monthly)\n• 10,000 subscribers: $79/month annually \n• Up to 100,000 subscribers with tier pricing\n• 3 publications, referral program, ad network, automations, priority support\n\nMax Plan (starts at $99/month when paid annually):\n• 1,000+ subscribers: $99/month annually ($119 monthly)\n• Scaling tiers up to 100,000 subscribers\n• Up to 10 publications, remove branding, NewsletterXP course ($999 value), priority support\n\nEnterprise Plan:\n• 100,000+ subscribers (custom pricing)\n• White-label solution, dedicated support, custom integrations\n\n30-day free trial available, no credit card required",
+      "pricing_model": "Tier-based pricing by subscriber count:\n\nLaunch Plan (Free):\n\u2022 Up to 2,500 subscribers\n\u2022 1 publication\n\u2022 Basic features, custom domains, API access\n\u2022 Unlimited audience segmentation\n\nScale Plan (starts at $39/month when paid annually):\n\u2022 1,000+ subscribers: $39/month annually ($49 monthly)\n\u2022 10,000 subscribers: $79/month annually \n\u2022 Up to 100,000 subscribers with tier pricing\n\u2022 3 publications, referral program, ad network, automations, priority support\n\nMax Plan (starts at $99/month when paid annually):\n\u2022 1,000+ subscribers: $99/month annually ($119 monthly)\n\u2022 Scaling tiers up to 100,000 subscribers\n\u2022 Up to 10 publications, remove branding, NewsletterXP course ($999 value), priority support\n\nEnterprise Plan:\n\u2022 100,000+ subscribers (custom pricing)\n\u2022 White-label solution, dedicated support, custom integrations\n\n30-day free trial available, no credit card required",
       "pros_cons_limitations": "Pros: Comprehensive all-in-one platform combining newsletters, websites, and monetization tools, strong growth features like referral programs, excellent deliverability rates, user-friendly interface, robust analytics and segmentation, built-in monetization options, responsive customer support, competitive pricing for features offered\n\nCons: Steep pricing jump from free to paid plans, complex pricing tiers can be confusing, limited customization on lower plans, some users report the free plan limitations being restrictive, learning curve for advanced features, newer platform with fewer integrations than established competitors\n\nLimitations: Free plan limited to 2,500 subscribers, paid plans have subscriber tier limits requiring upgrades, some advanced features only available on higher tiers, white-label options only on Enterprise plan, limited third-party integrations compared to older platforms",
       "integration_potential": "Native Integrations: Zapier (3,000+ app connections), WordPress, Webflow, Shopify, Squarespace, Wix for website integration\nAPI Access: Comprehensive REST API available on all paid plans, webhooks for real-time data sync\nE-commerce Integration: Direct integration with major e-commerce platforms for subscriber management and marketing\nAnalytics Integration: Google Analytics, Facebook Pixel, and other tracking integrations\nAutomation: Built-in automation workflows, Zapier integration for external automation\nCustom Integrations: Enterprise plan offers custom integration development and dedicated technical support",
       "learning_curve": "Medium - The basic newsletter creation is intuitive and user-friendly, but maximizing growth features, monetization options, and advanced segmentation requires learning platform-specific strategies. Users benefit from the included NewsletterXP course (Max plan) and extensive documentation. The 30-day free trial allows adequate time to explore features without pressure.",
       "geo_regulatory_limitations": "Geographic Availability: Globally available with no specific country restrictions\nCompliance: GDPR compliant with data protection features, CAN-SPAM compliance for email marketing\nData Residency: Specific data residency options not publicly disclosed\nPrivacy Controls: Subscriber privacy management tools, opt-in/opt-out handling, data export capabilities\nRegional Features: Supports international email marketing requirements, multi-language content capabilities",
-      "case_studies": "Platform Success Stories:\n• Milk Road: Multi-million dollar acquisition of newsletter built on Beehiiv\n• Inverse Cramer: Acquired within one year of launch using Beehiiv platform\n• Revenue Generation: Platform users earned $1,230,881 in revenue in a single month across all newsletters\n• Growth Metrics: 40,000+ content creators using the platform for newsletter growth\n\nUser Testimonials:\n• Newsletter creators report significant time savings with integrated workflow\n• Publishers mention improved subscriber engagement and retention rates\n• Content creators highlight successful monetization through premium subscriptions and advertising\n• Marketing teams report better audience insights and segmentation capabilities",
+      "case_studies": "Platform Success Stories:\n\u2022 Milk Road: Multi-million dollar acquisition of newsletter built on Beehiiv\n\u2022 Inverse Cramer: Acquired within one year of launch using Beehiiv platform\n\u2022 Revenue Generation: Platform users earned $1,230,881 in revenue in a single month across all newsletters\n\u2022 Growth Metrics: 40,000+ content creators using the platform for newsletter growth\n\nUser Testimonials:\n\u2022 Newsletter creators report significant time savings with integrated workflow\n\u2022 Publishers mention improved subscriber engagement and retention rates\n\u2022 Content creators highlight successful monetization through premium subscriptions and advertising\n\u2022 Marketing teams report better audience insights and segmentation capabilities",
       "use_cases_in_pr": [
         "Media Relations Newsletters - Create and distribute regular industry newsletters to journalists, bloggers, and media contacts for relationship building",
         "Crisis Communication Updates - Send rapid, branded crisis updates to stakeholders, media, and customers with tracking and analytics",
@@ -1156,7 +1040,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 37,
+      "id": 33,
       "tool_name": "BigID",
       "url": "bigid.com",
       "category": "Data Protection",
@@ -1192,7 +1076,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 38,
+      "id": 34,
       "tool_name": "Boomy",
       "url": "boomy.com",
       "category": "Audio/Video Processing",
@@ -1200,12 +1084,12 @@ const unifiedToolsData = {
       "icon": "video",
       "brief_purpose_summary": "An AI music creation platform that enables users to create and release original songs in seconds. It handles distribution to streaming platforms.",
       "feature_breakdown": "1. AI Music Generation - Creates original songs in multiple genres (EDM, hip-hop, ambient, lo-fi, cinematic) using advanced AI algorithms in seconds\n2. Customization & Editing Tools - Adjust tempo, instruments, energy levels, harmony sections, drum patterns, sound effects, and song structure\n3. Streaming Platform Distribution - Direct submission to Spotify, Apple Music, YouTube Music, and other major streaming services for monetization\n4. Royalty Management System - Automated royalty collection and distribution from streaming platforms with transparent revenue sharing\n5. Community & Collaboration Features - Global artist community, track sharing, feedback systems, and collaborative music creation tools",
-      "pricing_model": "Free Plan:\n• Unlimited track creation\n• 5 song saves maximum\n• 1 track release per month to streaming platforms\n• Basic customization features\n• Community access\n\nCreator Plan: $9.99/month\n• 500 song saves\n• 3 monthly releases to streaming platforms\n• Full access to all platform features\n• Advanced customization tools\n• Priority community features\n\nPro Plan: $29.99/month\n• Unlimited song saves\n• 10 monthly releases to streaming platforms\n• Advanced analytics and performance tracking\n• High-quality audio downloads\n• Priority customer support\n• Enhanced monetization options\n\nAll plans include royalty collection from streaming platforms, full commercial rights to created music",
+      "pricing_model": "Free Plan:\n\u2022 Unlimited track creation\n\u2022 5 song saves maximum\n\u2022 1 track release per month to streaming platforms\n\u2022 Basic customization features\n\u2022 Community access\n\nCreator Plan: $9.99/month\n\u2022 500 song saves\n\u2022 3 monthly releases to streaming platforms\n\u2022 Full access to all platform features\n\u2022 Advanced customization tools\n\u2022 Priority community features\n\nPro Plan: $29.99/month\n\u2022 Unlimited song saves\n\u2022 10 monthly releases to streaming platforms\n\u2022 Advanced analytics and performance tracking\n\u2022 High-quality audio downloads\n\u2022 Priority customer support\n\u2022 Enhanced monetization options\n\nAll plans include royalty collection from streaming platforms, full commercial rights to created music",
       "pros_cons_limitations": "Pros: Accessible to users with no musical experience, rapid song creation (seconds to minutes), multiple genre options, direct streaming platform integration, royalty earning potential, strong community features, affordable pricing, full commercial rights to created music, good audio quality for AI-generated content\n\nCons: Some tracks can sound repetitive or lack musical depth, limited genre representation (ska, punk, jazz underrepresented), occasional audio compression issues, some users report payment/verification issues, AI-generated music may lack human emotional nuance, limited advanced editing compared to traditional DAWs\n\nLimitations: Free plan heavily restricts saves and releases, monthly release limits on paid plans, generated music quality depends on AI algorithms, limited fine-tuning control over compositions, requires understanding of music distribution for monetization, potential copyright concerns with AI-generated content",
       "integration_potential": "DAW Integration: Export tracks to FL Studio, Ableton Live, Logic Pro, and other digital audio workstations for further editing\nStreaming Platforms: Direct API integration with Spotify, Apple Music, YouTube Music, Amazon Music for automated distribution\nSocial Media: Optimized file formats for Instagram Reels, TikTok, YouTube Shorts, and other social platforms\nAPI Access: Limited public API information, primarily focuses on platform-native features\nContent Creation Tools: Integration capabilities with video editing software and content creation platforms\nMusic Libraries: Potential integration with stock music libraries and content management systems",
       "learning_curve": "Low - The platform is designed for users with no musical experience. Basic song generation requires only selecting genre and style preferences. However, maximizing customization features, understanding monetization processes, and effectively using distribution tools requires moderate learning. The community provides good support for new users.",
       "geo_regulatory_limitations": "Geographic Availability: Globally available through web platform\nStreaming Distribution: Availability depends on streaming platform geographic restrictions\nRoyalty Collection: International royalty collection supported through platform partnerships\nCopyright: Users own full commercial rights to generated music with Creative Commons licensing\nCompliance: Platform manages licensing compliance for streaming distribution\nContent Restrictions: Must comply with streaming platform content guidelines and local music regulations",
-      "case_studies": "User Success Stories:\n• Content creators using Boomy for YouTube background music report avoiding copyright claims while maintaining professional audio quality\n• Independent game developers successfully creating custom soundtracks without composer costs\n• Podcasters using the platform for intro/outro music and background audio\n• Social media influencers generating original music for content without licensing fees\n• Marketing agencies creating custom music for client campaigns and advertisements\n\nCommunity Feedback:\n• Users report successful monetization through Spotify and other streaming platforms\n• Content creators mention significant time savings compared to traditional music production\n• Beginners appreciate the accessibility and learning opportunities the platform provides\n• Professional users value the rapid prototyping capabilities for music ideas",
+      "case_studies": "User Success Stories:\n\u2022 Content creators using Boomy for YouTube background music report avoiding copyright claims while maintaining professional audio quality\n\u2022 Independent game developers successfully creating custom soundtracks without composer costs\n\u2022 Podcasters using the platform for intro/outro music and background audio\n\u2022 Social media influencers generating original music for content without licensing fees\n\u2022 Marketing agencies creating custom music for client campaigns and advertisements\n\nCommunity Feedback:\n\u2022 Users report successful monetization through Spotify and other streaming platforms\n\u2022 Content creators mention significant time savings compared to traditional music production\n\u2022 Beginners appreciate the accessibility and learning opportunities the platform provides\n\u2022 Professional users value the rapid prototyping capabilities for music ideas",
       "use_cases_in_pr": [
         "Campaign Soundtrack Creation - Generate original background music for promotional videos, commercials, and branded content without licensing concerns",
         "Event Audio Branding - Create custom music for corporate events, product launches, and press conferences that align with brand identity",
@@ -1222,7 +1106,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 39,
+      "id": 35,
       "tool_name": "Brain.fm",
       "url": "brain.fm",
       "category": "Productivity Tools",
@@ -1252,7 +1136,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 40,
+      "id": 36,
       "tool_name": "Brand24",
       "url": "brand24.com",
       "category": "Media Intelligence",
@@ -1283,7 +1167,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 41,
+      "id": 37,
       "tool_name": "Brandwatch",
       "url": "www.brandwatch.com",
       "category": "Media Intelligence",
@@ -1314,38 +1198,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "BrowserAct",
-      "url": "https://www.browseract.com/",
-      "category": "analytics",
-      "source": "news-extraction",
-      "icon": "analytics",
-      "brief_purpose_summary": "BrowserAct AI browser automation tool that lets users automate scraping, clicking, and data extraction on any website using plain English, adapting to changing page layouts. ### Decoding ML Date: July",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "Analytics",
-        "Data"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.531Z",
-        "source_article": "https://www.browseract.com/",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 42
-    },
-    {
-      "id": 43,
+      "id": 38,
       "tool_name": "Buffer AI Assistant",
       "url": "buffer.com/ai-assistant",
       "category": "Content Creation",
@@ -1353,12 +1206,12 @@ const unifiedToolsData = {
       "icon": "ai-assistant",
       "brief_purpose_summary": "AI features within Buffer for social media management. It helps generate post ideas, rewrite content, and optimize posting times.",
       "feature_breakdown": "1. Platform-Specific Content Generation - Creates tailored content optimized for LinkedIn, X (Twitter), Instagram, Facebook, TikTok, and Bluesky with appropriate character limits and platform conventions\n2. Content Repurposing & Optimization - Transforms single posts into multiple formats, adjusts tone and style, and repurposes long-form content into social media posts\n3. AI-Powered Writing Tools - Includes rewrite, shorten, expand, tone adjustment (casual/formal), and brainstorming features integrated directly into the composer\n4. Brand Voice Consistency - Maintains consistent brand voice across posts with customizable tone and style settings\n5. Integrated Social Media Management - Seamlessly works within Buffer's scheduling, analytics, and engagement tools for complete workflow integration",
-      "pricing_model": "Included in all Buffer plans at no additional cost:\n\nFree Plan:\n• 3 social channels\n• 10 scheduled posts per channel\n• Full AI Assistant access with unlimited usage\n• Basic analytics and publishing\n\nEssentials Plan: $6/month per social channel\n• Unlimited scheduled posts\n• Advanced scheduling features\n• Full AI Assistant access\n• Enhanced analytics and engagement tools\n\nTeam Plan: $12/month per social channel\n• All Essentials features\n• Unlimited team members\n• Advanced collaboration tools\n• Role-based permissions\n• Full AI Assistant access\n\nAgency Plan: Custom pricing for large organizations\n• White-label solutions\n• Advanced reporting\n• Priority support\n• Full AI Assistant included\n\n14-day free trial available for paid plans",
+      "pricing_model": "Included in all Buffer plans at no additional cost:\n\nFree Plan:\n\u2022 3 social channels\n\u2022 10 scheduled posts per channel\n\u2022 Full AI Assistant access with unlimited usage\n\u2022 Basic analytics and publishing\n\nEssentials Plan: $6/month per social channel\n\u2022 Unlimited scheduled posts\n\u2022 Advanced scheduling features\n\u2022 Full AI Assistant access\n\u2022 Enhanced analytics and engagement tools\n\nTeam Plan: $12/month per social channel\n\u2022 All Essentials features\n\u2022 Unlimited team members\n\u2022 Advanced collaboration tools\n\u2022 Role-based permissions\n\u2022 Full AI Assistant access\n\nAgency Plan: Custom pricing for large organizations\n\u2022 White-label solutions\n\u2022 Advanced reporting\n\u2022 Priority support\n\u2022 Full AI Assistant included\n\n14-day free trial available for paid plans",
       "pros_cons_limitations": "Pros: Completely free with Buffer account, seamlessly integrated into social media workflow, understands platform-specific requirements and character limits, excellent content repurposing capabilities, saves significant time for social media managers, continuously improving AI quality, no separate login or credits system needed\n\nCons: Requires Buffer account and platform usage, AI quality can be inconsistent for complex requests, limited to social media content creation, doesn't replace full content strategy, still requires human oversight for brand appropriateness, newer feature with ongoing development\n\nLimitations: Only works within Buffer ecosystem, focused specifically on social media (not long-form content), AI suggestions may need refinement, requires understanding of social media best practices for optimal use, performance varies by content type and complexity",
       "integration_potential": "Native Buffer Integration: Fully integrated into Buffer's scheduling, analytics, and engagement platforms\nSocial Media Platforms: Direct publishing to Facebook, Instagram, LinkedIn, X (Twitter), TikTok, Pinterest, YouTube, and other major platforms through Buffer\nContent Sources: Integrates with Canva, Dropbox, Google Drive for content import and creation\nAnalytics Integration: Works with Buffer's analytics tools for performance tracking of AI-generated content\nTeam Collaboration: Integrated with Buffer's team features, shared drafts, and approval workflows\nAPI Access: Available through Buffer's existing API infrastructure for custom integrations\nZapier Support: Automation capabilities through Buffer's existing Zapier integrations",
       "learning_curve": "Low - Designed for immediate use by social media managers and content creators. The interface is intuitive with simple buttons for common tasks (rephrase, shorten, expand). Users familiar with Buffer can start using AI Assistant immediately. Best practices emerge through use, but basic functionality requires no training.",
       "geo_regulatory_limitations": "Geographic Availability: Available globally wherever Buffer operates (most countries worldwide)\nData Processing: Uses OpenAI's infrastructure, so text inputs are shared with OpenAI per their data policies\nCompliance: Follows Buffer's existing compliance standards, GDPR compliant data handling\nContent Restrictions: Subject to social media platform community guidelines and local content regulations\nPrivacy: Only AI Assistant text inputs are shared with OpenAI, other Buffer data remains private\nExport Controls: No specific restrictions mentioned, follows standard social media platform policies",
-      "case_studies": "Buffer User Success Stories:\n• Social media managers report 4-5 hours weekly time savings using AI Assistant for content creation\n• Marketing teams mention improved consistency across multiple social channels\n• Small businesses successfully maintaining social media presence with limited resources\n• Content creators using AI Assistant for rapid idea generation and post variations\n• Agencies managing multiple client accounts more efficiently with AI-powered content creation\n\nPerformance Data:\n• 180,000+ creators and businesses actively use Buffer for audience growth\n• Users report AI-generated content performs similarly to human-created content in engagement metrics\n• Beta testing showed significant improvements in content creation speed and consistency\n• A/B testing capabilities allow users to optimize AI-generated content performance",
+      "case_studies": "Buffer User Success Stories:\n\u2022 Social media managers report 4-5 hours weekly time savings using AI Assistant for content creation\n\u2022 Marketing teams mention improved consistency across multiple social channels\n\u2022 Small businesses successfully maintaining social media presence with limited resources\n\u2022 Content creators using AI Assistant for rapid idea generation and post variations\n\u2022 Agencies managing multiple client accounts more efficiently with AI-powered content creation\n\nPerformance Data:\n\u2022 180,000+ creators and businesses actively use Buffer for audience growth\n\u2022 Users report AI-generated content performs similarly to human-created content in engagement metrics\n\u2022 Beta testing showed significant improvements in content creation speed and consistency\n\u2022 A/B testing capabilities allow users to optimize AI-generated content performance",
       "use_cases_in_pr": [
         "Crisis Communication Management - Rapidly create platform-appropriate crisis response posts across multiple social channels with consistent messaging and tone",
         "Press Release Amplification - Transform press releases into engaging social media posts optimized for each platform to maximize reach and engagement",
@@ -1375,7 +1228,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 44,
+      "id": 39,
       "tool_name": "BuiltWith",
       "url": "builtwith.com",
       "category": "Web Analytics",
@@ -1413,7 +1266,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 45,
+      "id": 40,
       "tool_name": "Business Wire",
       "url": "www.businesswire.com",
       "category": "Media Intelligence",
@@ -1444,7 +1297,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 46,
+      "id": 41,
       "tool_name": "Byword",
       "url": "byword.ai",
       "category": "Content Creation",
@@ -1457,7 +1310,7 @@ const unifiedToolsData = {
       "integration_potential": "Strong Integration Ecosystem:\nNative Integrations: WordPress, Webflow direct publishing with auto-posting capabilities\nAPI Access: RESTful API available for custom integrations and automated workflows\nAutomation Support: Zapier integration through API, webhooks for publishing automation\nDevelopment Tools: API documentation available for custom implementations\nContent Management: Direct CMS integration with major platforms, supports custom domains and branding\nBulk Operations: Batch processing capabilities for large-scale content operations",
       "learning_curve": "Medium - The basic article generation is straightforward for users familiar with SEO concepts, but maximizing the platform's bulk generation capabilities requires understanding of programmatic SEO strategies. Users need to learn keyword research, content planning, and how to effectively use the credit system. The unlimited plan includes strategy consultation to help with implementation. Technical users will appreciate the API integration options.",
       "geo_regulatory_limitations": "Geographic Availability: Globally available with no specific country restrictions mentioned\nContent Compliance: Users responsible for ensuring generated content meets local content marketing and disclosure regulations\nSEO Compliance: Designed for white-hat SEO practices, helps avoid search engine penalties\nData Processing: Content processing locations not specified, likely uses cloud infrastructure\nCopyright: All generated content includes plagiarism checking to ensure originality and copyright compliance\nAI Detection: Specifically designed to bypass AI detection tools, which may raise concerns in some regulatory environments",
-      "case_studies": "User Success Stories:\n• Over 45,000 marketers currently use the platform for content generation\n• Users report successful scaling of content operations from dozens to thousands of articles\n• SEO agencies use the platform to manage content for multiple clients efficiently\n• E-commerce businesses successfully generate product description pages at scale\n• Affiliate marketers report improved organic traffic through programmatic content strategies\n• Digital marketing agencies reduce content production costs while maintaining quality\n• SaaS companies use bulk generation for knowledge base and help documentation\n• Featured in various publications for innovative approach to AI content generation\nNote: Specific ROI metrics and detailed case studies available through strategy consultations with higher-tier plans",
+      "case_studies": "User Success Stories:\n\u2022 Over 45,000 marketers currently use the platform for content generation\n\u2022 Users report successful scaling of content operations from dozens to thousands of articles\n\u2022 SEO agencies use the platform to manage content for multiple clients efficiently\n\u2022 E-commerce businesses successfully generate product description pages at scale\n\u2022 Affiliate marketers report improved organic traffic through programmatic content strategies\n\u2022 Digital marketing agencies reduce content production costs while maintaining quality\n\u2022 SaaS companies use bulk generation for knowledge base and help documentation\n\u2022 Featured in various publications for innovative approach to AI content generation\nNote: Specific ROI metrics and detailed case studies available through strategy consultations with higher-tier plans",
       "use_cases_in_pr": [
         "Press Release Scaling - Generate multiple versions of press releases optimized for different keywords and audiences across various media outlets",
         "Industry Commentary Creation - Rapidly produce thought leadership articles on industry trends and news for spokesperson positioning and media outreach",
@@ -1475,36 +1328,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "California Using AI for Power Grid Management",
-      "url": "https://ter.li/b7am63",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "California Using AI for Power Grid Management California becomes the first US state to build algorithms that help manage power outages with AI. --- ### 8020AI Newsletter",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:17.031Z",
-        "source_article": "https://ter.li/b7am63",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 47
-    },
-    {
-      "id": 48,
+      "id": 42,
       "tool_name": "Canva",
       "url": "www.canva.com/",
       "category": "General Tools",
@@ -1545,25 +1369,10 @@ const unifiedToolsData = {
         "tertiary": "Use Canva's collaboration features to streamline approval workflows for visual content across PR teams and stakeholders",
         "experimental_1": "Develop AI-powered visual story generators that transform press release data into compelling infographics and data visualizations automatically",
         "experimental_2": "Create dynamic brand kit integration that ensures all PR visual content automatically adheres to client brand guidelines while allowing creative flexibility"
-      },
-      "integration_potential_needs_update": true,
-      "update_history": [
-        {
-          "date": "2025-07-20T12:01:16.789Z",
-          "type": "news_mention",
-          "updates": [
-            "integration_potential_update",
-            "context",
-            "source_url",
-            "date"
-          ],
-          "source": "https://www.8020ai.co",
-          "context": "Claude & Canva Integration Anthropic's Claude chatbot can now connect directly with Canva, allowing users to create, edit, and publish designs within the chat interface. Available to paid Claude subscribers th"
-        }
-      ]
+      }
     },
     {
-      "id": 49,
+      "id": 43,
       "tool_name": "CapCut",
       "url": "www.capcut.com",
       "category": "Audio/Video Processing",
@@ -1571,12 +1380,12 @@ const unifiedToolsData = {
       "icon": "video",
       "brief_purpose_summary": "A video editing app with AI-powered features including auto-captions, background removal, and effects. Popular for creating social media content.",
       "feature_breakdown": "1. AI-Powered Video Editing Suite - Comprehensive AI tools including auto captions, background removal, noise reduction, and smart video enhancement\n2. Advanced AI Content Creation - Text-to-speech with multiple languages, AI avatar creation, script-to-video generation, and AI video upscaling\n3. Professional Editing Tools - Video stabilization, color correction, slow motion, auto reframe for different platforms, and camera tracking\n4. Multi-Platform Optimization - Available on mobile (iOS/Android), desktop (Windows/Mac), and web with cross-platform syncing\n5. Social Media Integration - Direct publishing to TikTok and other platforms, optimized formats for social media, and trending effects library",
-      "pricing_model": "Freemium Model with Multiple Tiers:\n\nFree Plan:\n• Basic editing tools and templates\n• Limited AI features\n• Watermark on exports\n• Standard resolution exports\n\nCapCut Pro: $9.99/month or $59.99/year\n• Remove watermarks\n• Premium assets (music, effects, templates)\n• Higher export quality (4K, 60fps)\n• Advanced AI features\n• Priority customer support\n\nCapCut Commerce Pro (Business): $29.99/month or $289.99/year\n• Unlimited AI-generated content\n• Batch processing capabilities\n• Advanced analytics\n• Commercial usage rights\n• API access for automation\n\n7-day free trial available for Pro features. Additional credit packages available for heavy AI feature usage.",
+      "pricing_model": "Freemium Model with Multiple Tiers:\n\nFree Plan:\n\u2022 Basic editing tools and templates\n\u2022 Limited AI features\n\u2022 Watermark on exports\n\u2022 Standard resolution exports\n\nCapCut Pro: $9.99/month or $59.99/year\n\u2022 Remove watermarks\n\u2022 Premium assets (music, effects, templates)\n\u2022 Higher export quality (4K, 60fps)\n\u2022 Advanced AI features\n\u2022 Priority customer support\n\nCapCut Commerce Pro (Business): $29.99/month or $289.99/year\n\u2022 Unlimited AI-generated content\n\u2022 Batch processing capabilities\n\u2022 Advanced analytics\n\u2022 Commercial usage rights\n\u2022 API access for automation\n\n7-day free trial available for Pro features. Additional credit packages available for heavy AI feature usage.",
       "pros_cons_limitations": "Pros: Completely free basic version with powerful features, intuitive interface designed for beginners, excellent AI-powered automation tools, strong social media integration especially with TikTok, available across all platforms (mobile, desktop, web), regular updates with new features, good performance on mobile devices\n\nCons: Free version includes watermarks, limited customer support, some advanced features require subscription, can be overwhelming with too many options, occasional bugs with newer AI features, limited compared to professional video editing software\n\nLimitations: Pro features require subscription for watermark removal, AI features consume credits on paid plans, some advanced color grading and audio mixing capabilities limited compared to professional tools, cloud storage limitations on lower tiers",
       "integration_potential": "Social Media Native Integration:\nDirect Publishing: TikTok, YouTube, Instagram, Facebook native publishing\nPlatform Optimization: Automatic format adjustment for different social media platforms\nCloud Sync: Cross-device project synchronization and backup\nAPI Access: Limited API availability primarily for enterprise users\nAsset Libraries: Integration with stock music, sound effects, and visual assets\nThird-party: Limited third-party integrations compared to professional editing software\nExport Options: Multiple format support including MP4, MOV, and platform-specific formats",
       "learning_curve": "Low - Specifically designed for ease of use with drag-and-drop interface and AI automation. Beginners can start creating videos immediately with templates and smart features. The AI tools significantly reduce the learning curve by automating complex tasks like captioning and background removal. Extensive tutorial library and community support available.",
       "geo_regulatory_limitations": "Geographic Availability: Available globally with some regional restrictions in certain countries\nContent Policies: Subject to ByteDance content policies and local content regulations\nData Privacy: Operates under ByteDance privacy policies, data processing may occur in multiple jurisdictions\nRegional Features: Some AI features and assets may vary by region due to licensing restrictions\nAge Restrictions: Minimum age requirements vary by jurisdiction (typically 13-16 years)\nCompliance: Standard app store compliance requirements, subject to local digital content regulations",
-      "case_studies": "Platform Success Metrics:\n• Used by millions of content creators globally for social media video production\n• Popular among TikTok creators and influencers for professional-quality content\n• Small businesses use the platform for marketing video creation without expensive software\n• Educational institutions adopt the platform for student video projects\n• Marketing agencies use CapCut for client social media content creation\n• Gaming content creators utilize the platform for gameplay video editing\n• Beauty and lifestyle influencers rely on the app for consistent content production\n• Brands partner with CapCut for sponsored content creation campaigns\n\nCommunity Impact:\n• Over 100 million downloads globally across all platforms\n• Regular viral video trends originated using CapCut editing features",
+      "case_studies": "Platform Success Metrics:\n\u2022 Used by millions of content creators globally for social media video production\n\u2022 Popular among TikTok creators and influencers for professional-quality content\n\u2022 Small businesses use the platform for marketing video creation without expensive software\n\u2022 Educational institutions adopt the platform for student video projects\n\u2022 Marketing agencies use CapCut for client social media content creation\n\u2022 Gaming content creators utilize the platform for gameplay video editing\n\u2022 Beauty and lifestyle influencers rely on the app for consistent content production\n\u2022 Brands partner with CapCut for sponsored content creation campaigns\n\nCommunity Impact:\n\u2022 Over 100 million downloads globally across all platforms\n\u2022 Regular viral video trends originated using CapCut editing features",
       "use_cases_in_pr": [
         "Social Media Campaign Videos - Create engaging video content for PR campaigns across multiple social platforms with optimized formats and trending effects",
         "Press Conference Content - Edit and enhance press conference footage with auto-captions, noise reduction, and professional-quality output for distribution",
@@ -1594,7 +1403,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 50,
+      "id": 44,
       "tool_name": "Captions",
       "url": "www.captions.ai",
       "category": "Audio/Video Processing",
@@ -1602,12 +1411,12 @@ const unifiedToolsData = {
       "icon": "video",
       "brief_purpose_summary": "An AI-powered video creation app that adds captions, edits videos, and provides teleprompter features. Popular for creating talking head videos.",
       "feature_breakdown": "1. AI Video Creation Suite - Complete AI-powered video creation including script generation, AI avatars, and automated editing with real-time processing\n2. Advanced Voice & Audio AI - Voice cloning, AI dubbing in 28+ languages with lip-sync, speech correction, and professional voiceover generation\n3. AI Visual Enhancement Tools - Eye contact correction, background removal, color grading, visual effects, and automatic video optimization\n4. Multi-Language Content Creation - Translation and dubbing capabilities with synchronized lip movements for global content distribution\n5. Professional Production Features - Teleprompter integration, transcript-based editing, metadata generation, and studio-grade output quality",
-      "pricing_model": "Tiered Subscription with Credits System:\n\nFree Plan:\n• Basic editing features\n• Limited AI processing\n• Watermarked exports\n• Essential caption tools\n\nLite Plan (Android only): $4.99/month\n• Essential manual editing tools\n• No AI features\n• Android exclusive\n\nPro Plan: $15/month (or $9.99/month some regions)\n• Unlimited exports, no watermarks\n• AI-powered editing tools\n• Custom captions and dubbing\n• Background noise removal\n\nMax Plan: $25/month\n• All Pro features\n• Faster video generation\n• Priority support\n• Enhanced AI capabilities\n\nScale Plan: $115/month\n• 3,600 credits (~45 minutes AI video)\n• API access\n• Advanced editing options\n• Business-grade features\n\nBusiness Plan: $399/month\n• Access to Mirage generative AI model\n• Credit-based video creation\n• Enterprise features\n\nAll paid plans include free trial periods, annual billing discounts available",
+      "pricing_model": "Tiered Subscription with Credits System:\n\nFree Plan:\n\u2022 Basic editing features\n\u2022 Limited AI processing\n\u2022 Watermarked exports\n\u2022 Essential caption tools\n\nLite Plan (Android only): $4.99/month\n\u2022 Essential manual editing tools\n\u2022 No AI features\n\u2022 Android exclusive\n\nPro Plan: $15/month (or $9.99/month some regions)\n\u2022 Unlimited exports, no watermarks\n\u2022 AI-powered editing tools\n\u2022 Custom captions and dubbing\n\u2022 Background noise removal\n\nMax Plan: $25/month\n\u2022 All Pro features\n\u2022 Faster video generation\n\u2022 Priority support\n\u2022 Enhanced AI capabilities\n\nScale Plan: $115/month\n\u2022 3,600 credits (~45 minutes AI video)\n\u2022 API access\n\u2022 Advanced editing options\n\u2022 Business-grade features\n\nBusiness Plan: $399/month\n\u2022 Access to Mirage generative AI model\n\u2022 Credit-based video creation\n\u2022 Enterprise features\n\nAll paid plans include free trial periods, annual billing discounts available",
       "pros_cons_limitations": "Pros: Cutting-edge AI technology for video creation, excellent voice cloning and dubbing quality, intuitive mobile-first interface, strong multi-language support with lip-sync, professional-quality output, innovative AI avatar features, good customer support on higher tiers\n\nCons: Credit-based system can be limiting and expensive for heavy usage, newer platform with some features still in development, limited desktop functionality compared to mobile app, complex pricing structure, some AI features require significant processing time\n\nLimitations: Credits consumption varies significantly by feature usage, some advanced features only available on highest tiers, limited offline capabilities, AI processing quality depends on input material quality, enterprise features require custom pricing discussions",
       "integration_potential": "Platform Integration:\nSocial Media: Native export optimization for Instagram, TikTok, YouTube, Facebook, LinkedIn\nCloud Storage: Integration with major cloud storage providers for project backup\nAPI Access: Available on Scale and Business plans for custom integrations\nWorkflow Tools: Limited third-party integrations, focus on native platform capabilities\nExport Formats: Multiple format support including SRT files for subtitles, various video formats\nCollaboration: Team sharing and collaboration features on higher-tier plans\nMobile-First: Designed primarily for mobile workflows with cloud synchronization",
       "learning_curve": "Low to Medium - The mobile app is designed for intuitive use with AI automation handling complex tasks. Basic video creation and captioning can be done immediately, but maximizing advanced AI features like voice cloning and avatar creation requires some learning. The credit system and various AI tools need understanding for cost-effective usage.",
       "geo_regulatory_limitations": "Geographic Availability: Available globally through app stores with standard regional restrictions\nLanguage Support: 28+ languages supported for dubbing and translation features\nContent Policies: Standard app store content policies apply, AI-generated content guidelines\nData Privacy: AI processing requires cloud computation, subject to privacy policies\nVoice Rights: Users retain rights to their voice clones, subject to platform terms\nCompliance: Standard mobile app compliance, content moderation for AI-generated media\nAge Restrictions: Minimum age requirements per regional app store policies",
-      "case_studies": "User Success Stories:\n• Content creators report 80% reduction in video editing time using AI features\n• Small businesses successfully create professional video content without hiring editors\n• Educational content creators use the platform for course material production\n• Marketing agencies adopt the platform for client video content at scale\n• International brands utilize multi-language dubbing for global campaign distribution\n• Social media influencers rely on the platform for consistent, high-quality content production\n• Podcasters successfully transition to video format using AI avatar features\n• Corporate communications teams use the platform for internal video messaging\n\nPlatform Growth:\n• Significant user base growth among mobile content creators\n• High user retention rates due to AI automation benefits\n• Regular feature updates based on user feedback and technological advances",
+      "case_studies": "User Success Stories:\n\u2022 Content creators report 80% reduction in video editing time using AI features\n\u2022 Small businesses successfully create professional video content without hiring editors\n\u2022 Educational content creators use the platform for course material production\n\u2022 Marketing agencies adopt the platform for client video content at scale\n\u2022 International brands utilize multi-language dubbing for global campaign distribution\n\u2022 Social media influencers rely on the platform for consistent, high-quality content production\n\u2022 Podcasters successfully transition to video format using AI avatar features\n\u2022 Corporate communications teams use the platform for internal video messaging\n\nPlatform Growth:\n\u2022 Significant user base growth among mobile content creators\n\u2022 High user retention rates due to AI automation benefits\n\u2022 Regular feature updates based on user feedback and technological advances",
       "use_cases_in_pr": [
         "Multilingual Press Releases - Create video press releases with AI dubbing in multiple languages for global media distribution with synchronized lip movements",
         "Executive Communications - Produce professional executive video messages with AI enhancement, teleprompter assistance, and studio-quality output",
@@ -1625,7 +1434,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 51,
+      "id": 45,
       "tool_name": "CB Insights",
       "url": "www.cbinsights.com",
       "category": "Data Analytics",
@@ -1656,7 +1465,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 52,
+      "id": 46,
       "tool_name": "Celtra Ad Creation",
       "url": "celtra.com",
       "category": "Advertising Tech",
@@ -1686,7 +1495,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 53,
+      "id": 47,
       "tool_name": "Chaser",
       "url": "chaser.io",
       "category": "Finance",
@@ -1716,7 +1525,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 54,
+      "id": 48,
       "tool_name": "ChatGPT",
       "url": "chatgpt.com",
       "category": "General Tools",
@@ -1768,38 +1577,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "tool_name": "ChatGPT Agent",
-      "url": "https://www.generativeaipub.com/p/openai-releases-agent-in-chatgpt",
-      "category": "customer-service",
-      "source": "news-extraction",
-      "icon": "customer-service",
-      "brief_purpose_summary": "OpenAI Releases ChatGPT Agent ChatGPT Agent operates in a virtual machine, autonomously selecting tools to complete tasks including web browsing, code execution, and creating outputs like spreadsheets",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "Customer Support",
-        "Chatbot"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:15.995Z",
-        "source_article": "https://www.generativeaipub.com/p/openai-releases-agent-in-chatgpt",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 55
-    },
-    {
-      "id": 56,
+      "id": 49,
       "tool_name": "Chattermill",
       "url": "chattermill.com",
       "category": "Data Analytics",
@@ -1829,7 +1607,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 57,
+      "id": 50,
       "tool_name": "CheckMyAds",
       "url": "checkmyads.com",
       "category": "Advertising Tech",
@@ -1859,36 +1637,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "China's Delivery Robots Ride Subway",
-      "url": "https://www.instagram.com/reel/DMHSdiJOfyT/",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "China's Delivery Robots Ride Subway World-first deployment of robots that autonomously ride Shenzhen's subway system to restock 7-Eleven stores, navigating trains and elevators independently.",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:15.995Z",
-        "source_article": "https://www.instagram.com/reel/DMHSdiJOfyT/",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 58
-    },
-    {
-      "id": 59,
+      "id": 51,
       "tool_name": "Chronicle",
       "url": "chronicle.security",
       "category": "Data Analytics",
@@ -1919,7 +1668,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 60,
+      "id": 52,
       "tool_name": "Cision",
       "url": "www.cision.com",
       "category": "Media Intelligence",
@@ -1962,7 +1711,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 61,
+      "id": 53,
       "tool_name": "Civitai",
       "url": "civitai.com",
       "category": "Audio/Video Processing",
@@ -1970,12 +1719,12 @@ const unifiedToolsData = {
       "icon": "ai-assistant",
       "brief_purpose_summary": "A platform for sharing and discovering AI art models and resources. It hosts custom models for Stable Diffusion and other image generation tools.",
       "feature_breakdown": "1. Open-Source AI Model Hub - Comprehensive library of over 1,700+ Stable Diffusion and Flux models contributed by community members\n2. Community-Driven Sharing Platform - Users can upload, download, and share custom AI models, textual inversions, and hypernetworks\n3. AI Image Generation Tools - Built-in tools for creating images, remixing content, and experimenting with different AI models directly on platform\n4. Educational Resource Center - Community-written articles, guides, tutorials, and analyses covering AI art techniques and model usage\n5. Interactive Community Features - Reviews, comments, contests, collaborative model development, and 'Buzz' reward system for engagement",
-      "pricing_model": "Freemium with Credit System:\n\nFree Access:\n• Browse and download thousands of AI models\n• Upload and share custom models\n• Basic community features\n• Limited generation capabilities\n• 100 'Buzz' credits for new users\n\nSupporter Membership: $5/month\n• Early access to new features\n• Unique supporter badge and nameplate color\n• Special Discord role\n• Priority community features\n\nCredit Packages (Buzz System):\n• Various credit packages available for generation\n• Credits earned through community tasks and engagement\n• Pay-as-you-go for additional credits\n\nDonation Option:\n• One-time donation with 30-day benefits\n• Special donator badge and nameplate color\n• Temporary unique Discord role\n\nNote: Core platform features (browsing, downloading models) remain completely free",
+      "pricing_model": "Freemium with Credit System:\n\nFree Access:\n\u2022 Browse and download thousands of AI models\n\u2022 Upload and share custom models\n\u2022 Basic community features\n\u2022 Limited generation capabilities\n\u2022 100 'Buzz' credits for new users\n\nSupporter Membership: $5/month\n\u2022 Early access to new features\n\u2022 Unique supporter badge and nameplate color\n\u2022 Special Discord role\n\u2022 Priority community features\n\nCredit Packages (Buzz System):\n\u2022 Various credit packages available for generation\n\u2022 Credits earned through community tasks and engagement\n\u2022 Pay-as-you-go for additional credits\n\nDonation Option:\n\u2022 One-time donation with 30-day benefits\n\u2022 Special donator badge and nameplate color\n\u2022 Temporary unique Discord role\n\nNote: Core platform features (browsing, downloading models) remain completely free",
       "pros_cons_limitations": "Pros: Completely free access to vast AI model library, strong open-source community collaboration, excellent educational resources, innovative credit reward system encourages engagement, regular model updates and new contributions, supports creative experimentation and learning\n\nCons: Platform has faced controversies around content moderation and misuse potential, overwhelming amount of content can be difficult to navigate, some quality inconsistency in community-contributed models, newer platform still developing features, limited customer support\n\nLimitations: Credit system limits generation activities for heavy users, community moderation challenges, requires understanding of AI models and technical concepts for advanced usage, potential for inappropriate content despite moderation efforts",
       "integration_potential": "Developer-Friendly Integration:\nREST API: Available for programmatic access to platform capabilities\nDirect Downloads: Models can be downloaded to Google Drive and other cloud storage\nDevelopment Tools: API documentation for custom implementations\nModel Integration: Easy integration with Stable Diffusion installations and other AI art tools\nCommunity Platforms: Integration with Discord for community engagement\nOpen Source: Platform encourages community contributions to codebase\nStandards: Compatible with standard AI model formats and implementations",
       "learning_curve": "Medium - The platform is accessible to beginners for browsing and downloading models, but maximizing the community features and understanding AI model usage requires moderate technical knowledge. Users benefit from extensive community tutorials and guides. Understanding the 'Buzz' credit system and model implementation takes some learning.",
       "geo_regulatory_limitations": "Geographic Availability: Globally accessible as web platform\nContent Moderation: Active content moderation policies to prevent misuse\nAge Restrictions: Community guidelines enforce age-appropriate content\nLegal Compliance: Users responsible for compliance with local laws regarding AI-generated content\nOpen Source: Subject to open-source licensing terms and conditions\nCommunity Standards: Active enforcement of community guidelines and terms of service\nData Processing: Standard web platform data handling and privacy policies",
-      "case_studies": "Community Impact:\n• Over 1,700 AI models contributed by global community\n• Thousands of digital artists and developers actively using the platform\n• Educational institutions reference the platform for AI art curriculum\n• Independent game developers use models for asset creation\n• Artists experiment with new styles and techniques through community models\n• Research communities utilize the platform for AI art studies\n• Open-source contributors collaborate on model improvements\n• Art contests and community challenges drive engagement and innovation\n\nPlatform Success:\n• Significant growth in model uploads and downloads\n• Active community discussions and knowledge sharing\n• Regular platform improvements based on user feedback\n• Strong community reputation in AI art generation space",
+      "case_studies": "Community Impact:\n\u2022 Over 1,700 AI models contributed by global community\n\u2022 Thousands of digital artists and developers actively using the platform\n\u2022 Educational institutions reference the platform for AI art curriculum\n\u2022 Independent game developers use models for asset creation\n\u2022 Artists experiment with new styles and techniques through community models\n\u2022 Research communities utilize the platform for AI art studies\n\u2022 Open-source contributors collaborate on model improvements\n\u2022 Art contests and community challenges drive engagement and innovation\n\nPlatform Success:\n\u2022 Significant growth in model uploads and downloads\n\u2022 Active community discussions and knowledge sharing\n\u2022 Regular platform improvements based on user feedback\n\u2022 Strong community reputation in AI art generation space",
       "use_cases_in_pr": [
         "Visual Asset Creation - Generate unique images and graphics for press releases, social media, and marketing materials using community AI models",
         "Brand Visual Identity - Experiment with different artistic styles and visual approaches for campaign imagery and brand representation",
@@ -1993,7 +1742,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 62,
+      "id": 54,
       "tool_name": "Clarifai",
       "url": "clarifai.com",
       "category": "Computer Vision",
@@ -2026,54 +1775,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Claude",
-      "url": "https://link.alphasignal.ai/f6lNkF",
-      "category": "productivity",
-      "source": "news-extraction",
-      "icon": "productivity",
-      "brief_purpose_summary": "Anthropic Launches Claude Tool Directory One-click integration to apps like Notion, Figma, and Stripe, enabling seamless workflow automation with Claude.",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "Productivity",
-        "Automation",
-        "New"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.269Z",
-        "source_article": "https://link.alphasignal.ai/f6lNkF",
-        "confidence": 0.9999999999999999,
-        "action_type": "launch",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 63,
-      "integration_potential_needs_update": true,
-      "update_history": [
-        {
-          "date": "2025-07-20T12:01:16.789Z",
-          "type": "news_mention",
-          "updates": [
-            "integration_potential_update",
-            "context",
-            "source_url",
-            "date"
-          ],
-          "source": "https://www.8020ai.co",
-          "context": "Claude & Canva Integration Anthropic's Claude chatbot can now connect directly with Canva, allowing users to create, edit, and publish designs within the chat interface. Available to paid Claude subsc"
-        }
-      ]
-    },
-    {
-      "id": 64,
+      "id": 55,
       "tool_name": "Claude (Anthropic)",
       "url": "claude.ai",
       "category": "AI Assistants",
@@ -2086,7 +1788,7 @@ const unifiedToolsData = {
       "integration_potential": "API available for developers (separate from consumer plans). Can be integrated into workflows via API.",
       "learning_curve": "Low - conversational interface is intuitive. Some learning needed for effective prompting.",
       "geo_regulatory_limitations": "Claude is offered by Anthropic primarily via their API and partners, and its availability has been somewhat region-limited. Initially, Claude (including Claude 2) was available to users in the US and UK through the beta website (claude.ai). Over time Anthropic has expanded access to more countries (e.g., in 2024 they added support for users in Europe, India, and Japan via API integration on platforms like Slack). However, certain jurisdictions like the EU required careful compliance: Anthropic, like OpenAI, had to ensure GDPR alignment - Anthropic has been proactive in not training on sensitive personal data and won a key case confirming their data sourcing was legal:contentReference[oaicite:146]{index=146}. Claude is not officially available in China or other sanctioned countries. It is integrated into services like **AWS Bedrock** and **Google Cloud Vertex AI**, which means enterprise users in many regions can use Claude via those cloud platforms subject to those platforms' compliance standards. For example, Amazon Bedrock offering Claude must adhere to data residency if a customer chooses (keeping data in specific AWS regions). Anthropic also follows a \"Constitutional AI\" approach to align with ethical guidelines and likely forthcoming AI regulations. In summary, Claude's direct consumer availability is mostly US/UK (with cautious rollout elsewhere), while enterprise access is broader via cloud partners - and Anthropic has positioned Claude to meet privacy/security expectations (no major regulatory hurdles publicly known, aside from standard restrictions in certain countries).",
-      "case_studies": "Anthropic's Claude has been adopted by a variety of companies to augment productivity. One striking case is **Headstart**, an AI-native software development firm: by using Claude as a coding assistant, they achieved *10× to 100× faster development* on projects:contentReference[oaicite:147]{index=147}. In practice, Claude was generating about 90-97% of the code for their clients' applications, allowing the human team to focus on architecture and problem-solving - what used to take 4-8 months, they completed in 2 weeks:contentReference[oaicite:148]{index=148}:contentReference[oaicite:149]{index=149}. Another example: **Grab**, Southeast Asia's leading super-app, built a Claude-powered Merchant AI Assistant to provide business coaching to millions of small merchants. With Claude, they saw a **5.7 percentage-point increase in issue resolution rates** for merchant inquiries and a 25% drop in negative sentiment in support chats:contentReference[oaicite:150]{index=150}:contentReference[oaicite:151]{index=151}. The assistant could operate in multiple languages across 8 countries, which demonstrated Claude's strong multilingual and contextual understanding in a complex, real-world deployment. Additionally, **Canva**, the online design platform, integrated Claude to help employees company-wide draft content and answers. After adding Claude (via an internal chatbot), Canva noted improvements in productivity across teams - for instance, marketing staff used Claude to draft campaign copy, reducing creation time significantly, and support teams used it to draft quicker responses, all while maintaining brand voice. While exact metrics for Canva aren't public, Anthropic's customer stories indicate it \"empowered employees across teams\" with measurable time saved. These case studies show Claude driving huge efficiency gains: coding in days instead of months, handling large-scale multilingual support, and boosting knowledge work productivity across enterprises.",
+      "case_studies": "Anthropic's Claude has been adopted by a variety of companies to augment productivity. One striking case is **Headstart**, an AI-native software development firm: by using Claude as a coding assistant, they achieved *10\u00d7 to 100\u00d7 faster development* on projects:contentReference[oaicite:147]{index=147}. In practice, Claude was generating about 90-97% of the code for their clients' applications, allowing the human team to focus on architecture and problem-solving - what used to take 4-8 months, they completed in 2 weeks:contentReference[oaicite:148]{index=148}:contentReference[oaicite:149]{index=149}. Another example: **Grab**, Southeast Asia's leading super-app, built a Claude-powered Merchant AI Assistant to provide business coaching to millions of small merchants. With Claude, they saw a **5.7 percentage-point increase in issue resolution rates** for merchant inquiries and a 25% drop in negative sentiment in support chats:contentReference[oaicite:150]{index=150}:contentReference[oaicite:151]{index=151}. The assistant could operate in multiple languages across 8 countries, which demonstrated Claude's strong multilingual and contextual understanding in a complex, real-world deployment. Additionally, **Canva**, the online design platform, integrated Claude to help employees company-wide draft content and answers. After adding Claude (via an internal chatbot), Canva noted improvements in productivity across teams - for instance, marketing staff used Claude to draft campaign copy, reducing creation time significantly, and support teams used it to draft quicker responses, all while maintaining brand voice. While exact metrics for Canva aren't public, Anthropic's customer stories indicate it \"empowered employees across teams\" with measurable time saved. These case studies show Claude driving huge efficiency gains: coding in days instead of months, handling large-scale multilingual support, and boosting knowledge work productivity across enterprises.",
       "use_cases_in_pr": [
         "Analyzing lengthy contracts and documents",
         "Writing and editing various content types",
@@ -2110,69 +1812,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Claude & Canva Integration",
-      "url": "https://www.8020ai.co",
-      "category": "customer-service",
-      "source": "news-extraction",
-      "icon": "customer-service",
-      "brief_purpose_summary": "Claude & Canva Integration Anthropic's Claude chatbot can now connect directly with Canva, allowing users to create, edit, and publish designs within the chat interface. Available to paid Claude subsc",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "Customer Support",
-        "Chatbot"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.789Z",
-        "source_article": "https://www.8020ai.co",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 65
-    },
-    {
-      "tool_name": "Claude Tool Directory",
-      "url": "https://link.alphasignal.ai/f6lNkF",
-      "category": "productivity",
-      "source": "news-extraction",
-      "icon": "productivity",
-      "brief_purpose_summary": "Anthropic Launches Claude Tool Directory One-click integration to apps like Notion, Figma, and Stripe, enabling seamless workflow automation with Claude.",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "Productivity",
-        "Automation"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.269Z",
-        "source_article": "https://link.alphasignal.ai/f6lNkF",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 66
-    },
-    {
-      "id": 67,
+      "id": 56,
       "tool_name": "Clearscope",
       "url": "clearscope.io",
       "category": "Content Research",
@@ -2210,7 +1850,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 68,
+      "id": 57,
       "tool_name": "Cloudinary",
       "url": "cloudinary.com",
       "category": "Media Production",
@@ -2241,7 +1881,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 69,
+      "id": 58,
       "tool_name": "Coda AI",
       "url": "coda.io/product/ai",
       "category": "Content Creation",
@@ -2249,12 +1889,12 @@ const unifiedToolsData = {
       "icon": "ai-assistant",
       "brief_purpose_summary": "AI features integrated into Coda docs that help with writing, data analysis, and automation within collaborative documents.",
       "feature_breakdown": "1. AI-Powered Document Assistant - Integrated AI chat for brainstorming, content creation, and answering questions within collaborative documents\n2. Intelligent Content Generation - AI-powered writing assistance, table generation, summarization, and data analysis capabilities\n3. Automated Workflow AI - AI columns for scaling data insights and automating tedious tasks with formula and button integration\n4. Coda Brain (Private Preview) - Advanced AI platform connecting to 600+ integrations for knowledge assistance and decision making\n5. Connected Work Environment - AI features integrated into Coda's collaborative workspace with tables, databases, and automation tools",
-      "pricing_model": "Maker Billing Model (only pay for Doc Makers, Editors are free):\n\nFree Plan:\n• Unlimited collaborative docs\n• Basic AI features included\n• Unlimited doc size for unshared docs\n• Limited to 50 objects and 1000 rows for shared docs\n• Connected tables, charts, forms\n\nPro Plan: $12/month per Doc Maker ($10/month annual)\n• Unlimited doc size\n• 30-day version history\n• Hidden pages and custom domains\n• Pro Packs access\n• Included Coda AI credits\n\nTeam Plan: $36/month per Doc Maker ($30/month annual)\n• Unlimited automations\n• Unlimited version history\n• Doc locking and folder access management\n• Cross-doc syncing\n• Enhanced Coda AI credits\n• Priority support\n\nEnterprise Plan: Custom pricing\n• SAML SSO and advanced security\n• Advanced user management\n• Audit events and compliance\n• Dedicated customer success\n• Enterprise AI capabilities\n\nNote: Coda AI included for all Doc Makers, not a separate add-on",
+      "pricing_model": "Maker Billing Model (only pay for Doc Makers, Editors are free):\n\nFree Plan:\n\u2022 Unlimited collaborative docs\n\u2022 Basic AI features included\n\u2022 Unlimited doc size for unshared docs\n\u2022 Limited to 50 objects and 1000 rows for shared docs\n\u2022 Connected tables, charts, forms\n\nPro Plan: $12/month per Doc Maker ($10/month annual)\n\u2022 Unlimited doc size\n\u2022 30-day version history\n\u2022 Hidden pages and custom domains\n\u2022 Pro Packs access\n\u2022 Included Coda AI credits\n\nTeam Plan: $36/month per Doc Maker ($30/month annual)\n\u2022 Unlimited automations\n\u2022 Unlimited version history\n\u2022 Doc locking and folder access management\n\u2022 Cross-doc syncing\n\u2022 Enhanced Coda AI credits\n\u2022 Priority support\n\nEnterprise Plan: Custom pricing\n\u2022 SAML SSO and advanced security\n\u2022 Advanced user management\n\u2022 Audit events and compliance\n\u2022 Dedicated customer success\n\u2022 Enterprise AI capabilities\n\nNote: Coda AI included for all Doc Makers, not a separate add-on",
       "pros_cons_limitations": "Pros: AI features included at no extra cost for Doc Makers, seamlessly integrated into collaborative workspace, unique billing model saves money (only pay for creators), powerful combination of documents and databases, strong automation capabilities, excellent for teams that need structured collaboration\n\nCons: Can be complex for users expecting simple document editing, learning curve for maximizing database and automation features, limited offline functionality, AI features still developing compared to specialized AI writing tools, requires internet connection for all functionality\n\nLimitations: Free plan has object and row limits for shared docs, mobile app functionality limited compared to desktop, advanced AI features primarily benefit from understanding Coda's unique document structure and formulas",
       "integration_potential": "Extensive Integration Ecosystem:\nNative Packs: 600+ integrations including Slack, Google Calendar, Salesforce, Jira, Shopify, and more\nAPI Access: Comprehensive API for custom integrations and automation\nZapier Support: Full automation integration with thousands of external apps\nWorkspace Integration: Deep integration with productivity tools and business systems\nData Sync: Two-way data synchronization with external platforms\nCustom Packs: Enterprise customers can build custom integrations\nWebhooks: Real-time data updates and event-driven automation",
       "learning_curve": "Medium to High - While basic document creation is straightforward, maximizing Coda's unique combination of documents, databases, and AI requires understanding the platform's concepts. Users familiar with spreadsheets and databases adapt more quickly. The AI features are intuitive once users understand Coda's structure. Extensive templates and documentation available.",
       "geo_regulatory_limitations": "Geographic Availability: Globally available with standard regional restrictions\nData Security: SOC 2 Type 2 compliance for Enterprise customers\nPrivacy Compliance: GDPR compliant data handling and processing\nEnterprise Security: SAML SSO, advanced access controls for Enterprise plan\nData Residency: Cloud-based with standard data protection measures\nCompliance: Audit events and user activity logging for Enterprise compliance\nAccess Controls: Advanced permissions and external sharing controls available",
-      "case_studies": "Enterprise Customer Success:\n• Top enterprise teams use Coda AI for knowledge management and decision making\n• Teams report significant time savings through AI-powered automation and insights\n• Product teams use integrated AI for roadmap planning and data analysis\n• Marketing teams leverage AI for content planning and campaign tracking\n• Engineering teams integrate AI with project management and documentation workflows\n• Sales teams build custom CRM-like solutions with AI-enhanced data processing\n• HR departments use AI for employee data analysis and workflow automation\n\nPlatform Metrics:\n• Growing adoption among enterprise customers for AI-enhanced collaboration\n• High user satisfaction with integrated AI features vs. separate tool approaches\n• Strong retention rates among teams that adopt the full Coda + AI workflow",
+      "case_studies": "Enterprise Customer Success:\n\u2022 Top enterprise teams use Coda AI for knowledge management and decision making\n\u2022 Teams report significant time savings through AI-powered automation and insights\n\u2022 Product teams use integrated AI for roadmap planning and data analysis\n\u2022 Marketing teams leverage AI for content planning and campaign tracking\n\u2022 Engineering teams integrate AI with project management and documentation workflows\n\u2022 Sales teams build custom CRM-like solutions with AI-enhanced data processing\n\u2022 HR departments use AI for employee data analysis and workflow automation\n\nPlatform Metrics:\n\u2022 Growing adoption among enterprise customers for AI-enhanced collaboration\n\u2022 High user satisfaction with integrated AI features vs. separate tool approaches\n\u2022 Strong retention rates among teams that adopt the full Coda + AI workflow",
       "use_cases_in_pr": [
         "Campaign Performance Analysis - Use AI columns to analyze campaign data, extract insights, and generate performance reports with automated content creation",
         "Media Contact Management - Create intelligent media databases with AI-powered contact categorization, outreach tracking, and relationship scoring",
@@ -2272,7 +1912,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 70,
+      "id": 59,
       "tool_name": "Cohesive.so",
       "url": "cohesive.so/",
       "category": "General Tools",
@@ -2311,7 +1951,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 71,
+      "id": 60,
       "tool_name": "Colossyan",
       "url": "www.colossyan.com",
       "category": "Audio/Video Processing",
@@ -2342,66 +1982,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Comet",
-      "url": "https://comet.perplexity.ai",
-      "category": "ai-assistant",
-      "source": "news-extraction",
-      "icon": "ai-assistant",
-      "brief_purpose_summary": "Perplexity Launches Comet AI Browser Perplexity launched Comet, an AI web browser with a sidebar assistant that can book meetings, send emails, and buy products. --- ### MIT Technology Review - The Al",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "New"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:17.031Z",
-        "source_article": "https://comet.perplexity.ai",
-        "confidence": 0.9999999999999999,
-        "action_type": "launch",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 72
-    },
-    {
-      "tool_name": "Comet AI Browser",
-      "url": "https://comet.perplexity.ai",
-      "category": "ai-assistant",
-      "source": "news-extraction",
-      "icon": "ai-assistant",
-      "brief_purpose_summary": "Perplexity Launches Comet AI Browser Perplexity launched Comet, an AI web browser with a sidebar assistant that can book meetings, send emails, and buy products. --- ### MIT Technology Review - The Al",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:17.031Z",
-        "source_article": "https://comet.perplexity.ai",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 73
-    },
-    {
-      "id": 74,
+      "id": 61,
       "tool_name": "ComplyAdvantage",
       "url": "complyadvantage.com",
       "category": "Compliance Tools",
@@ -2433,7 +2014,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 75,
+      "id": 62,
       "tool_name": "Composer",
       "url": "composer.trade",
       "category": "Finance",
@@ -2464,7 +2045,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 76,
+      "id": 63,
       "tool_name": "Compstak",
       "url": "compstak.com",
       "category": "Real Estate Tech",
@@ -2494,7 +2075,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 77,
+      "id": 64,
       "tool_name": "Consensus",
       "url": "consensus.app",
       "category": "Research Tools",
@@ -2525,7 +2106,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 78,
+      "id": 65,
       "tool_name": "Content at Scale",
       "url": "contentatscale.ai",
       "category": "Content Creation",
@@ -2556,7 +2137,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 79,
+      "id": 66,
       "tool_name": "ContentStudio",
       "url": "contentstudio.io",
       "category": "Social Media Management",
@@ -2595,7 +2176,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 80,
+      "id": 67,
       "tool_name": "Continual Learning AI (CLIFF)",
       "url": "cliff.ai",
       "category": "AI Assistants",
@@ -2620,7 +2201,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 81,
+      "id": 68,
       "tool_name": "Conversion.ai",
       "url": "www.jasper.ai/",
       "category": "Content Creation",
@@ -2666,7 +2247,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 82,
+      "id": 69,
       "tool_name": "Copilot Chat (Azure)",
       "url": "azure.microsoft.com/en-us/products/copilot-for-m365/",
       "category": "AI Assistants",
@@ -2696,7 +2277,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 83,
+      "id": 70,
       "tool_name": "Copy.ai",
       "url": "copy.ai",
       "category": "Content Creation",
@@ -2729,7 +2310,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 84,
+      "id": 71,
       "tool_name": "Copymatic",
       "url": "copymatic.ai",
       "category": "Content Creation",
@@ -2762,7 +2343,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 85,
+      "id": 72,
       "tool_name": "Copysmith",
       "url": "copysmith.ai",
       "category": "Content Creation",
@@ -2794,22 +2375,22 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 86,
+      "id": 73,
       "tool_name": "Coqui",
       "url": "coqui.ai",
       "category": "Audio/Video Processing",
       "source": "ai-list",
       "icon": "video",
       "brief_purpose_summary": "An open-source AI voice cloning and synthesis platform. It allows users to clone voices and generate speech with emotional control and multiple languages.",
-      "feature_breakdown": "⚠️ SERVICE DISCONTINUED - Coqui officially shut down operations in December 2023. Previously offered: 1. Advanced Text-to-Speech (TTS) technology with state-of-the-art voice synthesis, 2. One-shot voice cloning capabilities for creating custom voices, 3. XTTS (Cross-lingual TTS) supporting multiple languages, 4. Open-source TTS models and tools for developers, 5. Voice generation APIs for integration into applications and games",
-      "pricing_model": "⚠️ NO LONGER AVAILABLE - Service shut down December 11, 2023. Previously offered tiered pricing for API access and voice generation credits. Open-source TTS models remain available on GitHub under original licensing terms, but commercial SaaS platform and API services are permanently discontinued.",
-      "pros_cons_limitations": "⚠️ HISTORICAL INFORMATION ONLY - Pros (when active): Cutting-edge voice cloning technology, open-source contribution to TTS community, high-quality voice synthesis, developer-friendly APIs\nCons: Unable to achieve sustainable monetization, limited market penetration, competition from larger tech companies\nCurrent Limitations: Service completely discontinued, no customer support, APIs offline, only open-source legacy code remains available",
-      "integration_potential": "⚠️ NO INTEGRATIONS AVAILABLE - All commercial APIs and integrations shut down December 2023. Legacy open-source TTS code remains on GitHub (coqui-ai/TTS) under original licensing but requires self-hosting and development. No official SDKs, REST APIs, or commercial support available. Community forks may exist but lack official support.",
-      "learning_curve": "⚠️ NOT APPLICABLE - Service discontinued. Previously rated Medium to High due to technical nature of voice synthesis technology and API integration requirements. Open-source version requires significant technical expertise for implementation and hosting.",
-      "geo_regulatory_limitations": "⚠️ SERVICE OFFLINE GLOBALLY - No geographic restrictions apply as service is permanently discontinued worldwide. Open-source code available globally but users must handle their own compliance, data privacy, and regulatory requirements for any self-hosted implementations.",
-      "case_studies": "⚠️ COMPANY SHUT DOWN - YourTTS set benchmarks in speech technology, XTTS reached 1M downloads in one month, TTS models were called >100k times daily before shutdown. Over 1,000 models trained daily by users. Gaming and application developers used the service for voice generation before discontinuation in December 2023.",
+      "feature_breakdown": "\u26a0\ufe0f SERVICE DISCONTINUED - Coqui officially shut down operations in December 2023. Previously offered: 1. Advanced Text-to-Speech (TTS) technology with state-of-the-art voice synthesis, 2. One-shot voice cloning capabilities for creating custom voices, 3. XTTS (Cross-lingual TTS) supporting multiple languages, 4. Open-source TTS models and tools for developers, 5. Voice generation APIs for integration into applications and games",
+      "pricing_model": "\u26a0\ufe0f NO LONGER AVAILABLE - Service shut down December 11, 2023. Previously offered tiered pricing for API access and voice generation credits. Open-source TTS models remain available on GitHub under original licensing terms, but commercial SaaS platform and API services are permanently discontinued.",
+      "pros_cons_limitations": "\u26a0\ufe0f HISTORICAL INFORMATION ONLY - Pros (when active): Cutting-edge voice cloning technology, open-source contribution to TTS community, high-quality voice synthesis, developer-friendly APIs\nCons: Unable to achieve sustainable monetization, limited market penetration, competition from larger tech companies\nCurrent Limitations: Service completely discontinued, no customer support, APIs offline, only open-source legacy code remains available",
+      "integration_potential": "\u26a0\ufe0f NO INTEGRATIONS AVAILABLE - All commercial APIs and integrations shut down December 2023. Legacy open-source TTS code remains on GitHub (coqui-ai/TTS) under original licensing but requires self-hosting and development. No official SDKs, REST APIs, or commercial support available. Community forks may exist but lack official support.",
+      "learning_curve": "\u26a0\ufe0f NOT APPLICABLE - Service discontinued. Previously rated Medium to High due to technical nature of voice synthesis technology and API integration requirements. Open-source version requires significant technical expertise for implementation and hosting.",
+      "geo_regulatory_limitations": "\u26a0\ufe0f SERVICE OFFLINE GLOBALLY - No geographic restrictions apply as service is permanently discontinued worldwide. Open-source code available globally but users must handle their own compliance, data privacy, and regulatory requirements for any self-hosted implementations.",
+      "case_studies": "\u26a0\ufe0f COMPANY SHUT DOWN - YourTTS set benchmarks in speech technology, XTTS reached 1M downloads in one month, TTS models were called >100k times daily before shutdown. Over 1,000 models trained daily by users. Gaming and application developers used the service for voice generation before discontinuation in December 2023.",
       "use_cases_in_pr": [
-        "⚠️ TOOL NO LONGER AVAILABLE - Cannot be used for any current PR/marketing applications",
+        "\u26a0\ufe0f TOOL NO LONGER AVAILABLE - Cannot be used for any current PR/marketing applications",
         "Historical use case: Voice synthesis for podcast and media production (no longer possible)",
         "Database entry should be marked as discontinued/inactive for accuracy"
       ],
@@ -2823,7 +2404,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 87,
+      "id": 74,
       "tool_name": "Coveo",
       "url": "www.coveo.com",
       "category": "Customer Service",
@@ -2853,7 +2434,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 88,
+      "id": 75,
       "tool_name": "Coverage Book",
       "url": "www.coveragebook.com",
       "category": "Media Intelligence",
@@ -2883,7 +2464,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 89,
+      "id": 76,
       "tool_name": "Craiyon",
       "url": "www.craiyon.com",
       "category": "Audio/Video Processing",
@@ -2913,7 +2494,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 90,
+      "id": 77,
       "tool_name": "Crayon",
       "url": "www.crayon.co",
       "category": "Data Analytics",
@@ -2943,7 +2524,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 91,
+      "id": 78,
       "tool_name": "Creature",
       "url": "creature.run",
       "category": "Media Production",
@@ -2972,7 +2553,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 92,
+      "id": 79,
       "tool_name": "Critica",
       "url": "aecritica.com",
       "category": "AI Development",
@@ -3003,7 +2584,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 93,
+      "id": 80,
       "tool_name": "Critical Mention",
       "url": "criticalmention.com",
       "category": "Media Intelligence",
@@ -3040,7 +2621,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 94,
+      "id": 81,
       "tool_name": "Crostini for Google Slides",
       "url": "crostini.app",
       "category": "Productivity Tools",
@@ -3071,7 +2652,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 95,
+      "id": 82,
       "tool_name": "CrowdStrike Falcon Next-Gen SIEM",
       "url": "crowdstrike.com",
       "category": "Cybersecurity",
@@ -3080,7 +2661,7 @@ const unifiedToolsData = {
       "brief_purpose_summary": "Falcon Next-Gen SIEM is CrowdStrike's AI-powered SIEM launched in 2024. It ingests security telemetry without moving data to external lakes, correlates incidents using the built-in Charlotte GenAI assistant, and generates incident summaries with context. This SIEM leverages AI/ML to correlate endpoint and other signals and reduce data duplication.",
       "feature_breakdown": "Built on the CrowdStrike Falcon platform, this SIEM eliminates separate data lakes by analyzing events in situ and uses a GenAI assistant ('Charlotte') for context-aware incident correlation. Key features include integration with third-party tools, automated incident summarization, and machine learning-based threat scoring to reduce alert noise.",
       "pricing_model": "Enterprise (quote-based).",
-      "pros_cons_limitations": "Pro: AI-native SIEM that offers 80% cost savings over legacy SIEMs and 150× faster search across petabytes of data. (No specific cons listed.)",
+      "pros_cons_limitations": "Pro: AI-native SIEM that offers 80% cost savings over legacy SIEMs and 150\u00d7 faster search across petabytes of data. (No specific cons listed.)",
       "integration_potential": "Integrates with Falcon platform and can ingest third-party telemetry streams for unified visibility.",
       "learning_curve": "Fast deployment (e.g., no downtime) demonstrated by one customer.",
       "geo_regulatory_limitations": "No specific geographic/regulatory limitations mentioned.",
@@ -3108,7 +2689,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 96,
+      "id": 83,
       "tool_name": "Cuppa",
       "url": "cuppa.sh",
       "category": "Content Creation",
@@ -3141,7 +2722,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 97,
+      "id": 84,
       "tool_name": "CurieAI",
       "url": "curie.ai",
       "category": "AI Development",
@@ -3170,7 +2751,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 98,
+      "id": 85,
       "tool_name": "Cyera Data Security Platform",
       "url": "cyera.com",
       "category": "Data Protection",
@@ -3207,7 +2788,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 99,
+      "id": 86,
       "tool_name": "D-ID Creative Reality",
       "url": "d-id.com",
       "category": "Media Production",
@@ -3241,7 +2822,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 100,
+      "id": 87,
       "tool_name": "DALL-E 2",
       "url": "openai.com/dall-e-2",
       "category": "Content Creation",
@@ -3270,7 +2851,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 101,
+      "id": 88,
       "tool_name": "DALL-E 3",
       "url": "openai.com/dall-e-3",
       "category": "Content Creation",
@@ -3307,7 +2888,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 102,
+      "id": 89,
       "tool_name": "Danelfin",
       "url": "danelfin.com",
       "category": "Finance",
@@ -3337,7 +2918,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 103,
+      "id": 90,
       "tool_name": "Dash Hudson",
       "url": "dashhudson.com",
       "category": "Social Analytics",
@@ -3367,7 +2948,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 104,
+      "id": 91,
       "tool_name": "Dashword",
       "url": "dashword.com",
       "category": "Content Creation",
@@ -3399,7 +2980,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 105,
+      "id": 92,
       "tool_name": "Data Visualization wth Plotly",
       "url": "plotly.com",
       "category": "Data Analytics",
@@ -3429,7 +3010,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 106,
+      "id": 93,
       "tool_name": "Databricks SQL Analytics",
       "url": "databricks.com",
       "category": "Data Analytics",
@@ -3460,7 +3041,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 107,
+      "id": 94,
       "tool_name": "Dataminr Pulse",
       "url": "dataminr.com",
       "category": "Specialized Analytics",
@@ -3490,7 +3071,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 108,
+      "id": 95,
       "tool_name": "DataRobot Automated ML",
       "url": "datarobot.com",
       "category": "Data Analytics",
@@ -3520,7 +3101,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 109,
+      "id": 96,
       "tool_name": "DataSelfie",
       "url": "dataselfie.it",
       "category": "Data Protection",
@@ -3550,7 +3131,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 110,
+      "id": 97,
       "tool_name": "DataSunrise Firewall",
       "url": "datasunrise.com",
       "category": "Cybersecurity",
@@ -3580,36 +3161,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Decart AI Warps Live Video in Real Time",
-      "url": "https://www.wired.com/story/decart-artificial-intelligence-model-live-stream/",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "Decart AI Warps Live Video in Real Time New AI technology from Decart can warp and manipulate live video streams in real-time. ---",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:15.996Z",
-        "source_article": "https://www.wired.com/story/decart-artificial-intelligence-model-live-stream/",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 111
-    },
-    {
-      "id": 112,
+      "id": 98,
       "tool_name": "DeepL",
       "url": "www.deepl.com",
       "category": "Language Processing",
@@ -3617,7 +3169,7 @@ const unifiedToolsData = {
       "icon": "ai-assistant",
       "brief_purpose_summary": "An AI-powered translation service known for producing more natural and accurate translations than traditional tools. It supports multiple languages and maintains context and nuance better than most competitors.",
       "feature_breakdown": "1. Neural Machine Translation - Powered by proprietary in-house LLMs providing human-like translation accuracy across 30+ languages\n2. Document Translation - Translate entire Word, PowerPoint, PDF, text and HTML files while preserving original formatting\n3. Custom Glossaries - Maintain brand terminology and technical jargon consistency with customizable translation dictionaries\n4. DeepL Write - AI-powered writing assistant for improving, rewriting, and optimizing content with tone and style adjustments\n5. API Integration - RESTful API with SDKs for Python, .NET, Node.js, PHP, Ruby, and Java for seamless application integration",
-      "pricing_model": "Free: Basic translation with character limits and standard features\nDeepL Pro Starter: €5.99/month - Unlimited web translator, 5 document translations/month, maximum data security\nDeepL Pro Advanced: €22.99/month - Unlimited documents, CAT tool integration, team features, advanced customization\nDeepL Pro Ultimate: €57.99/month - Highest translation volume, priority support, advanced team management\nAPI Plans: DeepL API Free (500,000 characters/month), DeepL API Pro (monthly base fee + usage-based character pricing)\nEnterprise: Custom pricing with dedicated support, BYOK encryption, SSO, audit logs",
+      "pricing_model": "Free: Basic translation with character limits and standard features\nDeepL Pro Starter: \u20ac5.99/month - Unlimited web translator, 5 document translations/month, maximum data security\nDeepL Pro Advanced: \u20ac22.99/month - Unlimited documents, CAT tool integration, team features, advanced customization\nDeepL Pro Ultimate: \u20ac57.99/month - Highest translation volume, priority support, advanced team management\nAPI Plans: DeepL API Free (500,000 characters/month), DeepL API Pro (monthly base fee + usage-based character pricing)\nEnterprise: Custom pricing with dedicated support, BYOK encryption, SSO, audit logs",
       "pros_cons_limitations": "Pros: Superior translation quality compared to competitors, excellent handling of context and nuance, strong document formatting preservation, robust API with multiple SDKs, enterprise-grade security (ISO 27001, SOC 2, GDPR, HIPAA), excellent customer support\nCons: Higher pricing than some competitors, limited free tier, smaller language selection compared to Google Translate, primarily European language focus initially\nLimitations: Character-based billing can become expensive for high-volume use, some advanced features require higher-tier plans, limited support for less common languages",
       "integration_potential": "Native integrations: CAT tools (Trados, MemoQ, Phrase), browser extensions, desktop applications\nAPI availability: Comprehensive REST API with official SDKs for 6 programming languages, OpenAPI specification available\nThird-party integrations: Zapier, various content management systems, translation management platforms\nEnterprise features: SSO integration, custom encryption keys, API access controls\nDeveloper community: Active community with open-source projects and code samples",
       "learning_curve": "Low - Simple web interface for basic translation needs, immediate usability for document translation. Medium for API integration and enterprise features requiring technical setup. Advanced features like glossary management and team administration may require brief training for optimal use.",
@@ -3639,7 +3191,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 113,
+      "id": 99,
       "tool_name": "Descript",
       "url": "www.descript.com/",
       "category": "Media Production",
@@ -3682,36 +3234,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Digital Doubles for Video Calls",
-      "url": "https://www.pickle.com/",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "Pickle AI Creates Digital Doubles for Video Calls MacOS app creates AI avatars that lip-sync in real-time for Zoom calls, requiring only 5-minute setup video and 24-hour processing. --- ### MIT Techno",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:15.996Z",
-        "source_article": "https://www.pickle.com/",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 114
-    },
-    {
-      "id": 115,
+      "id": 100,
       "tool_name": "Disney Hyperion Gray",
       "url": "disneyhyperiongray.com",
       "category": "Consumer Apps",
@@ -3736,7 +3259,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 116,
+      "id": 101,
       "tool_name": "Docugami",
       "url": "docugami.com",
       "category": "Document Processing",
@@ -3765,7 +3288,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 117,
+      "id": 102,
       "tool_name": "Driverless AI",
       "url": "h2o.ai",
       "category": "AI Development",
@@ -3794,65 +3317,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "DuckDuckGo Adds AI Image Filtering",
-      "url": "https://x.com/DuckDuckGo/status/1944766326381089118",
-      "category": "research",
-      "source": "news-extraction",
-      "icon": "research",
-      "brief_purpose_summary": "DuckDuckGo Adds AI Image Filtering Feature DuckDuckGo introduces option to hide AI-generated images from search results, addressing user concerns about AI image spam. --- ### AI Breakfast",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-21T09:57:03.299Z",
-        "source_article": "https://x.com/DuckDuckGo/status/1944766326381089118",
-        "confidence": 0.9999999999999999,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 118
-    },
-    {
-      "tool_name": "DuckDuckGo Adds AI Image Filtering Feature",
-      "url": "https://x.com/DuckDuckGo/status/1944766326381089118",
-      "category": "research",
-      "source": "news-extraction",
-      "icon": "research",
-      "brief_purpose_summary": "DuckDuckGo Adds AI Image Filtering Feature DuckDuckGo introduces option to hide AI-generated images from search results, addressing user concerns about AI image spam. --- ### AI Breakfast",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-21T09:57:03.299Z",
-        "source_article": "https://x.com/DuckDuckGo/status/1944766326381089118",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 119
-    },
-    {
-      "id": 120,
+      "id": 103,
       "tool_name": "Durable",
       "url": "durable.co",
       "category": "General Tools",
@@ -3896,7 +3361,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 121,
+      "id": 104,
       "tool_name": "EarlyString",
       "url": "earlystring.com",
       "category": "HR & Employee Tools",
@@ -3926,7 +3391,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 122,
+      "id": 105,
       "tool_name": "EdgeImpulse",
       "url": "edgeimpulse.com",
       "category": "IoT Solutions",
@@ -3955,7 +3420,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 123,
+      "id": 106,
       "tool_name": "Elai.io",
       "url": "www.elai.io",
       "category": "Audio/Video Processing",
@@ -3992,7 +3457,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 124,
+      "id": 107,
       "tool_name": "EleutherAI",
       "url": "eleuther.ai",
       "category": "AI Development",
@@ -4023,7 +3488,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 125,
+      "id": 108,
       "tool_name": "ElevenLabs",
       "url": "elevenlabs.io/",
       "category": "General Tools",
@@ -4067,7 +3532,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 126,
+      "id": 109,
       "tool_name": "Ellora.ai",
       "url": "ellora.ai",
       "category": "Language Processing",
@@ -4097,36 +3562,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Elon Musk Teases Twilight-Inspired Grok Companion",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/708536/elon-musk-grok-xai-ai-boyfriend",
-      "category": "ai-assistant",
-      "source": "news-extraction",
-      "icon": "ai-assistant",
-      "brief_purpose_summary": "Elon Musk Teases Twilight-Inspired Grok Companion xAI hiring engineers for anime and fictional character companions, including Edward Cullen from Twilight. --- ### Additional Updates from Multiple Sou",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.270Z",
-        "source_article": "https://www.theverge.com/ai-artificial-intelligence/708536/elon-musk-grok-xai-ai-boyfriend",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 127
-    },
-    {
-      "id": 128,
+      "id": 110,
       "tool_name": "Everlaw (Everlaw AI Assistant)",
       "url": "www.everlaw.com",
       "category": "Legal Tech",
@@ -4161,7 +3597,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 129,
+      "id": 111,
       "tool_name": "Evisort",
       "url": "www.evisort.com",
       "category": "Compliance Tools",
@@ -4190,7 +3626,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 130,
+      "id": 112,
       "tool_name": "Exploding Topics",
       "url": "explodingtopics.com",
       "category": "Data Analytics",
@@ -4220,7 +3656,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 131,
+      "id": 113,
       "tool_name": "Fathom",
       "url": "fathom.video",
       "category": "Audio/Video Processing",
@@ -4250,7 +3686,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 132,
+      "id": 114,
       "tool_name": "FeedHive",
       "url": "feedhive.com",
       "category": "Content Creation",
@@ -4281,7 +3717,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 133,
+      "id": 115,
       "tool_name": "Fintool",
       "url": "fintool.com",
       "category": "Finance",
@@ -4312,7 +3748,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 134,
+      "id": 116,
       "tool_name": "Firebase",
       "url": "firebase.google.com",
       "category": "Data Analytics",
@@ -4343,7 +3779,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 135,
+      "id": 117,
       "tool_name": "Fireflies.ai",
       "url": "fireflies.ai",
       "category": "Language Processing",
@@ -4373,7 +3809,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 136,
+      "id": 118,
       "tool_name": "Fiscal AI",
       "url": "fiscal.ai",
       "category": "Finance",
@@ -4404,7 +3840,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 137,
+      "id": 119,
       "tool_name": "Flair AI",
       "url": "flair.ai",
       "category": "Audio/Video Processing",
@@ -4435,7 +3871,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 138,
+      "id": 120,
       "tool_name": "Fliki",
       "url": "fliki.ai",
       "category": "General Tools",
@@ -4474,14 +3910,14 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 139,
+      "id": 121,
       "tool_name": "Forethought",
       "url": "forethought.ai",
       "category": "Customer Service",
       "source": "pdf",
       "icon": "customer-service",
       "brief_purpose_summary": "An AI-native customer support automation tool known for its AI Agent (Assist) and automated triage (Solve) that uses natural language understanding to classify tickets and deliver instant answers from knowledge bases.",
-      "feature_breakdown": "Multi-agent AI system for customer support automation; Solve - Agentic AI agent for end-to-end query resolution across chat, voice, email with intent detection and knowledge base integration; Triage - LLM-powered ticket routing and prioritization with sentiment analysis and auto-tagging; Assist - AI copilot providing contextual knowledge articles and response suggestions with Chrome extension; Discover - Generative AI for workflow optimization, ROI tracking, and performance analytics; Autoflows™ technology for business logic execution using natural language without coding",
+      "feature_breakdown": "Multi-agent AI system for customer support automation; Solve - Agentic AI agent for end-to-end query resolution across chat, voice, email with intent detection and knowledge base integration; Triage - LLM-powered ticket routing and prioritization with sentiment analysis and auto-tagging; Assist - AI copilot providing contextual knowledge articles and response suggestions with Chrome extension; Discover - Generative AI for workflow optimization, ROI tracking, and performance analytics; Autoflows\u2122 technology for business logic execution using natural language without coding",
       "pricing_model": "Custom pricing based on ticket volume and agent seats. Platform access fees plus committed usage costs based on deflection volume for inquiries and ticket volume for agent handoffs. Industry estimates suggest $10-100+ per user/month depending on scope and features. Vendr reports starting around mid-five to six-figure annual deals for enterprise contact centers. No public pricing - requires demo and custom quote. Optional advanced support add-ons available.",
       "pros_cons_limitations": "Pros: Advanced multi-agent AI architecture provides comprehensive coverage, high ROI (15x average return), 55% reduction in first response time, up to 98% resolution rate, seamless integration with existing helpdesk systems, patent-pending Autoflows technology eliminates need for decision trees, ready on day one with historical data training. Cons: High implementation cost suitable mainly for medium-large enterprises, requires initial setup and training for workflow integration, occasional AI recommendation accuracy issues, limited image support in tickets, can be time-consuming to configure for complex business requirements. Limitations: Primarily designed for enterprise-scale operations, learning curve for maximizing advanced features.",
       "integration_potential": "Excellent - Native integrations with major helpdesks (Zendesk, Salesforce Service Cloud, Freshdesk, ServiceNow, Intercom, Kustomer); Communication platforms (Dialpad, Talkdesk); CRM systems (HubSpot, Salesforce); API access for custom integrations; Chrome extension for agent assistance; Multi-channel support across web chat, email, voice, messaging platforms",
@@ -4504,7 +3940,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 140,
+      "id": 122,
       "tool_name": "Framer AI",
       "url": "framer.com/ai",
       "category": "Web Development",
@@ -4533,7 +3969,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 141,
+      "id": 123,
       "tool_name": "Frase.io",
       "url": "frase.io",
       "category": "Content Research",
@@ -4571,7 +4007,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 142,
+      "id": 124,
       "tool_name": "Freshdesk (Freddy AI)",
       "url": "www.freshworks.com/freshdesk",
       "category": "Customer Service",
@@ -4601,7 +4037,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 143,
+      "id": 125,
       "tool_name": "Futurepedia",
       "url": "futurepedia.io",
       "category": "Research Tools",
@@ -4638,7 +4074,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 144,
+      "id": 126,
       "tool_name": "FutureTools",
       "url": "futuretools.io",
       "category": "Resource Directory",
@@ -4666,7 +4102,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 145,
+      "id": 127,
       "tool_name": "Gamma",
       "url": "gamma.app",
       "category": "Content Creation",
@@ -4697,7 +4133,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 146,
+      "id": 128,
       "tool_name": "GapScout (Formerly Signal AI)",
       "url": "signalpharm.ai",
       "category": "Media Intelligence",
@@ -4726,7 +4162,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 147,
+      "id": 129,
       "tool_name": "GenAI IT Automation by Electric",
       "url": "electric.ai",
       "category": "IT Support",
@@ -4755,7 +4191,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 148,
+      "id": 130,
       "tool_name": "Genmo",
       "url": "www.genmo.ai",
       "category": "Audio/Video Processing",
@@ -4786,7 +4222,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 149,
+      "id": 131,
       "tool_name": "Ghostwriter",
       "url": "ghostwriter.gitkraken.com",
       "category": "Development Tools",
@@ -4817,7 +4253,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 150,
+      "id": 132,
       "tool_name": "GlamAI",
       "url": "glam.ai",
       "category": "Content Creation",
@@ -4847,7 +4283,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 151,
+      "id": 133,
       "tool_name": "Google Ads",
       "url": "ads.google.com",
       "category": "Data Analytics",
@@ -4860,7 +4296,7 @@ const unifiedToolsData = {
       "integration_potential": "Extensive API capabilities, Google Analytics integration, Google Tag Manager compatibility, third-party platform connections (Salesforce, HubSpot), automated bidding with AI, Google Workspace integration, conversion tracking across platforms, and comprehensive reporting tools with data export capabilities.",
       "learning_curve": "Medium to High - basic setup is straightforward but effective optimization requires understanding of keyword research, bidding strategies, Quality Score factors, conversion tracking, and ongoing campaign management. Advanced features like automated bidding and audience targeting require significant expertise for optimal results.",
       "geo_regulatory_limitations": "Available in 195 countries with restrictions in OFAC-sanctioned regions (Crimea, Cuba, Iran, North Korea, Syria, DNR, LNR). GDPR compliance required for EU targeting. US state privacy law compliance necessary. Maximum 122 country exclusions per campaign. Advertisers must comply with local laws and regulations in targeted regions.",
-      "case_studies": "Kilang Besi Choong Len achieved ₹1.2 lakh revenue from ₹10,000 budget investment. Ramona La Rue fashion brand achieved 6x ROAS through strategic keyword targeting and shopping ads optimization. Average Google study shows $8 return for every $1 invested. Multiple industry case studies demonstrate significant lead generation and sales growth across sectors.",
+      "case_studies": "Kilang Besi Choong Len achieved \u20b91.2 lakh revenue from \u20b910,000 budget investment. Ramona La Rue fashion brand achieved 6x ROAS through strategic keyword targeting and shopping ads optimization. Average Google study shows $8 return for every $1 invested. Multiple industry case studies demonstrate significant lead generation and sales growth across sectors.",
       "use_cases_in_pr": [
         "Real-time crisis management through targeted search campaigns for reputation protection",
         "Promoting thought leadership content and executive interviews to industry-specific audiences",
@@ -4878,7 +4314,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 152,
+      "id": 134,
       "tool_name": "Google Alerts",
       "url": "google.com/alerts",
       "category": "Media Intelligence",
@@ -4909,7 +4345,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 153,
+      "id": 135,
       "tool_name": "Google Analytics",
       "url": "analytics.google.com",
       "category": "Data Analytics",
@@ -4940,7 +4376,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 154,
+      "id": 136,
       "tool_name": "Google Cloud Natural Language",
       "url": "cloud.google.com/natural-language",
       "category": "Data Analytics",
@@ -4971,36 +4407,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Google Colab Ships Built-in Gemini Library",
-      "url": "https://link.alphasignal.ai/EW6xtw",
-      "category": "developer-tools",
-      "source": "news-extraction",
-      "icon": "developer-tools",
-      "brief_purpose_summary": "Google Colab Ships Built-in Gemini Library Colab Pro users can now run Gemini and Gemma models without API keys through built-in library. --- ### Gary Marcus - Marcus on AI",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.269Z",
-        "source_article": "https://link.alphasignal.ai/EW6xtw",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 155
-    },
-    {
-      "id": 156,
+      "id": 137,
       "tool_name": "Google News",
       "url": "news.google.com",
       "category": "Media Intelligence",
@@ -5031,7 +4438,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 157,
+      "id": 138,
       "tool_name": "Google Public Data Explorer",
       "url": "google.com/publicdata",
       "category": "Research Tools",
@@ -5062,7 +4469,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 158,
+      "id": 139,
       "tool_name": "Google Scholar",
       "url": "scholar.google.com",
       "category": "Research Tools",
@@ -5093,7 +4500,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 159,
+      "id": 140,
       "tool_name": "Google Search Console",
       "url": "search.google.com/search-console",
       "category": "Data Analytics",
@@ -5124,7 +4531,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 160,
+      "id": 141,
       "tool_name": "Google Tag Manager",
       "url": "tagmanager.google.com",
       "category": "Data Analytics",
@@ -5155,7 +4562,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 161,
+      "id": 142,
       "tool_name": "Google Trends",
       "url": "trends.google.com",
       "category": "Data Analytics",
@@ -5186,7 +4593,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 162,
+      "id": 143,
       "tool_name": "Google Workspace (AI Features)",
       "url": "workspace.google.com",
       "category": "AI Assistants",
@@ -5217,7 +4624,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 163,
+      "id": 144,
       "tool_name": "Grain",
       "url": "grain.com",
       "category": "Audio/Video Processing",
@@ -5248,7 +4655,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 164,
+      "id": 145,
       "tool_name": "Grammarly",
       "url": "grammarly.com",
       "category": "Content Creation",
@@ -5281,7 +4688,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 165,
+      "id": 146,
       "tool_name": "GRANDstack",
       "url": "grandstack.io",
       "category": "Development Tools",
@@ -5312,7 +4719,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 166,
+      "id": 147,
       "tool_name": "Graphsense",
       "url": "graphsense.info",
       "category": "Specialized Analytics",
@@ -5342,7 +4749,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 167,
+      "id": 148,
       "tool_name": "GrayMeta",
       "url": "graymeta.com",
       "category": "Media Intelligence",
@@ -5371,122 +4778,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Grok 4 Release by xAI",
-      "url": "https://newsletter.towardsai.net",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "Grok 4 Release by xAI xAI launched Grok 4, which now tops most major benchmarks including ARC-AGI-2 (16.0%) and Humanity's Last Exam (25.4%). The Grok 4 Heavy variant uses a multi-agent system and is",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.788Z",
-        "source_article": "https://newsletter.towardsai.net",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 168
-    },
-    {
-      "tool_name": "Grok 4 Released by xAI",
-      "url": "https://x.ai/news/grok-4",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "Grok 4 Released by xAI The new Grok models are out with two variants: Grok 4 and Grok Heavy ($300/month). During the livestream launch, Elon Musk expressed that the model's power was \"a little bit ter",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:17.030Z",
-        "source_article": "https://x.ai/news/grok-4",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 169
-    },
-    {
-      "tool_name": "Grok Gets NSFW AI Companions",
-      "url": "https://www.theverge.com/news/706988/elon-musk-ai-bot-grok-supergrok-anime-companion-ani-rudy2025-07-14",
-      "category": "ai-assistant",
-      "source": "news-extraction",
-      "icon": "ai-assistant",
-      "brief_purpose_summary": "Grok Gets NSFW AI Companions xAI launched AI \"companions\" for Grok including an anime character named Ani with an NSFW lingerie mode.",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:17.031Z",
-        "source_article": "https://www.theverge.com/news/706988/elon-musk-ai-bot-grok-supergrok-anime-companion-ani-rudy2025-07-14",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 170
-    },
-    {
-      "tool_name": "Grok Waifus and AI Companions",
-      "url": "",
-      "category": "ai-assistant",
-      "source": "news-extraction",
-      "icon": "ai-assistant",
-      "brief_purpose_summary": "Grok Waifus and AI Companions xAI adds animated 3D characters to Grok, including anime-inspired companions, shooting to #1 in Japanese App Store.",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.270Z",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 171
-    },
-    {
-      "id": 172,
+      "id": 149,
       "tool_name": "Groq",
       "url": "groq.com",
       "category": "Hardware Integration",
@@ -5515,7 +4807,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 173,
+      "id": 150,
       "tool_name": "GrowthBar",
       "url": "growthbarseo.com",
       "category": "Content Creation",
@@ -5547,7 +4839,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 174,
+      "id": 151,
       "tool_name": "Gumloop",
       "url": "gumloop.com",
       "category": "Data Analytics",
@@ -5577,7 +4869,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 175,
+      "id": 152,
       "tool_name": "Harvey AI",
       "url": "www.harvey.ai",
       "category": "Legal Tech",
@@ -5612,7 +4904,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 176,
+      "id": 153,
       "tool_name": "HeyGen",
       "url": "www.heygen.com",
       "category": "General Tools",
@@ -5658,36 +4950,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "tool_name": "Hugging Face Reachy Mini Robot",
-      "url": "https://www.theaivalley.com",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "Hugging Face Reachy Mini Robot Hugging Face unveiled a $299 desktop robot to democratize robotics development, integrating with their AI model hub. ### The Rundown AI",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.788Z",
-        "source_article": "https://www.theaivalley.com",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 177
-    },
-    {
-      "id": 178,
+      "id": 154,
       "tool_name": "Hypefury",
       "url": "hypefury.com",
       "category": "Content Creation",
@@ -5718,7 +4981,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 179,
+      "id": 155,
       "tool_name": "Hypotenuse AI",
       "url": "hypotenuse.ai",
       "category": "Content Creation",
@@ -5752,7 +5015,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 180,
+      "id": 156,
       "tool_name": "Illuminate AI Media Kit Generator",
       "url": "illuminate-ai.com",
       "category": "Marketing Automation",
@@ -5781,7 +5044,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 181,
+      "id": 157,
       "tool_name": "Illumio CloudSecure",
       "url": "illumio.com",
       "category": "Cybersecurity",
@@ -5822,7 +5085,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 182,
+      "id": 158,
       "tool_name": "Imagen",
       "url": "imagen.research.google",
       "category": "Audio/Video Processing",
@@ -5853,7 +5116,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 183,
+      "id": 159,
       "tool_name": "Imagendry",
       "url": "imagendry.com",
       "category": "Audio/Video Processing",
@@ -5876,37 +5139,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "inference",
-      "url": "https://api.inference.wandb.ai/v1)",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "W&B Inference Launch with Kimi K2 Weights & Biases launches inference platform with Kimi K2 available within 3 days of model release, offering $50 credits for testing.",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "New"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.269Z",
-        "source_article": "https://api.inference.wandb.ai/v1)",
-        "confidence": 0.7999999999999999,
-        "action_type": "launch",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 184
-    },
-    {
-      "id": 185,
+      "id": 160,
       "tool_name": "Infogram",
       "url": "infogram.com",
       "category": "Data Analytics",
@@ -5937,7 +5170,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 186,
+      "id": 161,
       "tool_name": "Intercom (Fin)",
       "url": "www.intercom.com",
       "category": "Customer Service",
@@ -5967,7 +5200,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 187,
+      "id": 162,
       "tool_name": "InVideo",
       "url": "invideo.io",
       "category": "Audio/Video Processing",
@@ -5998,7 +5231,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 188,
+      "id": 163,
       "tool_name": "InvokeAPI",
       "url": "invokeapi.dev",
       "category": "Productivity Tools",
@@ -6027,7 +5260,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 189,
+      "id": 164,
       "tool_name": "Ipsos PersonaBot",
       "url": "www.ipsos.com/en/launch-ipsos-personabot",
       "category": "Data Analytics",
@@ -6040,7 +5273,7 @@ const unifiedToolsData = {
       "integration_potential": "Likely integrates with existing market research workflows and CRM systems. API capabilities for incorporating persona insights into marketing platforms.",
       "learning_curve": "Low to moderate - chat interface is intuitive, but effective use requires market research and segmentation knowledge.",
       "geo_regulatory_limitations": "Available globally through Ipsos offices in 90 markets. Healthcare PersonaBot developed specifically to meet healthcare regulatory requirements including HIPAA compliance. Follows GDPR and other regional privacy regulations. Secure portal access with enterprise-grade security. Data residency options available based on client requirements. No specific geographic restrictions mentioned but availability through local Ipsos offices may vary by region.",
-      "case_studies": "Ipsos GLP-1 PersonaBot: Launched specialized version for obesity treatment market analysis providing real-time insights for pharmaceutical companies. Purina Pet Project: Used AI personas to capture 'voice of pets' for product development, combining AI with human insights for innovative pet food marketing. Healthcare Segmentation: Multiple pharmaceutical companies using Healthcare PersonaBot for patient persona development in compliance with healthcare regulations. Consumer Research: Major manufacturers and service providers leveraging consumer version for market segmentation activation. Estée Lauder Companies: Referenced as example client using generative AI tools for brand innovation and scaling.",
+      "case_studies": "Ipsos GLP-1 PersonaBot: Launched specialized version for obesity treatment market analysis providing real-time insights for pharmaceutical companies. Purina Pet Project: Used AI personas to capture 'voice of pets' for product development, combining AI with human insights for innovative pet food marketing. Healthcare Segmentation: Multiple pharmaceutical companies using Healthcare PersonaBot for patient persona development in compliance with healthcare regulations. Consumer Research: Major manufacturers and service providers leveraging consumer version for market segmentation activation. Est\u00e9e Lauder Companies: Referenced as example client using generative AI tools for brand innovation and scaling.",
       "use_cases_in_pr": [
         "Target audience research - Engage with AI personas representing key demographics for message testing",
         "Crisis communication planning - Test crisis messages against different stakeholder personas",
@@ -6057,7 +5290,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 190,
+      "id": 165,
       "tool_name": "IRONSCALES Email Security",
       "url": "ironscales.com",
       "category": "Cybersecurity",
@@ -6093,7 +5326,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 191,
+      "id": 166,
       "tool_name": "Island Enterprise Browser",
       "url": "island.io",
       "category": "Cybersecurity",
@@ -6129,7 +5362,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 192,
+      "id": 167,
       "tool_name": "Jenni AI",
       "url": "jenni.ai",
       "category": "Content Creation",
@@ -6159,7 +5392,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 193,
+      "id": 168,
       "tool_name": "Journalist AI",
       "url": "journalist.ai",
       "category": "Content Creation",
@@ -6193,7 +5426,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 194,
+      "id": 169,
       "tool_name": "Kafkai",
       "url": "kafkai.com",
       "category": "Content Creation",
@@ -6201,7 +5434,7 @@ const unifiedToolsData = {
       "icon": "ai-assistant",
       "brief_purpose_summary": "An AI writer focused on creating SEO-friendly content for niche websites, trained on specific industries for relevant content generation.",
       "feature_breakdown": "AI-powered SEO content creation with real-time competitor analysis and search data integration. Four core strategies (4Cs): Compete directly with competitors, explore topics you're good at, discover untapped opportunities, and analyze competitor content gaps. Advanced keyword clustering that blends user input with competitor ranking data. Real-time SERP analysis to understand current ranking content. Automated outline generation based on competitor research. One-click article generation with SEO optimization. Bulk content creation mode for scale. Three operational modes: seeded (topic-specific), unseeded (niche-random), and wildcard (experimental). Integration with real-world competitor ranking data for high-impact keyword identification.",
-      "pricing_model": "Freemium model: Free trial with 5,000 lifetime words (GPT-3.5 only, limited features). Paid plans from €19/month with annual discounts available. Multiple tiers supporting different word counts and features. GPT-4 usage counts 5x towards word limits. 30-day money-back guarantee. 3-day free trial with full features access. Enterprise pricing available for high-volume users. Prices exclude VAT (automatically added by payment processor).",
+      "pricing_model": "Freemium model: Free trial with 5,000 lifetime words (GPT-3.5 only, limited features). Paid plans from \u20ac19/month with annual discounts available. Multiple tiers supporting different word counts and features. GPT-4 usage counts 5x towards word limits. 30-day money-back guarantee. 3-day free trial with full features access. Enterprise pricing available for high-volume users. Prices exclude VAT (automatically added by payment processor).",
       "pros_cons_limitations": "Pros: Only AI tool that actively uses real-time SEO data for content creation, eliminates need for manual keyword research, generates well-structured SEO-friendly content, saves up to 88% cost per blog post compared to human writers, provides competitor insights automatically, fast article generation (under 60 seconds). Cons: Higher learning curve for advanced features, requires understanding of SEO concepts for best results, content may need human editing for E-E-A-T, limited creative flexibility compared to general AI tools, primarily focused on long-form SEO content. Limitations: Heavily SEO-focused (less suitable for creative writing), requires competitor analysis setup, works best with established websites that have competitors.",
       "integration_potential": "API access available for enterprise customers. Integrates with content management systems and Google Sheets. Supports WordPress and other CMS platforms. Can be integrated into existing content workflows. Real-time search data integration through proprietary algorithms. Compatible with SEO tools ecosystem. Export capabilities for content distribution across platforms.",
       "learning_curve": "Medium - Intuitive interface for basic article generation, but requires understanding of SEO principles and competitor analysis to maximize value. Users need to grasp the 4Cs strategy framework and how to interpret competitor data effectively. Advanced features like bulk creation and custom optimization require moderate technical knowledge. Comprehensive onboarding available with tutorials and customer support.",
@@ -6223,7 +5456,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 195,
+      "id": 170,
       "tool_name": "Kapwing",
       "url": "www.kapwing.com",
       "category": "Audio/Video Processing",
@@ -6254,7 +5487,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 196,
+      "id": 171,
       "tool_name": "Keepnet Phishing Simulator",
       "url": "keepnetlabs.com/products/phishing-simulator",
       "category": "Cybersecurity",
@@ -6292,37 +5525,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Kimi K2 Open-Source SOTA",
-      "url": "https://link.alphasignal.ai/uW5851",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "Moonshot Launches Kimi K2 Open-Source SOTA Model Kimi K2 is a 1T parameter MoE model with 32B active parameters achieving 71.6% on SWE-Bench Verified, rivaling GPT-4.1 and Claude Opus. Features tool u",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "New"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.268Z",
-        "source_article": "https://link.alphasignal.ai/uW5851",
-        "confidence": 0.9999999999999999,
-        "action_type": "launch",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 197
-    },
-    {
-      "id": 198,
+      "id": 172,
       "tool_name": "Kira Systems",
       "url": "kirasystems.com",
       "category": "Legal Tech",
@@ -6357,67 +5560,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Kiro IDE",
-      "url": "https://aidisruption.ai",
-      "category": "content-creation",
-      "source": "news-extraction",
-      "icon": "content-creation",
-      "brief_purpose_summary": "Amazon Launches Kiro IDE Amazon introduced Kiro, a new agentic IDE focused on spec-driven development. It creates requirements and system designs before writing code, offering $50 free monthly during",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "Content",
-        "Writing"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.789Z",
-        "source_article": "https://aidisruption.ai",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 199
-    },
-    {
-      "tool_name": "Kiro, AI Code Editor",
-      "url": "https://kiro.dev/blog/introducing-kiro/",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "AWS Launches Kiro, AI Code Editor AWS launched Kiro, their version of Cursor - an AI-powered code editor that integrates with Amazon's Bedrock models.",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:17.031Z",
-        "source_article": "https://kiro.dev/blog/introducing-kiro/",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 200
-    },
-    {
-      "id": 201,
+      "id": 173,
       "tool_name": "Kissflow",
       "url": "kissflow.com",
       "category": "Workflow Automation",
@@ -6446,7 +5589,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 202,
+      "id": 174,
       "tool_name": "Klue",
       "url": "klue.com",
       "category": "Data Analytics",
@@ -6476,7 +5619,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 203,
+      "id": 175,
       "tool_name": "Koala AI",
       "url": "koala.sh",
       "category": "Content Creation",
@@ -6506,7 +5649,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 204,
+      "id": 176,
       "tool_name": "Kompyte",
       "url": "www.kompyte.com",
       "category": "Data Analytics",
@@ -6536,7 +5679,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 205,
+      "id": 177,
       "tool_name": "Krisp",
       "url": "krisp.ai",
       "category": "Audio/Video Processing",
@@ -6567,7 +5710,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 206,
+      "id": 178,
       "tool_name": "Kustomer (Kustomer IQ)",
       "url": "www.kustomer.com",
       "category": "Customer Service",
@@ -6597,7 +5740,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 207,
+      "id": 179,
       "tool_name": "Lacework Cloud Security",
       "url": "lacework.com",
       "category": "Cybersecurity",
@@ -6634,7 +5777,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 208,
+      "id": 180,
       "tool_name": "Lately AI",
       "url": "www.lately.ai",
       "category": "Content Creation",
@@ -6664,7 +5807,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 209,
+      "id": 181,
       "tool_name": "LawGeex",
       "url": "www.lawgeex.com",
       "category": "Legal Tech",
@@ -6699,7 +5842,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 210,
+      "id": 182,
       "tool_name": "Legal Monster",
       "url": "legalmonster.ai",
       "category": "Legal Tech",
@@ -6724,7 +5867,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 211,
+      "id": 183,
       "tool_name": "LegalMind",
       "url": "legalmind.ai",
       "category": "Legal Tech",
@@ -6749,7 +5892,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 212,
+      "id": 184,
       "tool_name": "LegalOn",
       "url": "www.legalontech.com",
       "category": "Legal Tech",
@@ -6800,7 +5943,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 213,
+      "id": 185,
       "tool_name": "Legora",
       "url": "legora.com",
       "category": "Legal Tech",
@@ -6852,7 +5995,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 214,
+      "id": 186,
       "tool_name": "Leonardo.ai",
       "url": "leonardo.ai/",
       "category": "General Tools",
@@ -6913,7 +6056,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 215,
+      "id": 187,
       "tool_name": "Letterdrop",
       "url": "letterdrop.com",
       "category": "Content Creation",
@@ -6944,7 +6087,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 216,
+      "id": 188,
       "tool_name": "Lex",
       "url": "lex.page",
       "category": "Content Creation",
@@ -6974,7 +6117,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 217,
+      "id": 189,
       "tool_name": "Lexis+ AI",
       "url": "www.lexisnexis.com/lexis-plus-ai",
       "category": "Legal Tech",
@@ -7010,38 +6153,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Lightricks LTXV Real-Time Video Model",
-      "url": "https://github.com/Lightricks/LTX-Video",
-      "category": "content-creation",
-      "source": "news-extraction",
-      "icon": "content-creation",
-      "brief_purpose_summary": "Lightricks LTXV Real-Time Video Model Upgraded LTXV model for real-time image-to-video content lasting 60+ seconds with live editing controls, available in 13B and 2B versions.",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "Content",
-        "Writing"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.270Z",
-        "source_article": "https://github.com/Lightricks/LTX-Video",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 218
-    },
-    {
-      "id": 219,
+      "id": 190,
       "tool_name": "Lilt",
       "url": "lilt.com",
       "category": "Language Processing",
@@ -7072,7 +6184,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 220,
+      "id": 191,
       "tool_name": "LongShot AI",
       "url": "longshot.ai",
       "category": "Content Creation",
@@ -7103,7 +6215,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 221,
+      "id": 192,
       "tool_name": "Looka",
       "url": "looka.com",
       "category": "Audio/Video Processing",
@@ -7134,7 +6246,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 222,
+      "id": 193,
       "tool_name": "Looker Studio",
       "url": "lookerstudio.google.com",
       "category": "Data Analytics",
@@ -7165,7 +6277,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 223,
+      "id": 194,
       "tool_name": "Loom AI",
       "url": "www.loom.com",
       "category": "Audio/Video Processing",
@@ -7195,36 +6307,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Lovable",
-      "url": "https://techcrunch.com/2025/07/17/lovable-unicorn-200m/",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "Lovable Raises $200M at $1.8B Valuation AI app maker Lovable secures $200M Series A just 8 months after launch, achieving unicorn status as a European AI startup.",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-21T09:57:03.299Z",
-        "source_article": "https://techcrunch.com/2025/07/17/lovable-unicorn-200m/",
-        "confidence": 0.8999999999999999,
-        "action_type": "funding",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 224
-    },
-    {
-      "id": 225,
+      "id": 195,
       "tool_name": "Lumen5",
       "url": "lumen5.com",
       "category": "Audio/Video Processing",
@@ -7254,7 +6337,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 226,
+      "id": 196,
       "tool_name": "LunarAI",
       "url": "lunariai.com",
       "category": "AI Development",
@@ -7277,7 +6360,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 227,
+      "id": 197,
       "tool_name": "Luuma",
       "url": "luuma.com",
       "category": "Customer Service",
@@ -7307,7 +6390,7 @@ const unifiedToolsData = {
       "enhanced_note": "URGENT: Database URL verification needed. The luuma.com website shows interior design project management software, not customer engagement/fintech analytics as described in database entry."
     },
     {
-      "id": 228,
+      "id": 198,
       "tool_name": "Machined",
       "url": "machined.ai",
       "category": "Content Creation",
@@ -7337,7 +6420,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 229,
+      "id": 199,
       "tool_name": "Magisto",
       "url": "magisto.com",
       "category": "Audio/Video Processing",
@@ -7368,7 +6451,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 230,
+      "id": 200,
       "tool_name": "MarketMuse",
       "url": "marketmuse.com",
       "category": "Content Research",
@@ -7401,7 +6484,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 231,
+      "id": 201,
       "tool_name": "Material AI",
       "url": "material.ai",
       "category": "Supply Chain",
@@ -7432,7 +6515,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 232,
+      "id": 202,
       "tool_name": "Meltwater",
       "url": "www.meltwater.com",
       "category": "Media Intelligence",
@@ -7478,7 +6561,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 233,
+      "id": 203,
       "tool_name": "Mem",
       "url": "mem.ai",
       "category": "Productivity Tools",
@@ -7511,7 +6594,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 234,
+      "id": 204,
       "tool_name": "Memo",
       "url": "memo.co",
       "category": "Data Analytics",
@@ -7557,7 +6640,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 235,
+      "id": 205,
       "tool_name": "Mention",
       "url": "mention.com",
       "category": "Media Intelligence",
@@ -7588,7 +6671,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 236,
+      "id": 206,
       "tool_name": "Metis Finance AI Toolkit",
       "url": "metisfinance.com",
       "category": "Finance",
@@ -7616,7 +6699,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 237,
+      "id": 207,
       "tool_name": "Microsoft Security Copilot",
       "url": "microsoft.com/security/blog",
       "category": "Cybersecurity",
@@ -7662,7 +6745,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 238,
+      "id": 208,
       "tool_name": "MidJourney",
       "url": "www.midjourney.com",
       "category": "General Tools",
@@ -7729,7 +6812,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 239,
+      "id": 209,
       "tool_name": "Missinglettr",
       "url": "missinglettr.com",
       "category": "Social Media Management",
@@ -7763,93 +6846,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Mistral Debuts Devstral Medium",
-      "url": "https://link.alphasignal.ai/yixReK",
-      "category": "developer-tools",
-      "source": "news-extraction",
-      "icon": "developer-tools",
-      "brief_purpose_summary": "Mistral Debuts Devstral Medium New model outperforming GPT-4.1 at lower cost with improved agentic coding and deployment flexibility.",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.269Z",
-        "source_article": "https://link.alphasignal.ai/yixReK",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 240
-    },
-    {
-      "tool_name": "Mistral's Voxtral Speech Recognition",
-      "url": "",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "Mistral's Voxtral Speech Recognition State-of-the-art open speech recognition outperforming Whisper v3, available in 24B and 3B variants. --- ### The Neuron",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.270Z",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 241
-    },
-    {
-      "tool_name": "MIT's Universal Robot Training Tool",
-      "url": "https://news.mit.edu/2025/new-tool-gives-anyone-ability-to-train-robot-0717",
-      "category": "developer-tools",
-      "source": "news-extraction",
-      "icon": "developer-tools",
-      "brief_purpose_summary": "MIT's Universal Robot Training Tool New handheld device enables anyone to train robots without coding through remote control, physical guidance, or demonstration learning. --- ### The Moonshots",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:15.995Z",
-        "source_article": "https://news.mit.edu/2025/new-tool-gives-anyone-ability-to-train-robot-0717",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 242
-    },
-    {
-      "id": 243,
+      "id": 210,
       "tool_name": "Moonbeam",
       "url": "www.gomoonbeam.com",
       "category": "Content Creation",
@@ -7879,7 +6876,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 244,
+      "id": 211,
       "tool_name": "Mubert",
       "url": "mubert.com",
       "category": "Audio/Video Processing",
@@ -7910,7 +6907,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 245,
+      "id": 212,
       "tool_name": "Murf AI",
       "url": "murf.ai",
       "category": "Audio/Video Processing",
@@ -7941,38 +6938,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Mythic Text",
-      "url": "https://www.mythictext.com/",
-      "category": "content-creation",
-      "source": "news-extraction",
-      "icon": "content-creation",
-      "brief_purpose_summary": "Mythic Text Transforms markdown or unformatted writing into structured blog posts, newsletters, and marketing assets. Can process hundreds of files in minutes for enterprise document pipelines.",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "Content",
-        "Writing"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.531Z",
-        "source_article": "https://www.mythictext.com/",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 246
-    },
-    {
-      "id": 247,
+      "id": 213,
       "tool_name": "Narrative Science Quill",
       "url": "narrativescience.com/quill",
       "category": "Language Processing",
@@ -8003,7 +6969,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 248,
+      "id": 214,
       "tool_name": "Netbase Quid",
       "url": "netbasequid.com",
       "category": "Data Analytics",
@@ -8049,7 +7015,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 249,
+      "id": 215,
       "tool_name": "NeuralText",
       "url": "www.neuraltext.com",
       "category": "Content Creation",
@@ -8080,7 +7046,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 250,
+      "id": 216,
       "tool_name": "Neuroflash Copywriting",
       "url": "neuroflash.com",
       "category": "Content Creation",
@@ -8111,7 +7077,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 251,
+      "id": 217,
       "tool_name": "NewsWhip",
       "url": "www.newswhip.com",
       "category": "Media Intelligence",
@@ -8141,36 +7107,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Nexus Supercomputer for Disease Research",
-      "url": "https://www.semafor.com/article/07/17/2025/us-national-science-foundation-to-finance-20m-supercomputer",
-      "category": "research",
-      "source": "news-extraction",
-      "icon": "research",
-      "brief_purpose_summary": "Nexus Supercomputer for Disease Research US National Science Foundation to finance $20M Nexus supercomputer designed to search for new disease cures.",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.270Z",
-        "source_article": "https://www.semafor.com/article/07/17/2025/us-national-science-foundation-to-finance-20m-supercomputer",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 252
-    },
-    {
-      "id": 253,
+      "id": 218,
       "tool_name": "NotebookLM",
       "url": "notebooklm.google.com",
       "category": "Research Tools",
@@ -8201,7 +7138,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 254,
+      "id": 219,
       "tool_name": "Notion",
       "url": "www.notion.com/",
       "category": "General Tools",
@@ -8242,25 +7179,10 @@ const unifiedToolsData = {
         "tertiary": "Build collaborative content creation workflows where PR teams use AI assistance for drafting, editing, and organizing press materials in real-time",
         "experimental_1": "Develop AI-enhanced media relationship management system that automatically logs interactions, suggests follow-ups, and maintains journalist preference profiles",
         "experimental_2": "Create predictive campaign planning tools using Notion's databases and AI to analyze past performance and suggest optimal strategies for upcoming initiatives"
-      },
-      "integration_potential_needs_update": true,
-      "update_history": [
-        {
-          "date": "2025-07-20T12:01:16.270Z",
-          "type": "news_mention",
-          "updates": [
-            "integration_potential_update",
-            "context",
-            "source_url",
-            "date"
-          ],
-          "source": "https://link.alphasignal.ai/f6lNkF",
-          "context": "Anthropic Launches Claude Tool Directory One-click integration to apps like Notion, Figma, and Stripe, enabling seamless workflow automation with Claude."
-        }
-      ]
+      }
     },
     {
-      "id": 255,
+      "id": 220,
       "tool_name": "Notis AI",
       "url": "notis.ai",
       "category": "Language Processing",
@@ -8289,7 +7211,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 256,
+      "id": 221,
       "tool_name": "NovelAI",
       "url": "novelai.net",
       "category": "Content Creation",
@@ -8319,7 +7241,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 257,
+      "id": 222,
       "tool_name": "Observe.ai",
       "url": "www.observe.ai",
       "category": "Data Analytics",
@@ -8349,7 +7271,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 258,
+      "id": 223,
       "tool_name": "Ocoya",
       "url": "www.ocoya.com",
       "category": "Content Creation",
@@ -8380,7 +7302,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 259,
+      "id": 224,
       "tool_name": "Onclusive",
       "url": "onclusive.com",
       "category": "Media Intelligence",
@@ -8411,7 +7333,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 260,
+      "id": 225,
       "tool_name": "Oneforma",
       "url": "oneforma.com",
       "category": "Collaboration Tools",
@@ -8440,37 +7362,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "option to hide",
-      "url": "https://x.com/DuckDuckGo/status/1944766326381089118",
-      "category": "research",
-      "source": "news-extraction",
-      "icon": "research",
-      "brief_purpose_summary": "DuckDuckGo Adds AI Image Filtering Feature DuckDuckGo introduces option to hide AI-generated images from search results, addressing user concerns about AI image spam. --- ### AI Breakfast",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "New"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-21T09:57:03.299Z",
-        "source_article": "https://x.com/DuckDuckGo/status/1944766326381089118",
-        "confidence": 0.7999999999999999,
-        "action_type": "launch",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 261
-    },
-    {
-      "id": 262,
+      "id": 226,
       "tool_name": "OpusClip",
       "url": "www.opus.pro",
       "category": "General Tools",
@@ -8516,7 +7408,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 263,
+      "id": 227,
       "tool_name": "Otter.ai",
       "url": "otter.ai/",
       "category": "General Tools",
@@ -8560,7 +7452,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 264,
+      "id": 228,
       "tool_name": "Outranking",
       "url": "www.outranking.io",
       "category": "Content Creation",
@@ -8591,7 +7483,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 265,
+      "id": 229,
       "tool_name": "Oxeye Application Security Platform",
       "url": "oxeye.io",
       "category": "Cybersecurity",
@@ -8620,7 +7512,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 266,
+      "id": 230,
       "tool_name": "Palo Alto Cortex XSIAM for Cloud",
       "url": "paloaltonetworks.com",
       "category": "Cybersecurity",
@@ -8651,7 +7543,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 267,
+      "id": 231,
       "tool_name": "Peppertype.ai",
       "url": "www.peppertype.ai",
       "category": "Content Creation",
@@ -8682,38 +7574,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Perplexity",
-      "url": "https://www.airtel.in/press-release/perplexity-partnership",
-      "category": "customer-service",
-      "source": "news-extraction",
-      "icon": "customer-service",
-      "brief_purpose_summary": "Perplexity Partners with Airtel for 360M Users in India Perplexity offers free 12-month Pro subscriptions to all Airtel customers, becoming the #1 app in India and expanding AI search access to 360 mi",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "Customer Support",
-        "Chatbot"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-21T09:57:03.299Z",
-        "source_article": "https://www.airtel.in/press-release/perplexity-partnership",
-        "confidence": 0.8999999999999999,
-        "action_type": "partnership",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 268
-    },
-    {
-      "id": 269,
+      "id": 232,
       "tool_name": "Perplexity AI Pro",
       "url": "www.perplexity.ai",
       "category": "Research Tools",
@@ -8743,7 +7604,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 270,
+      "id": 233,
       "tool_name": "Perplexity Max",
       "url": "perplexity.ai",
       "category": "Research Tools",
@@ -8796,7 +7657,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 271,
+      "id": 234,
       "tool_name": "Phrasee",
       "url": "phrasee.co",
       "category": "Marketing Automation",
@@ -8825,7 +7686,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 272,
+      "id": 235,
       "tool_name": "PicPost",
       "url": "picpost.social",
       "category": "Content Creation",
@@ -8856,7 +7717,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 273,
+      "id": 236,
       "tool_name": "Pictory",
       "url": "pictory.ai",
       "category": "General Tools",
@@ -8901,7 +7762,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 274,
+      "id": 237,
       "tool_name": "PicWish",
       "url": "picwish.com",
       "category": "General Tools",
@@ -8939,7 +7800,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 275,
+      "id": 238,
       "tool_name": "Pika",
       "url": "pika.art",
       "category": "Audio/Video Processing",
@@ -8970,7 +7831,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 276,
+      "id": 239,
       "tool_name": "Pinpoint",
       "url": "journaliststudio.google.com/pinpoint",
       "category": "Media Intelligence",
@@ -9001,7 +7862,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 277,
+      "id": 240,
       "tool_name": "Planable",
       "url": "planable.io",
       "category": "Content Creation",
@@ -9032,7 +7893,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 278,
+      "id": 241,
       "tool_name": "Podcastle",
       "url": "podcastle.ai",
       "category": "Audio/Video Processing",
@@ -9063,7 +7924,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 279,
+      "id": 242,
       "tool_name": "PR Newswire",
       "url": "www.prnewswire.com",
       "category": "Media Intelligence",
@@ -9094,7 +7955,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 280,
+      "id": 243,
       "tool_name": "Prezly",
       "url": "www.prezly.com",
       "category": "Media Intelligence",
@@ -9102,7 +7963,7 @@ const unifiedToolsData = {
       "icon": "media",
       "brief_purpose_summary": "A PR software platform for creating branded newsrooms, managing media contacts, and distributing multimedia stories to journalists.",
       "feature_breakdown": "Combines a media database/CRM (store journalist contacts, their outlets, interactions) with an emailing tool to send personalized pitches or press releases and track opens/clicks. Allows creation of branded newsrooms (press hubs) where all press releases and media assets can live for journalist access. Prezly includes engagement analytics, contact sentiment (notes on journalist preferences or past interactions), and team collaboration for PR workflows. It essentially merges the press list, email distribution, and newsroom hosting into one tool.",
-      "pricing_model": "Subscription SaaS, tiered by number of users and contacts. Core plans range approximately from ~€50-€60/month for basic (if paying annually, single user) up to a few hundred euros for teams. For example, Core plan around €80/mo (annual) per user, Premium ~€120/mo per user (with more newsrooms, contacts), and Enterprise custom. 14-day free trial available; discount for annual commitment ~20%. No free forever plan beyond trial.",
+      "pricing_model": "Subscription SaaS, tiered by number of users and contacts. Core plans range approximately from ~\u20ac50-\u20ac60/month for basic (if paying annually, single user) up to a few hundred euros for teams. For example, Core plan around \u20ac80/mo (annual) per user, Premium ~\u20ac120/mo per user (with more newsrooms, contacts), and Enterprise custom. 14-day free trial available; discount for annual commitment ~20%. No free forever plan beyond trial.",
       "pros_cons_limitations": "Pros: Unified PR CRM and newsroom tool - easy to manage press contacts, send personalized pitches, and host an online press center; very intuitive interface; strong customer support. Cons: Premium pricing for higher tiers (can be pricey as team scales); not a media monitoring tool, so still need separate monitoring; email send functionality may hit limits for extremely large distributions (better for targeted outreach). Limitations: Focused on media relations workflow - doesn't do social listening or media clipping. Integrations mostly via API/Zapier, so not plug-and-play with every ecosystem without effort.",
       "integration_potential": "Good - offers an API and webhooks for integration (some clients connect Prezly to Slack for incoming journalist replies, or to CRM systems). It can integrate with media databases or monitoring tools by importing/exporting contacts and coverage. Also integrates with various content management systems for embedding newsroom content. Overall, it plays nicely in a PR tech stack as the outreach and newsroom component.",
       "learning_curve": "Low - the platform is designed with simplicity (drag-and-drop email editor, straightforward contact import). Most PR professionals can get up to speed within a day or two. Help center guides cover setting up a newsroom, contact segments, etc. It doesn't require technical expertise; the main learning is crafting good email pitches, which is domain skill more than tool skill.",
@@ -9125,7 +7986,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 281,
+      "id": 244,
       "tool_name": "Propel",
       "url": "www.propelmypr.com",
       "category": "Media Intelligence",
@@ -9156,7 +8017,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 282,
+      "id": 245,
       "tool_name": "Prowly",
       "url": "prowly.com",
       "category": "Media Intelligence",
@@ -9187,7 +8048,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 283,
+      "id": 246,
       "tool_name": "Quillbot",
       "url": "quillbot.com",
       "category": "Content Creation",
@@ -9217,7 +8078,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 284,
+      "id": 247,
       "tool_name": "RAD Security Cloud Workload Protection",
       "url": "radsecurity.io",
       "category": "Cybersecurity",
@@ -9247,7 +8108,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 285,
+      "id": 248,
       "tool_name": "Rankscale AI Visibility Tracker",
       "url": "rankscale.ai",
       "category": "Data Analytics",
@@ -9277,7 +8138,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 286,
+      "id": 249,
       "tool_name": "Reality Defender Deepfake Detection",
       "url": "realitydefender.com",
       "category": "Cybersecurity",
@@ -9307,7 +8168,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 287,
+      "id": 250,
       "tool_name": "RebelMouse",
       "url": "rebelmouse.com",
       "category": "Publishing Tools",
@@ -9336,7 +8197,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 288,
+      "id": 251,
       "tool_name": "RecCloud",
       "url": "reccloud.com",
       "category": "General Tools",
@@ -9381,7 +8242,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 289,
+      "id": 252,
       "tool_name": "Redocly",
       "url": "redoc.ly",
       "category": "API & Documentation",
@@ -9410,7 +8271,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 290,
+      "id": 253,
       "tool_name": "ReelKite",
       "url": "reelkite.com",
       "category": "Audio/Video Processing",
@@ -9441,7 +8302,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 291,
+      "id": 254,
       "tool_name": "Regology",
       "url": "www.regology.com",
       "category": "Compliance Tools",
@@ -9470,7 +8331,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 292,
+      "id": 255,
       "tool_name": "Relume",
       "url": "www.relume.io",
       "category": "General Tools",
@@ -9506,7 +8367,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 293,
+      "id": 256,
       "tool_name": "Rendezvous Social",
       "url": "rendezvous.social",
       "category": "Social Analytics",
@@ -9535,7 +8396,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 294,
+      "id": 257,
       "tool_name": "Replit",
       "url": "replit.com",
       "category": "General Tools",
@@ -9580,7 +8441,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 295,
+      "id": 258,
       "tool_name": "Repurpose.io",
       "url": "repurpose.io",
       "category": "Content Creation",
@@ -9610,7 +8471,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 296,
+      "id": 259,
       "tool_name": "Resemble AI",
       "url": "www.resemble.ai",
       "category": "Audio/Video Processing",
@@ -9641,15 +8502,15 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 297,
+      "id": 260,
       "tool_name": "Rev AI",
       "url": "www.rev.ai",
       "category": "Language Processing",
       "source": "ai-list",
       "icon": "transcription",
       "brief_purpose_summary": "[DEPRECATED - Tool no longer accessible] A speech recognition API that provides accurate transcription and captioning services. It offers both automated and human-reviewed options for various audio and video content.",
-      "feature_breakdown": "5 core features: (1) High-accuracy speech-to-text API with 0.3¢/minute pricing and industry-leading accuracy, (2) Real-time transcription with live streaming capabilities, (3) Speaker diarization for multi-speaker identification, (4) Custom vocabulary for industry-specific terminology, (5) Multilingual transcription supporting 36+ languages. Advanced features include sentiment analysis, keyword detection, confidence scoring, and human transcription hybrid options. Uses advanced ASR models including Reverb and Reverb Turbo with 25-30% accuracy improvements.",
-      "pricing_model": "Pay-as-you-go: $0.003/minute (0.3¢/minute) for automated transcription, 15-second minimum billing rounded to nearest second. Human transcription: $1.99/minute with 99%+ accuracy guarantee, 12-24 hour turnaround. Real-time streaming: Same per-minute pricing. Volume discounts available for large customers. No subscription fees or minimum commitments. Enterprise pricing available for custom deployments.",
+      "feature_breakdown": "5 core features: (1) High-accuracy speech-to-text API with 0.3\u00a2/minute pricing and industry-leading accuracy, (2) Real-time transcription with live streaming capabilities, (3) Speaker diarization for multi-speaker identification, (4) Custom vocabulary for industry-specific terminology, (5) Multilingual transcription supporting 36+ languages. Advanced features include sentiment analysis, keyword detection, confidence scoring, and human transcription hybrid options. Uses advanced ASR models including Reverb and Reverb Turbo with 25-30% accuracy improvements.",
+      "pricing_model": "Pay-as-you-go: $0.003/minute (0.3\u00a2/minute) for automated transcription, 15-second minimum billing rounded to nearest second. Human transcription: $1.99/minute with 99%+ accuracy guarantee, 12-24 hour turnaround. Real-time streaming: Same per-minute pricing. Volume discounts available for large customers. No subscription fees or minimum commitments. Enterprise pricing available for custom deployments.",
       "pros_cons_limitations": "Pros: Industry-leading accuracy with lowest word error rate, competitive pricing, excellent API documentation, strong developer support, compliance certifications. Cons: Limited free trial options, human transcription not available via web interface, some audio types considered 'unworkable', requires stable internet for real-time features. Limitations: English-only for advanced models, human transcription limited to clear English audio, 255 character limit per custom vocabulary phrase.",
       "integration_potential": "API availability: Comprehensive REST API with extensive documentation, webhooks for callback notifications, SDKs available for multiple programming languages. Native integrations: Pipedream for 2,700+ app connections, Zapier support for workflow automation. Developer tools include sandbox mode for testing, comprehensive API documentation, and code examples in multiple languages.",
       "learning_curve": "Low to Medium - Basic API implementation straightforward for developers with clear documentation and examples. Non-technical users may need developer assistance. Webhook implementation and advanced features require moderate technical knowledge. Excellent documentation and developer support reduce learning curve.",
@@ -9671,7 +8532,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 298,
+      "id": 261,
       "tool_name": "Reword",
       "url": "reword.co",
       "category": "Content Creation",
@@ -9701,36 +8562,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "rivaling GPT-4.1 and Claude Opus",
-      "url": "https://link.alphasignal.ai/uW5851",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "Moonshot Launches Kimi K2 Open-Source SOTA Model Kimi K2 is a 1T parameter MoE model with 32B active parameters achieving 71.6% on SWE-Bench Verified, rivaling GPT-4.1 and Claude Opus. Features tool u",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.268Z",
-        "source_article": "https://link.alphasignal.ai/uW5851",
-        "confidence": 0.7999999999999999,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 299
-    },
-    {
-      "id": 300,
+      "id": 262,
       "tool_name": "Riverside.fm",
       "url": "riverside.fm",
       "category": "Audio/Video Processing",
@@ -9761,7 +8593,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 301,
+      "id": 263,
       "tool_name": "ROI Hunter",
       "url": "roihunter.com",
       "category": "Marketing Automation",
@@ -9774,7 +8606,7 @@ const unifiedToolsData = {
       "integration_potential": "Native integrations: Facebook, Google Ads, Google Analytics, Shopify, WooCommerce, Magento, BigCommerce; CRM integrations: Salesforce, HubSpot, Agile CRM, Copper; Analytics: Google Analytics, Zoho Analytics; Additional: Zapier, AppsFlyer, Branch, Adjust for broader connectivity",
       "learning_curve": "High - Multiple sources confirm ROI Hunter has a steep learning curve requiring significant training and expertise. Complex initial setup process, confusing campaign reporting interface, and extensive features require specialist knowledge for onboarding period. Recommended to hire specialists during initial period",
       "geo_regulatory_limitations": "GDPR compliant for EU operations; Available globally but primarily serves e-commerce and retail businesses; Integrates with major ad platforms (Meta, Google) which have their own regional restrictions; No specific geographic limitations mentioned beyond standard data protection compliance",
-      "case_studies": "Retailers report doubling ad performance through product-level optimization; Joom, Autodoc, 12 Storeez achieved improved user acquisition and conversion campaigns; Adidas, Sephora, Estée Lauder, LG use platform for performance marketing; Multiple e-commerce brands report positive ROI scaling through enhanced Facebook algorithms and product promotion optimization",
+      "case_studies": "Retailers report doubling ad performance through product-level optimization; Joom, Autodoc, 12 Storeez achieved improved user acquisition and conversion campaigns; Adidas, Sephora, Est\u00e9e Lauder, LG use platform for performance marketing; Multiple e-commerce brands report positive ROI scaling through enhanced Facebook algorithms and product promotion optimization",
       "use_cases_in_pr": [
         "Optimizing paid social for brand campaigns",
         "Analyzing ad ROI for budget planning"
@@ -9789,35 +8621,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Runway's Act-Two Motion Capture Update",
-      "url": "",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "Runway's Act-Two Motion Capture Update Next-gen motion capture for head, face, body, and hands with enhanced fidelity for film and VFX.",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.270Z",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 302
-    },
-    {
-      "id": 303,
+      "id": 264,
       "tool_name": "RunwayML",
       "url": "runwayml.com/",
       "category": "General Tools",
@@ -9862,7 +8666,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 304,
+      "id": 265,
       "tool_name": "Scalenut",
       "url": "www.scalenut.com",
       "category": "Content Creation",
@@ -9893,7 +8697,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 305,
+      "id": 266,
       "tool_name": "Scribe",
       "url": "scribehow.com",
       "category": "Content Creation",
@@ -9921,25 +8725,10 @@ const unifiedToolsData = {
         "Automation",
         "Guides"
       ],
-      "cision_use_suggestions": null,
-      "integration_potential_needs_update": true,
-      "update_history": [
-        {
-          "date": "2025-07-20T12:01:16.790Z",
-          "type": "news_mention",
-          "updates": [
-            "integration_potential_update",
-            "context",
-            "source_url",
-            "date"
-          ],
-          "source": "https://www.8020ai.co",
-          "context": "Claude & Canva Integration Anthropic's Claude chatbot can now connect directly with Canva, allowing users to create, edit, and publish designs within the chat interface. Available to paid Claude subscribers through MCP server."
-        }
-      ]
+      "cision_use_suggestions": null
     },
     {
-      "id": 306,
+      "id": 267,
       "tool_name": "Seal Security Patch Automation",
       "url": "sealsecurity.com",
       "category": "Cybersecurity",
@@ -9969,7 +8758,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 307,
+      "id": 268,
       "tool_name": "Search Atlas",
       "url": "searchatlas.com",
       "category": "Data Analytics",
@@ -9999,7 +8788,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 308,
+      "id": 269,
       "tool_name": "Sembly AI",
       "url": "www.sembly.ai",
       "category": "Language Processing",
@@ -10029,7 +8818,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 309,
+      "id": 270,
       "tool_name": "Semrush",
       "url": "www.semrush.com",
       "category": "Data Analytics",
@@ -10060,7 +8849,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 310,
+      "id": 271,
       "tool_name": "Sendible",
       "url": "www.sendible.com",
       "category": "Content Creation",
@@ -10091,7 +8880,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 311,
+      "id": 272,
       "tool_name": "Sensay",
       "url": "sensay.io",
       "category": "AI Assistants",
@@ -10120,7 +8909,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 312,
+      "id": 273,
       "tool_name": "SEO.ai",
       "url": "seo.ai",
       "category": "Content Creation",
@@ -10151,14 +8940,14 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 313,
+      "id": 274,
       "tool_name": "SEOwind",
       "url": "seowind.io",
       "category": "Content Creation",
       "source": "ai-list",
       "icon": "ai-assistant",
       "brief_purpose_summary": "An AI content tool that creates comprehensive content briefs and articles based on SERP analysis and data-driven insights.",
-      "feature_breakdown": "1. CyborgMethod™ approach combining multi-agent AI system with RAG (Retrieval-Augmented Generation) for human-like content creation using Claude 3.5, Gemini 1.5 Pro, Perplexity, and GPT-4o models. 2. Comprehensive SEO research including SERP analysis, real-time SEO data, keyword clustering, and competitive intelligence from Google, Quora, and Reddit. 3. Data-rich content creation with E-E-A-T compliance, integrated stats and quotes, brand voice alignment, and expert insights incorporation. 4. Content optimization and updating with internal link suggestions, relevant statistics integration, and SME insights for traffic improvement. 5. SEO Missions feature for keyword gap analysis and competitor research with search volume, difficulty, and intent analysis.",
+      "feature_breakdown": "1. CyborgMethod\u2122 approach combining multi-agent AI system with RAG (Retrieval-Augmented Generation) for human-like content creation using Claude 3.5, Gemini 1.5 Pro, Perplexity, and GPT-4o models. 2. Comprehensive SEO research including SERP analysis, real-time SEO data, keyword clustering, and competitive intelligence from Google, Quora, and Reddit. 3. Data-rich content creation with E-E-A-T compliance, integrated stats and quotes, brand voice alignment, and expert insights incorporation. 4. Content optimization and updating with internal link suggestions, relevant statistics integration, and SME insights for traffic improvement. 5. SEO Missions feature for keyword gap analysis and competitor research with search volume, difficulty, and intent analysis.",
       "pricing_model": "Tiered monthly pricing with pay-as-you-go option.",
       "pros_cons_limitations": "Pros: Content brief generator and SERP analyzer. Cons: Limited advanced formatting controls.",
       "integration_potential": "Exports content and briefs to common formats; no direct CMS plugins.",
@@ -10182,7 +8971,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 314,
+      "id": 275,
       "tool_name": "Signal AI",
       "url": "www.signal-ai.com",
       "category": "Media Intelligence",
@@ -10211,7 +9000,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 315,
+      "id": 276,
       "tool_name": "SimilarWeb",
       "url": "www.similarweb.com",
       "category": "Data Analytics",
@@ -10241,7 +9030,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 316,
+      "id": 277,
       "tool_name": "Simplified",
       "url": "simplified.com",
       "category": "Content Creation",
@@ -10272,7 +9061,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 317,
+      "id": 278,
       "tool_name": "SlidesAI",
       "url": "www.slidesai.io",
       "category": "General Tools",
@@ -10306,7 +9095,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 318,
+      "id": 279,
       "tool_name": "Snyk Cloud Security",
       "url": "snyk.io",
       "category": "Cybersecurity",
@@ -10336,7 +9125,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 319,
+      "id": 280,
       "tool_name": "Social Flow",
       "url": "estoreera.gumroad.com/l/SocialMediaAutomation",
       "category": "Content Creation",
@@ -10367,7 +9156,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 320,
+      "id": 281,
       "tool_name": "SocialBee",
       "url": "socialbee.com",
       "category": "Content Creation",
@@ -10398,7 +9187,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 321,
+      "id": 282,
       "tool_name": "Soundraw",
       "url": "soundraw.io",
       "category": "General Tools",
@@ -10444,7 +9233,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 322,
+      "id": 283,
       "tool_name": "SparkToro",
       "url": "sparktoro.com",
       "category": "Data Analytics",
@@ -10474,7 +9263,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 323,
+      "id": 284,
       "tool_name": "Speechify",
       "url": "speechify.com",
       "category": "Audio/Video Processing",
@@ -10504,13 +9293,13 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 324,
+      "id": 285,
       "tool_name": "Spellbook by Rally",
       "url": "www.spellbook.legal",
       "category": "Compliance Tools",
       "source": "pdf",
       "icon": "legal",
-      "brief_purpose_summary": "A generative AI contract drafting and review assistant that lives in Microsoft Word, helping lawyers draft contracts 10× faster. Spellbook uses GPT-4 and other models to suggest language, redline clauses, answer questions about contract text, and benchmark terms against market standards.",
+      "brief_purpose_summary": "A generative AI contract drafting and review assistant that lives in Microsoft Word, helping lawyers draft contracts 10\u00d7 faster. Spellbook uses GPT-4 and other models to suggest language, redline clauses, answer questions about contract text, and benchmark terms against market standards.",
       "feature_breakdown": "Provides AI-driven clause suggestions and edits in-line with your document, highlights risky terms, answers natural language questions about contract provisions, and offers comparisons to standard clause libraries. Seamlessly integrates as a Word add-in for ease of use in legal workflows.",
       "pricing_model": "7-day free trial available; Pricing determined by number of users on license (custom pricing); Estimated at approximately $180/month per user based on market analysis; Academic institutions receive free access; Enterprise pricing available on request; Includes CoCounsel integration and Microsoft Word add-in",
       "pros_cons_limitations": "Pros: First generative AI copilot for legal work, powered by GPT-4o with high accuracy for legal contexts, seamless Microsoft Word integration, 10x faster contract drafting and review, zero data retention policy ensuring privacy, trusted by 3,000+ law firms globally. Cons: Currently only available for transactional lawyers, requires Microsoft Word, learning curve for AI-assisted workflows, effectiveness depends on AI model accuracy. Limitations: Limited to commercial legal work, not designed for consumer legal advice, requires stable internet connection, may need manual review of AI suggestions",
@@ -10533,7 +9322,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 325,
+      "id": 286,
       "tool_name": "Sprinklr",
       "url": "www.sprinklr.com",
       "category": "Media Intelligence",
@@ -10564,7 +9353,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 326,
+      "id": 287,
       "tool_name": "Stable Diffusion",
       "url": "stability.ai",
       "category": "Audio/Video Processing",
@@ -10594,7 +9383,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 327,
+      "id": 288,
       "tool_name": "StarryAI",
       "url": "starryai.com",
       "category": "General Tools",
@@ -10602,7 +9391,7 @@ const unifiedToolsData = {
       "icon": "ai-assistant",
       "brief_purpose_summary": "AI art generator creating digital artwork and avatars from text prompts with full ownership rights and commercial usage",
       "feature_breakdown": "Two AI models (Altair for abstract art, Orion for realistic), 1000+ art styles, avatar generation (starrytars), evolve feature for refinement, upscaling capabilities, multiple canvas sizes (square to mobile portrait), prompt builder, style library, no watermarks, full ownership rights, web and mobile apps, API access, Stable Diffusion and GAN technology",
-      "pricing_model": "Free plan: 5 daily credits with no watermarks and full ownership rights. Starter: $1.99/week ($95.99 annually) with 200 weekly generations. Unlimited Pro: $7.99/week ($384 annually) with unlimited generations and priority processing. Unlimited Pro Max: $15.99/week ($768 annually) with maximum features. Credit packs available: 40 credits for $15.99 (40¢ each) to 1,000 credits for $149.99 (15¢ each). All paid plans include commercial usage rights and no watermarks.",
+      "pricing_model": "Free plan: 5 daily credits with no watermarks and full ownership rights. Starter: $1.99/week ($95.99 annually) with 200 weekly generations. Unlimited Pro: $7.99/week ($384 annually) with unlimited generations and priority processing. Unlimited Pro Max: $15.99/week ($768 annually) with maximum features. Credit packs available: 40 credits for $15.99 (40\u00a2 each) to 1,000 credits for $149.99 (15\u00a2 each). All paid plans include commercial usage rights and no watermarks.",
       "pros_cons_limitations": "Pros: Generous free tier, full ownership rights, no watermarks, user-friendly interface, multiple art styles. Cons: Mixed quality results, app stability issues after updates, limited customization compared to competitors. Limitations: 60-second generation time, internet dependency, copyright restrictions on protected content",
       "integration_potential": "Good - HTTP API available for any programming language, comprehensive documentation, suitable for automation and integration into existing workflows, supports web and native app integration",
       "learning_curve": "Low - Simple text-to-image interface, no technical expertise required, prompt builder assists with creation, intuitive mobile and web apps",
@@ -10631,7 +9420,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 328,
+      "id": 289,
       "tool_name": "Sudowrite",
       "url": "www.sudowrite.com",
       "category": "Content Creation",
@@ -10661,7 +9450,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 329,
+      "id": 290,
       "tool_name": "Suno AI",
       "url": "www.suno.ai",
       "category": "Audio/Video Processing",
@@ -10692,7 +9481,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 330,
+      "id": 291,
       "tool_name": "Supercreator.ai",
       "url": "www.supercreator.ai",
       "category": "Audio/Video Processing",
@@ -10722,7 +9511,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 331,
+      "id": 292,
       "tool_name": "Supermoon",
       "url": "getsupermoon.com",
       "category": "Content Creation",
@@ -10751,7 +9540,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 332,
+      "id": 293,
       "tool_name": "Surfer SEO",
       "url": "surferseo.com",
       "category": "Content Creation",
@@ -10782,7 +9571,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 333,
+      "id": 294,
       "tool_name": "Synthesia",
       "url": "www.synthesia.io",
       "category": "General Tools",
@@ -10833,7 +9622,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 334,
+      "id": 295,
       "tool_name": "Talkwalker",
       "url": "www.talkwalker.com",
       "category": "Media Intelligence",
@@ -10864,7 +9653,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 335,
+      "id": 296,
       "tool_name": "Taskade",
       "url": "www.taskade.com",
       "category": "Content Creation",
@@ -10894,7 +9683,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 336,
+      "id": 297,
       "tool_name": "Text Cortex",
       "url": "textcortex.com",
       "category": "Content Creation",
@@ -10925,7 +9714,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 337,
+      "id": 298,
       "tool_name": "Thomson Reuters CoCounsel",
       "url": "legal.thomsonreuters.com/cocounsel",
       "category": "Compliance Tools",
@@ -10955,7 +9744,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 338,
+      "id": 299,
       "tool_name": "Tome",
       "url": "tome.app/",
       "category": "General Tools",
@@ -10996,7 +9785,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 339,
+      "id": 300,
       "tool_name": "Topic",
       "url": "www.topic.com",
       "category": "Content Creation",
@@ -11026,7 +9815,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 340,
+      "id": 301,
       "tool_name": "Treendly",
       "url": "treendly.com",
       "category": "Data Analytics",
@@ -11055,7 +9844,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 341,
+      "id": 302,
       "tool_name": "Trello",
       "url": "trello.com",
       "category": "Project Management",
@@ -11084,7 +9873,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 342,
+      "id": 303,
       "tool_name": "Typefully",
       "url": "typefully.com",
       "category": "Content Creation",
@@ -11115,7 +9904,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 343,
+      "id": 304,
       "tool_name": "Undetectable AI",
       "url": "undetectable.ai",
       "category": "Content Creation",
@@ -11145,7 +9934,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 344,
+      "id": 305,
       "tool_name": "VentureMind AI",
       "url": "venturemind.ai",
       "category": "Productivity Tools",
@@ -11175,7 +9964,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 345,
+      "id": 306,
       "tool_name": "Vertex AI",
       "url": "cloud.google.com/vertex-ai",
       "category": "AI Assistants",
@@ -11206,99 +9995,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Voxtral Voice",
-      "url": "https://aidisruption.ai/p/le-chat-unveils-voxtral-worlds-top",
-      "category": "customer-service",
-      "source": "news-extraction",
-      "icon": "customer-service",
-      "brief_purpose_summary": "Mistral AI Launches Voxtral Voice Model Mistral AI released Voxtral, claimed as the \"world's best\" open-source voice model, alongside multimodal models and Le Chat upgrades to compete with ChatGPT. --",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "Customer Support",
-        "Chatbot",
-        "New"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:15.995Z",
-        "source_article": "https://aidisruption.ai/p/le-chat-unveils-voxtral-worlds-top",
-        "confidence": 0.9999999999999999,
-        "action_type": "launch",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 346
-    },
-    {
-      "tool_name": "Voxtral Voice Model",
-      "url": "https://aidisruption.ai/p/le-chat-unveils-voxtral-worlds-top",
-      "category": "customer-service",
-      "source": "news-extraction",
-      "icon": "customer-service",
-      "brief_purpose_summary": "Mistral AI Launches Voxtral Voice Model Mistral AI released Voxtral, claimed as the \"world's best\" open-source voice model, alongside multimodal models and Le Chat upgrades to compete with ChatGPT. --",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "Customer Support",
-        "Chatbot"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:15.995Z",
-        "source_article": "https://aidisruption.ai/p/le-chat-unveils-voxtral-worlds-top",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 347
-    },
-    {
-      "tool_name": "W&B Inference Launch with Kimi K2",
-      "url": "https://api.inference.wandb.ai/v1)",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "W&B Inference Launch with Kimi K2 Weights & Biases launches inference platform with Kimi K2 available within 3 days of model release, offering $50 credits for testing.",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.269Z",
-        "source_article": "https://api.inference.wandb.ai/v1)",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 348
-    },
-    {
-      "id": 349,
+      "id": 307,
       "tool_name": "Wappalyzer",
       "url": "www.wappalyzer.com",
       "category": "Data Analytics",
@@ -11328,7 +10025,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 350,
+      "id": 308,
       "tool_name": "Warren AI",
       "url": "warren.ai",
       "category": "Finance",
@@ -11358,7 +10055,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 351,
+      "id": 309,
       "tool_name": "Will",
       "url": "heywill.ai",
       "category": "Content Creation",
@@ -11366,7 +10063,7 @@ const unifiedToolsData = {
       "icon": "ai-assistant",
       "brief_purpose_summary": "An AI-powered LinkedIn assistant (by Willow) that helps professionals create and publish authentic LinkedIn posts via WhatsApp. Users can send voice notes or text prompts to 'Will,' which then drafts on-brand posts in the user's tone, suggests topics, and even directly posts to LinkedIn, streamlining personal branding on social media.",
       "feature_breakdown": "WhatsApp-based AI copywriter specialized in LinkedIn content creation with 4 core features: 1) Conversational content creation through natural language processing, supporting voice messages and text input, 2) Personal writing style learning and adaptation using AI analysis of up to 50 recent LinkedIn posts, 3) Direct LinkedIn publishing integration with explicit permission protocols, 4) Multi-AI model optimization using Claude, ChatGPT, and Gemini for optimal content output. Unique differentiators include distraction-free WhatsApp interface, no separate app required, conversational UX design, and specialized LinkedIn personal branding focus. Proprietary technology combines multiple LLMs for enhanced content quality.",
-      "pricing_model": "Subscription-based pricing: 7-day free trial with unlimited posting during trial period. Standard pricing: €25/month after trial. Early adopter special: €15/month for first 1000 users (limited time offer). Single subscription covers unlimited LinkedIn post creation, style analysis, direct publishing, and full WhatsApp integration. No usage limits or character restrictions mentioned. Subscription includes access to all AI models and features.",
+      "pricing_model": "Subscription-based pricing: 7-day free trial with unlimited posting during trial period. Standard pricing: \u20ac25/month after trial. Early adopter special: \u20ac15/month for first 1000 users (limited time offer). Single subscription covers unlimited LinkedIn post creation, style analysis, direct publishing, and full WhatsApp integration. No usage limits or character restrictions mentioned. Subscription includes access to all AI models and features.",
       "pros_cons_limitations": "Pros: Ultra-convenient WhatsApp interface eliminates app switching, learns and maintains personal writing style authenticity, supports voice message input for natural expression, direct LinkedIn publishing workflow, no prompting required unlike ChatGPT, combines multiple AI models for optimal results, mobile-first design for on-the-go usage, 24/7 availability. Cons: Limited to LinkedIn only (no other social platforms), requires WhatsApp as dependency, only supports personal profiles not company pages, single account limitation per WhatsApp number, pricing in Euros may involve currency conversion fees. Limitations: LinkedIn Personal Profiles only, no API access, requires explicit publishing permissions, limited to individual use cases.",
       "integration_potential": "Connects to LinkedIn via API to draft and publish posts. Runs entirely through WhatsApp - no separate app needed. No direct integrations with other social platforms.",
       "learning_curve": "Low - works through natural chat. Users simply talk or text their ideas, and the AI handles drafting and publishing, making it very straightforward to use.",
@@ -11389,7 +10086,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 352,
+      "id": 310,
       "tool_name": "Wiz Cloud Security Platform",
       "url": "wiz.io",
       "category": "Cybersecurity",
@@ -11425,7 +10122,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 353,
+      "id": 311,
       "tool_name": "Wordtune",
       "url": "www.wordtune.com",
       "category": "Content Creation",
@@ -11455,7 +10152,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 354,
+      "id": 312,
       "tool_name": "Writesonic",
       "url": "writesonic.com",
       "category": "Content Creation",
@@ -11485,7 +10182,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 355,
+      "id": 313,
       "tool_name": "YouTube Studio",
       "url": "studio.youtube.com",
       "category": "Audio/Video Processing",
@@ -11516,7 +10213,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 356,
+      "id": 314,
       "tool_name": "Zendesk AI",
       "url": "www.zendesk.com",
       "category": "Customer Service",
@@ -11547,7 +10244,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 357,
+      "id": 315,
       "tool_name": "Zignal Labs",
       "url": "zignallabs.com",
       "category": "Media Intelligence",
@@ -11577,7 +10274,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 358,
+      "id": 316,
       "tool_name": "Zimmwriter",
       "url": "zimmwriter.com",
       "category": "Content Creation",
@@ -11608,7 +10305,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 359,
+      "id": 317,
       "tool_name": "Zynous",
       "url": "zynous.com",
       "category": "Content Creation",
@@ -11683,24 +10380,23 @@ const unifiedToolsData = {
       "Web Development",
       "Workflow Automation"
     ],
-    "lastUpdated": "2025-07-21T09:57:03.311Z",
-    "lastVerification": "2025-07-18T08:52:22.981Z",
-    "totalCount": 359,
-    "lastAutomatedUpdate": {
-      "date": "2025-07-21T09:57:03.311Z",
-      "newTools": 5,
-      "updates": 0,
-      "source": "7-21-25.txt"
-    }
+    "lastUpdated": "2025-07-18T08:52:22.981Z",
+    "lastVerification": "2025-07-18T08:52:22.981Z"
   }
 };
-
-// Browser compatibility
-if (typeof window !== 'undefined') {
+  
+  // Make it available globally
+  if (typeof window !== 'undefined') {
     window.unifiedToolsData = unifiedToolsData;
-}
-
-// CommonJS export for Node.js scripts  
-if (typeof module !== 'undefined' && module.exports) {
+  }
+  
+  // CommonJS export
+  if (typeof module !== 'undefined' && module.exports) {
     module.exports = unifiedToolsData;
-}
+  }
+  
+  // AMD support
+  if (typeof define === 'function' && define.amd) {
+    define([], function() { return unifiedToolsData; });
+  }
+})();

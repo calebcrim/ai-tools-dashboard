@@ -1,7 +1,7 @@
 // Auto-generated unified tools data
-// Last updated: 2025-07-21T09:57:03.311Z
-// Total tools: 359
-// Last automated update: 2025-07-21T09:57:03.311Z
+// Last updated: 2025-07-20T12:01:16.277Z
+// Total tools: 338
+// Last automated update: 2025-07-20T12:01:16.277Z
 
 const unifiedToolsData = {
   "tools": [
@@ -271,38 +271,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "AI Companions",
-      "url": "https://www.therundown.ai",
-      "category": "content-creation",
-      "source": "news-extraction",
-      "icon": "content-creation",
-      "brief_purpose_summary": "xAI Launches AI Companions Just days after apologizing for offensive outputs, xAI launched AI companions with animated 3D avatars including anime characters, featuring voice conversations and gamified",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "Content",
-        "Writing"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.789Z",
-        "source_article": "https://www.therundown.ai",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 9
-    },
-    {
-      "id": 10,
+      "id": 9,
       "tool_name": "AI Writer",
       "url": "ai-writer.com",
       "category": "Content Creation",
@@ -333,7 +302,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 11,
+      "id": 10,
       "tool_name": "AInvest",
       "url": "ainvest.com",
       "category": "Finance",
@@ -372,7 +341,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 12,
+      "id": 11,
       "tool_name": "Aisera",
       "url": "aisera.com",
       "category": "Customer Service",
@@ -402,7 +371,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 13,
+      "id": 12,
       "tool_name": "AlphaSense",
       "url": "www.alpha-sense.com",
       "category": "Data Analytics",
@@ -433,7 +402,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 14,
+      "id": 13,
       "tool_name": "Also Asked",
       "url": "alsoasked.com",
       "category": "Research Tools",
@@ -463,7 +432,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 15,
+      "id": 14,
       "tool_name": "Anania",
       "url": "anania.ai",
       "category": "Data Analytics",
@@ -493,7 +462,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 16,
+      "id": 15,
       "tool_name": "AnswerThePublic",
       "url": "answerthepublic.com",
       "category": "Content Research",
@@ -532,7 +501,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 17,
+      "id": 16,
       "tool_name": "Anyword",
       "url": "anyword.com",
       "category": "Content Creation",
@@ -569,7 +538,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 18,
+      "id": 17,
       "tool_name": "Apollo.io",
       "url": "apollo.io",
       "category": "CRM & Sales",
@@ -599,7 +568,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 19,
+      "id": 18,
       "tool_name": "Arcads",
       "url": "arcads.ai",
       "category": "Audio/Video Processing",
@@ -629,7 +598,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 20,
+      "id": 19,
       "tool_name": "Arctic Wolf Aurora Platform",
       "url": "arcticwolf.com",
       "category": "Cybersecurity",
@@ -667,7 +636,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 21,
+      "id": 20,
       "tool_name": "Arize AI",
       "url": "arize.com",
       "category": "AI Development",
@@ -697,7 +666,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 22,
+      "id": 21,
       "tool_name": "Article Forge",
       "url": "www.articleforge.com",
       "category": "Content Creation",
@@ -728,66 +697,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "as Autonomous Developer",
-      "url": "https://app.devin.ai/",
-      "category": "research",
-      "source": "news-extraction",
-      "icon": "research",
-      "brief_purpose_summary": "Devin AI Launches as Autonomous Developer Devin AI launched as an autonomous software development tool that plans, writes, debugs, and searches online to build tools, websites, or apps. ---",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:17.031Z",
-        "source_article": "https://app.devin.ai/",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 23
-    },
-    {
-      "tool_name": "as Autonomous Developer Devin",
-      "url": "https://app.devin.ai/",
-      "category": "research",
-      "source": "news-extraction",
-      "icon": "research",
-      "brief_purpose_summary": "Devin AI Launches as Autonomous Developer Devin AI launched as an autonomous software development tool that plans, writes, debugs, and searches online to build tools, websites, or apps. ---",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "New"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:17.032Z",
-        "source_article": "https://app.devin.ai/",
-        "confidence": 0.7999999999999999,
-        "action_type": "launch",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 24
-    },
-    {
-      "id": 25,
+      "id": 22,
       "tool_name": "AskYourPDF",
       "url": "askyourpdf.com",
       "category": "Productivity Tools",
@@ -817,7 +727,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 26,
+      "id": 23,
       "tool_name": "Assembly AI",
       "url": "www.assemblyai.com",
       "category": "Language Processing",
@@ -848,7 +758,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 27,
+      "id": 24,
       "tool_name": "Autoblogging.ai",
       "url": "autoblogging.ai",
       "category": "Content Creation",
@@ -879,7 +789,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 28,
+      "id": 25,
       "tool_name": "Avochato AI Chat",
       "url": "avochato.com",
       "category": "Communication Tools",
@@ -909,7 +819,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 29,
+      "id": 26,
       "tool_name": "Awario",
       "url": "awario.com",
       "category": "Social Media Management",
@@ -947,7 +857,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 30,
+      "id": 27,
       "tool_name": "Awr",
       "url": "awork.io",
       "category": "Project Management",
@@ -977,36 +887,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "AWS Launching AI Agent Marketplace",
-      "url": "https://techcrunch.com/2025/07/10/aws-is-launching-an-ai-agent-marketplace-next-week-with-anthropic-as-a-partner/",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "AWS Launching AI Agent Marketplace AWS is launching an AI agent marketplace on July 15th with Anthropic as a key partner, creating a centralized hub for enterprises to browse and install AI agents.",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:17.031Z",
-        "source_article": "https://techcrunch.com/2025/07/10/aws-is-launching-an-ai-agent-marketplace-next-week-with-anthropic-as-a-partner/",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 31
-    },
-    {
-      "id": 32,
+      "id": 28,
       "tool_name": "Bard (Google)",
       "url": "bard.google.com",
       "category": "AI Assistants",
@@ -1036,7 +917,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 33,
+      "id": 29,
       "tool_name": "Bard (now Gemini)",
       "url": "gemini.google.com",
       "category": "AI Assistants",
@@ -1067,7 +948,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 34,
+      "id": 30,
       "tool_name": "Beautiful.ai",
       "url": "www.beautiful.ai",
       "category": "Content Creation",
@@ -1097,7 +978,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 35,
+      "id": 31,
       "tool_name": "BEEFree.io",
       "url": "beefree.io",
       "category": "Marketing Automation",
@@ -1126,7 +1007,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 36,
+      "id": 32,
       "tool_name": "Beehiiv",
       "url": "www.beehiiv.com",
       "category": "Content Creation",
@@ -1156,7 +1037,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 37,
+      "id": 33,
       "tool_name": "BigID",
       "url": "bigid.com",
       "category": "Data Protection",
@@ -1192,7 +1073,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 38,
+      "id": 34,
       "tool_name": "Boomy",
       "url": "boomy.com",
       "category": "Audio/Video Processing",
@@ -1222,7 +1103,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 39,
+      "id": 35,
       "tool_name": "Brain.fm",
       "url": "brain.fm",
       "category": "Productivity Tools",
@@ -1252,7 +1133,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 40,
+      "id": 36,
       "tool_name": "Brand24",
       "url": "brand24.com",
       "category": "Media Intelligence",
@@ -1283,7 +1164,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 41,
+      "id": 37,
       "tool_name": "Brandwatch",
       "url": "www.brandwatch.com",
       "category": "Media Intelligence",
@@ -1314,38 +1195,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "BrowserAct",
-      "url": "https://www.browseract.com/",
-      "category": "analytics",
-      "source": "news-extraction",
-      "icon": "analytics",
-      "brief_purpose_summary": "BrowserAct AI browser automation tool that lets users automate scraping, clicking, and data extraction on any website using plain English, adapting to changing page layouts. ### Decoding ML Date: July",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "Analytics",
-        "Data"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.531Z",
-        "source_article": "https://www.browseract.com/",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 42
-    },
-    {
-      "id": 43,
+      "id": 38,
       "tool_name": "Buffer AI Assistant",
       "url": "buffer.com/ai-assistant",
       "category": "Content Creation",
@@ -1375,7 +1225,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 44,
+      "id": 39,
       "tool_name": "BuiltWith",
       "url": "builtwith.com",
       "category": "Web Analytics",
@@ -1413,7 +1263,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 45,
+      "id": 40,
       "tool_name": "Business Wire",
       "url": "www.businesswire.com",
       "category": "Media Intelligence",
@@ -1444,7 +1294,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 46,
+      "id": 41,
       "tool_name": "Byword",
       "url": "byword.ai",
       "category": "Content Creation",
@@ -1475,36 +1325,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "California Using AI for Power Grid Management",
-      "url": "https://ter.li/b7am63",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "California Using AI for Power Grid Management California becomes the first US state to build algorithms that help manage power outages with AI. --- ### 8020AI Newsletter",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:17.031Z",
-        "source_article": "https://ter.li/b7am63",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 47
-    },
-    {
-      "id": 48,
+      "id": 42,
       "tool_name": "Canva",
       "url": "www.canva.com/",
       "category": "General Tools",
@@ -1545,25 +1366,10 @@ const unifiedToolsData = {
         "tertiary": "Use Canva's collaboration features to streamline approval workflows for visual content across PR teams and stakeholders",
         "experimental_1": "Develop AI-powered visual story generators that transform press release data into compelling infographics and data visualizations automatically",
         "experimental_2": "Create dynamic brand kit integration that ensures all PR visual content automatically adheres to client brand guidelines while allowing creative flexibility"
-      },
-      "integration_potential_needs_update": true,
-      "update_history": [
-        {
-          "date": "2025-07-20T12:01:16.789Z",
-          "type": "news_mention",
-          "updates": [
-            "integration_potential_update",
-            "context",
-            "source_url",
-            "date"
-          ],
-          "source": "https://www.8020ai.co",
-          "context": "Claude & Canva Integration Anthropic's Claude chatbot can now connect directly with Canva, allowing users to create, edit, and publish designs within the chat interface. Available to paid Claude subscribers th"
-        }
-      ]
+      }
     },
     {
-      "id": 49,
+      "id": 43,
       "tool_name": "CapCut",
       "url": "www.capcut.com",
       "category": "Audio/Video Processing",
@@ -1594,7 +1400,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 50,
+      "id": 44,
       "tool_name": "Captions",
       "url": "www.captions.ai",
       "category": "Audio/Video Processing",
@@ -1625,7 +1431,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 51,
+      "id": 45,
       "tool_name": "CB Insights",
       "url": "www.cbinsights.com",
       "category": "Data Analytics",
@@ -1656,7 +1462,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 52,
+      "id": 46,
       "tool_name": "Celtra Ad Creation",
       "url": "celtra.com",
       "category": "Advertising Tech",
@@ -1686,7 +1492,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 53,
+      "id": 47,
       "tool_name": "Chaser",
       "url": "chaser.io",
       "category": "Finance",
@@ -1716,7 +1522,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 54,
+      "id": 48,
       "tool_name": "ChatGPT",
       "url": "chatgpt.com",
       "category": "General Tools",
@@ -1796,10 +1602,10 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 55
+      "id": 49
     },
     {
-      "id": 56,
+      "id": 50,
       "tool_name": "Chattermill",
       "url": "chattermill.com",
       "category": "Data Analytics",
@@ -1829,7 +1635,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 57,
+      "id": 51,
       "tool_name": "CheckMyAds",
       "url": "checkmyads.com",
       "category": "Advertising Tech",
@@ -1885,10 +1691,10 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 58
+      "id": 52
     },
     {
-      "id": 59,
+      "id": 53,
       "tool_name": "Chronicle",
       "url": "chronicle.security",
       "category": "Data Analytics",
@@ -1919,7 +1725,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 60,
+      "id": 54,
       "tool_name": "Cision",
       "url": "www.cision.com",
       "category": "Media Intelligence",
@@ -1962,7 +1768,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 61,
+      "id": 55,
       "tool_name": "Civitai",
       "url": "civitai.com",
       "category": "Audio/Video Processing",
@@ -1993,7 +1799,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 62,
+      "id": 56,
       "tool_name": "Clarifai",
       "url": "clarifai.com",
       "category": "Computer Vision",
@@ -2055,25 +1861,10 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 63,
-      "integration_potential_needs_update": true,
-      "update_history": [
-        {
-          "date": "2025-07-20T12:01:16.789Z",
-          "type": "news_mention",
-          "updates": [
-            "integration_potential_update",
-            "context",
-            "source_url",
-            "date"
-          ],
-          "source": "https://www.8020ai.co",
-          "context": "Claude & Canva Integration Anthropic's Claude chatbot can now connect directly with Canva, allowing users to create, edit, and publish designs within the chat interface. Available to paid Claude subsc"
-        }
-      ]
+      "id": 57
     },
     {
-      "id": 64,
+      "id": 58,
       "tool_name": "Claude (Anthropic)",
       "url": "claude.ai",
       "category": "AI Assistants",
@@ -2110,37 +1901,6 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Claude & Canva Integration",
-      "url": "https://www.8020ai.co",
-      "category": "customer-service",
-      "source": "news-extraction",
-      "icon": "customer-service",
-      "brief_purpose_summary": "Claude & Canva Integration Anthropic's Claude chatbot can now connect directly with Canva, allowing users to create, edit, and publish designs within the chat interface. Available to paid Claude subsc",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "Customer Support",
-        "Chatbot"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.789Z",
-        "source_article": "https://www.8020ai.co",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 65
-    },
-    {
       "tool_name": "Claude Tool Directory",
       "url": "https://link.alphasignal.ai/f6lNkF",
       "category": "productivity",
@@ -2169,10 +1929,10 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 66
+      "id": 59
     },
     {
-      "id": 67,
+      "id": 60,
       "tool_name": "Clearscope",
       "url": "clearscope.io",
       "category": "Content Research",
@@ -2210,7 +1970,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 68,
+      "id": 61,
       "tool_name": "Cloudinary",
       "url": "cloudinary.com",
       "category": "Media Production",
@@ -2241,7 +2001,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 69,
+      "id": 62,
       "tool_name": "Coda AI",
       "url": "coda.io/product/ai",
       "category": "Content Creation",
@@ -2272,7 +2032,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 70,
+      "id": 63,
       "tool_name": "Cohesive.so",
       "url": "cohesive.so/",
       "category": "General Tools",
@@ -2311,7 +2071,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 71,
+      "id": 64,
       "tool_name": "Colossyan",
       "url": "www.colossyan.com",
       "category": "Audio/Video Processing",
@@ -2342,66 +2102,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Comet",
-      "url": "https://comet.perplexity.ai",
-      "category": "ai-assistant",
-      "source": "news-extraction",
-      "icon": "ai-assistant",
-      "brief_purpose_summary": "Perplexity Launches Comet AI Browser Perplexity launched Comet, an AI web browser with a sidebar assistant that can book meetings, send emails, and buy products. --- ### MIT Technology Review - The Al",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "New"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:17.031Z",
-        "source_article": "https://comet.perplexity.ai",
-        "confidence": 0.9999999999999999,
-        "action_type": "launch",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 72
-    },
-    {
-      "tool_name": "Comet AI Browser",
-      "url": "https://comet.perplexity.ai",
-      "category": "ai-assistant",
-      "source": "news-extraction",
-      "icon": "ai-assistant",
-      "brief_purpose_summary": "Perplexity Launches Comet AI Browser Perplexity launched Comet, an AI web browser with a sidebar assistant that can book meetings, send emails, and buy products. --- ### MIT Technology Review - The Al",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:17.031Z",
-        "source_article": "https://comet.perplexity.ai",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 73
-    },
-    {
-      "id": 74,
+      "id": 65,
       "tool_name": "ComplyAdvantage",
       "url": "complyadvantage.com",
       "category": "Compliance Tools",
@@ -2433,7 +2134,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 75,
+      "id": 66,
       "tool_name": "Composer",
       "url": "composer.trade",
       "category": "Finance",
@@ -2464,7 +2165,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 76,
+      "id": 67,
       "tool_name": "Compstak",
       "url": "compstak.com",
       "category": "Real Estate Tech",
@@ -2494,7 +2195,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 77,
+      "id": 68,
       "tool_name": "Consensus",
       "url": "consensus.app",
       "category": "Research Tools",
@@ -2525,7 +2226,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 78,
+      "id": 69,
       "tool_name": "Content at Scale",
       "url": "contentatscale.ai",
       "category": "Content Creation",
@@ -2556,7 +2257,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 79,
+      "id": 70,
       "tool_name": "ContentStudio",
       "url": "contentstudio.io",
       "category": "Social Media Management",
@@ -2595,7 +2296,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 80,
+      "id": 71,
       "tool_name": "Continual Learning AI (CLIFF)",
       "url": "cliff.ai",
       "category": "AI Assistants",
@@ -2620,7 +2321,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 81,
+      "id": 72,
       "tool_name": "Conversion.ai",
       "url": "www.jasper.ai/",
       "category": "Content Creation",
@@ -2666,7 +2367,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 82,
+      "id": 73,
       "tool_name": "Copilot Chat (Azure)",
       "url": "azure.microsoft.com/en-us/products/copilot-for-m365/",
       "category": "AI Assistants",
@@ -2696,7 +2397,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 83,
+      "id": 74,
       "tool_name": "Copy.ai",
       "url": "copy.ai",
       "category": "Content Creation",
@@ -2729,7 +2430,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 84,
+      "id": 75,
       "tool_name": "Copymatic",
       "url": "copymatic.ai",
       "category": "Content Creation",
@@ -2762,7 +2463,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 85,
+      "id": 76,
       "tool_name": "Copysmith",
       "url": "copysmith.ai",
       "category": "Content Creation",
@@ -2794,7 +2495,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 86,
+      "id": 77,
       "tool_name": "Coqui",
       "url": "coqui.ai",
       "category": "Audio/Video Processing",
@@ -2823,7 +2524,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 87,
+      "id": 78,
       "tool_name": "Coveo",
       "url": "www.coveo.com",
       "category": "Customer Service",
@@ -2853,7 +2554,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 88,
+      "id": 79,
       "tool_name": "Coverage Book",
       "url": "www.coveragebook.com",
       "category": "Media Intelligence",
@@ -2883,7 +2584,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 89,
+      "id": 80,
       "tool_name": "Craiyon",
       "url": "www.craiyon.com",
       "category": "Audio/Video Processing",
@@ -2913,7 +2614,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 90,
+      "id": 81,
       "tool_name": "Crayon",
       "url": "www.crayon.co",
       "category": "Data Analytics",
@@ -2943,7 +2644,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 91,
+      "id": 82,
       "tool_name": "Creature",
       "url": "creature.run",
       "category": "Media Production",
@@ -2972,7 +2673,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 92,
+      "id": 83,
       "tool_name": "Critica",
       "url": "aecritica.com",
       "category": "AI Development",
@@ -3003,7 +2704,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 93,
+      "id": 84,
       "tool_name": "Critical Mention",
       "url": "criticalmention.com",
       "category": "Media Intelligence",
@@ -3040,7 +2741,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 94,
+      "id": 85,
       "tool_name": "Crostini for Google Slides",
       "url": "crostini.app",
       "category": "Productivity Tools",
@@ -3071,7 +2772,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 95,
+      "id": 86,
       "tool_name": "CrowdStrike Falcon Next-Gen SIEM",
       "url": "crowdstrike.com",
       "category": "Cybersecurity",
@@ -3108,7 +2809,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 96,
+      "id": 87,
       "tool_name": "Cuppa",
       "url": "cuppa.sh",
       "category": "Content Creation",
@@ -3141,7 +2842,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 97,
+      "id": 88,
       "tool_name": "CurieAI",
       "url": "curie.ai",
       "category": "AI Development",
@@ -3170,7 +2871,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 98,
+      "id": 89,
       "tool_name": "Cyera Data Security Platform",
       "url": "cyera.com",
       "category": "Data Protection",
@@ -3207,7 +2908,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 99,
+      "id": 90,
       "tool_name": "D-ID Creative Reality",
       "url": "d-id.com",
       "category": "Media Production",
@@ -3241,7 +2942,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 100,
+      "id": 91,
       "tool_name": "DALL-E 2",
       "url": "openai.com/dall-e-2",
       "category": "Content Creation",
@@ -3270,7 +2971,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 101,
+      "id": 92,
       "tool_name": "DALL-E 3",
       "url": "openai.com/dall-e-3",
       "category": "Content Creation",
@@ -3307,7 +3008,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 102,
+      "id": 93,
       "tool_name": "Danelfin",
       "url": "danelfin.com",
       "category": "Finance",
@@ -3337,7 +3038,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 103,
+      "id": 94,
       "tool_name": "Dash Hudson",
       "url": "dashhudson.com",
       "category": "Social Analytics",
@@ -3367,7 +3068,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 104,
+      "id": 95,
       "tool_name": "Dashword",
       "url": "dashword.com",
       "category": "Content Creation",
@@ -3399,7 +3100,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 105,
+      "id": 96,
       "tool_name": "Data Visualization wth Plotly",
       "url": "plotly.com",
       "category": "Data Analytics",
@@ -3429,7 +3130,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 106,
+      "id": 97,
       "tool_name": "Databricks SQL Analytics",
       "url": "databricks.com",
       "category": "Data Analytics",
@@ -3460,7 +3161,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 107,
+      "id": 98,
       "tool_name": "Dataminr Pulse",
       "url": "dataminr.com",
       "category": "Specialized Analytics",
@@ -3490,7 +3191,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 108,
+      "id": 99,
       "tool_name": "DataRobot Automated ML",
       "url": "datarobot.com",
       "category": "Data Analytics",
@@ -3520,7 +3221,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 109,
+      "id": 100,
       "tool_name": "DataSelfie",
       "url": "dataselfie.it",
       "category": "Data Protection",
@@ -3550,7 +3251,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 110,
+      "id": 101,
       "tool_name": "DataSunrise Firewall",
       "url": "datasunrise.com",
       "category": "Cybersecurity",
@@ -3606,10 +3307,10 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 111
+      "id": 102
     },
     {
-      "id": 112,
+      "id": 103,
       "tool_name": "DeepL",
       "url": "www.deepl.com",
       "category": "Language Processing",
@@ -3639,7 +3340,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 113,
+      "id": 104,
       "tool_name": "Descript",
       "url": "www.descript.com/",
       "category": "Media Production",
@@ -3708,10 +3409,10 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 114
+      "id": 105
     },
     {
-      "id": 115,
+      "id": 106,
       "tool_name": "Disney Hyperion Gray",
       "url": "disneyhyperiongray.com",
       "category": "Consumer Apps",
@@ -3736,7 +3437,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 116,
+      "id": 107,
       "tool_name": "Docugami",
       "url": "docugami.com",
       "category": "Document Processing",
@@ -3765,7 +3466,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 117,
+      "id": 108,
       "tool_name": "Driverless AI",
       "url": "h2o.ai",
       "category": "AI Development",
@@ -3794,65 +3495,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "DuckDuckGo Adds AI Image Filtering",
-      "url": "https://x.com/DuckDuckGo/status/1944766326381089118",
-      "category": "research",
-      "source": "news-extraction",
-      "icon": "research",
-      "brief_purpose_summary": "DuckDuckGo Adds AI Image Filtering Feature DuckDuckGo introduces option to hide AI-generated images from search results, addressing user concerns about AI image spam. --- ### AI Breakfast",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-21T09:57:03.299Z",
-        "source_article": "https://x.com/DuckDuckGo/status/1944766326381089118",
-        "confidence": 0.9999999999999999,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 118
-    },
-    {
-      "tool_name": "DuckDuckGo Adds AI Image Filtering Feature",
-      "url": "https://x.com/DuckDuckGo/status/1944766326381089118",
-      "category": "research",
-      "source": "news-extraction",
-      "icon": "research",
-      "brief_purpose_summary": "DuckDuckGo Adds AI Image Filtering Feature DuckDuckGo introduces option to hide AI-generated images from search results, addressing user concerns about AI image spam. --- ### AI Breakfast",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-21T09:57:03.299Z",
-        "source_article": "https://x.com/DuckDuckGo/status/1944766326381089118",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 119
-    },
-    {
-      "id": 120,
+      "id": 109,
       "tool_name": "Durable",
       "url": "durable.co",
       "category": "General Tools",
@@ -3896,7 +3539,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 121,
+      "id": 110,
       "tool_name": "EarlyString",
       "url": "earlystring.com",
       "category": "HR & Employee Tools",
@@ -3926,7 +3569,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 122,
+      "id": 111,
       "tool_name": "EdgeImpulse",
       "url": "edgeimpulse.com",
       "category": "IoT Solutions",
@@ -3955,7 +3598,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 123,
+      "id": 112,
       "tool_name": "Elai.io",
       "url": "www.elai.io",
       "category": "Audio/Video Processing",
@@ -3992,7 +3635,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 124,
+      "id": 113,
       "tool_name": "EleutherAI",
       "url": "eleuther.ai",
       "category": "AI Development",
@@ -4023,7 +3666,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 125,
+      "id": 114,
       "tool_name": "ElevenLabs",
       "url": "elevenlabs.io/",
       "category": "General Tools",
@@ -4067,7 +3710,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 126,
+      "id": 115,
       "tool_name": "Ellora.ai",
       "url": "ellora.ai",
       "category": "Language Processing",
@@ -4123,10 +3766,10 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 127
+      "id": 116
     },
     {
-      "id": 128,
+      "id": 117,
       "tool_name": "Everlaw (Everlaw AI Assistant)",
       "url": "www.everlaw.com",
       "category": "Legal Tech",
@@ -4161,7 +3804,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 129,
+      "id": 118,
       "tool_name": "Evisort",
       "url": "www.evisort.com",
       "category": "Compliance Tools",
@@ -4190,7 +3833,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 130,
+      "id": 119,
       "tool_name": "Exploding Topics",
       "url": "explodingtopics.com",
       "category": "Data Analytics",
@@ -4220,7 +3863,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 131,
+      "id": 120,
       "tool_name": "Fathom",
       "url": "fathom.video",
       "category": "Audio/Video Processing",
@@ -4250,7 +3893,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 132,
+      "id": 121,
       "tool_name": "FeedHive",
       "url": "feedhive.com",
       "category": "Content Creation",
@@ -4281,7 +3924,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 133,
+      "id": 122,
       "tool_name": "Fintool",
       "url": "fintool.com",
       "category": "Finance",
@@ -4312,7 +3955,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 134,
+      "id": 123,
       "tool_name": "Firebase",
       "url": "firebase.google.com",
       "category": "Data Analytics",
@@ -4343,7 +3986,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 135,
+      "id": 124,
       "tool_name": "Fireflies.ai",
       "url": "fireflies.ai",
       "category": "Language Processing",
@@ -4373,7 +4016,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 136,
+      "id": 125,
       "tool_name": "Fiscal AI",
       "url": "fiscal.ai",
       "category": "Finance",
@@ -4404,7 +4047,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 137,
+      "id": 126,
       "tool_name": "Flair AI",
       "url": "flair.ai",
       "category": "Audio/Video Processing",
@@ -4435,7 +4078,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 138,
+      "id": 127,
       "tool_name": "Fliki",
       "url": "fliki.ai",
       "category": "General Tools",
@@ -4474,7 +4117,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 139,
+      "id": 128,
       "tool_name": "Forethought",
       "url": "forethought.ai",
       "category": "Customer Service",
@@ -4504,7 +4147,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 140,
+      "id": 129,
       "tool_name": "Framer AI",
       "url": "framer.com/ai",
       "category": "Web Development",
@@ -4533,7 +4176,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 141,
+      "id": 130,
       "tool_name": "Frase.io",
       "url": "frase.io",
       "category": "Content Research",
@@ -4571,7 +4214,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 142,
+      "id": 131,
       "tool_name": "Freshdesk (Freddy AI)",
       "url": "www.freshworks.com/freshdesk",
       "category": "Customer Service",
@@ -4601,7 +4244,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 143,
+      "id": 132,
       "tool_name": "Futurepedia",
       "url": "futurepedia.io",
       "category": "Research Tools",
@@ -4638,7 +4281,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 144,
+      "id": 133,
       "tool_name": "FutureTools",
       "url": "futuretools.io",
       "category": "Resource Directory",
@@ -4666,7 +4309,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 145,
+      "id": 134,
       "tool_name": "Gamma",
       "url": "gamma.app",
       "category": "Content Creation",
@@ -4697,7 +4340,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 146,
+      "id": 135,
       "tool_name": "GapScout (Formerly Signal AI)",
       "url": "signalpharm.ai",
       "category": "Media Intelligence",
@@ -4726,7 +4369,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 147,
+      "id": 136,
       "tool_name": "GenAI IT Automation by Electric",
       "url": "electric.ai",
       "category": "IT Support",
@@ -4755,7 +4398,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 148,
+      "id": 137,
       "tool_name": "Genmo",
       "url": "www.genmo.ai",
       "category": "Audio/Video Processing",
@@ -4786,7 +4429,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 149,
+      "id": 138,
       "tool_name": "Ghostwriter",
       "url": "ghostwriter.gitkraken.com",
       "category": "Development Tools",
@@ -4817,7 +4460,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 150,
+      "id": 139,
       "tool_name": "GlamAI",
       "url": "glam.ai",
       "category": "Content Creation",
@@ -4847,7 +4490,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 151,
+      "id": 140,
       "tool_name": "Google Ads",
       "url": "ads.google.com",
       "category": "Data Analytics",
@@ -4878,7 +4521,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 152,
+      "id": 141,
       "tool_name": "Google Alerts",
       "url": "google.com/alerts",
       "category": "Media Intelligence",
@@ -4909,7 +4552,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 153,
+      "id": 142,
       "tool_name": "Google Analytics",
       "url": "analytics.google.com",
       "category": "Data Analytics",
@@ -4940,7 +4583,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 154,
+      "id": 143,
       "tool_name": "Google Cloud Natural Language",
       "url": "cloud.google.com/natural-language",
       "category": "Data Analytics",
@@ -4997,10 +4640,10 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 155
+      "id": 144
     },
     {
-      "id": 156,
+      "id": 145,
       "tool_name": "Google News",
       "url": "news.google.com",
       "category": "Media Intelligence",
@@ -5031,7 +4674,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 157,
+      "id": 146,
       "tool_name": "Google Public Data Explorer",
       "url": "google.com/publicdata",
       "category": "Research Tools",
@@ -5062,7 +4705,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 158,
+      "id": 147,
       "tool_name": "Google Scholar",
       "url": "scholar.google.com",
       "category": "Research Tools",
@@ -5093,7 +4736,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 159,
+      "id": 148,
       "tool_name": "Google Search Console",
       "url": "search.google.com/search-console",
       "category": "Data Analytics",
@@ -5124,7 +4767,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 160,
+      "id": 149,
       "tool_name": "Google Tag Manager",
       "url": "tagmanager.google.com",
       "category": "Data Analytics",
@@ -5155,7 +4798,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 161,
+      "id": 150,
       "tool_name": "Google Trends",
       "url": "trends.google.com",
       "category": "Data Analytics",
@@ -5186,7 +4829,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 162,
+      "id": 151,
       "tool_name": "Google Workspace (AI Features)",
       "url": "workspace.google.com",
       "category": "AI Assistants",
@@ -5217,7 +4860,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 163,
+      "id": 152,
       "tool_name": "Grain",
       "url": "grain.com",
       "category": "Audio/Video Processing",
@@ -5248,7 +4891,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 164,
+      "id": 153,
       "tool_name": "Grammarly",
       "url": "grammarly.com",
       "category": "Content Creation",
@@ -5281,7 +4924,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 165,
+      "id": 154,
       "tool_name": "GRANDstack",
       "url": "grandstack.io",
       "category": "Development Tools",
@@ -5312,7 +4955,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 166,
+      "id": 155,
       "tool_name": "Graphsense",
       "url": "graphsense.info",
       "category": "Specialized Analytics",
@@ -5342,7 +4985,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 167,
+      "id": 156,
       "tool_name": "GrayMeta",
       "url": "graymeta.com",
       "category": "Media Intelligence",
@@ -5371,93 +5014,6 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Grok 4 Release by xAI",
-      "url": "https://newsletter.towardsai.net",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "Grok 4 Release by xAI xAI launched Grok 4, which now tops most major benchmarks including ARC-AGI-2 (16.0%) and Humanity's Last Exam (25.4%). The Grok 4 Heavy variant uses a multi-agent system and is",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.788Z",
-        "source_article": "https://newsletter.towardsai.net",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 168
-    },
-    {
-      "tool_name": "Grok 4 Released by xAI",
-      "url": "https://x.ai/news/grok-4",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "Grok 4 Released by xAI The new Grok models are out with two variants: Grok 4 and Grok Heavy ($300/month). During the livestream launch, Elon Musk expressed that the model's power was \"a little bit ter",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:17.030Z",
-        "source_article": "https://x.ai/news/grok-4",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 169
-    },
-    {
-      "tool_name": "Grok Gets NSFW AI Companions",
-      "url": "https://www.theverge.com/news/706988/elon-musk-ai-bot-grok-supergrok-anime-companion-ani-rudy2025-07-14",
-      "category": "ai-assistant",
-      "source": "news-extraction",
-      "icon": "ai-assistant",
-      "brief_purpose_summary": "Grok Gets NSFW AI Companions xAI launched AI \"companions\" for Grok including an anime character named Ani with an NSFW lingerie mode.",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:17.031Z",
-        "source_article": "https://www.theverge.com/news/706988/elon-musk-ai-bot-grok-supergrok-anime-companion-ani-rudy2025-07-14",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 170
-    },
-    {
       "tool_name": "Grok Waifus and AI Companions",
       "url": "",
       "category": "ai-assistant",
@@ -5483,10 +5039,10 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 171
+      "id": 157
     },
     {
-      "id": 172,
+      "id": 158,
       "tool_name": "Groq",
       "url": "groq.com",
       "category": "Hardware Integration",
@@ -5515,7 +5071,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 173,
+      "id": 159,
       "tool_name": "GrowthBar",
       "url": "growthbarseo.com",
       "category": "Content Creation",
@@ -5547,7 +5103,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 174,
+      "id": 160,
       "tool_name": "Gumloop",
       "url": "gumloop.com",
       "category": "Data Analytics",
@@ -5577,7 +5133,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 175,
+      "id": 161,
       "tool_name": "Harvey AI",
       "url": "www.harvey.ai",
       "category": "Legal Tech",
@@ -5612,7 +5168,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 176,
+      "id": 162,
       "tool_name": "HeyGen",
       "url": "www.heygen.com",
       "category": "General Tools",
@@ -5658,36 +5214,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "tool_name": "Hugging Face Reachy Mini Robot",
-      "url": "https://www.theaivalley.com",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "Hugging Face Reachy Mini Robot Hugging Face unveiled a $299 desktop robot to democratize robotics development, integrating with their AI model hub. ### The Rundown AI",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.788Z",
-        "source_article": "https://www.theaivalley.com",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 177
-    },
-    {
-      "id": 178,
+      "id": 163,
       "tool_name": "Hypefury",
       "url": "hypefury.com",
       "category": "Content Creation",
@@ -5718,7 +5245,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 179,
+      "id": 164,
       "tool_name": "Hypotenuse AI",
       "url": "hypotenuse.ai",
       "category": "Content Creation",
@@ -5752,7 +5279,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 180,
+      "id": 165,
       "tool_name": "Illuminate AI Media Kit Generator",
       "url": "illuminate-ai.com",
       "category": "Marketing Automation",
@@ -5781,7 +5308,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 181,
+      "id": 166,
       "tool_name": "Illumio CloudSecure",
       "url": "illumio.com",
       "category": "Cybersecurity",
@@ -5822,7 +5349,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 182,
+      "id": 167,
       "tool_name": "Imagen",
       "url": "imagen.research.google",
       "category": "Audio/Video Processing",
@@ -5853,7 +5380,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 183,
+      "id": 168,
       "tool_name": "Imagendry",
       "url": "imagendry.com",
       "category": "Audio/Video Processing",
@@ -5903,10 +5430,10 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 184
+      "id": 169
     },
     {
-      "id": 185,
+      "id": 170,
       "tool_name": "Infogram",
       "url": "infogram.com",
       "category": "Data Analytics",
@@ -5937,7 +5464,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 186,
+      "id": 171,
       "tool_name": "Intercom (Fin)",
       "url": "www.intercom.com",
       "category": "Customer Service",
@@ -5967,7 +5494,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 187,
+      "id": 172,
       "tool_name": "InVideo",
       "url": "invideo.io",
       "category": "Audio/Video Processing",
@@ -5998,7 +5525,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 188,
+      "id": 173,
       "tool_name": "InvokeAPI",
       "url": "invokeapi.dev",
       "category": "Productivity Tools",
@@ -6027,7 +5554,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 189,
+      "id": 174,
       "tool_name": "Ipsos PersonaBot",
       "url": "www.ipsos.com/en/launch-ipsos-personabot",
       "category": "Data Analytics",
@@ -6057,7 +5584,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 190,
+      "id": 175,
       "tool_name": "IRONSCALES Email Security",
       "url": "ironscales.com",
       "category": "Cybersecurity",
@@ -6093,7 +5620,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 191,
+      "id": 176,
       "tool_name": "Island Enterprise Browser",
       "url": "island.io",
       "category": "Cybersecurity",
@@ -6129,7 +5656,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 192,
+      "id": 177,
       "tool_name": "Jenni AI",
       "url": "jenni.ai",
       "category": "Content Creation",
@@ -6159,7 +5686,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 193,
+      "id": 178,
       "tool_name": "Journalist AI",
       "url": "journalist.ai",
       "category": "Content Creation",
@@ -6193,7 +5720,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 194,
+      "id": 179,
       "tool_name": "Kafkai",
       "url": "kafkai.com",
       "category": "Content Creation",
@@ -6223,7 +5750,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 195,
+      "id": 180,
       "tool_name": "Kapwing",
       "url": "www.kapwing.com",
       "category": "Audio/Video Processing",
@@ -6254,7 +5781,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 196,
+      "id": 181,
       "tool_name": "Keepnet Phishing Simulator",
       "url": "keepnetlabs.com/products/phishing-simulator",
       "category": "Cybersecurity",
@@ -6319,10 +5846,10 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 197
+      "id": 182
     },
     {
-      "id": 198,
+      "id": 183,
       "tool_name": "Kira Systems",
       "url": "kirasystems.com",
       "category": "Legal Tech",
@@ -6357,67 +5884,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Kiro IDE",
-      "url": "https://aidisruption.ai",
-      "category": "content-creation",
-      "source": "news-extraction",
-      "icon": "content-creation",
-      "brief_purpose_summary": "Amazon Launches Kiro IDE Amazon introduced Kiro, a new agentic IDE focused on spec-driven development. It creates requirements and system designs before writing code, offering $50 free monthly during",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "Content",
-        "Writing"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.789Z",
-        "source_article": "https://aidisruption.ai",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 199
-    },
-    {
-      "tool_name": "Kiro, AI Code Editor",
-      "url": "https://kiro.dev/blog/introducing-kiro/",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "AWS Launches Kiro, AI Code Editor AWS launched Kiro, their version of Cursor - an AI-powered code editor that integrates with Amazon's Bedrock models.",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:17.031Z",
-        "source_article": "https://kiro.dev/blog/introducing-kiro/",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 200
-    },
-    {
-      "id": 201,
+      "id": 184,
       "tool_name": "Kissflow",
       "url": "kissflow.com",
       "category": "Workflow Automation",
@@ -6446,7 +5913,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 202,
+      "id": 185,
       "tool_name": "Klue",
       "url": "klue.com",
       "category": "Data Analytics",
@@ -6476,7 +5943,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 203,
+      "id": 186,
       "tool_name": "Koala AI",
       "url": "koala.sh",
       "category": "Content Creation",
@@ -6506,7 +5973,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 204,
+      "id": 187,
       "tool_name": "Kompyte",
       "url": "www.kompyte.com",
       "category": "Data Analytics",
@@ -6536,7 +6003,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 205,
+      "id": 188,
       "tool_name": "Krisp",
       "url": "krisp.ai",
       "category": "Audio/Video Processing",
@@ -6567,7 +6034,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 206,
+      "id": 189,
       "tool_name": "Kustomer (Kustomer IQ)",
       "url": "www.kustomer.com",
       "category": "Customer Service",
@@ -6597,7 +6064,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 207,
+      "id": 190,
       "tool_name": "Lacework Cloud Security",
       "url": "lacework.com",
       "category": "Cybersecurity",
@@ -6634,7 +6101,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 208,
+      "id": 191,
       "tool_name": "Lately AI",
       "url": "www.lately.ai",
       "category": "Content Creation",
@@ -6664,7 +6131,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 209,
+      "id": 192,
       "tool_name": "LawGeex",
       "url": "www.lawgeex.com",
       "category": "Legal Tech",
@@ -6699,7 +6166,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 210,
+      "id": 193,
       "tool_name": "Legal Monster",
       "url": "legalmonster.ai",
       "category": "Legal Tech",
@@ -6724,7 +6191,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 211,
+      "id": 194,
       "tool_name": "LegalMind",
       "url": "legalmind.ai",
       "category": "Legal Tech",
@@ -6749,7 +6216,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 212,
+      "id": 195,
       "tool_name": "LegalOn",
       "url": "www.legalontech.com",
       "category": "Legal Tech",
@@ -6800,7 +6267,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 213,
+      "id": 196,
       "tool_name": "Legora",
       "url": "legora.com",
       "category": "Legal Tech",
@@ -6852,7 +6319,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 214,
+      "id": 197,
       "tool_name": "Leonardo.ai",
       "url": "leonardo.ai/",
       "category": "General Tools",
@@ -6913,7 +6380,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 215,
+      "id": 198,
       "tool_name": "Letterdrop",
       "url": "letterdrop.com",
       "category": "Content Creation",
@@ -6944,7 +6411,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 216,
+      "id": 199,
       "tool_name": "Lex",
       "url": "lex.page",
       "category": "Content Creation",
@@ -6974,7 +6441,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 217,
+      "id": 200,
       "tool_name": "Lexis+ AI",
       "url": "www.lexisnexis.com/lexis-plus-ai",
       "category": "Legal Tech",
@@ -7038,10 +6505,10 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 218
+      "id": 201
     },
     {
-      "id": 219,
+      "id": 202,
       "tool_name": "Lilt",
       "url": "lilt.com",
       "category": "Language Processing",
@@ -7072,7 +6539,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 220,
+      "id": 203,
       "tool_name": "LongShot AI",
       "url": "longshot.ai",
       "category": "Content Creation",
@@ -7103,7 +6570,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 221,
+      "id": 204,
       "tool_name": "Looka",
       "url": "looka.com",
       "category": "Audio/Video Processing",
@@ -7134,7 +6601,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 222,
+      "id": 205,
       "tool_name": "Looker Studio",
       "url": "lookerstudio.google.com",
       "category": "Data Analytics",
@@ -7165,7 +6632,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 223,
+      "id": 206,
       "tool_name": "Loom AI",
       "url": "www.loom.com",
       "category": "Audio/Video Processing",
@@ -7195,36 +6662,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Lovable",
-      "url": "https://techcrunch.com/2025/07/17/lovable-unicorn-200m/",
-      "category": "ai-tools",
-      "source": "news-extraction",
-      "icon": "ai-tools",
-      "brief_purpose_summary": "Lovable Raises $200M at $1.8B Valuation AI app maker Lovable secures $200M Series A just 8 months after launch, achieving unicorn status as a European AI startup.",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-21T09:57:03.299Z",
-        "source_article": "https://techcrunch.com/2025/07/17/lovable-unicorn-200m/",
-        "confidence": 0.8999999999999999,
-        "action_type": "funding",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 224
-    },
-    {
-      "id": 225,
+      "id": 207,
       "tool_name": "Lumen5",
       "url": "lumen5.com",
       "category": "Audio/Video Processing",
@@ -7254,7 +6692,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 226,
+      "id": 208,
       "tool_name": "LunarAI",
       "url": "lunariai.com",
       "category": "AI Development",
@@ -7277,7 +6715,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 227,
+      "id": 209,
       "tool_name": "Luuma",
       "url": "luuma.com",
       "category": "Customer Service",
@@ -7307,7 +6745,7 @@ const unifiedToolsData = {
       "enhanced_note": "URGENT: Database URL verification needed. The luuma.com website shows interior design project management software, not customer engagement/fintech analytics as described in database entry."
     },
     {
-      "id": 228,
+      "id": 210,
       "tool_name": "Machined",
       "url": "machined.ai",
       "category": "Content Creation",
@@ -7337,7 +6775,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 229,
+      "id": 211,
       "tool_name": "Magisto",
       "url": "magisto.com",
       "category": "Audio/Video Processing",
@@ -7368,7 +6806,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 230,
+      "id": 212,
       "tool_name": "MarketMuse",
       "url": "marketmuse.com",
       "category": "Content Research",
@@ -7401,7 +6839,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 231,
+      "id": 213,
       "tool_name": "Material AI",
       "url": "material.ai",
       "category": "Supply Chain",
@@ -7432,7 +6870,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 232,
+      "id": 214,
       "tool_name": "Meltwater",
       "url": "www.meltwater.com",
       "category": "Media Intelligence",
@@ -7478,7 +6916,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 233,
+      "id": 215,
       "tool_name": "Mem",
       "url": "mem.ai",
       "category": "Productivity Tools",
@@ -7511,7 +6949,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 234,
+      "id": 216,
       "tool_name": "Memo",
       "url": "memo.co",
       "category": "Data Analytics",
@@ -7557,7 +6995,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 235,
+      "id": 217,
       "tool_name": "Mention",
       "url": "mention.com",
       "category": "Media Intelligence",
@@ -7588,7 +7026,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 236,
+      "id": 218,
       "tool_name": "Metis Finance AI Toolkit",
       "url": "metisfinance.com",
       "category": "Finance",
@@ -7616,7 +7054,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 237,
+      "id": 219,
       "tool_name": "Microsoft Security Copilot",
       "url": "microsoft.com/security/blog",
       "category": "Cybersecurity",
@@ -7662,7 +7100,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 238,
+      "id": 220,
       "tool_name": "MidJourney",
       "url": "www.midjourney.com",
       "category": "General Tools",
@@ -7729,7 +7167,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 239,
+      "id": 221,
       "tool_name": "Missinglettr",
       "url": "missinglettr.com",
       "category": "Social Media Management",
@@ -7789,7 +7227,7 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 240
+      "id": 222
     },
     {
       "tool_name": "Mistral's Voxtral Speech Recognition",
@@ -7817,7 +7255,7 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 241
+      "id": 223
     },
     {
       "tool_name": "MIT's Universal Robot Training Tool",
@@ -7846,10 +7284,10 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 242
+      "id": 224
     },
     {
-      "id": 243,
+      "id": 225,
       "tool_name": "Moonbeam",
       "url": "www.gomoonbeam.com",
       "category": "Content Creation",
@@ -7879,7 +7317,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 244,
+      "id": 226,
       "tool_name": "Mubert",
       "url": "mubert.com",
       "category": "Audio/Video Processing",
@@ -7910,7 +7348,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 245,
+      "id": 227,
       "tool_name": "Murf AI",
       "url": "murf.ai",
       "category": "Audio/Video Processing",
@@ -7941,38 +7379,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Mythic Text",
-      "url": "https://www.mythictext.com/",
-      "category": "content-creation",
-      "source": "news-extraction",
-      "icon": "content-creation",
-      "brief_purpose_summary": "Mythic Text Transforms markdown or unformatted writing into structured blog posts, newsletters, and marketing assets. Can process hundreds of files in minutes for enterprise document pipelines.",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "Content",
-        "Writing"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-20T12:01:16.531Z",
-        "source_article": "https://www.mythictext.com/",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 246
-    },
-    {
-      "id": 247,
+      "id": 228,
       "tool_name": "Narrative Science Quill",
       "url": "narrativescience.com/quill",
       "category": "Language Processing",
@@ -8003,7 +7410,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 248,
+      "id": 229,
       "tool_name": "Netbase Quid",
       "url": "netbasequid.com",
       "category": "Data Analytics",
@@ -8049,7 +7456,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 249,
+      "id": 230,
       "tool_name": "NeuralText",
       "url": "www.neuraltext.com",
       "category": "Content Creation",
@@ -8080,7 +7487,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 250,
+      "id": 231,
       "tool_name": "Neuroflash Copywriting",
       "url": "neuroflash.com",
       "category": "Content Creation",
@@ -8111,7 +7518,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 251,
+      "id": 232,
       "tool_name": "NewsWhip",
       "url": "www.newswhip.com",
       "category": "Media Intelligence",
@@ -8167,10 +7574,10 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 252
+      "id": 233
     },
     {
-      "id": 253,
+      "id": 234,
       "tool_name": "NotebookLM",
       "url": "notebooklm.google.com",
       "category": "Research Tools",
@@ -8201,7 +7608,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 254,
+      "id": 235,
       "tool_name": "Notion",
       "url": "www.notion.com/",
       "category": "General Tools",
@@ -8260,7 +7667,7 @@ const unifiedToolsData = {
       ]
     },
     {
-      "id": 255,
+      "id": 236,
       "tool_name": "Notis AI",
       "url": "notis.ai",
       "category": "Language Processing",
@@ -8289,7 +7696,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 256,
+      "id": 237,
       "tool_name": "NovelAI",
       "url": "novelai.net",
       "category": "Content Creation",
@@ -8319,7 +7726,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 257,
+      "id": 238,
       "tool_name": "Observe.ai",
       "url": "www.observe.ai",
       "category": "Data Analytics",
@@ -8349,7 +7756,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 258,
+      "id": 239,
       "tool_name": "Ocoya",
       "url": "www.ocoya.com",
       "category": "Content Creation",
@@ -8380,7 +7787,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 259,
+      "id": 240,
       "tool_name": "Onclusive",
       "url": "onclusive.com",
       "category": "Media Intelligence",
@@ -8411,7 +7818,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 260,
+      "id": 241,
       "tool_name": "Oneforma",
       "url": "oneforma.com",
       "category": "Collaboration Tools",
@@ -8440,37 +7847,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "option to hide",
-      "url": "https://x.com/DuckDuckGo/status/1944766326381089118",
-      "category": "research",
-      "source": "news-extraction",
-      "icon": "research",
-      "brief_purpose_summary": "DuckDuckGo Adds AI Image Filtering Feature DuckDuckGo introduces option to hide AI-generated images from search results, addressing user concerns about AI image spam. --- ### AI Breakfast",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "New"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-21T09:57:03.299Z",
-        "source_article": "https://x.com/DuckDuckGo/status/1944766326381089118",
-        "confidence": 0.7999999999999999,
-        "action_type": "launch",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 261
-    },
-    {
-      "id": 262,
+      "id": 242,
       "tool_name": "OpusClip",
       "url": "www.opus.pro",
       "category": "General Tools",
@@ -8516,7 +7893,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 263,
+      "id": 243,
       "tool_name": "Otter.ai",
       "url": "otter.ai/",
       "category": "General Tools",
@@ -8560,7 +7937,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 264,
+      "id": 244,
       "tool_name": "Outranking",
       "url": "www.outranking.io",
       "category": "Content Creation",
@@ -8591,7 +7968,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 265,
+      "id": 245,
       "tool_name": "Oxeye Application Security Platform",
       "url": "oxeye.io",
       "category": "Cybersecurity",
@@ -8620,7 +7997,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 266,
+      "id": 246,
       "tool_name": "Palo Alto Cortex XSIAM for Cloud",
       "url": "paloaltonetworks.com",
       "category": "Cybersecurity",
@@ -8651,7 +8028,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 267,
+      "id": 247,
       "tool_name": "Peppertype.ai",
       "url": "www.peppertype.ai",
       "category": "Content Creation",
@@ -8682,38 +8059,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "Perplexity",
-      "url": "https://www.airtel.in/press-release/perplexity-partnership",
-      "category": "customer-service",
-      "source": "news-extraction",
-      "icon": "customer-service",
-      "brief_purpose_summary": "Perplexity Partners with Airtel for 360M Users in India Perplexity offers free 12-month Pro subscriptions to all Airtel customers, becoming the #1 app in India and expanding AI search access to 360 mi",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "Customer Support",
-        "Chatbot"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-21T09:57:03.299Z",
-        "source_article": "https://www.airtel.in/press-release/perplexity-partnership",
-        "confidence": 0.8999999999999999,
-        "action_type": "partnership",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 268
-    },
-    {
-      "id": 269,
+      "id": 248,
       "tool_name": "Perplexity AI Pro",
       "url": "www.perplexity.ai",
       "category": "Research Tools",
@@ -8743,7 +8089,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 270,
+      "id": 249,
       "tool_name": "Perplexity Max",
       "url": "perplexity.ai",
       "category": "Research Tools",
@@ -8796,7 +8142,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 271,
+      "id": 250,
       "tool_name": "Phrasee",
       "url": "phrasee.co",
       "category": "Marketing Automation",
@@ -8825,7 +8171,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 272,
+      "id": 251,
       "tool_name": "PicPost",
       "url": "picpost.social",
       "category": "Content Creation",
@@ -8856,7 +8202,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 273,
+      "id": 252,
       "tool_name": "Pictory",
       "url": "pictory.ai",
       "category": "General Tools",
@@ -8901,7 +8247,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 274,
+      "id": 253,
       "tool_name": "PicWish",
       "url": "picwish.com",
       "category": "General Tools",
@@ -8939,7 +8285,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 275,
+      "id": 254,
       "tool_name": "Pika",
       "url": "pika.art",
       "category": "Audio/Video Processing",
@@ -8970,7 +8316,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 276,
+      "id": 255,
       "tool_name": "Pinpoint",
       "url": "journaliststudio.google.com/pinpoint",
       "category": "Media Intelligence",
@@ -9001,7 +8347,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 277,
+      "id": 256,
       "tool_name": "Planable",
       "url": "planable.io",
       "category": "Content Creation",
@@ -9032,7 +8378,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 278,
+      "id": 257,
       "tool_name": "Podcastle",
       "url": "podcastle.ai",
       "category": "Audio/Video Processing",
@@ -9063,7 +8409,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 279,
+      "id": 258,
       "tool_name": "PR Newswire",
       "url": "www.prnewswire.com",
       "category": "Media Intelligence",
@@ -9094,7 +8440,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 280,
+      "id": 259,
       "tool_name": "Prezly",
       "url": "www.prezly.com",
       "category": "Media Intelligence",
@@ -9125,7 +8471,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 281,
+      "id": 260,
       "tool_name": "Propel",
       "url": "www.propelmypr.com",
       "category": "Media Intelligence",
@@ -9156,7 +8502,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 282,
+      "id": 261,
       "tool_name": "Prowly",
       "url": "prowly.com",
       "category": "Media Intelligence",
@@ -9187,7 +8533,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 283,
+      "id": 262,
       "tool_name": "Quillbot",
       "url": "quillbot.com",
       "category": "Content Creation",
@@ -9217,7 +8563,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 284,
+      "id": 263,
       "tool_name": "RAD Security Cloud Workload Protection",
       "url": "radsecurity.io",
       "category": "Cybersecurity",
@@ -9247,7 +8593,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 285,
+      "id": 264,
       "tool_name": "Rankscale AI Visibility Tracker",
       "url": "rankscale.ai",
       "category": "Data Analytics",
@@ -9277,7 +8623,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 286,
+      "id": 265,
       "tool_name": "Reality Defender Deepfake Detection",
       "url": "realitydefender.com",
       "category": "Cybersecurity",
@@ -9307,7 +8653,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 287,
+      "id": 266,
       "tool_name": "RebelMouse",
       "url": "rebelmouse.com",
       "category": "Publishing Tools",
@@ -9336,7 +8682,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 288,
+      "id": 267,
       "tool_name": "RecCloud",
       "url": "reccloud.com",
       "category": "General Tools",
@@ -9381,7 +8727,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 289,
+      "id": 268,
       "tool_name": "Redocly",
       "url": "redoc.ly",
       "category": "API & Documentation",
@@ -9410,7 +8756,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 290,
+      "id": 269,
       "tool_name": "ReelKite",
       "url": "reelkite.com",
       "category": "Audio/Video Processing",
@@ -9441,7 +8787,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 291,
+      "id": 270,
       "tool_name": "Regology",
       "url": "www.regology.com",
       "category": "Compliance Tools",
@@ -9470,7 +8816,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 292,
+      "id": 271,
       "tool_name": "Relume",
       "url": "www.relume.io",
       "category": "General Tools",
@@ -9506,7 +8852,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 293,
+      "id": 272,
       "tool_name": "Rendezvous Social",
       "url": "rendezvous.social",
       "category": "Social Analytics",
@@ -9535,7 +8881,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 294,
+      "id": 273,
       "tool_name": "Replit",
       "url": "replit.com",
       "category": "General Tools",
@@ -9580,7 +8926,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 295,
+      "id": 274,
       "tool_name": "Repurpose.io",
       "url": "repurpose.io",
       "category": "Content Creation",
@@ -9610,7 +8956,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 296,
+      "id": 275,
       "tool_name": "Resemble AI",
       "url": "www.resemble.ai",
       "category": "Audio/Video Processing",
@@ -9641,7 +8987,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 297,
+      "id": 276,
       "tool_name": "Rev AI",
       "url": "www.rev.ai",
       "category": "Language Processing",
@@ -9671,7 +9017,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 298,
+      "id": 277,
       "tool_name": "Reword",
       "url": "reword.co",
       "category": "Content Creation",
@@ -9727,10 +9073,10 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 299
+      "id": 278
     },
     {
-      "id": 300,
+      "id": 279,
       "tool_name": "Riverside.fm",
       "url": "riverside.fm",
       "category": "Audio/Video Processing",
@@ -9761,7 +9107,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 301,
+      "id": 280,
       "tool_name": "ROI Hunter",
       "url": "roihunter.com",
       "category": "Marketing Automation",
@@ -9814,10 +9160,10 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 302
+      "id": 281
     },
     {
-      "id": 303,
+      "id": 282,
       "tool_name": "RunwayML",
       "url": "runwayml.com/",
       "category": "General Tools",
@@ -9862,7 +9208,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 304,
+      "id": 283,
       "tool_name": "Scalenut",
       "url": "www.scalenut.com",
       "category": "Content Creation",
@@ -9893,7 +9239,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 305,
+      "id": 284,
       "tool_name": "Scribe",
       "url": "scribehow.com",
       "category": "Content Creation",
@@ -9921,25 +9267,10 @@ const unifiedToolsData = {
         "Automation",
         "Guides"
       ],
-      "cision_use_suggestions": null,
-      "integration_potential_needs_update": true,
-      "update_history": [
-        {
-          "date": "2025-07-20T12:01:16.790Z",
-          "type": "news_mention",
-          "updates": [
-            "integration_potential_update",
-            "context",
-            "source_url",
-            "date"
-          ],
-          "source": "https://www.8020ai.co",
-          "context": "Claude & Canva Integration Anthropic's Claude chatbot can now connect directly with Canva, allowing users to create, edit, and publish designs within the chat interface. Available to paid Claude subscribers through MCP server."
-        }
-      ]
+      "cision_use_suggestions": null
     },
     {
-      "id": 306,
+      "id": 285,
       "tool_name": "Seal Security Patch Automation",
       "url": "sealsecurity.com",
       "category": "Cybersecurity",
@@ -9969,7 +9300,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 307,
+      "id": 286,
       "tool_name": "Search Atlas",
       "url": "searchatlas.com",
       "category": "Data Analytics",
@@ -9999,7 +9330,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 308,
+      "id": 287,
       "tool_name": "Sembly AI",
       "url": "www.sembly.ai",
       "category": "Language Processing",
@@ -10029,7 +9360,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 309,
+      "id": 288,
       "tool_name": "Semrush",
       "url": "www.semrush.com",
       "category": "Data Analytics",
@@ -10060,7 +9391,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 310,
+      "id": 289,
       "tool_name": "Sendible",
       "url": "www.sendible.com",
       "category": "Content Creation",
@@ -10091,7 +9422,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 311,
+      "id": 290,
       "tool_name": "Sensay",
       "url": "sensay.io",
       "category": "AI Assistants",
@@ -10120,7 +9451,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 312,
+      "id": 291,
       "tool_name": "SEO.ai",
       "url": "seo.ai",
       "category": "Content Creation",
@@ -10151,7 +9482,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 313,
+      "id": 292,
       "tool_name": "SEOwind",
       "url": "seowind.io",
       "category": "Content Creation",
@@ -10182,7 +9513,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 314,
+      "id": 293,
       "tool_name": "Signal AI",
       "url": "www.signal-ai.com",
       "category": "Media Intelligence",
@@ -10211,7 +9542,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 315,
+      "id": 294,
       "tool_name": "SimilarWeb",
       "url": "www.similarweb.com",
       "category": "Data Analytics",
@@ -10241,7 +9572,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 316,
+      "id": 295,
       "tool_name": "Simplified",
       "url": "simplified.com",
       "category": "Content Creation",
@@ -10272,7 +9603,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 317,
+      "id": 296,
       "tool_name": "SlidesAI",
       "url": "www.slidesai.io",
       "category": "General Tools",
@@ -10306,7 +9637,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 318,
+      "id": 297,
       "tool_name": "Snyk Cloud Security",
       "url": "snyk.io",
       "category": "Cybersecurity",
@@ -10336,7 +9667,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 319,
+      "id": 298,
       "tool_name": "Social Flow",
       "url": "estoreera.gumroad.com/l/SocialMediaAutomation",
       "category": "Content Creation",
@@ -10367,7 +9698,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 320,
+      "id": 299,
       "tool_name": "SocialBee",
       "url": "socialbee.com",
       "category": "Content Creation",
@@ -10398,7 +9729,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 321,
+      "id": 300,
       "tool_name": "Soundraw",
       "url": "soundraw.io",
       "category": "General Tools",
@@ -10444,7 +9775,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 322,
+      "id": 301,
       "tool_name": "SparkToro",
       "url": "sparktoro.com",
       "category": "Data Analytics",
@@ -10474,7 +9805,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 323,
+      "id": 302,
       "tool_name": "Speechify",
       "url": "speechify.com",
       "category": "Audio/Video Processing",
@@ -10504,7 +9835,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 324,
+      "id": 303,
       "tool_name": "Spellbook by Rally",
       "url": "www.spellbook.legal",
       "category": "Compliance Tools",
@@ -10533,7 +9864,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 325,
+      "id": 304,
       "tool_name": "Sprinklr",
       "url": "www.sprinklr.com",
       "category": "Media Intelligence",
@@ -10564,7 +9895,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 326,
+      "id": 305,
       "tool_name": "Stable Diffusion",
       "url": "stability.ai",
       "category": "Audio/Video Processing",
@@ -10594,7 +9925,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 327,
+      "id": 306,
       "tool_name": "StarryAI",
       "url": "starryai.com",
       "category": "General Tools",
@@ -10631,7 +9962,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 328,
+      "id": 307,
       "tool_name": "Sudowrite",
       "url": "www.sudowrite.com",
       "category": "Content Creation",
@@ -10661,7 +9992,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 329,
+      "id": 308,
       "tool_name": "Suno AI",
       "url": "www.suno.ai",
       "category": "Audio/Video Processing",
@@ -10692,7 +10023,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 330,
+      "id": 309,
       "tool_name": "Supercreator.ai",
       "url": "www.supercreator.ai",
       "category": "Audio/Video Processing",
@@ -10722,7 +10053,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 331,
+      "id": 310,
       "tool_name": "Supermoon",
       "url": "getsupermoon.com",
       "category": "Content Creation",
@@ -10751,7 +10082,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 332,
+      "id": 311,
       "tool_name": "Surfer SEO",
       "url": "surferseo.com",
       "category": "Content Creation",
@@ -10782,7 +10113,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 333,
+      "id": 312,
       "tool_name": "Synthesia",
       "url": "www.synthesia.io",
       "category": "General Tools",
@@ -10833,7 +10164,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 334,
+      "id": 313,
       "tool_name": "Talkwalker",
       "url": "www.talkwalker.com",
       "category": "Media Intelligence",
@@ -10864,7 +10195,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 335,
+      "id": 314,
       "tool_name": "Taskade",
       "url": "www.taskade.com",
       "category": "Content Creation",
@@ -10894,7 +10225,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 336,
+      "id": 315,
       "tool_name": "Text Cortex",
       "url": "textcortex.com",
       "category": "Content Creation",
@@ -10925,7 +10256,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 337,
+      "id": 316,
       "tool_name": "Thomson Reuters CoCounsel",
       "url": "legal.thomsonreuters.com/cocounsel",
       "category": "Compliance Tools",
@@ -10955,7 +10286,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 338,
+      "id": 317,
       "tool_name": "Tome",
       "url": "tome.app/",
       "category": "General Tools",
@@ -10996,7 +10327,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 339,
+      "id": 318,
       "tool_name": "Topic",
       "url": "www.topic.com",
       "category": "Content Creation",
@@ -11026,7 +10357,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 340,
+      "id": 319,
       "tool_name": "Treendly",
       "url": "treendly.com",
       "category": "Data Analytics",
@@ -11055,7 +10386,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 341,
+      "id": 320,
       "tool_name": "Trello",
       "url": "trello.com",
       "category": "Project Management",
@@ -11084,7 +10415,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 342,
+      "id": 321,
       "tool_name": "Typefully",
       "url": "typefully.com",
       "category": "Content Creation",
@@ -11115,7 +10446,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 343,
+      "id": 322,
       "tool_name": "Undetectable AI",
       "url": "undetectable.ai",
       "category": "Content Creation",
@@ -11145,7 +10476,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 344,
+      "id": 323,
       "tool_name": "VentureMind AI",
       "url": "venturemind.ai",
       "category": "Productivity Tools",
@@ -11175,7 +10506,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 345,
+      "id": 324,
       "tool_name": "Vertex AI",
       "url": "cloud.google.com/vertex-ai",
       "category": "AI Assistants",
@@ -11235,7 +10566,7 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 346
+      "id": 325
     },
     {
       "tool_name": "Voxtral Voice Model",
@@ -11266,7 +10597,7 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 347
+      "id": 326
     },
     {
       "tool_name": "W&B Inference Launch with Kimi K2",
@@ -11295,10 +10626,10 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 348
+      "id": 327
     },
     {
-      "id": 349,
+      "id": 328,
       "tool_name": "Wappalyzer",
       "url": "www.wappalyzer.com",
       "category": "Data Analytics",
@@ -11328,7 +10659,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 350,
+      "id": 329,
       "tool_name": "Warren AI",
       "url": "warren.ai",
       "category": "Finance",
@@ -11358,7 +10689,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 351,
+      "id": 330,
       "tool_name": "Will",
       "url": "heywill.ai",
       "category": "Content Creation",
@@ -11389,7 +10720,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 352,
+      "id": 331,
       "tool_name": "Wiz Cloud Security Platform",
       "url": "wiz.io",
       "category": "Cybersecurity",
@@ -11425,7 +10756,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 353,
+      "id": 332,
       "tool_name": "Wordtune",
       "url": "www.wordtune.com",
       "category": "Content Creation",
@@ -11455,7 +10786,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 354,
+      "id": 333,
       "tool_name": "Writesonic",
       "url": "writesonic.com",
       "category": "Content Creation",
@@ -11485,7 +10816,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 355,
+      "id": 334,
       "tool_name": "YouTube Studio",
       "url": "studio.youtube.com",
       "category": "Audio/Video Processing",
@@ -11516,7 +10847,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 356,
+      "id": 335,
       "tool_name": "Zendesk AI",
       "url": "www.zendesk.com",
       "category": "Customer Service",
@@ -11547,7 +10878,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 357,
+      "id": 336,
       "tool_name": "Zignal Labs",
       "url": "zignallabs.com",
       "category": "Media Intelligence",
@@ -11577,7 +10908,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 358,
+      "id": 337,
       "tool_name": "Zimmwriter",
       "url": "zimmwriter.com",
       "category": "Content Creation",
@@ -11608,7 +10939,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 359,
+      "id": 338,
       "tool_name": "Zynous",
       "url": "zynous.com",
       "category": "Content Creation",
@@ -11683,14 +11014,14 @@ const unifiedToolsData = {
       "Web Development",
       "Workflow Automation"
     ],
-    "lastUpdated": "2025-07-21T09:57:03.311Z",
+    "lastUpdated": "2025-07-20T12:01:16.277Z",
     "lastVerification": "2025-07-18T08:52:22.981Z",
-    "totalCount": 359,
+    "totalCount": 338,
     "lastAutomatedUpdate": {
-      "date": "2025-07-21T09:57:03.311Z",
-      "newTools": 5,
-      "updates": 0,
-      "source": "7-21-25.txt"
+      "date": "2025-07-20T12:01:16.277Z",
+      "newTools": 14,
+      "updates": 1,
+      "source": "7-18-2025.txt"
     }
   }
 };

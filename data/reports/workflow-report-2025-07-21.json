@@ -1,0 +1,21 @@
+{
+  "workflow": "news-to-tools",
+  "timestamp": "2025-07-21T09:57:03.425Z",
+  "newsletter": {
+    "file": "7-21-25.txt",
+    "date": null
+  },
+  "extraction": {
+    "potentialNewTools": 5,
+    "potentialUpdates": 0
+  },
+  "integration": {
+    "newToolsAdded": 5,
+    "toolsUpdated": 0,
+    "totalTools": 359
+  },
+  "summary": {
+    "success": true,
+    "message": "Successfully processed newsletter. Added 5 new tools and updated 0 existing tools."
+  }
+}

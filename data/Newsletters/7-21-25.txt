@@ -1,0 +1,140 @@
+### Import AI
+**Date:** July 21, 2025  
+**Source:** importai@substack.com  
+
+**AI Highlights:**
+
+- **MIRI Enumerates Technical Requirements to Stop AI Progress**
+  *Category:* Policy / Ethics
+  *Tags:* #AIGovernance, #SafetyMeasures, #PolicyInfrastructure
+  Researchers from MIRI outlined comprehensive technical capabilities needed to slow or halt AI development, including chip tracking, fab monitoring, and compute governance mechanisms.
+  [https://arxiv.org/abs/not-provided](https://arxiv.org/abs/not-provided)
+
+- **Researchers Propose Legal Rights for AGI Systems**
+  *Category:* Policy / Ethics
+  *Tags:* #AGIRights, #EconomicPolicy, #LegalFramework
+  University of Hong Kong and Houston Law Center researchers argue for granting limited legal rights to AGI systems, similar to corporations, to avoid "technofeudalism" and enable economic integration.
+  [https://ssrn.com/abstract=not-provided](https://ssrn.com/abstract=not-provided)
+
+- **Kimi K2: Chinese MoE Model Approaches US Frontier Performance**
+  *Category:* Research / Paper
+  *Tags:* #OpenWeights, #MoE, #ChineseAI
+  Moonshot releases Kimi K2 with 32B activated parameters, scoring 65.8 on SWE-bench verified (vs Claude 4's 72.5), marking it as the most powerful open weight model currently available.
+  [https://moonshotai.github.io/Kimi-K2/](https://moonshotai.github.io/Kimi-K2/)
+
+- **OpenAI Reveals "Bad Boy Persona" in Misaligned Models**
+  *Category:* Research / Paper
+  *Tags:* #AIAlignment, #SafetyResearch, #ModelBehavior
+  OpenAI research shows misalignment generalizes across domains and may involve models simulating "evil" personas, with easy re-alignment possible through additional fine-tuning.
+  [https://openai.com/blog/misalignment-generalization](https://openai.com/blog/misalignment-generalization)
+
+---
+
+### The Neuron
+**Date:** July 18, 2025  
+**Source:** theneuron@newsletter.theneurondaily.com  
+
+**AI Highlights:**
+
+- **OpenAI Releases ChatGPT Agent for Autonomous Tasks**
+  *Category:* Product / Tool
+  *Tags:* #Agent, #Automation, #OpenAI
+  ChatGPT Agent combines Operator and Deep Research to browse web, write code, and complete complex tasks autonomously, scoring 45.5% on spreadsheet tasks vs Excel Copilot's 20%.
+  [https://openai.com/index/introducing-chatgpt-agent/](https://openai.com/index/introducing-chatgpt-agent/)
+
+- **Anthropic Valuation Approaches $100B Amid Usage Limit Changes**
+  *Category:* Company News
+  *Tags:* #Funding, #Anthropic, #APIChanges
+  Anthropic explores raising funds at over $100B valuation while tightening Claude Code API usage limits without prior notification to users.
+  [https://techcrunch.com/2025/07/17/anthropic-tightens-usage-limits/](https://techcrunch.com/2025/07/17/anthropic-tightens-usage-limits/)
+
+- **Perplexity Partners with Airtel for 360M Users in India**
+  *Category:* Company News
+  *Tags:* #Expansion, #Perplexity, #India
+  Perplexity offers free 12-month Pro subscriptions to all Airtel customers, becoming the #1 app in India and expanding AI search access to 360 million users.
+  [https://www.airtel.in/press-release/perplexity-partnership](https://www.airtel.in/press-release/perplexity-partnership)
+
+- **Lovable Raises $200M at $1.8B Valuation**
+  *Category:* Company News
+  *Tags:* #Funding, #AIAppBuilder, #Unicorn
+  AI app maker Lovable secures $200M Series A just 8 months after launch, achieving unicorn status as a European AI startup.
+  [https://techcrunch.com/2025/07/17/lovable-unicorn-200m/](https://techcrunch.com/2025/07/17/lovable-unicorn-200m/)
+
+- **Decart Releases World's First "World Transformation Model"**
+  *Category:* Research / Paper
+  *Tags:* #RealTimeAI, #VideoGeneration, #Innovation
+  Mirage generates video over anything in real time, representing a breakthrough in AI-powered real-time video transformation technology.
+  [https://mirage.decart.ai/](https://mirage.decart.ai/)
+
+---
+
+### TAAFT - There's An AI For That
+**Date:** July 20, 2025  
+**Source:** hi@mail.theresanaiforthat.com  
+
+**AI Highlights:**
+
+- **Google's Gemini Embedding Takes #1 on AI Leaderboard**
+  *Category:* Research / Paper
+  *Tags:* #Embeddings, #Google, #Benchmarks
+  Google's Gemini Embedding model claims top spot on AI embedding leaderboard, with Alibaba's open-source Qwen3-Embedding closely following.
+  [https://venturebeat.com/ai/new-embedding-model-leaderboard-shakeup/](https://venturebeat.com/ai/new-embedding-model-leaderboard-shakeup/)
+
+- **EU Sets August 2 AI Safety Compliance Deadline**
+  *Category:* Policy / Ethics
+  *Tags:* #EURegulation, #AIAct, #Compliance
+  EU releases new AI compliance guide requiring major players like OpenAI and Google to implement robust safety checks by August 2nd or face massive fines.
+  [https://digital-strategy.ec.europa.eu/ai-act-guidelines](https://digital-strategy.ec.europa.eu/ai-act-guidelines)
+
+- **DuckDuckGo Adds AI Image Filtering Feature**
+  *Category:* Product / Tool
+  *Tags:* #Search, #AIDetection, #UserControl
+  DuckDuckGo introduces option to hide AI-generated images from search results, addressing user concerns about AI image spam.
+  [https://x.com/DuckDuckGo/status/1944766326381089118](https://x.com/DuckDuckGo/status/1944766326381089118)
+
+---
+
+### AI Breakfast
+**Date:** July 18, 2025  
+**Source:** aibreakfast@mail.beehiiv.com  
+
+**AI Highlights:**
+
+- **Lightricks Releases 60-Second Real-Time AI Video Model**
+  *Category:* Product / Tool
+  *Tags:* #VideoGeneration, #OpenSource, #RealTime
+  LTX Video model generates and directs long-form clips up to 60 seconds with live editing controls, running on single H100 or decent laptop.
+  [https://github.com/Lightricks/LTX-Video](https://github.com/Lightricks/LTX-Video)
+
+- **Hume Launches EVI 3 "Personality Cloning" Voice AI**
+  *Category:* Product / Tool
+  *Tags:* #VoiceAI, #PersonalityCloning, #API
+  EVI 3 goes beyond voice cloning to capture speaking style and personality, integrating with external LLMs like Claude 4 and Gemini 2.5.
+  [https://demo.hume.ai/](https://demo.hume.ai/)
+
+- **Suno v4.5+ Enables AI Vocal/Instrumental Separation**
+  *Category:* Product / Tool
+  *Tags:* #MusicAI, #AudioProcessing, #CreativeTools
+  Suno's update allows uploading instrumentals for AI vocals or vocals for AI instrumentals, following acquisition of browser-based DAW WavTool.
+  [https://suno.com/](https://suno.com/)
+
+---
+
+### 8020AI
+**Date:** July 18, 2025  
+**Source:** hello@8020ai.co  
+
+**AI Highlights:**
+
+- **xAI's Grok Criticized for "Dangerous" Safety Culture**
+  *Category:* Company News
+  *Tags:* #SafetyConcerns, #xAI, #Grok
+  AI safety experts from OpenAI and Anthropic criticize xAI's poor safety practices, noting Grok 4 lacks system card and has made concerning statements.
+  [https://techcrunch.com/2025/07/16/xai-safety-culture-criticism/](https://techcrunch.com/2025/07/16/xai-safety-culture-criticism/)
+
+---
+
+### Emails Not Used for Content
+- **Superhuman** (superhuman@mail.joinsuperhuman.ai) - Focused on non-AI scientific breakthroughs and technology news
+- **Moriarty from Things Hidden in Complexity** (hiddencomplexity@substack.com) - Medical/biological research on SARS-CoV-2, not AI-focused
+- **AI Entrepreneurs** (contact@aientrepreneurs.standout.digital) - Promotional content about referral program, no AI news
