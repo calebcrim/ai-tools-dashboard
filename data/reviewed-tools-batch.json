@@ -1,73 +1,21 @@
 {
   "newTools": [
     {
-      "name": "Perplexity",
-      "action": "partnership",
-      "context": "Perplexity Partners with Airtel for 360M Users in India Perplexity offers free 12-month Pro subscriptions to all Airtel customers, becoming the #1 app in India and expanding AI search access to 360 mi",
-      "category": "customer-service",
-      "url": "https://www.airtel.in/press-release/perplexity-partnership",
-      "confidence": 0.8999999999999999,
-      "metadata": {
-        "category": "Company News",
-        "tags": "#Expansion, #Perplexity, #India",
-        "url": "https://www.airtel.in/press-release/perplexity-partnership"
-      }
-    },
-    {
-      "name": "Lovable",
-      "action": "funding",
-      "context": "Lovable Raises $200M at $1.8B Valuation AI app maker Lovable secures $200M Series A just 8 months after launch, achieving unicorn status as a European AI startup.",
-      "category": "ai-tools",
-      "url": "https://techcrunch.com/2025/07/17/lovable-unicorn-200m/",
-      "confidence": 0.8999999999999999,
-      "metadata": {
-        "category": "Company News",
-        "tags": "#Funding, #AIAppBuilder, #Unicorn",
-        "url": "https://techcrunch.com/2025/07/17/lovable-unicorn-200m/"
-      }
-    },
-    {
-      "name": "DuckDuckGo Adds AI Image Filtering Feature",
+      "name": "TestAI Pro: Revolutionary AI Testing Framework",
       "action": "feature",
-      "context": "DuckDuckGo Adds AI Image Filtering Feature DuckDuckGo introduces option to hide AI-generated images from search results, addressing user concerns about AI image spam. --- ### AI Breakfast",
-      "category": "research",
-      "url": "https://x.com/DuckDuckGo/status/1944766326381089118",
+      "context": "TestAI Pro: Revolutionary AI Testing Framework TestAI Pro revolutionizes software testing with AI-powered test generation and maintenance. The tool automatically creates comprehensive test suites and ",
+      "category": "content-creation",
+      "url": "https://testai.pro",
       "confidence": 0.9,
       "metadata": {
         "category": "Product / Tool",
-        "tags": "#Search, #AIDetection, #UserControl",
-        "url": "https://x.com/DuckDuckGo/status/1944766326381089118"
-      }
-    },
-    {
-      "name": "option to hide",
-      "action": "launch",
-      "context": "DuckDuckGo Adds AI Image Filtering Feature DuckDuckGo introduces option to hide AI-generated images from search results, addressing user concerns about AI image spam. --- ### AI Breakfast",
-      "category": "research",
-      "url": "https://x.com/DuckDuckGo/status/1944766326381089118",
-      "confidence": 0.7999999999999999,
-      "metadata": {
-        "category": "Product / Tool",
-        "tags": "#Search, #AIDetection, #UserControl",
-        "url": "https://x.com/DuckDuckGo/status/1944766326381089118"
-      }
-    },
-    {
-      "name": "DuckDuckGo Adds AI Image Filtering",
-      "action": "feature",
-      "context": "DuckDuckGo Adds AI Image Filtering Feature DuckDuckGo introduces option to hide AI-generated images from search results, addressing user concerns about AI image spam. --- ### AI Breakfast",
-      "category": "research",
-      "url": "https://x.com/DuckDuckGo/status/1944766326381089118",
-      "confidence": 0.9999999999999999,
-      "metadata": {
-        "category": "Product / Tool",
-        "tags": "#Search, #AIDetection, #UserControl",
-        "url": "https://x.com/DuckDuckGo/status/1944766326381089118"
+        "tags": "#Testing, #QA, #Automation",
+        "url": "https://testai.pro"
       }
     }
   ],
   "updates": [],
   "rejected": [],
-  "timestamp": "2025-07-21T09:57:03.210Z",
-  "source": "7-21-25.txt"
+  "timestamp": "2025-07-21T10:15:07.178Z",
+  "source": "test-verification.txt"
 }

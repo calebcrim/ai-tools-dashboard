@@ -1,7 +1,7 @@
 // Auto-generated unified tools data
-// Last updated: 2025-07-21T10:15:07.256Z
-// Total tools: 360
-// Last automated update: 2025-07-21T10:15:07.256Z
+// Last updated: 2025-07-21T09:57:03.311Z
+// Total tools: 359
+// Last automated update: 2025-07-21T09:57:03.311Z
 
 const unifiedToolsData = {
   "tools": [
@@ -10894,38 +10894,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "tool_name": "TestAI Pro: Revolutionary AI Testing Framework",
-      "url": "https://testai.pro",
-      "category": "content-creation",
-      "source": "news-extraction",
-      "icon": "content-creation",
-      "brief_purpose_summary": "TestAI Pro: Revolutionary AI Testing Framework TestAI Pro revolutionizes software testing with AI-powered test generation and maintenance. The tool automatically creates comprehensive test suites and",
-      "feature_breakdown": "To be researched",
-      "pricing_model": "To be researched",
-      "pros_cons_limitations": "To be researched",
-      "integration_potential": "To be researched",
-      "learning_curve": "To be researched",
-      "geo_regulatory_limitations": "To be researched",
-      "case_studies": "To be researched",
-      "use_cases_in_pr": [],
-      "tags": [
-        "AI",
-        "Content",
-        "Writing"
-      ],
-      "needs_research": true,
-      "extraction_metadata": {
-        "extracted_date": "2025-07-21T10:15:07.247Z",
-        "source_article": "https://testai.pro",
-        "confidence": 0.9,
-        "action_type": "feature",
-        "newsletter_source": "Unknown"
-      },
-      "auto_generated": true,
-      "id": 336
-    },
-    {
-      "id": 337,
+      "id": 336,
       "tool_name": "Text Cortex",
       "url": "textcortex.com",
       "category": "Content Creation",
@@ -10956,7 +10925,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 338,
+      "id": 337,
       "tool_name": "Thomson Reuters CoCounsel",
       "url": "legal.thomsonreuters.com/cocounsel",
       "category": "Compliance Tools",
@@ -10986,7 +10955,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 339,
+      "id": 338,
       "tool_name": "Tome",
       "url": "tome.app/",
       "category": "General Tools",
@@ -11027,7 +10996,7 @@ const unifiedToolsData = {
       }
     },
     {
-      "id": 340,
+      "id": 339,
       "tool_name": "Topic",
       "url": "www.topic.com",
       "category": "Content Creation",
@@ -11057,7 +11026,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 341,
+      "id": 340,
       "tool_name": "Treendly",
       "url": "treendly.com",
       "category": "Data Analytics",
@@ -11086,7 +11055,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 342,
+      "id": 341,
       "tool_name": "Trello",
       "url": "trello.com",
       "category": "Project Management",
@@ -11115,7 +11084,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 343,
+      "id": 342,
       "tool_name": "Typefully",
       "url": "typefully.com",
       "category": "Content Creation",
@@ -11146,7 +11115,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 344,
+      "id": 343,
       "tool_name": "Undetectable AI",
       "url": "undetectable.ai",
       "category": "Content Creation",
@@ -11176,7 +11145,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 345,
+      "id": 344,
       "tool_name": "VentureMind AI",
       "url": "venturemind.ai",
       "category": "Productivity Tools",
@@ -11206,7 +11175,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 346,
+      "id": 345,
       "tool_name": "Vertex AI",
       "url": "cloud.google.com/vertex-ai",
       "category": "AI Assistants",
@@ -11266,7 +11235,7 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 347
+      "id": 346
     },
     {
       "tool_name": "Voxtral Voice Model",
@@ -11297,7 +11266,7 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 348
+      "id": 347
     },
     {
       "tool_name": "W&B Inference Launch with Kimi K2",
@@ -11326,10 +11295,10 @@ const unifiedToolsData = {
         "newsletter_source": "Unknown"
       },
       "auto_generated": true,
-      "id": 349
+      "id": 348
     },
     {
-      "id": 350,
+      "id": 349,
       "tool_name": "Wappalyzer",
       "url": "www.wappalyzer.com",
       "category": "Data Analytics",
@@ -11359,7 +11328,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 351,
+      "id": 350,
       "tool_name": "Warren AI",
       "url": "warren.ai",
       "category": "Finance",
@@ -11389,7 +11358,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 352,
+      "id": 351,
       "tool_name": "Will",
       "url": "heywill.ai",
       "category": "Content Creation",
@@ -11420,7 +11389,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 353,
+      "id": 352,
       "tool_name": "Wiz Cloud Security Platform",
       "url": "wiz.io",
       "category": "Cybersecurity",
@@ -11456,7 +11425,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 354,
+      "id": 353,
       "tool_name": "Wordtune",
       "url": "www.wordtune.com",
       "category": "Content Creation",
@@ -11486,7 +11455,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 355,
+      "id": 354,
       "tool_name": "Writesonic",
       "url": "writesonic.com",
       "category": "Content Creation",
@@ -11516,7 +11485,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 356,
+      "id": 355,
       "tool_name": "YouTube Studio",
       "url": "studio.youtube.com",
       "category": "Audio/Video Processing",
@@ -11547,7 +11516,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 357,
+      "id": 356,
       "tool_name": "Zendesk AI",
       "url": "www.zendesk.com",
       "category": "Customer Service",
@@ -11578,7 +11547,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 358,
+      "id": 357,
       "tool_name": "Zignal Labs",
       "url": "zignallabs.com",
       "category": "Media Intelligence",
@@ -11608,7 +11577,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 359,
+      "id": 358,
       "tool_name": "Zimmwriter",
       "url": "zimmwriter.com",
       "category": "Content Creation",
@@ -11639,7 +11608,7 @@ const unifiedToolsData = {
       "cision_use_suggestions": null
     },
     {
-      "id": 360,
+      "id": 359,
       "tool_name": "Zynous",
       "url": "zynous.com",
       "category": "Content Creation",
@@ -11714,14 +11683,14 @@ const unifiedToolsData = {
       "Web Development",
       "Workflow Automation"
     ],
-    "lastUpdated": "2025-07-21T10:15:07.256Z",
+    "lastUpdated": "2025-07-21T09:57:03.311Z",
     "lastVerification": "2025-07-18T08:52:22.981Z",
-    "totalCount": 360,
+    "totalCount": 359,
     "lastAutomatedUpdate": {
-      "date": "2025-07-21T10:15:07.256Z",
-      "newTools": 1,
+      "date": "2025-07-21T09:57:03.311Z",
+      "newTools": 5,
       "updates": 0,
-      "source": "test-verification.txt"
+      "source": "7-21-25.txt"
     }
   }
 };

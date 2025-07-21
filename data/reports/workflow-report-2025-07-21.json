@@ -1,21 +1,27 @@
 {
   "workflow": "news-to-tools",
-  "timestamp": "2025-07-21T09:57:03.425Z",
+  "timestamp": "2025-07-21T10:15:07.433Z",
   "newsletter": {
-    "file": "7-21-25.txt",
+    "file": "test-verification.txt",
     "date": null
   },
   "extraction": {
-    "potentialNewTools": 5,
+    "potentialNewTools": 1,
     "potentialUpdates": 0
   },
   "integration": {
-    "newToolsAdded": 5,
+    "newToolsAdded": 1,
     "toolsUpdated": 0,
-    "totalTools": 359
+    "totalTools": 360
+  },
+  "verification": {
+    "totalTools": 360,
+    "completeTools": 317,
+    "incompleteTools": 43,
+    "newlyAddedIncomplete": []
   },
   "summary": {
     "success": true,
-    "message": "Successfully processed newsletter. Added 5 new tools and updated 0 existing tools."
+    "message": "Successfully processed newsletter. Added 1 new tools and updated 0 existing tools."
   }
 }

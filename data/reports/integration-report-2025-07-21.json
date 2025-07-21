@@ -1,54 +1,26 @@
 {
-  "timestamp": "2025-07-21T09:57:03.326Z",
-  "source": "7-21-25.txt",
+  "timestamp": "2025-07-21T10:15:07.269Z",
+  "source": "test-verification.txt",
   "summary": {
-    "newToolsAdded": 5,
+    "newToolsAdded": 1,
     "toolsUpdated": 0,
-    "totalTools": 359
+    "totalTools": 360
   },
   "newTools": [
     {
-      "name": "Perplexity",
-      "category": "customer-service",
-      "url": "https://www.airtel.in/press-release/perplexity-partnership",
-      "confidence": 0.8999999999999999
-    },
-    {
-      "name": "Lovable",
-      "category": "ai-tools",
-      "url": "https://techcrunch.com/2025/07/17/lovable-unicorn-200m/",
-      "confidence": 0.8999999999999999
-    },
-    {
-      "name": "DuckDuckGo Adds AI Image Filtering Feature",
-      "category": "research",
-      "url": "https://x.com/DuckDuckGo/status/1944766326381089118",
+      "name": "TestAI Pro: Revolutionary AI Testing Framework",
+      "category": "content-creation",
+      "url": "https://testai.pro",
       "confidence": 0.9
-    },
-    {
-      "name": "option to hide",
-      "category": "research",
-      "url": "https://x.com/DuckDuckGo/status/1944766326381089118",
-      "confidence": 0.7999999999999999
-    },
-    {
-      "name": "DuckDuckGo Adds AI Image Filtering",
-      "category": "research",
-      "url": "https://x.com/DuckDuckGo/status/1944766326381089118",
-      "confidence": 0.9999999999999999
     }
   ],
   "updates": [],
   "recommendations": [
     {
       "type": "research_needed",
-      "message": "5 new tools need detailed research for complete information",
+      "message": "1 new tools need detailed research for complete information",
       "tools": [
-        "Perplexity",
-        "Lovable",
-        "DuckDuckGo Adds AI Image Filtering Feature",
-        "option to hide",
-        "DuckDuckGo Adds AI Image Filtering"
+        "TestAI Pro: Revolutionary AI Testing Framework"
       ]
     }
   ]
