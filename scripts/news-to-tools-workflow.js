@@ -47,12 +47,17 @@ class NewsToToolsWorkflow {
             console.log('\n4️⃣ Updating newsfeed page...');
             await this.updateNewsfeed();
             
-            // Step 5: Generate summary report
-            console.log('\n5️⃣ Generating summary report...');
+            // Step 5: Run verification to check data completeness
+            console.log('\n5️⃣ Running data verification check...');
+            const verificationResult = await this.runVerification();
+            
+            // Step 6: Generate summary report
+            console.log('\n6️⃣ Generating summary report...');
             const report = await this.generateSummaryReport(
                 newsletterPath,
                 extractionResult,
-                integrationResult
+                integrationResult,
+                verificationResult
             );
             
             return report;
@@ -124,6 +129,9 @@ class NewsToToolsWorkflow {
         const reviewPath = path.join(this.dataDir, 'reviewed-tools-batch.json');
         await fs.writeFile(reviewPath, JSON.stringify(reviewed, null, 2));
         
+        // Store for verification step
+        this.lastReviewedData = reviewed;
+        
         return reviewed;
     }
     
@@ -187,7 +195,130 @@ class NewsToToolsWorkflow {
         console.log('  ✓ Newsfeed updated');
     }
     
-    async generateSummaryReport(newsletterPath, extractionData, integrationResult) {
+    async runVerification() {
+        // Run the verification script to check data completeness
+        const { stdout, stderr } = await execAsync(
+            `node ${path.join(this.scriptsDir, 'verify-integration.js')}`
+        );
+        
+        if (stderr) {
+            console.error('Verification warnings:', stderr);
+        }
+        
+        // Parse verification results from stdout
+        const lines = stdout.split('\n');
+        const result = {
+            totalTools: 0,
+            completeTools: 0,
+            incompleteTools: 0,
+            newlyAddedIncomplete: [],
+            fieldStats: {}
+        };
+        
+        // Parse total tools
+        const totalMatch = stdout.match(/Total tools in database: (\d+)/);
+        if (totalMatch) result.totalTools = parseInt(totalMatch[1]);
+        
+        // Parse complete/incomplete counts
+        const completeMatch = stdout.match(/Tools with complete data: (\d+)/);
+        if (completeMatch) result.completeTools = parseInt(completeMatch[1]);
+        
+        const incompleteMatch = stdout.match(/Tools with missing data: (\d+)/);
+        if (incompleteMatch) result.incompleteTools = parseInt(incompleteMatch[1]);
+        
+        // Parse field statistics
+        const fieldLines = lines.filter(line => line.includes(':') && line.includes('/'));
+        fieldLines.forEach(line => {
+            const match = line.match(/\s*(\w+): (\d+)\/(\d+) \((\d+\.\d+)% complete\)/);
+            if (match) {
+                result.fieldStats[match[1]] = {
+                    present: parseInt(match[2]),
+                    total: parseInt(match[3]),
+                    percentage: parseFloat(match[4])
+                };
+            }
+        });
+        
+        // Load the database to find newly added tools with missing data
+        const dbPath = path.join(this.dataDir, 'unified-tools-data.js');
+        const content = await fs.readFile(dbPath, 'utf8');
+        const wrappedCode = `
+            ${content}
+            return unifiedToolsData;
+        `;
+        const getData = new Function(wrappedCode);
+        const data = getData();
+        
+        // Get newly added tools from this workflow run
+        const newlyAddedNames = [];
+        if (this.lastReviewedData && this.lastReviewedData.newTools) {
+            this.lastReviewedData.newTools.forEach(tool => {
+                newlyAddedNames.push(tool.name);
+            });
+        }
+        
+        // Get all tools and check the newly added ones
+        const fieldsToCheck = [
+            'feature_breakdown',
+            'pricing_model',
+            'pros_cons_limitations',
+            'integration_potential',
+            'learning_curve',
+            'geo_regulatory_limitations',
+            'case_studies',
+            'use_cases_in_pr'
+        ];
+        
+        data.tools.forEach(tool => {
+            // Check if this is a newly added tool or one of the last 10 tools
+            const isNewlyAdded = newlyAddedNames.includes(tool.tool_name);
+            const isRecent = data.tools.indexOf(tool) >= data.tools.length - 10;
+            
+            if (isNewlyAdded || isRecent) {
+                const missingFields = [];
+                const minimalFields = [];
+                
+                fieldsToCheck.forEach(field => {
+                    const value = tool[field];
+                    if (!value || value.length === 0 || value === 'Not publicly disclosed') {
+                        missingFields.push(field);
+                    } else if (value.length < 50 && field !== 'learning_curve') {
+                        // Check if field has minimal/placeholder content
+                        minimalFields.push(field);
+                    }
+                });
+                
+                if (missingFields.length > 0 || minimalFields.length > 2) {
+                    result.newlyAddedIncomplete.push({
+                        name: tool.tool_name,
+                        url: tool.url,
+                        missingFields: missingFields,
+                        minimalFields: minimalFields,
+                        missingCount: missingFields.length,
+                        isNewlyAdded: isNewlyAdded
+                    });
+                }
+            }
+        });
+        
+        // Display verification summary
+        console.log(`\n  📊 Verification Results:`);
+        console.log(`  • Total tools: ${result.totalTools}`);
+        console.log(`  • Complete: ${result.completeTools} (${(result.completeTools / result.totalTools * 100).toFixed(1)}%)`);
+        console.log(`  • Incomplete: ${result.incompleteTools} (${(result.incompleteTools / result.totalTools * 100).toFixed(1)}%)`);
+        
+        if (result.newlyAddedIncomplete.length > 0) {
+            console.log(`\n  ⚠️  Newly added tools needing research:`);
+            result.newlyAddedIncomplete.forEach(tool => {
+                console.log(`  • ${tool.name} (${tool.url})`);
+                console.log(`    Missing ${tool.missingCount} fields: ${tool.missingFields.slice(0, 3).join(', ')}${tool.missingFields.length > 3 ? '...' : ''}`);
+            });
+        }
+        
+        return result;
+    }
+    
+    async generateSummaryReport(newsletterPath, extractionData, integrationResult, verificationResult) {
         const report = {
             workflow: 'news-to-tools',
             timestamp: new Date().toISOString(),
@@ -200,6 +331,12 @@ class NewsToToolsWorkflow {
                 potentialUpdates: extractionData.updates.length
             },
             integration: integrationResult,
+            verification: {
+                totalTools: verificationResult.totalTools,
+                completeTools: verificationResult.completeTools,
+                incompleteTools: verificationResult.incompleteTools,
+                newlyAddedIncomplete: verificationResult.newlyAddedIncomplete
+            },
             summary: {
                 success: true,
                 message: `Successfully processed newsletter. Added ${integrationResult.newToolsAdded} new tools and updated ${integrationResult.toolsUpdated} existing tools.`
@@ -218,6 +355,19 @@ class NewsToToolsWorkflow {
         console.log('====================');
         console.log(report.summary.message);
         console.log(`Report saved to: ${path.basename(reportPath)}`);
+        
+        // Display research recommendations if there are incomplete tools
+        if (verificationResult.newlyAddedIncomplete.length > 0) {
+            console.log('\n📋 MANUAL RESEARCH NEEDED:');
+            console.log('========================');
+            console.log(`${verificationResult.newlyAddedIncomplete.length} newly added tools require additional data:`);
+            verificationResult.newlyAddedIncomplete.forEach(tool => {
+                console.log(`\n• ${tool.name}`);
+                console.log(`  URL: ${tool.url}`);
+                console.log(`  Missing fields (${tool.missingCount}): ${tool.missingFields.join(', ')}`);
+            });
+            console.log('\nRun the research batch generator to complete these tools.');
+        }
         
         return report;
     }

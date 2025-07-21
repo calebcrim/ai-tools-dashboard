@@ -1,19 +1,29 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+import { promises as fs } from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
-// Load the updated database
-const dbPath = path.join(__dirname, '..', 'data', 'unified-tools-data.js');
-const content = fs.readFileSync(dbPath, 'utf8');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
-const wrappedCode = `
-    ${content}
-    return unifiedToolsData;
-`;
+async function loadData() {
+    // Load the updated database
+    const dbPath = path.join(__dirname, '..', 'data', 'unified-tools-data.js');
+    const content = await fs.readFile(dbPath, 'utf8');
 
-const getData = new Function(wrappedCode);
-const data = getData();
+    const wrappedCode = `
+        ${content}
+        return unifiedToolsData;
+    `;
+
+    const getData = new Function(wrappedCode);
+    return getData();
+}
+
+async function main() {
+    const data = await loadData();
 
 console.log('=== INTEGRATION VERIFICATION REPORT ===\n');
 console.log(`Total tools in database: ${data.tools.length}`);
@@ -71,3 +81,6 @@ const recentlyUpdated = data.tools.filter(tool => {
 });
 
 console.log(`\nTools with recent updates (2024/2025 mentions): ${recentlyUpdated.length}`);
+}
+
+main().catch(console.error);
