@@ -8,7 +8,7 @@ class MetaManager {
       siteUrl: 'https://crimintel.ai',
       defaultImage: '/images/og-default.jpg',
       twitterHandle: '@crimintel_ai',
-      defaultDescription: 'Discover and compare 345+ AI tools. Find the perfect AI software for your needs with detailed analysis, pricing, and integration information.',
+      defaultDescription: 'Discover 345+ AI tools with executive-ready analysis, pricing & ROI insights. Daily AI news, guides & best practices for decision-makers.',
       keywords: 'AI tools, artificial intelligence software, AI comparison, best AI tools 2025, machine learning tools, AI software directory'
     };
   }
