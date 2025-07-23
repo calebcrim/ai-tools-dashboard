@@ -282,6 +282,11 @@ class NewsletterManager {
         
         // Set up filter event listeners
         this.setupFilterListeners();
+        
+        // Update display again after filters are set up
+        if (this.currentDate) {
+            this.updateDisplay();
+        }
     }
 
     createDateNavigation() {
