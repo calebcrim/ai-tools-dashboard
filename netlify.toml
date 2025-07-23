@@ -106,8 +106,10 @@
   
   [plugins.inputs]
     output_path = "reports/lighthouse.html"
-    # Only run on production deploys
-    enable = "onSuccess"
+    # Audit the main page
+    audit_url = "/"
+    # Set performance thresholds
+    thresholds = { performance = 0.8, accessibility = 0.9, best-practices = 0.9, seo = 0.9 }
 
 # Enable Netlify's built-in optimizations
 [build.processing]
