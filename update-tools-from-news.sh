@@ -5,8 +5,13 @@
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 WORKFLOW_SCRIPT="$SCRIPT_DIR/scripts/news-to-tools-workflow.js"
-EXTRACTOR_SCRIPT="$SCRIPT_DIR/scripts/news-tool-extractor.js"
+EXTRACTOR_SCRIPT="$SCRIPT_DIR/scripts/news-tool-extractor-enhanced.js"
 INTEGRATOR_SCRIPT="$SCRIPT_DIR/scripts/auto-integrate-tools.js"
+
+# Use original extractor if enhanced doesn't exist
+if [ ! -f "$EXTRACTOR_SCRIPT" ]; then
+    EXTRACTOR_SCRIPT="$SCRIPT_DIR/scripts/news-tool-extractor.js"
+fi
 
 # Colors for output
 GREEN='\033[0;32m'

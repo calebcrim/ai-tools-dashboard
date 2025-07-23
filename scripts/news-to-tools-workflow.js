@@ -69,8 +69,18 @@ class NewsToToolsWorkflow {
     }
     
     async extractTools(newsletterPath) {
+        // Use enhanced extractor if available
+        let extractorScript = 'news-tool-extractor-enhanced.js';
+        const enhancedPath = path.join(this.scriptsDir, extractorScript);
+        
+        try {
+            await fs.access(enhancedPath);
+        } catch {
+            extractorScript = 'news-tool-extractor.js';
+        }
+        
         const { stdout, stderr } = await execAsync(
-            `node ${path.join(this.scriptsDir, 'news-tool-extractor.js')} "${newsletterPath}"`
+            `node ${path.join(this.scriptsDir, extractorScript)} "${newsletterPath}"`
         );
         
         if (stderr) {
