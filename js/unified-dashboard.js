@@ -1066,7 +1066,17 @@ class UnifiedDashboard {
 
 // Initialize the dashboard when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    window.unifiedDashboard = new UnifiedDashboard();
+    // Wait for data to be available before initializing
+    function initializeDashboard() {
+        if (window.unifiedToolsData) {
+            console.log('Data loaded, initializing dashboard with', window.unifiedToolsData.tools?.length || 0, 'tools');
+            window.unifiedDashboard = new UnifiedDashboard();
+        } else {
+            console.log('Waiting for data to load...');
+            setTimeout(initializeDashboard, 100);
+        }
+    }
+    initializeDashboard();
 });
 
 // Close detail panel on outside click
