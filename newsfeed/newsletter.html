@@ -42,6 +42,9 @@
     <link rel="stylesheet" href="../css/navigation-override.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Unified Navigation -->
+    <link rel="stylesheet" href="../css/unified-navigation.css">
+    
     <!-- Analytics with Privacy Consent -->
     <script src="../js/analytics/analytics-init.js"></script>
     
@@ -570,23 +573,21 @@ footer a:hover {
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="header-content">
-            <div class="header-top-row">
-                <div class="logo">
-                    <div class="logo-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h1 class="logo-text">CrimIntelligence: AI Tools Suite</h1>
-                </div>
+    <header class="unified-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-icon">📊</div>
+                <div class="logo-text">AI Investment Command Center</div>
             </div>
-            <div class="header-nav-row">
-                <nav class="header-nav">
-                    <a href="../unified-dashboard.html" class="nav-link">Unified Dashboard</a>
-                    <a href="../financial-analysis/index.html" class="nav-link">Financial Analysis</a>
-                    <a href="../best-practices.html" class="nav-link">Best Practices</a>
-                    <a href="newsletter.html" class="nav-link active">AI News</a>
-                </nav>
+            <nav class="nav-buttons">
+                <a href="../unified-dashboard.html" class="nav-button">Unified Dashboard</a>
+                <a href="../financial-analysis/index.html" class="nav-button">Financial Analysis</a>
+                <a href="../best-practices.html" class="nav-button">Best Practices</a>
+                <a href="newsletter.html" class="nav-button active">AI News</a>
+            </nav>
+            <div class="user-actions">
+                <button class="theme-toggle" id="darkModeToggle">🌙</button>
+                <button class="settings-toggle">⚙️</button>
             </div>
         </div>
     </header>
@@ -610,5 +611,20 @@ footer a:hover {
     </div>
     
     <script src="newsletter.js"></script>
+    
+    <!-- Active Navigation State -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname;
+            const navButtons = document.querySelectorAll('.nav-button');
+            
+            navButtons.forEach(button => {
+                const href = button.getAttribute('href');
+                if (currentPath.includes('newsletter') && href.includes('news')) {
+                    button.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

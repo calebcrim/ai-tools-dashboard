@@ -50,6 +50,9 @@
     <!-- Main Styles -->
     <link rel="stylesheet" href="../styles.css">
     
+    <!-- Unified Navigation -->
+    <link rel="stylesheet" href="../css/unified-navigation.css">
+    
     <!-- Mobile Responsive Styles -->
     <link rel="stylesheet" href="../css/mobile-navigation.css">
     <link rel="stylesheet" href="../css/mobile-responsive.css">
@@ -1114,23 +1117,22 @@
     <a href="#main-content" class="skip-to-main">Skip to main content</a>
     
     <!-- Header -->
-    <header class="header">
-        <div class="header-content">
-            <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h1 class="logo-text">AI Investment Command Center</h1>
+    <header class="unified-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-icon">📊</div>
+                <div class="logo-text">AI Investment Command Center</div>
             </div>
-            <nav class="header-nav">
-                <a href="../unified-dashboard.html" class="nav-link">Unified Dashboard</a>
-                <a href="index.html" class="nav-link active">Financial Analysis</a>
-                <a href="../best-practices.html" class="nav-link">Best Practices</a>
-                <a href="../newsfeed/newsletter.html" class="nav-link">AI News</a>
+            <nav class="nav-buttons">
+                <a href="../unified-dashboard.html" class="nav-button">Unified Dashboard</a>
+                <a href="index.html" class="nav-button active">Financial Analysis</a>
+                <a href="../best-practices.html" class="nav-button">Best Practices</a>
+                <a href="../newsfeed/newsletter.html" class="nav-button">AI News</a>
             </nav>
+            <div class="user-actions">
+                <button class="theme-toggle" id="darkModeToggle">🌙</button>
+                <button class="settings-toggle">⚙️</button>
+            </div>
         </div>
     </header>
 
@@ -2301,6 +2303,21 @@
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
                     closeMobileMenu();
+                }
+            });
+        });
+    </script>
+    
+    <!-- Active Navigation State -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname;
+            const navButtons = document.querySelectorAll('.nav-button');
+            
+            navButtons.forEach(button => {
+                const href = button.getAttribute('href');
+                if (currentPath.includes('financial-analysis') && href.includes('financial-analysis')) {
+                    button.classList.add('active');
                 }
             });
         });
