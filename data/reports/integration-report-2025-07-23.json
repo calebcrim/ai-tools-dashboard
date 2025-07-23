@@ -1,0 +1,111 @@
+{
+  "timestamp": "2025-07-23T08:18:10.977Z",
+  "source": "7-23-2025.txt",
+  "summary": {
+    "newToolsAdded": 10,
+    "toolsUpdated": 2,
+    "totalTools": 355
+  },
+  "newTools": [
+    {
+      "name": "Windsurf After Google",
+      "category": "developer-tools",
+      "url": "https://substack.com/redirect/4106d5e1-27db-4ebf-935b-f3965d875e1c",
+      "confidence": 0.8999999999999999
+    },
+    {
+      "name": "Deep Research Mode in Le Chat",
+      "category": "customer-service",
+      "url": "https://substack.com/redirect/0487be0b-294f-4d1c-ab6c-920b80e08dd8",
+      "confidence": 0.9
+    },
+    {
+      "name": "AgentCore for Enterprise AI",
+      "category": "customer-service",
+      "url": "https://substack.com/redirect/6b23735e-dfef-4000-b4cf-1601393e3479",
+      "confidence": 0.9
+    },
+    {
+      "name": "AgentCore for Enterprise",
+      "category": "customer-service",
+      "url": "https://substack.com/redirect/6b23735e-dfef-4000-b4cf-1601393e3479",
+      "confidence": 0.9999999999999999
+    },
+    {
+      "name": "Transparency Framework for Frontier",
+      "category": "ai-tools",
+      "url": "https://substack.com/redirect/dcb95612-162e-4dbc-889a-d40d08399879",
+      "confidence": 0.9999999999999999
+    },
+    {
+      "name": "OpenAI",
+      "category": "customer-service",
+      "url": "https://venturebeat.com/ai/a-chatgpt-router-that-automatically-selects-the-right-openai-model-for-your-job-appears-imminent/",
+      "confidence": 0.9
+    },
+    {
+      "name": "Alibaba's Moonshot Releases Kimi AI Model",
+      "category": "customer-service",
+      "url": "https://substack.com/redirect/604dc2a7-190d-44a6-9c46-6d7e33571647",
+      "confidence": 0.9
+    },
+    {
+      "name": "new Kimi",
+      "category": "customer-service",
+      "url": "https://substack.com/redirect/604dc2a7-190d-44a6-9c46-6d7e33571647",
+      "confidence": 0.7999999999999999
+    },
+    {
+      "name": "Kiro AI Development Tool",
+      "category": "productivity",
+      "url": "https://substack.com/redirect/2f18de8a-d165-442f-b0e2-3e41df71f45b",
+      "confidence": 0.9
+    },
+    {
+      "name": "Kiro",
+      "category": "productivity",
+      "url": "https://substack.com/redirect/2f18de8a-d165-442f-b0e2-3e41df71f45b",
+      "confidence": 0.9999999999999999
+    }
+  ],
+  "updates": [
+    {
+      "tool_name": "ChatGPT",
+      "updates": {
+        "pricing_model": "Marked for update"
+      }
+    },
+    {
+      "tool_name": "Claude",
+      "updates": {
+        "pricing_model": "Marked for update"
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "research_needed",
+      "message": "10 new tools need detailed research for complete information",
+      "tools": [
+        "Windsurf After Google",
+        "Deep Research Mode in Le Chat",
+        "AgentCore for Enterprise AI",
+        "AgentCore for Enterprise",
+        "Transparency Framework for Frontier",
+        "OpenAI",
+        "Alibaba's Moonshot Releases Kimi AI Model",
+        "new Kimi",
+        "Kiro AI Development Tool",
+        "Kiro"
+      ]
+    },
+    {
+      "type": "verify_updates",
+      "message": "2 tools have potential updates that should be verified",
+      "tools": [
+        "ChatGPT",
+        "Claude"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "workflow": "news-to-tools",
+  "timestamp": "2025-07-23T08:18:11.283Z",
+  "newsletter": {
+    "file": "7-23-2025.txt",
+    "date": "2025-07-23"
+  },
+  "extraction": {
+    "potentialNewTools": 10,
+    "potentialUpdates": 2
+  },
+  "integration": {
+    "newToolsAdded": 10,
+    "toolsUpdated": 2,
+    "totalTools": 355
+  },
+  "verification": {
+    "totalTools": 355,
+    "completeTools": 317,
+    "incompleteTools": 38,
+    "newlyAddedIncomplete": [
+      {
+        "name": "AgentCore for Enterprise",
+        "url": "https://substack.com/redirect/6b23735e-dfef-4000-b4cf-1601393e3479",
+        "missingFields": [
+          "use_cases_in_pr"
+        ],
+        "minimalFields": [
+          "feature_breakdown",
+          "pricing_model",
+          "pros_cons_limitations",
+          "integration_potential",
+          "geo_regulatory_limitations",
+          "case_studies"
+        ],
+        "missingCount": 1,
+        "isNewlyAdded": true
+      },
+      {
+        "name": "AgentCore for Enterprise AI",
+        "url": "https://substack.com/redirect/6b23735e-dfef-4000-b4cf-1601393e3479",
+        "missingFields": [
+          "use_cases_in_pr"
+        ],
+        "minimalFields": [
+          "feature_breakdown",
+          "pricing_model",
+          "pros_cons_limitations",
+          "integration_potential",
+          "geo_regulatory_limitations",
+          "case_studies"
+        ],
+        "missingCount": 1,
+        "isNewlyAdded": true
+      },
+      {
+        "name": "Alibaba's Moonshot Releases Kimi AI Model",
+        "url": "https://substack.com/redirect/604dc2a7-190d-44a6-9c46-6d7e33571647",
+        "missingFields": [
+          "use_cases_in_pr"
+        ],
+        "minimalFields": [
+          "feature_breakdown",
+          "pricing_model",
+          "pros_cons_limitations",
+          "integration_potential",
+          "geo_regulatory_limitations",
+          "case_studies"
+        ],
+        "missingCount": 1,
+        "isNewlyAdded": true
+      },
+      {
+        "name": "Deep Research Mode in Le Chat",
+        "url": "https://substack.com/redirect/0487be0b-294f-4d1c-ab6c-920b80e08dd8",
+        "missingFields": [
+          "use_cases_in_pr"
+        ],
+        "minimalFields": [
+          "feature_breakdown",
+          "pricing_model",
+          "pros_cons_limitations",
+          "integration_potential",
+          "geo_regulatory_limitations",
+          "case_studies"
+        ],
+        "missingCount": 1,
+        "isNewlyAdded": true
+      },
+      {
+        "name": "Kiro",
+        "url": "https://substack.com/redirect/2f18de8a-d165-442f-b0e2-3e41df71f45b",
+        "missingFields": [
+          "use_cases_in_pr"
+        ],
+        "minimalFields": [
+          "feature_breakdown",
+          "pricing_model",
+          "pros_cons_limitations",
+          "integration_potential",
+          "geo_regulatory_limitations",
+          "case_studies"
+        ],
+        "missingCount": 1,
+        "isNewlyAdded": true
+      },
+      {
+        "name": "Kiro AI Development Tool",
+        "url": "https://substack.com/redirect/2f18de8a-d165-442f-b0e2-3e41df71f45b",
+        "missingFields": [
+          "use_cases_in_pr"
+        ],
+        "minimalFields": [
+          "feature_breakdown",
+          "pricing_model",
+          "pros_cons_limitations",
+          "integration_potential",
+          "geo_regulatory_limitations",
+          "case_studies"
+        ],
+        "missingCount": 1,
+        "isNewlyAdded": true
+      },
+      {
+        "name": "new Kimi",
+        "url": "https://substack.com/redirect/604dc2a7-190d-44a6-9c46-6d7e33571647",
+        "missingFields": [
+          "use_cases_in_pr"
+        ],
+        "minimalFields": [
+          "feature_breakdown",
+          "pricing_model",
+          "pros_cons_limitations",
+          "integration_potential",
+          "geo_regulatory_limitations",
+          "case_studies"
+        ],
+        "missingCount": 1,
+        "isNewlyAdded": true
+      },
+      {
+        "name": "OpenAI",
+        "url": "https://venturebeat.com/ai/a-chatgpt-router-that-automatically-selects-the-right-openai-model-for-your-job-appears-imminent/",
+        "missingFields": [
+          "use_cases_in_pr"
+        ],
+        "minimalFields": [
+          "feature_breakdown",
+          "pricing_model",
+          "pros_cons_limitations",
+          "integration_potential",
+          "geo_regulatory_limitations",
+          "case_studies"
+        ],
+        "missingCount": 1,
+        "isNewlyAdded": true
+      },
+      {
+        "name": "Transparency Framework for Frontier",
+        "url": "https://substack.com/redirect/dcb95612-162e-4dbc-889a-d40d08399879",
+        "missingFields": [
+          "use_cases_in_pr"
+        ],
+        "minimalFields": [
+          "feature_breakdown",
+          "pricing_model",
+          "pros_cons_limitations",
+          "integration_potential",
+          "geo_regulatory_limitations",
+          "case_studies"
+        ],
+        "missingCount": 1,
+        "isNewlyAdded": true
+      },
+      {
+        "name": "Windsurf After Google",
+        "url": "https://substack.com/redirect/4106d5e1-27db-4ebf-935b-f3965d875e1c",
+        "missingFields": [
+          "use_cases_in_pr"
+        ],
+        "minimalFields": [
+          "feature_breakdown",
+          "pricing_model",
+          "pros_cons_limitations",
+          "integration_potential",
+          "geo_regulatory_limitations",
+          "case_studies"
+        ],
+        "missingCount": 1,
+        "isNewlyAdded": true
+      }
+    ]
+  },
+  "summary": {
+    "success": true,
+    "message": "Successfully processed newsletter. Added 10 new tools and updated 2 existing tools."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "date": "2025-07-23T08:43:10.203Z",
+  "duplicatesRemoved": [
+    "Kiro AI Development Tool",
+    "Kiro IDE",
+    "Kiro, AI Code Editor",
+    "AgentCore for Enterprise AI",
+    "new Kimi",
+    "OpenAI"
+  ],
+  "toolsUpdated": [
+    "Kiro",
+    "AgentCore",
+    "Kimi"
+  ],
+  "removedCount": 6,
+  "updatedCount": 3,
+  "oldTotal": 355,
+  "newTotal": 349
+}

@@ -1,21 +1,161 @@
 {
   "newTools": [
     {
-      "name": "TestAI Pro: Revolutionary AI Testing Framework",
+      "name": "Windsurf After Google",
+      "action": "acquisition",
+      "context": "Cognition Acquires Windsurf After Google's Reverse-Acquihire Cognition, maker of AI coding agent Devin, acquired Windsurf after Google hired away its CEO and key personnel. The acquisition includes Windsurf's I",
+      "category": "developer-tools",
+      "url": "https://substack.com/redirect/4106d5e1-27db-4ebf-935b-f3965d875e1c",
+      "confidence": 0.8999999999999999,
+      "metadata": {
+        "category": "Company News",
+        "tags": "#Acquisition, #Cognition, #Windsurf, #CodingAI",
+        "url": "https://substack.com/redirect/4106d5e1-27db-4ebf-935b-f3965d875e1c"
+      }
+    },
+    {
+      "name": "Deep Research Mode in Le Chat",
       "action": "feature",
-      "context": "TestAI Pro: Revolutionary AI Testing Framework TestAI Pro revolutionizes software testing with AI-powered test generation and maintenance. The tool automatically creates comprehensive test suites and ",
-      "category": "content-creation",
-      "url": "https://testai.pro",
+      "context": "Mistral Introduces Deep Research Mode in Le Chat Mistral enhanced its Le Chat app with deep research mode, multilingual reasoning, and improved image editing. The mode acts as an intelligent assistant",
+      "category": "customer-service",
+      "url": "https://substack.com/redirect/0487be0b-294f-4d1c-ab6c-920b80e08dd8",
       "confidence": 0.9,
       "metadata": {
         "category": "Product / Tool",
-        "tags": "#Testing, #QA, #Automation",
-        "url": "https://testai.pro"
+        "tags": "#Mistral, #Research, #Productivity",
+        "url": "https://substack.com/redirect/0487be0b-294f-4d1c-ab6c-920b80e08dd8"
+      }
+    },
+    {
+      "name": "AgentCore for Enterprise AI",
+      "action": "feature",
+      "context": "Amazon Launches AgentCore for Enterprise AI Amazon announced AgentCore preview, a suite of services for deploying and managing AI agents at enterprise scale. Built on Amazon Bedrock, it supports produ",
+      "category": "customer-service",
+      "url": "https://substack.com/redirect/6b23735e-dfef-4000-b4cf-1601393e3479",
+      "confidence": 0.9,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "#Amazon, #Enterprise, #Agent, #Infrastructure",
+        "url": "https://substack.com/redirect/6b23735e-dfef-4000-b4cf-1601393e3479"
+      }
+    },
+    {
+      "name": "AgentCore for Enterprise",
+      "action": "launch",
+      "context": "Amazon Launches AgentCore for Enterprise AI Amazon announced AgentCore preview, a suite of services for deploying and managing AI agents at enterprise scale. Built on Amazon Bedrock, it supports production-r",
+      "category": "customer-service",
+      "url": "https://substack.com/redirect/6b23735e-dfef-4000-b4cf-1601393e3479",
+      "confidence": 0.9999999999999999,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "#Amazon, #Enterprise, #Agent, #Infrastructure",
+        "url": "https://substack.com/redirect/6b23735e-dfef-4000-b4cf-1601393e3479"
+      }
+    },
+    {
+      "name": "Transparency Framework for Frontier",
+      "action": "launch",
+      "context": "Anthropic Introduces Transparency Framework for Frontier AI Anthropic proposed a targeted transparency framework for frontier AI models with highest potential impact and risk. The framework focuses on companies",
+      "category": "ai-tools",
+      "url": "https://substack.com/redirect/dcb95612-162e-4dbc-889a-d40d08399879",
+      "confidence": 0.9999999999999999,
+      "metadata": {
+        "category": "Policy / Ethics",
+        "tags": "#Anthropic, #Transparency, #Safety, #Policy",
+        "url": "https://substack.com/redirect/dcb95612-162e-4dbc-889a-d40d08399879"
+      }
+    },
+    {
+      "name": "OpenAI",
+      "action": "feature",
+      "context": "OpenAI Developing Smart ChatGPT Router OpenAI is working on a smart \"router\" that will automatically select the best ChatGPT model for specific tasks, simplifying the user experience of choosing betwe",
+      "category": "customer-service",
+      "url": "https://venturebeat.com/ai/a-chatgpt-router-that-automatically-selects-the-right-openai-model-for-your-job-appears-imminent/",
+      "confidence": 0.9,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "#OpenAI, #ChatGPT, #ModelSelection",
+        "url": "https://venturebeat.com/ai/a-chatgpt-router-that-automatically-selects-the-right-openai-model-for-your-job-appears-imminent/"
+      }
+    },
+    {
+      "name": "Alibaba's Moonshot Releases Kimi AI Model",
+      "action": "feature",
+      "context": "Alibaba's Moonshot Releases Kimi AI Model Alibaba-backed Moonshot released a new Kimi AI model that outperforms ChatGPT and Claude in coding tasks while offering lower costs, marking increased competi",
+      "category": "customer-service",
+      "url": "https://substack.com/redirect/604dc2a7-190d-44a6-9c46-6d7e33571647",
+      "confidence": 0.9,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "#Alibaba, #Moonshot, #Coding, #LLM",
+        "url": "https://substack.com/redirect/604dc2a7-190d-44a6-9c46-6d7e33571647"
+      }
+    },
+    {
+      "name": "new Kimi",
+      "action": "launch",
+      "context": "Alibaba's Moonshot Releases Kimi AI Model Alibaba-backed Moonshot released a new Kimi AI model that outperforms ChatGPT and Claude in coding tasks while offering lower costs, marking increased competition in the coding AI space.",
+      "category": "customer-service",
+      "url": "https://substack.com/redirect/604dc2a7-190d-44a6-9c46-6d7e33571647",
+      "confidence": 0.7999999999999999,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "#Alibaba, #Moonshot, #Coding, #LLM",
+        "url": "https://substack.com/redirect/604dc2a7-190d-44a6-9c46-6d7e33571647"
+      }
+    },
+    {
+      "name": "Kiro AI Development Tool",
+      "action": "feature",
+      "context": "Amazon Launches Kiro AI Development Tool Amazon introduced Kiro, a specification-driven integrated development environment targeting the agentic coding tools market, built on Code OSS for compatibilit",
+      "category": "productivity",
+      "url": "https://substack.com/redirect/2f18de8a-d165-442f-b0e2-3e41df71f45b",
+      "confidence": 0.9,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "#Amazon, #AWS, #Development, #Coding",
+        "url": "https://substack.com/redirect/2f18de8a-d165-442f-b0e2-3e41df71f45b"
+      }
+    },
+    {
+      "name": "Kiro",
+      "action": "launch",
+      "context": "Amazon Launches Kiro AI Development Tool Amazon introduced Kiro, a specification-driven integrated development environment targeting the agentic coding tools market, built on Code OSS for compatibility with ",
+      "category": "productivity",
+      "url": "https://substack.com/redirect/2f18de8a-d165-442f-b0e2-3e41df71f45b",
+      "confidence": 0.9999999999999999,
+      "metadata": {
+        "category": "Product / Tool",
+        "tags": "#Amazon, #AWS, #Development, #Coding",
+        "url": "https://substack.com/redirect/2f18de8a-d165-442f-b0e2-3e41df71f45b"
       }
     }
   ],
-  "updates": [],
+  "updates": [
+    {
+      "tool_name": "ChatGPT",
+      "updates": {
+        "pricing_model_update": true,
+        "context": "Alibaba's Moonshot Releases Kimi AI Model Alibaba-backed Moonshot released a new Kimi AI model that outperforms ChatGPT and Claude in coding tasks while offering lower costs, marking increased competition in the coding AI space.",
+        "source_url": "https://substack.com/redirect/604dc2a7-190d-44a6-9c46-6d7e33571647",
+        "date": "2025-07-23T08:18:10.843Z"
+      },
+      "context": "Alibaba's Moonshot Releases Kimi AI Model Alibaba-backed Moonshot released a new Kimi AI model that outperforms ChatGPT and Claude in coding tasks while offering lower costs, marking increased competition in the coding AI space.",
+      "confidence": 0.8
+    },
+    {
+      "tool_name": "Claude",
+      "updates": {
+        "pricing_model_update": true,
+        "context": "Alibaba's Moonshot Releases Kimi AI Model Alibaba-backed Moonshot released a new Kimi AI model that outperforms ChatGPT and Claude in coding tasks while offering lower costs, marking increased competition in the coding AI space.",
+        "source_url": "https://substack.com/redirect/604dc2a7-190d-44a6-9c46-6d7e33571647",
+        "date": "2025-07-23T08:18:10.843Z"
+      },
+      "context": "Alibaba's Moonshot Releases Kimi AI Model Alibaba-backed Moonshot released a new Kimi AI model that outperforms ChatGPT and Claude in coding tasks while offering lower costs, marking increased competition in the coding AI space.",
+      "confidence": 0.8
+    }
+  ],
   "rejected": [],
-  "timestamp": "2025-07-21T10:15:07.178Z",
-  "source": "test-verification.txt"
+  "timestamp": "2025-07-23T08:18:10.814Z",
+  "source": "7-23-2025.txt"
 }

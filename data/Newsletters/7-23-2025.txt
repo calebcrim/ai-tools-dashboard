@@ -1,0 +1,150 @@
+I'll help you analyze your AI newsletters. Let me start by checking your project knowledge for the contacts and subscriptions files to understand what newsletter sources to expect.Now let me access your Gmail account to check for AI newsletter emails from the past 24 hours.I found several AI newsletters in your inbox from the past 24 hours. Let me extract the full content from these newsletters to create your summary. I'll start with the most relevant ones.Based on the AI newsletters in your inbox from the past 24 hours, here is the organized summary:
+
+### Last Week in AI
+**Date:** July 22, 2025
+**Source:** lastweekinai@substack.com
+
+**AI Highlights:**
+
+- **OpenAI's ChatGPT Agent Can Control an Entire Computer**
+    *Category:* Product / Tool
+    *Tags:* #ChatGPT, #OpenAI, #Agent, #Automation
+    OpenAI introduced ChatGPT Agent, which can perform complex multi-step tasks using its own virtual computer with browser, terminal, and API connectors. The tool combines capabilities of Operator and Deep Research, rolling out to Pro, Plus, and Team users.
+    [https://substack.com/redirect/347711bf-44d2-4960-9d93-5783f6a3f0c9](https://substack.com/redirect/347711bf-44d2-4960-9d93-5783f6a3f0c9)
+
+- **Google and OpenAI AI Systems Win Gold in International Math Olympiad**
+    *Category:* Research / Paper
+    *Tags:* #DeepMind, #OpenAI, #IMO, #Mathematics
+    Both Google DeepMind and OpenAI achieved gold medal status at the 2025 International Mathematical Olympiad, solving 5 out of 6 problems. This marks the first time AI has reached this level, with implications for future research in mathematics and science.
+    [https://substack.com/redirect/5044f991-2fc1-4647-865e-396d26a706d8](https://substack.com/redirect/5044f991-2fc1-4647-865e-396d26a706d8)
+
+- **Defense Department Awards $200 Million AI Contracts**
+    *Category:* Company News
+    *Tags:* #DoD, #Government, #Anthropic, #Google, #OpenAI
+    The U.S. Department of Defense announced up to $200 million in AI development contracts to Anthropic, Google, OpenAI, and xAI. The awards aim to accelerate AI adoption for critical national security challenges across several mission areas.
+    [https://substack.com/redirect/3f3aacac-e374-490e-b55b-eab65355e0d8](https://substack.com/redirect/3f3aacac-e374-490e-b55b-eab65355e0d8)
+
+- **Cognition Acquires Windsurf After Google's Reverse-Acquihire**
+    *Category:* Company News
+    *Tags:* #Acquisition, #Cognition, #Windsurf, #CodingAI
+    Cognition, maker of AI coding agent Devin, acquired Windsurf after Google hired away its CEO and key personnel. The acquisition includes Windsurf's IP, AI-powered IDE, and remaining employees, with Windsurf having achieved $82 million ARR.
+    [https://substack.com/redirect/4106d5e1-27db-4ebf-935b-f3965d875e1c](https://substack.com/redirect/4106d5e1-27db-4ebf-935b-f3965d875e1c)
+
+- **Mira Murati's Thinking Machines Lab Valued at $12B**
+    *Category:* Company News
+    *Tags:* #Funding, #StartUp, #MiraMurati, #OpenSource
+    Former OpenAI CTO Mira Murati's startup Thinking Machines Lab closed a $2 billion seed round at a $12 billion valuation. The company plans to unveil a significant open-source AI product in the coming months.
+    [https://substack.com/redirect/36ce1360-3d6f-4e40-b39e-b9e9866d6276](https://substack.com/redirect/36ce1360-3d6f-4e40-b39e-b9e9866d6276)
+
+---
+
+### Towards AI
+**Date:** July 23, 2025
+**Source:** towardsai@substack.com
+
+**AI Highlights:**
+
+- **The Agentic Era: From IMO Gold to Real-World Applications**
+    *Category:* Research / Paper
+    *Tags:* #LLM, #Agent, #IMO, #Reasoning
+    LLMs crossed the 100-minute reasoning horizon with both OpenAI and Google DeepMind achieving gold-medal performance at IMO. This milestone showcases sustained creative reasoning using parallel thinking and inference-time scaling techniques.
+    [https://newsletter.towardsai.net/p/tai-162-the-agentic-era-of-ai-from](https://newsletter.towardsai.net/p/tai-162-the-agentic-era-of-ai-from)
+
+- **Mistral Introduces Deep Research Mode in Le Chat**
+    *Category:* Product / Tool
+    *Tags:* #Mistral, #Research, #Productivity
+    Mistral enhanced its Le Chat app with deep research mode, multilingual reasoning, and improved image editing. The mode acts as an intelligent assistant that clarifies queries, plans research, and synthesizes detailed answers.
+    [https://substack.com/redirect/0487be0b-294f-4d1c-ab6c-920b80e08dd8](https://substack.com/redirect/0487be0b-294f-4d1c-ab6c-920b80e08dd8)
+
+- **Mistral Releases Voxtral Open Source Audio Model**
+    *Category:* Open Source
+    *Tags:* #Mistral, #Audio, #OpenSource, #Transcription
+    Mistral unveiled Voxtral, its first open source audio model family for business applications. It can transcribe up to 30 minutes of audio and process up to 40 minutes, enabling audio queries, summaries, and real-time voice commands.
+    [https://substack.com/redirect/6cd66b52-b083-4f52-b212-eaeea4cc0ec6](https://substack.com/redirect/6cd66b52-b083-4f52-b212-eaeea4cc0ec6)
+
+- **Amazon Launches AgentCore for Enterprise AI**
+    *Category:* Product / Tool
+    *Tags:* #Amazon, #Enterprise, #Agent, #Infrastructure
+    Amazon announced AgentCore preview, a suite of services for deploying and managing AI agents at enterprise scale. Built on Amazon Bedrock, it supports production-ready agents capable of reasoning, planning, and learning with minimal oversight.
+    [https://substack.com/redirect/6b23735e-dfef-4000-b4cf-1601393e3479](https://substack.com/redirect/6b23735e-dfef-4000-b4cf-1601393e3479)
+
+- **Anthropic Introduces Transparency Framework for Frontier AI**
+    *Category:* Policy / Ethics
+    *Tags:* #Anthropic, #Transparency, #Safety, #Policy
+    Anthropic proposed a targeted transparency framework for frontier AI models with highest potential impact and risk. The framework focuses on companies surpassing specific thresholds for computational power, performance, R&D expenditure, and revenue.
+    [https://substack.com/redirect/dcb95612-162e-4dbc-889a-d40d08399879](https://substack.com/redirect/dcb95612-162e-4dbc-889a-d40d08399879)
+
+---
+
+### There's An AI For That
+**Date:** July 22, 2025
+**Source:** hi@mail.theresanaiforthat.com
+
+**AI Highlights:**
+
+- **Anthropic Calls for U.S. Infrastructure Upgrades**
+    *Category:* Policy / Ethics
+    *Tags:* #Anthropic, #Infrastructure, #USPolicy, #China
+    Anthropic is advocating for massive upgrades in U.S. energy infrastructure and smarter regulations to maintain America's AI leadership, particularly against competition from China.
+    [https://www.anthropic.com/news/build-ai-in-america](https://www.anthropic.com/news/build-ai-in-america)
+
+- **OpenAI Developing Smart ChatGPT Router**
+    *Category:* Product / Tool
+    *Tags:* #OpenAI, #ChatGPT, #ModelSelection
+    OpenAI is working on a smart "router" that will automatically select the best ChatGPT model for specific tasks, simplifying the user experience of choosing between different model options.
+    [https://venturebeat.com/ai/a-chatgpt-router-that-automatically-selects-the-right-openai-model-for-your-job-appears-imminent/](https://venturebeat.com/ai/a-chatgpt-router-that-automatically-selects-the-right-openai-model-for-your-job-appears-imminent/)
+
+- **ChatGPT Handles 2.5 Billion Daily Prompts**
+    *Category:* Company News
+    *Tags:* #ChatGPT, #Usage, #Statistics
+    ChatGPT is now processing 2.5 billion prompts daily, rapidly catching up to Google's 14-16 billion daily searches, marking a significant milestone in AI adoption.
+    [https://www.theverge.com/news/710867/openai-chatgpt-daily-prompts-2-billion](https://www.theverge.com/news/710867/openai-chatgpt-daily-prompts-2-billion)
+
+- **AI Discovers 86,000 Hidden Yellowstone Earthquakes**
+    *Category:* Research / Paper
+    *Tags:* #AI, #Seismology, #Research, #Discovery
+    AI analyzed 15 years of seismic data to reveal 86,000 previously undetected earthquakes beneath Yellowstone, demonstrating AI's capability in scientific discovery and pattern recognition.
+    [https://scitechdaily.com/yellowstones-hidden-earthquakes-86000-quakes-revealed-by-ai/](https://scitechdaily.com/yellowstones-hidden-earthquakes-86000-quakes-revealed-by-ai/)
+
+- **92% of People Trust AI Without Verification**
+    *Category:* Research / Paper
+    *Tags:* #Trust, #AIHallucination, #UserBehavior
+    Despite numerous examples of AI hallucinations and errors, only 8% of people actually verify the information AI provides, highlighting a significant trust gap in AI usage.
+    [https://explodingtopics.com/blog/ai-trust-gap-research](https://explodingtopics.com/blog/ai-trust-gap-research)
+
+---
+
+### Last Week in AI Podcast
+**Date:** July 23, 2025
+**Source:** lastweekinai+podcast@substack.com
+
+**AI Highlights:**
+
+- **Alibaba's Moonshot Releases Kimi AI Model**
+    *Category:* Product / Tool
+    *Tags:* #Alibaba, #Moonshot, #Coding, #LLM
+    Alibaba-backed Moonshot released a new Kimi AI model that outperforms ChatGPT and Claude in coding tasks while offering lower costs, marking increased competition in the coding AI space.
+    [https://substack.com/redirect/604dc2a7-190d-44a6-9c46-6d7e33571647](https://substack.com/redirect/604dc2a7-190d-44a6-9c46-6d7e33571647)
+
+- **Amazon Launches Kiro AI Development Tool**
+    *Category:* Product / Tool
+    *Tags:* #Amazon, #AWS, #Development, #Coding
+    Amazon introduced Kiro, a specification-driven integrated development environment targeting the agentic coding tools market, built on Code OSS for compatibility with existing workflows.
+    [https://substack.com/redirect/2f18de8a-d165-442f-b0e2-3e41df71f45b](https://substack.com/redirect/2f18de8a-d165-442f-b0e2-3e41df71f45b)
+
+- **Video Game Actors' Strike Ends with AI Agreement**
+    *Category:* Policy / Ethics
+    *Tags:* #SAGAFTRA, #VideoGames, #Labor, #AIRights
+    The year-long SAG-AFTRA strike for video game actors ended with new AI protections including consent and disclosure requirements, historic wage increases, and enhanced health and safety measures.
+    [https://substack.com/redirect/634be85f-9b36-44cf-a8f5-de7124efc0f7](https://substack.com/redirect/634be85f-9b36-44cf-a8f5-de7124efc0f7)
+
+- **SpaceX Commits $2 Billion to xAI**
+    *Category:* Company News
+    *Tags:* #SpaceX, #xAI, #Funding, #ElonMusk
+    SpaceX committed $2 billion to xAI as Elon Musk steps up AI ambitions, further consolidating resources across Musk's companies for AI development.
+    [https://substack.com/redirect/eda67653-ca0c-4154-81cc-a93c0d9234ce](https://substack.com/redirect/eda67653-ca0c-4154-81cc-a93c0d9234ce)
+
+---
+
+Emails Not Used for Content
+AI Disruptor email about content creation techniques - This was a tutorial/how-to email rather than AI news content, focusing on using NotebookLM for content multiplication rather than reporting on AI developments.
