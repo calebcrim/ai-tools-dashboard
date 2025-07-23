@@ -15,8 +15,10 @@ class NewsletterManager {
             // Automatically select the most recent newsletter
             if (this.newsletters.length > 0) {
                 this.currentDate = this.newsletters[0].filename;
+                console.log('Auto-selected newsletter:', this.currentDate);
             }
             
+            // Render will handle the display update after everything is set up
             this.render();
         } catch (error) {
             console.error('Failed to initialize newsletter manager:', error);
@@ -283,10 +285,8 @@ class NewsletterManager {
         // Set up filter event listeners
         this.setupFilterListeners();
         
-        // Update display again after filters are set up
-        if (this.currentDate) {
-            this.updateDisplay();
-        }
+        // Now that everything is set up, update the display
+        this.updateDisplay();
     }
 
     createDateNavigation() {
@@ -329,12 +329,6 @@ class NewsletterManager {
         nav.appendChild(prevBtn);
         nav.appendChild(dateList);
         nav.appendChild(nextBtn);
-        
-        // Auto-select the most recent newsletter
-        if (!this.currentDate && this.newsletters.length > 0) {
-            this.currentDate = this.newsletters[0].filename;
-            dateList.value = this.currentDate;
-        }
         
         return nav;
     }
@@ -412,6 +406,12 @@ class NewsletterManager {
                 this.updateDisplay();
             });
         });
+        
+        // Initialize the filter state - make sure currentFilter matches the active chip
+        const activeChip = document.querySelector('.filter-chip.active');
+        if (activeChip) {
+            this.currentFilter = activeChip.dataset.filter || 'all';
+        }
     }
 
     createNewsletterDisplay() {
@@ -426,7 +426,12 @@ class NewsletterManager {
 
     updateDisplay() {
         const display = document.getElementById('newsletter-display');
-        if (!display) return;
+        if (!display) {
+            console.log('Display element not found');
+            return;
+        }
+        
+        console.log('updateDisplay called - currentDate:', this.currentDate, 'currentFilter:', this.currentFilter);
         
         if (!this.currentDate) {
             display.innerHTML = '<p class="select-date">Please select a date from the navigation above.</p>';
