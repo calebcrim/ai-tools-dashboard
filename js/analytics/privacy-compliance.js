@@ -197,6 +197,15 @@ class PrivacyCompliantAnalytics {
       window.gtag('consent', 'update', {
         'analytics_storage': 'granted'
       });
+      
+      // Send page view after consent is granted
+      if (window.GA_MEASUREMENT_ID && window.GA_MEASUREMENT_ID !== 'G-PLACEHOLDER') {
+        window.gtag('event', 'page_view', {
+          page_title: document.title,
+          page_location: window.location.href,
+          page_path: window.location.pathname
+        });
+      }
     }
     
     // Initialize analytics if not already done
