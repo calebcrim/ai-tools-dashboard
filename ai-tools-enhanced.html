@@ -6,17 +6,12 @@
     <title>AI Tools Dashboard - Enhanced</title>
     
     <!-- Google Analytics 4 - Global site tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYERSN9JQR"></script>
     <script>
-        // Initialize dataLayer before GA4 script loads
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         window.gtag = gtag;
         
-        // Get GA4 ID from environment or use placeholder
-        window.GA_MEASUREMENT_ID = window.NETLIFY_ENV?.GA_MEASUREMENT_ID || 'G-PLACEHOLDER';
-    </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
-    <script>
         gtag('js', new Date());
         
         // Default consent mode - denied until user accepts
@@ -28,16 +23,13 @@
             'security_storage': 'granted'
         });
         
-        // Only configure if we have a real GA4 ID
-        if (window.GA_MEASUREMENT_ID !== 'G-PLACEHOLDER') {
-            // Update script src with actual ID
-            document.querySelector('script[src*="googletagmanager.com"]').src = 
-                'https://www.googletagmanager.com/gtag/js?id=' + window.GA_MEASUREMENT_ID;
-            
-            gtag('config', window.GA_MEASUREMENT_ID, {
-                send_page_view: false // Will send after consent
-            });
-        }
+        // Configure GA4 with your measurement ID
+        gtag('config', 'G-VYERSN9JQR', {
+            send_page_view: false // Will send after consent is granted
+        });
+        
+        // Store measurement ID for other scripts to use
+        window.GA_MEASUREMENT_ID = 'G-VYERSN9JQR';
     </script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

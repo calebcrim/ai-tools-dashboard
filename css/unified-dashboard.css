@@ -959,6 +959,32 @@ body {
     background: rgba(37, 99, 235, 0.02);
 }
 
+/* Export button styles */
+.tool-card .export-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(59, 130, 246, 0.9);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.tool-card:hover .export-btn {
+    opacity: 1;
+}
+
+.tool-card .export-btn:hover {
+    background: rgba(59, 130, 246, 1);
+    transform: scale(1.05);
+}
+
 .tool-card h3 {
     font-size: 1.125rem;
     font-weight: 600;

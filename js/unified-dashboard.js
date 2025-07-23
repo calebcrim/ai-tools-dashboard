@@ -481,8 +481,24 @@ class UnifiedDashboard {
     }
 
     renderBrowseCard(tool) {
+        // Create a clean tool object for export
+        const exportData = {
+            tool_name: tool.name,
+            category: tool.category,
+            brief_purpose_summary: tool.description,
+            pricing_model: tool.rawData?.pricing_model || tool.pricing,
+            feature_breakdown: tool.rawData?.feature_breakdown,
+            pros_cons_limitations: tool.rawData?.pros_cons_limitations,
+            integration_potential: tool.rawData?.integration_potential,
+            learning_curve: tool.rawData?.learning_curve,
+            url: tool.url
+        };
+        
         return `
-            <div class="tool-card" data-tool-id="${tool.originalId || tool.id}">
+            <div class="tool-card" data-tool-id="${tool.originalId || tool.id}" data-tool-name="${tool.name}" data-category="${tool.category}">
+                <button class="export-btn" onclick="event.stopPropagation(); exportToolToPDF(${JSON.stringify(exportData).replace(/"/g, '&quot;')})" title="Export to PDF">
+                    <i class="fas fa-file-pdf"></i>
+                </button>
                 <h3>${tool.name}</h3>
                 <div class="category">${tool.category}</div>
                 <div class="description">${tool.description}</div>

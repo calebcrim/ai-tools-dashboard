@@ -1,8 +1,8 @@
 // analytics-config.js
 // Google Analytics 4 Configuration for crimintel.ai
 
-// Get GA4 ID from Netlify environment or use placeholder
-const GA_MEASUREMENT_ID = window.NETLIFY_ENV?.GA_MEASUREMENT_ID || 'G-PLACEHOLDER';
+// Get GA4 ID from window (set by HTML) or use actual measurement ID
+const GA_MEASUREMENT_ID = window.GA_MEASUREMENT_ID || 'G-VYERSN9JQR';
 
 // Initialize Google Analytics
 const initializeAnalytics = () => {
