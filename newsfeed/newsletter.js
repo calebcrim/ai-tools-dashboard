@@ -11,6 +11,12 @@ class NewsletterManager {
         try {
             await this.loadNewsletters();
             this.setupEventListeners();
+            
+            // Automatically select the most recent newsletter
+            if (this.newsletters.length > 0) {
+                this.currentDate = this.newsletters[0].filename;
+            }
+            
             this.render();
         } catch (error) {
             console.error('Failed to initialize newsletter manager:', error);
