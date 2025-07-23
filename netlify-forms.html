@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Netlify Forms - Do Not Delete</title>
+</head>
+<body style="display: none;">
+    <!-- These forms are hidden but required for Netlify Forms to work with JavaScript-generated forms -->
+    
+    <!-- Newsletter Signup Form -->
+    <form name="newsletter-signup" netlify netlify-honeypot="bot-field" hidden>
+        <input type="email" name="email" />
+        <input type="checkbox" name="privacy_consent" />
+        <input type="hidden" name="form-name" value="newsletter-signup" />
+    </form>
+    
+    <!-- Exit Intent Signup Form -->
+    <form name="exit-intent-signup" netlify netlify-honeypot="bot-field" hidden>
+        <input type="email" name="email" />
+        <input type="checkbox" name="privacy_consent" />
+        <input type="hidden" name="form-name" value="exit-intent-signup" />
+    </form>
+    
+    <!-- Contact Form (for future use) -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <textarea name="message"></textarea>
+        <input type="hidden" name="form-name" value="contact" />
+    </form>
+</body>
+</html>

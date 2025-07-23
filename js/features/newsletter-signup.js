@@ -51,7 +51,7 @@ class NewsletterSignup {
                             <i class="fas fa-gift"></i>
                             <span>FREE BONUS: Download our "2025 AI Tools Selection Guide" (47-page PDF)</span>
                         </div>
-                        <form class="newsletter-form" id="newsletterForm" data-netlify="true" name="newsletter-signup" method="POST">
+                        <form class="newsletter-form" id="newsletterForm" name="newsletter-signup" method="POST" action="/" netlify>
                             <input type="hidden" name="form-name" value="newsletter-signup">
                             <div class="form-group">
                                 <input 
@@ -120,7 +120,7 @@ class NewsletterSignup {
                             </div>
                         </div>
                         
-                        <form class="exit-intent-form" id="exitIntentForm" data-netlify="true" name="exit-intent-signup" method="POST">
+                        <form class="exit-intent-form" id="exitIntentForm" name="exit-intent-signup" method="POST" action="/" netlify>
                             <input type="hidden" name="form-name" value="exit-intent-signup">
                             <input 
                                 type="email" 
@@ -249,34 +249,43 @@ class NewsletterSignup {
             // Submit to Netlify Forms
             try {
                 const formData = new FormData(form);
-                await fetch('/', {
+                
+                // Ensure form-name is included
+                formData.set('form-name', 'newsletter-signup');
+                
+                const response = await fetch('/', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                     body: new URLSearchParams(formData).toString()
                 });
 
-                // Show success message
-                form.style.display = 'none';
-                document.getElementById('newsletterSuccess').style.display = 'block';
-                
-                // Mark as signed up
-                localStorage.setItem('newsletter_signed_up', 'true');
-                
-                // Track signup
-                if (window.gtag) {
-                    gtag('event', 'newsletter_signup', {
-                        event_category: 'engagement',
-                        event_label: 'inline_form',
-                        value: 1
-                    });
-                }
+                if (response.ok) {
+                    // Show success message
+                    form.style.display = 'none';
+                    document.getElementById('newsletterSuccess').style.display = 'block';
+                    
+                    // Mark as signed up
+                    localStorage.setItem('newsletter_signed_up', 'true');
+                    localStorage.setItem('newsletter_email', email);
+                    
+                    // Track signup
+                    if (window.gtag) {
+                        gtag('event', 'newsletter_signup', {
+                            event_category: 'engagement',
+                            event_label: 'inline_form',
+                            value: 1
+                        });
+                    }
 
-                // Send download link (in real implementation, this would be handled by Netlify Functions)
-                this.sendDownloadLink(email);
+                    // Send download link (in real implementation, this would be handled by Netlify Functions)
+                    this.sendDownloadLink(email);
+                } else {
+                    throw new Error('Form submission failed');
+                }
 
             } catch (error) {
                 console.error('Error submitting form:', error);
-                alert('There was an error. Please try again.');
+                alert('There was an error submitting the form. Please try again or contact support.');
             }
         });
     }
@@ -290,41 +299,57 @@ class NewsletterSignup {
             e.preventDefault();
             
             const email = document.getElementById('exitIntentEmail').value;
+            const privacyCheckbox = form.querySelector('input[name="privacy_consent"]');
+            const privacyConsent = privacyCheckbox ? privacyCheckbox.checked : false;
+
+            if (!privacyConsent) {
+                alert('Please accept the privacy policy to continue.');
+                return;
+            }
 
             // Submit to Netlify Forms
             try {
                 const formData = new FormData(form);
-                await fetch('/', {
+                
+                // Ensure form-name is included
+                formData.set('form-name', 'exit-intent-signup');
+                
+                const response = await fetch('/', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                     body: new URLSearchParams(formData).toString()
                 });
 
-                // Show success message
-                form.style.display = 'none';
-                document.getElementById('exitIntentSuccess').style.display = 'block';
-                
-                // Mark as signed up
-                localStorage.setItem('newsletter_signed_up', 'true');
-                
-                // Track signup
-                if (window.gtag) {
-                    gtag('event', 'newsletter_signup', {
-                        event_category: 'engagement',
-                        event_label: 'exit_intent',
-                        value: 1
-                    });
+                if (response.ok) {
+                    // Show success message
+                    form.style.display = 'none';
+                    document.getElementById('exitIntentSuccess').style.display = 'block';
+                    
+                    // Mark as signed up
+                    localStorage.setItem('newsletter_signed_up', 'true');
+                    localStorage.setItem('newsletter_email', email);
+                    
+                    // Track signup
+                    if (window.gtag) {
+                        gtag('event', 'newsletter_signup', {
+                            event_category: 'engagement',
+                            event_label: 'exit_intent',
+                            value: 1
+                        });
+                    }
+
+                    // Hide popup after 3 seconds
+                    setTimeout(() => this.hideExitIntent(), 3000);
+
+                    // Send download link
+                    this.sendDownloadLink(email);
+                } else {
+                    throw new Error('Form submission failed');
                 }
-
-                // Hide popup after 3 seconds
-                setTimeout(() => this.hideExitIntent(), 3000);
-
-                // Send download link
-                this.sendDownloadLink(email);
 
             } catch (error) {
                 console.error('Error submitting form:', error);
-                alert('There was an error. Please try again.');
+                alert('There was an error submitting the form. Please try again or contact support.');
             }
         });
     }
