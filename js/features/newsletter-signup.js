@@ -120,8 +120,8 @@ class NewsletterSignup {
                             </div>
                         </div>
                         
-                        <form class="exit-intent-form" id="exitIntentForm" name="exit-intent-signup" method="POST" action="/" netlify>
-                            <input type="hidden" name="form-name" value="exit-intent-signup">
+                        <form class="exit-intent-form" id="exitIntentForm" name="ai-tools-guide" method="POST">
+                            <input type="hidden" name="form-name" value="ai-tools-guide">
                             <input 
                                 type="email" 
                                 name="email" 
@@ -312,7 +312,7 @@ class NewsletterSignup {
                 const formData = new FormData(form);
                 
                 // Ensure form-name is included
-                formData.set('form-name', 'exit-intent-signup');
+                formData.set('form-name', 'ai-tools-guide');
                 
                 const response = await fetch('/', {
                     method: 'POST',
