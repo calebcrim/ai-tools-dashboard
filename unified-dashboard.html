@@ -332,14 +332,15 @@
     <!-- Hidden Netlify Forms for JavaScript submission -->
     <div style="display: none;">
         <!-- Newsletter Signup Form -->
-        <form name="newsletter-signup" netlify netlify-honeypot="bot-field">
+        <form name="newsletter-signup" data-netlify="true" netlify-honeypot="bot-field" method="POST">
+            <input type="hidden" name="form-name" value="newsletter-signup" />
             <input type="email" name="email" />
             <input type="checkbox" name="privacy_consent" />
-            <input type="hidden" name="form-name" value="newsletter-signup" />
         </form>
         
         <!-- AI Tools Guide Form (Exit Intent) -->
-        <form name="ai-tools-guide" netlify netlify-honeypot="bot-field" hidden>
+        <form name="ai-tools-guide" data-netlify="true" netlify-honeypot="bot-field" method="POST">
+            <input type="hidden" name="form-name" value="ai-tools-guide" />
             <input type="email" name="email" />
             <input type="checkbox" name="privacy_consent" />
         </form>

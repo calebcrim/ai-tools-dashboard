@@ -51,7 +51,7 @@ class NewsletterSignup {
                             <i class="fas fa-gift"></i>
                             <span>FREE BONUS: Download our "2025 AI Tools Selection Guide" (47-page PDF)</span>
                         </div>
-                        <form class="newsletter-form" id="newsletterForm" name="newsletter-signup" method="POST" action="/" netlify>
+                        <form class="newsletter-form" id="newsletterForm" name="newsletter-signup" method="POST" action="/" data-netlify="true">
                             <input type="hidden" name="form-name" value="newsletter-signup">
                             <div class="form-group">
                                 <input 
@@ -123,7 +123,7 @@ class NewsletterSignup {
                             </div>
                         </div>
                         
-                        <form class="exit-intent-form" id="exitIntentForm" name="ai-tools-guide" method="POST">
+                        <form class="exit-intent-form" id="exitIntentForm" name="ai-tools-guide" method="POST" data-netlify="true" action="/">
                             <input type="hidden" name="form-name" value="ai-tools-guide">
                             <input 
                                 type="email" 
@@ -256,8 +256,8 @@ class NewsletterSignup {
             try {
                 const formData = new FormData(form);
                 
-                // Ensure form-name is included
-                formData.set('form-name', 'newsletter-signup');
+                // Debug log
+                console.log('Submitting newsletter form with data:', Object.fromEntries(formData));
                 
                 const response = await fetch('/', {
                     method: 'POST',
@@ -265,7 +265,8 @@ class NewsletterSignup {
                     body: new URLSearchParams(formData).toString()
                 });
 
-                if (response.ok) {
+                // Check if we're redirected (Netlify success page)
+                if (response.ok || response.redirected) {
                     // Show success message
                     form.style.display = 'none';
                     document.getElementById('newsletterSuccess').style.display = 'block';
@@ -283,15 +284,22 @@ class NewsletterSignup {
                         });
                     }
 
-                    // Send download link (in real implementation, this would be handled by Netlify Functions)
+                    // Log download
                     this.sendDownloadLink(email);
                 } else {
-                    throw new Error('Form submission failed');
+                    const responseText = await response.text();
+                    console.error('Form submission failed:', response.status, responseText);
+                    throw new Error(`Form submission failed: ${response.status}`);
                 }
 
             } catch (error) {
                 console.error('Error submitting form:', error);
-                alert('There was an error submitting the form. Please try again or contact support.');
+                // More helpful error message
+                alert('Form submission error. Please ensure you have a stable internet connection and try again. If the problem persists, you can download the guide directly from the success message.');
+                
+                // Show download anyway as fallback
+                form.style.display = 'none';
+                document.getElementById('newsletterSuccess').style.display = 'block';
             }
         });
     }
@@ -317,8 +325,8 @@ class NewsletterSignup {
             try {
                 const formData = new FormData(form);
                 
-                // Ensure form-name is included
-                formData.set('form-name', 'ai-tools-guide');
+                // Debug log
+                console.log('Submitting form with data:', Object.fromEntries(formData));
                 
                 const response = await fetch('/', {
                     method: 'POST',
@@ -326,7 +334,8 @@ class NewsletterSignup {
                     body: new URLSearchParams(formData).toString()
                 });
 
-                if (response.ok) {
+                // Check if we're redirected (Netlify success page)
+                if (response.ok || response.redirected) {
                     // Show success message
                     form.style.display = 'none';
                     document.getElementById('exitIntentSuccess').style.display = 'block';
@@ -344,18 +353,25 @@ class NewsletterSignup {
                         });
                     }
 
-                    // Hide popup after 3 seconds
-                    setTimeout(() => this.hideExitIntent(), 3000);
+                    // Don't hide popup immediately - let user download
+                    // setTimeout(() => this.hideExitIntent(), 3000);
 
-                    // Send download link
+                    // Log download
                     this.sendDownloadLink(email);
                 } else {
-                    throw new Error('Form submission failed');
+                    const responseText = await response.text();
+                    console.error('Form submission failed:', response.status, responseText);
+                    throw new Error(`Form submission failed: ${response.status}`);
                 }
 
             } catch (error) {
                 console.error('Error submitting form:', error);
-                alert('There was an error submitting the form. Please try again or contact support.');
+                // More helpful error message
+                alert('Form submission error. Please ensure you have a stable internet connection and try again. If the problem persists, you can download the guide directly from the success message.');
+                
+                // Show download anyway as fallback
+                form.style.display = 'none';
+                document.getElementById('exitIntentSuccess').style.display = 'block';
             }
         });
     }
