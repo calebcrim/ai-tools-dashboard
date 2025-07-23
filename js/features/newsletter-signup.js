@@ -75,8 +75,11 @@ class NewsletterSignup {
                         </form>
                         <div class="newsletter-success" id="newsletterSuccess" style="display: none;">
                             <i class="fas fa-check-circle"></i>
-                            <h4>Success! Check your email for the download link.</h4>
+                            <h4>Success! Your guide is ready.</h4>
                             <p>You're now subscribed to AI Intelligence Weekly.</p>
+                            <a href="/downloads/ai-tools-selection-guide-2025.pdf" class="download-btn" download>
+                                <i class="fas fa-download"></i> Download Your Free Guide (PDF)
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -144,7 +147,10 @@ class NewsletterSignup {
                         
                         <div class="exit-intent-success" id="exitIntentSuccess" style="display: none;">
                             <i class="fas fa-check-circle"></i>
-                            <h3>Success! Guide sent to your email.</h3>
+                            <h3>Success! Your guide is ready.</h3>
+                            <a href="/downloads/ai-tools-selection-guide-2025.pdf" class="download-btn-large" download>
+                                <i class="fas fa-download"></i> Download AI Tools Selection Guide
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -354,10 +360,18 @@ class NewsletterSignup {
         });
     }
 
-    // Simulate sending download link (in production, use Netlify Functions)
+    // Log download request (in production, could trigger email with Netlify Functions)
     sendDownloadLink(email) {
-        console.log(`Download link would be sent to: ${email}`);
-        // In production, this would trigger a Netlify Function to send the email
+        console.log(`User ${email} signed up and downloaded the guide`);
+        // Track download
+        if (window.gtag) {
+            gtag('event', 'guide_download', {
+                event_category: 'engagement',
+                event_label: 'ai_tools_guide',
+                value: 1
+            });
+        }
+        // In production, you could trigger a Netlify Function to send a follow-up email
     }
 
     // Add CSS styles
@@ -603,6 +617,34 @@ class NewsletterSignup {
                 color: #48bb78;
                 margin-bottom: 1rem;
                 display: block;
+            }
+            
+            /* Download button styles */
+            .download-btn, .download-btn-large {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 12px 24px;
+                background: #48bb78;
+                color: white;
+                text-decoration: none;
+                border-radius: 6px;
+                font-weight: 600;
+                transition: all 0.3s;
+                margin-top: 16px;
+            }
+            
+            .download-btn-large {
+                font-size: 1.1rem;
+                padding: 16px 32px;
+            }
+            
+            .download-btn:hover, .download-btn-large:hover {
+                background: #38a169;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+                text-decoration: none;
+                color: white;
             }
 
             @media (max-width: 768px) {
