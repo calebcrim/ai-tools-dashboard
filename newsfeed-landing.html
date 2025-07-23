@@ -4,6 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Newsletter Feed - AI Tools Dashboard</title>
+    
+    <!-- Google Analytics 4 - Global site tag (gtag.js) -->
+    <script>
+        // Initialize dataLayer before GA4 script loads
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        
+        // Get GA4 ID from environment or use placeholder
+        window.GA_MEASUREMENT_ID = window.NETLIFY_ENV?.GA_MEASUREMENT_ID || 'G-PLACEHOLDER';
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+        gtag('js', new Date());
+        
+        // Default consent mode - denied until user accepts
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'functionality_storage': 'granted',
+            'personalization_storage': 'denied',
+            'security_storage': 'granted'
+        });
+        
+        // Only configure if we have a real GA4 ID
+        if (window.GA_MEASUREMENT_ID !== 'G-PLACEHOLDER') {
+            // Update script src with actual ID
+            document.querySelector('script[src*="googletagmanager.com"]').src = 
+                'https://www.googletagmanager.com/gtag/js?id=' + window.GA_MEASUREMENT_ID;
+            
+            gtag('config', window.GA_MEASUREMENT_ID, {
+                send_page_view: false // Will send after consent
+            });
+        }
+    </script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -185,6 +221,9 @@
             }
         }
     </style>
+    
+    <!-- Analytics -->
+    <script src="js/analytics/analytics-init.js"></script>
 </head>
 <body>
     <div class="container">

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap Generator - CriminTel.ai</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .info {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        button {
+            background: #2196F3;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #1976D2;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 4px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .stats {
+            margin: 20px 0;
+            padding: 10px;
+            background: #e8f5e9;
+            border-radius: 4px;
+        }
+        .error {
+            color: #d32f2f;
+            padding: 10px;
+            background: #ffebee;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗺️ Sitemap Generator</h1>
+        
+        <div class="info">
+            <p><strong>This tool generates a complete sitemap for crimintel.ai including:</strong></p>
+            <ul>
+                <li>All main pages (dashboard, best practices, etc.)</li>
+                <li>All 345+ AI tool pages</li>
+                <li>All category pages</li>
+            </ul>
+        </div>
+
+        <div class="actions">
+            <button onclick="generateSitemap()">Generate Full Sitemap</button>
+            <button onclick="downloadSitemap()">Download sitemap.xml</button>
+            <button onclick="copyToClipboard()">Copy to Clipboard</button>
+        </div>
+
+        <div id="stats" class="stats" style="display:none;"></div>
+        <div id="error" class="error" style="display:none;"></div>
+        <div id="output" class="output" style="display:none;">
+            <h3>Generated Sitemap:</h3>
+            <pre id="sitemapContent"></pre>
+        </div>
+    </div>
+
+    <!-- Load the tools data -->
+    <script src="data/unified-tools-data.js"></script>
+    
+    <script>
+        let generatedSitemap = '';
+
+        function generateSitemap() {
+            try {
+                const baseUrl = 'https://crimintel.ai';
+                const today = new Date().toISOString().split('T')[0];
+                
+                // Start building sitemap
+                let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">`;
+
+                // Static pages
+                const staticPages = [
+                    { loc: '/', priority: '1.0', changefreq: 'daily' },
+                    { loc: '/unified-dashboard.html', priority: '0.9', changefreq: 'daily' },
+                    { loc: '/ai-tools-dashboard.html', priority: '0.8', changefreq: 'weekly' },
+                    { loc: '/ai-tools-enhanced.html', priority: '0.8', changefreq: 'weekly' },
+                    { loc: '/best-practices.html', priority: '0.8', changefreq: 'weekly' },
+                    { loc: '/newsfeed-landing.html', priority: '0.7', changefreq: 'weekly' },
+                    { loc: '/index.html', priority: '0.9', changefreq: 'daily' }
+                ];
+
+                // Add static pages
+                staticPages.forEach(page => {
+                    sitemap += `
+  <url>
+    <loc>${baseUrl}${page.loc}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
+  </url>`;
+                });
+
+                // Add all tool pages
+                if (window.unifiedToolsData && window.unifiedToolsData.tools) {
+                    window.unifiedToolsData.tools.forEach(tool => {
+                        const toolSlug = slugify(tool.tool_name);
+                        sitemap += `
+  <url>
+    <loc>${baseUrl}/ai-tools/${toolSlug}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>`;
+                    });
+                }
+
+                // Get unique categories
+                const categories = [...new Set(window.unifiedToolsData.tools.map(t => t.category))];
+                
+                // Add category pages
+                categories.forEach(category => {
+                    const categorySlug = slugify(category);
+                    sitemap += `
+  <url>
+    <loc>${baseUrl}/category/${categorySlug}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>`;
+                });
+
+                // Close sitemap
+                sitemap += `
+</urlset>`;
+
+                generatedSitemap = sitemap;
+                
+                // Display sitemap
+                document.getElementById('sitemapContent').textContent = sitemap;
+                document.getElementById('output').style.display = 'block';
+                
+                // Show stats
+                const stats = `
+                    <strong>Sitemap Generated Successfully!</strong><br>
+                    Total URLs: ${sitemap.match(/<url>/g).length}<br>
+                    Static Pages: ${staticPages.length}<br>
+                    Tool Pages: ${window.unifiedToolsData.tools.length}<br>
+                    Category Pages: ${categories.length}
+                `;
+                document.getElementById('stats').innerHTML = stats;
+                document.getElementById('stats').style.display = 'block';
+                document.getElementById('error').style.display = 'none';
+                
+            } catch (err) {
+                document.getElementById('error').textContent = 'Error generating sitemap: ' + err.message;
+                document.getElementById('error').style.display = 'block';
+            }
+        }
+
+        function slugify(text) {
+            return text
+                .toLowerCase()
+                .trim()
+                .replace(/[^\w\s-]/g, '')
+                .replace(/\s+/g, '-')
+                .replace(/-+/g, '-');
+        }
+
+        function downloadSitemap() {
+            if (!generatedSitemap) {
+                alert('Please generate the sitemap first!');
+                return;
+            }
+            
+            const blob = new Blob([generatedSitemap], { type: 'application/xml' });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'sitemap.xml';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            alert('Sitemap downloaded! Now add it to your repository root and deploy.');
+        }
+
+        function copyToClipboard() {
+            if (!generatedSitemap) {
+                alert('Please generate the sitemap first!');
+                return;
+            }
+            
+            navigator.clipboard.writeText(generatedSitemap).then(() => {
+                alert('Sitemap copied to clipboard!');
+            }).catch(err => {
+                alert('Failed to copy: ' + err);
+            });
+        }
+
+        // Auto-generate on load
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                if (window.unifiedToolsData) {
+                    generateSitemap();
+                } else {
+                    document.getElementById('error').textContent = 'Error: Could not load tools data';
+                    document.getElementById('error').style.display = 'block';
+                }
+            }, 100);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+# Netlify Configuration for crimintel.ai
+# Place this file in your repository root
+
+[build]
+  publish = "/"
+  # Add build command if you have one
+  # command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Security Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Content-Security-Policy = '''
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+      font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+      img-src 'self' data: https: http:;
+      connect-src 'self' https://www.google-analytics.com https://*.netlify.app;
+      frame-ancestors 'none';
+      base-uri 'self';
+      form-action 'self';
+    '''
+
+# Cache static assets for 1 year
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache HTML for short time
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Redirects for clean URLs and routing
+
+# Force HTTPS
+[[redirects]]
+  from = "http://crimintel.ai/*"
+  to = "https://crimintel.ai/:splat"
+  status = 301
+  force = true
+
+# Remove www
+[[redirects]]
+  from = "https://www.crimintel.ai/*"
+  to = "https://crimintel.ai/:splat"
+  status = 301
+  force = true
+
+# Handle individual tool pages (client-side routing)
+[[redirects]]
+  from = "/ai-tools/*"
+  to = "/index.html"
+  status = 200
+
+# Handle category pages
+[[redirects]]
+  from = "/category/*"
+  to = "/index.html"
+  status = 200
+
+# Handle comparison pages
+[[redirects]]
+  from = "/compare/*"
+  to = "/index.html"
+  status = 200
+
+# Analytics and performance plugins (optional)
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+  
+  [plugins.inputs]
+    output_path = "reports/lighthouse.html"
+    # Only run on production deploys
+    enable = "onSuccess"
+
+# Enable Netlify's built-in optimizations
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+  # Keep minify false to preserve analytics scripts
+  minify = false
+
+[build.processing.images]
+  compress = true
+
+# Deploy contexts for different environments
+[context.production]
+  environment = { NODE_ENV = "production" }
+
+[context.deploy-preview]
+  environment = { NODE_ENV = "development" }
+
+[context.branch-deploy]
+  environment = { NODE_ENV = "staging" }
