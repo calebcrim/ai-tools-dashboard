@@ -199,7 +199,7 @@ class PrivacyCompliantAnalytics {
       });
       
       // Send page view after consent is granted
-      if (window.GA_MEASUREMENT_ID && window.GA_MEASUREMENT_ID !== 'G-PLACEHOLDER') {
+      if (window.GA_MEASUREMENT_ID) {
         window.gtag('event', 'page_view', {
           page_title: document.title,
           page_location: window.location.href,
