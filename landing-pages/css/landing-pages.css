@@ -226,6 +226,11 @@
     min-width: 50px;
 }
 
+/* Hide rank numbers on non-ranked pages */
+.no-ranking .rank {
+    display: none;
+}
+
 .tool-header h3 {
     flex: 1;
     margin: 0;

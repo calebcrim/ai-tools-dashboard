@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="../css/design-tokens.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/unified-navigation.css">
-    <link rel="stylesheet" href="css/landing-pages.css?v=3">
+    <link rel="stylesheet" href="css/landing-pages.css?v=4">
     
     <style>
         /* Page-specific styles */
@@ -407,15 +407,23 @@
             // Take top 38 tools
             const topTools = smbTools.slice(0, 38);
             
-            // Render comparison table (top 10)
-            components.renderComparisonTable(
-                topTools.slice(0, 10), 
-                'comparisonTable',
-                ['rank', 'name', 'pricing', 'impact', 'complexity']
-            );
+            // Only render comparison table if we have tools
+            if (topTools.length > 0) {
+                components.renderComparisonTable(
+                    topTools.slice(0, 10), 
+                    'comparisonTable',
+                    ['rank', 'name', 'pricing', 'impact', 'complexity']
+                );
+            } else {
+                // Hide the comparison section if no tools
+                document.querySelector('.quick-comparison').style.display = 'none';
+            }
             
             // Render detailed reviews
             components.renderToolReviews(topTools, 'toolReviews');
+            
+            // Add no-ranking class since these are filtered, not ranked
+            document.getElementById('toolReviews').classList.add('no-ranking');
             
             // Initialize FAQ accordion
             components.initializeFAQ('faqContainer');
