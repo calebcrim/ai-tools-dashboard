@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Best Practices Hub - Learn to Master AI Tools</title>
+    <meta name="description" content="Discover 345+ AI tools with executive-ready analysis, pricing & ROI insights. Daily AI news, guides & best practices for decision-makers.">
+    <meta property="og:description" content="Discover 345+ AI tools with executive-ready analysis, pricing & ROI insights. Daily AI news, guides & best practices for decision-makers.">
+    
+    <!-- Google Analytics 4 - Global site tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYERSN9JQR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        
+        gtag('js', new Date());
+        
+        // Default consent mode - denied until user accepts
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'functionality_storage': 'granted',
+            'personalization_storage': 'denied',
+            'security_storage': 'granted'
+        });
+        
+        // Configure GA4 with your measurement ID
+        gtag('config', 'G-VYERSN9JQR', {
+            send_page_view: false // Will send after consent is granted
+        });
+        
+        // Store measurement ID for other scripts to use
+        window.GA_MEASUREMENT_ID = 'G-VYERSN9JQR';
+    </script>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="js/components/best-practices/css/hub-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Mobile Responsive Styles -->
+    <link rel="stylesheet" href="css/mobile-navigation.css">
+    <link rel="stylesheet" href="css/mobile-responsive.css">
+    
+    <!-- Analytics -->
+    <script src="js/analytics/analytics-init.js"></script>
+</head>
+<body>
+    <!-- Main Header - Integrated with existing site -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-top-row">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h1 class="logo-text">CrimIntelligence: AI Tools Suite</h1>
+                </div>
+                <div class="user-menu">
+                    <span class="user-name">
+                        <i class="fas fa-user-circle"></i>
+                        AI Researcher
+                    </span>
+                </div>
+            </div>
+            <div class="header-nav-row">
+                <nav class="header-nav">
+                    <a href="unified-dashboard.html" class="nav-link">
+                        <i class="fas fa-layer-group"></i> Unified Dashboard
+                    </a>
+                    <a href="financial-analysis/index.html" class="nav-link">
+                        <i class="fas fa-dollar-sign"></i> Financial Analysis
+                    </a>
+                    <a href="best-practices.html" class="nav-link active">
+                        <i class="fas fa-graduation-cap"></i> Best Practices
+                    </a>
+                    <a href="newsfeed/newsletter.html" class="nav-link">
+                        <i class="fas fa-newspaper"></i> AI News
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="best-practices-hub">
+        <!-- Hero Section -->
+        <section class="bp-hero">
+            <div class="bp-container">
+                <h1>AI Best Practices Hub</h1>
+                <p>Master the art of working with AI tools through expert guides, real-world examples, and proven strategies</p>
+                <div class="bp-search-box">
+                    <input type="text" class="bp-search-input" placeholder="Search guides, tips, and tutorials...">
+                    <i class="fas fa-search bp-search-icon"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Paths -->
+        <section class="bp-learning-paths">
+            <div class="bp-container">
+                <div class="bp-section-header">
+                    <h2>Choose Your Learning Path</h2>
+                    <p>Structured journeys from beginner to expert</p>
+                </div>
+                <div class="bp-paths-grid">
+                    <div class="bp-path-card beginner">
+                        <div class="bp-path-icon">🎯</div>
+                        <h3 class="bp-path-title">AI Fundamentals</h3>
+                        <p class="bp-path-description">Start your journey with essential AI concepts and basic tool usage</p>
+                        <div class="bp-path-stats">
+                            <span><i class="fas fa-book"></i> 12 guides</span>
+                            <span><i class="fas fa-clock"></i> 3 hours</span>
+                        </div>
+                    </div>
+                    <div class="bp-path-card intermediate">
+                        <div class="bp-path-icon">🚀</div>
+                        <h3 class="bp-path-title">Advanced Techniques</h3>
+                        <p class="bp-path-description">Level up with advanced prompting, workflow automation, and integrations</p>
+                        <div class="bp-path-stats">
+                            <span><i class="fas fa-book"></i> 18 guides</span>
+                            <span><i class="fas fa-clock"></i> 5 hours</span>
+                        </div>
+                    </div>
+                    <div class="bp-path-card advanced">
+                        <div class="bp-path-icon">💡</div>
+                        <h3 class="bp-path-title">Industry Specialization</h3>
+                        <p class="bp-path-description">Master AI applications for specific industries and use cases</p>
+                        <div class="bp-path-stats">
+                            <span><i class="fas fa-book"></i> 24 guides</span>
+                            <span><i class="fas fa-clock"></i> 8 hours</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Guides -->
+        <section class="bp-featured-guides">
+            <div class="bp-container">
+                <div class="bp-section-header">
+                    <h2>Featured Guides</h2>
+                    <p>Most popular and highly-rated content</p>
+                </div>
+                <div class="bp-guides-grid">
+                    <a href="js/components/best-practices/guides/prompt-engineering-basics.html" class="bp-guide-card">
+                        <div class="bp-guide-meta">
+                            <span class="bp-guide-badge beginner">Beginner</span>
+                            <span>10 min read</span>
+                        </div>
+                        <h3 class="bp-guide-title">Prompt Engineering Basics</h3>
+                        <p class="bp-guide-excerpt">Learn the 5 core principles that will transform your AI interactions from frustrating to fantastic</p>
+                    </a>
+                    <a href="js/components/best-practices/guides/multi-tool-workflows.html" class="bp-guide-card">
+                        <div class="bp-guide-meta">
+                            <span class="bp-guide-badge intermediate">Intermediate</span>
+                            <span>15 min read</span>
+                        </div>
+                        <h3 class="bp-guide-title">Multi-Tool Workflows</h3>
+                        <p class="bp-guide-excerpt">Combine multiple AI tools to create powerful automated workflows that save hours</p>
+                    </a>
+                    <a href="js/components/best-practices/guides/choosing-right-ai-tool.html" class="bp-guide-card">
+                        <div class="bp-guide-meta">
+                            <span class="bp-guide-badge beginner">Beginner</span>
+                            <span>8 min read</span>
+                        </div>
+                        <h3 class="bp-guide-title">Choosing the Right AI Tool</h3>
+                        <p class="bp-guide-excerpt">A practical framework for selecting the perfect AI tool for any task or project</p>
+                    </a>
+                    <a href="#" class="bp-guide-card">
+                        <div class="bp-guide-meta">
+                            <span class="bp-guide-badge advanced">Advanced</span>
+                            <span>20 min read</span>
+                        </div>
+                        <h3 class="bp-guide-title">Custom Model Fine-Tuning</h3>
+                        <p class="bp-guide-excerpt">Step-by-step guide to training AI models on your specific data and use cases</p>
+                    </a>
+                    <a href="js/components/best-practices/guides/ai-content-creation.html" class="bp-guide-card">
+                        <div class="bp-guide-meta">
+                            <span class="bp-guide-badge intermediate">Intermediate</span>
+                            <span>12 min read</span>
+                        </div>
+                        <h3 class="bp-guide-title">AI for Content Creation</h3>
+                        <p class="bp-guide-excerpt">Master techniques for generating high-quality content that maintains your brand voice</p>
+                    </a>
+                    <a href="js/components/best-practices/guides/avoiding-ai-pitfalls.html" class="bp-guide-card">
+                        <div class="bp-guide-meta">
+                            <span class="bp-guide-badge beginner">Beginner</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3 class="bp-guide-title">Avoiding Common AI Pitfalls</h3>
+                        <p class="bp-guide-excerpt">Learn from others' mistakes with this guide to the most common AI tool failures</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hidden Gems -->
+        <section class="bp-hidden-gems">
+            <div class="bp-container">
+                <div class="bp-section-header">
+                    <h2>Hidden Gems & Pro Tips</h2>
+                    <p>Lesser-known features and expert tricks</p>
+                </div>
+                <div class="bp-gems-carousel">
+                    <div class="bp-tips-card bp-gem-card">
+                        <div class="bp-gem-header">
+                            <span class="bp-gem-icon">🔮</span>
+                            <h3 class="bp-gem-title">Context Windows Matter</h3>
+                        </div>
+                        <p class="bp-gem-content">Did you know? You can dramatically improve response quality by structuring your prompts to fit within optimal context windows.</p>
+                        <div class="bp-gem-example">
+# Instead of one huge prompt:
+"Write a complete marketing strategy..."
+
+# Break it down:
+"First, analyze the target audience..."
+"Based on that analysis, suggest channels..."
+                        </div>
+                        <button class="bp-tips-button bp-try-button">Try This Technique</button>
+                    </div>
+                    <div class="bp-tips-card bp-gem-card">
+                        <div class="bp-gem-header">
+                            <span class="bp-gem-icon">⚡</span>
+                            <h3 class="bp-gem-title">The Power of Examples</h3>
+                        </div>
+                        <p class="bp-gem-content">Few-shot learning can transform your results. Always provide 2-3 examples of what you want.</p>
+                        <div class="bp-gem-example">
+"Format like this:
+Topic: [Subject]
+Tone: [Professional/Casual]
+Length: [Word count]
+
+Example:
+Topic: AI Ethics
+Tone: Professional
+Length: 200 words"
+                        </div>
+                        <button class="bp-tips-button bp-try-button">Learn More</button>
+                    </div>
+                    <div class="bp-tips-card bp-gem-card">
+                        <div class="bp-gem-header">
+                            <span class="bp-gem-icon">🎯</span>
+                            <h3 class="bp-gem-title">Role-Based Prompting</h3>
+                        </div>
+                        <p class="bp-gem-content">Assign a specific role to the AI for more focused and expert responses.</p>
+                        <div class="bp-gem-example">
+"Act as a senior data scientist with 
+expertise in predictive analytics. 
+Analyze this dataset and provide 
+insights on customer churn patterns."
+                        </div>
+                        <button class="bp-tips-button bp-try-button">See Examples</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bp-footer">
+            <div class="bp-container">
+                <div class="bp-footer-content">
+                    <p>&copy; 2024 AI Tools Suite. All rights reserved.</p>
+                    <div class="bp-footer-links">
+                        <a href="#">About</a>
+                        <a href="#">Contact</a>
+                        <a href="#">Contribute</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/components/best-practices/js/hub-scripts.js"></script>
+    <script src="js/best-practices-navigation.js"></script>
+    
+    <!-- Mobile Navigation -->
+    <script src="js/mobile-navigation.js"></script>
+</body>
+</html>

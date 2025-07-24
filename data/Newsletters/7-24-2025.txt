@@ -1,0 +1,89 @@
+I'll help you analyze your AI newsletter emails and convert them into organized summaries. Let me start by checking your project knowledge to understand the expected newsletter sources.Now let me access your Gmail account to search for AI newsletter emails from the past 24 hours.Perfect! I have access to your Gmail account. Now let me search for AI newsletter emails from the past 24 hours.Great! I found several AI newsletter emails from the past 24 hours. Let me read the detailed content from each thread to extract the AI news highlights and organize them according to your specified format.Based on my analysis of your AI newsletter emails from the past 24 hours, I found several newsletters with valuable AI news content. Here is the organized summary in your requested format:
+
+### Turing Post
+**Date:** July 23, 2025  
+**Source:** turingpost@mail.beehiiv.com  
+
+**AI Highlights:**
+
+- **Four Outstanding AI Model Families to Watch in 2025**  
+  *Category:* Research / Paper  
+  *Tags:* #SmolLM #Qwen #LiquidAI #BERT #ModelFamilies  
+  Comprehensive guide covering four distinctive AI model families: Hugging Face's SmolLMs for small language models, Qwen models with new agent framework, Liquid Foundation Models with Hyena Edge architecture, and modern BERT variants including ConstBERT.  
+  [https://www.turingpost.com/p/fam-of-models-recap](https://www.turingpost.com/p/fam-of-models-recap)
+
+- **Liquid Foundation Models Challenge Transformers with Hyena Edge**  
+  *Category:* Research / Paper  
+  *Tags:* #LiquidAI #Hyena #Transformers #Architecture  
+  Liquid AI's new Hyena Edge replaces attention mechanisms with fast convolutions and gating, enabling high-quality reasoning on everyday devices like phones while processing long-form inputs more efficiently than traditional transformers.  
+  [https://www.turingpost.com/p/liquidhyena](https://www.turingpost.com/p/liquidhyena)
+
+---
+
+### TAAFT - There's An AI For That  
+**Date:** July 23, 2025  
+**Source:** hi@mail.theresanaiforthat.com  
+
+**AI Highlights:**
+
+- **AI Robot Performs First Successful Solo Surgery**  
+  *Category:* Research / Paper  
+  *Tags:* #Robotics #Surgery #Medical #JohnsHopkins  
+  Johns Hopkins' AI-powered surgical robot SRT-H successfully performed gallbladder removal procedures completely autonomously, marking a breakthrough in AI-driven medical robotics with 100% success rate.  
+  [https://arstechnica.com/science/2025/07/experimental-surgery-performed-by-ai-driven-surgical-robot/](https://arstechnica.com/science/2025/07/experimental-surgery-performed-by-ai-driven-surgical-robot/)
+
+- **Proton Launches Lumo: Zero-Log Private AI Assistant**  
+  *Category:* Product / Tool  
+  *Tags:* #Privacy #Assistant #Proton #Security  
+  Proton introduced Lumo, an AI assistant that keeps conversations completely private with no logging, positioning itself as a privacy-focused alternative to major AI assistants from big tech companies.  
+  [https://proton.me/blog/lumo-ai](https://proton.me/blog/lumo-ai)
+
+- **Trump Unveils Aggressive AI Action Plan**  
+  *Category:* Policy / Ethics  
+  *Tags:* #Policy #Trump #China #Deregulation  
+  The new AI Action Plan prioritizes aggressive growth, deregulation, and fierce competition with China, moving away from Biden's cautious safeguards in favor of rapid technological dominance.  
+  [https://techcrunch.com/2025/07/23/trumps-ai-strategy-trades-guardrails-for-growth-in-race-against-china/](https://techcrunch.com/2025/07/23/trumps-ai-strategy-trades-guardrails-for-growth-in-race-against-china/)
+
+- **Amazon Acquires Bee AI Wearable Startup**  
+  *Category:* Company News  
+  *Tags:* #Amazon #Wearables #Acquisition #Privacy  
+  Amazon purchased Bee, an AI wearable startup whose bracelet and Apple Watch app continuously listen to conversations and convert them into to-dos and reminders, raising new privacy concerns in the AI wearables space.  
+  [https://www.theverge.com/news/711621/amazon-bee-ai-wearable-acquisition](https://www.theverge.com/news/711621/amazon-bee-ai-wearable-acquisition)
+
+- **Anthropic Research Reveals AI "Overthinking" Problem**  
+  *Category:* Research / Paper  
+  *Tags:* #Anthropic #Claude #Research #ThinkingTime  
+  Anthropic researchers discovered that the longer Claude models think, the more likely they are to get distracted and make mistakes, revealing a counterintuitive limitation in extended reasoning processes.  
+  [https://arxiv.org/pdf/2507.14417](https://arxiv.org/pdf/2507.14417)
+
+---
+
+### The Batch @ DeepLearning.AI
+**Date:** July 23, 2025  
+**Source:** thebatch@deeplearning.ai  
+
+**AI Highlights:**
+
+- **Google Wins $2.4B Windsurf Deal as OpenAI Acquisition Falls Through**  
+  *Category:* Company News  
+  *Tags:* #Google #OpenAI #Windsurf #Acquisition #Coding  
+  OpenAI's $3 billion bid to acquire AI coding platform Windsurf collapsed, with Google licensing the technology for $2.4 billion and hiring key personnel. Cognition AI acquired remaining Windsurf assets while OpenAI was left empty-handed.  
+  [https://info.deeplearning.ai](https://info.deeplearning.ai)
+
+- **EU Publishes AI Act Compliance Guidelines**  
+  *Category:* Policy / Ethics  
+  *Tags:* #EU #AIAct #Regulation #Compliance  
+  The European Union released voluntary guidelines for AI Act compliance, with Microsoft, Mistral, and OpenAI committing to follow them while Meta declined. The guidelines focus on "systemic risk" models and require extensive documentation and reporting.  
+  [https://info.deeplearning.ai](https://info.deeplearning.ai)
+
+- **Google's AlphaEvolve Solves 56-Year-Old Mathematical Problem**  
+  *Category:* Research / Paper  
+  *Tags:* #Google #AlphaEvolve #Mathematics #Evolution #Algorithms  
+  Google's AlphaEvolve system discovered a new algorithm for 4×4 matrix multiplication using 48 multiplications, the first improvement to Strassen's method in 56 years. The agentic system also optimized Google's infrastructure, reducing Gemini training time by 1%.  
+  [https://info.deeplearning.ai](https://info.deeplearning.ai)
+
+---
+
+## Emails Not Used for Content
+
+**Every Newsletter (hello@every.to)** - This email was promotional content about an upcoming demo day event rather than containing actual AI news developments suitable for newsletter summarization.

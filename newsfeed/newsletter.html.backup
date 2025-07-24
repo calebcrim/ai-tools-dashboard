@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Newsletter Archive</title>
+    
+    <!-- Google Analytics 4 - Global site tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYERSN9JQR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        
+        gtag('js', new Date());
+        
+        // Default consent mode - denied until user accepts
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'functionality_storage': 'granted',
+            'personalization_storage': 'denied',
+            'security_storage': 'granted'
+        });
+        
+        // Configure GA4 with your measurement ID
+        gtag('config', 'G-VYERSN9JQR', {
+            send_page_view: false // Will send after consent is granted
+        });
+        
+        // Store measurement ID for other scripts to use
+        window.GA_MEASUREMENT_ID = 'G-VYERSN9JQR';
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Navigation Styles -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../css/navigation-redesign.css">
+    <link rel="stylesheet" href="../css/navigation-override.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Analytics with Privacy Consent -->
+    <script src="../js/analytics/analytics-init.js"></script>
+    
+    <style>
+/* AI News/Newsletter Page - Unified Design System
+   Aligns the Newsletter page with the Unified Dashboard dark theme */
+
+/* ========================================
+   1. DESIGN TOKENS - MATCHING DASHBOARD
+   ======================================== */
+:root {
+    /* Override main design tokens for dark theme */
+    --color-bg-primary: #0F172A !important;
+    --color-bg-secondary: #1E293B !important;
+    --color-bg-tertiary: #334155 !important;
+    --color-text-primary: #ffffff !important;
+    --color-text-secondary: #94A3B8 !important;
+    --color-border-primary: #334155 !important;
+    --color-primary: #3B82F6 !important;
+    
+    /* Also override any generic variables */
+    --bg-primary: #0F172A !important;
+    --bg-card: #1E293B !important;
+    --bg-secondary: #1E293B !important;
+    --text-primary: #ffffff !important;
+    --text-secondary: #94A3B8 !important;
+    --border: #334155 !important;
+    --primary: #3B82F6 !important;
+    
+    /* Primary Colors */
+    --news-primary: #3B82F6;          /* Electric Blue (was #4a90e2) */
+    --news-primary-dark: #2563EB;     /* Darker blue for hover */
+    --news-primary-light: #60A5FA;    /* Lighter blue for accents */
+    
+    /* Semantic Colors */
+    --news-success: #10B981;          /* Emerald */
+    --news-warning: #F59E0B;          /* Amber */
+    --news-danger: #EF4444;           /* Red */
+    --news-info: #3B82F6;             /* Blue */
+    
+    /* Dark Theme Palette */
+    --news-bg-primary: #0F172A;       /* Main background (was #f7f9fc) */
+    --news-bg-secondary: #1E293B;     /* Card backgrounds (was white) */
+    --news-bg-tertiary: #0a1628;      /* Darker variant */
+    --news-border: #334155;           /* Borders (was #ddd) */
+    --news-border-light: #475569;     /* Lighter borders */
+    
+    /* Text Colors */
+    --news-text-primary: #ffffff;     /* Primary text (was #1a1a1a) */
+    --news-text-secondary: #94A3B8;   /* Secondary text (was #666) */
+    --news-text-muted: #64748B;       /* Muted text */
+    
+    /* Spacing System */
+    --space-1: 0.25rem;   /* 4px */
+    --space-2: 0.5rem;    /* 8px */
+    --space-3: 0.75rem;   /* 12px */
+    --space-4: 1rem;      /* 16px */
+    --space-5: 1.25rem;   /* 20px */
+    --space-6: 1.5rem;    /* 24px */
+    --space-8: 2rem;      /* 32px */
+    
+    /* Border Radius */
+    --radius-sm: 0.375rem;  /* 6px */
+    --radius-md: 0.5rem;    /* 8px */
+    --radius-lg: 0.75rem;   /* 12px */
+    --radius-xl: 1rem;      /* 16px */
+    
+    /* Shadows for Dark Theme */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    
+    /* Transitions */
+    --transition-base: all 0.2s ease;
+    --transition-slow: all 0.3s ease;
+}
+
+/* ========================================
+   2. BASE STYLES - DARK THEME
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--news-text-primary);
+    background: var(--news-bg-primary);
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ========================================
+   3. HEADER SECTION
+   ======================================== */
+header {
+    background: var(--news-bg-secondary);
+    border: 1px solid var(--news-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    margin-bottom: var(--space-8);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--news-primary);
+    margin-bottom: var(--space-2);
+    /* Remove gradient, use solid color */
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+}
+
+.subtitle {
+    color: var(--news-text-muted);
+    font-size: 1.125rem;
+    margin-bottom: var(--space-5);
+}
+
+/* ========================================
+   4. DATE NAVIGATION
+   ======================================== */
+.date-navigation {
+    background: var(--news-bg-secondary);
+    border: 1px solid var(--news-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    margin-bottom: var(--space-5);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}
+
+.date-selector {
+    background: var(--news-bg-primary);
+    border: 1px solid var(--news-border);
+    color: var(--news-text-primary);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: var(--transition-base);
+    min-width: 200px;
+}
+
+.date-selector:hover,
+.date-selector:focus {
+    border-color: var(--news-primary);
+    outline: none;
+}
+
+.nav-btn {
+    background: var(--news-primary);
+    color: white;
+    border: none;
+    padding: var(--space-2) var(--space-5);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-base);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.nav-btn:hover {
+    background: var(--news-primary-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.nav-btn:disabled {
+    background: var(--news-border);
+    color: var(--news-text-muted);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ========================================
+   5. FILTER SECTION
+   ======================================== */
+.filters {
+    background: var(--news-bg-secondary);
+    border: 1px solid var(--news-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    margin-bottom: var(--space-5);
+    box-shadow: var(--shadow-sm);
+}
+
+.filter-section h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--news-text-primary);
+    margin-bottom: var(--space-3);
+}
+
+.filter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.filter-chip {
+    background: var(--news-bg-primary);
+    border: 1px solid var(--news-border);
+    color: var(--news-text-secondary);
+    padding: var(--space-2) var(--space-4);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+
+.filter-chip:hover {
+    background: var(--news-border);
+    color: var(--news-text-primary);
+}
+
+.filter-chip.active {
+    background: var(--news-primary);
+    border-color: var(--news-primary);
+    color: white;
+}
+
+/* ========================================
+   6. NEWSLETTER SECTIONS
+   ======================================== */
+.newsletter-display {
+    display: grid;
+    gap: 30px;
+}
+
+.newsletter-section {
+    background: var(--news-bg-secondary);
+    border: 1px solid var(--news-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    margin-bottom: var(--space-6);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter-section:hover {
+    transform: translateY(-2px);
+    border-color: var(--news-primary);
+    box-shadow: var(--shadow-md);
+}
+
+/* Source indicator bar */
+.source-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+}
+
+/* Newsletter source colors */
+.bensbites .source-indicator { background: #EF4444; }
+.therundown .source-indicator { background: #10B981; }
+.tldr .source-indicator { background: #3B82F6; }
+.theneuron .source-indicator { background: #F59E0B; }
+.superhuman .source-indicator { background: #8B5CF6; }
+
+.newsletter-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-5);
+    padding-bottom: var(--space-5);
+    border-bottom: 1px solid var(--news-border);
+}
+
+.newsletter-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding-left: var(--space-4);
+}
+
+.newsletter-section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--news-text-primary);
+}
+
+.newsletter-meta {
+    text-align: right;
+}
+
+.date {
+    color: var(--news-text-muted);
+    font-size: 0.875rem;
+}
+
+.item-count {
+    color: var(--news-primary);
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+/* ========================================
+   7. NEWS ITEMS
+   ======================================== */
+.news-items {
+    display: grid;
+    gap: var(--space-5);
+}
+
+.news-item {
+    padding: var(--space-5);
+    background: var(--news-bg-primary);
+    border: 1px solid var(--news-border);
+    border-radius: var(--radius-md);
+    transition: var(--transition-base);
+    position: relative;
+}
+
+.news-item:hover {
+    transform: translateY(-2px);
+    border-color: var(--news-primary);
+    background: rgba(59, 130, 246, 0.02);
+    box-shadow: var(--shadow-md);
+}
+
+.news-item h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--news-text-primary);
+    margin-bottom: var(--space-2);
+    line-height: 1.4;
+}
+
+.item-meta {
+    display: flex;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+    flex-wrap: wrap;
+}
+
+/* Category badges */
+.category {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--news-primary-light);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+/* Category color variants */
+.category.research { background: rgba(139, 92, 246, 0.1); color: #A78BFA; }
+.category.product { background: rgba(16, 185, 129, 0.1); color: #34D399; }
+.category.company { background: rgba(245, 158, 11, 0.1); color: #FCD34D; }
+.category.policy { background: rgba(239, 68, 68, 0.1); color: #F87171; }
+
+.tags {
+    color: var(--news-text-muted);
+    font-size: 0.875rem;
+}
+
+.news-item p {
+    color: var(--news-text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: var(--space-3);
+    line-height: 1.7;
+}
+
+.news-item a {
+    color: var(--news-primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    transition: var(--transition-base);
+}
+
+.news-item a:hover {
+    color: var(--news-primary-light);
+    text-decoration: underline;
+    gap: var(--space-2);
+}
+
+/* ========================================
+   8. UTILITY STATES
+   ======================================== */
+.no-newsletters,
+.select-date,
+.error-message {
+    background: var(--news-bg-secondary);
+    border: 1px solid var(--news-border);
+    border-radius: var(--radius-lg);
+    padding: 60px;
+    text-align: center;
+    color: var(--news-text-secondary);
+    box-shadow: var(--shadow-sm);
+}
+
+.no-newsletters h2,
+.error-message h2 {
+    color: var(--news-text-primary);
+    margin-bottom: var(--space-4);
+}
+
+/* Loading state */
+.loading {
+    text-align: center;
+    padding: var(--space-8);
+    color: var(--news-text-secondary);
+}
+
+/* ========================================
+   9. BACK BUTTON
+   ======================================== */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: var(--news-bg-secondary);
+    border: 1px solid var(--news-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-3) var(--space-5);
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--news-primary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    transition: var(--transition-base);
+    z-index: 1000;
+}
+
+.back-button:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+    background: var(--news-primary);
+    color: white;
+}
+
+/* ========================================
+   10. FOOTER
+   ======================================== */
+footer {
+    text-align: center;
+    padding: var(--space-8) var(--space-5);
+    color: var(--news-text-muted);
+    font-size: 0.875rem;
+}
+
+footer a {
+    color: var(--news-primary);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   11. RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .date-navigation {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+    
+    .date-selector {
+        width: 100%;
+    }
+    
+    .nav-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .newsletter-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-2);
+    }
+    
+    .newsletter-meta {
+        text-align: left;
+    }
+    
+    .back-button {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-bottom: var(--space-5);
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-top-row">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h1 class="logo-text">CrimIntelligence: AI Tools Suite</h1>
+                </div>
+            </div>
+            <div class="header-nav-row">
+                <nav class="header-nav">
+                    <a href="../unified-dashboard.html" class="nav-link">Unified Dashboard</a>
+                    <a href="../financial-analysis/index.html" class="nav-link">Financial Analysis</a>
+                    <a href="../best-practices.html" class="nav-link">Best Practices</a>
+                    <a href="newsletter.html" class="nav-link active">AI News</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <header>
+            <h1>AI Newsletter Archive</h1>
+            <p class="subtitle">Curated AI news and developments from leading newsletters</p>
+        </header>
+        
+        <div id="newsletter-container">
+            <!-- Newsletter content will be loaded here by JavaScript -->
+            <div class="loading">Loading newsletters...</div>
+        </div>
+        
+        <footer>
+            <p>Manually curated from leading AI newsletters</p>
+            <p>Updated daily with the latest AI developments</p>
+            <p><a href="https://github.com/calebcrim/ai-tools-dashboard" target="_blank">View on GitHub</a></p>
+        </footer>
+    </div>
+    
+    <script src="newsletter.js"></script>
+</body>
+</html>

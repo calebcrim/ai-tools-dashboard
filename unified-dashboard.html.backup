@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Dashboard - Unified Interface</title>
+    <meta name="description" content="Discover 345+ AI tools with executive-ready analysis, pricing & ROI insights. Daily AI news, guides & best practices for decision-makers.">
+    <meta property="og:description" content="Discover 345+ AI tools with executive-ready analysis, pricing & ROI insights. Daily AI news, guides & best practices for decision-makers.">
+    
+    <!-- Google Analytics 4 - Global site tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYERSN9JQR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        
+        gtag('js', new Date());
+        
+        // Default consent mode - denied until user accepts
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'functionality_storage': 'granted',
+            'personalization_storage': 'denied',
+            'security_storage': 'granted'
+        });
+        
+        // Configure GA4 with your measurement ID
+        gtag('config', 'G-VYERSN9JQR', {
+            send_page_view: false // Will send after consent is granted
+        });
+        
+        // Store measurement ID for other scripts to use
+        window.GA_MEASUREMENT_ID = 'G-VYERSN9JQR';
+    </script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Design System -->
+    <link rel="stylesheet" href="css/design-tokens.css">
+    <link rel="stylesheet" href="css/components.css">
+    
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/unified-dashboard.css">
+    
+    <!-- Mobile Responsive Styles -->
+    <link rel="stylesheet" href="css/mobile-responsive.css">
+    
+    <!-- Analytics with Privacy Consent -->
+    <script src="js/analytics/analytics-init.js"></script>
+    
+    <!-- SEO -->
+    <script src="js/seo/seo-init.js"></script>
+    
+    <!-- Security -->
+    <script src="js/security/security-init.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h1 class="logo-text">AI Tools Intelligence Hub</h1>
+                </div>
+                <span class="tools-badge">
+                    <span class="count" id="totalToolsCount">349</span> AI Tools
+                </span>
+            </div>
+            
+            <!-- Global Search Bar -->
+            <div class="header-search-section">
+                <div class="search-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" 
+                           class="search-input" 
+                           placeholder="Search tools by name, category, features..." 
+                           id="globalSearchInput"
+                           autocomplete="off">
+                    <div class="search-suggestions" id="searchSuggestions"></div>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="header-nav">
+                <a href="unified-dashboard.html" class="nav-link active">Unified Dashboard</a>
+                <a href="financial-analysis/index.html" class="nav-link">Financial Analysis</a>
+                <a href="best-practices.html" class="nav-link">Best Practices</a>
+                <a href="newsfeed/newsletter.html" class="nav-link">AI News</a>
+            </nav>
+
+            <!-- User Menu -->
+            <div class="header-actions">
+                <button class="dark-mode-toggle" id="darkModeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="settings-btn">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Mode Switcher -->
+        <div class="mode-switcher">
+            <div class="mode-buttons">
+                <button class="mode-btn active" data-mode="browse">
+                    <i class="fas fa-th-large"></i>
+                    <span>Browse</span>
+                </button>
+                <button class="mode-btn" data-mode="executive">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Executive</span>
+                </button>
+                <button class="mode-btn" data-mode="technical">
+                    <i class="fas fa-code"></i>
+                    <span>Technical</span>
+                </button>
+            </div>
+            
+            <!-- Quick Stats -->
+            <div class="quick-stats">
+                <div class="stat-item">
+                    <span class="stat-value" id="activeToolsCount">349</span>
+                    <span class="stat-label">Active Tools</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="categoriesCount">12</span>
+                    <span class="stat-label">Categories</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="filteredCount">349</span>
+                    <span class="stat-label">Showing</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard Body -->
+        <div class="dashboard-body">
+            <!-- Unified Filter Bar -->
+            <div class="filter-bar" id="filterBar">
+                <div class="filter-section">
+                    <h3>Filters</h3>
+                    <div class="filter-actions">
+                        <button class="clear-filters-btn" id="clearFilters">
+                            <i class="fas fa-times"></i>
+                            <span>Clear</span>
+                        </button>
+                        <button class="filter-toggle" id="filterToggle">
+                            <i class="fas fa-filter"></i>
+                            <span>Filters</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="filter-content" id="filterContent">
+                    <!-- Common Filters -->
+                    <div class="filter-group">
+                        <label>Category</label>
+                        <select id="categoryFilter" multiple>
+                            <option value="">All Categories</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Pricing</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" class="pricing-filter" value="free"> Free</label>
+                            <label><input type="checkbox" class="pricing-filter" value="freemium"> Freemium</label>
+                            <label><input type="checkbox" class="pricing-filter" value="paid"> Paid</label>
+                            <label><input type="checkbox" class="pricing-filter" value="enterprise"> Enterprise</label>
+                        </div>
+                    </div>
+                    
+                    <!-- Mode-specific Filters -->
+                    <div class="mode-filters">
+                        <!-- Browse Mode Filters -->
+                        <div class="filter-mode" data-mode="browse">
+                            <div class="filter-group">
+                                <label>Rating</label>
+                                <input type="range" id="ratingRange" min="1" max="5" value="1" step="0.5">
+                                <span id="ratingValue">1.0+</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Executive Mode Filters -->
+                        <div class="filter-mode" data-mode="executive">
+                            <div class="filter-group">
+                                <label>Business Impact</label>
+                                <input type="range" id="impactRange" min="0" max="100" value="0" step="10">
+                                <span id="impactValue">0+</span>
+                            </div>
+                            
+                            <div class="filter-group">
+                                <label>ROI Timeline</label>
+                                <select id="roiFilter">
+                                    <option value="">All Timelines</option>
+                                    <option value="immediate">Immediate</option>
+                                    <option value="1-week">1 Week</option>
+                                    <option value="1-month">1 Month</option>
+                                    <option value="3-months">3+ Months</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- Technical Mode Filters -->
+                        <div class="filter-mode" data-mode="technical">
+                            <div class="filter-group">
+                                <label>API Availability</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" class="api-filter" value="rest"> REST API</label>
+                                    <label><input type="checkbox" class="api-filter" value="graphql"> GraphQL</label>
+                                    <label><input type="checkbox" class="api-filter" value="webhook"> Webhooks</label>
+                                    <label><input type="checkbox" class="api-filter" value="sdk"> SDK</label>
+                                </div>
+                            </div>
+                            
+                            <div class="filter-group">
+                                <label>Integration Complexity</label>
+                                <select id="complexityFilter">
+                                    <option value="">All Levels</option>
+                                    <option value="low">Low</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="high">High</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Content Area -->
+            <div class="content-area" id="contentArea">
+                <!-- Recently Viewed Tools Container -->
+                <div id="recentlyViewedContainer" style="display: none;"></div>
+                
+                <!-- Browse Mode Content -->
+                <div class="mode-content" data-mode="browse">
+                    <div class="browse-controls">
+                        <div class="view-toggle">
+                            <button class="view-btn active" data-view="grid">
+                                <i class="fas fa-th"></i> Grid
+                            </button>
+                            <button class="view-btn" data-view="list">
+                                <i class="fas fa-list"></i> List
+                            </button>
+                        </div>
+                        <div class="sort-controls">
+                            <label>Sort by:</label>
+                            <select id="sortBy">
+                                <option value="name">Name</option>
+                                <option value="category">Category</option>
+                                <option value="rating">Rating</option>
+                                <option value="updated">Last Updated</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="tools-grid" id="browseGrid"></div>
+                </div>
+
+                <!-- Executive Mode Content -->
+                <div class="mode-content" data-mode="executive" style="display: none;">
+                    <div class="executive-metrics">
+                        <div class="metric-card">
+                            <div class="metric-value" id="highImpactCount">0</div>
+                            <div class="metric-label">High Impact Tools</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value" id="avgRoi">0%</div>
+                            <div class="metric-label">Average ROI</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value" id="enterpriseReady">0</div>
+                            <div class="metric-label">Enterprise Ready</div>
+                        </div>
+                    </div>
+                    <div class="tools-grid executive-grid" id="executiveGrid"></div>
+                </div>
+
+                <!-- Technical Mode Content -->
+                <div class="mode-content" data-mode="technical" style="display: none;">
+                    <div class="technical-metrics">
+                        <div class="metric-card">
+                            <div class="metric-value" id="apiAvailable">0</div>
+                            <div class="metric-label">API Available</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value" id="sdkSupport">0</div>
+                            <div class="metric-label">SDK Support</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value" id="webhookSupport">0</div>
+                            <div class="metric-label">Webhook Support</div>
+                        </div>
+                    </div>
+                    <div class="tools-grid technical-grid" id="technicalGrid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide-in Detail Panel -->
+    <div class="detail-panel" id="detailPanel">
+        <div class="detail-panel-header">
+            <h2 id="detailPanelTitle">Tool Details</h2>
+            <button class="close-btn" id="closeDetailPanel">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="detail-panel-content" id="detailPanelContent">
+            <!-- Content will be dynamically loaded based on mode -->
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/features/data-cache.js"></script>
+    <script src="data/unified-tools-data.js"></script>
+    <script src="js/features/recently-viewed.js"></script>
+    <script src="js/features/export-pdf.js"></script>
+    <script src="js/features/newsletter-signup.js"></script>
+    <script src="js/unified-dashboard.js"></script>
+    <!-- Hidden Netlify Forms for JavaScript submission -->
+    <div style="display: none;">
+        <!-- Newsletter Signup Form -->
+        <form name="newsletter-signup" data-netlify="true" netlify-honeypot="bot-field" method="POST">
+            <input type="hidden" name="form-name" value="newsletter-signup" />
+            <input type="email" name="email" />
+            <input type="checkbox" name="privacy_consent" />
+        </form>
+        
+        <!-- AI Tools Guide Form (Exit Intent) -->
+        <form name="ai-tools-guide" data-netlify="true" netlify-honeypot="bot-field" method="POST">
+            <input type="hidden" name="form-name" value="ai-tools-guide" />
+            <input type="email" name="email" />
+            <input type="checkbox" name="privacy_consent" />
+        </form>
+    </div>
+</body>
+</html>
