@@ -29,6 +29,12 @@ class URLRouter {
       if (link && link.href && link.href.startsWith(window.location.origin)) {
         const path = new URL(link.href).pathname;
         
+        // Skip if it's a direct HTML file link (not our SPA routes)
+        if (path.endsWith('.html') || path.includes('/index.html')) {
+          // Let normal navigation happen for HTML files
+          return;
+        }
+        
         // Check if this is a route we handle
         if (this.matchRoute(path)) {
           e.preventDefault();
