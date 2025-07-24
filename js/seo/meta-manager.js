@@ -4,7 +4,7 @@
 class MetaManager {
   constructor() {
     this.defaultMeta = {
-      siteName: 'AI Tools Intelligence Hub - CriminTel.ai',
+      siteName: 'CriminTel.ai',
       siteUrl: 'https://crimintel.ai',
       defaultImage: '/images/og-default.jpg',
       twitterHandle: '@crimintel_ai',
@@ -19,7 +19,12 @@ class MetaManager {
     
     // Title
     if (meta.title) {
-      document.title = `${meta.title} | ${this.defaultMeta.siteName}`;
+      // Avoid duplicate site name in title
+      if (meta.title.includes(this.defaultMeta.siteName) || meta.title.includes('CriminTel.ai')) {
+        document.title = meta.title;
+      } else {
+        document.title = `${meta.title} | ${this.defaultMeta.siteName}`;
+      }
       this.setMetaTag('og:title', meta.title);
       this.setMetaTag('twitter:title', meta.title);
     }
@@ -67,17 +72,22 @@ class MetaManager {
 
   // Update meta for tool page
   updateToolMeta(tool) {
+    if (!tool) return;
+    
+    const toolName = tool.tool_name || tool.name || 'Unknown Tool';
+    const category = tool.category || 'AI';
+    
     const meta = {
-      title: `${tool.tool_name} - AI Tool Review & Analysis`,
-      description: tool.brief_purpose_summary || `Detailed analysis of ${tool.tool_name}. ${tool.category} AI tool with pricing, features, pros/cons, and integration options.`,
-      keywords: `${tool.tool_name}, ${tool.category} AI tools, ${tool.tags ? tool.tags.join(', ') : ''}, AI software review`,
+      title: `${toolName} - AI Tool Review & Analysis`,
+      description: tool.brief_purpose_summary || tool.description || `Detailed analysis of ${toolName}. ${category} AI tool with pricing, features, pros/cons, and integration options.`,
+      keywords: `${toolName}, ${category} AI tools, ${tool.tags ? tool.tags.join(', ') : ''}, AI software review`,
       type: 'article',
-      url: `${this.defaultMeta.siteUrl}/ai-tools/${this.slugify(tool.tool_name)}`,
+      url: `${this.defaultMeta.siteUrl}/ai-tools/${this.slugify(toolName)}`,
       additionalTags: {
         'article:published_time': new Date().toISOString(),
         'article:modified_time': new Date().toISOString(),
-        'article:section': tool.category,
-        'article:tag': tool.tags ? tool.tags.join(',') : tool.category
+        'article:section': category,
+        'article:tag': tool.tags ? tool.tags.join(',') : category
       }
     };
     
@@ -258,7 +268,8 @@ class MetaManager {
 
   // Convert string to URL-friendly slug
   slugify(text) {
-    return text
+    if (!text) return '';
+    return String(text)
       .toLowerCase()
       .trim()
       .replace(/[^\w\s-]/g, '') // Remove special characters
@@ -309,6 +320,7 @@ class MetaManager {
 
 // Export singleton instance
 const metaManager = new MetaManager();
+window.metaManager = metaManager;
 
 // Initialize on page load
 if (document.readyState === 'loading') {

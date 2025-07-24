@@ -6,7 +6,8 @@ const loadSEOModules = () => {
   const scripts = [
     '/js/seo/meta-manager.js',
     '/js/seo/url-router.js',
-    '/js/seo/sitemap-generator.js'
+    '/js/seo/sitemap-generator.js',
+    '/js/seo/schema-generator.js'
   ];
   
   scripts.forEach(src => {

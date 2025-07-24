@@ -440,6 +440,9 @@ class UnifiedDashboard {
         
         this.renderTools();
         this.updateStats();
+        
+        // Update meta tags based on filtered results
+        this.updateMetaTags();
     }
 
     renderTools() {
@@ -584,6 +587,18 @@ class UnifiedDashboard {
         title.textContent = tool.name;
         content.innerHTML = this.renderDetailContent(tool);
         
+        // Update meta tags for the selected tool
+        if (window.metaManager && tool.rawData) {
+            window.metaManager.updateToolMeta(tool.rawData);
+        }
+        
+        // Add structured data for the selected tool
+        if (window.schemaGenerator && tool.rawData) {
+            window.schemaGenerator.addStructuredData(
+                window.schemaGenerator.generateToolSchema(tool.rawData)
+            );
+        }
+        
         // Add a small delay to ensure the panel opens after any potential close events
         setTimeout(() => {
             panel.classList.add('open');
@@ -597,6 +612,9 @@ class UnifiedDashboard {
         panel.classList.remove('open');
         this.selectedTool = null;
         console.log('Detail panel closed');
+        
+        // Reset meta tags to current filter state
+        this.updateMetaTags();
     }
 
     renderDetailContent(tool) {
@@ -896,6 +914,126 @@ class UnifiedDashboard {
         }
     }
 
+    updateMetaTags() {
+        // Only update meta tags if metaManager is available
+        if (!window.metaManager) return;
+        
+        // Determine the context based on current filters
+        const hasActiveFilters = this.filters.search || 
+                               this.filters.category.length > 0 || 
+                               this.filters.pricing.length > 0 ||
+                               this.filters.rating > 1 ||
+                               this.filters.impact > 0 ||
+                               this.filters.roi ||
+                               this.filters.apis.length > 0 ||
+                               this.filters.complexity;
+        
+        // If no filters, use homepage meta
+        if (!hasActiveFilters) {
+            window.metaManager.updateMeta({
+                title: 'AI Tools Intelligence Hub',
+                description: 'Discover and compare 349+ AI tools. Find the perfect AI software for your needs with detailed analysis, pricing, and integration information.'
+            });
+            
+            // Add structured data for homepage
+            if (window.schemaGenerator && this.filteredTools.length > 0) {
+                const featuredTools = this.getOriginalToolsData(this.filteredTools.slice(0, 10));
+                window.schemaGenerator.addStructuredData(
+                    window.schemaGenerator.generateToolListSchema(featuredTools, 'Featured AI Tools')
+                );
+            }
+            return;
+        }
+        
+        // If filtering by single category
+        if (this.filters.category.length === 1 && !this.filters.search) {
+            const category = this.filters.category[0];
+            window.metaManager.updateCategoryMeta(category, this.filteredTools.length);
+            
+            // Add structured data for category
+            if (window.schemaGenerator && this.filteredTools.length > 0) {
+                const categoryTools = this.getOriginalToolsData(this.filteredTools);
+                window.schemaGenerator.addStructuredData(
+                    window.schemaGenerator.generateCategorySchema(category, categoryTools)
+                );
+            }
+            return;
+        }
+        
+        // If searching for specific tools
+        if (this.filters.search && this.filteredTools.length === 1) {
+            // Single tool found - update with tool-specific meta
+            const tool = this.filteredTools[0];
+            const toolsArray = window.unifiedToolsData?.tools || window.unifiedToolsData || [];
+            const originalTool = toolsArray.find(t => 
+                t.tool_name === tool.name || 
+                t.id === tool.originalId
+            );
+            if (originalTool) {
+                window.metaManager.updateToolMeta(originalTool);
+                
+                // Add structured data for single tool
+                if (window.schemaGenerator) {
+                    window.schemaGenerator.addStructuredData(
+                        window.schemaGenerator.generateToolSchema(originalTool)
+                    );
+                }
+            }
+            return;
+        }
+        
+        // For complex filters or multiple results
+        let description = `Showing ${this.filteredTools.length} AI tools`;
+        const parts = [];
+        
+        if (this.filters.search) {
+            parts.push(`matching "${this.filters.search}"`);
+        }
+        if (this.filters.category.length > 0) {
+            parts.push(`in ${this.filters.category.join(', ')} categories`);
+        }
+        if (this.filters.pricing.length > 0) {
+            parts.push(`with ${this.filters.pricing.join('/')} pricing`);
+        }
+        if (this.filters.rating > 1) {
+            parts.push(`rated ${this.filters.rating}+ stars`);
+        }
+        if (this.filters.impact > 0) {
+            parts.push(`with ${this.filters.impact}+ business impact score`);
+        }
+        
+        if (parts.length > 0) {
+            description += ' ' + parts.join(', ');
+        }
+        description += '. Compare features, pricing, and business impact scores.';
+        
+        window.metaManager.updateMeta({
+            title: `AI Tools Search Results - ${this.filteredTools.length} Tools Found`,
+            description: description
+        });
+        
+        // Add structured data for search results
+        if (window.schemaGenerator && this.filteredTools.length > 0) {
+            const searchResultTools = this.getOriginalToolsData(this.filteredTools.slice(0, 20));
+            window.schemaGenerator.addStructuredData(
+                window.schemaGenerator.generateToolListSchema(searchResultTools, 'Search Results')
+            );
+        }
+    }
+    
+    // Helper method to get original tool data from filtered tools
+    getOriginalToolsData(filteredTools) {
+        const toolsArray = window.unifiedToolsData?.tools || window.unifiedToolsData || [];
+        
+        return filteredTools.map(tool => {
+            const originalTool = toolsArray.find(t => 
+                t.tool_name === tool.name || 
+                t.id === tool.originalId
+            );
+            return originalTool || tool.rawData || tool;
+        }).filter(tool => tool);
+    }
+
     toggleFilters() {
         const filterContent = document.getElementById('filterContent');
         filterContent.classList.toggle('open');
@@ -1055,10 +1193,12 @@ class UnifiedDashboard {
         const toggleBtn = document.getElementById('darkModeToggle');
         if (toggleBtn) {
             const icon = toggleBtn.querySelector('i');
-            if (theme === 'dark') {
-                icon.className = 'fas fa-sun';
-            } else {
-                icon.className = 'fas fa-moon';
+            if (icon) {
+                if (theme === 'dark') {
+                    icon.className = 'fas fa-sun';
+                } else {
+                    icon.className = 'fas fa-moon';
+                }
             }
         }
     }
