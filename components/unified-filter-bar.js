@@ -889,7 +889,9 @@ class UnifiedFilterBar {
         });
         
         // Update URL without reload
-        const newURL = params.toString() ? `?${params.toString()}` : window.location.pathname;
+        // Get the current full path including filename
+        const currentPath = window.location.pathname;
+        const newURL = params.toString() ? `${currentPath}?${params.toString()}` : currentPath;
         window.history.replaceState({}, '', newURL);
     }
     
