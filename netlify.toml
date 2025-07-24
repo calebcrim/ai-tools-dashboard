@@ -82,23 +82,22 @@
   status = 301
   force = true
 
-# Handle individual tool pages (client-side routing)
-[[redirects]]
-  from = "/ai-tools/*"
-  to = "/index.html"
-  status = 200
-
-# Handle category pages
-[[redirects]]
-  from = "/category/*"
-  to = "/index.html"
-  status = 200
-
-# Handle comparison pages
-[[redirects]]
-  from = "/compare/*"
-  to = "/index.html"
-  status = 200
+# Client-side routing redirects - DISABLED
+# These were for SPA routing but are now interfering with normal navigation
+# [[redirects]]
+#   from = "/ai-tools/*"
+#   to = "/index.html"
+#   status = 200
+# 
+# [[redirects]]
+#   from = "/category/*"
+#   to = "/index.html"
+#   status = 200
+# 
+# [[redirects]]
+#   from = "/compare/*"
+#   to = "/index.html"
+#   status = 200
 
 # Analytics and performance plugins (optional)
 [[plugins]]
@@ -124,7 +123,8 @@
   minify = true
 
 [build.processing.html]
-  pretty_urls = true
+  # Disabled pretty_urls as it may interfere with navigation
+  pretty_urls = false
   # Keep minify false to preserve analytics scripts
   minify = false
 
