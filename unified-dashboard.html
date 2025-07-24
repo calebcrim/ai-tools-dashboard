@@ -49,7 +49,7 @@
     <link rel="stylesheet" href="css/unified-dashboard.css">
     
     <!-- Unified Navigation -->
-    <link rel="stylesheet" href="css/unified-navigation.css">
+    <link rel="stylesheet" href="css/unified-navigation.css?v=2">
     
     <!-- Mobile Responsive Styles -->
     <link rel="stylesheet" href="css/mobile-responsive.css">
@@ -76,6 +76,28 @@
             </div>
             <nav class="nav-buttons">
                 <a href="unified-dashboard.html" class="nav-button active">Unified Dashboard</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-button dropdown-trigger">Popular Searches</a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">Top Search Topics</div>
+                        <a href="landing-pages/best-ai-writing-tools-2025.html">
+                            <span class="dropdown-item-icon">✍️</span>
+                            Best AI Writing Tools
+                        </a>
+                        <a href="landing-pages/chatgpt-alternatives.html">
+                            <span class="dropdown-item-icon">🤖</span>
+                            ChatGPT Alternatives
+                        </a>
+                        <a href="landing-pages/ai-tools-small-business.html">
+                            <span class="dropdown-item-icon">💼</span>
+                            AI for Small Business
+                        </a>
+                        <a href="landing-pages/enterprise-ai-tools.html">
+                            <span class="dropdown-item-icon">🏢</span>
+                            Enterprise AI Tools
+                        </a>
+                    </div>
+                </div>
                 <a href="financial-analysis/index.html" class="nav-button">Financial Analysis</a>
                 <a href="best-practices.html" class="nav-button">Best Practices</a>
                 <a href="newsfeed/newsletter.html" class="nav-button">AI News</a>
@@ -333,6 +355,32 @@
                     button.classList.add('active');
                 }
             });
+            
+            // Dropdown functionality
+            const dropdownTrigger = document.querySelector('.dropdown-trigger');
+            const navDropdown = document.querySelector('.nav-dropdown');
+            
+            if (dropdownTrigger && navDropdown) {
+                // Click handler for dropdown
+                dropdownTrigger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    navDropdown.classList.toggle('active');
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!navDropdown.contains(e.target)) {
+                        navDropdown.classList.remove('active');
+                    }
+                });
+                
+                // Close dropdown when pressing Escape
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        navDropdown.classList.remove('active');
+                    }
+                });
+            }
         });
     </script>
     
