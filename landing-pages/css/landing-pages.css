@@ -3,6 +3,11 @@
 /* Import design tokens */
 @import url('../../css/design-tokens.css');
 
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Landing Page Base Styles */
 .landing-page {
     min-height: 100vh;
@@ -229,6 +234,35 @@
 /* Hide rank numbers on non-ranked pages */
 .no-ranking .rank {
     display: none;
+}
+
+/* Back to Comparison Button */
+.back-to-comparison {
+    position: sticky;
+    top: 20px;
+    float: right;
+    background: #3B82F6;
+    color: white !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    transition: all 0.3s ease;
+    z-index: 100;
+    margin-bottom: 2rem;
+}
+
+.back-to-comparison:hover {
+    background: #2563EB;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.back-to-comparison i {
+    margin-right: 0.5rem;
+    color: white !important;
 }
 
 .tool-header h3 {

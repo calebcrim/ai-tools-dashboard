@@ -141,7 +141,7 @@ class LandingPageComponents {
                         break;
                     
                     case 'name':
-                        td.innerHTML = `<a href="#tool-${index + 1}" class="tool-name">${tool.tool_name}</a>`;
+                        td.innerHTML = `<a href="#tool-detail-${index + 1}" class="tool-name" onclick="event.preventDefault(); document.getElementById('tool-detail-${index + 1}').scrollIntoView({ behavior: 'smooth', block: 'start' });">${tool.tool_name}</a>`;
                         break;
                     
                     case 'pricing':
@@ -243,7 +243,7 @@ class LandingPageComponents {
         const features = this.extractKeyFeatures(tool);
         
         return `
-            <div class="tool-review-card" id="tool-${rank}">
+            <div class="tool-review-card" id="tool-detail-${rank}">
                 <div class="tool-header">
                     <span class="rank">#${rank}</span>
                     <h3>${tool.tool_name}</h3>

@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="../css/design-tokens.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/unified-navigation.css">
-    <link rel="stylesheet" href="css/landing-pages.css?v=4">
+    <link rel="stylesheet" href="css/landing-pages.css?v=5">
     
     <style>
         /* Page-specific styles */
@@ -154,6 +154,10 @@
         <section class="detailed-reviews">
             <div class="container">
                 <h2>Detailed Analysis & Reviews</h2>
+                <a href="#comparisonTable" class="back-to-comparison" onclick="event.preventDefault(); document.getElementById('comparisonTable').scrollIntoView({ behavior: 'smooth', block: 'center' });">
+                    <i class="fas fa-arrow-up"></i>
+                    Back to Comparison
+                </a>
                 <div id="toolReviews"></div>
             </div>
         </section>
