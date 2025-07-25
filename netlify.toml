@@ -82,22 +82,21 @@
   status = 301
   force = true
 
-# Client-side routing redirects - DISABLED
-# These were for SPA routing but are now interfering with normal navigation
-# [[redirects]]
-#   from = "/ai-tools/*"
-#   to = "/index.html"
-#   status = 200
-# 
-# [[redirects]]
-#   from = "/category/*"
-#   to = "/index.html"
-#   status = 200
-# 
-# [[redirects]]
-#   from = "/compare/*"
-#   to = "/index.html"
-#   status = 200
+# Client-side routing redirects for SPA
+[[redirects]]
+  from = "/ai-tools/*"
+  to = "/unified-dashboard.html"
+  status = 200
+
+[[redirects]]
+  from = "/category/*"
+  to = "/unified-dashboard.html"
+  status = 200
+
+[[redirects]]
+  from = "/compare/*"
+  to = "/unified-dashboard.html"
+  status = 200
 
 # Analytics and performance plugins (optional)
 [[plugins]]

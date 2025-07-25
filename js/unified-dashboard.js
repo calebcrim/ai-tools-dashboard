@@ -475,8 +475,26 @@ class UnifiedDashboard {
             card.addEventListener('click', (e) => {
                 e.stopPropagation(); // Prevent event bubbling
                 const toolId = card.dataset.toolId;
-                console.log('Card clicked, toolId:', toolId);
-                if (toolId) {
+                const toolName = card.dataset.toolName;
+                console.log('Card clicked, toolId:', toolId, 'toolName:', toolName);
+                
+                if (toolId && window.router) {
+                    // Find the tool to get its name for URL
+                    const tool = this.tools.find(t => (t.originalId || t.id) === toolId);
+                    if (tool) {
+                        // Use URL navigation
+                        const slug = tool.name.toLowerCase()
+                            .trim()
+                            .replace(/[^\w\s-]/g, '')
+                            .replace(/\s+/g, '-')
+                            .replace(/-+/g, '-');
+                        window.router.navigateTo(`/ai-tools/${slug}`);
+                    } else {
+                        // Fallback to direct panel display
+                        this.openDetailPanel(toolId);
+                    }
+                } else if (toolId) {
+                    // No router available, use direct panel
                     this.openDetailPanel(toolId);
                 }
             });
