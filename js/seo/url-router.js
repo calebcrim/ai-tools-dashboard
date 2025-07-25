@@ -15,12 +15,48 @@ class URLRouter {
   }
 
   initialize() {
-    // Handle initial route
-    this.handleRoute(window.location.pathname);
+    // For local testing, check if we have a hash route
+    const isLocalTest = window.location.protocol === 'file:' || 
+                       window.location.hostname === 'localhost' ||
+                       window.location.hostname.includes('github.dev') ||
+                       window.location.port !== '';
+    const hash = window.location.hash.slice(1); // Remove #
+    
+    
+    // Check for test route in query params
+    const urlParams = new URLSearchParams(window.location.search);
+    const testRoute = urlParams.get('test-route');
+    
+    if (testRoute) {
+      setTimeout(() => this.handleRoute(testRoute), 1000); // Wait for data to load
+    } else if (isLocalTest && hash) {
+      // Local testing: use hash as path
+      setTimeout(() => this.handleRoute(hash), 500); // Wait for data to load
+    } else {
+      // Production: use pathname
+      this.handleRoute(window.location.pathname);
+    }
     
     // Handle browser back/forward
     window.addEventListener('popstate', (e) => {
       this.handleRoute(window.location.pathname);
+    });
+    
+    // For local testing, also listen to hashchange
+    if (isLocalTest) {
+      window.addEventListener('hashchange', (e) => {
+        const newHash = window.location.hash.slice(1);
+        if (newHash) {
+          this.handleRoute(newHash);
+        }
+      });
+    }
+    
+    // Listen for postMessage (for iframe testing)
+    window.addEventListener('message', (e) => {
+      if (e.data && e.data.type === 'navigate' && e.data.path) {
+        this.handleRoute(e.data.path);
+      }
     });
     
     // Intercept link clicks for SPA navigation
@@ -191,11 +227,18 @@ class URLRouter {
 
   // Helper methods
   findToolBySlug(slug) {
-    if (!window.unifiedToolsData) return null;
+    if (!window.unifiedToolsData || !window.unifiedToolsData.tools) return null;
     
-    return window.unifiedToolsData.tools.find(tool => 
-      this.slugify(tool.tool_name) === slug
-    );
+    // Try finding in the raw tools data first
+    const tool = window.unifiedToolsData.tools.find(tool => {
+      const toolName = tool.tool_name || tool.name;
+      if (!toolName) return false;
+      
+      const toolSlug = this.slugify(toolName);
+      return toolSlug === slug;
+    });
+    
+    return tool;
   }
 
   findCategoryBySlug(slug) {
@@ -238,21 +281,32 @@ class URLRouter {
   }
 
   showToolDetails(tool) {
-    // Hide other views
-    this.hideAllViews();
-    
-    // Create or update tool details view
-    let detailsView = document.getElementById('tool-details-view');
-    if (!detailsView) {
-      detailsView = document.createElement('div');
-      detailsView.id = 'tool-details-view';
-      detailsView.className = 'tool-details-view';
-      document.querySelector('.main-container, main').appendChild(detailsView);
+    // Check if we have the dashboard instance available
+    if (window.unifiedDashboard && window.unifiedDashboard.openDetailPanel) {
+      // Use existing detail panel system
+      const toolId = tool.originalId || tool.id || `${tool.tool_name}-${tool.category}`.toLowerCase().replace(/\s+/g, '-');
+      window.unifiedDashboard.openDetailPanel(toolId);
+    } else if (window.openEnhancedToolModal) {
+      // Try modal system as fallback
+      const toolId = tool.id || `${tool.tool_name}-${tool.category}`.toLowerCase().replace(/\s+/g, '-');
+      window.openEnhancedToolModal(toolId);
+    } else {
+      // Final fallback to inline view
+      this.hideAllViews();
+      
+      // Create or update tool details view
+      let detailsView = document.getElementById('tool-details-view');
+      if (!detailsView) {
+        detailsView = document.createElement('div');
+        detailsView.id = 'tool-details-view';
+        detailsView.className = 'tool-details-view';
+        document.querySelector('.main-container, main').appendChild(detailsView);
+      }
+      
+      // Render tool details
+      detailsView.innerHTML = this.renderToolDetails(tool);
+      detailsView.style.display = 'block';
     }
-    
-    // Render tool details
-    detailsView.innerHTML = this.renderToolDetails(tool);
-    detailsView.style.display = 'block';
   }
 
   showCategoryTools(category) {
@@ -439,3 +493,4 @@ const router = new URLRouter();
 
 // Export for global access
 window.router = router;
+
