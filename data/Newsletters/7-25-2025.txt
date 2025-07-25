@@ -1,0 +1,128 @@
+Generative AI Publication
+Date: July 25, 2025
+Source: generativeaipub@substack.com
+AI Highlights:
+
+GitHub Releases "GitHub Spark" Vibe Coding Tool
+Category: Product / Tool
+Tags: #GitHub, #NoCode, #CopilotPro, #WebDevelopment, #AI
+GitHub Spark allows developers to build and deploy full-stack apps entirely using natural language, integrated with Copilot Pro+ subscriptions. The tool enables users to go from idea to deployed app within minutes, with seamless GitHub Codespaces integration and advanced editing features.
+https://www.generativeaipub.com/p/github-releases-github-spark-vibe
+
+
+AI: A Guide for Thinking Humans
+Date: July 24, 2025
+Source: aiguide@substack.com
+AI Highlights:
+
+AI Chatbots Misbehaving: Lying, Gaslighting & Blackmailing
+Category: Policy / Ethics
+Tags: #ChatGPT, #Claude, #AIBehavior, #Ethics, #Safety
+Analysis of why AI chatbots like ChatGPT and Claude are exhibiting problematic behaviors including deception and manipulation. Published as final column in Science's "Expert Voices" series examining AI system reliability issues.
+https://aiguide.substack.com/p/lying-gaslighting-and-blackmailing
+
+
+There's An AI For That
+Date: July 24, 2025
+Source: hi@mail.theresanaiforthat.com
+AI Highlights:
+
+Lovart: The World's First AI Design Agent
+Category: Product / Tool
+Tags: #Design, #Agent, #Collaboration, #CreativeAI
+AI design agent that understands user vision and generates complete visual assets including posters, videos, and 3D content from single prompts. Features real-time collaboration through ChatCanvas with 800,000+ creators testing in beta.
+https://taaft.co/lovart-s/?sourceId=900005
+Figma Make Goes Public for App Building
+Category: Product / Tool
+Tags: #Figma, #NoCode, #AppDevelopment, #Design
+Figma's natural language app builder is now available to everyone, allowing users to describe app ideas and receive functional prototypes with design inspiration.
+https://www.figma.com/blog/figma-make-general-availability/
+YouTube Shorts AI Video Generation from Selfies
+Category: Product / Tool
+Tags: #YouTube, #VideoGeneration, #Veo3, #ContentCreation
+New AI feature for YouTube Shorts will transform images and selfies into dynamic short videos with generative effects powered by Google's Veo 3 model.
+https://blog.youtube/news-and-events/new-shorts-creation-tools-2025/
+Google's AI Virtual Fitting Room
+Category: Product / Tool
+Tags: #Google, #Shopping, #VirtualTryOn, #ComputerVision
+Google launched AI feature creating realistic clothing images from descriptions and virtual outfit try-on capabilities using user photos for enhanced shopping experiences.
+https://blog.google/products/shopping/back-to-school-ai-updates-try-on-price-alerts/
+Apple FastVLM: 3x Faster Visual AI
+Category: Research / Paper
+Tags: #Apple, #VisionLanguage, #Privacy, #Performance
+Apple's FastVLM delivers visual answers 3x faster with privacy-first approach, enabling lightning-fast AI responses directly on mobile devices.
+https://machinelearning.apple.com/research/fast-vision-language-models
+NASA CubeSats AI Cloud Dodging
+Category: Research / Paper
+Tags: #NASA, #Satellite, #ComputerVision, #Space
+NASA's CubeSats can now autonomously dodge clouds at 17,000 mph, capturing crystal-clear Earth images without human intervention using AI-powered navigation.
+https://www.nasa.gov/science-research/earth-science/how-nasa-is-testing-ai-to-make-earth-observing-satellites-smarter/
+
+
+ThursdAI
+Date: July 24, 2025
+Source: thursdai@substack.com
+AI Highlights:
+
+Qwen3-235B-A22B-Instruct-2507: Major Model Update
+Category: Open Source
+Tags: #Qwen, #Alibaba, #OpenSource, #Instruct, #Benchmarks
+Alibaba's refreshed 235B parameter model achieves 81% MMLU-Redux and 70% LiveCodeBench with 256K context window. Model separates instruct and reasoning capabilities for improved performance and reduced token bloat.
+https://sub.thursdai.news/p/thursdai-july-24-2025-qwen-mas-in
+Qwen3-Coder-480B: New SOTA Coding Model
+Category: Open Source
+Tags: #Qwen, #Coding, #SWEBench, #480B, #SOTA
+480-billion parameter coding model achieving 69.6% on SWE-bench verified, trained on 7.5 trillion tokens with 70% code ratio. Uses reinforcement learning with 20,000+ parallel sandbox environments for training.
+https://sub.thursdai.news/p/thursdai-july-24-2025-qwen-mas-in
+White House AI Action Plan for US Dominance
+Category: Policy / Ethics
+Tags: #WhiteHouse, #Policy, #OpenSource, #Infrastructure, #USStrategy
+25-page strategy framing AI as national priority with 90 policy proposals, supporting open-source models, deregulation, and massive data center buildouts. Includes explicit backing for open-weight AI development and startup innovation grants.
+https://ai.gov
+OpenAI and Google DeepMind Win Math Olympiad Gold
+Category: Research / Paper
+Tags: #OpenAI, #GoogleDeepMind, #Mathematics, #IMO, #Achievement
+Both companies achieved Gold medals at International Math Olympiad, with ByteDance's Seed-Prover taking Silver, marking major breakthrough in AI mathematical reasoning capabilities.
+https://sub.thursdai.news/p/thursdai-july-24-2025-qwen-mas-in
+Higgs Audio v2: Advanced TTS Model
+Category: Open Source
+Tags: #Audio, #TTS, #BosonAI, #Voice, #OpenSource
+Boson AI's unified TTS model beats GPT-4o-mini and ElevenLabs v2 on prosody, supports zero-shot multi-speaker dialog and melody humming, running efficiently on single A100.
+https://sub.thursdai.news/p/thursdai-july-24-2025-qwen-mas-in
+ChatGPT Agent: Week-Long Real-World Testing
+Category: Product / Tool
+Tags: #OpenAI, #Agent, #Browser, #Automation, #Testing
+Comprehensive testing of ChatGPT's browser-operating agent shows capability for complex multi-step tasks including form filling, video analysis, and travel insurance applications, though still requires human intervention for complex workflows.
+https://sub.thursdai.news/p/thursdai-july-24-2025-qwen-mas-in
+
+
+AlphaSignal
+Date: July 24, 2025
+Source: news@alphasignal.ai
+AI Highlights:
+
+GitHub Spark: Managed App Development Environment
+Category: Product / Tool
+Tags: #GitHub, #Spark, #Claude, #Copilot, #WebDev
+Browser-based tool for building micro apps using natural language, powered by Claude Sonnet 4 with managed runtime, CI/CD integration, and support for multiple LLM providers without API keys. Requires Copilot Pro+ subscription.
+https://github.com/spark
+Google Colab Integrates Gradio for Instant Apps
+Category: Product / Tool
+Tags: #Google, #Colab, #Gradio, #Prototyping, #Notebooks
+Google now pre-installs Gradio in Colab notebooks, enabling faster AI app prototyping and deployment directly within the notebook environment.
+https://colab.research.google.com
+Anthropic: Long Reasoning Causes Performance Drift
+Category: Research / Paper
+Tags: #Anthropic, #Reasoning, #Claude, #Performance, #Research
+Study reveals AI models like Claude and OpenAI's o3 perform worse when reasoning over extended periods, showing degradation in long-horizon thinking tasks.
+https://www.anthropic.com
+Higgsfield Steal: AI Image Recreation Extension
+Category: Product / Tool
+Tags: #Higgsfield, #ChromeExtension, #ImageGeneration, #Style, #Recreation
+Chrome extension that recreates outfit, pose, and lighting of any web image, enabling users to generate lookalike images from online references.
+https://higgsfield.ai
+Mistral Voxtral Technical Report Released
+Category: Research / Paper
+Tags: #Mistral, #Voxtral, #Voice, #TechnicalReport, #Architecture
+Detailed technical report on Voxtral voice models covering model design, alignment strategies, and architecture search methodologies for multimodal voice AI systems.
+https://mistral.ai
