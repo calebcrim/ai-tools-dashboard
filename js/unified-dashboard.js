@@ -1,6 +1,7 @@
 // Unified Dashboard JavaScript
 class UnifiedDashboard {
     constructor() {
+        console.log('[UnifiedDashboard] Constructor called');
         this.currentMode = 'browse';
         this.currentView = 'grid';
         this.toolsData = [];
@@ -17,6 +18,7 @@ class UnifiedDashboard {
         };
         this.selectedTool = null;
         
+        console.log('[UnifiedDashboard] Calling init()');
         this.init();
     }
 
@@ -187,40 +189,45 @@ class UnifiedDashboard {
     }
 
     transformToolsData(rawData) {
-        return rawData.map(tool => ({
-            id: tool.id || tool.tool_name?.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || 'unknown-tool',
-            originalId: tool.id, // Keep original ID for lookup
-            name: tool.tool_name || 'Unknown Tool',
-            category: tool.category || 'Uncategorized',
-            description: tool.brief_purpose_summary || 'No description available',
-            url: tool.url || '#',
-            pricing: this.extractPricing(tool.pricing_model),
-            rating: this.generateRating(),
-            businessImpact: this.calculateBusinessImpact(tool),
-            timeToValue: this.estimateTimeToValue(tool),
-            complexity: this.assessComplexity(tool),
-            apiAvailable: this.hasAPI(tool),
-            sdkSupport: this.hasSDK(tool),
-            webhookSupport: this.hasWebhooks(tool),
-            features: this.extractFeatures(tool),
-            integrations: this.extractIntegrations(tool),
-            tags: tool.tags || [],
-            lastUpdated: new Date().toISOString(),
-            // Include all raw data fields
-            rawData: {
-                feature_breakdown: tool.feature_breakdown || 'No detailed features available',
-                pricing_model: tool.pricing_model || 'Pricing information not available',
-                pros_cons_limitations: tool.pros_cons_limitations || 'No pros/cons information available',
-                integration_potential: tool.integration_potential || 'No integration information available',
-                learning_curve: tool.learning_curve || 'Learning curve information not available',
-                geo_regulatory_limitations: tool.geo_regulatory_limitations || 'No geographic limitations information',
-                case_studies: tool.case_studies || 'No case studies available',
-                use_cases_in_pr: tool.use_cases_in_pr || [],
-                source: tool.source || 'Unknown',
-                icon: tool.icon || null,
-                cision_use_suggestions: tool.cision_use_suggestions || null
-            }
-        }));
+        return rawData.map((tool, index) => {
+            // Generate a consistent ID from tool name or use index as fallback
+            const generatedId = tool.tool_name?.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || `tool-${index}`;
+            
+            return {
+                id: tool.id || generatedId,
+                originalId: tool.id || generatedId, // Keep original ID for lookup, or use generated
+                name: tool.tool_name || 'Unknown Tool',
+                category: tool.category || 'Uncategorized',
+                description: tool.brief_purpose_summary || 'No description available',
+                url: tool.url || '#',
+                pricing: this.extractPricing(tool.pricing_model),
+                rating: this.generateRating(),
+                businessImpact: this.calculateBusinessImpact(tool),
+                timeToValue: this.estimateTimeToValue(tool),
+                complexity: this.assessComplexity(tool),
+                apiAvailable: this.hasAPI(tool),
+                sdkSupport: this.hasSDK(tool),
+                webhookSupport: this.hasWebhooks(tool),
+                features: this.extractFeatures(tool),
+                integrations: this.extractIntegrations(tool),
+                tags: tool.tags || [],
+                lastUpdated: new Date().toISOString(),
+                // Include all raw data fields
+                rawData: {
+                    feature_breakdown: tool.feature_breakdown || 'No detailed features available',
+                    pricing_model: tool.pricing_model || 'Pricing information not available',
+                    pros_cons_limitations: tool.pros_cons_limitations || 'No pros/cons information available',
+                    integration_potential: tool.integration_potential || 'No integration information available',
+                    learning_curve: tool.learning_curve || 'Learning curve information not available',
+                    geo_regulatory_limitations: tool.geo_regulatory_limitations || 'No geographic limitations information',
+                    case_studies: tool.case_studies || 'No case studies available',
+                    use_cases_in_pr: tool.use_cases_in_pr || [],
+                    source: tool.source || 'Unknown',
+                    icon: tool.icon || null,
+                    cision_use_suggestions: tool.cision_use_suggestions || null
+                }
+            };
+        });
     }
 
     extractPricing(pricingModel) {
@@ -446,12 +453,22 @@ class UnifiedDashboard {
     }
 
     renderTools() {
+        console.log('[UnifiedDashboard] renderTools called', {
+            currentMode: this.currentMode,
+            filteredToolsCount: this.filteredTools.length
+        });
+        
         const gridId = this.currentMode === 'browse' ? 'browseGrid' : 
                       this.currentMode === 'executive' ? 'executiveGrid' : 
                       'technicalGrid';
         
         const grid = document.getElementById(gridId);
-        if (!grid) return;
+        console.log('[UnifiedDashboard] Grid element:', gridId, '=', !!grid);
+        
+        if (!grid) {
+            console.error('[UnifiedDashboard] Grid not found:', gridId);
+            return;
+        }
         
         if (this.filteredTools.length === 0) {
             grid.innerHTML = this.getEmptyStateHTML();
@@ -462,6 +479,7 @@ class UnifiedDashboard {
                             this.currentMode === 'executive' ? 'renderExecutiveCard' :
                             'renderTechnicalCard';
         
+        console.log('[UnifiedDashboard] Rendering', this.filteredTools.length, 'tools using', renderMethod);
         grid.innerHTML = this.filteredTools.map(tool => this[renderMethod](tool)).join('');
         
         // Add click event listeners to all tool cards
@@ -470,38 +488,83 @@ class UnifiedDashboard {
 
     attachCardClickListeners() {
         const cards = document.querySelectorAll('.tool-card');
-        console.log(`Attaching click listeners to ${cards.length} cards`);
-        cards.forEach(card => {
+        console.log(`[UnifiedDashboard] Attaching click listeners to ${cards.length} cards`);
+        
+        cards.forEach((card, index) => {
+            // Add visual feedback for debugging
+            card.style.cursor = 'pointer';
+            
+            // Log card details
+            console.log(`[UnifiedDashboard] Card ${index}: toolId=${card.dataset.toolId}, toolName=${card.dataset.toolName}`);
+            
             card.addEventListener('click', (e) => {
-                e.stopPropagation(); // Prevent event bubbling
-                const toolId = card.dataset.toolId;
-                const toolName = card.dataset.toolName;
-                console.log('Card clicked, toolId:', toolId, 'toolName:', toolName);
+                console.log('[UnifiedDashboard] Card clicked!', {
+                    target: e.target,
+                    currentTarget: e.currentTarget,
+                    toolId: card.dataset.toolId,
+                    toolName: card.dataset.toolName,
+                    hasRouter: !!window.router
+                });
                 
-                if (toolId && window.router) {
-                    // Find the tool to get its name for URL
-                    const tool = this.tools.find(t => (t.originalId || t.id) === toolId);
-                    if (tool) {
-                        // Use URL navigation
-                        const slug = tool.name.toLowerCase()
-                            .trim()
-                            .replace(/[^\w\s-]/g, '')
-                            .replace(/\s+/g, '-')
-                            .replace(/-+/g, '-');
-                        window.router.navigateTo(`/ai-tools/${slug}`);
-                    } else {
-                        // Fallback to direct panel display
+                try {
+                    // Don't stop propagation if clicking on export button
+                    if (!e.target.closest('.export-btn')) {
+                        e.stopPropagation();
+                    }
+                    
+                    const toolId = card.dataset.toolId;
+                    const toolName = card.dataset.toolName;
+                    
+                    if (!toolId) {
+                        console.error('[UnifiedDashboard] No toolId found on card element');
+                        return;
+                    }
+                    
+                    // Use router for URL navigation if available, otherwise open directly
+                    if (toolId && window.router) {
+                        // Find the tool to get its name for URL
+                        const tool = this.toolsData.find(t => (t.originalId || t.id) === toolId);
+                        if (tool) {
+                            // Use URL navigation
+                            const slug = tool.name.toLowerCase()
+                                .trim()
+                                .replace(/[^\w\s-]/g, '')
+                                .replace(/\s+/g, '-')
+                                .replace(/-+/g, '-');
+                            window.router.navigateTo(`/ai-tools/${slug}`);
+                        } else {
+                            console.error('[UnifiedDashboard] Tool not found in toolsData for ID:', toolId);
+                            // Fallback to direct panel display
+                            this.openDetailPanel(toolId);
+                        }
+                    } else if (toolId) {
+                        console.log('[UnifiedDashboard] No router available, using direct panel display');
                         this.openDetailPanel(toolId);
                     }
-                } else if (toolId) {
-                    // No router available, use direct panel
-                    this.openDetailPanel(toolId);
+                } catch (error) {
+                    console.error('[UnifiedDashboard] Error in card click handler:', error);
+                    alert('Error opening tool details. Check console for details.');
                 }
             });
+            
+            // Add hover effect for visual feedback
+            card.addEventListener('mouseenter', () => {
+                card.style.opacity = '0.9';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.opacity = '1';
+            });
         });
+        
+        console.log('[UnifiedDashboard] Click listeners attached successfully');
     }
 
     renderBrowseCard(tool) {
+        // Log tool ID info for debugging
+        const toolId = tool.originalId || tool.id;
+        console.log('[UnifiedDashboard] Rendering card for:', tool.name, 'with ID:', toolId);
+        
         // Create a clean tool object for export
         const exportData = {
             tool_name: tool.name,
@@ -516,7 +579,7 @@ class UnifiedDashboard {
         };
         
         return `
-            <div class="tool-card" data-tool-id="${tool.originalId || tool.id}" data-tool-name="${tool.name}" data-category="${tool.category}">
+            <div class="tool-card" data-tool-id="${toolId}" data-tool-name="${tool.name}" data-category="${tool.category}" style="cursor: pointer;">
                 <button class="export-btn" onclick="event.stopPropagation(); exportToolToPDF(${JSON.stringify(exportData).replace(/"/g, '&quot;')})" title="Export to PDF">
                     <i class="fas fa-file-pdf"></i>
                 </button>
@@ -534,11 +597,12 @@ class UnifiedDashboard {
     }
 
     renderExecutiveCard(tool) {
+        const toolId = tool.originalId || tool.id;
         const impactClass = tool.businessImpact >= 80 ? 'high' : 
                            tool.businessImpact >= 50 ? 'medium' : 'low';
         
         return `
-            <div class="tool-card executive-card" data-tool-id="${tool.originalId || tool.id}">
+            <div class="tool-card executive-card" data-tool-id="${toolId}" data-tool-name="${tool.name}" style="cursor: pointer;">
                 <h3>${tool.name}</h3>
                 <div class="impact-score ${impactClass}">${tool.businessImpact}</div>
                 <div class="impact-label">Business Impact Score</div>
@@ -553,13 +617,14 @@ class UnifiedDashboard {
     }
 
     renderTechnicalCard(tool) {
+        const toolId = tool.originalId || tool.id;
         const apis = [];
         if (tool.apiAvailable) apis.push('REST API');
         if (tool.sdkSupport) apis.push('SDK');
         if (tool.webhookSupport) apis.push('Webhooks');
         
         return `
-            <div class="tool-card technical-card" data-tool-id="${tool.originalId || tool.id}">
+            <div class="tool-card technical-card" data-tool-id="${toolId}" data-tool-name="${tool.name}" style="cursor: pointer;">
                 <h3>${tool.name}</h3>
                 <div class="api-badges">
                     ${apis.map(api => `<span class="api-badge">${api}</span>`).join('')}
@@ -580,6 +645,14 @@ class UnifiedDashboard {
     }
 
     openDetailPanel(toolId) {
+        console.log('[UnifiedDashboard] openDetailPanel called with toolId:', toolId);
+        console.log('[UnifiedDashboard] Total tools in toolsData:', this.toolsData.length);
+        console.log('[UnifiedDashboard] First 3 tools:', this.toolsData.slice(0, 3).map(t => ({
+            id: t.id,
+            originalId: t.originalId,
+            name: t.name
+        })));
+        
         // Try to find tool by originalId first, then by transformed id
         const tool = this.toolsData.find(t => 
             t.originalId == toolId || 
@@ -588,17 +661,42 @@ class UnifiedDashboard {
         );
         
         if (!tool) {
-            console.error('Tool not found for ID:', toolId);
+            console.error('[UnifiedDashboard] Tool not found for ID:', toolId);
+            console.log('[UnifiedDashboard] Available tool IDs (first 10):', this.toolsData.slice(0, 10).map(t => ({ 
+                id: t.id, 
+                originalId: t.originalId,
+                name: t.name 
+            })));
+            alert(`Tool not found with ID: ${toolId}. Check console for available IDs.`);
             return;
         }
+        
+        console.log('[UnifiedDashboard] Tool found:', tool.name);
         
         this.selectedTool = tool;
         const panel = document.getElementById('detailPanel');
         const title = document.getElementById('detailPanelTitle');
         const content = document.getElementById('detailPanelContent');
         
+        console.log('[UnifiedDashboard] Panel elements:', { 
+            panel: !!panel, 
+            title: !!title, 
+            content: !!content,
+            panelClasses: panel?.className,
+            panelId: panel?.id
+        });
+        
         if (!panel || !title || !content) {
-            console.error('Detail panel elements not found');
+            console.error('[UnifiedDashboard] Detail panel elements not found in DOM', {
+                panel: panel,
+                title: title,
+                content: content
+            });
+            // Let's check if we can find it differently
+            const allPanels = document.querySelectorAll('[id*="detail"], [class*="detail"]');
+            console.log('[UnifiedDashboard] Found detail-related elements:', allPanels.length);
+            allPanels.forEach(el => console.log('  -', el.tagName, el.id, el.className));
+            alert('Detail panel elements not found in DOM. Check console for details.');
             return;
         }
         
@@ -620,7 +718,8 @@ class UnifiedDashboard {
         // Add a small delay to ensure the panel opens after any potential close events
         setTimeout(() => {
             panel.classList.add('open');
-            console.log('Detail panel opened, classes:', panel.className);
+            console.log('[UnifiedDashboard] Detail panel should now be open. Panel classes:', panel.className);
+            console.log('[UnifiedDashboard] Panel computed style right:', window.getComputedStyle(panel).right);
         }, 10);
     }
 
@@ -1224,13 +1323,21 @@ class UnifiedDashboard {
 
 // Initialize the dashboard when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('[UnifiedDashboard] DOM Content Loaded');
+    
     // Wait for data to be available before initializing
     function initializeDashboard() {
+        console.log('[UnifiedDashboard] Checking for data...', {
+            hasUnifiedToolsData: !!window.unifiedToolsData,
+            hasTools: window.unifiedToolsData?.tools ? window.unifiedToolsData.tools.length : 0
+        });
+        
         if (window.unifiedToolsData) {
-            console.log('Data loaded, initializing dashboard with', window.unifiedToolsData.tools?.length || 0, 'tools');
+            console.log('[UnifiedDashboard] Data loaded, initializing dashboard with', window.unifiedToolsData.tools?.length || 0, 'tools');
             window.unifiedDashboard = new UnifiedDashboard();
+            console.log('[UnifiedDashboard] Dashboard initialized successfully');
         } else {
-            console.log('Waiting for data to load...');
+            console.log('[UnifiedDashboard] Waiting for data to load...');
             setTimeout(initializeDashboard, 100);
         }
     }
@@ -1239,10 +1346,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Close detail panel on outside click
 document.addEventListener('click', (e) => {
+    // Only proceed if dashboard is initialized
+    if (!window.unifiedDashboard) return;
+    
     const panel = document.getElementById('detailPanel');
     if (panel && panel.classList.contains('open') && !panel.contains(e.target)) {
         // Don't close if clicking on a tool card
         if (!e.target.closest('.tool-card')) {
+            console.log('[UnifiedDashboard] Closing panel - clicked outside');
             window.unifiedDashboard.closeDetailPanel();
         }
     }
