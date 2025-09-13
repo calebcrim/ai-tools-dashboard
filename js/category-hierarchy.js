@@ -155,7 +155,14 @@ function getMetaCategoryCounts(toolsData) {
     return metaCounts;
 }
 
-// Export for use in other modules
+// Make functions available globally for browser use
+window.categoryHierarchy = categoryHierarchy;
+window.getMetaCategory = getMetaCategory;
+window.getAllCategories = getAllCategories;
+window.getCategoryCounts = getCategoryCounts;
+window.getMetaCategoryCounts = getMetaCategoryCounts;
+
+// Also export for Node.js modules if available
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         categoryHierarchy,
