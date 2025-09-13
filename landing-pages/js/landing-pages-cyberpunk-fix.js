@@ -1,5 +1,7 @@
 // Force cyberpunk styles on landing pages
-document.addEventListener('DOMContentLoaded', function() {
+// Run immediately and also on DOM load
+(function() {
+    function applyCyberpunkStyles() {
     // Remove any inline styles that might be overriding our CSS
     const elementsWithWhiteBg = document.querySelectorAll('[style*="background"]');
     elementsWithWhiteBg.forEach(el => {
@@ -40,4 +42,19 @@ document.addEventListener('DOMContentLoaded', function() {
             el.style.border = '1px solid rgba(20, 184, 166, 0.3)';
         });
     });
-});
+    }
+    
+    // Run immediately
+    applyCyberpunkStyles();
+    
+    // Also run when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', applyCyberpunkStyles);
+    } else {
+        applyCyberpunkStyles();
+    }
+    
+    // Run again after a short delay to catch any dynamically loaded content
+    setTimeout(applyCyberpunkStyles, 100);
+    setTimeout(applyCyberpunkStyles, 500);
+})();

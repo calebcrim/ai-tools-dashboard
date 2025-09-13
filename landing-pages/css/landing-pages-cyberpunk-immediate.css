@@ -1,0 +1,47 @@
+/* IMMEDIATE CYBERPUNK OVERRIDE - Load this BEFORE landing-pages.css */
+
+/* Reset everything first */
+* {
+    --color-primary: #14b8a6 !important;
+    --color-secondary: #10b981 !important;
+    --color-accent: #0d9488 !important;
+}
+
+/* Force dark background on root elements */
+html {
+    background: #0a0f0a !important;
+}
+
+body {
+    background: linear-gradient(135deg, #0a0f0a 0%, #0f1b14 50%, #0a1a0f 100%) !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
+    color: #e0f2e7 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Override landing-page completely */
+.landing-page {
+    background: transparent !important;
+    min-height: 100vh !important;
+    color: #e0f2e7 !important;
+}
+
+/* Kill all white/blue backgrounds */
+.landing-page * {
+    background-color: transparent !important;
+}
+
+/* Then selectively add back cyberpunk backgrounds */
+.hero-section {
+    background: linear-gradient(135deg, rgba(13, 148, 136, 0.2) 0%, rgba(16, 185, 129, 0.15) 100%) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+}
+
+.main-nav {
+    background: rgba(10, 15, 10, 0.9) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+}

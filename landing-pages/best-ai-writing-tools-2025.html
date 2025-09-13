@@ -43,9 +43,35 @@
     
     <!-- Cyberpunk Universal Styling -->
     <link rel="stylesheet" href="../css/cyberpunk-universal.css">
+    
+    <!-- CRITICAL: Load cyberpunk immediate BEFORE landing-pages.css -->
+    <link rel="stylesheet" href="css/landing-pages-cyberpunk-immediate.css">
     <link rel="stylesheet" href="css/landing-pages.css?v=5">
-    <!-- Cyberpunk Override for Landing Pages - MUST BE LAST -->
     <link rel="stylesheet" href="css/landing-pages-cyberpunk.css">
+    
+    <!-- Inline styles to guarantee dark background -->
+    <style>
+        html, body {
+            background: linear-gradient(135deg, #0a0f0a 0%, #0f1b14 50%, #0a1a0f 100%) !important;
+            background-attachment: fixed !important;
+            color: #e0f2e7 !important;
+        }
+        .landing-page {
+            background: transparent !important;
+        }
+        /* Override hero section blue gradient */
+        .hero-section {
+            background: linear-gradient(135deg, rgba(13, 148, 136, 0.2) 0%, rgba(16, 185, 129, 0.15) 100%) !important;
+            border: 1px solid rgba(20, 184, 166, 0.3) !important;
+        }
+        /* Force all white backgrounds to glassmorphism */
+        .quick-comparison, .content-section, .analysis-section,
+        .tool-review-card, .faq-container, .roi-calculator {
+            background: rgba(13, 148, 136, 0.06) !important;
+            backdrop-filter: blur(20px) !important;
+            -webkit-backdrop-filter: blur(20px) !important;
+        }
+    </style>
     
     <!-- Force Cyberpunk Styles -->
     <script src="js/landing-pages-cyberpunk-fix.js"></script>
