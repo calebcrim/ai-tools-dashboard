@@ -1,34 +1,41 @@
-/* Unified Dashboard Styles */
+/* Unified Dashboard Styles - Cyberpunk Theme */
 :root {
-    --primary-color: #2563eb;
-    --primary-hover: #1d4ed8;
-    --secondary-color: #64748b;
-    --background-color: #f8fafc;
-    --surface-color: #ffffff;
-    --border-color: #e2e8f0;
-    --text-primary: #1e293b;
-    --text-secondary: #64748b;
+    --primary-color: #14b8a6;
+    --primary-hover: #0d9488;
+    --secondary-color: #10b981;
+    --background-color: #0a0f0a;
+    --surface-color: rgba(13, 148, 136, 0.06);
+    --border-color: rgba(34, 197, 94, 0.2);
+    --text-primary: #e0f2e7;
+    --text-secondary: #8bb89a;
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-glow: 0 0 20px rgba(20, 184, 166, 0.4);
     --radius-sm: 4px;
     --radius-md: 8px;
     --radius-lg: 12px;
+    
+    /* Cyberpunk Glass Effects */
+    --glass-bg: rgba(13, 148, 136, 0.08);
+    --glass-border: rgba(20, 184, 166, 0.3);
+    --glass-blur: blur(20px);
 }
 
-/* Dark Mode Variables */
+/* Dark Mode Variables - Cyberpunk Enhanced */
 [data-theme="dark"] {
-    --primary-color: #3b82f6;
-    --primary-hover: #2563eb;
-    --secondary-color: #94a3b8;
-    --background-color: #0f172a;
-    --surface-color: #1e293b;
-    --border-color: #334155;
-    --text-primary: #f1f5f9;
-    --text-secondary: #94a3b8;
+    --primary-color: #14b8a6;
+    --primary-hover: #0d9488;
+    --secondary-color: #10b981;
+    --background-color: #0a0f0a;
+    --surface-color: rgba(13, 148, 136, 0.08);
+    --border-color: rgba(34, 197, 94, 0.3);
+    --text-primary: #e0f2e7;
+    --text-secondary: #8bb89a;
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.5);
+    --shadow-glow: 0 0 25px rgba(20, 184, 166, 0.5);
 }
 
 /* Global Styles */
@@ -40,16 +47,32 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background-color: var(--background-color);
+    background: linear-gradient(135deg, #0a0f0a 0%, #0f1b14 50%, #0a1a0f 100%);
+    background-attachment: fixed;
     color: var(--text-primary);
     line-height: 1.6;
+    position: relative;
 }
 
-/* Header */
+/* Glassmorphism utility class */
+.glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px rgba(13, 148, 136, 0.1);
+}
+
+/* Header - Cyberpunk Glass Effect */
 .header {
-    background: var(--surface-color);
-    border-bottom: 1px solid var(--border-color);
-    box-shadow: var(--shadow-sm);
+    background: linear-gradient(135deg, 
+        rgba(13, 148, 136, 0.15) 0%, 
+        rgba(16, 185, 129, 0.1) 50%, 
+        rgba(34, 197, 94, 0.08) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px rgba(13, 148, 136, 0.1);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -82,13 +105,15 @@ body {
 .logo-icon {
     width: 40px;
     height: 40px;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-size: 1.2rem;
+    box-shadow: var(--shadow-glow);
+    border: 1px solid rgba(34, 197, 94, 0.2);
 }
 
 .logo-text {
@@ -98,12 +123,14 @@ body {
 }
 
 .tools-badge {
-    background: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
     padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.875rem;
     font-weight: 500;
+    box-shadow: 0 0 10px rgba(20, 184, 166, 0.3);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
 
 .tools-badge .count {
@@ -127,14 +154,18 @@ body {
     border: 2px solid var(--border-color);
     border-radius: var(--radius-lg);
     font-size: 1rem;
-    background: var(--surface-color);
-    transition: all 0.2s ease;
+    background: rgba(10, 15, 10, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
 }
 
 .search-input:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgb(37 99 235 / 0.1);
+    box-shadow: 0 0 25px rgba(20, 184, 166, 0.6);
+    background: rgba(10, 15, 10, 0.9);
 }
 
 .search-icon {
@@ -142,8 +173,9 @@ body {
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--text-secondary);
+    color: var(--primary-color);
     font-size: 1rem;
+    text-shadow: 0 0 10px rgba(20, 184, 166, 0.4);
 }
 
 .search-suggestions {

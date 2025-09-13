@@ -10,31 +10,45 @@
      Colors
      ========================================================================== */
   
-  /* Primary Brand Colors */
-  --color-primary: #3B82F6;        /* Main brand blue - used for CTAs, links, active states */
-  --color-primary-hover: #2563EB;  /* Darker blue for hover states */
-  --color-primary-active: #1D4ED8; /* Even darker for active/pressed states */
+  /* Primary Brand Colors - Cyberpunk Theme */
+  --color-primary: #14b8a6;        /* Cyberpunk teal - used for CTAs, links, active states */
+  --color-primary-hover: #0d9488;  /* Darker teal for hover states */
+  --color-primary-active: #0f766e; /* Even darker for active/pressed states */
   
-  /* Neutral Colors - Dark Theme */
-  --color-bg-primary: #0A0A0A;     /* Main background */
-  --color-bg-secondary: #141414;   /* Card backgrounds */
-  --color-bg-tertiary: #1F1F1F;    /* Elevated surfaces */
-  --color-bg-hover: #2A2A2A;       /* Hover state for cards */
+  /* Secondary Cyberpunk Colors */
+  --cyber-secondary: #10b981;      /* Cyberpunk green */
+  --cyber-accent: #22c55e;         /* Bright accent green */
+  --cyber-dark: #0d9488;           /* Dark teal variant */
   
-  /* Text Colors */
-  --color-text-primary: #FFFFFF;   /* Main text */
-  --color-text-secondary: #A3A3A3; /* Secondary text, labels */
-  --color-text-muted: #737373;     /* Disabled, very low emphasis */
+  /* Neutral Colors - Cyberpunk Dark Theme */
+  --color-bg-primary: #0a0f0a;     /* Dark cyberpunk background */
+  --color-bg-secondary: rgba(13, 148, 136, 0.06);   /* Tinted card backgrounds */
+  --color-bg-tertiary: rgba(13, 148, 136, 0.08);    /* Glass-effect surfaces */
+  --color-bg-hover: rgba(20, 184, 166, 0.1);       /* Hover state for cards */
   
-  /* Border Colors */
-  --color-border-primary: #2A2A2A; /* Main borders */
-  --color-border-secondary: #404040; /* Lighter borders for emphasis */
+  /* Cyberpunk Glass Effects */
+  --cyber-bg-glass: rgba(13, 148, 136, 0.08);
+  --cyber-bg-overlay: rgba(20, 184, 166, 0.1);
+  --cyber-glass-blur: blur(20px);
+  --cyber-glass-subtle: blur(10px);
   
-  /* Semantic Colors */
-  --color-success: #10B981;        /* Success states */
+  /* Text Colors - Cyberpunk */
+  --color-text-primary: #e0f2e7;   /* Tinted white for main text */
+  --color-text-secondary: #8bb89a; /* Tinted secondary text */
+  --color-text-muted: #6b7c6f;     /* Muted green-gray */
+  --color-text-accent: #14b8a6;    /* Accent teal text */
+  
+  /* Border Colors - Cyberpunk */
+  --color-border-primary: rgba(34, 197, 94, 0.2); /* Subtle green borders */
+  --color-border-secondary: rgba(20, 184, 166, 0.3); /* Teal glass borders */
+  --color-border-active: #14b8a6;  /* Active teal border */
+  --color-border-glow: rgba(20, 184, 166, 0.4); /* Glowing border effect */
+  
+  /* Semantic Colors - Cyberpunk Enhanced */
+  --color-success: #22c55e;        /* Bright green success */
   --color-warning: #F59E0B;        /* Warning states */
   --color-error: #EF4444;          /* Error states */
-  --color-info: #3B82F6;           /* Info states (same as primary) */
+  --color-info: #14b8a6;           /* Info states (cyberpunk teal) */
   
   /* ==========================================================================
      Typography
@@ -92,11 +106,16 @@
   --radius-xl: 1rem;      /* 16px - Large cards */
   --radius-full: 9999px;  /* Pills, circles */
   
-  /* Shadows */
+  /* Shadows - Cyberpunk Glow Effects */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.2);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.3);
+  
+  /* Cyberpunk Glow Shadows */
+  --cyber-shadow-glow: 0 0 20px rgba(20, 184, 166, 0.4);
+  --cyber-shadow-card: 0 8px 32px rgba(13, 148, 136, 0.1);
+  --cyber-shadow-active: 0 0 30px rgba(20, 184, 166, 0.3);
   
   /* Z-Index Scale */
   --z-base: 0;

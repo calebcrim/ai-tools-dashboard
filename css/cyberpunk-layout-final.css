@@ -1,0 +1,211 @@
+/* ========================================================================== 
+   CYBERPUNK LAYOUT FINAL - Complete Fix for 3-Column Structure
+   ========================================================================== */
+
+/* Main container should not be grid */
+.main-container {
+    max-width: 100% !important;
+    padding: 20px !important;
+}
+
+/* Mode switcher stays as-is at the top */
+.mode-switcher {
+    display: flex !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+/* Dashboard body gets the 3-column grid */
+.dashboard-body {
+    display: grid !important;
+    grid-template-columns: 250px 1fr 300px !important;
+    gap: 20px !important;
+    width: 100% !important;
+    min-height: calc(100vh - 200px) !important;
+    align-items: start !important;
+}
+
+/* Filter bar - LEFT COLUMN */
+.filter-bar,
+#filterBar {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    position: sticky !important;
+    top: 100px !important;
+    height: fit-content !important;
+    max-height: calc(100vh - 140px) !important;
+    overflow-y: auto !important;
+    background: rgba(13, 148, 136, 0.05) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(20, 184, 166, 0.2) !important;
+    border-radius: 16px !important;
+    padding: 20px !important;
+    margin: 0 !important;
+}
+
+/* Content wrapper - CENTER COLUMN */
+.content-wrapper {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    width: 100% !important;
+    min-height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+}
+
+/* View controls should be in content wrapper */
+.view-controls {
+    width: 100% !important;
+    margin-bottom: 20px !important;
+}
+
+/* Tool grids - proper grid layout */
+#browseGrid,
+#executiveGrid, 
+#technicalGrid,
+.tools-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+    gap: 20px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Make sure tool cards are visible */
+.tool-card {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* Right panel - RIGHT COLUMN */
+.cyber-right-panel {
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+    position: sticky !important;
+    top: 100px !important;
+    height: fit-content !important;
+    max-height: calc(100vh - 140px) !important;
+    overflow-y: auto !important;
+    background: rgba(13, 148, 136, 0.05) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(20, 184, 166, 0.2) !important;
+    border-radius: 16px !important;
+    padding: 20px !important;
+    margin: 0 !important;
+}
+
+/* Stats widget styling */
+.cyber-stats-widget {
+    background: rgba(10, 15, 10, 0.4) !important;
+    border: 1px solid rgba(34, 197, 94, 0.2) !important;
+    border-radius: 12px !important;
+    padding: 16px !important;
+    margin-bottom: 16px !important;
+    transition: all 0.3s ease !important;
+}
+
+.cyber-stats-widget:hover {
+    background: rgba(20, 184, 166, 0.1) !important;
+    border-color: #14b8a6 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 30px rgba(20, 184, 166, 0.2) !important;
+}
+
+.cyber-stats-title {
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    color: #8bb89a !important;
+    margin-bottom: 12px !important;
+}
+
+.cyber-stats-value {
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    color: #14b8a6 !important;
+    text-shadow: 0 0 20px rgba(20, 184, 166, 0.5) !important;
+    margin-bottom: 8px !important;
+    line-height: 1.2 !important;
+}
+
+.cyber-stats-change {
+    font-size: 14px !important;
+    color: #22c55e !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+
+/* Activity feed */
+.cyber-activity-item {
+    padding: 12px !important;
+    background: rgba(10, 15, 10, 0.3) !important;
+    border-left: 3px solid #14b8a6 !important;
+    margin-bottom: 12px !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+    color: #8bb89a !important;
+    transition: all 0.3s ease !important;
+}
+
+.cyber-activity-item:hover {
+    background: rgba(20, 184, 166, 0.1) !important;
+    transform: translateX(4px) !important;
+}
+
+.cyber-activity-time {
+    font-size: 12px !important;
+    color: #6b7c6f !important;
+    margin-top: 4px !important;
+}
+
+/* Fix any positioning issues */
+.dashboard-body > * {
+    position: relative !important;
+}
+
+/* Ensure no absolute positioning breaks the grid */
+.dashboard-body > div:not(.content-wrapper):not(.cyber-right-panel):not(.filter-bar) {
+    position: relative !important;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1400px) {
+    .dashboard-body {
+        grid-template-columns: 250px 1fr !important;
+    }
+    
+    .cyber-right-panel {
+        display: none !important;
+    }
+    
+    #browseGrid,
+    #executiveGrid,
+    #technicalGrid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-body {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .filter-bar,
+    #filterBar {
+        display: none !important;
+    }
+    
+    .content-wrapper {
+        grid-column: 1 !important;
+    }
+}

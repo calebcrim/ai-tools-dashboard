@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrimIntelligence AI - Cyberpunk Command Center</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Cyberpunk Theme Styles -->
+    <link rel="stylesheet" href="css/design-tokens.css">
+    <link rel="stylesheet" href="css/cyberpunk-layout.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Quick inline styles for immediate effect */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0a0f0a 0%, #0f1b14 50%, #0a1a0f 100%);
+            background-attachment: fixed;
+            color: #e0f2e7;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cyberpunk Header -->
+    <header class="cyber-header">
+        <div class="cyber-header-content">
+            <div class="cyber-logo-section">
+                <div class="cyber-logo">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h1 class="cyber-title">AI COMMAND CENTER</h1>
+            </div>
+            
+            <div class="cyber-stats-bar">
+                <div class="cyber-stat">
+                    <div class="cyber-stat-value" id="totalTools">349</div>
+                    <div class="cyber-stat-label">Tools</div>
+                </div>
+                <div class="cyber-stat">
+                    <div class="cyber-stat-value" id="activeUsers">1.2K</div>
+                    <div class="cyber-stat-label">Active</div>
+                </div>
+                <div class="cyber-stat">
+                    <div class="cyber-stat-value" id="apiCalls">42K</div>
+                    <div class="cyber-stat-label">API Calls</div>
+                </div>
+                <div class="cyber-stat">
+                    <div class="cyber-stat-value">98%</div>
+                    <div class="cyber-stat-label">Uptime</div>
+                </div>
+            </div>
+            
+            <div class="cyber-controls">
+                <button class="cyber-btn" onclick="toggleTheme()">
+                    <i class="fas fa-adjust"></i>
+                </button>
+                <button class="cyber-btn" onclick="toggleSettings()">
+                    <i class="fas fa-cog"></i>
+                </button>
+                <button class="cyber-btn" onclick="toggleFullscreen()">
+                    <i class="fas fa-expand"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Dashboard Grid -->
+    <div class="dashboard-wrapper">
+        <!-- Left Sidebar -->
+        <aside class="cyber-sidebar">
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Categories</h3>
+                <div class="category-list">
+                    <div class="category-item active">
+                        <span>All Tools</span>
+                        <span class="category-count">349</span>
+                    </div>
+                    <div class="category-item">
+                        <span>Writing & Content</span>
+                        <span class="category-count">87</span>
+                    </div>
+                    <div class="category-item">
+                        <span>Image Generation</span>
+                        <span class="category-count">64</span>
+                    </div>
+                    <div class="category-item">
+                        <span>Code & Development</span>
+                        <span class="category-count">52</span>
+                    </div>
+                    <div class="category-item">
+                        <span>Data Analysis</span>
+                        <span class="category-count">38</span>
+                    </div>
+                    <div class="category-item">
+                        <span>Automation</span>
+                        <span class="category-count">45</span>
+                    </div>
+                    <div class="category-item">
+                        <span>Marketing</span>
+                        <span class="category-count">63</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Quick Filters</h3>
+                <div class="category-list">
+                    <div class="category-item">
+                        <span><i class="fas fa-star"></i> Featured</span>
+                    </div>
+                    <div class="category-item">
+                        <span><i class="fas fa-fire"></i> Trending</span>
+                    </div>
+                    <div class="category-item">
+                        <span><i class="fas fa-clock"></i> Recently Added</span>
+                    </div>
+                    <div class="category-item">
+                        <span><i class="fas fa-dollar-sign"></i> Free Tools</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="cyber-main">
+            <!-- Enhanced Search Section -->
+            <div class="cyber-search-section">
+                <div class="cyber-search-wrapper">
+                    <i class="fas fa-search cyber-search-icon"></i>
+                    <input type="text" 
+                           class="cyber-search-input" 
+                           placeholder="Search AI tools, features, or use cases..."
+                           id="mainSearchInput">
+                </div>
+                
+                <div class="quick-filters">
+                    <span class="filter-chip active">All</span>
+                    <span class="filter-chip">Free</span>
+                    <span class="filter-chip">Paid</span>
+                    <span class="filter-chip">API Available</span>
+                    <span class="filter-chip">Enterprise</span>
+                    <span class="filter-chip">Open Source</span>
+                </div>
+            </div>
+
+            <!-- Tools Grid -->
+            <div class="tools-grid" id="toolsGrid">
+                <!-- Tool Card 1 -->
+                <div class="cyber-tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon-wrapper">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-name">ChatGPT</h3>
+                            <span class="tool-category">Conversational AI</span>
+                        </div>
+                    </div>
+                    <p class="tool-description">Advanced language model for natural conversations, content creation, and problem-solving.</p>
+                    <div class="tool-meta">
+                        <span class="tool-badge">Free Tier</span>
+                        <span class="tool-badge">API</span>
+                        <span class="tool-badge">4.8★</span>
+                    </div>
+                </div>
+
+                <!-- Tool Card 2 -->
+                <div class="cyber-tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon-wrapper">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-name">Midjourney</h3>
+                            <span class="tool-category">Image Generation</span>
+                        </div>
+                    </div>
+                    <p class="tool-description">AI-powered image generation tool creating stunning visuals from text descriptions.</p>
+                    <div class="tool-meta">
+                        <span class="tool-badge">$10/mo</span>
+                        <span class="tool-badge">Discord</span>
+                        <span class="tool-badge">4.9★</span>
+                    </div>
+                </div>
+
+                <!-- Tool Card 3 -->
+                <div class="cyber-tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon-wrapper">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-name">GitHub Copilot</h3>
+                            <span class="tool-category">Code Assistant</span>
+                        </div>
+                    </div>
+                    <p class="tool-description">AI pair programmer that helps you write code faster with contextual suggestions.</p>
+                    <div class="tool-meta">
+                        <span class="tool-badge">$10/mo</span>
+                        <span class="tool-badge">IDE Plugin</span>
+                        <span class="tool-badge">4.7★</span>
+                    </div>
+                </div>
+
+                <!-- Tool Card 4 -->
+                <div class="cyber-tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon-wrapper">
+                            <i class="fas fa-pen"></i>
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-name">Jasper AI</h3>
+                            <span class="tool-category">Content Creation</span>
+                        </div>
+                    </div>
+                    <p class="tool-description">AI writing assistant for marketing copy, blog posts, and creative content.</p>
+                    <div class="tool-meta">
+                        <span class="tool-badge">$49/mo</span>
+                        <span class="tool-badge">Templates</span>
+                        <span class="tool-badge">4.6★</span>
+                    </div>
+                </div>
+
+                <!-- Tool Card 5 -->
+                <div class="cyber-tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon-wrapper">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-name">Synthesia</h3>
+                            <span class="tool-category">Video Generation</span>
+                        </div>
+                    </div>
+                    <p class="tool-description">Create professional videos with AI avatars and voiceovers in minutes.</p>
+                    <div class="tool-meta">
+                        <span class="tool-badge">$30/mo</span>
+                        <span class="tool-badge">120+ Languages</span>
+                        <span class="tool-badge">4.5★</span>
+                    </div>
+                </div>
+
+                <!-- Tool Card 6 -->
+                <div class="cyber-tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon-wrapper">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-name">DataRobot</h3>
+                            <span class="tool-category">Data Analysis</span>
+                        </div>
+                    </div>
+                    <p class="tool-description">Automated machine learning platform for predictive analytics and insights.</p>
+                    <div class="tool-meta">
+                        <span class="tool-badge">Enterprise</span>
+                        <span class="tool-badge">AutoML</span>
+                        <span class="tool-badge">4.4★</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Panel - Stats -->
+        <aside class="stats-panel">
+            <div class="stats-card">
+                <h4 class="stats-card-title">Weekly Growth</h4>
+                <div class="stats-value">+24%</div>
+                <div class="stats-change">
+                    <i class="fas fa-arrow-up"></i> 5.2% from last week
+                </div>
+            </div>
+            
+            <div class="stats-card">
+                <h4 class="stats-card-title">Popular Category</h4>
+                <div class="stats-value">AI Writing</div>
+                <div class="stats-change">
+                    <i class="fas fa-fire"></i> 2.4K searches today
+                </div>
+            </div>
+            
+            <div class="stats-card">
+                <h4 class="stats-card-title">New Tools</h4>
+                <div class="stats-value">12</div>
+                <div class="stats-change">
+                    <i class="fas fa-plus"></i> Added this week
+                </div>
+            </div>
+        </aside>
+
+        <!-- Activity Feed (Below Stats) -->
+        <aside class="activity-panel">
+            <h3 class="sidebar-title">Recent Activity</h3>
+            <div class="activity-item">
+                <div>New tool added: Claude 3</div>
+                <div class="activity-time">2 hours ago</div>
+            </div>
+            <div class="activity-item">
+                <div>Midjourney updated to v6</div>
+                <div class="activity-time">5 hours ago</div>
+            </div>
+            <div class="activity-item">
+                <div>ChatGPT pricing changed</div>
+                <div class="activity-time">1 day ago</div>
+            </div>
+            <div class="activity-item">
+                <div>New category: Voice AI</div>
+                <div class="activity-time">2 days ago</div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Floating Action Button -->
+    <div class="cyber-fab" onclick="addNewTool()">
+        <i class="fas fa-plus"></i>
+    </div>
+
+    <!-- Cyberpunk Effects -->
+    <script src="js/cyberpunk-effects.js"></script>
+    
+    <!-- Dashboard Interactions -->
+    <script>
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeDashboard();
+        });
+
+        function initializeDashboard() {
+            // Animate stats on load
+            animateStats();
+            
+            // Setup search functionality
+            setupSearch();
+            
+            // Setup category filters
+            setupFilters();
+            
+            // Load tools data
+            loadTools();
+        }
+
+        function animateStats() {
+            const stats = document.querySelectorAll('.cyber-stat-value');
+            stats.forEach(stat => {
+                const value = stat.textContent;
+                stat.textContent = '0';
+                
+                setTimeout(() => {
+                    let current = 0;
+                    const target = parseInt(value) || 0;
+                    const increment = target / 50;
+                    
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            stat.textContent = value;
+                            clearInterval(timer);
+                        } else {
+                            stat.textContent = Math.floor(current);
+                        }
+                    }, 20);
+                }, 300);
+            });
+        }
+
+        function setupSearch() {
+            const searchInput = document.getElementById('mainSearchInput');
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    const query = e.target.value.toLowerCase();
+                    filterTools(query);
+                });
+            }
+        }
+
+        function setupFilters() {
+            // Category filters
+            document.querySelectorAll('.category-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    document.querySelectorAll('.category-item').forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                    // Filter logic here
+                });
+            });
+
+            // Quick filter chips
+            document.querySelectorAll('.filter-chip').forEach(chip => {
+                chip.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    // Filter logic here
+                });
+            });
+        }
+
+        function filterTools(query) {
+            const tools = document.querySelectorAll('.cyber-tool-card');
+            tools.forEach(tool => {
+                const text = tool.textContent.toLowerCase();
+                tool.style.display = text.includes(query) ? 'block' : 'none';
+            });
+        }
+
+        function loadTools() {
+            // This would normally load from your data source
+            console.log('Loading tools data...');
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle('light-theme');
+        }
+
+        function toggleSettings() {
+            console.log('Opening settings...');
+        }
+
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        function addNewTool() {
+            console.log('Opening add tool dialog...');
+        }
+    </script>
+</body>
+</html>

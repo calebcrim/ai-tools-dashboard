@@ -1,29 +1,30 @@
 :root {
-    /* Strategic Pulse Color Scheme */
-    --primary: #3B82F6;
-    --secondary: #1E40AF;
-    --accent: #10B981;
+    /* Cyberpunk Color Scheme */
+    --primary: #14b8a6;
+    --secondary: #10b981;
+    --accent: #22c55e;
     --warning: #F59E0B;
     --danger: #EF4444;
-    --success: #10B981;
+    --success: #22c55e;
     
-    /* Background Colors */
-    --bg-main: #0F172A;
-    --bg-card: #1E293B;
-    --bg-hover: #334155;
-    --bg-accent: rgba(59, 130, 246, 0.1);
+    /* Background Colors - Cyberpunk */
+    --bg-main: #0a0f0a;
+    --bg-card: rgba(13, 148, 136, 0.06);
+    --bg-hover: rgba(20, 184, 166, 0.1);
+    --bg-accent: rgba(20, 184, 166, 0.15);
     
-    /* Text Colors */
-    --text-primary: #F1F5F9;
-    --text-secondary: #94A3B8;
-    --text-muted: #64748B;
+    /* Text Colors - Cyberpunk */
+    --text-primary: #e0f2e7;
+    --text-secondary: #8bb89a;
+    --text-muted: #6b7c6f;
     
-    /* Borders & Shadows */
-    --border: #334155;
+    /* Borders & Shadows - Cyberpunk */
+    --border: rgba(34, 197, 94, 0.2);
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
     --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
     --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.3);
+    --shadow-glow: 0 0 20px rgba(20, 184, 166, 0.4);
     
     /* Spacing */
     --spacing-xs: 0.25rem;
@@ -54,26 +55,88 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: var(--bg-main);
+    background: linear-gradient(135deg, #0a0f0a 0%, #0f1b14 50%, #0a1a0f 100%);
+    background-attachment: fixed;
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    position: relative;
+}
+
+/* Cyberpunk overlay effects */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(20, 184, 166, 0.1) 0%, transparent 25%),
+        radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 25%),
+        radial-gradient(circle at 40% 60%, rgba(34, 197, 94, 0.05) 0%, transparent 25%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Grid overlay */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(20, 184, 166, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(20, 184, 166, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 0;
+    animation: gridPulse 4s ease-in-out infinite;
+}
+
+@keyframes gridPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.1; }
 }
 
 /* Header */
 .header {
-    background: var(--bg-card);
-    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, 
+        rgba(13, 148, 136, 0.15) 0%, 
+        rgba(16, 185, 129, 0.1) 50%, 
+        rgba(34, 197, 94, 0.08) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(20, 184, 166, 0.3);
+    border-top: 1px solid rgba(34, 197, 94, 0.2);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    backdrop-filter: blur(10px);
-    background: rgba(30, 41, 59, 0.95);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(13, 148, 136, 0.1);
+    position: relative;
+}
+
+/* Add scanning line effect */
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    animation: scanLine 3s linear infinite;
+}
+
+@keyframes scanLine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
 }
 
 .header-content {
