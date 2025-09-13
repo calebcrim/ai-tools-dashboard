@@ -1,0 +1,216 @@
+/* ========================================================================== 
+   CYBERPUNK DETAILS OVERLAY FIX
+   Fixes transparency issues with tool details panel
+   ========================================================================== */
+
+/* Tool details panel - make it properly opaque */
+.tool-details,
+.tool-details-panel,
+.details-panel,
+.tool-info-panel,
+.modal-overlay .modal-content,
+.overlay-panel {
+    /* Solid dark background with cyberpunk tint */
+    background: linear-gradient(135deg, 
+        rgba(10, 15, 10, 0.98) 0%, 
+        rgba(13, 20, 15, 0.98) 50%, 
+        rgba(10, 18, 12, 0.98) 100%) !important;
+    
+    /* Strong backdrop blur for any remaining transparency */
+    backdrop-filter: blur(30px) saturate(150%) !important;
+    -webkit-backdrop-filter: blur(30px) saturate(150%) !important;
+    
+    /* Cyberpunk border */
+    border: 2px solid rgba(20, 184, 166, 0.4) !important;
+    
+    /* Glow effect */
+    box-shadow: 
+        0 0 40px rgba(20, 184, 166, 0.3),
+        0 0 80px rgba(20, 184, 166, 0.2),
+        inset 0 0 20px rgba(20, 184, 166, 0.05) !important;
+    
+    /* Ensure it's above other content */
+    z-index: 1000 !important;
+    
+    /* Ensure text is readable */
+    color: #e0f2e7 !important;
+}
+
+/* Dark overlay behind the panel */
+.modal-backdrop,
+.overlay-backdrop,
+.details-backdrop {
+    background: rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+    z-index: 999 !important;
+}
+
+/* Specific fix for the details content area */
+.tool-details-content,
+.details-content,
+.modal-body {
+    background: rgba(10, 15, 10, 0.95) !important;
+    padding: 20px !important;
+    border-radius: 8px !important;
+    margin: 10px 0 !important;
+}
+
+/* Headers in details panel */
+.tool-details h2,
+.tool-details h3,
+.tool-details-header,
+.modal-header {
+    background: linear-gradient(135deg, 
+        rgba(13, 148, 136, 0.2) 0%, 
+        rgba(16, 185, 129, 0.15) 100%) !important;
+    padding: 15px 20px !important;
+    margin: -20px -20px 20px -20px !important;
+    border-bottom: 1px solid rgba(20, 184, 166, 0.3) !important;
+    color: #14b8a6 !important;
+    text-shadow: 0 0 20px rgba(20, 184, 166, 0.5) !important;
+}
+
+/* Sections within details */
+.tool-details-section,
+.details-section,
+.feature-section {
+    background: rgba(13, 148, 136, 0.05) !important;
+    border: 1px solid rgba(20, 184, 166, 0.2) !important;
+    border-radius: 8px !important;
+    padding: 15px !important;
+    margin-bottom: 15px !important;
+}
+
+/* Lists and text in details */
+.tool-details ul,
+.tool-details ol,
+.tool-details p,
+.details-text {
+    color: #e0f2e7 !important;
+    line-height: 1.6 !important;
+}
+
+.tool-details li {
+    color: #8bb89a !important;
+    margin-bottom: 8px !important;
+}
+
+/* Labels and categories */
+.tool-details .label,
+.tool-details .category,
+.tool-details .tag {
+    background: rgba(20, 184, 166, 0.2) !important;
+    color: #14b8a6 !important;
+    padding: 4px 12px !important;
+    border-radius: 12px !important;
+    display: inline-block !important;
+    margin-right: 8px !important;
+    margin-bottom: 8px !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+    text-shadow: 0 0 5px rgba(20, 184, 166, 0.3) !important;
+}
+
+/* Close button */
+.tool-details .close-btn,
+.tool-details .close,
+.modal-close,
+button.close {
+    background: rgba(239, 68, 68, 0.2) !important;
+    color: #ef4444 !important;
+    border: 1px solid rgba(239, 68, 68, 0.4) !important;
+    padding: 8px 16px !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.3s !important;
+}
+
+.tool-details .close-btn:hover,
+.tool-details .close:hover,
+.modal-close:hover {
+    background: rgba(239, 68, 68, 0.3) !important;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.5) !important;
+    transform: scale(1.05) !important;
+}
+
+/* Pricing info */
+.pricing-info,
+.tool-pricing {
+    background: linear-gradient(135deg, 
+        rgba(34, 197, 94, 0.1) 0%, 
+        rgba(20, 184, 166, 0.1) 100%) !important;
+    border: 1px solid rgba(34, 197, 94, 0.3) !important;
+    padding: 12px !important;
+    border-radius: 8px !important;
+    color: #22c55e !important;
+    font-weight: 600 !important;
+    text-shadow: 0 0 10px rgba(34, 197, 94, 0.4) !important;
+}
+
+/* Rating stars */
+.rating,
+.stars {
+    color: #fbbf24 !important;
+    text-shadow: 0 0 10px rgba(251, 191, 36, 0.5) !important;
+}
+
+/* Scrollbar styling for details panel */
+.tool-details::-webkit-scrollbar,
+.details-panel::-webkit-scrollbar {
+    width: 8px !important;
+}
+
+.tool-details::-webkit-scrollbar-track,
+.details-panel::-webkit-scrollbar-track {
+    background: rgba(13, 148, 136, 0.1) !important;
+    border-radius: 4px !important;
+}
+
+.tool-details::-webkit-scrollbar-thumb,
+.details-panel::-webkit-scrollbar-thumb {
+    background: rgba(20, 184, 166, 0.4) !important;
+    border-radius: 4px !important;
+}
+
+.tool-details::-webkit-scrollbar-thumb:hover,
+.details-panel::-webkit-scrollbar-thumb:hover {
+    background: rgba(20, 184, 166, 0.6) !important;
+}
+
+/* Animation for panel appearance */
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.tool-details,
+.details-panel {
+    animation: slideInFromRight 0.3s ease-out !important;
+}
+
+/* Ensure all text elements are readable */
+.tool-details * {
+    color: inherit !important;
+}
+
+.tool-details strong,
+.tool-details b {
+    color: #14b8a6 !important;
+    font-weight: 600 !important;
+}
+
+.tool-details a {
+    color: #22c55e !important;
+    text-decoration: underline !important;
+}
+
+.tool-details a:hover {
+    color: #10b981 !important;
+    text-shadow: 0 0 10px rgba(34, 197, 94, 0.5) !important;
+}
