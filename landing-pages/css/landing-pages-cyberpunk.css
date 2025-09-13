@@ -3,12 +3,24 @@
    Applies cyberpunk theme to Popular Searches landing pages
    ========================================================================== */
 
+/* Force dark background on body and html FIRST */
+html {
+    background: #0a0f0a !important;
+}
+
+body {
+    background: linear-gradient(135deg, #0a0f0a 0%, #0f1b14 50%, #0a1a0f 100%) !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
+    color: #e0f2e7 !important;
+}
+
 /* Override the light background set by landing-pages.css */
 .landing-page {
     min-height: 100vh;
-    background: linear-gradient(135deg, #0a0f0a 0%, #0f1b14 50%, #0a1a0f 100%) !important;
-    background-attachment: fixed !important;
+    background: transparent !important; /* Make transparent to show body background */
     color: #e0f2e7 !important;
+    position: relative;
 }
 
 /* Add animated grid overlay */
@@ -322,4 +334,101 @@
 .landing-page .container {
     position: relative;
     z-index: 1;
+    background: transparent !important; /* Override container background */
+}
+
+/* SPECIFIC CLASS OVERRIDES FROM landing-pages.css */
+.tool-review-card {
+    background: rgba(13, 148, 136, 0.06) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+}
+
+.roi-calculator {
+    background: transparent !important;
+}
+
+.calculator-wrapper {
+    background: rgba(13, 148, 136, 0.06) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+}
+
+.faq-container {
+    background: rgba(13, 148, 136, 0.06) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+}
+
+.cta-primary {
+    background: linear-gradient(135deg, #14b8a6, #10b981) !important;
+    color: white !important;
+    border: none !important;
+}
+
+.cta-secondary:hover {
+    background: rgba(20, 184, 166, 0.2) !important;
+    color: #14b8a6 !important;
+}
+
+/* AGGRESSIVE OVERRIDES FOR WHITE BACKGROUNDS */
+/* Override ALL white/light backgrounds from landing-pages.css */
+.landing-page [style*="background: white"],
+.landing-page [style*="background: #fff"],
+.landing-page [style*="background: #f5f5f5"],
+.landing-page [style*="background-color: white"],
+.landing-page [style*="background-color: #fff"],
+.landing-page [style*="background-color: #f5f5f5"] {
+    background: rgba(13, 148, 136, 0.06) !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+/* Specific section overrides */
+.quick-comparison,
+.content-section,
+.analysis-section,
+.faq-section,
+.tools-section,
+.comparison-section,
+.features-section {
+    background: transparent !important;
+}
+
+/* Override any card or box with white background */
+.card,
+.box,
+.panel,
+.section-wrapper,
+.content-wrapper,
+.tool-comparison,
+.comparison-wrapper {
+    background: rgba(13, 148, 136, 0.06) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+}
+
+/* Tool list items */
+.tool-list-item,
+.comparison-item,
+.feature-item {
+    background: rgba(13, 148, 136, 0.06) !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+/* Tables */
+table {
+    background: rgba(13, 148, 136, 0.06) !important;
+}
+
+table td,
+table th {
+    background: transparent !important;
+    color: #e0f2e7 !important;
+}
+
+/* Override container backgrounds */
+.container,
+.wrapper,
+.main-content {
+    background: transparent !important;
 }
