@@ -1,0 +1,232 @@
+/* ========================================================================== 
+   CYBERPUNK DETAILS PANEL - FINAL FIX
+   Shows panel with 'open' class and solid background
+   ========================================================================== */
+
+/* Main detail panel - HIDDEN BY DEFAULT */
+#detailPanel,
+.detail-panel {
+    /* Hidden by default */
+    display: none !important;
+    
+    /* Completely solid background when shown */
+    background: #0a0f0a !important;
+    
+    /* Remove any transparency */
+    opacity: 1 !important;
+    
+    /* Strong border to define edges */
+    border-left: 3px solid #14b8a6 !important;
+    
+    /* Shadow for depth */
+    box-shadow: 
+        -10px 0 50px rgba(0, 0, 0, 0.9),
+        0 0 100px rgba(20, 184, 166, 0.2) !important;
+    
+    /* Ensure it's on top when shown */
+    z-index: 10000 !important;
+    
+    /* Position */
+    position: fixed !important;
+    right: 0 !important;
+    top: 0 !important;
+    height: 100vh !important;
+    width: 400px !important;
+    overflow-y: auto !important;
+}
+
+/* SHOW when it has the 'open' class (which is what the dashboard uses) */
+#detailPanel.open,
+.detail-panel.open,
+#detailPanel.active,
+.detail-panel.active,
+#detailPanel[style*="display: block"],
+#detailPanel[style*="display:block"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Panel header - solid background */
+.detail-panel-header,
+#detailPanel .detail-panel-header {
+    background: linear-gradient(135deg, #0d1812, #0f1a14) !important;
+    border-bottom: 2px solid #14b8a6 !important;
+    padding: 20px !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100 !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+/* Panel content - solid background */
+.detail-panel-content,
+#detailPanelContent {
+    background: #0a0f0a !important;
+    padding: 20px !important;
+    min-height: 100% !important;
+}
+
+/* Title styling */
+#detailPanelTitle {
+    color: #14b8a6 !important;
+    text-shadow: 0 0 20px rgba(20, 184, 166, 0.8) !important;
+    font-size: 24px !important;
+    margin: 0 !important;
+}
+
+/* Close button - MAKE SURE IT'S CLICKABLE */
+#closeDetailPanel,
+.detail-panel .close-btn {
+    background: #1a0f0f !important;
+    border: 2px solid #ef4444 !important;
+    color: #ef4444 !important;
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.3s !important;
+    position: relative !important;
+    z-index: 10001 !important;
+    pointer-events: auto !important;
+}
+
+#closeDetailPanel:hover,
+.detail-panel .close-btn:hover {
+    background: #2a1515 !important;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.5) !important;
+    transform: scale(1.1) !important;
+}
+
+/* All content sections - solid backgrounds */
+.detail-panel section,
+.detail-panel .section,
+.detail-panel .card,
+.detail-panel .feature-card,
+.detail-panel .metric-card,
+.detail-panel .content-block {
+    background: #0d1410 !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+    border-radius: 8px !important;
+    padding: 15px !important;
+    margin-bottom: 15px !important;
+}
+
+/* Text colors for readability */
+.detail-panel h1,
+.detail-panel h2,
+.detail-panel h3,
+.detail-panel h4,
+#detailPanelContent h2,
+#detailPanelContent h3 {
+    color: #14b8a6 !important;
+    text-shadow: 0 0 10px rgba(20, 184, 166, 0.5) !important;
+}
+
+.detail-panel p,
+.detail-panel span,
+.detail-panel div,
+#detailPanelContent p,
+#detailPanelContent span,
+#detailPanelContent div {
+    color: #e0f2e7 !important;
+}
+
+.detail-panel li,
+#detailPanelContent li {
+    color: #8bb89a !important;
+}
+
+.detail-panel strong,
+.detail-panel b,
+#detailPanelContent strong,
+#detailPanelContent b {
+    color: #22c55e !important;
+}
+
+/* Links */
+.detail-panel a,
+#detailPanelContent a {
+    color: #10b981 !important;
+    text-decoration: underline !important;
+}
+
+.detail-panel a:hover,
+#detailPanelContent a:hover {
+    color: #14b8a6 !important;
+    text-shadow: 0 0 10px rgba(20, 184, 166, 0.5) !important;
+}
+
+/* Tags and badges */
+.detail-panel .tag,
+.detail-panel .badge,
+.detail-panel .label,
+.detail-panel .category-tag,
+.detail-panel .pricing-badge,
+.detail-panel .rating {
+    background: rgba(20, 184, 166, 0.2) !important;
+    border: 1px solid rgba(20, 184, 166, 0.4) !important;
+    color: #14b8a6 !important;
+    padding: 4px 12px !important;
+    border-radius: 12px !important;
+    display: inline-block !important;
+    margin: 4px !important;
+}
+
+/* Animation when opening */
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+#detailPanel.open,
+.detail-panel.open {
+    animation: slideInFromRight 0.3s ease-out !important;
+}
+
+/* Scrollbar styling */
+#detailPanel::-webkit-scrollbar {
+    width: 10px !important;
+}
+
+#detailPanel::-webkit-scrollbar-track {
+    background: #0a0f0a !important;
+    border-left: 1px solid rgba(20, 184, 166, 0.2) !important;
+}
+
+#detailPanel::-webkit-scrollbar-thumb {
+    background: rgba(20, 184, 166, 0.4) !important;
+    border-radius: 5px !important;
+}
+
+#detailPanel::-webkit-scrollbar-thumb:hover {
+    background: rgba(20, 184, 166, 0.6) !important;
+}
+
+/* Ensure all content is opaque */
+#detailPanel * {
+    opacity: 1 !important;
+}
+
+/* Extra solid background layer */
+#detailPanel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0a0f0a;
+    z-index: -1;
+}
+
+/* Override any conflicting styles */
+.detail-panel.open {
+    right: 0 !important;
+    transform: translateX(0) !important;
+}
