@@ -1,0 +1,332 @@
+/* ==========================================================================
+   BEST PRACTICES PAGE - CYBERPUNK THEME FIX
+   Overrides hub-styles.css to apply proper cyberpunk theme
+   ========================================================================== */
+
+/* Override the root variables that hub-styles.css is setting */
+:root {
+    /* Force cyberpunk colors over hub-styles.css */
+    --color-bg-primary: #0a0f0a !important;
+    --color-bg-secondary: #0f1b14 !important;
+    --color-bg-tertiary: rgba(20, 184, 166, 0.1) !important;
+    --color-text-primary: #e0f2e7 !important;
+    --color-text-secondary: #8bb89a !important;
+    --color-border-primary: rgba(20, 184, 166, 0.3) !important;
+    --color-primary: #14b8a6 !important;
+    
+    /* Override generic variables */
+    --bg-primary: #0a0f0a !important;
+    --bg-card: rgba(13, 148, 136, 0.06) !important;
+    --bg-secondary: rgba(13, 148, 136, 0.06) !important;
+    --text-primary: #e0f2e7 !important;
+    --text-secondary: #8bb89a !important;
+    --border: rgba(20, 184, 166, 0.3) !important;
+    --primary: #14b8a6 !important;
+    
+    /* Override BP-specific variables */
+    --bp-primary: #14b8a6 !important;
+    --bp-primary-dark: #0d9488 !important;
+    --bp-primary-light: #5eead4 !important;
+    
+    /* Semantic Colors - Cyberpunk theme */
+    --bp-success: #22c55e !important;
+    --bp-warning: #fbbf24 !important;
+    --bp-danger: #ef4444 !important;
+    --bp-info: #06b6d4 !important;
+    
+    /* Neutral Palette - Cyberpunk dark */
+    --bp-dark: #0a0f0a !important;
+    --bp-card-bg: rgba(13, 148, 136, 0.06) !important;
+    --bp-border: rgba(20, 184, 166, 0.3) !important;
+    --bp-hover-bg: rgba(20, 184, 166, 0.15) !important;
+    --bp-gray: rgba(224, 242, 231, 0.6) !important;
+    --bp-text-primary: #e0f2e7 !important;
+    --bp-text-secondary: #8bb89a !important;
+    --bp-white: #e0f2e7 !important;
+    
+    /* Legacy variables */
+    --bp-secondary: #10b981 !important;
+    --bp-light: rgba(13, 148, 136, 0.06) !important;
+}
+
+/* Force cyberpunk background on body and html */
+html,
+html body,
+body {
+    background: linear-gradient(135deg, #0a0f0a 0%, #0f1b14 50%, #0a1a0f 100%) !important;
+    background-attachment: fixed !important;
+    color: #e0f2e7 !important;
+    min-height: 100vh !important;
+}
+
+/* Add animated grid overlay */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(20, 184, 166, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(20, 184, 166, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 0;
+    animation: gridPulse 4s ease-in-out infinite;
+}
+
+/* Best Practices Hub container */
+.best-practices-hub {
+    background: transparent !important;
+    color: #e0f2e7 !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header styling */
+.bp-header {
+    background: rgba(10, 15, 10, 0.9) !important;
+    backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid rgba(20, 184, 166, 0.3) !important;
+}
+
+/* Cards and sections */
+.bp-card,
+.resource-card,
+.guide-card,
+.tip-card,
+.learning-path-card,
+.bp-section {
+    background: rgba(13, 148, 136, 0.06) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 32px rgba(13, 148, 136, 0.1) !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.bp-card:hover,
+.resource-card:hover,
+.guide-card:hover,
+.tip-card:hover,
+.learning-path-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 
+        0 12px 40px rgba(13, 148, 136, 0.2),
+        0 0 30px rgba(20, 184, 166, 0.1) !important;
+    border-color: #14b8a6 !important;
+    background: rgba(20, 184, 166, 0.1) !important;
+}
+
+/* Hero section */
+.bp-hero {
+    background: linear-gradient(135deg, 
+        rgba(13, 148, 136, 0.1), 
+        rgba(10, 15, 10, 0.8)) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(20, 184, 166, 0.2) !important;
+    border-radius: 20px !important;
+    padding: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+.bp-hero h1 {
+    color: #14b8a6 !important;
+    text-shadow: 0 0 30px rgba(20, 184, 166, 0.8) !important;
+}
+
+.bp-hero p {
+    color: #e0f2e7 !important;
+}
+
+/* Navigation pills */
+.bp-nav-pills {
+    background: rgba(13, 148, 136, 0.06) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(20, 184, 166, 0.2) !important;
+    border-radius: 12px !important;
+    padding: 8px !important;
+}
+
+.bp-nav-pill {
+    background: transparent !important;
+    color: #8bb89a !important;
+    border: 1px solid transparent !important;
+    transition: all 0.3s ease !important;
+}
+
+.bp-nav-pill:hover {
+    background: rgba(20, 184, 166, 0.1) !important;
+    color: #14b8a6 !important;
+    border-color: rgba(20, 184, 166, 0.3) !important;
+}
+
+.bp-nav-pill.active {
+    background: linear-gradient(135deg, #14b8a6, #10b981) !important;
+    color: white !important;
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.4) !important;
+}
+
+/* Tags and badges */
+.bp-tag,
+.bp-badge,
+.difficulty-badge,
+.time-badge {
+    background: rgba(20, 184, 166, 0.15) !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+    color: #14b8a6 !important;
+    text-shadow: 0 0 8px rgba(20, 184, 166, 0.3) !important;
+}
+
+/* Links */
+.bp-link,
+.resource-link,
+.guide-link {
+    color: #10b981 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.bp-link:hover,
+.resource-link:hover,
+.guide-link:hover {
+    color: #14b8a6 !important;
+    text-shadow: 0 0 10px rgba(20, 184, 166, 0.5) !important;
+}
+
+/* Code blocks */
+.bp-code,
+pre,
+code {
+    background: rgba(10, 15, 10, 0.9) !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+    color: #14b8a6 !important;
+}
+
+/* Progress indicators */
+.progress-bar {
+    background: rgba(20, 184, 166, 0.2) !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, #14b8a6, #10b981) !important;
+    box-shadow: 0 0 10px rgba(20, 184, 166, 0.5) !important;
+}
+
+/* Icons */
+.bp-icon,
+.resource-icon,
+.guide-icon {
+    color: #14b8a6 !important;
+    text-shadow: 0 0 10px rgba(20, 184, 166, 0.5) !important;
+}
+
+/* Search bar */
+.bp-search,
+.resource-search {
+    background: rgba(10, 15, 10, 0.7) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 2px solid rgba(20, 184, 166, 0.3) !important;
+    color: #e0f2e7 !important;
+}
+
+.bp-search:focus,
+.resource-search:focus {
+    border-color: #14b8a6 !important;
+    box-shadow: 0 0 25px rgba(20, 184, 166, 0.4) !important;
+    outline: none !important;
+}
+
+/* Tabs */
+.bp-tabs {
+    border-bottom: 1px solid rgba(20, 184, 166, 0.2) !important;
+}
+
+.bp-tab {
+    color: #8bb89a !important;
+    border-bottom: 2px solid transparent !important;
+    transition: all 0.3s ease !important;
+}
+
+.bp-tab:hover {
+    color: #14b8a6 !important;
+    border-bottom-color: rgba(20, 184, 166, 0.3) !important;
+}
+
+.bp-tab.active {
+    color: #14b8a6 !important;
+    border-bottom-color: #14b8a6 !important;
+    text-shadow: 0 0 10px rgba(20, 184, 166, 0.5) !important;
+}
+
+/* Lists */
+.bp-list li,
+.resource-list li,
+.guide-list li {
+    color: #e0f2e7 !important;
+}
+
+.bp-list li::before,
+.resource-list li::before {
+    color: #14b8a6 !important;
+}
+
+/* Tooltips */
+.bp-tooltip {
+    background: rgba(10, 15, 10, 0.95) !important;
+    border: 1px solid rgba(20, 184, 166, 0.4) !important;
+    color: #e0f2e7 !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+/* Footer */
+.bp-footer {
+    background: rgba(10, 15, 10, 0.9) !important;
+    border-top: 1px solid rgba(20, 184, 166, 0.2) !important;
+    color: #8bb89a !important;
+}
+
+/* Ensure all text is readable */
+h1, h2, h3, h4, h5, h6 {
+    color: #14b8a6 !important;
+    text-shadow: 0 0 20px rgba(20, 184, 166, 0.5) !important;
+}
+
+p, span, div, li {
+    color: #e0f2e7 !important;
+}
+
+/* Override any remaining blue colors */
+[style*="color: #3B82F6"],
+[style*="color: rgb(59, 130, 246)"] {
+    color: #14b8a6 !important;
+}
+
+[style*="background: #3B82F6"],
+[style*="background: rgb(59, 130, 246)"],
+[style*="background-color: #3B82F6"],
+[style*="background-color: rgb(59, 130, 246)"] {
+    background: #14b8a6 !important;
+}
+
+/* Ensure proper z-index stacking */
+.bp-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    body::before {
+        background-size: 30px 30px;
+    }
+    
+    .bp-card,
+    .resource-card,
+    .guide-card {
+        border-radius: 12px !important;
+    }
+}
