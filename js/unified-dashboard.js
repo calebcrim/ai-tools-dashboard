@@ -27,6 +27,14 @@ class UnifiedDashboard {
         this.loadToolsData();
         this.updateModeDisplay();
         this.initializeDarkMode();
+        this.initializeProgressiveFilters();
+    }
+
+    initializeProgressiveFilters() {
+        // Initialize the progressive filter panel if available
+        if (window.progressiveFilterPanel && this.toolsData.length > 0) {
+            window.progressiveFilterPanel.init(this.toolsData);
+        }
     }
 
     setupEventListeners() {
@@ -103,14 +111,8 @@ class UnifiedDashboard {
     }
 
     setupFilterListeners() {
-        // Category filter
-        const categoryFilter = document.getElementById('categoryFilter');
-        if (categoryFilter) {
-            categoryFilter.addEventListener('change', (e) => {
-                this.filters.category = Array.from(e.target.selectedOptions).map(opt => opt.value);
-                this.applyFilters();
-            });
-        }
+        // Category filtering is now handled by the progressive filter panel
+        // No need for the old categoryFilter element
 
         // Pricing filters
         document.querySelectorAll('.pricing-filter').forEach(checkbox => {
@@ -178,6 +180,8 @@ class UnifiedDashboard {
                 this.populateFilters();
                 this.applyFilters();
                 this.updateStats();
+                // Initialize progressive filters after data loads
+                this.initializeProgressiveFilters();
             } else {
                 console.error('No tools data found');
                 this.showEmptyState();
@@ -347,13 +351,8 @@ class UnifiedDashboard {
     }
 
     populateFilters() {
-        // Populate category filter
-        const categoryFilter = document.getElementById('categoryFilter');
-        if (categoryFilter) {
-            const categories = [...new Set(this.toolsData.map(tool => tool.category))].sort();
-            categoryFilter.innerHTML = '<option value="">All Categories</option>' +
-                categories.map(cat => `<option value="${cat}">${cat}</option>`).join('');
-        }
+        // Category filters are now populated by the progressive filter panel
+        // No need to populate the old categoryFilter element
     }
 
     switchMode(mode) {
@@ -1274,10 +1273,9 @@ class UnifiedDashboard {
             searchInput.value = '';
         }
 
-        // Clear category filter
-        const categoryFilter = document.getElementById('categoryFilter');
-        if (categoryFilter) {
-            categoryFilter.selectedIndex = 0;
+        // Clear category selections in progressive filter panel
+        if (window.progressiveFilterPanel) {
+            window.progressiveFilterPanel.clearAll();
         }
 
         // Clear pricing checkboxes

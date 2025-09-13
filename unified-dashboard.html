@@ -65,7 +65,13 @@
     
     <!-- Cyberpunk List View Fix -->
     <link rel="stylesheet" href="css/cyberpunk-list-view-fix.css">
-    
+
+    <!-- Progressive Filter Panel Styles -->
+    <link rel="stylesheet" href="css/progressive-filter-panel.css">
+
+    <!-- Category Grid Modal Styles -->
+    <link rel="stylesheet" href="css/category-grid-modal.css">
+
     <!-- Analytics with Privacy Consent -->
     <script src="js/analytics/analytics-init.js"></script>
     
@@ -189,14 +195,12 @@
                 </div>
                 
                 <div class="filter-content" id="filterContent">
-                    <!-- Common Filters -->
-                    <div class="filter-group">
-                        <label>Category</label>
-                        <select id="categoryFilter" multiple>
-                            <option value="">All Categories</option>
-                        </select>
-                    </div>
-                    
+                    <!-- Progressive Category Filters will be inserted here by JavaScript -->
+
+                    <!-- Separator -->
+                    <div style="margin: 20px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1);"></div>
+
+                    <!-- Other Filters -->
                     <div class="filter-group">
                         <label>Pricing</label>
                         <div class="checkbox-group">
@@ -354,6 +358,9 @@
     <script src="js/features/export-pdf.js"></script>
     <script src="js/features/newsletter-signup.js"></script>
     <script src="js/seo/url-router.js"></script>
+    <script src="js/category-hierarchy.js"></script>
+    <script src="js/category-grid-modal.js"></script>
+    <script src="js/progressive-filter-panel.js"></script>
     <script src="js/unified-dashboard.js"></script>
     <script src="js/dashboard-click-fix.js"></script>
     
