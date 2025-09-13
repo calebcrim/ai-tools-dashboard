@@ -27,7 +27,7 @@ class UnifiedDashboard {
         this.loadToolsData();
         this.updateModeDisplay();
         this.initializeDarkMode();
-        this.initializeProgressiveFilters();
+        // Don't initialize progressive filters here - wait for data to load
     }
 
     initializeProgressiveFilters() {
