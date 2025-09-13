@@ -1,0 +1,358 @@
+/* ==========================================================================
+   CYBERPUNK TOOL CARDS - SPECIFIC STYLING
+   Overrides default tool card styles with cyberpunk aesthetic
+   ========================================================================== */
+
+/* Main Tool Card Styling */
+.tool-card {
+    /* Glassmorphism background */
+    background: rgba(13, 148, 136, 0.06) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    
+    /* Cyberpunk border */
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+    border-radius: 16px !important;
+    
+    /* Padding and layout */
+    padding: 24px !important;
+    cursor: pointer !important;
+    
+    /* Transitions */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    
+    /* Box shadow with glow */
+    box-shadow: 
+        0 8px 32px rgba(13, 148, 136, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        0 0 0 1px rgba(20, 184, 166, 0.1) !important;
+    
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+/* Animated border gradient */
+.tool-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(20, 184, 166, 0.1) 50%,
+        transparent 70%
+    );
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+    pointer-events: none;
+}
+
+/* Hover state */
+.tool-card:hover {
+    transform: translateY(-6px) scale(1.02) !important;
+    
+    /* Enhanced glow on hover */
+    box-shadow: 
+        0 12px 40px rgba(20, 184, 166, 0.3),
+        0 0 60px rgba(20, 184, 166, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        0 0 0 2px rgba(20, 184, 166, 0.4) !important;
+    
+    /* Brighter border */
+    border-color: rgba(20, 184, 166, 0.6) !important;
+    
+    /* Slightly brighter background */
+    background: rgba(13, 148, 136, 0.08) !important;
+}
+
+/* Hover animation */
+.tool-card:hover::before {
+    transform: translateX(100%);
+}
+
+/* Remove old hover overlay */
+.tool-card::after {
+    display: none !important;
+}
+
+/* Tool Card Title */
+.tool-card h3 {
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    color: #14b8a6 !important;
+    margin-bottom: 12px !important;
+    text-shadow: 0 0 20px rgba(20, 184, 166, 0.5) !important;
+    position: relative !important;
+    z-index: 1 !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Arrow icon in title */
+.tool-card h3::after {
+    content: '→' !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    color: #14b8a6 !important;
+    opacity: 0 !important;
+    transition: all 0.3s ease !important;
+    font-size: 1.2rem !important;
+    text-shadow: 0 0 10px rgba(20, 184, 166, 0.8) !important;
+}
+
+.tool-card:hover h3::after {
+    opacity: 1 !important;
+    right: -10px !important;
+}
+
+.tool-card:hover h3 {
+    color: #10b981 !important;
+    text-shadow: 0 0 30px rgba(20, 184, 166, 0.8) !important;
+}
+
+/* Category Badge */
+.tool-card .category {
+    display: inline-block !important;
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.2), rgba(16, 185, 129, 0.2)) !important;
+    color: #14b8a6 !important;
+    padding: 6px 14px !important;
+    border-radius: 20px !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 14px !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.3s ease !important;
+}
+
+.tool-card:hover .category {
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.3), rgba(16, 185, 129, 0.3)) !important;
+    box-shadow: 0 0 15px rgba(20, 184, 166, 0.4) !important;
+    transform: scale(1.05) !important;
+}
+
+/* Description Text */
+.tool-card .description {
+    color: #e0f2e7 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 16px !important;
+    opacity: 0.9 !important;
+    transition: all 0.3s ease !important;
+}
+
+.tool-card:hover .description {
+    opacity: 1 !important;
+}
+
+/* Tool Meta Section */
+.tool-card .tool-meta {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-top: 16px !important;
+    padding-top: 16px !important;
+    border-top: 1px solid rgba(20, 184, 166, 0.2) !important;
+}
+
+/* Rating Stars */
+.tool-card .rating {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    color: #8bb89a !important;
+    font-size: 0.9rem !important;
+}
+
+.tool-card .rating i {
+    color: #fbbf24 !important;
+    text-shadow: 0 0 10px rgba(251, 191, 36, 0.5) !important;
+    transition: all 0.3s ease !important;
+}
+
+.tool-card:hover .rating i {
+    color: #f59e0b !important;
+    text-shadow: 0 0 15px rgba(245, 158, 11, 0.7) !important;
+}
+
+/* Pricing Badge */
+.tool-card .pricing {
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    color: #22c55e !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    padding: 4px 10px !important;
+    background: rgba(34, 197, 94, 0.1) !important;
+    border: 1px solid rgba(34, 197, 94, 0.3) !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease !important;
+}
+
+.tool-card:hover .pricing {
+    background: rgba(34, 197, 94, 0.2) !important;
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.4) !important;
+}
+
+/* Export Button */
+.tool-card .export-btn {
+    position: absolute !important;
+    top: 12px !important;
+    right: 12px !important;
+    background: linear-gradient(135deg, #14b8a6, #10b981) !important;
+    color: white !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+    border-radius: 8px !important;
+    padding: 8px 14px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    opacity: 0 !important;
+    transition: all 0.3s ease !important;
+    z-index: 10 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.tool-card:hover .export-btn {
+    opacity: 1 !important;
+}
+
+.tool-card .export-btn:hover {
+    background: linear-gradient(135deg, #10b981, #14b8a6) !important;
+    transform: scale(1.1) !important;
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.5) !important;
+}
+
+/* Executive Mode Card Enhancements */
+.executive-card.tool-card {
+    background: rgba(13, 148, 136, 0.08) !important;
+    border: 2px solid rgba(20, 184, 166, 0.4) !important;
+}
+
+.executive-card .impact-score {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    padding: 16px !important;
+    border-radius: 12px !important;
+    margin: 16px 0 !important;
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.1), rgba(16, 185, 129, 0.1)) !important;
+    color: #14b8a6 !important;
+    text-shadow: 0 0 30px rgba(20, 184, 166, 0.8) !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+}
+
+/* Technical Mode Card Enhancements */
+.technical-card.tool-card {
+    background: rgba(13, 148, 136, 0.07) !important;
+    border-left: 4px solid #14b8a6 !important;
+}
+
+.technical-card .api-badge {
+    display: inline-block !important;
+    background: rgba(20, 184, 166, 0.2) !important;
+    color: #14b8a6 !important;
+    padding: 4px 10px !important;
+    border-radius: 6px !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    margin-right: 6px !important;
+    margin-bottom: 6px !important;
+    border: 1px solid rgba(20, 184, 166, 0.4) !important;
+    text-transform: uppercase !important;
+}
+
+/* List View Card Adjustments */
+.list-view .tool-card {
+    display: flex !important;
+    align-items: center !important;
+    padding: 20px 24px !important;
+    margin-bottom: 12px !important;
+}
+
+.list-view .tool-card h3 {
+    margin-bottom: 4px !important;
+    font-size: 1.1rem !important;
+}
+
+.list-view .tool-card .category {
+    margin-bottom: 0 !important;
+    margin-left: auto !important;
+}
+
+/* Pulse animation for new/featured tools */
+@keyframes cyberPulse {
+    0%, 100% { 
+        box-shadow: 
+            0 8px 32px rgba(13, 148, 136, 0.1),
+            inset 0 1px 0 rgba(255, 255, 255, 0.05),
+            0 0 0 1px rgba(20, 184, 166, 0.1);
+    }
+    50% { 
+        box-shadow: 
+            0 8px 32px rgba(13, 148, 136, 0.2),
+            inset 0 1px 0 rgba(255, 255, 255, 0.05),
+            0 0 0 2px rgba(20, 184, 166, 0.3);
+    }
+}
+
+.tool-card.featured {
+    animation: cyberPulse 3s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tool-card {
+        padding: 20px !important;
+        border-radius: 12px !important;
+    }
+    
+    .tool-card h3 {
+        font-size: 1.1rem !important;
+    }
+    
+    .tool-card .description {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Dark mode enhancements */
+[data-theme="dark"] .tool-card {
+    background: rgba(13, 148, 136, 0.04) !important;
+}
+
+[data-theme="dark"] .tool-card:hover {
+    background: rgba(13, 148, 136, 0.06) !important;
+}
+
+/* Loading state for tool cards */
+.tool-card.loading {
+    pointer-events: none !important;
+    opacity: 0.6 !important;
+}
+
+.tool-card.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(20, 184, 166, 0.2),
+        transparent
+    );
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
