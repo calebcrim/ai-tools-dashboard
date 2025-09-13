@@ -231,15 +231,15 @@ class UnifiedDashboard {
     }
 
     extractPricing(pricingModel) {
-        if (!pricingModel) return 'unknown';
+        if (!pricingModel) return 'freemium'; // Default to freemium if unknown
         const pricing = pricingModel.toLowerCase();
         
+        if (pricing.includes('enterprise') || pricing.includes('custom') || pricing.includes('contact')) return 'enterprise';
         if (pricing.includes('free') && !pricing.includes('paid')) return 'free';
-        if (pricing.includes('free') && pricing.includes('paid')) return 'freemium';
-        if (pricing.includes('enterprise')) return 'enterprise';
-        if (pricing.includes('$') || pricing.includes('paid')) return 'paid';
+        if (pricing.includes('free') || pricing.includes('trial')) return 'freemium';
+        if (pricing.includes('$') || pricing.includes('paid') || pricing.includes('pro') || pricing.includes('premium')) return 'paid';
         
-        return 'unknown';
+        return 'freemium'; // Default to freemium instead of unknown
     }
 
     generateRating() {
@@ -247,16 +247,30 @@ class UnifiedDashboard {
     }
 
     calculateBusinessImpact(tool) {
-        let score = 50;
+        let score = 60; // Start with higher base score
         
-        const highImpactCategories = ['ai assistant', 'analytics', 'automation', 'productivity'];
-        if (tool.category && highImpactCategories.some(cat => tool.category.toLowerCase().includes(cat))) {
-            score += 25;
+        // Broader categories for higher impact
+        const highImpactCategories = ['ai', 'assistant', 'analytics', 'automation', 'productivity', 
+                                      'chatbot', 'content', 'writing', 'marketing', 'sales', 
+                                      'design', 'development', 'data', 'research'];
+        if (tool.category) {
+            const categoryLower = tool.category.toLowerCase();
+            const matchCount = highImpactCategories.filter(cat => categoryLower.includes(cat)).length;
+            score += Math.min(matchCount * 10, 25); // Up to 25 points for category matches
         }
         
-        if (tool.feature_breakdown && tool.feature_breakdown.length > 200) score += 10;
-        if (tool.integration_potential && tool.integration_potential.toLowerCase().includes('api')) score += 10;
-        if (tool.case_studies && tool.case_studies.length > 100) score += 5;
+        // More generous scoring based on available data
+        if (tool.feature_breakdown && tool.feature_breakdown.length > 50) score += 10;
+        if (tool.integration_potential && tool.integration_potential.length > 30) score += 8;
+        if (tool.case_studies && tool.case_studies.length > 30) score += 7;
+        if (tool.pricing_model) {
+            const pricingLower = tool.pricing_model.toLowerCase();
+            if (pricingLower.includes('enterprise') || pricingLower.includes('custom')) score += 5;
+            if (pricingLower.includes('free')) score += 3; // Free tier is valuable too
+        }
+        
+        // Bonus for having complete data
+        if (tool.brief_purpose_summary && tool.brief_purpose_summary.length > 20) score += 3;
         
         return Math.min(score, 95);
     }
@@ -283,18 +297,28 @@ class UnifiedDashboard {
     }
 
     hasAPI(tool) {
-        const text = ((tool.integration_potential || '') + ' ' + (tool.feature_breakdown || '')).toLowerCase();
-        return text.includes('api') || text.includes('rest') || text.includes('endpoint');
+        const text = ((tool.integration_potential || '') + ' ' + 
+                     (tool.feature_breakdown || '') + ' ' + 
+                     (tool.brief_purpose_summary || '')).toLowerCase();
+        return text.includes('api') || text.includes('rest') || text.includes('endpoint') || 
+               text.includes('integration') || text.includes('connect') || text.includes('zapier');
     }
 
     hasSDK(tool) {
-        const text = ((tool.integration_potential || '') + ' ' + (tool.feature_breakdown || '')).toLowerCase();
-        return text.includes('sdk') || text.includes('library') || text.includes('python') || text.includes('javascript');
+        const text = ((tool.integration_potential || '') + ' ' + 
+                     (tool.feature_breakdown || '') + ' ' + 
+                     (tool.brief_purpose_summary || '')).toLowerCase();
+        return text.includes('sdk') || text.includes('library') || text.includes('python') || 
+               text.includes('javascript') || text.includes('package') || text.includes('npm') || 
+               text.includes('pip') || text.includes('framework');
     }
 
     hasWebhooks(tool) {
-        const text = ((tool.integration_potential || '') + ' ' + (tool.feature_breakdown || '')).toLowerCase();
-        return text.includes('webhook') || text.includes('callback') || text.includes('notification');
+        const text = ((tool.integration_potential || '') + ' ' + 
+                     (tool.feature_breakdown || '') + ' ' + 
+                     (tool.brief_purpose_summary || '')).toLowerCase();
+        return text.includes('webhook') || text.includes('callback') || text.includes('notification') || 
+               text.includes('real-time') || text.includes('event') || text.includes('trigger');
     }
 
     extractFeatures(tool) {
@@ -601,7 +625,7 @@ class UnifiedDashboard {
 
     renderExecutiveCard(tool) {
         const toolId = tool.originalId || tool.id;
-        const impactClass = tool.businessImpact >= 80 ? 'high' : 
+        const impactClass = tool.businessImpact >= 70 ? 'high' : 
                            tool.businessImpact >= 50 ? 'medium' : 'low';
         
         return `
@@ -1016,11 +1040,12 @@ class UnifiedDashboard {
         
         // Update mode-specific metrics
         if (this.currentMode === 'executive') {
-            const highImpact = this.filteredTools.filter(tool => tool.businessImpact >= 80).length;
+            const highImpact = this.filteredTools.filter(tool => tool.businessImpact >= 70).length; // Lowered threshold
             const avgRoi = this.filteredTools.length > 0 
                 ? Math.round(this.filteredTools.reduce((sum, tool) => sum + tool.businessImpact, 0) / this.filteredTools.length)
                 : 0;
-            const enterpriseReady = this.filteredTools.filter(tool => tool.pricing === 'enterprise').length;
+            const enterpriseReady = this.filteredTools.filter(tool => 
+                tool.pricing === 'enterprise' || tool.pricing === 'custom' || tool.pricing === 'contact').length;
             
             document.getElementById('highImpactCount').textContent = highImpact;
             document.getElementById('avgRoi').textContent = avgRoi + '%';
