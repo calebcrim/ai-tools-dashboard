@@ -1,0 +1,104 @@
+/* ==========================================================================
+   FINANCIAL ANALYSIS CHARTS FIX - Cyberpunk Theme
+   Fixes chart visibility and applies proper colors
+   ========================================================================== */
+
+/* Remove the hue-rotate filter that's making charts invisible */
+.chart-container canvas,
+#category-spend-chart,
+#roi-cost-chart {
+    filter: none !important;
+    opacity: 1 !important;
+}
+
+/* Chart container styling */
+.chart-container {
+    background: rgba(13, 148, 136, 0.05) !important;
+    border: 1px solid rgba(20, 184, 166, 0.2) !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    position: relative !important;
+    min-height: 300px !important;
+}
+
+/* Ensure canvas is visible */
+canvas {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
+/* Chart card styling */
+.chart-card {
+    background: rgba(13, 148, 136, 0.06) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+    box-shadow: 0 8px 32px rgba(13, 148, 136, 0.1) !important;
+}
+
+/* Chart title styling */
+.chart-title {
+    color: #14b8a6 !important;
+    text-shadow: 0 0 20px rgba(20, 184, 166, 0.5) !important;
+    margin-bottom: 20px !important;
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+}
+
+/* Override Chart.js default styles via CSS where possible */
+.chart-container {
+    --chart-primary: #14b8a6;
+    --chart-secondary: #10b981;
+    --chart-success: #22c55e;
+    --chart-warning: #fbbf24;
+    --chart-danger: #ef4444;
+    --chart-info: #06b6d4;
+}
+
+/* Specific fixes for doughnut chart legend */
+.chart-container .chartjs-legend {
+    color: #e0f2e7 !important;
+}
+
+/* Ensure chart tooltips are visible */
+.chartjs-tooltip {
+    background: rgba(10, 15, 10, 0.95) !important;
+    border: 1px solid rgba(20, 184, 166, 0.4) !important;
+    color: #e0f2e7 !important;
+    border-radius: 8px !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+/* Loading state for charts */
+.chart-container.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart-container.loading::after {
+    content: 'Loading chart...';
+    color: #14b8a6;
+    font-size: 14px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* Responsive chart sizing */
+@media (max-width: 768px) {
+    .chart-container {
+        min-height: 250px !important;
+        padding: 15px !important;
+    }
+    
+    .chart-card {
+        padding: 16px !important;
+    }
+}
