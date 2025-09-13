@@ -6,11 +6,56 @@
     <title>Best AI Writing Tools 2025: Complete Business Analysis | CriminTel.ai</title>
     <meta name="description" content="Compare 27+ AI writing tools with executive analysis, ROI calculations, and business impact scores. Find the perfect AI writing solution for your content needs in 2025.">
     
+    <!-- IMMEDIATE DARK THEME ENFORCEMENT -->
+    <style id="critical-dark-theme">
+        html { 
+            background: #0a0f0a !important; 
+        }
+        body { 
+            background: linear-gradient(135deg, #0a0f0a 0%, #0f1b14 50%, #0a1a0f 100%) !important;
+            background-attachment: fixed !important;
+            min-height: 100vh !important;
+            color: #e0f2e7 !important;
+        }
+        .landing-page {
+            background: transparent !important;
+            background-color: transparent !important;
+            min-height: 100vh !important;
+            color: #e0f2e7 !important;
+        }
+    </style>
+    <script>
+        // Force dark theme immediately and continuously
+        (function() {
+            function forceDark() {
+                document.documentElement.style.cssText = 'background: #0a0f0a !important;';
+                if (document.body) {
+                    document.body.style.cssText = 'background: linear-gradient(135deg, #0a0f0a 0%, #0f1b14 50%, #0a1a0f 100%) !important; background-attachment: fixed !important; min-height: 100vh !important; color: #e0f2e7 !important;';
+                    const landing = document.querySelector('.landing-page');
+                    if (landing) {
+                        landing.style.cssText = 'background: transparent !important; background-color: transparent !important; color: #e0f2e7 !important;';
+                    }
+                }
+            }
+            forceDark();
+            document.addEventListener('DOMContentLoaded', forceDark);
+            window.addEventListener('load', forceDark);
+            setInterval(forceDark, 100);
+        })();
+    </script>
+    
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Best AI Writing Tools 2025 - Executive Analysis & Comparison">
     <meta property="og:description" content="Compare 27+ AI writing tools with ROI analysis and business impact scores. Make data-driven decisions for your content strategy.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://crimintel.ai/best-ai-writing-tools-2025">
+    <meta property="og:image" content="https://crimintel.ai/images/ai-writing-tools-og.jpg">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Best AI Writing Tools 2025 - Complete Comparison">
+    <meta name="twitter:description" content="Executive analysis of 27+ AI writing tools. Compare features, pricing, and ROI.">
+    <meta name="twitter:image" content="https://crimintel.ai/images/ai-writing-tools-twitter.jpg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://crimintel.ai/best-ai-writing-tools-2025">
@@ -29,475 +74,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <style>
-        /* CORE CYBERPUNK THEME - BAKED IN */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #0a0f0a 0%, #0f1b14 50%, #0a1a0f 100%);
-            background-attachment: fixed;
-            color: #e0f2e7;
-            line-height: 1.5;
-            position: relative;
-            min-height: 100vh;
-        }
-
-        /* Radial Gradient Overlay */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 20%, rgba(20, 184, 166, 0.1) 0%, transparent 25%),
-                radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 25%),
-                radial-gradient(circle at 40% 60%, rgba(34, 197, 94, 0.05) 0%, transparent 25%);
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        /* Grid Overlay */
-        body::after {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(20, 184, 166, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(20, 184, 166, 0.03) 1px, transparent 1px);
-            background-size: 50px 50px;
-            pointer-events: none;
-            z-index: 0;
-            animation: gridPulse 4s ease-in-out infinite;
-        }
-
-        @keyframes gridPulse {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Navigation */
-        .main-nav {
-            background: linear-gradient(135deg, 
-                rgba(13, 148, 136, 0.15) 0%, 
-                rgba(16, 185, 129, 0.1) 50%, 
-                rgba(34, 197, 94, 0.08) 100%);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(20, 184, 166, 0.3);
-            border-top: 1px solid rgba(34, 197, 94, 0.2);
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 8px 32px rgba(13, 148, 136, 0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .nav-left {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            text-decoration: none;
-            color: #e0f2e7;
-        }
-
-        .logo i {
-            width: 2.5rem;
-            height: 2.5rem;
-            background: linear-gradient(135deg, #14b8a6, #10b981);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-            box-shadow: 0 0 20px rgba(20, 184, 166, 0.4);
-            border: 1px solid rgba(34, 197, 94, 0.3);
-        }
-
-        .logo span {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #14b8a6;
-            text-shadow: 0 0 20px rgba(20, 184, 166, 0.5);
-        }
-
-        .nav-center {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .nav-button {
-            padding: 0.5rem 1rem;
-            background: transparent;
-            border: 1px solid rgba(34, 197, 94, 0.2);
-            border-radius: 8px;
-            color: #8bb89a;
-            cursor: pointer;
-            transition: all 0.3s;
-            white-space: nowrap;
-            font-size: 0.875rem;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .nav-button:hover {
-            border-color: #14b8a6;
-            color: #e0f2e7;
-            box-shadow: 0 0 15px rgba(20, 184, 166, 0.2);
-        }
-
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, 
-                rgba(13, 148, 136, 0.15) 0%, 
-                rgba(16, 185, 129, 0.1) 100%);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(20, 184, 166, 0.3);
-            border-radius: 20px;
-            margin: 2rem auto;
-            padding: 4rem 2rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 8px 32px rgba(13, 148, 136, 0.1);
-            max-width: 1200px;
-        }
-
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, #14b8a6, #10b981, #14b8a6);
-            border-radius: 20px;
-            opacity: 0.3;
-            z-index: -1;
-            animation: borderGlow 3s ease-in-out infinite;
-        }
-
-        @keyframes borderGlow {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.6; }
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            color: #14b8a6;
-            text-shadow: 0 0 30px rgba(20, 184, 166, 0.8);
-            margin-bottom: 1rem;
-        }
-
-        .hero-subtitle {
-            color: #e0f2e7;
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .hero-stats span {
-            background: rgba(20, 184, 166, 0.1);
-            border: 1px solid rgba(20, 184, 166, 0.4);
-            padding: 0.5rem 1rem;
-            border-radius: 16px;
-            color: #14b8a6;
-            text-shadow: 0 0 10px rgba(20, 184, 166, 0.5);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        /* Section Styles */
-        section {
-            margin: 4rem 0;
-        }
-
-        h2 {
-            font-size: 2rem;
-            color: #14b8a6;
-            text-shadow: 0 0 20px rgba(20, 184, 166, 0.5);
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        h3 {
-            color: #14b8a6;
-            margin-bottom: 1rem;
-        }
-
-        /* Cards */
-        .tool-card,
-        .roi-calculator-widget,
-        .faq-item {
-            background: rgba(13, 148, 136, 0.08);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(20, 184, 166, 0.3);
-            box-shadow: 0 8px 32px rgba(13, 148, 136, 0.1);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .tool-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 
-                0 12px 40px rgba(13, 148, 136, 0.2),
-                0 0 30px rgba(20, 184, 166, 0.1);
-            border-color: #14b8a6;
-            background: rgba(20, 184, 166, 0.1);
-        }
-
-        /* Comparison Table */
-        table {
-            width: 100%;
-            background: rgba(13, 148, 136, 0.06);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(20, 184, 166, 0.3);
-            border-radius: 12px;
-            overflow: hidden;
-            margin-bottom: 2rem;
-        }
-
-        th {
-            background: rgba(20, 184, 166, 0.15);
-            color: #14b8a6;
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 2px solid rgba(20, 184, 166, 0.3);
-        }
-
-        td {
-            color: #e0f2e7;
-            padding: 0.75rem 1rem;
-            border-bottom: 1px solid rgba(20, 184, 166, 0.1);
-        }
-
-        tr:hover {
-            background: rgba(20, 184, 166, 0.08);
-        }
-
-        /* Buttons */
-        .cta-button,
-        .btn {
-            background: linear-gradient(135deg, #14b8a6, #10b981);
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 0 20px rgba(20, 184, 166, 0.3);
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            display: inline-block;
-            text-decoration: none;
-            margin: 0.5rem;
-        }
-
-        .cta-button:hover,
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 30px rgba(20, 184, 166, 0.6);
-        }
-
-        .cta-primary {
-            background: linear-gradient(135deg, #14b8a6, #10b981);
-        }
-
-        .cta-secondary {
-            background: transparent;
-            border: 2px solid #14b8a6;
-            color: #14b8a6;
-        }
-
-        .cta-secondary:hover {
-            background: rgba(20, 184, 166, 0.1);
-        }
-
-        /* FAQ */
-        .faq-question {
-            color: #14b8a6;
-            margin-bottom: 0.5rem;
-            cursor: pointer;
-        }
-
-        .faq-answer {
-            color: #e0f2e7;
-            line-height: 1.6;
-        }
-
-        /* ROI Calculator */
-        .roi-calculator-widget ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .roi-calculator-widget ul li {
-            padding: 0.5rem 0;
-            padding-left: 2rem;
-            position: relative;
-            color: #e0f2e7;
-        }
-
-        .roi-calculator-widget ul li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: #14b8a6;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, 
-                rgba(13, 148, 136, 0.15) 0%, 
-                rgba(16, 185, 129, 0.1) 100%);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(20, 184, 166, 0.3);
-            border-radius: 20px;
-            padding: 3rem 2rem;
-            text-align: center;
-            margin: 4rem 0;
-        }
-
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        /* Tool Reviews */
-        .tool-review-card {
-            background: rgba(13, 148, 136, 0.08);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(20, 184, 166, 0.3);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .tool-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .tool-header h3 {
-            color: #14b8a6;
-            font-size: 1.5rem;
-        }
-
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 1rem 0;
-        }
-
-        .metric {
-            background: rgba(20, 184, 166, 0.05);
-            padding: 0.75rem;
-            border-radius: 8px;
-            border: 1px solid rgba(20, 184, 166, 0.2);
-        }
-
-        .metric .label {
-            color: #8bb89a;
-            font-size: 0.875rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .metric .value {
-            color: #14b8a6;
-            font-weight: 600;
-        }
-
-        .back-to-comparison {
-            display: inline-block;
-            margin-bottom: 2rem;
-            color: #10b981;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border: 1px solid rgba(20, 184, 166, 0.3);
-            border-radius: 8px;
-            transition: all 0.3s;
-        }
-
-        .back-to-comparison:hover {
-            background: rgba(20, 184, 166, 0.1);
-            border-color: #14b8a6;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-            
-            .nav-center {
-                display: none;
-            }
-            
-            .metrics-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <!-- Cyberpunk Redesign from Wireframe -->
+    <link rel="stylesheet" href="css/cyberpunk-redesign.css">
 </head>
 <body>
     <div class="landing-page">
@@ -705,5 +283,8 @@
 
     <!-- SEO -->
     <script src="../js/seo/seo-init.js"></script>
+    
+    <!-- ABSOLUTE DARK OVERRIDE - Must be last -->
+    <script src="js/absolute-dark-override.js"></script>
 </body>
 </html>
