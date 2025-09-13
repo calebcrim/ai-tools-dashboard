@@ -7,11 +7,42 @@
     <meta name="description" content="Compare 27+ AI writing tools with executive analysis, ROI calculations, and business impact scores. Find the perfect AI writing solution for your content needs in 2025.">
     
     <!-- IMMEDIATE DARK THEME ENFORCEMENT -->
+    <style id="critical-dark-theme">
+        html { 
+            background: #0a0f0a !important; 
+        }
+        body { 
+            background: linear-gradient(135deg, #0a0f0a 0%, #0f1b14 50%, #0a1a0f 100%) !important;
+            background-attachment: fixed !important;
+            min-height: 100vh !important;
+            color: #e0f2e7 !important;
+        }
+        .landing-page {
+            background: transparent !important;
+            background-color: transparent !important;
+            min-height: 100vh !important;
+            color: #e0f2e7 !important;
+        }
+    </style>
     <script>
-        // Force dark theme immediately before anything else loads
-        document.documentElement.style.background = '#0a0f0a';
+        // Force dark theme immediately and continuously
+        (function() {
+            function forceDark() {
+                document.documentElement.style.cssText = 'background: #0a0f0a !important;';
+                if (document.body) {
+                    document.body.style.cssText = 'background: linear-gradient(135deg, #0a0f0a 0%, #0f1b14 50%, #0a1a0f 100%) !important; background-attachment: fixed !important; min-height: 100vh !important; color: #e0f2e7 !important;';
+                    const landing = document.querySelector('.landing-page');
+                    if (landing) {
+                        landing.style.cssText = 'background: transparent !important; background-color: transparent !important; color: #e0f2e7 !important;';
+                    }
+                }
+            }
+            forceDark();
+            document.addEventListener('DOMContentLoaded', forceDark);
+            window.addEventListener('load', forceDark);
+            setInterval(forceDark, 100);
+        })();
     </script>
-    <script src="js/force-dark-theme.js"></script>
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Best AI Writing Tools 2025 - Executive Analysis & Comparison">
