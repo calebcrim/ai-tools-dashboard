@@ -32,13 +32,23 @@ class UnifiedDashboard {
 
     initializeProgressiveFilters() {
         // Initialize the progressive filter panel if available
+        console.log('[UnifiedDashboard] Initializing progressive filters...', {
+            panelExists: !!window.progressiveFilterPanel,
+            ProgressiveFilterPanelClass: !!window.ProgressiveFilterPanel,
+            dataLength: this.toolsData.length
+        });
+
         if (window.progressiveFilterPanel && this.toolsData.length > 0) {
+            console.log('[UnifiedDashboard] Using existing panel instance');
             window.progressiveFilterPanel.init(this.toolsData);
-        } else if (!window.progressiveFilterPanel) {
+        } else if (!window.progressiveFilterPanel && window.ProgressiveFilterPanel) {
+            console.log('[UnifiedDashboard] Creating new panel instance');
             window.progressiveFilterPanel = new ProgressiveFilterPanel();
             if (this.toolsData.length > 0) {
                 window.progressiveFilterPanel.init(this.toolsData);
             }
+        } else {
+            console.error('[UnifiedDashboard] ProgressiveFilterPanel class not found!');
         }
     }
 

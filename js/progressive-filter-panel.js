@@ -17,11 +17,13 @@ class ProgressiveFilterPanel {
     }
 
     init(toolsData) {
+        console.log('[Progressive Filter Panel] Initializing with', toolsData.length, 'tools');
         this.toolsData = toolsData;
         this.categoryCounts = getCategoryCounts(toolsData);
         this.identifyTrendingCategories();
         this.render();
         this.attachEventListeners();
+        console.log('[Progressive Filter Panel] Initialization complete');
     }
 
     loadPreferences() {
@@ -52,7 +54,11 @@ class ProgressiveFilterPanel {
 
     render() {
         const container = document.getElementById('filterContent');
-        if (!container) return;
+        console.log('[Progressive Filter Panel] Render - filterContent element:', container ? 'found' : 'NOT FOUND');
+        if (!container) {
+            console.error('[Progressive Filter Panel] Cannot render - filterContent element not found!');
+            return;
+        }
 
         // Clear any existing progressive filters to avoid duplication
         const existingProgressive = container.querySelector('.progressive-filter-container');
@@ -420,7 +426,9 @@ class ProgressiveFilterPanel {
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('[Progressive Filter Panel] DOM loaded, creating instance');
     window.progressiveFilterPanel = new ProgressiveFilterPanel();
+    console.log('[Progressive Filter Panel] Instance created');
 });
 
 // Also make the class available globally
