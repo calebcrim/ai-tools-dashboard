@@ -347,6 +347,9 @@ class UnifiedDashboard {
         
         // Re-render tools
         this.renderTools();
+        
+        // Update statistics for the new mode
+        this.updateStats();
     }
 
     switchView(view) {
@@ -1014,7 +1017,9 @@ class UnifiedDashboard {
         // Update mode-specific metrics
         if (this.currentMode === 'executive') {
             const highImpact = this.filteredTools.filter(tool => tool.businessImpact >= 80).length;
-            const avgRoi = Math.round(this.filteredTools.reduce((sum, tool) => sum + tool.businessImpact, 0) / this.filteredTools.length);
+            const avgRoi = this.filteredTools.length > 0 
+                ? Math.round(this.filteredTools.reduce((sum, tool) => sum + tool.businessImpact, 0) / this.filteredTools.length)
+                : 0;
             const enterpriseReady = this.filteredTools.filter(tool => tool.pricing === 'enterprise').length;
             
             document.getElementById('highImpactCount').textContent = highImpact;
