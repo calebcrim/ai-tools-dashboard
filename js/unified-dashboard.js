@@ -34,6 +34,11 @@ class UnifiedDashboard {
         // Initialize the progressive filter panel if available
         if (window.progressiveFilterPanel && this.toolsData.length > 0) {
             window.progressiveFilterPanel.init(this.toolsData);
+        } else if (!window.progressiveFilterPanel) {
+            window.progressiveFilterPanel = new ProgressiveFilterPanel();
+            if (this.toolsData.length > 0) {
+                window.progressiveFilterPanel.init(this.toolsData);
+            }
         }
     }
 

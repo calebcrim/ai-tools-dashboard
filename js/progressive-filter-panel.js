@@ -422,3 +422,6 @@ class ProgressiveFilterPanel {
 document.addEventListener('DOMContentLoaded', () => {
     window.progressiveFilterPanel = new ProgressiveFilterPanel();
 });
+
+// Also make the class available globally
+window.ProgressiveFilterPanel = ProgressiveFilterPanel;
