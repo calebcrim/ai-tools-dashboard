@@ -1,0 +1,276 @@
+/* ==========================================================================
+   CYBERPUNK LIST VIEW FIX - Proper layout for list mode
+   ========================================================================== */
+
+/* List View Container */
+.tools-grid.list-view {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    grid-template-columns: none !important;
+}
+
+/* List View Tool Cards - Horizontal Layout */
+.list-view .tool-card,
+.tools-grid.list-view .tool-card {
+    /* Reset grid item behavior */
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-height: auto !important;
+    height: auto !important;
+    
+    /* Adjust padding for horizontal layout */
+    padding: 16px 24px !important;
+    margin-bottom: 0 !important;
+    
+    /* Maintain glassmorphism */
+    background: rgba(13, 148, 136, 0.06) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+    border-radius: 12px !important;
+    
+    /* Ensure proper hover */
+    transition: all 0.3s ease !important;
+}
+
+/* List View Content Structure */
+.list-view .tool-card > * {
+    margin-bottom: 0 !important;
+}
+
+/* Tool Title in List View */
+.list-view .tool-card h3,
+.list-view .tool-title {
+    flex: 0 0 250px !important;
+    margin-bottom: 0 !important;
+    margin-right: 20px !important;
+    font-size: 1rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+/* Remove arrow from title in list view */
+.list-view .tool-card h3::after {
+    display: none !important;
+}
+
+/* Category Badge in List View */
+.list-view .tool-card .category,
+.list-view .category-tag {
+    flex: 0 0 120px !important;
+    margin-bottom: 0 !important;
+    margin-right: 20px !important;
+    text-align: center !important;
+    font-size: 0.75rem !important;
+    padding: 4px 10px !important;
+}
+
+/* Description in List View */
+.list-view .tool-card .description,
+.list-view .tool-description {
+    flex: 1 !important;
+    margin-bottom: 0 !important;
+    margin-right: 20px !important;
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    opacity: 0.85 !important;
+}
+
+/* Tool Meta Section in List View */
+.list-view .tool-card .tool-meta {
+    flex: 0 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    border-top: none !important;
+    margin-left: auto !important;
+}
+
+/* Rating in List View */
+.list-view .tool-card .rating {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    font-size: 0.85rem !important;
+}
+
+/* Pricing in List View */
+.list-view .tool-card .pricing {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    font-size: 0.8rem !important;
+    padding: 3px 8px !important;
+}
+
+/* Export Button in List View */
+.list-view .tool-card .export-btn {
+    position: static !important;
+    opacity: 0 !important;
+    margin-left: 10px !important;
+    flex: 0 0 auto !important;
+    padding: 6px 12px !important;
+    font-size: 0.8rem !important;
+}
+
+.list-view .tool-card:hover .export-btn {
+    opacity: 1 !important;
+}
+
+/* List View Hover Effects */
+.list-view .tool-card:hover {
+    transform: translateX(4px) !important;
+    box-shadow: 
+        0 4px 20px rgba(20, 184, 166, 0.2),
+        0 0 30px rgba(20, 184, 166, 0.1) !important;
+    background: rgba(20, 184, 166, 0.08) !important;
+}
+
+/* Sweep animation adjustment for list view */
+.list-view .tool-card::before {
+    background: linear-gradient(180deg, 
+        transparent, 
+        rgba(20, 184, 166, 0.05), 
+        transparent
+    ) !important;
+    top: -100% !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    transition: top 0.6s !important;
+}
+
+.list-view .tool-card:hover::before {
+    top: 100% !important;
+    left: 0 !important;
+}
+
+/* Executive Mode List View Adjustments */
+.list-view .executive-card .impact-score {
+    flex: 0 0 80px !important;
+    font-size: 1.5rem !important;
+    padding: 8px !important;
+    margin: 0 20px 0 0 !important;
+    text-align: center !important;
+    height: auto !important;
+}
+
+/* Technical Mode List View Adjustments */
+.list-view .technical-card .api-badge {
+    display: inline-flex !important;
+    margin-right: 8px !important;
+    margin-bottom: 0 !important;
+}
+
+/* Responsive List View */
+@media (max-width: 1200px) {
+    .list-view .tool-card h3 {
+        flex: 0 0 200px !important;
+    }
+    
+    .list-view .tool-card .category {
+        flex: 0 0 100px !important;
+        font-size: 0.7rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .list-view .tool-card {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 14px !important;
+    }
+    
+    .list-view .tool-card > * {
+        flex: none !important;
+        width: 100% !important;
+        margin-right: 0 !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .list-view .tool-card h3 {
+        font-size: 1.1rem !important;
+        margin-bottom: 6px !important;
+    }
+    
+    .list-view .tool-card .category {
+        display: inline-block !important;
+        width: auto !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .list-view .tool-card .description {
+        margin-bottom: 10px !important;
+        -webkit-line-clamp: 3 !important;
+    }
+    
+    .list-view .tool-card .tool-meta {
+        width: 100% !important;
+        justify-content: space-between !important;
+        margin-left: 0 !important;
+        padding-top: 10px !important;
+        border-top: 1px solid rgba(20, 184, 166, 0.2) !important;
+    }
+}
+
+/* Ensure list view takes full width */
+.content-area .list-view,
+#browseGrid.list-view,
+#executiveGrid.list-view,
+#technicalGrid.list-view {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+/* Remove any grid-specific animations in list view */
+.list-view .tool-card {
+    animation: none !important;
+}
+
+/* List view specific loading state */
+.list-view .tool-card.loading {
+    opacity: 0.5 !important;
+    pointer-events: none !important;
+}
+
+/* Ensure proper z-index stacking in list view */
+.list-view .tool-card {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.list-view .tool-card:hover {
+    z-index: 2 !important;
+}
+
+/* Fix for any flexbox issues */
+.list-view .tool-card {
+    flex-shrink: 0 !important;
+}
+
+/* Ensure text remains readable in list view */
+.list-view .tool-card * {
+    opacity: 1 !important;
+}
+
+.list-view .tool-card .description {
+    opacity: 0.85 !important;
+}
+
+/* List view separator line (optional) */
+.list-view .tool-card:not(:last-child) {
+    position: relative !important;
+}
+
+.list-view .tool-card:not(:last-child)::after {
+    display: none !important; /* Remove if you want separator lines */
+}
