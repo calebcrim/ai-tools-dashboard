@@ -1,0 +1,206 @@
+/* DARK THEME ONLY - Complete replacement for all landing page styles */
+
+/* Reset EVERYTHING first */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Force dark background on root */
+html {
+    background: #0a0f0a !important;
+    min-height: 100vh !important;
+}
+
+body {
+    background: linear-gradient(135deg, #0a0f0a 0%, #0f1b14 50%, #0a1a0f 100%) !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
+    color: #e0f2e7 !important;
+    font-family: 'Inter', sans-serif !important;
+    line-height: 1.6 !important;
+}
+
+/* Remove background from landing-page */
+.landing-page {
+    background: none !important;
+    background-color: transparent !important;
+    color: #e0f2e7 !important;
+}
+
+/* Navigation */
+.main-nav {
+    background: rgba(10, 15, 10, 0.9) !important;
+    backdrop-filter: blur(20px) !important;
+    padding: 1rem 0 !important;
+    border-bottom: 1px solid rgba(20, 184, 166, 0.3) !important;
+}
+
+.nav-container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.nav-button {
+    color: #8bb89a !important;
+    text-decoration: none !important;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.nav-button:hover {
+    color: #14b8a6 !important;
+    text-shadow: 0 0 10px rgba(20, 184, 166, 0.5) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, rgba(13, 148, 136, 0.2) 0%, rgba(16, 185, 129, 0.15) 100%) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+    border-radius: 20px !important;
+    margin: 2rem !important;
+    padding: 4rem 2rem !important;
+    text-align: center !important;
+}
+
+.hero-section h1 {
+    color: #14b8a6 !important;
+    text-shadow: 0 0 30px rgba(20, 184, 166, 0.8) !important;
+    font-size: 3rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.hero-section p {
+    color: #e0f2e7 !important;
+    font-size: 1.25rem !important;
+}
+
+/* Container */
+.container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 2rem !important;
+}
+
+/* Sections */
+.quick-comparison,
+.content-section,
+.analysis-section,
+.tools-section {
+    padding: 3rem 0 !important;
+}
+
+/* All headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #14b8a6 !important;
+    text-shadow: 0 0 20px rgba(20, 184, 166, 0.5) !important;
+    margin-bottom: 1rem !important;
+}
+
+/* All paragraphs and text */
+p, span, div, li, td, th {
+    color: #e0f2e7 !important;
+}
+
+/* Links */
+a {
+    color: #10b981 !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #14b8a6 !important;
+    text-shadow: 0 0 10px rgba(20, 184, 166, 0.5) !important;
+}
+
+/* Cards */
+.tool-card,
+.feature-card,
+.comparison-card,
+.tool-review-card,
+.faq-item {
+    background: rgba(13, 148, 136, 0.06) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+    border-radius: 12px !important;
+    padding: 1.5rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Tables */
+table {
+    width: 100% !important;
+    background: rgba(13, 148, 136, 0.06) !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+
+th {
+    background: rgba(20, 184, 166, 0.15) !important;
+    color: #14b8a6 !important;
+    padding: 1rem !important;
+    text-align: left !important;
+}
+
+td {
+    color: #e0f2e7 !important;
+    padding: 0.75rem 1rem !important;
+    border-bottom: 1px solid rgba(20, 184, 166, 0.1) !important;
+}
+
+/* Badges */
+.badge,
+.free-badge,
+.pricing-badge,
+.category-badge {
+    background: rgba(20, 184, 166, 0.15) !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+    color: #14b8a6 !important;
+    padding: 0.25rem 0.75rem !important;
+    border-radius: 20px !important;
+    display: inline-block !important;
+}
+
+/* Buttons */
+.btn,
+.cta-button {
+    background: linear-gradient(135deg, #14b8a6, #10b981) !important;
+    color: white !important;
+    border: none !important;
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn:hover,
+.cta-button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 0 30px rgba(20, 184, 166, 0.6) !important;
+}
+
+/* Footer */
+footer {
+    background: rgba(10, 15, 10, 0.9) !important;
+    border-top: 1px solid rgba(20, 184, 166, 0.2) !important;
+    padding: 2rem 0 !important;
+    margin-top: 4rem !important;
+    color: #8bb89a !important;
+}
+
+/* Override ANY inline styles */
+[style*="background: white"],
+[style*="background-color: white"],
+[style*="background: #fff"],
+[style*="background-color: #fff"],
+[style*="background: rgb(245"],
+[style*="background-color: rgb(245"] {
+    background: transparent !important;
+}
