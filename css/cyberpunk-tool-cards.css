@@ -1,11 +1,22 @@
 /* ==========================================================================
-   CYBERPUNK TOOL CARDS - SPECIFIC STYLING
-   Overrides default tool card styles with cyberpunk aesthetic
+   CYBERPUNK TOOL CARDS - GLASSMORPHISM FIX
+   Ensures true transparency and glass effects for tool cards
    ========================================================================== */
 
-/* Main Tool Card Styling */
-.tool-card {
-    /* Glassmorphism background */
+/* CRITICAL: Remove ANY solid backgrounds from tool cards */
+.tool-card,
+.card,
+.item-card,
+.grid-item,
+.tools-grid .tool-card,
+#browseGrid .tool-card,
+#executiveGrid .tool-card,
+#technicalGrid .tool-card {
+    /* FORCE REMOVE any solid backgrounds */
+    background: none !important;
+    background-color: transparent !important;
+    
+    /* Apply TRUE glassmorphism */
     background: rgba(13, 148, 136, 0.06) !important;
     backdrop-filter: blur(20px) !important;
     -webkit-backdrop-filter: blur(20px) !important;
@@ -31,46 +42,46 @@
     overflow: hidden !important;
 }
 
-/* Animated border gradient */
-.tool-card::before {
+/* Add sweep effect on hover */
+.tool-card::before,
+.card::before,
+.item-card::before,
+.grid-item::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-        45deg,
-        transparent 30%,
-        rgba(20, 184, 166, 0.1) 50%,
-        transparent 70%
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(20, 184, 166, 0.05), 
+        transparent
     );
-    transform: translateX(-100%);
-    transition: transform 0.6s;
+    transition: left 0.6s;
     pointer-events: none;
 }
 
-/* Hover state */
-.tool-card:hover {
-    transform: translateY(-6px) scale(1.02) !important;
-    
-    /* Enhanced glow on hover */
+/* Enhanced hover effects */
+.tool-card:hover,
+.card:hover,
+.item-card:hover,
+.grid-item:hover {
+    /* Transform and glow */
+    transform: translateY(-8px) scale(1.02) !important;
     box-shadow: 
-        0 12px 40px rgba(20, 184, 166, 0.3),
-        0 0 60px rgba(20, 184, 166, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1),
-        0 0 0 2px rgba(20, 184, 166, 0.4) !important;
-    
-    /* Brighter border */
-    border-color: rgba(20, 184, 166, 0.6) !important;
-    
-    /* Slightly brighter background */
-    background: rgba(13, 148, 136, 0.08) !important;
+        0 20px 40px rgba(13, 148, 136, 0.2) !important,
+        0 0 30px rgba(20, 184, 166, 0.15) !important;
+    border-color: #14b8a6 !important;
+    background: rgba(20, 184, 166, 0.1) !important;
 }
 
-/* Hover animation */
-.tool-card:hover::before {
-    transform: translateX(100%);
+/* Sweep animation on hover */
+.tool-card:hover::before,
+.card:hover::before,
+.item-card:hover::before,
+.grid-item:hover::before {
+    left: 100% !important;
 }
 
 /* Remove old hover overlay */
@@ -79,12 +90,14 @@
 }
 
 /* Tool Card Title */
-.tool-card h3 {
+.tool-card h3,
+.tool-title,
+.card-title {
     font-size: 1.25rem !important;
     font-weight: 600 !important;
-    color: #14b8a6 !important;
+    color: #e0f2e7 !important;
     margin-bottom: 12px !important;
-    text-shadow: 0 0 20px rgba(20, 184, 166, 0.5) !important;
+    text-shadow: 0 0 10px rgba(224, 242, 231, 0.1) !important;
     position: relative !important;
     z-index: 1 !important;
     transition: all 0.3s ease !important;
@@ -115,9 +128,11 @@
 }
 
 /* Category Badge */
-.tool-card .category {
+.tool-card .category,
+.tool-category,
+.category-tag {
     display: inline-block !important;
-    background: linear-gradient(135deg, rgba(20, 184, 166, 0.2), rgba(16, 185, 129, 0.2)) !important;
+    background: rgba(20, 184, 166, 0.15) !important;
     color: #14b8a6 !important;
     padding: 6px 14px !important;
     border-radius: 20px !important;
@@ -127,6 +142,7 @@
     border: 1px solid rgba(20, 184, 166, 0.3) !important;
     text-transform: uppercase !important;
     letter-spacing: 0.5px !important;
+    text-shadow: 0 0 8px rgba(20, 184, 166, 0.3) !important;
     transition: all 0.3s ease !important;
 }
 
@@ -137,8 +153,10 @@
 }
 
 /* Description Text */
-.tool-card .description {
-    color: #e0f2e7 !important;
+.tool-card .description,
+.tool-description,
+.card-description {
+    color: #8bb89a !important;
     font-size: 0.95rem !important;
     line-height: 1.6 !important;
     margin-bottom: 16px !important;
@@ -161,7 +179,8 @@
 }
 
 /* Rating Stars */
-.tool-card .rating {
+.tool-card .rating,
+.rating-stars {
     display: flex !important;
     align-items: center !important;
     gap: 6px !important;
@@ -169,9 +188,10 @@
     font-size: 0.9rem !important;
 }
 
-.tool-card .rating i {
-    color: #fbbf24 !important;
-    text-shadow: 0 0 10px rgba(251, 191, 36, 0.5) !important;
+.tool-card .rating i,
+.rating-stars i {
+    color: #22c55e !important;
+    text-shadow: 0 0 8px rgba(34, 197, 94, 0.3) !important;
     transition: all 0.3s ease !important;
 }
 
@@ -181,16 +201,19 @@
 }
 
 /* Pricing Badge */
-.tool-card .pricing {
+.tool-card .pricing,
+.pricing-badge,
+.rating-display {
     font-size: 0.9rem !important;
     font-weight: 600 !important;
-    color: #22c55e !important;
+    color: #14b8a6 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.5px !important;
     padding: 4px 10px !important;
-    background: rgba(34, 197, 94, 0.1) !important;
-    border: 1px solid rgba(34, 197, 94, 0.3) !important;
+    background: rgba(20, 184, 166, 0.1) !important;
+    border: 1px solid rgba(20, 184, 166, 0.4) !important;
     border-radius: 12px !important;
+    text-shadow: 0 0 8px rgba(20, 184, 166, 0.3) !important;
     transition: all 0.3s ease !important;
 }
 
@@ -355,4 +378,63 @@
 @keyframes shimmer {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
+}
+
+/* ==========================================================================
+   CRITICAL OVERRIDES - ENSURE GLASSMORPHISM
+   ========================================================================== */
+
+/* Grid container spacing for glass effects */
+.grid-container,
+.tools-grid,
+.cards-grid,
+#browseGrid,
+#executiveGrid,
+#technicalGrid {
+    gap: 1.5rem !important;
+}
+
+/* FORCE REMOVE solid backgrounds from ALL card variations */
+.tool-card,
+.tool-item,
+.card-item,
+.grid-item,
+[class*="tool-"],
+[class*="card"] {
+    /* Delete ANY solid color */
+    background-color: transparent !important;
+    
+    /* Ensure glassmorphism */
+    background: rgba(13, 148, 136, 0.06) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+}
+
+/* Override any CSS variables that might set solid backgrounds */
+.tool-card {
+    --surface-color: rgba(13, 148, 136, 0.06) !important;
+    --card-bg: rgba(13, 148, 136, 0.06) !important;
+    --background: rgba(13, 148, 136, 0.06) !important;
+}
+
+/* Ensure proper layering for glass effect visibility */
+.main-container,
+.dashboard-body,
+.content-area {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* Add subtle animation to show transparency */
+@keyframes glassShimmer {
+    0%, 100% { 
+        background: rgba(13, 148, 136, 0.06);
+    }
+    50% { 
+        background: rgba(13, 148, 136, 0.08);
+    }
+}
+
+.tool-card {
+    animation: glassShimmer 8s ease-in-out infinite !important;
 }
