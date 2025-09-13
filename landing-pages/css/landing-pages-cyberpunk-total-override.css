@@ -1,0 +1,331 @@
+/* ==========================================================================
+   LANDING PAGES - COMPLETE CYBERPUNK OVERRIDE
+   This file COMPLETELY replaces landing-pages.css with cyberpunk theme
+   ========================================================================== */
+
+/* CRITICAL: Force dark backgrounds on root elements */
+html {
+    background: #0a0f0a !important;
+    min-height: 100vh !important;
+}
+
+body {
+    background: linear-gradient(135deg, #0a0f0a 0%, #0f1b14 50%, #0a1a0f 100%) !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #e0f2e7 !important;
+}
+
+/* Landing Page Base - DARK THEME */
+.landing-page {
+    min-height: 100vh;
+    background: transparent !important; /* Show body gradient through */
+    color: #e0f2e7 !important;
+    position: relative;
+}
+
+/* Add animated grid overlay */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(20, 184, 166, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(20, 184, 166, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 1;
+    animation: gridPulse 4s ease-in-out infinite;
+}
+
+@keyframes gridPulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* Ensure content is above grid */
+.landing-page > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Navigation - Dark with glassmorphism */
+.main-nav,
+.nav-container {
+    background: rgba(10, 15, 10, 0.9) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid rgba(20, 184, 166, 0.3) !important;
+}
+
+.nav-button {
+    color: #8bb89a !important;
+    transition: all 0.3s ease !important;
+}
+
+.nav-button:hover {
+    color: #14b8a6 !important;
+    text-shadow: 0 0 10px rgba(20, 184, 166, 0.5) !important;
+}
+
+.dropdown-menu {
+    background: rgba(10, 15, 10, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+}
+
+/* Hero Section - Cyberpunk gradient */
+.hero-section {
+    background: linear-gradient(135deg, 
+        rgba(13, 148, 136, 0.2) 0%, 
+        rgba(16, 185, 129, 0.15) 100%) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+    border-radius: 20px !important;
+    margin: 2rem !important;
+    padding: 80px 0 !important;
+    color: #e0f2e7 !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #14b8a6, #10b981, #14b8a6);
+    border-radius: 20px;
+    opacity: 0.3;
+    z-index: -1;
+    animation: borderGlow 3s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
+
+.hero-section h1 {
+    color: #14b8a6 !important;
+    text-shadow: 0 0 30px rgba(20, 184, 166, 0.8) !important;
+}
+
+.hero-section p,
+.hero-subtitle,
+.hero-stats span {
+    color: #e0f2e7 !important;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: transparent !important;
+}
+
+/* Content Sections - Glassmorphic */
+.quick-comparison,
+.content-section,
+.analysis-section,
+.tools-section,
+.comparison-section,
+.features-section,
+.faq-section,
+.roi-calculator {
+    background: transparent !important;
+    padding: 80px 0;
+}
+
+/* Cards and panels - Glassmorphic */
+.tool-item,
+.comparison-card,
+.feature-card,
+.tool-review-card,
+.faq-item,
+.calculator-wrapper,
+.faq-container,
+.card,
+.box,
+.panel {
+    background: rgba(13, 148, 136, 0.06) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+    border-radius: 12px !important;
+    padding: 1.5rem !important;
+    margin-bottom: 1rem !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.tool-item:hover,
+.comparison-card:hover,
+.feature-card:hover,
+.tool-review-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 
+        0 12px 40px rgba(13, 148, 136, 0.2),
+        0 0 30px rgba(20, 184, 166, 0.1) !important;
+    border-color: #14b8a6 !important;
+    background: rgba(20, 184, 166, 0.1) !important;
+}
+
+/* Tables - Dark theme */
+table {
+    background: rgba(13, 148, 136, 0.06) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+}
+
+th {
+    background: rgba(20, 184, 166, 0.15) !important;
+    color: #14b8a6 !important;
+    padding: 1rem !important;
+    text-align: left;
+    border-bottom: 2px solid rgba(20, 184, 166, 0.3) !important;
+}
+
+td {
+    color: #e0f2e7 !important;
+    padding: 0.75rem 1rem !important;
+    border-bottom: 1px solid rgba(20, 184, 166, 0.1) !important;
+}
+
+tr:hover {
+    background: rgba(20, 184, 166, 0.08) !important;
+}
+
+/* Typography - Cyberpunk colors */
+h1, h2, h3, h4, h5, h6 {
+    color: #14b8a6 !important;
+    text-shadow: 0 0 20px rgba(20, 184, 166, 0.5) !important;
+    font-weight: 600 !important;
+}
+
+p, span, div, li {
+    color: #e0f2e7 !important;
+}
+
+/* Links */
+a {
+    color: #10b981 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+}
+
+a:hover {
+    color: #14b8a6 !important;
+    text-shadow: 0 0 10px rgba(20, 184, 166, 0.5) !important;
+}
+
+/* Badges and tags */
+.badge,
+.tag,
+.category-tag,
+.pricing-badge,
+.alternative-badge,
+.security-badge,
+.free-badge {
+    background: rgba(20, 184, 166, 0.15) !important;
+    border: 1px solid rgba(20, 184, 166, 0.3) !important;
+    color: #14b8a6 !important;
+    padding: 0.25rem 0.75rem !important;
+    border-radius: 20px !important;
+    display: inline-block !important;
+    text-shadow: 0 0 8px rgba(20, 184, 166, 0.3) !important;
+}
+
+/* Buttons */
+.btn,
+.cta-button,
+.learn-more-btn,
+.cta-primary,
+.cta-secondary {
+    background: linear-gradient(135deg, #14b8a6, #10b981) !important;
+    color: white !important;
+    border: none !important;
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 8px !important;
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.4) !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+}
+
+.btn:hover,
+.cta-button:hover,
+.learn-more-btn:hover,
+.cta-primary:hover,
+.cta-secondary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 0 30px rgba(20, 184, 166, 0.6) !important;
+}
+
+/* FAQ specific */
+.faq-question {
+    color: #14b8a6 !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.faq-answer {
+    color: #e0f2e7 !important;
+}
+
+/* Footer */
+footer {
+    background: rgba(10, 15, 10, 0.9) !important;
+    border-top: 1px solid rgba(20, 184, 166, 0.2) !important;
+    color: #8bb89a !important;
+    padding: 2rem 0 !important;
+    margin-top: 4rem !important;
+}
+
+/* Override ANY white/light backgrounds */
+[style*="background: white"],
+[style*="background: #fff"],
+[style*="background: #f5f5f5"],
+[style*="background-color: white"],
+[style*="background-color: #fff"],
+[style*="background-color: #f5f5f5"] {
+    background: rgba(13, 148, 136, 0.06) !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+/* Force text colors for readability */
+[style*="color: #1a1a1a"],
+[style*="color: #666666"],
+[style*="color: black"] {
+    color: #e0f2e7 !important;
+}
+
+/* Specific override for comparison tables */
+#comparisonTable {
+    background: transparent !important;
+}
+
+#comparisonTable table {
+    width: 100% !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    body::before {
+        background-size: 30px 30px;
+    }
+    
+    .hero-section {
+        margin: 1rem !important;
+        padding: 40px 20px !important;
+    }
+}
